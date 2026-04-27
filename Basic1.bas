@@ -1,0 +1,13 @@
+GLOBAL SUB AxisInit()
+BASE(1£¬2£¬3£¬4£¬5£©
+
+ATYPE(65,65,65,65,65)
+
+
+ENDSUB
+
+GLOBAL SUB EtherCATInit()
+
+
+
+ENDSUB

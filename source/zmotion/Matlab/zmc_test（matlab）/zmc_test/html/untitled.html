@@ -1,0 +1,1133 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>untitled</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2021-06-08"><meta name="DC.source" content="untitled.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">function</span> varargout = untitled(varargin)
+
+
+<span class="comment">% UNTITLED MATLAB code for untitled.fig</span>
+<span class="comment">%      UNTITLED, by itself, creates a new UNTITLED or raises the existing</span>
+<span class="comment">%      singleton*.</span>
+<span class="comment">%</span>
+<span class="comment">%      H = UNTITLED returns the handle to a new UNTITLED or the handle to</span>
+<span class="comment">%      the existing singleton*.</span>
+<span class="comment">%</span>
+<span class="comment">%      UNTITLED('CALLBACK',hObject,eventData,handles,...) calls the local</span>
+<span class="comment">%      function named CALLBACK in UNTITLED.M with the given input arguments.</span>
+<span class="comment">%</span>
+<span class="comment">%      UNTITLED('Property','Value',...) creates a new UNTITLED or raises the</span>
+<span class="comment">%      existing singleton*.  Starting from the left, property value pairs are</span>
+<span class="comment">%      applied to the GUI before untitled_OpeningFcn gets called.  An</span>
+<span class="comment">%      unrecognized property name or invalid value makes property application</span>
+<span class="comment">%      stop.  All inputs are passed to untitled_OpeningFcn via varargin.</span>
+<span class="comment">%</span>
+<span class="comment">%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one</span>
+<span class="comment">%      instance to run (singleton)".</span>
+<span class="comment">%</span>
+<span class="comment">% See also: GUIDE, GUIDATA, GUIHANDLES</span>
+
+<span class="comment">% Edit the above text to modify the response to help untitled</span>
+
+<span class="comment">% Last Modified by GUIDE v2.5 08-Jun-2021 15:06:00</span>
+
+<span class="comment">% Begin initialization code - DO NOT EDIT</span>
+gui_Singleton = 1;
+gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <span class="keyword">...</span>
+                   <span class="string">'gui_Singleton'</span>,  gui_Singleton, <span class="keyword">...</span>
+                   <span class="string">'gui_OpeningFcn'</span>, @untitled_OpeningFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_OutputFcn'</span>,  @untitled_OutputFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_LayoutFcn'</span>,  [] , <span class="keyword">...</span>
+                   <span class="string">'gui_Callback'</span>,   []);
+<span class="keyword">if</span> nargin &amp;&amp; ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">else</span>
+    gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">end</span>
+<span class="comment">% End initialization code - DO NOT EDIT</span>
+
+
+<span class="comment">% --- Executes just before untitled is made visible.</span>
+<span class="keyword">function</span> untitled_OpeningFcn(hObject, eventdata, handles, varargin)
+<span class="comment">% This function has no output args, see OutputFcn.</span>
+<span class="comment">% hObject    handle to figure</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+<span class="comment">% varargin   command line arguments to untitled (see VARARGIN)</span>
+
+<span class="comment">% Choose default command line output for untitled</span>
+handles.output = hObject;
+
+<span class="comment">% Update handles structure</span>
+guidata(hObject, handles);
+    <span class="keyword">if</span> not(libisloaded(<span class="string">'zauxdll'</span>))<span class="comment">%&#21152;&#36733;&#27491;&#36816;&#21160;&#20989;&#25968;&#24211;</span>
+        loadlibrary(<span class="string">'zauxdll.dll'</span>,<span class="string">'zauxdll2.h'</span>);
+    <span class="keyword">end</span>
+    disp(<span class="string">"&#21152;&#36733;&#20989;&#25968;&#24211;"</span>);<span class="comment">%&#21629;&#20196;&#34892;&#25171;&#21360;</span>
+
+    <span class="keyword">global</span> g_handleptr;<span class="comment">%&#23450;&#20041;&#36830;&#25509;&#21477;&#26564;</span>
+    <span class="keyword">global</span> g_nAxis;<span class="comment">%&#23450;&#20041;&#36724;&#21495;</span>
+    <span class="keyword">global</span> g_Dir;<span class="comment">%&#23450;&#20041;&#36816;&#21160;&#26041;&#21521;</span>
+    <span class="keyword">global</span> g_Moveway;<span class="comment">%&#23450;&#20041;&#36816;&#21160;&#26041;&#24335;</span>
+
+    g_handleptr= libpointer(<span class="string">'voidPtrPtr'</span>);
+    g_Dir=1;
+    g_Moveway=0;
+    g_nAxis=0;
+
+<span class="comment">% UIWAIT makes untitled wait for user response (see UIRESUME)</span>
+<span class="comment">% uiwait(handles.figure1);</span>
+
+
+<span class="comment">% --- Outputs from this function are returned to the command line.</span>
+<span class="keyword">function</span> varargout = untitled_OutputFcn(hObject, eventdata, handles)
+<span class="comment">% varargout  cell array for returning output args (see VARARGOUT);</span>
+<span class="comment">% hObject    handle to figure</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Get default command line output from handles structure</span>
+varargout{1} = handles.output;
+
+
+<span class="comment">% --- Executes on button press in pushbutton_openZmc.</span>
+<span class="keyword">function</span> pushbutton_openZmc_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to pushbutton_openZmc (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+    handles.timer = timer(<span class="string">'Period'</span>,0.05,<span class="string">'ExecutionMode'</span>,<span class="string">'FixedRate'</span>,<span class="keyword">...</span>
+                            <span class="string">'TimerFcn'</span>,{@UpdateSliderData, handles});<span class="comment">%&#23450;&#26102;&#22120;</span>
+
+     <span class="keyword">global</span> g_handleptr;<span class="comment">%&#23450;&#20041;&#36830;&#25509;&#21477;&#26564;</span>
+
+    ip =get(handles.edit_Ip,<span class="string">'String'</span>);
+    disp(<span class="string">"&#36830;&#25509;&#25511;&#21046;&#22120;:"</span>+ip);
+    zmc_ip = char(ip);
+
+    [res,~] = calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_OpenEth'</span>,zmc_ip ,g_handleptr);
+    commandCheckHandler(<span class="string">"ZAux_OpenEth"</span>,res);
+    <span class="keyword">if</span> res==0
+        fprintf(<span class="string">'&#36830;&#25509;&#25511;&#21046;&#22120;&#25104;&#21151;\n'</span>);
+        set(gcf,<span class="string">'NumberTitle'</span>, <span class="string">'off'</span>, <span class="string">'Name'</span>, <span class="string">'&#36830;&#25509;&#25104;&#21151;'</span>);
+        <span class="comment">%msgbox('Connection successful');</span>
+        start( handles.timer );<span class="comment">%&#21551;&#21160;&#23450;&#26102;&#22120;</span>
+    <span class="keyword">else</span>
+        fprintf(<span class="string">'&#36830;&#25509;&#25511;&#21046;&#22120;&#22833;&#36133;,&#38169;&#35823;&#30721;%d\n'</span>,res);
+        set(gcf,<span class="string">'NumberTitle'</span>, <span class="string">'off'</span>, <span class="string">'Name'</span>, <span class="string">'&#36830;&#25509;&#22833;&#36133;'</span>);
+        msgbox(<span class="string">'Connection failure&#65292;Please check the IP&#65281;'</span>);<span class="comment">%&#36830;&#25509;&#25511;&#21046;&#22120;&#22833;&#36133;&#65292;&#35831;&#26816;&#26597;IP&#22320;&#22336;</span>
+        <span class="keyword">return</span>;
+    <span class="keyword">end</span>
+
+<span class="comment">%//&#35813;&#25351;&#20196;&#26816;&#26597;&#25351;&#20196;&#30340;&#36820;&#22238;&#20540;&#65292;&#22914;&#26524;&#36820;&#22238;&#20540;&#19981;&#20026; 0&#65292;&#21017;&#21521;&#23631;&#24149;&#25171;&#21360;&#36820;&#22238;&#20540;</span>
+<span class="keyword">function</span> commandCheckHandler(command,ret)
+    <span class="keyword">if</span> (ret)
+        fprintf(<span class="string">"%s return code is %d\n"</span>, command, ret);
+    <span class="keyword">end</span>
+
+<span class="keyword">function</span> edit_Ip_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_Ip (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_Ip as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_Ip as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_Ip_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_Ip (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+<span class="keyword">function</span> UpdateSliderData(obj, events, handles)
+    <span class="keyword">global</span> g_handleptr;<span class="comment">%&#23450;&#20041;&#36830;&#25509;&#21477;&#26564;</span>
+    <span class="keyword">global</span> g_nAxis;<span class="comment">%&#23450;&#20041;&#36724;&#21495;</span>
+    [res,~,runstate]=calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_GetIfIdle'</span>,g_handleptr,g_nAxis, 0);
+        commandCheckHandler(<span class="string">"ZAux_Direct_GetIfIdle"</span>,res);
+    [res,~,curpos]=calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_GetDpos'</span>,g_handleptr, g_nAxis, 0);
+        commandCheckHandler(<span class="string">"ZAux_Direct_GetDpos"</span>,res);
+    [res,~,curspeed]=calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_GetVpSpeed'</span>,g_handleptr, g_nAxis, 0);
+        commandCheckHandler(<span class="string">"ZAux_Direct_GetVpSpeed"</span>,res);
+
+    str_curpos=num2str(curpos);
+    str_curspeed=num2str(curspeed);
+    <span class="keyword">if</span> (runstate==0)
+        set(handles.edit_runstate,<span class="string">'String'</span>,<span class="string">"&#24403;&#21069;&#36816;&#21160;&#29366;&#24577;:&#36816;&#34892;"</span>);
+    <span class="keyword">else</span>
+        set(handles.edit_runstate,<span class="string">'String'</span>,<span class="string">"&#24403;&#21069;&#36816;&#21160;&#29366;&#24577;:&#20572;&#27490;"</span>);
+    <span class="keyword">end</span>
+
+    set(handles.edit_curpos,<span class="string">'String'</span>,<span class="string">"&#24403;&#21069;&#36724;&#22352;&#26631;&#65306;"</span> +str_curpos);
+    set(handles.edit_curspeed,<span class="string">'String'</span>,<span class="string">"&#24403;&#21069;&#36724;&#36895;&#24230;&#65306;"</span> +str_curspeed);
+
+
+
+<span class="keyword">function</span> edit_runstate_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_runstate (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_runstate as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_runstate as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_runstate_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_runstate (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> edit_curpos_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_curpos (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_curpos as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_curpos as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_curpos_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_curpos (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> edit_curspeed_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_curspeed (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_curspeed as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_curspeed as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_curspeed_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_curspeed (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+<span class="comment">% --- Executes on button press in pushbutton_runmove.&#36816;&#21160;</span>
+<span class="keyword">function</span> pushbutton_runmove_Callback(hObject, eventdata, handles)
+ <span class="comment">% hObject    handle to pushbutton_runmove (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+
+
+   <span class="keyword">global</span> g_handleptr;<span class="comment">%&#23450;&#20041;&#36830;&#25509;&#21477;&#26564;</span>
+   <span class="keyword">global</span> g_nAxis;<span class="comment">%&#23450;&#20041;&#36724;&#21495;</span>
+   <span class="keyword">global</span> g_Dir;<span class="comment">%&#23450;&#20041;&#36816;&#21160;&#26041;&#21521;</span>
+   <span class="keyword">global</span> g_Moveway;<span class="comment">%&#23450;&#20041;&#36816;&#21160;&#26041;&#24335;</span>
+
+    calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_SetAtype'</span>,g_handleptr, g_nAxis,0);
+    calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_SetUnits'</span>,g_handleptr,g_nAxis,str2num(get(handles.edit_units,<span class="string">'String'</span>)));
+    calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_SetLspeed'</span>,g_handleptr, g_nAxis, str2num(get(handles.edit_lspeed,<span class="string">'String'</span>)));
+    calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_SetSpeed'</span>,g_handleptr, g_nAxis, str2num(get(handles.edit_speed,<span class="string">'String'</span>)));
+    calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_SetAccel'</span>,g_handleptr, g_nAxis, str2num(get(handles.edit_acc,<span class="string">'String'</span>)));
+    calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_SetDecel'</span>,g_handleptr, g_nAxis, str2num(get(handles.edit_dec,<span class="string">'String'</span>)));
+    calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_SetSramp'</span>,g_handleptr, g_nAxis, str2num(get(handles.edit_sramp,<span class="string">'String'</span>)));
+    <span class="keyword">if</span> (g_Moveway) <span class="comment">%//&#36830;&#32493;&#36816;&#21160;</span>
+         calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_Single_Vmove'</span>,g_handleptr, g_nAxis,g_Dir);
+    <span class="keyword">else</span>  <span class="comment">% //&#23544;&#21160;</span>
+         calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_Single_Move'</span>,g_handleptr, g_nAxis, g_Dir * str2num(get(handles.edit_step,<span class="string">'String'</span>)));
+    <span class="keyword">end</span>
+
+
+<span class="keyword">function</span> radiobutton1_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to radiobutton1 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+    <span class="keyword">global</span> g_nAxis;
+    g_nAxis=0;
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of radiobutton1</span>
+
+
+<span class="comment">% --- Executes on button press in radiobuttonY.</span>
+<span class="keyword">function</span> radiobuttonY_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to radiobuttonY (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+    <span class="keyword">global</span> g_nAxis;
+    g_nAxis=1;
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of radiobuttonY</span>
+
+
+<span class="comment">% --- Executes on button press in radiobuttonZ.</span>
+<span class="keyword">function</span> radiobuttonZ_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to radiobuttonZ (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+    <span class="keyword">global</span> g_nAxis;
+    g_nAxis=2;
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of radiobuttonZ</span>
+
+
+<span class="comment">% --- Executes on button press in radiobuttonR.</span>
+<span class="keyword">function</span> radiobuttonR_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to radiobuttonR (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+    <span class="keyword">global</span> g_nAxis;
+    g_nAxis=3;
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of radiobuttonR</span>
+
+
+<span class="comment">% --- Executes during object deletion, before destroying properties.&#20851;&#38381;&#36830;&#25509;</span>
+<span class="keyword">function</span> figure1_DeleteFcn(hObject, eventdata, handles)
+    <span class="keyword">global</span> g_handleptr;<span class="comment">%&#23450;&#20041;&#36830;&#25509;&#21477;&#26564;</span>
+    calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Close'</span>,g_handleptr);
+    disp(<span class="string">"&#20851;&#38381;&#19982;&#25511;&#21046;&#22120;&#36830;&#25509;"</span>);<span class="comment">%&#25171;&#21360;</span>
+
+<span class="comment">% --- Executes on button press in pushbutton_stopMove.&#21333;&#36724;&#20572;&#27490;</span>
+<span class="keyword">function</span> pushbutton_stopMove_Callback(hObject, eventdata, handles)
+    <span class="keyword">global</span> g_handleptr;<span class="comment">%&#23450;&#20041;&#36830;&#25509;&#21477;&#26564;</span>
+    <span class="keyword">global</span> g_nAxis;
+    calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_Single_Cancel'</span>,g_handleptr,g_nAxis,2);
+
+<span class="comment">% --- Executes on button press in pushbutton_setDpos.&#22352;&#26631;&#28165;&#38646;</span>
+<span class="keyword">function</span> pushbutton_setDpos_Callback(hObject, eventdata, handles)
+    <span class="keyword">global</span> g_handleptr;<span class="comment">%&#23450;&#20041;&#36830;&#25509;&#21477;&#26564;</span>
+    <span class="keyword">for</span> i = 0:+1:3
+       calllib(<span class="string">'zauxdll'</span>,<span class="string">'ZAux_Direct_SetDpos'</span>,g_handleptr,i,0);
+    <span class="keyword">end</span>
+
+
+
+<span class="comment">% --- Executes on button press in radiobutton5.</span>
+<span class="keyword">function</span> radiobutton5_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to radiobutton5 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+     <span class="keyword">global</span> g_Dir;<span class="comment">%&#23450;&#20041;&#36816;&#21160;&#26041;&#21521;</span>
+     g_Dir=1;
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of radiobutton5</span>
+
+
+<span class="comment">% --- Executes on button press in radiobutton6.</span>
+<span class="keyword">function</span> radiobutton6_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to radiobutton6 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+     <span class="keyword">global</span> g_Dir;<span class="comment">%&#23450;&#20041;&#36816;&#21160;&#26041;&#21521;</span>
+     g_Dir=-1;
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of radiobutton6</span>
+
+
+<span class="comment">% --- Executes on button press in radiobutton8.</span>
+<span class="keyword">function</span> radiobutton8_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to radiobutton8 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+    <span class="keyword">global</span> g_Moveway;<span class="comment">%&#23450;&#20041;&#36816;&#21160;&#26041;&#24335;</span>
+    g_Moveway=0;
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of radiobutton8</span>
+
+
+<span class="comment">% --- Executes on button press in radiobutton7.</span>
+<span class="keyword">function</span> radiobutton7_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to radiobutton7 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+    <span class="keyword">global</span> g_Moveway;<span class="comment">%&#23450;&#20041;&#36816;&#21160;&#26041;&#24335;</span>
+    g_Moveway=1;
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of radiobutton7</span>
+
+
+
+<span class="keyword">function</span> edit_units_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_units (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_units as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_units as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_units_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_units (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> edit_lspeed_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_lspeed (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_lspeed as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_lspeed as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_lspeed_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_lspeed (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> edit_speed_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_speed (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_speed as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_speed as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_speed_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_speed (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> edit_acc_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_acc (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_acc as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_acc as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_acc_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_acc (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> edit_dec_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_dec (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_dec as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_dec as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_dec_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_dec (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> edit_sramp_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_sramp (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_sramp as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_sramp as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_sramp_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_sramp (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> edit_step_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_step (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'String') returns contents of edit_step as text</span>
+<span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_step as a double</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_step_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to edit_step (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+<span class="comment">%       See ISPC and COMPUTER.</span>
+<span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+<span class="keyword">end</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> pushbutton_openZmc_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to pushbutton_openZmc (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+</pre><pre class="codeoutput">&#21152;&#36733;&#20989;&#25968;&#24211;
+</pre><pre class="codeoutput">&#20851;&#38381;&#19982;&#25511;&#21046;&#22120;&#36830;&#25509;
+</pre><img vspace="5" hspace="5" src="untitled_01.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function varargout = untitled(varargin)
+
+
+% UNTITLED MATLAB code for untitled.fig
+%      UNTITLED, by itself, creates a new UNTITLED or raises the existing
+%      singleton*.
+%
+%      H = UNTITLED returns the handle to a new UNTITLED or the handle to
+%      the existing singleton*.
+%
+%      UNTITLED('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in UNTITLED.M with the given input arguments.
+%
+%      UNTITLED('Property','Value',...) creates a new UNTITLED or raises the
+%      existing singleton*.  Starting from the left, property value pairs are
+%      applied to the GUI before untitled_OpeningFcn gets called.  An
+%      unrecognized property name or invalid value makes property application
+%      stop.  All inputs are passed to untitled_OpeningFcn via varargin.
+%
+%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
+%      instance to run (singleton)".
+%
+% See also: GUIDE, GUIDATA, GUIHANDLES
+
+% Edit the above text to modify the response to help untitled
+
+% Last Modified by GUIDE v2.5 08-Jun-2021 15:06:00
+
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @untitled_OpeningFcn, ...
+                   'gui_OutputFcn',  @untitled_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+% REPLACE_WITH_DASH_DASH- Executes just before untitled is made visible.
+function untitled_OpeningFcn(hObject, eventdata, handles, varargin)
+% This function has no output args, see OutputFcn.
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% varargin   command line arguments to untitled (see VARARGIN)
+
+% Choose default command line output for untitled
+handles.output = hObject;
+
+% Update handles structure
+guidata(hObject, handles);
+    if not(libisloaded('zauxdll'))%加载正运动函数库
+        loadlibrary('zauxdll.dll','zauxdll2.h');
+    end
+    disp("加载函数库");%命令行打印
+    
+    global g_handleptr;%定义连接句柄
+    global g_nAxis;%定义轴号
+    global g_Dir;%定义运动方向
+    global g_Moveway;%定义运动方式 
+    
+    g_handleptr= libpointer('voidPtrPtr');
+    g_Dir=1;
+    g_Moveway=0;
+    g_nAxis=0;
+    
+% UIWAIT makes untitled wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+% REPLACE_WITH_DASH_DASH- Outputs from this function are returned to the command line.
+function varargout = untitled_OutputFcn(hObject, eventdata, handles) 
+% varargout  cell array for returning output args (see VARARGOUT);
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Get default command line output from handles structure
+varargout{1} = handles.output;
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton_openZmc.
+function pushbutton_openZmc_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton_openZmc (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+    handles.timer = timer('Period',0.05,'ExecutionMode','FixedRate',... 
+                            'TimerFcn',{@UpdateSliderData, handles});%定时器
+   
+     global g_handleptr;%定义连接句柄
+    
+    ip =get(handles.edit_Ip,'String');
+    disp("连接控制器:"+ip);
+    zmc_ip = char(ip);
+
+    [res,~] = calllib('zauxdll','ZAux_OpenEth',zmc_ip ,g_handleptr);
+    commandCheckHandler("ZAux_OpenEth",res);
+    if res==0
+        fprintf('连接控制器成功\n');
+        set(gcf,'NumberTitle', 'off', 'Name', '连接成功');
+        %msgbox('Connection successful');
+        start( handles.timer );%启动定时器
+    else
+        fprintf('连接控制器失败,错误码%d\n',res);
+        set(gcf,'NumberTitle', 'off', 'Name', '连接失败');
+        msgbox('Connection failure，Please check the IP！');%连接控制器失败，请检查IP地址
+        return;
+    end
+
+%//该指令检查指令的返回值，如果返回值不为 0，则向屏幕打印返回值
+function commandCheckHandler(command,ret)
+    if (ret)
+        fprintf("%s return code is %d\n", command, ret);
+    end
+
+function edit_Ip_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_Ip (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_Ip as text
+%        str2double(get(hObject,'String')) returns contents of edit_Ip as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_Ip_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_Ip (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function UpdateSliderData(obj, events, handles)
+    global g_handleptr;%定义连接句柄
+    global g_nAxis;%定义轴号
+    [res,~,runstate]=calllib('zauxdll','ZAux_Direct_GetIfIdle',g_handleptr,g_nAxis, 0);
+        commandCheckHandler("ZAux_Direct_GetIfIdle",res);
+    [res,~,curpos]=calllib('zauxdll','ZAux_Direct_GetDpos',g_handleptr, g_nAxis, 0);
+        commandCheckHandler("ZAux_Direct_GetDpos",res);
+    [res,~,curspeed]=calllib('zauxdll','ZAux_Direct_GetVpSpeed',g_handleptr, g_nAxis, 0);
+        commandCheckHandler("ZAux_Direct_GetVpSpeed",res);
+
+    str_curpos=num2str(curpos);
+    str_curspeed=num2str(curspeed);
+    if (runstate==0)
+        set(handles.edit_runstate,'String',"当前运动状态:运行");
+    else
+        set(handles.edit_runstate,'String',"当前运动状态:停止");
+    end
+
+    set(handles.edit_curpos,'String',"当前轴坐标：" +str_curpos);
+    set(handles.edit_curspeed,'String',"当前轴速度：" +str_curspeed);
+
+
+
+function edit_runstate_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_runstate (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_runstate as text
+%        str2double(get(hObject,'String')) returns contents of edit_runstate as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_runstate_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_runstate (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit_curpos_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_curpos (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_curpos as text
+%        str2double(get(hObject,'String')) returns contents of edit_curpos as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_curpos_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_curpos (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit_curspeed_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_curspeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_curspeed as text
+%        str2double(get(hObject,'String')) returns contents of edit_curspeed as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_curspeed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_curspeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton_runmove.运动
+function pushbutton_runmove_Callback(hObject, eventdata, handles)
+ % hObject    handle to pushbutton_runmove (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+
+   global g_handleptr;%定义连接句柄
+   global g_nAxis;%定义轴号
+   global g_Dir;%定义运动方向
+   global g_Moveway;%定义运动方式
+   
+    calllib('zauxdll','ZAux_Direct_SetAtype',g_handleptr, g_nAxis,0);
+    calllib('zauxdll','ZAux_Direct_SetUnits',g_handleptr,g_nAxis,str2num(get(handles.edit_units,'String')));
+    calllib('zauxdll','ZAux_Direct_SetLspeed',g_handleptr, g_nAxis, str2num(get(handles.edit_lspeed,'String')));
+    calllib('zauxdll','ZAux_Direct_SetSpeed',g_handleptr, g_nAxis, str2num(get(handles.edit_speed,'String')));
+    calllib('zauxdll','ZAux_Direct_SetAccel',g_handleptr, g_nAxis, str2num(get(handles.edit_acc,'String')));
+    calllib('zauxdll','ZAux_Direct_SetDecel',g_handleptr, g_nAxis, str2num(get(handles.edit_dec,'String')));
+    calllib('zauxdll','ZAux_Direct_SetSramp',g_handleptr, g_nAxis, str2num(get(handles.edit_sramp,'String')));
+    if (g_Moveway) %//连续运动
+         calllib('zauxdll','ZAux_Direct_Single_Vmove',g_handleptr, g_nAxis,g_Dir);
+    else  % //寸动
+         calllib('zauxdll','ZAux_Direct_Single_Move',g_handleptr, g_nAxis, g_Dir * str2num(get(handles.edit_step,'String')));         
+    end
+
+
+function radiobutton1_Callback(hObject, eventdata, handles)
+% hObject    handle to radiobutton1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+    global g_nAxis;
+    g_nAxis=0;
+% Hint: get(hObject,'Value') returns toggle state of radiobutton1
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in radiobuttonY.
+function radiobuttonY_Callback(hObject, eventdata, handles)
+% hObject    handle to radiobuttonY (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+    global g_nAxis;
+    g_nAxis=1;
+% Hint: get(hObject,'Value') returns toggle state of radiobuttonY
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in radiobuttonZ.
+function radiobuttonZ_Callback(hObject, eventdata, handles)
+% hObject    handle to radiobuttonZ (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+    global g_nAxis;
+    g_nAxis=2;
+% Hint: get(hObject,'Value') returns toggle state of radiobuttonZ
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in radiobuttonR.
+function radiobuttonR_Callback(hObject, eventdata, handles)
+% hObject    handle to radiobuttonR (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+    global g_nAxis;
+    g_nAxis=3;
+% Hint: get(hObject,'Value') returns toggle state of radiobuttonR
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object deletion, before destroying properties.关闭连接
+function figure1_DeleteFcn(hObject, eventdata, handles)
+    global g_handleptr;%定义连接句柄
+    calllib('zauxdll','ZAux_Close',g_handleptr);
+    disp("关闭与控制器连接");%打印
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton_stopMove.单轴停止
+function pushbutton_stopMove_Callback(hObject, eventdata, handles)
+    global g_handleptr;%定义连接句柄
+    global g_nAxis;
+    calllib('zauxdll','ZAux_Direct_Single_Cancel',g_handleptr,g_nAxis,2);
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton_setDpos.坐标清零
+function pushbutton_setDpos_Callback(hObject, eventdata, handles)
+    global g_handleptr;%定义连接句柄
+    for i = 0:+1:3
+       calllib('zauxdll','ZAux_Direct_SetDpos',g_handleptr,i,0);
+    end
+                 
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in radiobutton5.
+function radiobutton5_Callback(hObject, eventdata, handles)
+% hObject    handle to radiobutton5 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+     global g_Dir;%定义运动方向
+     g_Dir=1;
+% Hint: get(hObject,'Value') returns toggle state of radiobutton5
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in radiobutton6.
+function radiobutton6_Callback(hObject, eventdata, handles)
+% hObject    handle to radiobutton6 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+     global g_Dir;%定义运动方向
+     g_Dir=-1;
+% Hint: get(hObject,'Value') returns toggle state of radiobutton6
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in radiobutton8.
+function radiobutton8_Callback(hObject, eventdata, handles)
+% hObject    handle to radiobutton8 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+    global g_Moveway;%定义运动方式
+    g_Moveway=0;
+% Hint: get(hObject,'Value') returns toggle state of radiobutton8
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in radiobutton7.
+function radiobutton7_Callback(hObject, eventdata, handles)
+% hObject    handle to radiobutton7 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+    global g_Moveway;%定义运动方式
+    g_Moveway=1;
+% Hint: get(hObject,'Value') returns toggle state of radiobutton7
+
+
+
+function edit_units_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_units (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_units as text
+%        str2double(get(hObject,'String')) returns contents of edit_units as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_units_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_units (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit_lspeed_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_lspeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_lspeed as text
+%        str2double(get(hObject,'String')) returns contents of edit_lspeed as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_lspeed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_lspeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit_speed_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_speed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_speed as text
+%        str2double(get(hObject,'String')) returns contents of edit_speed as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_speed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_speed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit_acc_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_acc (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_acc as text
+%        str2double(get(hObject,'String')) returns contents of edit_acc as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_acc_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_acc (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit_dec_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_dec (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_dec as text
+%        str2double(get(hObject,'String')) returns contents of edit_dec as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_dec_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_dec (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit_sramp_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_sramp (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_sramp as text
+%        str2double(get(hObject,'String')) returns contents of edit_sramp as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_sramp_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_sramp (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit_step_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_step (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit_step as text
+%        str2double(get(hObject,'String')) returns contents of edit_step as a double
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_step_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_step (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function pushbutton_openZmc_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to pushbutton_openZmc (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+##### SOURCE END #####
+--></body></html>
