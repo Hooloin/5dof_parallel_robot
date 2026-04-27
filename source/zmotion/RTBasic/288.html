@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CORNER_ACCEL -- 拐弯加速度</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="289.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="287.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc178264846"><span lang=EN-US>CORNER_ACCEL -- </span></a><span style='font-family:宋体;'>拐弯加速度</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>轴参数</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>拐弯加速度，单位为</span></b><b><span lang=EN-US style='color:black;'>units/s/s</span></b><b><span style='font-family:宋体;color:black;'>。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>用来设置曲率降速</span><span lang=EN-US style='color:black;'>, </span><span style='font-family: 宋体; color:black;'>缺省</span><span lang=EN-US style='color: black;'>0, </span><span style='font-family:宋体;color:black; '>不生效</span><span lang=EN-US style='color:black; '>, </span><span style='font-family:宋体;color:black; '>设置后替换</span><span lang=EN-US style='color:black; '>FULL_SP_RADIUS</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>当</span><span lang=EN-US style='color:black; '>CORNER_MODE</span><span style='font-family:宋体; color:black;'>设置分离模式时</span><span lang=EN-US style='color:black;'>, </span><span style='font-family: 宋体; color:black;'>每个轴设置的拐弯加速度都能生效</span><span lang=EN-US style='color:black;'>.</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>建议与</span><span lang=EN-US style='color:black;'>ZSMOOTH_MODE</span><span style='font-family:宋体;color:black;'>一起使用来平滑曲线和速度</span><span lang=EN-US style='color:black;'>.</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>机器实际允许的拐弯加速度参考每个轴的加速度极限值来设置</span><span lang=EN-US style='color:black;'>.</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>必须启用小圆限速</span><span lang=EN-US style='color:black;'>, </span><span style='font-family: 宋体; color:black;'>拐弯加速度才生效</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>可读：</span><span lang=EN-US style='color:black;'>VAR1 = CORNER_ACCEL(</span><span style='font-family:宋体;color:black;'>轴号</span><span lang=EN-US style='color:black;'>)</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>可写</span><span lang=EN-US style='color: black;'>CORNER_ACCEL(</span><span style='font-family: 宋体; color:black;'>轴号</span><span lang=EN-US style='color: black;'>) = expression</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体; color:black;'>系列控制器</span><span lang=EN-US style='color:black; '>fast</span><span style=' font-family:宋体;color:black;'>固件</span><span lang=EN-US style='color:black; '>, 230926</span><span style=' font-family:宋体;color:black;'>以后版本支持</span><span lang=EN-US style='color:black; '>.</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED = 500,500,500,2000,313</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL = 8000,5000,5000,4000,4200</span></p>
+<p class=MsoNormal><b><span lang=EN-US style='color:black;'>CORNER_ACCEL</span></b><span lang=EN-US style='color:black;'> = 5000,2000,3000,3000,3000</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="274.html#_ACCEL_--_加速度_1">ACCEL</a></span><span style='font-family: 宋体; color:black;'>，</span><span lang=EN-US><a href="273.html#_SPEED_--_运动速度_1">SPEED</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="289.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="287.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

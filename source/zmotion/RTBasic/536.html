@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>STICK_WRITEVR -- vr输出到U盘</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="537.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="535.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_STICK_WRITEVR_--_vr输出到U盘"></a><a name="_Toc134698343"></a><a name="_Toc29777"></a><a name="_Toc13667"></a><a name="_Toc9319"></a><a name="_STICK_WRITEVR_--_vr输出到U盘_1"></a><span lang=FR>STICK_WRITEVR</span><span lang=EN-US> -- vr</span><span style='font-family:宋体;'>输出到</span><span lang=EN-US>U</span><span style='font-family:宋体;'>盘</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>存储指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>拷贝</span></b><b><span lang=FR style='color:black;'>VR</span></b><b><span style='font-family:宋体;color:black;'>的数据到</span></b><b><span style='font-family:宋体;color:black;'>外部存储器</span></b><b><span style='font-family:宋体;color:black;'>里面。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=FR>value=TRUE</span><span style='font-family:宋体;'>表示操作成功，否则操作失败</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>建议使用</span><span lang=EN-US>U_WRITE</span><span style='font-family:宋体; '>。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>不具备外部存储接口的控制器不支持此命令</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>4</span><span style='font-family:宋体; '>系列以下建议使用</span><span lang=EN-US>USB2.0</span><span style='font-family:宋体;'>的</span><span lang=EN-US>U</span><span style='font-family: 宋体;'>盘，</span><span lang=EN-US>4</span><span style='font-family:宋体; '>系列或以上支持</span><span lang=EN-US>USB3.0</span><span style='font-family:宋体;'>。</span></p>
+</td> </tr> <tr style='height:132.75pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:132.75pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:132.75pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=FR>value = STICK_READVR (filenum, vr_start [,format])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>filenum</span><span style='font-family:宋体;color:black; '>：</span><span style='font-family: 宋体; color:black;'>文件号</span><span style='font-family:宋体; color:black;'>，</span><span style='font-family:宋体;color:black;'>对应到</span><span lang=FR>SD</span><span style='font-family:宋体;'>【</span><span lang=FR>filenum</span><span style='font-family:宋体;'>】</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>vr_start</span><span style='font-family:宋体;'>：开始操作的起始</span><span lang=FR>VR</span><span style='font-family:宋体;'>号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>length</span><span style='font-family:宋体;'>：要操作的元素个数，缺省</span><span lang=FR>128</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>format</span><span style='font-family:宋体;'>：文件的格式</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=470 style='width:201.4pt;margin-left:18.65pt;border-collapse:collapse; border:none; '> <tr> <td width=167 valign=top style='width:71.65pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>值</span></p>
+</td> <td width=303 valign=top style='width:129.75pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>描述</span></p>
+</td> </tr> <tr> <td width=167 valign=top style='width:71.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black; '>0</span><span style='font-family:宋体;color:black;'>（缺省）</span></p>
+</td> <td width=303 valign=top style='width:129.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR>float</span><span style='font-family:宋体;'>格式存储，</span><span lang=EN-US>.BIN</span></p>
+</td> </tr> <tr> <td width=167 valign=top style='width:71.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black; '>1</span></p>
+</td> <td width=303 valign=top style='width:129.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>文本格式存储，</span><span lang=EN-US>.CSV</span></p>
+</td> </tr> </table>
+<p class=MsoNormal></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>带</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘接口</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-126.0pt; tab-stops:55.15pt;'><span lang=FR>STICK_WRITEVR (0,0,128,0)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>拷贝</span><span lang=FR>VR</span><span style='font-family:宋体;'>前</span><span lang=FR>128</span><span style='font-family:宋体;'>个元素以</span><span lang=FR>float</span><span style='font-family:宋体;'>格式存贮到外部存储器，生成</span><span lang=EN-US> SD0.BIN </span><span style='font-family:宋体;'>文件</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="530.html#_U_WRITE_--_输出到U盘_1"><span lang=FR style=' color:#9999CC;'>U_WRITE</span></a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="534.html#_STICK_WRITE_--_table输出到U盘_1"><span lang=FR>STICK_</span>WRITE</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=FR>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="537.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="535.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVE_WAIT -- 缓冲等待</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="56.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="54.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697848"></a><a name="_Toc17566"></a><a name="_Toc1054"></a><a name="_Toc26927"></a><a name="_Toc4882"><span lang=EN-US>MOVE_WAIT -- </span></a><span style='font-family:宋体;'>缓冲等待</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>特殊运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>BASE</span></b><b><span style='font-family:宋体;color:black;'>轴运动缓冲加入一个条件判断。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>这个指令</span><span lang=EN-US style='color:black;'>LOAD</span><span style='font-family: 宋体; color:black;'>执行时不做任何运动，只等待指定的条件满足，前面的运动指令结束时速度会自动降为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_WAIT(paraname, paranum, eq, value)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>paraname</span><span style='font-family:宋体;color:black;'>：选择参数名</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>(</span><span style='font-family: 宋体; color:black;'>参数可以为：</span><span lang=EN-US style='color:black;'>DPOS</span><span style='font-family: 宋体; color:black;'>，</span><span lang=EN-US style='color:black; '>MPOS</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black;'>IN</span><span style='font-family:宋体; color:black;'>，</span><span lang=EN-US style='color:black;'>AIN</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>VPSPEED</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>MSPEED</span><span style='font-family: 宋体; color:black;'>，</span><span lang=EN-US>MODBUS_REG</span><span style='font-family:宋体; '>，</span><span lang=EN-US>MODBUS_IEEE</span><span style='font-family:宋体;'>，</span><span lang=EN-US>MODBUS_BIT</span><span style='font-family:宋体; '>，</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>，</span><span lang=EN-US>VECTOR_BUFFERED</span><span style='font-family: 宋体; '>，</span><span lang=EN-US>REMAIN )</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>paranum</span><span style='font-family:宋体;color:black;'>：参数编号或轴号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>eq</span><span style='font-family: 宋体; color:black;'>：比较模式：</span></p>
+<p class=MsoNormal style='text-indent:63.0pt; '><span lang=EN-US style='color:black;'>1</span><span style='font-family: 宋体; color:black;'>：大于等于（≥）</span></p>
+<p class=MsoNormal style='text-indent:63.0pt; '><span lang=EN-US style='color:black;'>0</span><span style='font-family: 宋体; color:black;'>：等于（不建议使用）</span></p>
+<p class=MsoNormal style='text-indent:63.0pt; '><span lang=EN-US style='color:black;'>-1 </span><span style='font-family: 宋体; color:black;'>小于等于（≤），对</span><span lang=EN-US style='color:black;'>IN</span><span style='font-family: 宋体; color:black;'>等</span><span lang=EN-US style='color:black; '>BIT</span><span style='font-family:宋体;color:black; '>类型参数无效</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>value</span><span style='font-family: 宋体; color:black;'>：比较值</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>固件</span><span lang=EN-US style='color:red; '>150802</span><span style='font-family:宋体;color:red; '>以上版本，或</span><span lang=EN-US style='color:red; '>XPLC160405</span><span style='font-family:宋体; color:red;'>以上版本支持。</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1</span></p>
+<p class=MsoNormal style='tab-stops:208.05pt;'><span lang=EN-US style='color:black;'>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=2000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=2000</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family: 宋体; color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(500)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVE_WAIT</span></b><span lang=EN-US style='color:black;'>(IN, 0, 0, 1)&nbsp;&nbsp; '</span><span style='font-family: 宋体; color:black;'>等待</span><span lang=EN-US style='color: black;'>IN(0)</span><span style='font-family:宋体; color:black;'>有信号，才执行下一条运动缓冲</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(500)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>运动轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>IN(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=782 height=385 src="doc.files/image195.jpg" ></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="146.html#_WAIT_UNTIL_--">WAIT UNTIL</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="56.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="54.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

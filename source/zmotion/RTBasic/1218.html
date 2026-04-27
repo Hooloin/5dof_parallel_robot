@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_TkGetRigid -- 计算刚性变换矩阵</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1219.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1217.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc31562"><span lang=EN-US>ZV_TkGetRigid -- </span></a><span style='font-family:宋体;'>计算刚性变换矩阵</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>变换</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>使用两个变换前和变换后的点计算刚性变换矩阵。</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体; '>刚性变换：</span></b><span style=' font-family:宋体;'>是对图形进行变换的一种变换类型，能对图形进行旋转、平移等变换，变换前后图形长度、面积保持不变，形状不会发生变化，同理也可对空间二维坐标进行变换</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_GetRigid</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_TkGetRigid(mat,tabIdSrc,tabIdDst)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mat</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，矩阵类型，输出参数，计算的刚性变换矩阵，</span><span lang=EN-US>2</span><span style='font-family:宋体; '>行</span><span lang=EN-US>3</span><span style='font-family:宋体; '>列</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabIdSrc</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，变换前的两点，依次为</span><span lang=EN-US>x1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>y1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>x2</span><span style='font-family:宋体; '>、</span><span lang=EN-US>y2</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabIdDst</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，变换后的两点，依次为</span><span lang=EN-US>x1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>y1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>x2</span><span style='font-family:宋体; '>、</span><span lang=EN-US>y2</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mat</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,0,0,2,2) '</span><span style='font-family:宋体;'>将变换前数据写入</span><span lang=EN-US>TABLE</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(100,1,0,7,10) '</span><span style='font-family:宋体;'>将变换后数据写入</span><span lang=EN-US>TABLE</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_TkGetRigid(mat,0,100) '</span><span style='font-family:宋体;'>计算刚性变换矩阵</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1219.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1217.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

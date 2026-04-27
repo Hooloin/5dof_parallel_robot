@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>draw3D_Light -- 设置光源属性</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1380.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1378.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>draw3D_Light -- </span><span style='font-family:宋体; '>设置光源属性</span></h3>
+
+<div align=center>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=a9><span style='font-family:宋体; '>类型</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=a9><span lang=EN-US>Hmi</span></p>
+</td> </tr> <tr style='height:20.75pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:20.75pt'>
+<p class=a9><span style='font-family:宋体; '>描述</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:20.75pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>设置光源的属性</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=a9><span style='font-family:宋体; '>语法</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>draw3D_Light(cameranum,lightnum,mode,para1,para2,para3,para4) </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cameranum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体; '>相机号</span><span lang=EN-US>0 - 9</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lightnum: </span><span style='font-family:宋体;'>光源的编号</span><span lang=EN-US>0-7</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mode:</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AMBIENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:</span><span style='font-family:宋体; '>属性由四个值表示，分别代表了颜色的</span><span lang=EN-US>R, G, B, A</span><span style='font-family:宋体;'>值。表示该光源所发出的光，经过非常多次的反射后，最终遗留在整个光照环境中的强度</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DIFFUSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1:</span><span style='font-family:宋体; '>属性由四个值表示，分别代表了颜色的</span><span lang=EN-US>R, G, B, A</span><span style='font-family:宋体;'>值。表示该光源所发出的光，照射到粗糙表面时经过漫反射，所得到的光的强度</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SPECULAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2:</span><span style='font-family:宋体; '>属性由四个值表示，分别代表了颜色的</span><span lang=EN-US>R, G, B, A</span><span style='font-family:宋体;'>值。表示该光源所发出的光，照射到光滑表面时经过镜面反射，所得到的光的强度</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POSITION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3:</span><span style='font-family:宋体; '>由四个值（</span><span lang=EN-US>X, Y, Z, W</span><span style='font-family:宋体; '>）表示。表示光源所在的位置。如果第四个值</span><span lang=EN-US>W</span><span style='font-family:宋体; '>为零，则表示该光源位于无限远处，前三个值表示了它所在的方向</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SPOT_DIRECTION&nbsp;&nbsp; 4:</span><span style='font-family:宋体;'>属性有三个值，表示一个向量，光源发射的方向</span> </p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SPOT_EXPONENT&nbsp;&nbsp; 5:</span><span style='font-family:宋体;'>属性只有一个值，表示聚光的程度，为零时表示光照范围内向各方向发射的光线强度相同，为正数时表示光照向中央集中，正对发射方向的位置受到更多光照，其它位置受到较少光照。数值越大，聚光效果就越明显。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SPOT_CUTOFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6:</span><span style='font-family:宋体;'>属性也只有一个值，表示一个角度，它是光源发射光线所覆盖角度的一半（见图</span><span lang=EN-US>2</span><span style='font-family:宋体; '>），其取值范围在</span><span lang=EN-US>0</span><span style='font-family:宋体;'>到</span><span lang=EN-US>90</span><span style='font-family: 宋体;'>之间，也可以取</span><span lang=EN-US>180</span><span style='font-family:宋体; '>这个特殊值。取值为</span><span lang=EN-US>180</span><span style='font-family:宋体;'>时表示光源发射光线覆盖</span><span lang=EN-US>360</span><span style='font-family:宋体;'>度，即不使用聚光灯，向全周围发射。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体; '>预留</span><span lang=EN-US>...</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:宋体; '><img border=0 width=530 height=320 src="doc.files/image1246.jpg" alt="说明: IMG_256" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>注：支持</span><span lang=EN-US>8</span><span style='font-family:宋体;'>个光源，这些光源的编号从</span><span lang=EN-US>0-7</span></p>
+</td> </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.62%;border-top:none;border-left: solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=a9><span style='font-family:宋体; '>适用控制器</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:none;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=a9><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=a9><span style='font-family:宋体; '>例子</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>DRAW3D_LIGHT(1,0,1, 1,0,0,0)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> </table>
+</div>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1380.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1378.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

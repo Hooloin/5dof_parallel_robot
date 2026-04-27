@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>LCD_FEATURE -- 读取显示器特征</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="619.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="617.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc147915718"><span lang=EN-US>LCD_FEATURE -- </span></a><span style='font-family:宋体;'>读取显示器特征</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>显示指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>显示器的特征读取。必须控制器和显示器同时支持此功能才可以。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>var = LCD_FEATURE(lcdnum, featurenum)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>lcdnum</span><span style='font-family:宋体;'>：</span><span lang=EN-US>0-</span><span style='font-family: 宋体;'>显示器编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>featurenum</span><span style='font-family:宋体;'>：特征号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>0- type&nbsp;&nbsp;&nbsp;&nbsp; 0-</span><span style='font-family:宋体;'>控制器内置的显示器；</span><span lang=EN-US>1-</span><span style='font-family:宋体;'>电脑</span><span lang=EN-US>term</span><span style='font-family:宋体;'>；</span><span lang=EN-US>-1-</span><span style='font-family: 宋体;'>未连接；</span><span lang=EN-US>-2-</span><span style='font-family:宋体; '>不存在</span><span lang=EN-US> 300-ZHD300x&nbsp; 400-ZHD400X,&nbsp; 701-7</span><span style='font-family: 宋体;'>寸触摸屏</span><span lang=EN-US>.</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>1- width&nbsp; </span><span style='font-family:宋体; '>显示器物理宽度，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>可变的宽度范围</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>2- height&nbsp; </span><span style='font-family:宋体; '>显示器物理高度，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>可变的高度范围</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>10-ip</span><span style='font-family:宋体;'>地址（读取值为十进制整数，需自行计算转换成</span><span lang=EN-US>ip</span><span style='font-family:宋体;'>地址）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>11-</span><span style='font-family:宋体;'>网口屏是否连上</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:#EE0000'>注意：</span><span lang=EN-US style='color:#EE0000'>10</span><span style='font-family:宋体; color:#EE0000'>和</span><span lang=EN-US style='color:#EE0000'>11</span><span style='font-family:宋体;color:#EE0000'>特征号需</span><span lang=EN-US style='color:#EE0000'>250606</span><span style='font-family:宋体;color:#EE0000'>以上固件支持！</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>RTHmi</span></p>
+</td> </tr> <tr style='height:46.8pt'> <td width="15%" valign=top style='width:15.88%;border-top:none;border-left: solid black 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:46.8pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:46.8pt'>
+<p class=MsoNormal><span lang=EN-US>PRINT LCD_FEATURE(0,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘</span><span style='font-family:宋体;'>打印显示器类型</span></p>
+<p class=MsoNormal><span lang=EN-US>PRINT LCD_FEATURE(0,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘</span><span style='font-family:宋体;'>打印显示器物理宽度</span></p>
+<p class=MsoNormal><span lang=EN-US>PRINT LCD_FEATURE(0,2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘</span><span style='font-family:宋体;'>打印显示器物理高度</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><b><span lang=EN-US style='font-family:等线; '>&nbsp;</span></b></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="619.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="617.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

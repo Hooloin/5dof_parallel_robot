@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>SERVO -- 闭环开关</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="383.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="381.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc1486"></a><a name="_SERVO_--_闭环开关"></a><a name="_Toc134698169"></a><a name="_Toc21575"></a><a name="_Toc1623"></a><a name="_Toc1703"></a><a name="_Toc12652"></a><a name="_SERVO_--_闭环开关_1"></a><span lang=EN-US>SERVO -- </span><span style='font-family:宋体;'>闭环开关</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>闭环开关设置。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;'>值范围：</span><span lang=EN-US>ON/OFF</span><span style='font-family:宋体;'>，缺省为</span><span lang=EN-US>OFF</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>跟</span><span lang=EN-US>P_GAIN</span><span style='font-family:宋体;'>，</span><span lang=EN-US>D_GAIN</span><span style='font-family:宋体;'>，</span><span lang=EN-US>I_GIAN</span><span style='font-family:宋体;'>，</span><span lang=EN-US>OV_GAIN</span><span style='font-family:宋体;'>，</span><span lang=EN-US>VFF_GAIN</span><span style='font-family:宋体;'>指令配套为闭环控制系统使用，需要使用模拟量伺服。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>注意：</span></p>
+<p class=MsoNormal><span lang=EN-US>1.ECAT</span><span style='font-family:宋体;'>总线</span><span lang=EN-US>ATYPE</span><span style='font-family:宋体;'>为</span><span lang=EN-US>66</span><span style='font-family:宋体;'>，</span><span lang=EN-US>67</span><span style='font-family:宋体;'>模式适用。</span></p>
+<p class=MsoNormal><span lang=EN-US>2.PID</span><span style='font-family:宋体;'>只能根据实际情况手动调整至最佳，建议带上负载。</span></p>
+<p class=MsoNormal><span lang=EN-US>3.PID</span><span style='font-family:宋体;'>调节参考口诀：</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>参数整定找最佳，从小到大顺序查；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>先是比例后积分，最后再把微分加；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>曲线振荡很频繁，比例度盘要放大；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>曲线漂浮绕大湾，比例度盘往小扳；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>曲线偏离回复慢，积分时间往下降；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>曲线波动周期长，积分时间再加长；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>曲线振荡频率快，先把微分降下来；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>动差大来波动慢。微分时间应加长；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>理想曲线两个波，前高后低四比一；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>一看二调多分析，调节质量不会低；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>若要反应增快，增大</span><span lang=EN-US>P</span><span style='font-family:宋体;'>减小</span><span lang=EN-US>I</span><span style='font-family:宋体;'>；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>若要反应减慢，减小</span><span lang=EN-US>P</span><span style='font-family:宋体;'>增大</span><span lang=EN-US>I</span><span style='font-family:宋体;'>；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>如果比例太大，会引起系统震荡；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>如果积分太大，会引起系统迟钝。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VAR1 = </span><span lang=EN-US>SERVO</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US>SERVO<span style='color:black'> = ON/OFF</span></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAITIDLE </span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER '</span><span style='font-family:宋体; '>触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS = 1000</span></p>
+<p class=MsoNormal><span lang=EN-US>ACCEL = 100</span></p>
+<p class=MsoNormal><span lang=EN-US>DECEL = 100</span></p>
+<p class=MsoNormal><span lang=EN-US>SPEED = 1000</span></p>
+<p class=MsoNormal><span lang=EN-US>CREEP = 100</span></p>
+<p class=MsoNormal><span lang=EN-US>LSPEED = 0</span></p>
+<p class=MsoNormal><span lang=EN-US>MERGE = 0</span></p>
+<p class=MsoNormal><span lang=EN-US>SRAMP = 0</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS = 0</span></p>
+<p class=MsoNormal><span lang=EN-US>MPOS = 0</span></p>
+<p class=MsoNormal><span lang=EN-US>FE_LIMIT = 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>修改最大允许随动误差限制范围，超过时告警。</span></p>
+<p class=MsoNormal><span lang=EN-US>FE_RANGE = 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>设置告警时的随动误差误差值</span></p>
+<p class=MsoNormal><span lang=EN-US>P_GAIN AXIS(0) = 100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>比例增益，可以使用指定轴的方式</span></p>
+<p class=MsoNormal><span lang=EN-US>D_GAIN = 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>积分增益</span></p>
+<p class=MsoNormal><span lang=EN-US>I_GAIN = 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>微分增益</span></p>
+<p class=MsoNormal><span lang=EN-US>OV_GAIN = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>速度增益</span></p>
+<p class=MsoNormal><span lang=EN-US>VFF_GAIN = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>前馈增益</span></p>
+<p class=MsoNormal><span lang=EN-US>SERVO = ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>闭环控制打开</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE(5000)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAITIDLE</span></p>
+<p class=MsoNormal><span lang=EN-US>SERVO AXIS(0) = OFF&nbsp;&nbsp; '</span><span style='font-family:宋体;'>关闭闭环控制，可以指定轴关闭，建议每次使用后关闭</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>DELAY(3000) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'3</span><span style='font-family:宋体;'>秒后停止测试</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(0) = 0</span></p>
+<p class=MsoNormal><span lang=EN-US>MPOS(0) = 0</span></p>
+<p class=MsoNormal><span lang=EN-US>END</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>整体曲线如下，可以看出</span><span lang=EN-US>DPOS</span><span style='font-family:宋体;'>和</span><span lang=EN-US>MPOS</span><span style='font-family:宋体;'>在闭环控制下，</span><span lang=EN-US>PID</span><span style='font-family:宋体;'>调节二者实时同步。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=937 height=291 src="doc.files/image439.jpg" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>局部曲线如下：</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=924 height=517 src="doc.files/image441.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="379.html#_P_GAIN_--_比例增益_1"><span lang=EN-US style='color:#9999CC;'>P_GAIN</span></a><span style='font-family:宋体;color:black; '>，</span><a href="376.html#_D_GAIN_--_微分增益_1"><span lang=EN-US>D_GAIN</span></a><span style='font-family:宋体;color:black; '>，</span><a href="377.html#_I_GAIN_--_积分增益_1"><span lang=EN-US>I_GAIN</span></a><span style='font-family:宋体;color:black; '>，</span><a href="378.html#_OV_GAIN_--_速度增益_1"><span lang=EN-US style='color:#9999CC; '>OV_GAIN</span></a><span style='font-family:宋体; color:black;'>，</span><a href="380.html#_VFF_GAIN_--_前馈增益_1"><span lang=EN-US style='color:#9999CC;'>VFF_GAIN</span></a><span style='font-family:宋体;color:black; '>，</span><a href="364.html#_FE_LIMIT"><span lang=EN-US>FE_LIMIT</span></a><span style='font-family:宋体;color:black; '>，</span><a href="365.html#_FE_RANGE"><span lang=EN-US>FE_RANGE</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><a name="_Toc134698170"></a><a name="_Toc16943"></a><a name="_Toc19133"></a><a name="_Toc3573"><span lang=EN-US>&nbsp;</span></a></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="383.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="381.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

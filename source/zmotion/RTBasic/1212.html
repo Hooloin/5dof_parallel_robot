@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_TkMat2dAddTrans -- 变换矩阵追加偏移</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1213.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1211.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc15544"><span lang=EN-US>ZV_TkMat2dAddTrans -- </span></a><span style='font-family: 宋体;'>变换矩阵追加偏移</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>变换</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>向</span><span lang=EN-US>2D</span><span style='font-family:宋体; '>变换矩阵中追加平移变换</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>平移变换追加到变换矩阵</span><span lang=EN-US>mat</span><span style='font-family:宋体; '>中的方式有两种：不同的追加方式，变换性质不一样。</span></p>
+<p class=MsoListParagraph style='margin-left:0cm;text-indent:0cm;line-height:130%;layout-grid-mode:char;word-break: break-all'><span lang=EN-US style='line-height:130%;'>1. </span><span style='line-height:130%;font-family:宋体;'>一种是追加到</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>后面，相当于平移矩阵右乘</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>，此时相对于在局部坐标系中执行平移，局部坐标系由</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>描述，与</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>一致</span></p>
+<p class=MsoListParagraph style='margin-left:0cm;text-indent:0cm;line-height:130%;layout-grid-mode:char;word-break: break-all'><span lang=EN-US style='line-height:130%;'>2. </span><span style='line-height:130%;font-family:宋体;'>一种是追加到</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>前面，相当于平移矩阵左乘</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>，此时相对于在全局坐标系中执行平移</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>addMethod</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>0,</span><span style=' font-family:宋体;'>追加到</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>后面，即先执行平移变换再执行</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>变换</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:12.0pt; font-family:宋体;'><img border=0 width=330 height=181 src="doc.files/image1197.png" alt="说明: IMG_256" ></span></p>
+<p class=MsoNormal><span lang=EN-US>addMethod</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>，追加到</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>前面，即先执行</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>变换再执行平移变换</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:12.0pt; font-family:宋体;'><img border=0 width=333 height=181 src="doc.files/image1199.png" alt="说明: IMG_256" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_MAT2DADDTRANS</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_TkMat2dAddTrans(mat,tx,ty,addMethod)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mat</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，变换矩阵</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tx</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>x</span><span style='font-family:宋体; '>方向平移量</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>ty</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>y</span><span style='font-family:宋体; '>方向</span><span lang=EN-US>v</span><span style='font-family:宋体; '>移量</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>addMethod</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>平移变换的追加方式，</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>为追加到变换矩阵</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>后面，</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>为追加到变换矩阵</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>前面，常用值为</span><span lang=EN-US>1</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mat</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,1,0.2,0,0,1,0) '</span><span style='font-family:宋体;'>矩阵数据写入</span><span lang=EN-US>TABLE</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGenData(mat,2,3,0) '</span><span style='font-family:宋体;'>创建变换矩阵</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_TkMat2dAddTrans(mat,5,5,1) '</span><span style='font-family:宋体;'>对变换矩阵</span><span lang=EN-US>mat</span><span style='font-family:宋体;'>添加</span><span lang=EN-US>(5,5)</span><span style='font-family:宋体;'>的平移</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1213.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1211.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

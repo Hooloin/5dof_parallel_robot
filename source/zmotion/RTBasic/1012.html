@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ImpGamma -- 伽马变换</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1013.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1011.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc24562"><span lang=EN-US>ZV_ImpGamma -- </span></a><span style='font-family:宋体;'>伽马变换</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>图像增强</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>对图像进行伽马变换，常常利用伽马变换来对过曝或者曝光不足（过暗）的灰度图利用伽马变换进行对比度调节，计算公式如下：</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='color:black'><img border=0 width=105 height=32 src="doc.files/image1066.png" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>其中</span><span lang=EN-US style='color:black'>c</span><span style='font-family:宋体; color:black'>和</span><span lang=EN-US style='color:black'><img border=0 width=13 height=29 src="doc.files/image1068.png" ></span><span style=' font-family:宋体;color:black'>为正常数，</span><span lang=EN-US style='color:black'>c</span><span style=' font-family:宋体;color:black'>为灰度缩放系数，通常取</span><span lang=EN-US style='color:black'>1</span><span style='font-family:宋体; color:black'>；</span><span lang=EN-US style='color:black'><img border=0 width=13 height=29 src="doc.files/image1068.png" ></span><span style=' font-family:宋体;color:black'>为伽马因子大小，控制了整个变换的缩放程度。</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='color:black;'><img border=0 width=394 height=384 src="doc.files/image1070.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_GammaTrans</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpGamma(src,dst,gama)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>src</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，源图像，单通道图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dst</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，变换后图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>gama</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>伽马变换值，正数，小于</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>时拉伸暗像素、压缩亮像素，</span><span lang=EN-US>gama</span><span style=' font-family:宋体;'>值越小效果越明显；等于</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>时不做任何变换；大于</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>时拉伸亮像素压缩暗像素，值越大效果越明显</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=561 height=180 src="doc.files/image1072.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT src,dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(src,&quot;enha3.jpg&quot;,1) '</span><span style='font-family:宋体;'>读取灰度图</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpGamma(src,dst,0.6) '</span><span style='font-family:宋体;'>对</span><span lang=EN-US>src</span><span style='font-family:宋体;'>进行伽马变换</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1013.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1011.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

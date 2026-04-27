@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DrawZvObj -- 绘制ZVOBJECT</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="860.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="858.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc12989"><span lang=EN-US>DrawZvObj -- </span></a><span style='font-family:宋体;'>绘制</span><span lang=EN-US>ZVOBJECT</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>坐标转换</span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>在</span><span lang=EN-US style='color:black'>HMI</span><span style='font-family:宋体; color:black'>自定义控件指定区域内绘制</span><span style='font-family:宋体;'>图像</span><span style=' font-family:宋体;color:black'>，此指令用在自定义控件的绘图函数里。指令将图像缩放匹配到</span><span lang=EN-US style='color:black'>x1,y1,x2,y2</span><span style='font-family:宋体; color:black'>指定的区域，</span><span lang=EN-US style='color:black'>x1,y1,x2,y2</span><span style='font-family:宋体; color:black'>可以取超出控件范围的值，指令按照原值进行图像适配，适配后超出控件范围的部分不予绘制，并且无副作用（功能可用于对图像放大）</span></p>
+<p class=MsoNormal align=center style='margin-left:-4.2pt;text-align:center'><span lang=EN-US style='color:black;'><img border=0 width=261 height=272 src="doc.files/image797.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>DrawZvObj(obj,x1,y1,x2,y2)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>obj</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，输入图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>x1</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>指定控件绘制区域的左上角</span><span lang=EN-US>x</span><span style='font-family:宋体;'>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>y1</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>指定控件绘制区域的左上角</span><span lang=EN-US>y</span><span style='font-family:宋体;'>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>x2</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>指定控件绘制区域的右下角</span><span lang=EN-US>x</span><span style='font-family:宋体;'>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>y2</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>指定控件绘制区域的右下角</span><span lang=EN-US>y</span><span style='font-family:宋体;'>坐标</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;logo.png&quot;,0)&nbsp; '</span><span style='font-family:宋体; '>以原图像格式读取图像</span></p>
+<p class=MsoNormal><span lang=EN-US>DrawZvObj(img,0,0,240,180)&nbsp; '</span><span style='font-family:宋体; '>在自定义控制左上角坐标</span><span lang=EN-US>(0,0)</span><span style='font-family:宋体;'>和右下角坐标</span><span lang=EN-US>(240,180)</span><span style='font-family:宋体;'>指定的区域内绘制一个图像</span><span lang=EN-US>img</span><span style='font-family:宋体;'>，图像宽高方向将分别进行缩放匹配</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><a name="_Toc177132929"><span lang=EN-US>&nbsp;</span></a></p>
+
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="860.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="858.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

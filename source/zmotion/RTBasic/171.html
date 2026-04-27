@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FILE3_DATETIME -- 文件最后修改日期</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="172.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="170.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc13631"><span lang=EN-US>FILE3_DATETIME -- </span></a><span style='font-family:宋体;'>文件最后修改日期</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" style='width:17.62%;border:solid windowtext 1.0pt;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" style='width:82.38%;border:solid windowtext 1.0pt;border-left: none; padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>FILE3</span><span style='font-family:宋体;'>文件编辑</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" style='width:17.62%;border:solid windowtext 1.0pt;border-top: none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>获取文件最后修改日期</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>未指定文件时，且当前未加载文件时，返回空</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" style='width:17.62%;border:solid windowtext 1.0pt;border-top: none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>var = FILE3_DATETIME(style[,filename])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>style: </span><span style='font-family:宋体;'>时间格式，”</span><span lang=EN-US>%Y/%m/%d %H:%M:%S</span><span style='font-family:宋体;'>”</span><span lang=EN-US> =&gt; 2021/08/14/ 11:03</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>filename</span><span style='font-family:宋体;'>：指定获取文件，缺省为当前加载文件</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>返回时间字符串</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>时间格式：</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%a </span><span style='font-family:宋体;'>星期几的简写</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%A </span><span style='font-family:宋体;'>星期几的全称</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%b </span><span style='font-family:宋体;'>月份的简写</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%B </span><span style='font-family:宋体;'>月份的全称</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%c </span><span style='font-family:宋体;'>标准的日期的时间串</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%C </span><span style='font-family:宋体;'>年份的前两位数字</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%d </span><span style='font-family:宋体;'>十进制表示的每月的第几天</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%D </span><span style='font-family:宋体;'>月</span><span lang=EN-US>/</span><span style='font-family:宋体;'>天</span><span lang=EN-US>/</span><span style='font-family:宋体;'>年</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%e </span><span style='font-family:宋体;'>在两字符域中，十进制表示的每月的第几天</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%F </span><span style='font-family:宋体;'>年</span><span lang=EN-US>-</span><span style='font-family:宋体;'>月</span><span lang=EN-US>-</span><span style='font-family:宋体;'>日</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%g </span><span style='font-family:宋体;'>年份的后两位数字，使用基于周的年</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%G </span><span style='font-family:宋体;'>年份，使用基于周的年</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%h </span><span style='font-family:宋体;'>简写的月份名</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%H 24</span><span style='font-family:宋体;'>小时制的小时</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%I 12</span><span style='font-family:宋体;'>小时制的小时</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%j </span><span style='font-family:宋体;'>十进制表示的每年的第几天</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%m </span><span style='font-family:宋体;'>十进制表示的月份</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%M </span><span style='font-family:宋体;'>十时制表示的分钟数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%n </span><span style='font-family:宋体;'>新行符</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%p </span><span style='font-family:宋体;'>本地的</span><span lang=EN-US>AM</span><span style='font-family:宋体;'>或</span><span lang=EN-US>PM</span><span style='font-family:宋体;'>的等价显示</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%r 12</span><span style='font-family:宋体;'>小时的时间</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%R </span><span style='font-family:宋体;'>显示小时和分钟：</span><span lang=EN-US>hh:mm</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%S </span><span style='font-family:宋体;'>十进制的秒数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%t </span><span style='font-family:宋体;'>水平制表符</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%T </span><span style='font-family:宋体;'>显示时分秒：</span><span lang=EN-US>hh:mm:ss</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%u </span><span style='font-family:宋体;'>每周的第几天，星期一为第一天</span> <span style='font-family:宋体;'>（值从</span><span lang=EN-US>0</span><span style='font-family:宋体;'>到</span><span lang=EN-US>6</span><span style='font-family:宋体;'>，星期一为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%U </span><span style='font-family:宋体;'>每年的第几周，把星期日做为第一天（值从</span><span lang=EN-US>0</span><span style='font-family:宋体;'>到</span><span lang=EN-US>53</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%V </span><span style='font-family:宋体;'>每年的第几周，使用基于周的年</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%w </span><span style='font-family:宋体;'>十进制表示的星期几（值从</span><span lang=EN-US>0</span><span style='font-family:宋体;'>到</span><span lang=EN-US>6</span><span style='font-family:宋体;'>，星期天为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%W </span><span style='font-family:宋体;'>每年的第几周，把星期一做为第一天（值从</span><span lang=EN-US>0</span><span style='font-family:宋体;'>到</span><span lang=EN-US>53</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%x </span><span style='font-family:宋体;'>标准的日期串</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%X </span><span style='font-family:宋体;'>标准的时间串</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%y </span><span style='font-family:宋体;'>不带世纪的十进制年份（值从</span><span lang=EN-US>0</span><span style='font-family:宋体;'>到</span><span lang=EN-US>99</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%Y </span><span style='font-family:宋体;'>带世纪部分的十制年份</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%z</span><span style='font-family:宋体;'>，</span><span lang=EN-US>%Z </span><span style='font-family:宋体;'>时区名称，如果不能得到时区名称则返回原字符。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>%% </span><span style='font-family:宋体;'>百分号</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" style='width:17.62%;border:solid windowtext 1.0pt;border-top: none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>带</span><span lang=EN-US style='color:black; '>linux</span><span style='font-family:宋体;color:black;'>系统或者</span><span lang=EN-US style='color:black; '>4</span><span style=' font-family:宋体;color:black;'>系以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" style='width:17.62%;border:solid windowtext 1.0pt;border-top: none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US style='color:black;'>?<b>FILE3_DATETIME</b>(“=&gt;%Y/%m/%d %H:%M:%S”, “daobu.nc”)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US style='color:black;'>=&gt;2021/08/14/ 11:03</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color: black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="172.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="170.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

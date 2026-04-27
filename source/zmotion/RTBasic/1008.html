@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ImpAddNoise -- 添加噪声</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1009.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1007.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc10527"><span lang=EN-US>ZV_ImpAddNoise -- </span></a><span style='font-family:宋体;'>添加噪声</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>滤波</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>对图像添加噪声</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpAddNoise(src,dst,type,param[,param2=0])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>src</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，原图像，</span><span lang=EN-US>8U</span><span style='font-family:宋体;'>单通道或</span><span lang=EN-US>3</span><span style='font-family:宋体;'>通道</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dst</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，添加噪声后的图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>type</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>噪声类型，</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>均匀白噪声，</span><span lang=EN-US>1-</span><span style='font-family:宋体;'>高斯噪声，</span><span lang=EN-US>2-</span><span style='font-family:宋体;'>椒盐噪声，</span><span lang=EN-US>3-</span><span style='font-family:宋体;'>泊松噪声</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>param</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>噪声参数，对应噪声类型</span><span lang=EN-US>0</span><span style='font-family:宋体;'>为幅值、类型</span><span lang=EN-US>1</span><span style='font-family:宋体;'>为标准差、类型</span><span lang=EN-US>2</span><span style='font-family:宋体;'>为噪声百分比，范围</span><span lang=EN-US>[0,100]</span><span style='font-family:宋体;'>、类型</span><span lang=EN-US>3</span><span style='font-family:宋体;'>忽略</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>param2</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>噪声第二参数，类型</span><span lang=EN-US>2</span><span style='font-family:宋体;'>有效，盐类噪声超出</span><span lang=EN-US>0.5</span><span style='font-family:宋体;'>的大小，即盐类噪声占比为</span><span lang=EN-US>0.5+param2</span><span style='font-family:宋体;'>，默认</span><span lang=EN-US>0</span><span style='font-family:宋体;'>，范围</span><span lang=EN-US>[-0.5,0.5]</span><span style='font-family:宋体;'>，</span><span lang=EN-US>0.5</span><span style='font-family:宋体;'>表示全为盐类噪声，</span><span lang=EN-US>-0.5</span><span style='font-family:宋体;'>表示全为椒类噪声</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="89%" style='width:89.96%;margin-left:21.0pt;border-collapse:collapse;border:none; '> <tr> <td width="15%" style='width:15.3%;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>type</span><span style='font-family:宋体; '>取值</span></p>
+</td>  <td width="24%" valign=top style='width:24.56%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>type</span><span style='font-family:宋体; '>说明</span></p>
+</td>  <td width="35%" valign=top style='width:35.82%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>param</span></p>
+</td>  <td width="24%" valign=top style='width:24.28%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>param2</span></p>
+</td>  </tr> <tr style='height:1.15pt'> <td width="15%" style='width:15.3%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width="24%" valign=top style='width:24.56%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>均匀白噪声</span></p>
+</td>  <td width="35%" valign=top style='width:35.82%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>幅值</span></p>
+</td>  <td width="24%" valign=top style='width:24.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+</td>  </tr> <tr style='height:1.15pt'> <td width="15%" style='width:15.3%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width="24%" valign=top style='width:24.56%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>高斯噪声</span></p>
+</td>  <td width="35%" valign=top style='width:35.82%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>标准差</span></p>
+</td>  <td width="24%" valign=top style='width:24.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+</td>  </tr> <tr style='height:1.15pt'> <td width="15%" style='width:15.3%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width="24%" valign=top style='width:24.56%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>椒盐噪声</span></p>
+</td>  <td width="35%" valign=top style='width:35.82%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>噪声百分比，范围</span><span lang=EN-US>[0,100]</span></p>
+</td>  <td width="24%" valign=top style='width:24.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>盐类噪声占比</span></p>
+</td>  </tr> <tr style='height:1.15pt'> <td width="15%" style='width:15.3%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>3</span></p>
+</td>  <td width="24%" valign=top style='width:24.56%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>泊松噪声</span></p>
+</td>  <td width="35%" valign=top style='width:35.82%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+</td>  <td width="24%" valign=top style='width:24.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal style='text-indent:21.0pt;'></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='font-size:9.5pt;font-family:新宋体;color:black'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1009.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1007.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

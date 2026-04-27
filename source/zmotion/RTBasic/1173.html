@@ -1,0 +1,122 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_CalDecompose -- 标定参数分解</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1174.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1172.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc1723"><span lang=EN-US>ZV_CalDecompose -- </span></a><span style='font-family:宋体;'>标定参数分解</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>标定</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>分解标定参数，将标定参分解出变换矩阵、内参、外参数以及畸变系数等</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>输出参数的含义与标定类型有关</span></p>
+</td>  </tr> <tr style='height:446.05pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:446.05pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:446.05pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_CalDecompose(param,interParam,outParam,tabId[,num=1])</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>param</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输入参数，标定参数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>interParam</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输出参数，</span><span lang=EN-US>3x3 64F</span><span style='font-family:宋体; '>矩阵。当</span><span lang=EN-US>param</span><span style='font-family:宋体; '>为相机标定时，参数为相机内参；当</span><span lang=EN-US>param</span><span style='font-family:宋体; '>为</span><span lang=EN-US>n</span><span style='font-family:宋体; '>点标定时，参数为</span><span lang=EN-US>2D</span><span style='font-family:宋体; '>变换矩阵（仿射或透视）；当</span><span lang=EN-US>param</span><span style='font-family:宋体; '>为透视畸变标定时，参数为</span><span lang=EN-US>2D</span><span style='font-family:宋体; '>透视变换矩阵</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>outParam</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，外参，输出参数，</span><span lang=EN-US>4x4 64F</span><span style='font-family:宋体; '>矩阵，相机标定有效</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>tabId</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>用于存储畸变系数的</span><span lang=EN-US>TABLE id</span><span style=' font-family:宋体;'>，畸变系数分别为</span><span lang=EN-US>k1</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>k2</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>k3</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>p1</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>p2</span><span style=' font-family:宋体;'>，其中</span><span lang=EN-US>k</span><span style=' font-family:宋体;'>为径向畸变系数，</span><span lang=EN-US>p</span><span style=' font-family:宋体;'>为切向畸变系数。输出系数与相机标定有关，标定时若没使用对应的畸变系数则输出</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，相机标定有效。</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>num</span><span style='font-family:宋体; '>与</span><span lang=EN-US>tabId</span><span style='font-family:宋体; '>关系</span></p>
+<div align=center>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none; '> <tr> <td width=128 valign=top style='width:54.65pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family: 宋体'>num</span><span style='font-family:宋体'>个数</span></p>
+</td>  <td width=573 valign=top style='width:245.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family: 宋体'>tabId</span></p>
+</td>  </tr> <tr> <td width=128 valign=top style='width:54.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=573 valign=top style='width:245.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>无输出</span></p>
+</td>  </tr> <tr> <td width=128 valign=top style='width:54.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width=573 valign=top style='width:245.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>k1</span></p>
+</td>  </tr> <tr> <td width=128 valign=top style='width:54.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width=573 valign=top style='width:245.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>k1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>k2</span></p>
+</td>  </tr> <tr> <td width=128 valign=top style='width:54.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>3</span></p>
+</td>  <td width=573 valign=top style='width:245.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>k1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>k2</span><span style='font-family:宋体; '>、</span><span lang=EN-US>k3</span></p>
+</td>  </tr> <tr> <td width=128 valign=top style='width:54.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>5</span></p>
+</td>  <td width=573 valign=top style='width:245.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>k1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>k2</span><span style='font-family:宋体; '>、</span><span lang=EN-US>k3</span><span style='font-family:宋体; '>、</span><span lang=EN-US>p1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>p2</span></p>
+</td>  </tr> </table>
+</div>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>标定类型与分解参数关系</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='margin-left:42.85pt;border-collapse:collapse;border:none;'> <tr> <td width=132 valign=top style='width:2.0cm;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>标定类型</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family: 宋体'>interParam</span></p>
+</td>  <td width=165 valign=top style='width:70.9pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family: 宋体'>outParam</span></p>
+</td>  <td width=182 valign=top style='width:77.95pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family: 宋体'>tabId</span></p>
+</td>  </tr> <tr> <td width=132 valign=top style='width:2.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2D</span><span style='font-family:宋体; '>变换矩阵（仿射或透视）</span></p>
+</td>  <td width=165 valign=top style='width:70.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>无效</span></p>
+</td>  <td width=182 valign=top style='width:77.95pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>无效</span></p>
+</td>  </tr> <tr> <td width=132 valign=top style='width:2.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2D</span><span style='font-family:宋体; '>透视变换矩阵</span></p>
+</td>  <td width=165 valign=top style='width:70.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>无效</span></p>
+</td>  <td width=182 valign=top style='width:77.95pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>无效</span></p>
+</td>  </tr> <tr> <td width=132 valign=top style='width:2.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>内参</span></p>
+</td>  <td width=165 valign=top style='width:70.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>外参</span></p>
+</td>  <td width=182 valign=top style='width:77.95pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>畸变系数</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1174.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1172.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

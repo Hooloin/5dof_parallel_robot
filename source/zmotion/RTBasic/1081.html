@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_MrGenArc -- 圆环区域测量器</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1082.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1080.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc24786"><span lang=EN-US>ZV_MrGenArc -- </span></a><span style='font-family:宋体;'>圆环区域测量器</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.38%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.62%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>区域测量</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.38%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.62%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>生成扇环形状点测量器，单区域测量器。</span><span style='font-family:宋体; background: white'>默认使用相对阈值模式</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.38%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.62%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_MrGenArc(mr,cx,cy,r,annR[,starAngle=0,extAngle=360,direction=0,interp=1])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mr</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，圆环形的测量器</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cx</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>圆环的中心</span><span lang=EN-US>x</span><span style='font-family:宋体; '>坐标，范围</span><span lang=EN-US>[0,32766]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cy</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>圆环的中心</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标，范围</span><span lang=EN-US>[0,32766]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>r</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>圆环中线的半径，范围</span><span lang=EN-US>[1,16383]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>annR</span></b><b><span style=' font-family:宋体;'>：</span></b><span style=' font-family:宋体;'>圆环半宽，范围</span><span lang=EN-US>(0,r)</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>startAngle</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>测量区域起始角度，由图像坐标系确定，单位度数，范围</span><span lang=EN-US>(-180,180]</span><span style='font-family:宋体; '>，若超出范围会自动归一化到此范围</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>extAngle</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>测量区域角度范围，</span><span lang=EN-US>(0</span><span style='font-family:宋体; '>，</span><span lang=EN-US>360]</span><span style='font-family:宋体; '>，单位度数，若大于</span><span lang=EN-US>360</span><span style='font-family:宋体; '>内部会自动转换成</span><span lang=EN-US>360</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>direction</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>扫描方向，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>切向顺时针，</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>径向从外到内</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>interp</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>插值算法，范围</span><span lang=EN-US>[0,2]</span><span style='font-family:宋体; '>，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>最近邻插值，</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>双线性插值，</span><span lang=EN-US>2-</span><span style='font-family:宋体; '>双三次插值</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.38%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.62%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.38%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.62%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mr</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MrGenArc(mr,120,120,20,10,60,120,0,1) '</span><span style='font-family:宋体;'>生成圆环测量器</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1082.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1080.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

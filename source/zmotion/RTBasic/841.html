@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_LATCH -- 锁存显示图像</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="842.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="840.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_ZV_LATCH_--_锁存显示图像"></a><a name="_Toc547"></a><a name="_ZV_LATCHINFO_--_获取锁存信息"></a><span lang=EN-US>ZV_LATCH -- </span><span style='font-family:宋体;'>锁存显示图像</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.4%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.6%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>锁存处理</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.4%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>根据当前锁存信息，将待显示图像<span lang=EN-US>img</span>转换到锁存通道号<span lang=EN-US>latch_id</span>指定的锁存区域，并更新锁存信息，锁存信息可能有合法性检查、范围限制等改变。</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>锁存指具有保护的缓存区域，只支持单通道和三通道，<span lang=EN-US>8U</span>类型的图像显示</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red'>注意：因显示方式限制，显示指令不能频繁连续调用，否则可能导致后一条指令丢失，即指令触发保护机制而不更新显示直接返回</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red'>显示指令包括<span lang=EN-US>ZV_LATCH</span>、<span lang=EN-US>ZV_LATCHTRANS</span>、<span lang=EN-US>ZV_LATCHCLEAR</span></span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="18%" valign=top style='width:18.4%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_LATCH(img,latchId,type)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family:宋体'>img</span></b><b><span style='font-family:宋体'>：</span></b><span lang=EN-US style='font-family:宋体'>ZVOBJECT</span><span style='font-family:宋体'>图像类型，待显示图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family:宋体'>latchId</span></b><b><span style='font-family:宋体'>：</span></b><span style=' font-family:宋体'>锁存通道号，对应图片控件背景图片参数引用的变量<span lang=EN-US>@ZV</span>后的数字，如通道<span lang=EN-US>0</span>对应<span lang=EN-US>@ZV0</span>，锁存通道本身是独立的，通过参数设置绑定控件</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family:宋体'>type</span></b><b><span style='font-family:宋体'>：</span></b><span style=' font-family:宋体'>显示方式，<span lang=EN-US>0-</span>维持当前的缩放比例和平移，<span lang=EN-US>1-</span>居中填充显示，即以控件支持的最大尺寸显示</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体;'><img border=0 width=436 height=629 src="doc.files/image769.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.4%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:115.75pt'> <td width="18%" valign=top style='width:18.4%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:115.75pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:115.75pt'>
+<p class=MsoNormal><span style='font-family:宋体'>例如：</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体;'><img border=0 width=429 height=274 src="doc.files/image771.jpg" ></span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZVOBJECT img</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZV_ImgRead(img,&quot;logo.png&quot;,0)'</span><span style='font-family:宋体;'>以原图像格式读取图像</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZV_LATCH(img,0) '</span><span style='font-family:宋体;'>通道</span><span lang=EN-US>0</span><span style='font-family:宋体;'>显示图片</span><span lang=EN-US>img</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.4%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>相关指令</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="842.html#_ZV_LATCHINFO_--_获取锁存信息_1"><span lang=EN-US style='font-family:宋体'>ZV_LATCHINFO</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="842.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="840.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

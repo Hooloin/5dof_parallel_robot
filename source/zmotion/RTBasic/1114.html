@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ClrClassify -- 颜色分类识别</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1115.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1113.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc30422"><span lang=EN-US>ZV_ClrClassify -- </span></a><span style='font-family:宋体;'>颜色分类识别</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>分割</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>使用颜色模型列表对区域中的颜色进行识别，即区域中的颜色与颜色列表中某个颜色的匹配度最高，若识别失败则输出</span><span lang=EN-US>&quot;?&quot;</span><span style='font-family:宋体; '>表示不可识别</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_CLRMODELCLASSIFY</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ClrClassify(colorList,img,mask,maxLen,tab_name,tabId,score)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>colorList</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，颜色模型列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，</span><span lang=EN-US>3</span><span style='font-family:宋体; '>通道</span><span lang=EN-US>RGB</span><span style='font-family:宋体; '>图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mask</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，感兴趣的区域</span><span lang=EN-US>region</span><span style='font-family:宋体; '>，指定</span><span lang=EN-US>img</span><span style='font-family:宋体; '>图像上要进行识别的区域，不能为空</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>maxLen</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体;'>可使用的输出参数</span><span lang=EN-US>tab_name TABLE</span><span style='font-family:宋体; '>的</span><span style='font-family:宋体;'>最大长度</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tab_name</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>颜色名称，输出参数，</span><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，存储颜色名字参数索引</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabId</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>颜色</span><span lang=EN-US>id</span><span style='font-family:宋体; '>，输出参数，</span><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，存储颜色</span><span lang=EN-US>id</span><span style='font-family:宋体; '>的参数索引</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>score</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>识别分数，识别分数小于给定分数则判定识别失败，输出结果输出</span><span lang=EN-US>&quot;?&quot;</span><span style='font-family:宋体; '>，否则正常输出颜色名称</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,mask</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;color.png&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReGenRect(mask,0,0,100,100) '</span><span style='font-family:宋体;'>生成区域掩膜</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>创建颜色模型列表</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT clr_model,clr_model_list</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ClrGen(clr_model,&quot;color&quot;,0,143,255,136,255,143,255) '</span><span style='font-family:宋体;'>生成颜色模板</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ObjInsert(clr_model_list,clr_model,clr_model_list,-1) '</span><span style='font-family:宋体;'>插入列表</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>颜色识别并获取结果</span></p>
+<p class=MsoNormal><span lang=EN-US>LOCAL color_name(10)</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ClrClassify(clr_model_list,img,mask,10,0,20,80) '</span><span style='font-family:宋体;'>颜色识别</span></p>
+<p class=MsoNormal><span lang=EN-US>DMCPY color_name(0),TABLE(0),10</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>识别到的颜色名为：</span><span lang=EN-US>&quot;,color_name</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>颜色</span><span lang=EN-US>id</span><span style='font-family:宋体;'>为：</span><span lang=EN-US>&quot;,TABLE(20)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal align=left style='text-align:left;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1115.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1113.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

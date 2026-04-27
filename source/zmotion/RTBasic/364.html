@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FE_LIMIT -- 最大随动误差设置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="365.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="363.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_FE_LIMIT"></a><a name="_Toc134698151"></a><a name="_Toc5464"></a><a name="_Toc7614"></a><a name="_Toc29285"></a><a name="_Toc8409"><span lang=EN-US>FE_LIMIT -- </span></a><span style='font-family:宋体;'>最大随动误差设置</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>最大允许的随动误差值，缺省：</span></b><b><span lang=EN-US style='color:black;'>3</span></b><b><span style='font-family:宋体;color:black;'>。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>当超过跟随误差，产生实时误差，使能继电器（</span><span lang=EN-US style='color:black;'>WDOG</span><span style='font-family:宋体;color:black;'>）清零，阻止其他发动机运行。这个限制通常用于防护缺省状态，例如机械被锁住，丢失编码器反馈，等等。超过时告警，通常</span><span lang=EN-US style='color:black;'>AXISSTATUS</span><span style='font-family:宋体;color:black;'>报</span><span lang=EN-US style='color:black;'>2h/100h/102h</span><span style='font-family:宋体;color:black;'>。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>VAR1 = </span><span lang=EN-US>FE_LIMIT</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US>FE_LIMIT<span style='color:black'> = expression</span></span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>适用：</span><span lang=EN-US style='color:black;'>FE_LIMIT AXIS(axis)</span><span style='font-family:宋体; color:black;'>方式设置指定的轴</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>参见</span><a title="Not Found Page:#_SERVO_--_闭环开关_2"><span lang=EN-US>SERVO</span></a></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="363.html#_FE_--_当前随动误差_1"><span lang=EN-US>FE</span></a><span style='font-family:宋体;color:black;'>，</span><a title="Not Found Page:#_SERVO_--_闭环开关_2"><span lang=EN-US>SERVO</span></a><span style='font-family:宋体;'>，</span><a href="379.html#_P_GAIN_--_比例增益_1"><span lang=EN-US style='color:#9999CC; '>P_GAIN</span></a><span style='font-family:宋体;color:black;'>，</span><a href="376.html#_D_GAIN_--_微分增益_1"><span lang=EN-US>D_GAIN</span></a><span style='font-family:宋体;color:black;'>，</span><a href="377.html#_I_GAIN_--_积分增益_1"><span lang=EN-US>I_GAIN</span></a><span style='font-family:宋体;color:black;'>，</span><a href="378.html#_OV_GAIN_--_速度增益_1"><span lang=EN-US style='color:#9999CC; '>OV_GAIN</span></a><span style='font-family:宋体;color:black;'>，</span><a href="380.html#_VFF_GAIN_--_前馈增益_1"><span lang=EN-US style='color:#9999CC; '>VFF_GAIN</span></a><span style='font-family:宋体;color:black;'>，</span><a href="365.html#_FE_RANGE"><span lang=EN-US>FE_RANGE</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="365.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="363.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

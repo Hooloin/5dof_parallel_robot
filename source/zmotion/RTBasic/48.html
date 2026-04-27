@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVE_PARA -- 缓冲参数</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="49.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="47.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697841"></a><a name="_Toc18758"></a><a name="_Toc31841"></a><a name="_Toc217"></a><a name="_Toc6045"><span lang=EN-US>MOVE_PARA -- </span></a><span style='font-family:宋体;'>缓冲参数</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>特殊运动指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>BASE</span></b><b><span style='font-family:宋体;color:black;'>轴运动缓冲修改参数。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>这个指令</span><span lang=EN-US style='color:black;'>LOAD</span><span style='font-family: 宋体; color:black;'>执行时不做任何运动，只修改参数。此指令的</span><span lang=EN-US style='color:black;'>MTYPE</span><span style='font-family:宋体;color:black;'>与</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体;color:black;'>一致。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>注意事项：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>1.MOVE_PARA</span><span style='font-family:宋体;color:red;'>仅适用于修改全局参数，而不应用于修改那些会被带入运动缓冲区的参数，例如</span><span lang=EN-US style='color:red;'>FORCE_SPEED</span><span style='font-family:宋体;color:red;'>、</span><span lang=EN-US style='color:red;'>CORNER_MODE</span><span style='font-family:宋体;color:red;'>、</span><span lang=EN-US style='color:red;'>INTPFACTOR</span><span style='font-family:宋体;color:red;'>和</span><span lang=EN-US style='color:red;'>CORNER_ACC</span><span style='font-family:宋体;color:red;'>等。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>在分离运动模式下，</span><span lang=EN-US style='color:red;'>ACCEL</span><span style='font-family: 宋体; color:red;'>和</span><span lang=EN-US style='color:red; '>SPEED</span><span style='font-family:宋体;color:red; '>也会被带入缓冲，因此不能使用</span><span lang=EN-US style='color: red;'>MOVE_PARA</span><span style='font-family:宋体; color:red;'>修改。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>2.</span><span style='font-family: 宋体; color:red;'>为了确保参数值能够正确地被带入运动缓冲区，必须在</span><span lang=EN-US style='color:red;'>MOVE</span><span style='font-family:宋体;color:red;'>指令被填入运动缓冲区之前，通过直接调用参数来进行修改。如果在</span><span lang=EN-US style='color:red;'>MOVE</span><span style='font-family:宋体;color:red;'>指令之后尝试修改这些参数，可能会导致参数值的随机性，从而影响运动效果的确定性。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_PARA(paraname, index, value)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>paraname</span><span style='font-family:宋体; color:black;'>：参数名</span><span lang=EN-US style='color:black;'>, </span><span style='font-family:宋体;color:black;'>必须是</span><span lang=EN-US style='color:black;'>?*set</span><span style='font-family:宋体;color:black;'>里面的非只读参数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>index</span><span style='font-family:宋体; color:black;'>：参数编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>value</span><span style='font-family:宋体; color:black;'>：参数值</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>20170503</span><span style='font-family:宋体; color:red;'>以上固件</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>例一：修改</span><span lang=EN-US>SPEED</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0)&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>选择轴</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US>SPEED=100</span></p>
+<p class=MsoNormal><span lang=EN-US>PRINT SPEED&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span style='font-family: 宋体; color:black;'>打印结果</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE_PARA(speed ,0,200)&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>修改轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>的</span><span lang=EN-US style='color:black;'>SPEED</span><span style='font-family: 宋体; color:black;'>参数值为</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US>DELAY(1000)</span></p>
+<p class=MsoNormal><span lang=EN-US>PRINT SPEED&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>打印结果</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例二：单轴变速</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>选择轴</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL =1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL =1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SRAMP =100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS = 0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MERGE=ON </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_PARA(SPEED,0,200)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(200)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_PARA(SPEED,0,150)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>垂直刻度均为</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=696 height=504 src="doc.files/image183.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例三：多轴变速</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>设置速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=500,500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>设置加速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=500,500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>设置减速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SRAMP=100,100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'S</span><span style='font-family:宋体; color:black;'>曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MERGE=ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>开启连续插补</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CORNER_MODE=2+8+32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>启动拐角减速</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL_ANGLE = 15 * (PI/180)&nbsp;&nbsp; '</span><span style='font-family: 宋体; color:black;'>设置开始减速角度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>STOP_ANGLE = 45 * (PI/180)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>设置结束减速角度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ZSMOOTH=2</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>FORCE_SPEED=100&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>等比减速时起作用</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100,0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_PARA(SPEED,0,200)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(0,100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>运动角度大于</span><span lang=EN-US style='color:black;'>45</span><span style='font-family:宋体;color:black;'>°，完全减速</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_PARA(SPEED,0,120)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(60,100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>运动角度</span><span lang=EN-US style='color:black;'>30.96</span><span style='font-family:宋体;color:black;'>°处于</span><span lang=EN-US style='color:black;'>15</span><span style='font-family:宋体;color:black;'>°</span><span lang=EN-US style='color:black;'>~45</span><span style='font-family: 宋体; color:black;'>°，等比减速</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_PARA(SPEED,0,50)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(70,100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>运动角度</span><span lang=EN-US style='color:black;'>4.03</span><span style='font-family:宋体;color:black;'>°小于</span><span lang=EN-US style='color:black;'>15</span><span style='font-family:宋体;color:black;'>°，不减速</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>垂直刻度均为</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=865 height=763 src="doc.files/image185.jpg" ></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="49.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="47.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_CalGetBase -- 获取基准坐标系</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1165.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1163.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc8062"><span lang=EN-US>ZV_CalGetBase -- </span></a><span style='font-family:宋体;'>获取基准坐标系</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>标定</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>从输入点集中选择一个基准坐标系（由</span><span lang=EN-US>3</span><span style='font-family:宋体;'>点构成），基准是一个世界坐标系，描述了这个世界坐标系在图像中的位姿。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>若输入基准为空即输入基准矩阵行数为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>，则从输入点集中自动选取一个默认的基准作为输出基准。若输入基准不为空，则在输入基准的坐标轴点附近相应地选取三个点作为输出基准。</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体;'>选择方式：</span></b><span style='font-family:宋体;'>根据输入坐标系点在输入点集中去对点，原点对原点，</span><span lang=EN-US>x</span><span style='font-family:宋体;'>轴点对</span><span lang=EN-US>x</span><span style='font-family:宋体;'>轴点，</span><span lang=EN-US>y</span><span style='font-family:宋体;'>轴点对</span><span lang=EN-US>y</span><span style='font-family:宋体;'>轴点，最终选择离这</span><span lang=EN-US>3</span><span style='font-family:宋体;'>点分别最近的</span><span lang=EN-US>3</span><span style='font-family:宋体;'>点作为输出基准坐标系。建议原点、</span><span lang=EN-US>x</span><span style='font-family:宋体;'>轴点、</span><span lang=EN-US>y</span><span style='font-family:宋体;'>轴点为构成直角坐标系的的相邻三点</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red'>注：输入基准的坐标轴点与点集中的坐标误差不能偏离过大，</span><span lang=EN-US style='color:red'>5</span><span style='font-family:宋体;color:red'>个像素内</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_CalGetBase(pptsIn,baseIn,baseOut)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>pptsIn</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZV</span><span lang=EN-US>OBJECT</span><span style=' font-family:宋体;'>类型，输入的像素坐标点集，单通道</span><span lang=EN-US>nx2</span><span style=' font-family:宋体;'>矩阵</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>baseIn</span></b><b><span style=' font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style=' font-family:宋体;'>类型，输入坐标系，单通道</span><span lang=EN-US>3x2</span><span style=' font-family:宋体;'>矩阵，分别为原点，</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>轴点，</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>轴点，均大于</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>baseOut</span></b><b><span style=' font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style=' font-family:宋体;'>类型，输出基准坐标系，单通道</span><span lang=EN-US>3x2</span><span style=' font-family:宋体;'>矩阵，分别为原点，</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>轴点，</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>轴点</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style=' font-family:宋体;'>如下图所示：</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=423 height=352 src="doc.files/image1181.jpg" ></span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体;'>上图蓝色点为输入</span><span lang=EN-US>3</span><span style='font-family:宋体;'>点，红色点为选择的输出基准坐标系</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,pts,base_in,base_out</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;tool3.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_CalGetScaPoints(img,pts,128,0,500,5000) '</span><span style='font-family:宋体;'>提取标定板圆心坐标</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,361,362,482,362,361,482) '</span><span style='font-family:宋体;'>写入输入坐标系数据</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGenData(base_in,3,2,0) '</span><span style='font-family:宋体;'>生成输入坐标系矩阵</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_CalGetBase(pts,base_in,base_out) '</span><span style='font-family:宋体;'>获取基准坐标系</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGetRow(base_out,0,2,0) '</span><span style='font-family:宋体;'>获取基准坐标系原点位置</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>基准坐标系原点位置</span><span lang=EN-US>:&quot;,TABLE(0),TABLE(1)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1165.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1163.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

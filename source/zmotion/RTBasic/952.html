@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ReEllipticAxis -- 特征椭圆参数</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="953.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="951.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>ZV_ReEllipticAxis -- </span><span style='font-family:宋体;'>特征椭圆参数</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>特征</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>计算区域的惯量主轴（等效椭圆）参数，即区域的轴和方向与椭圆的轴和方向是一样的，方向</span><span lang=EN-US style='color:black'>(</span><span style='font-family:宋体; color:black'>即角度</span><span lang=EN-US style='color:black'>)</span><span style='font-family:宋体; color:black'>是长轴（主轴）与水平线的夹角</span><span lang=EN-US style='color:black'>.</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>计算方式</span></b><span style=' font-family:宋体;color:black'>：用像素中心坐标计算半长轴和半短轴，返回的长轴和短轴是对应半轴的两倍加</span><span lang=EN-US style='color:black'>1</span><span style='font-family:宋体; color:black'>，即半轴</span><span lang=EN-US style='color:black'>*2+1</span><span style='font-family:宋体; color:black'>，加</span><span lang=EN-US style='color:black'>1</span><span style='font-family:宋体; color:black'>是因为区域点存在面积而非理想点，这样处理可以使椭圆参数更合适。</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='color:black;'><img border=0 width=519 height=324 src="doc.files/image907.jpg" alt="说明: 52" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_ReEllipAxis</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ReEllipticAxis(re,tabId)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>re</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，区域</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabId</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，输出参数</span><span lang=EN-US>,</span><span style='font-family:宋体; '>输出依次为等效椭圆长轴、短轴、角度（单位为度数，顺时针为正，范围</span><span lang=EN-US>[-90,90</span><span style='font-family:宋体; '>）</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,mask,re</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;region2.png&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReGenFullImage(img,mask) '</span><span style='font-family:宋体;'>生成全图区域掩膜</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReThresh(img,mask,re,0,150) '</span><span style='font-family:宋体;'>区域二值化</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>计算某个连通子区域的椭圆轴参数</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT re_connent_list,re_connent</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReConnect(re,re_connent_list) '</span><span style='font-family:宋体;'>计算区域的连通区域</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ObjSelect(re_connent_list,re_connent,3) '</span><span style='font-family:宋体;'>获取列表中序号为</span><span lang=EN-US>3</span><span style='font-family:宋体;'>的区域</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReEllipticAxis(re_connent,0) '</span><span style='font-family:宋体;'>单个连通区域的椭圆轴参数</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>椭圆轴参数：</span><span lang=EN-US>&quot;,TABLE(0),TABLE(1),TABLE(2)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="953.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="951.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

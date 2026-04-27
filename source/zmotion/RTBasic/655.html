@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DRAWEX_POLYGON2 -- 绘制多边形（table存储）</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="656.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="654.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc147915746"></a><a name="_DRAWEX_POLYGON2"></a><span lang=EN-US>DRAWEX_POLYGON2 -- </span><span style='font-family:宋体;'>绘制多边形（</span><span lang=EN-US>table</span><span style='font-family:宋体;'>存储）</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>类型</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>绘图指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>描述</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>在指定区域画一个多边形</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>此指令支持设置线条宽度、线条类型和填充绘图，但</span><span style='font-family:宋体; color:red'>不允许画出自定义控件之外。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体; color:black;'>此指令只能在自定义元件的绘图函数内使用。</span><span style='font-family:宋体; '>请查看</span><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_自定义元件调用函数_1"><span lang=EN-US style='font-family:宋体; '><span lang=EN-US>自定义元件调用函数</span></span></a></span><span style='font-family:宋体; '>参考例程。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>语法</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWEX_POLYGON2(points, tableindex <span style='color:red'>[, iffill]</span>)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>points</span><span style='font-family:宋体;'>：多边形点个数，决定后面有多少组</span><span lang=EN-US>xy</span><span style='font-family:宋体; '>数据（封闭图形起点和终点坐标需传两次，则总需传入点的坐标个数</span><span lang=EN-US>=</span><span style='font-family:宋体; '>多边形点个数</span><span lang=EN-US>+1</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>tableindex</span><span style='font-family:宋体;'>：存储起始点数据的</span><span lang=EN-US>table</span><span style='font-family:宋体;'>下标（</span><span lang=EN-US>x1,y1,..xn,yn</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US style='color:red'>iffill</span><span style='font-family:宋体; color:red'>：是否填充，缺省为</span><span lang=EN-US style='color:red'>0</span><span style='font-family:宋体;color:red'>（不填充）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:47.25pt; '><span lang=EN-US style='color:red'>0 - </span><span style='font-family:宋体;color:red'>不填充，非</span><span lang=EN-US style='color:red'>0 - </span><span style='font-family:宋体; color:red'>填充</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体; color:red'>（注意：后绘制的可能会遮挡前绘制的图，因此选择填充时建议先画填充，后画边框）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US style='color:red'>&nbsp;</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>特别说明：</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span style='font-family:宋体;'>若绘制封闭的多边形，如绘四边形需要传</span><span lang=EN-US>5</span><span style='font-family:宋体;'>个点，且起点</span><span lang=EN-US>=</span><span style='font-family:宋体;'>终点，反之则是普通的多线段（不能进行填充）。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span style='font-family:宋体;color:red'>若绘制的填充多边形不显示，请先检查是否是封闭图形。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt; text-indent:21.0pt;'><span style='font-family:宋体; color:red'>多边形的边数是有限制的，当前版本最多支持</span><span lang=EN-US style='color:red'>32</span><span style='font-family:宋体;color:red'>边形。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>适用控制器</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>支持</span><span lang=EN-US>RTHmi</span><span style='font-family:宋体;'>（仅支持</span><span lang=EN-US>4</span><span style='font-family:宋体;'>系列及以上控制器）</span></p>
+</td> </tr> <tr style='height:16.45pt'> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>例子</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>SETEX_LINE(2,0)&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>‘设置线条宽度为</span><span lang=EN-US>2</span><span style='font-family:宋体;'>，实线类型</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>SET_COLOR(RGB(0,0,255),RGB(0,255,0))&nbsp;&nbsp; </span><span style='font-family: 宋体;'>‘设置线条颜色和填充颜色</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(0)=100&nbsp; 'x1</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(1)=90&nbsp;&nbsp; 'y1</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(2)=55&nbsp;&nbsp; 'x2</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(3)=125&nbsp; 'y2</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(4)=75&nbsp;&nbsp; 'x3</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(5)=175&nbsp; 'y3</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(6)=125&nbsp; 'x4</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(7)=175&nbsp; 'y4</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(8)=145&nbsp; 'x5</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(9)=125&nbsp; 'y5</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(10)=100 'x6</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(11)=90&nbsp; 'y6</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWEX_POLYGON2(6,0,1)&nbsp;&nbsp; </span><span style='font-family: 宋体;'>‘绘制可填充的五边形</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWEX_POLYGON2(6,0)&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>‘绘制五边形边框</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US><img border=0 width=171 height=152 src="doc.files/image667.png" ></span></p>
+</td> </tr> <tr style='height:16.45pt'> <td width="15%" valign=top style='width:15.86%;border-top:none;border-left: solid black 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:16.45pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>相关指令</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_DRAWRECT">DRAWRECT</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_DRAWEX_RECT">DRAWEX_RECT</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_SETEX_LINE">SETEX_LINE</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_bookmark12">SET_COLOR</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US style='font-family:等线; '>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="656.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="654.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

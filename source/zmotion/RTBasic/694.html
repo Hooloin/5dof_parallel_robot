@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>HMI_DEALINFO -- 获取HMI处理信息</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="695.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="693.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc147915785"><span lang=EN-US>HMI_DEALINFO -- </span></a><span style='font-family:宋体;'>获取</span><span lang=EN-US>HMI</span><span style='font-family:宋体;'>处理信息</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><a name="_Toc147915786"><b><span style='font-family:宋体; '>类型</span></b></a></p>
+</td>  <td width="84%" style='width:84.12%;border:solid black 1.0pt;border-left: none; padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>HMI</span><span style=' font-family:宋体;'>指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>描述</span></b></p>
+</td>  <td width="84%" style='width:84.12%;border-top:none;border-left:none; border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>获取当前</span><span lang=EN-US>HMI</span><span style='font-family:宋体; '>处理的信息</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>语法</span></b></p>
+</td>  <td width="84%" style='width:84.12%;border-top:none;border-left:none; border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>value = HMI_DEALINFO(strAttr [,tabid])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>strAttr</span><span style=' font-family:宋体;'>：指定获取的</span><span lang=EN-US>HMI</span><span style=' font-family:宋体;'>处理信息</span></p>
+<p class=MsoNormal style='text-indent:52.2pt;'><span lang=EN-US>&quot;CURWIN&quot;</span><span style='font-family:宋体; '>：当前窗口号</span></p>
+<p class=MsoNormal style='text-indent:52.2pt;'><span lang=EN-US>&quot;CURCTRL&quot;</span><span style='font-family:宋体; '>：当前元件号</span></p>
+<p class=MsoNormal style='text-indent:52.2pt;'><span lang=EN-US>&quot;TOPWIN&quot;</span><span style='font-family:宋体; '>：最顶层显示的窗口号</span></p>
+<p class=MsoNormal style='text-indent:52.2pt;'><span lang=EN-US>&quot;EDITWIN&quot;</span><span style='font-family:宋体; '>：当前编辑输入窗口</span></p>
+<p class=MsoNormal style='text-indent:52.2pt;'><span lang=EN-US>&quot;EDITCTRL&quot;</span><span style='font-family:宋体; '>：当前编辑输入元件</span></p>
+<p class=MsoNormal style='text-indent:52.2pt;'><span lang=EN-US>&quot;EDITNEXT&quot;</span><span style='font-family:宋体; '>：当前焦点的下一个编辑元件</span></p>
+<p class=MsoNormal style='text-indent:52.2pt;'><span lang=EN-US>&quot;EDITPREV&quot;</span><span style='font-family:宋体; '>：当前焦点的上一个编辑元件</span></p>
+<p class=MsoNormal style='text-indent:52.2pt;'><span lang=EN-US>&quot;ACTWINS&quot;</span><span style='font-family:宋体; '>：获取当前打开的所有窗口</span></p>
+<p class=MsoNormal style='text-indent:20.45pt;'><span lang=EN-US>tabid: </span><span style='font-family:宋体; '>输出窗口号的</span><span lang=EN-US>table</span><span style='font-family:宋体; '>地址</span></p>
+<p class=MsoNormal style='text-indent:52.2pt;'><span lang=EN-US>&quot;CLKWIN&quot;</span><span style='font-family:宋体; '>：最后点击窗口</span></p>
+<p class=MsoNormal style='text-indent:52.2pt;'><span lang=EN-US>&quot;CLKCTRL&quot;</span><span style='font-family:宋体; '>：最后点击元件</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>value</span><span style=' font-family:宋体;'>：数值</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>注：</span><span lang=EN-US style='color:red'>“EDITWIN”</span><span style='font-family:宋体; color:red'>、</span><span lang=EN-US style='color:red'> “EDITCTRL”</span><span style='font-family:宋体; color:red'>、</span> <span lang=EN-US style='color:red'>“EDITNEXT”</span><span style=' font-family:宋体;color:red'>、</span><span lang=EN-US style='color:red'> “EDITPREV”</span><span style=' font-family:宋体;color:red'>参数需要在虚拟键模式下才生效</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>适用控制器</span></b></p>
+</td>  <td width="84%" style='width:84.12%;border-top:none;border-left:none; border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>RTHmi</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>例子</span></b></p>
+</td>  <td width="84%" style='width:84.12%;border-top:none;border-left:none; border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>例一：</span></p>
+<p class=MsoNormal><span lang=EN-US>global dim aaa</span></p>
+<p class=MsoNormal><span lang=EN-US>aaa=HMI_DEALINFO(“CURWIN”)&nbsp; '</span><span style='font-family:宋体; '>打印当前窗口号</span></p>
+<p class=MsoNormal><span lang=EN-US>?aaa</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例二：在</span><span lang=EN-US>HMI</span><span style='font-family:宋体;'>窗口中添加</span><span lang=EN-US>“</span><span style='font-family:宋体;'>可编辑</span><span lang=EN-US>”</span><span style='font-family:宋体;'>的元件</span></p>
+<p class=MsoNormal><span lang=EN-US>VKEY_MODE(1)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>开启虚拟键输入模式</span></p>
+<p class=MsoNormal><span lang=EN-US>?</span><span lang=EN-US> HMI_DEALINFO(“EDITCTRL”)&nbsp;&nbsp; '</span><span style='font-family:宋体; '>打印当前编辑的元件编号</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>打印结果为：当前编辑的元件编号</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例三：获取当前打开窗口个数</span></p>
+<p class=MsoNormal><span lang=EN-US>winnum = HMI_DEALINFO(&quot;ACTWINS&quot;, 100)</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>当前打开窗口个数</span><span lang=EN-US>=&quot;winnum </span></p>
+<p class=MsoNormal><span lang=EN-US>for i=0 to winnum -1</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ?table(100+i)&nbsp; '</span><span style='font-family:宋体; '>打印所有打开的窗口号</span></p>
+<p class=MsoNormal><span lang=EN-US>Next</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>打印结果为：</span><span lang=EN-US>1 10 </span></p>
+<p class=MsoNormal style='text-indent:63.0pt;'><span style='font-family:宋体;'>表示当前仅打开一个窗口，为窗口</span><span lang=EN-US>10</span><span style='font-family:宋体;'>。</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="695.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="693.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

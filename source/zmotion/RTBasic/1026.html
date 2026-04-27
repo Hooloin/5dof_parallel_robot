@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ImpDynThresh -- 局部二值化</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1027.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1025.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_ZV_ImpDynThresh_--_局部二值化"></a><span lang=EN-US>ZV_ImpDynThresh -- </span><span style='font-family:宋体;'>局部二值化</span></h3>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>分割</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>对输入图像执行自适应阈值化，生成二值图像。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>自适应阈值效果类似于对图像进行高通滤波</span><span lang=EN-US>--</span><span style='font-family:宋体; '>提取目标的轮廓。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>目标轮廓的尺寸取决于滤波器的大小以及目标轮廓本身的梯度幅度。滤波器尺寸越大找到的目标区域则越大，经验上滤波器尺寸通常为被提取的目标轮廓的</span><span lang=EN-US>2</span><span style='font-family:宋体; '>倍。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>偏移范围参数</span><span lang=EN-US>offset</span><span style='font-family:宋体; '>也非常重要，</span><span lang=EN-US>offset</span><span style='font-family:宋体; '>最好不要设置为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，这会导致许多小区域被找到（通常为噪声），</span><span lang=EN-US>5-40</span><span style='font-family:宋体; '>这样的值比较常用，</span><span lang=EN-US>offset</span><span style='font-family:宋体; '>越大提取的区域越小</span></p>
+</td>  </tr> <tr style='height:271.7pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:271.7pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:271.7pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpDynThresh(src,dst,filterType,filterSize,offset,type)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:31.5pt;text-indent:-31.5pt;'><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>src</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，源图像，单通道图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dst</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，二值图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>filterType</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>使用的滤波算法：</span><span lang=EN-US>0-</span><span style=' font-family:宋体;'>高斯滤波，</span><span lang=EN-US>1-</span><span style=' font-family:宋体;'>均值波</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>filterSize</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>使用的滤波器大小，范围</span><span lang=EN-US>[1,201]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>offset</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>选取结果的容许偏移范围，范围</span><span lang=EN-US>(-255, 255)</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>type</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>结果选取类型，范围</span><span lang=EN-US>0-3</span><span style=' font-family:宋体;'>，图像中满足</span><span lang=EN-US>type</span><span style=' font-family:宋体;'>选取类型的点将被作为提取的目标区域</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="91%" style='width:91.78%;margin-left:21.0pt;border-collapse:collapse;border:none; '> <tr> <td width="10%" valign=top style='width:10.1%;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>type</span></p>
+</td>  <td width="89%" valign=top style='width:89.9%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>说明</span></p>
+</td>  </tr> <tr> <td width="10%" valign=top style='width:10.1%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width="89%" valign=top style='width:89.9%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>源图像</span><span lang=EN-US>-</span><span style='font-family:宋体; '>滤波图像位于</span><span lang=EN-US>[-offset,offset]</span><span style='font-family:宋体; '>之间，亮轮廓和暗轮廓都被提取</span></p>
+</td>  </tr> <tr> <td width="10%" valign=top style='width:10.1%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width="89%" valign=top style='width:89.9%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>源图像</span><span lang=EN-US>-</span><span style='font-family:宋体; '>滤波图像</span><span lang=EN-US>&nbsp; </span><span style=' font-family:宋体;'>大于</span><span lang=EN-US>offset</span><span style=' font-family:宋体;'>或小于</span><span lang=EN-US>-offset</span></p>
+</td>  </tr> <tr> <td width="10%" valign=top style='width:10.1%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width="89%" valign=top style='width:89.9%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>源图像</span><span lang=EN-US>-</span><span style='font-family:宋体; '>滤波图像</span><span lang=EN-US>&nbsp; </span><span style=' font-family:宋体;'>大于等于</span><span lang=EN-US>offset</span><span style=' font-family:宋体;'>，亮轮廓被提取</span></p>
+</td>  </tr> <tr> <td width="10%" valign=top style='width:10.1%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>3</span></p>
+</td>  <td width="89%" valign=top style='width:89.9%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>源图像</span><span lang=EN-US>-</span><span style='font-family:宋体; '>滤波图像</span><span lang=EN-US>&nbsp; </span><span style=' font-family:宋体;'>小于等于</span><span lang=EN-US>-offset</span><span style=' font-family:宋体;'>，暗轮廓被提取</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal style='text-indent:31.5pt;'></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=527 height=166 src="doc.files/image1097.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT src,dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(src,&quot;thresh.png&quot;,0) '</span><span style=' font-family:宋体;'>以原图像格式读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpDynThresh(src,dst,0,5,10,0) '</span><span style=' font-family:宋体;'>选取图像与自身</span><span lang=EN-US>5x5</span><span style=' font-family:宋体;'>高斯滤波图像差值在</span><span lang=EN-US>-10</span><span style=' font-family:宋体;'>到</span><span lang=EN-US>10</span><span style=' font-family:宋体;'>之间的点，即较平滑的区域</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1027.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1025.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

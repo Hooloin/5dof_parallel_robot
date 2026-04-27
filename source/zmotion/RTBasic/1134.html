@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ContEllipticAxis -- 特征椭圆参数</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1135.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1133.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc12633"><span lang=EN-US>ZV_ContEllipticAxis -- </span></a><span style='font-family:宋体;'>特征椭圆参数</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>几何分析</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>计算轮廓的特征椭圆参数</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='color:black;'><img border=0 width=404 height=252 src="doc.files/image1157.jpg" alt="说明: 52" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_ContEllipAxis</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ContEllipticAxis(cont,tabId)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cont</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，轮廓</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabId</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，输出参数，计算的特征椭圆参数，依次为</span><span lang=EN-US>majorLen</span><span style='font-family:宋体; '>、</span><span lang=EN-US>minorLen</span><span style='font-family:宋体; '>、</span><span lang=EN-US>angle</span><span style='font-family:宋体; '>等</span><span lang=EN-US>3</span><span style='font-family:宋体; '>个参数</span><span lang=EN-US>,</span><span style='font-family:宋体; '>即椭圆主轴长度、短轴长度、主轴与水平轴的角度</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,img_bw,cont_list</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;count1.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpThresh(img,img_bw,200,255) '</span><span style='font-family:宋体;'>图像二值化</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGen(img_bw,cont_list,1,0) '</span><span style='font-family:宋体;'>查找轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT cont</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ObjSelect(cont_list,cont,0) '</span><span style='font-family:宋体;'>获取第一个轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContEllipticAxis(cont,0) '</span><span style='font-family:宋体;'>轮廓特征椭圆，参数存于</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>中</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>特征椭圆参数</span><span lang=EN-US>:&quot;,TABLE(0),TABLE(1),TABLE(2)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1135.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1133.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

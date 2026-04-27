@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ContGauss -- 轮廓或轮廓列表高斯平滑</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1155.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1153.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc4952"><span lang=EN-US>ZV_ContGauss -- </span></a><span style='font-family:宋体;'>轮廓或轮廓列表高斯平滑</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>轮廓</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>对轮廓或轮廓列表进行高斯平滑，可平滑掉轮廓中突兀点</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_ContGaussian</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGauss(src,dst,size)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:31.5pt;text-indent:-31.5pt;'><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>src</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，轮廓或轮廓列表，仅支持序列型轮廓</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dst</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输出，轮廓或轮廓列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>size</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>高斯滤波器的尺寸，尺寸越大对轮廓平滑的越严重，非负数，建议值</span><span lang=EN-US>3</span><span style='font-family:宋体; '>、</span><span lang=EN-US>5</span><span style='font-family:宋体; '>、</span><span lang=EN-US>7</span><span style='font-family:宋体; '>，默认为</span><span lang=EN-US>3</span><span style='font-family:宋体; '>；若输入</span><span lang=EN-US>size</span><span style='font-family:宋体; '>为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>，输出轮廓则与输入轮廓相同</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,img_bw,cont_list</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;count1.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpThresh(img,img_bw,200,255) '</span><span style='font-family:宋体;'>图像二值化</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGen(img_bw,cont_list,1,0) '</span><span style='font-family:宋体;'>查找轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>单个轮廓进行高斯平滑并绘制结果</span></p>
+<p class=MsoNormal><span lang=EN-US>LOCAL cont_size,i</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT dst,cont,cont_dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgCopy(img,dst) '</span><span style='font-family:宋体;'>复制图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgSetConst(dst,0) '</span><span style='font-family:宋体;'>常数填充图像</span></p>
+<p class=MsoNormal><span lang=EN-US>cont_size= ZV_ObjCount(cont_list) '</span><span style='font-family:宋体;'>获取轮廓个数</span></p>
+<p class=MsoNormal><span lang=EN-US>FOR i = 0 TO cont_size-1</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ZV_ObjSelect(cont_list,cont,i) '</span><span style='font-family:宋体;'>获取某个轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ZV_ContGauss(cont,cont_dst,3) '</span><span style='font-family:宋体;'>高斯平滑</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ZV_DraContour(dst,cont_dst,255) '</span><span style='font-family:宋体;'>绘制轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>NEXT</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1155.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1153.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

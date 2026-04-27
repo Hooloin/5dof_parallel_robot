@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ContUnionAdjacent -- 近邻轮廓连接</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1160.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1158.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc23138"><span lang=EN-US>ZV_ContUnionAdjacent -- </span></a><span style='font-family:宋体;'>近邻轮廓连接</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>轮廓</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>连接端点相近的轮廓。</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>如果当前轮廓与多个轮廓都可连接，首先考虑连接距离最近的轮廓；</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>如果多个轮廓的距离都相同，首先考虑连接最长的轮廓。</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>输出轮廓均是顺时针方向</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_ContUnionAdj</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ContUnionAdjacent(src,dst,mode,maxDist)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:31.5pt;text-indent:-31.5pt;'><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>src</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，列表类型，输入，不支持多边形属性的轮廓</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dst</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，列表类型，输出，与输入属性相同</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mode</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>1-</span><span style='font-family:宋体; '>首尾端点加入考虑，即当前轮廓端点与另一条轮廓端点的距离小于另一条轮廓首尾端点距离时才会发生连接；</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>不检测首尾；建议为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>模式</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>maxDist</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>两轮廓满足最近连接的最大距离</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=784 height=166 src="doc.files/image1177.jpg" alt="说明: 23" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,img_bw,re,cont_list,cont_dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;count3.bmp&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReGenRect(re,211,175,247,197) '</span><span style='font-family:宋体;'>生成矩形区域</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGenSubPix(img,re,cont_list,5,10,35) '</span><span style='font-family:宋体;'>生成亚像素轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContUnionAdjacent(cont_list,cont_dst,1,70) '</span><span style='font-family:宋体;'>近邻轮廓连接</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>绘制结果</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpGrayToRgb(img,dst) '</span><span style='font-family:宋体;'>灰度图转彩色图</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DraContList(dst,cont_dst,ZV_DraColor(0,255,0),0)'</span><span style='font-family:宋体;'>绘制轮廓</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1160.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1158.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

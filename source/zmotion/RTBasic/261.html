@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DTSMOOTH -- table平滑</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="262.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="260.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698042"></a><a name="_Toc483"></a><a name="_Toc19288"></a><a name="_Toc19612"></a><a name="_Toc14784"><span lang=FR>DTSMOOTH</span><span lang=EN-US> -- table</span></a><span style='font-family:宋体;'>平滑</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>数学函数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>对</span></b><b><span lang=FR style='color:black; '>TABLE</span></b><b><span style='font-family:宋体;color:black; '>存储的点坐标进行平滑调整</span></b><b><span style='font-family:宋体;color:black; '>。</span></b></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=FR style='color:black; '>DTSMOOTH (ax</span><span lang=EN-US style='color:black;'>i</span><span lang=FR style='color:black; '>s, dtfirst, space, points,&nbsp; imode,&nbsp; referradius)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>ax</span><span lang=EN-US style='color:black; '>i</span><span lang=FR style='color:black;'>s</span><span style='font-family:宋体;color:black; '>：</span><span style='font-family:宋体;color:black; '>轴数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>dtfirst</span><span style='font-family:宋体;color:black; '>：</span><span style='font-family:宋体;color:black; '>第一个点的</span><span lang=EN-US style='color:black;'>TABLE</span><span style='font-family:宋体;color:black; '>索引</span></p>
+<p class=MsoNormal style='text-indent:21.75pt;'><span lang=FR style='color:black; '>space</span><span style='font-family:宋体;color:black; '>：</span><span style='font-family:宋体;color:black; '>两个点之间的索引间隔</span><span lang=EN-US style='color:black;'>(</span><span style='font-family:宋体;color:black; '>就是一个点存储占用的空间</span><span lang=EN-US style='color:black;'>)</span></p>
+<p class=MsoNormal style='text-indent:21.75pt;'><span lang=FR style='color:black; '>points</span><span style='font-family:宋体;color:black; '>：总点个数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='color:black; '>imode</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US style='color:black; '>0- </span><span style='font-family:宋体;color:black;'>绝对方式</span><span lang=EN-US style='color:black; '>, </span><span style='font-family:宋体;color:black;'>对曲率半径小于参考值的进行调整</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=FR style='color:black; '>referradius</span><span style='font-family:宋体;color:black; '>：参考曲率半径</span><span lang=FR style='color:black; '>, </span><span style='font-family:宋体;color:black; '>可以根据</span> <span style='font-family:宋体;color:black;'>半径</span><span lang=FR style='color:black; '>=(</span><span style='font-family:宋体;color:black; '>速度平方</span><span lang=FR style='color:black; '>)/</span><span style='font-family:宋体;color:black; '>拐弯加速度来计算参考</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>3X</span><span style='font-family:宋体; '>系列</span><span lang=EN-US> 20161206 </span><span style='font-family:宋体; '>以上固件支持</span></p>
+<p class=MsoNormal><span lang=EN-US>4</span><span style='font-family:宋体; '>系列</span><span lang=EN-US> 20170508</span><span style='font-family:宋体; '>以上固件支持</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span lang=FR style='color:black; '>TABLE(0, 0,0)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>TABLE(5, 99,0)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>TABLE(10, 100,0)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>TABLE(15, 100, 1)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>TABLE(20, 101, 1)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>TABLE(25, 200, 1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=FR style='color:black;'>DTSMOOTH</span></b><span lang=FR style='color:black;'>(2, 0, 5,&nbsp; 6, 0, 5)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>?*TABLE(0, 2)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>?*TABLE(5, 2)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>?*TABLE(10, 2)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>?*TABLE(15, 2)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>?*TABLE(20, 2)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>?*TABLE(25, 2)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="262.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="260.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_MatSort -- 排序</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="912.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="910.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc10024"></a><a name="_ZV_MatSort_--_排序"></a><span lang=EN-US>ZV_MatSort -- </span><span style='font-family:宋体;'>排序</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>访问</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>对矩阵行或列排序</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_MatSort(mat,sortMat,idx,isAsec,isSortCol)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mat</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，矩阵</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>sortMat</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，排序后的矩阵</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>idx</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>用于指定排序的行号或列号，意义为</span><span lang=EN-US>idx</span><span style=' font-family:宋体;'>对应的行或列所代表的数值用于排序，如形状匹配结果矩阵第</span><span lang=EN-US>0</span><span style='font-family:宋体; '>列代表的是分数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>isAsec</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>0-</span><span style='font-family:宋体; '>降序从大到小；</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>升序从小到大</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>isSortCol</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>0-</span><span style='font-family:宋体; '>对行排序，</span><span lang=EN-US>idx</span><span style='font-family:宋体; '>指定排序的列序号；</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>对列排序，</span><span lang=EN-US>idx</span><span style='font-family:宋体; '>指定排序的行序号</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='margin-left:-11.25pt;text-align:center'><span lang=EN-US><img border=0 width=634 height=232 src="doc.files/image854.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>假设矩阵为匹配结果矩阵，每一列对应一种属性</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mat,dst</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,0.9,10,70,-5,1.5,0.5,1,0,15,1,0.01,154,200,170,0.8)</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGenData(mat,3,5,0) '</span><span style='font-family:宋体;'>使用</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>中的数据，生成一个</span><span lang=EN-US>3*5</span><span style='font-family:宋体;'>的矩阵</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatSort(mat,dst,3,0,0) 'idx</span><span style='font-family:宋体;'>选择的是于第四列（</span><span lang=EN-US>angle</span><span style='font-family:宋体;'>属性），按行对矩阵</span><span lang=EN-US>mat</span><span style='font-family:宋体;'>的</span><span lang=EN-US>angle</span><span style='font-family:宋体;'>属性进行降序排列</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="912.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="910.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_MrPeak -- 检测峰值点</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1086.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1084.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc24839"><span lang=EN-US>ZV_MrPeak -- </span></a><span style='font-family:宋体;'>检测峰值点</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.02%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.98%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>区域测量</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.02%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.98%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>使用矩形、旋转矩形或圆环区域测量器，测量峰值点，即测量区域最左边和最右边点，测量区域的外接矩不能超出被测图像边界外</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.02%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='margin-right:-6.5pt;'><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.98%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_MrPeak(mr,img,tabId,filterSize,thresh,polar,select,scanWidth)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mr</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，区域测量器</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，测量的目标图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabId</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，依次为最左边点和最右边点坐标，即</span><span lang=EN-US>xl,yl,xr,yr</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>filterSize</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>滤波器尺寸，范围</span><span lang=EN-US>[1,201]</span><span style=' font-family:宋体;'>，取奇数值，常用值</span><span lang=EN-US>3</span><span style=' font-family:宋体;'>，若取的偶数内部会自动转换成最近的奇数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>thresh</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>阈值</span><span lang=EN-US>,</span><span style=' font-family:宋体;'>范围</span><span lang=EN-US>[0,255]</span><span style=' font-family:宋体;'>，为</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>则取默认值</span><span lang=EN-US>100</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>polar</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>边缘极性：</span><span lang=EN-US>0-</span><span style=' font-family:宋体;'>白到黑、</span><span lang=EN-US>1-</span><span style=' font-family:宋体;'>黑到白、</span><span lang=EN-US>2-</span><span style=' font-family:宋体;'>所有</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>select</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>边缘位置：</span><span lang=EN-US>0-</span><span style=' font-family:宋体;'>第一点、</span><span lang=EN-US>1-</span><span style=' font-family:宋体;'>最后点、</span><span lang=EN-US>2-</span><span style=' font-family:宋体;'>最强点</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>scanWidth</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>卡尺矩的扫描宽度，常用值</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>，大于</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>，小于等于</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>则取</span><span lang=EN-US>1</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.02%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.98%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.02%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.98%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,mr</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;measure1.jpg&quot;,0) '</span><span style='font-family:宋体;'>以原图像格式读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MrGenRect(mr,10,142,637,262)'</span><span style='font-family:宋体;'>生成矩形测量器</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MrPeak(mr,img,0,3,80,0,0,5)'</span><span style='font-family:宋体;'>测量目标图像，检测相关参数设置的点</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>绘制结果</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img_color</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpGrayToRgb(img,img_color)'</span><span style='font-family:宋体;'>灰度图转化为</span><span lang=EN-US>RGB</span><span style='font-family:宋体;'>图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DraMarker(img_color,TABLE(0),TABLE(1),0,20,ZV_DraColor(255,0,0))'</span><span style='font-family:宋体;'>绘制十字</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DraMarker(img_color,TABLE(2),TABLE(3),0,20,ZV_DraColor(255,0,0))'</span><span style='font-family:宋体;'>绘制十字</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1086.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1084.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

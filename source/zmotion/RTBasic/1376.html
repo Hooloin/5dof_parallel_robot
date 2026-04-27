@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>draw3D_CameraRender -- 设置相机视野范围及渲染</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1377.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1375.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>draw3D_CameraRender -- </span><span style='font-family: 宋体;'>设置相机视野范围及渲染</span></h3>
+
+<div align=center>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=a9><span style='font-family:宋体; '>类型</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=a9><span lang=EN-US>Hmi</span></p>
+</td> </tr> <tr style='height:20.75pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:20.75pt'>
+<p class=a9><span style='font-family:宋体; '>描述</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:20.75pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>设置相机拍摄视野范围，相机拍摄当前视野进行渲染</span></p>
+<p class=a9><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=a9><span style='font-family:宋体; '>语法</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>draw3D_CameraRender(cameranum,Fovy,Aspect,zNear,zFar)&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cameranum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体; '>相机号</span><span lang=EN-US>0 - 9</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp; Fovy:&nbsp; </span><span style='font-family:宋体; '>角度值，值越小，视野范围越狭小（眯眼），值越大，视野范围越宽阔</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp; Aspect: </span><span style='font-family: 宋体;'>表示裁剪面的宽</span><span lang=EN-US>w</span><span style='font-family:宋体; '>高</span><span lang=EN-US>h</span><span style='font-family:宋体;'>比，</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US>zNear:&nbsp; </span><span style='font-family:宋体;'>表示近裁剪面到眼睛的距离</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US>zFar:&nbsp;&nbsp; </span><span style='font-family:宋体;'>表示远裁剪面到眼睛的距离</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;&nbsp; <img border=0 width=803 height=351 src="doc.files/image1244.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.62%;border-top:none;border-left: solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=a9><span style='font-family:宋体; '>适用控制器</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:none;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=a9><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=a9><span style='font-family:宋体; '>例子</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>draw3D_CameraRender(0,30,width/height,1,3000) ‘width/height</span><span style='font-family:宋体; '>对应自定义元件窗口宽度和高度</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> </table>
+</div>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1377.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1375.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

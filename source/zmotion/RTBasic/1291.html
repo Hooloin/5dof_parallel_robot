@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZG_EXGCODE2 --扩展模态G代码</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1292.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1290.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;margin-left: 0cm'><span lang=EN-US>ZG_EXGCODE2 --</span><span style='font-family:宋体; '>扩展模态</span><span lang=EN-US>G</span><span style='font-family:宋体; '>代码</span></h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;background:#BDD6EE; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>类型</span></p>
+</td> <td width="81%" colspan=2 valign=top style='width:81.26%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>扩展</span><span lang=EN-US>G</span><span style='font-family:宋体; '>代码</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>描述</span></p>
+</td> <td width="81%" colspan=2 valign=top style='width:81.26%;border-top:none; border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>扩展模态</span><span lang=EN-US>G</span><span style='font-family:宋体; '>代码指令，绑定</span><span lang=EN-US>basic</span><span style='font-family:宋体;'>文件定义的</span><span lang=EN-US>GSUB/SUB</span><span style='font-family:宋体;'>函数，当执行扩展的</span><span lang=EN-US>G</span><span style='font-family:宋体;'>代码时，会调用绑定的</span><span lang=EN-US>GSUB/SUB</span><span style='font-family:宋体;'>函数。</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>注：</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:21.0pt;'><span style='font-family:宋体;color:red'>与</span><span lang=EN-US style='color:red'>ZG_EXGCODE</span><span style='font-family:宋体;color:red'>指令不同，</span><span lang=EN-US style='color:red'>ZG_EXGCODE2</span><span style='font-family:宋体;color:red'>指令可以扩展模态组，可以指定模态组，执行模态组的功能，且不能扩展已经存在的指令。</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>语法</span></p>
+</td> <td width="81%" colspan=2 valign=top style='width:81.26%;border-top:none; border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>ZG_ EXGCODE2(type, code, group, bIfAxis, bIfMove) </span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type</span><span style='font-family:宋体;'>：指令类型，</span><span lang=EN-US>&quot;G&quot;-G</span><span style='font-family:宋体;'>指令，</span><span lang=EN-US>&quot;M&quot;-M</span><span style='font-family:宋体;'>指令，其他</span><span lang=EN-US>-</span><span style='font-family:宋体;'>未使用</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code</span><span style='font-family:宋体;'>：指令代码</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:10.5pt;margin-bottom: 4.65pt;margin-left:21.0pt;'><span lang=EN-US>group</span><span style='font-family:宋体;'>：指定扩展的模态组</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:10.5pt;margin-bottom: 4.65pt;margin-left:42.0pt;'><span style='font-family:宋体;'>可参考</span><span lang=EN-US><a title="Not Found Page:#_G代码分组">G<span lang=EN-US style='font-family:宋体; '><span lang=EN-US>指令模态组</span></span></a></span><span style='font-family:宋体;'>和</span><span lang=EN-US><a title="Not Found Page:#_M代码分组">M<span lang=EN-US style='font-family:宋体; '><span lang=EN-US>指令模态组</span></span></a></span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:10.5pt;margin-bottom: 4.65pt;margin-left:21.0pt;'><span lang=EN-US>bIfAxis</span><span style='font-family:宋体;'>：指令是否带轴参数（是否可以接收</span><span lang=EN-US>XYZ</span><span style='font-family:宋体; '>等轴参数）</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:10.5pt;margin-bottom: 4.65pt;margin-left:21.0pt;'><span lang=EN-US>bIfMove</span><span style='font-family:宋体;'>：是否运动指令（是否会控制进给轴进行运动）</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:10.5pt;margin-bottom: 4.65pt;margin-left:42.0pt;'><span style='font-family:宋体;color:red'>注：目前</span><span lang=EN-US style='color:red'>bIfMove</span><span style='font-family:宋体;color:red'>参数仅作为运动标志，不起实际作用</span> </p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:10.5pt;margin-bottom: 4.65pt;margin-left:42.0pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>注册扩展指令之后，需要在</span><span lang=EN-US>basic</span><span style='font-family:宋体;'>（</span><span lang=EN-US>zar</span><span style='font-family:宋体; '>）上添加对应的</span><span lang=EN-US>GSUB</span><span style='font-family:宋体;'>，定义名称规则参考</span><span lang=EN-US><a title="Not Found Page:#_ZG_EXGCODE_--扩展G代码">ZG_EXGCODE</a></span><span style='font-family: 宋体;'>指令。</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>适用控制器</span></p>
+</td> <td width="81%" colspan=2 valign=top style='width:81.26%;border-top:none; border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>例子</span></p>
+</td> <td width="39%" valign=top style='width:39.3%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>ZG_EXGCODE2(&quot;G&quot;, 74, 1, 1, 1)</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>END</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US style='color:red'>’basic</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>GLOBAL GSUB G74(X, Y, Z)</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>···</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>END SUB</span></p>
+</td> <td width="41%" valign=top style='width:41.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>注册后，在</span><span lang=EN-US>NC</span><span style='font-family:宋体; '>文件中直接调用</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>G74 X1 Y1 Z1&nbsp; ’</span><span style='font-family:宋体; '>会记录</span><span lang=EN-US>G74</span><span style='font-family:宋体; '>运动模态</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>X2 Y2 Z2&nbsp; ’</span><span style='font-family:宋体; '>模态执行</span><span lang=EN-US>G74</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>X3 Y3 Z3</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1292.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1290.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

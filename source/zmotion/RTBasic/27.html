@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVESPLINE / MOVESPLINEABS -- 样条插补</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="28.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="26.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697822"></a><a name="_Toc27549"></a><a name="_Toc29328"></a><a name="_Toc18341"></a><a name="_Toc6737"><span lang=EN-US>MOVESPLINE / MOVESPLINEABS -- </span></a><span style='font-family:宋体;'>样条插补</span> </h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.04%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="83%" valign=top style='width:83.96%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>特殊运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="16%" valign=top style='width:16.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="83%" valign=top style='width:83.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>样条插补运动，相对</span></b><b><span lang=EN-US style='color:black;'>/</span></b><b><span style='font-family:宋体;color:black;'>绝对运动。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;'>样条运动的控制点位置提前写入</span><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>数组。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>此运动没有</span><span lang=EN-US>SP</span><span style='font-family:宋体; '>指令，自定义速度的连续插补运动通过</span><span lang=EN-US>CORNER_MODE</span><span style='font-family:宋体; '>的</span><span lang=EN-US>BIT8</span><span style='font-family:宋体; '>来设置。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="16%" valign=top style='width:16.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="83%" valign=top style='width:83.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVESPLINE (axes,mode ,dtendcontrol4, dtcontrol2, dtcontrol3)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>axes</span><span style='font-family:宋体;color:black;'>：插补的轴个数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>mode</span><span style='font-family:宋体;color:black;'>：模式，</span><span lang=EN-US style='color:black;'>0-</span><span style='font-family:宋体; color:black;'>使用</span><span lang=EN-US style='color:black;'>3</span><span style='font-family:宋体;color:black;'>阶贝塞尔样条</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>dtendcontrol4</span><span style='font-family:宋体;color:black; '>：第</span><span lang=EN-US style='color:black; '>4</span><span style='font-family:宋体;color:black; '>个控制点存储</span><span lang=EN-US style='color:black; '>table</span><span style='font-family:宋体;color:black; '>索引，对贝塞尔曲线就是终点</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>dtcontrol2</span><span style='font-family:宋体;color:black;'>：第</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体; color:black;'>个控制点存储</span><span lang=EN-US style='color:black;'>table</span><span style='font-family:宋体; color:black;'>索引</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>dtcontrol3</span><span style='font-family:宋体;color:black;'>：第</span><span lang=EN-US style='color:black;'>3</span><span style='font-family:宋体; color:black;'>个控制点存储</span><span lang=EN-US style='color:black;'>table</span><span style='font-family:宋体; color:black;'>索引</span></p>
+<p class=MsoNormal style='text-indent:42.0pt; '><span lang=EN-US style=' color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>对贝塞尔曲线，第</span><span lang=EN-US style='color:red;'>1</span><span style='font-family:宋体; color:red;'>个控制点就是当前位置。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="83%" valign=top style='width:83.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>4</span><span style='font-family:宋体; color:red;'>系列</span><span lang=EN-US style='color:red;'>170507</span><span style='font-family:宋体; color:red;'>以上固件支持，</span><span lang=EN-US style='color:red;'>306x</span><span style='font-family:宋体; color:red;'>系列</span><span lang=EN-US style='color:red;'>161208</span><span style='font-family:宋体; color:red;'>以上固件支持</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="16%" valign=top style='width:16.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="83%" valign=top style='width:83.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例一</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体; color:black;'>设为脉冲轴类型</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>主轴速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000,1000&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>主轴加速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CORNER_MODE=2 + 256&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体; color:black; '>设置</span><span lang=EN-US style='color:black;'>SP</span><span style='font-family:宋体; color:black; '>运动</span><span lang=EN-US style='color:black;'>, </span><span style='font-family:宋体; color:black; '>使用</span><span lang=EN-US style='color:black;'>FORCE_SPEED</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>FORCE_SPEED=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(0, 100, 100)&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span lang=EN-US style='color:black;'>TABLE(0)(1)</span><span style='font-family: 宋体; color:black;'>存储第二个控制点</span><span lang=EN-US style='color:black;'>, </span><span style=' font-family:宋体;color:black;'>相对起点距离</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(10, 200, -100)&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span lang=EN-US style='color:black;'>TABLE(10)(11)</span><span style='font-family: 宋体; color:black;'>存储第三个控制点</span><span lang=EN-US style='color:black;'>, </span><span style=' font-family:宋体;color:black;'>相对起点距离</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(20, 300, 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span lang=EN-US style='color:black;'>TABLE(20)(21)</span><span style='font-family: 宋体; color:black;'>存储第四个控制点</span><span lang=EN-US style='color:black;'>, </span><span style=' font-family:宋体;color:black;'>终点距离</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESPLINE</span></b><span lang=EN-US style='color:black;'>(2, 0, 20, 0, 10)&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体; color:black;'>轴相对样条插补</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>插补轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200 </span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=807 height=380 src="doc.files/image115.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例二</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1,2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1,1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>设为脉冲轴类型</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100,100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>主轴速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000 ,1000,1000&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>主轴加速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000 ,1000,1000 </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(0, 100, 100,100)&nbsp;&nbsp; 'TABLE(0)(1)</span><span style='font-family: 宋体; color:black;'>存储第二个控制点</span><span lang=EN-US style='color:black;'>, </span><span style=' font-family:宋体;color:black;'>相对起点距离</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(10, 200, -100,200)&nbsp; 'TABLE(10)(11)</span><span style=' font-family:宋体;color:black;'>存储第三个控制点</span><span lang=EN-US style='color:black;'>, </span><span style=' font-family:宋体;color:black;'>相对起点距离</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(20, 300, 0,0)&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'TABLE(20)(21)</span><span style='font-family:宋体; color:black; '>存储第四个控制点</span><span lang=EN-US style='color:black;'>, </span><span style='font-family:宋体; color:black; '>终点距离</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVESPLINE(3, 0, 20, 0, 10)&nbsp; '2</span><span style='font-family:宋体; color:black;'>轴相对样条插补</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>XYZ</span><span style='font-family: 宋体; color:black;'>模式下轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family: 宋体; color:black;'>轴</span><span lang=EN-US style='color:black; '>1</span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体; color:black;'>插补轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=803 height=630 src="doc.files/image117.jpg" ></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="83%" valign=top style='width:83.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="296.html#_CORNER_MODE_--_拐角设置_1">CORNER_MODE</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="28.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="26.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

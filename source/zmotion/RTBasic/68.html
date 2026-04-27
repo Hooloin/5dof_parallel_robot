@@ -1,0 +1,233 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVESYNC -- 同步运动</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="69.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="67.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>MOVESYNC -- </span><span style='font-family:宋体;'>同步运动</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.96%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>运动设置指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>同步运动，皮带上物体跟随，此运动非插补运动，不保证运动轨迹为直线。</span></b></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>要求皮带轴与</span><span lang=EN-US>BASE</span><span style='font-family:宋体; '>跟随轴的长度单位是一样的。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>当</span><span lang=EN-US>BASE</span><span style='font-family:宋体; '>轴完成跟随动作后，此指令结束。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVESYNC</span><span style='font-family:宋体; '>支持连续使用，会自动保证速度连续，中间可以插入</span><span lang=EN-US>MOVE_OP</span><span style='font-family:宋体; '>指令，为了避免运动结束时高速跟随中直接停止，最后一条</span><span lang=EN-US>MOVESYNC</span><span style='font-family:宋体; '>请使用</span><span lang=EN-US>-1</span><span style='font-family:宋体; '>模式。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>此指令属于凸轮指令，不支持运动暂停。使用时需要将角度转换为弧度（</span><span lang=EN-US style='color:red'>0~2PI</span><span style='font-family:宋体;color:red;'>）。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体;'>注：多个</span><span lang=EN-US>movesync</span><span style='font-family:宋体;'>运动中不能插入插补运动或者关节运动，只能通过轴叠加的方式修改运动轨迹，否则会导致速度不连续或者飞车</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>MOVESYNC(mode,synctime,syncposition,syncaxis,pos1[,pos2, pos3</span><span style='font-family:宋体; '>…</span><span lang=EN-US>])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>mode</span><span style='font-family:宋体;color:black;'>：模式</span><span lang=EN-US style='color:black;'>&nbsp; </span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=849 style='width:363.75pt;margin-left:22.4pt;border-collapse:collapse; border:none; '> <tr> <td width=78 valign=top style='width:33.4pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>模式</span></p>
+</td> <td width=771 valign=top style='width:330.35pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>描述</span></p>
+</td> </tr> <tr> <td width=78 valign=top style='width:33.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>-1</span></p>
+</td> <td width=771 valign=top style='width:330.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>同步结束模式，运动到指定的绝对位置，此模式运动如果运动缓冲区后面紧接着其它</span><span lang=EN-US>MOVESYNC</span><span style='font-family:宋体;'>指令，此模式的运动位置不会被执行，此模式下</span><span lang=EN-US>syncaxis</span><span style='font-family:宋体;'>无效</span></p>
+</td> </tr> <tr> <td width=78 valign=top style='width:33.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>-2</span></p>
+</td> <td width=771 valign=top style='width:330.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>强制结束模式，调用时强制停止同一个缓冲区中，此模式运动前的所有</span><span lang=EN-US>MOVESYNC</span><span style='font-family:宋体;'>，</span><span style=' font-family:宋体;'>并且</span><span style='font-family: 宋体;'>运动到指定结束位置，此模式运动如果运动缓冲区后面紧接着其它</span><span lang=EN-US>MOVESYNC</span><span style='font-family:宋体;'>指令，此模式的运动位置不会被执行，此模式下</span><span lang=EN-US>sync axis</span><span style='font-family:宋体;'>无效</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>此模式在缓冲期间，只要中间插入了别的缓冲，强制返回失效</span></p>
+</td> </tr> <tr> <td width=78 valign=top style='width:33.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=771 valign=top style='width:330.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体; color:black;'>第</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体; color:black;'>个轴（</span><span lang=EN-US style='color:black;'>x</span><span style='font-family:宋体; color:black;'>）跟随皮带轴物体</span></p>
+</td> </tr> <tr> <td width=78 valign=top style='width:33.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>10</span></p>
+</td> <td width=771 valign=top style='width:330.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体; color:black;'>第</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体; color:black;'>个轴（</span><span lang=EN-US style='color:black;'>y</span><span style='font-family:宋体; color:black;'>）跟随皮带轴物体</span></p>
+</td> </tr> <tr> <td width=78 valign=top style='width:33.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>20</span></p>
+</td> <td width=771 valign=top style='width:330.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体; color:black;'>第</span><span lang=EN-US style='color:black;'>3</span><span style='font-family:宋体; color:black;'>个轴跟随皮带轴物体</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>mode=0+angle</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>angle</span><span style='font-family:宋体; color:black;'>：皮带旋转角度，</span><span style='font-family:宋体;'>角度</span><span lang=EN-US>=</span><span style='font-family: 宋体;'>皮带轴</span><span lang=EN-US>dpos</span><span style='font-family:宋体; '>正向与</span><span lang=EN-US>BASE</span><span style='font-family:宋体;'>轴正向的夹角。使用时需要将角度转换为弧度（</span><span lang=EN-US>0~2PI</span><span style='font-family:宋体;'>），例如机械手坐标系中，</span><span lang=EN-US>BASE(X</span><span style='font-family:宋体;'>轴</span><span lang=EN-US>)</span><span style='font-family: 宋体;'>，</span><span lang=EN-US>Mode=PI/4</span><span style='font-family:宋体;'>，表示皮带</span><span lang=EN-US>dpos</span><span style='font-family:宋体; '>增加方向，往坐标系外运动，与</span><span lang=EN-US>X</span><span style='font-family:宋体; '>轴正向夹角为</span><span lang=EN-US>45</span><span style='font-family:宋体;'>度；</span><span lang=EN-US>BASE(X</span><span style='font-family:宋体;'>轴</span><span lang=EN-US>)</span><span style='font-family: 宋体;'>，</span><span lang=EN-US>Mode=PI*5/4</span><span style='font-family:宋体;'>，表示皮带</span><span lang=EN-US>dpos</span><span style='font-family:宋体; '>增加方向，往坐标系外运动，与</span><span lang=EN-US>X</span><span style='font-family:宋体; '>轴正向夹角为</span><span lang=EN-US>225</span><span style='font-family:宋体;'>度；同理</span><span lang=EN-US>Mode=PI/2</span><span style='font-family:宋体;'>，皮带在坐标系</span><span lang=EN-US>y</span><span style='font-family:宋体;'>轴正方向；</span><span lang=EN-US>Mode=PI</span><span style='font-family:宋体;'>，皮带在坐标系</span><span lang=EN-US>x</span><span style='font-family:宋体;'>轴负方向；</span><span lang=EN-US>Mode=(PI*1.75)</span><span style='font-family:宋体;'>，皮带在</span><span lang=EN-US>315</span><span style='font-family:宋体;'>度的方向。如果选择的是</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>轴与皮带轴的夹角，则考虑皮带</span><span lang=EN-US>dpos</span><span style='font-family:宋体;'>增加方向与</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>轴正向夹角即可</span><span style=' font-family:宋体;color:black;'>。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>mode=1000+tableindex</span><span style='font-family:宋体; color:black;'>，几个轴的跟踪比例依次存储</span><span lang=EN-US style='color:black;'>table</span><span style='font-family:宋体; color:black;'>里面，这样可以实现三维的皮带跟踪，当皮带有倾斜的时候</span><span lang=EN-US style='color:black;'>(</span><span style='font-family:宋体; color:black;'>固件版本</span><span lang=EN-US style='color:black;'>20180209</span><span style='font-family:宋体; color:black;'>增加此功能</span><span lang=EN-US style='color:black;'>)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>synctime</span><span style='font-family:宋体;color:black;'>：同步时间，</span><span lang=EN-US style='color:black;'>ms</span><span style='font-family:宋体; color:black;'>单位，本运动在指定时间内完成，完成时</span><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体; color:black;'>轴跟上皮带且保持速度一致。</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体; color:black;'>表示根据运动轴的速度加速度来估计同步时间，可能不准确</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>syncposition</span><span style='font-family:宋体;color:black;'>：皮带轴物体被感应到时皮带轴的位置，此指令支持皮带轴坐标循环，但是在指令被调用时确保此参数位置和当前皮带轴位置之间没有发生坐标修改或循环操作，因此此指令调用时不要在坐标循环点附近</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>syncaxis</span><span style='font-family:宋体;color:black;'>：皮带轴轴号，</span><span lang=EN-US style='color:black;'>-1</span><span style='font-family:宋体; color:black;'>表示没有皮带轴，直接运动到</span><span lang=EN-US style='color:black;'>pos1</span><span style='font-family:宋体; color:black;'>的位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>pos1</span><span style='font-family:宋体;color:black;'>：皮带轴物体被感应到时的</span><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体; color:black;'>第</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>个轴绝对位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>posn</span><span style='font-family:宋体;color:black;'>：皮带轴物体被感应到时的</span><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体; color:black;'>第</span><span lang=EN-US style='color:black;'>n</span><span style='font-family:宋体;color:black;'>个轴绝对位置</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=781 height=306 src="doc.files/image247.png" ></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>ECI241x</span><span style='font-family:宋体; color:red;'>、</span><span lang=EN-US style='color:red;'>ECI282x</span><span style='font-family:宋体; color:red;'>、</span><span lang=EN-US style='color:red;'>ECI382x</span><span style='font-family:宋体; color:red;'>、</span><span lang=EN-US style='color:red;'>XPLC</span><span style='font-family:宋体; color:red;'>全系列、</span><span lang=EN-US style='color:red;'>ZMC3</span><span style='font-family:宋体; color:red;'>系列以上</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例一：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>GLOBAL tmp_val</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>GLOBAL tmp_offPos</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>GLOBAL tmp_AccPos</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>tmp_flag=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED(0)=800</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(1)=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VMOVE(1)AXIS(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>wait UNTIL tmp_flag=1 </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>tmp_offPos=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>tmp_AccPos=800*0.4/2</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>tmp_val=Mpos(0)+tmp_offPos+tmp_AccPos</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>?tmp_val</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>base(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_WAIT(mpos,0,1,tmp_val-tmp_AccPos)axis(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVESYNC(0,400,tmp_val,0,0)AXIS(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>加速段</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVESYNC(0,1000,tmp_val,0,0)AXIS(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>匀速段</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVESYNC(-1,400,tmp_val,-1,800)AXIS(1)&nbsp;&nbsp; '</span><span style='font-family: 宋体; color:black;'>减速段</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>End</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 6.0cm;'><span style='font-family:宋体;'>运动轨迹和速度曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>3000</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>500</span><span style='font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>500</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(1)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>500</span><span style='font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=781 height=730 src="doc.files/image249.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例二：皮带取料</span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT&nbsp; IDLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT&nbsp; IDLE(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(0, 0, 100, 1, 120)</span></b><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>同步到皮带物体上</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(1,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>下降</span><span lang=EN-US style='color:black;'>, </span><span style='font-family:宋体;color:black;'>如果</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black;'>轴下降</span><span lang=EN-US style='color:black;'>,</span><span style='font-family:宋体;color:black;'>可以用</span><span lang=EN-US style='color:black;'>MOVESYNC</span><span style='font-family:宋体;color:black;'>运动指令代替</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(0,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>开吸嘴</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(0, 1000, 100, 1, 120 )</span></b><span lang=EN-US style='color:black;'>&nbsp; '</span><span style='font-family:宋体; color:black;'>继续同步</span><span lang=EN-US style='color:black;'>1s</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(1,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>上升</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(-1, 0, 0, -1, 400)&nbsp;&nbsp; &nbsp;&nbsp;</span></b><span lang=EN-US style='color:black;'>&nbsp;'</span><span style='font-family:宋体; color:black;'>走到放料位置</span><span lang=EN-US style='color:black;'>400</span><span style='font-family: 宋体; color:black;'>处</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(1,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>下降</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(0,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>关吸嘴</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_DELAY(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>延时</span><span lang=EN-US style='color:black;'>2ms, MOVESYNC</span><span style='font-family:宋体;color:black;'>连续运动中不能插入此类语句</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(1,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>上升</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVEABS(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>回到原点</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VMOVE(1)&nbsp; AXIS(1)&nbsp;&nbsp; '</span><span style='font-family: 宋体; color:black;'>皮带轴运动</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 6.0cm;'><span style='font-family:宋体;'>运动轨迹和速度曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>500</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>500</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(1)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=763 height=551 src="doc.files/image251.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例三：皮带取料，放另外的皮带上</span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT&nbsp; IDLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT&nbsp; IDLE(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1,2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=1000,100,150&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>设置不同速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000,1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000,1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(0, 0, 50, 1, 80 )</span></b><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>同步到皮带物体上</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(0,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>开吸嘴</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(1,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>下降</span><span lang=EN-US style='color:black;'>,</span><span style='font-family:宋体;color:black;'>如果</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black;'>轴下降</span><span lang=EN-US style='color:black;'>,</span><span style='font-family:宋体;color:black;'>可以用</span><span lang=EN-US style='color:black;'>movesync</span><span style='font-family:宋体;color:black;'>运动指令代替</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(0, 300, 50, 1, 80 )</span></b><span lang=EN-US style='color:black;'>&nbsp; '</span><span style='font-family:宋体; color:black;'>继续同步</span><span lang=EN-US style='color:black;'>2ms</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(1,0)&nbsp; '</span><span style='font-family:宋体; color:black;'>上升</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(0, 0, 100, 2, 150)</span></b><span lang=EN-US style='color:black;'>&nbsp;&nbsp; '</span><span style='font-family: 宋体; color:black;'>走到第二个皮带上对应位置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(1,1)&nbsp; '</span><span style='font-family:宋体; color:black;'>下降</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(0,0)&nbsp; '</span><span style='font-family:宋体; color:black;'>关吸嘴</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(0,300, 100, 2, 150)</span></b><span lang=EN-US style='color:black;'>&nbsp; '</span><span style='font-family:宋体; color:black;'>同步</span><span lang=EN-US style='color: black;'>2ms</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(1,0)&nbsp; '</span><span style='font-family:宋体; color:black;'>上升</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(-1, 0, 0, -1, 0)</span></b><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>走到停止位置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VMOVE(1)&nbsp; AXIS(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>皮带轴</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>运动</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VMOVE(1)&nbsp; AXIS(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>皮带轴</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>运动</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 6.0cm;'><span style='font-family:宋体;'>运动轨迹和速度曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(1)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-200</span> </p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(2)</span><span style='font-family:宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(2)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-200</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=771 height=800 src="doc.files/image253.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例四：</span><span lang=EN-US style='color:black;'>SCARA</span><span style='font-family:宋体;color:black;'>机械手</span><span lang=EN-US style='color:black;'>MOVESYNC</span><span style='font-family:宋体;color:black;'>同步运动例子见</span><span lang=EN-US><a title="Not Found Page:#_机械手使用movesync指令"><span lang=EN-US style='font-family:宋体;'><span lang=EN-US>机械手使用</span></span>movesync<span lang=EN-US style='font-family:宋体;'><span lang=EN-US>指令</span></span></a></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例五：皮带物体上雕刻</span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT&nbsp; IDLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT&nbsp; IDLE(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1,2,6,7)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100,100,100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0,0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100,100,100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000,1000,1000,1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000,1000,1000,1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ADDAX(6)&nbsp; AXIS(0)&nbsp; '</span><span style='font-family:宋体; color:black;'>在虚拟轴上雕刻</span><span lang=EN-US style='color:black;'>,</span><span style='font-family: 宋体; color:black;'>叠加到实际轴上</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ADDAX(7)&nbsp; AXIS(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0, 1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(0, 0, 50, 2, 80 ,100)</span></b><span lang=EN-US style='color:black;'>&nbsp; '</span><span style='font-family:宋体; color:black;'>同步到皮带物体上</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_TASK(1, task1)&nbsp;&nbsp; '</span><span style='font-family: 宋体; color:black;'>触发叠加轴雕刻</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(0, 1000, 50, 2, 80 ,100)</span></b><span lang=EN-US style='color:black;'>&nbsp; '</span><span style='font-family:宋体; color:black;'>较长雕刻运动时间</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESYNC(-1, 0, 0, -1, 0 ,0)</span></b><span lang=EN-US style='color:black;'>&nbsp; '</span><span style='font-family:宋体; color:black;'>走到停止位置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VMOVE(1)&nbsp; AXIS(2)&nbsp; '</span><span style='font-family:宋体; color:black;'>皮带轴运动</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TASK1: </span></p>
+<p class=MsoNormal style='margin-left:10.5pt;text-indent:-10.5pt;'><span lang=EN-US style='color:black; '>&nbsp;&nbsp;&nbsp; &nbsp; DELAY (2)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>叠加雕刻过程中绝对运动指令位置会不准</span><span lang=EN-US style='color:black;'>,</span><span style='font-family:宋体;color:black;'>延时避开指令调用</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BASE(6, 7)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOVE(100,100)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>雕刻，双面划线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT IDLE&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>等待雕刻结束</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BASE(0, 1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>MOVESYNC(-2, 0, 0, -1, 0 ,0)</b>&nbsp; '</span><span style='font-family:宋体;color:black;'>雕刻结束强制走到停止位置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 6.0cm;'><span style='font-family:宋体;'>运动轨迹和速度曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(1)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(2)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED</span><span style='font-family:宋体; color:black;'>（</span><span lang=EN-US style='color:black;'>6</span><span style=' font-family:宋体;color:black;'>）竖直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-50</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED</span><span style='font-family:宋体; color:black;'>（</span><span lang=EN-US style='color:black;'>7</span><span style=' font-family:宋体;color:black;'>）竖直刻度</span><span lang=EN-US style='color:black;'>200</span><span style='font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=765 height=585 src="doc.files/image255.jpg" ></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="69.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="67.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

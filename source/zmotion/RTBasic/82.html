@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FRAME_TRANS2 -- 正逆解坐标转换</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="83.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="81.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_FRAME_TRANS2--机械手坐标转换"></a><a name="_Toc134697877"></a><a name="_Toc20666"></a><a name="_Toc20567"></a><a name="_Toc28067"></a><a name="_Toc16981"><span lang=EN-US>FRAME_TRANS2 -- </span></a><span style='font-family:宋体;'>正逆解坐标转换</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><a name="_FRAME_ROTATE--坐标系变换"></a><a name="_FRAME_ROTATE--工件坐标系变换"></a><a name="_Toc11713"><b><span style='font-family:宋体; color:black;'>类型</span></b></a></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>机械手计算指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>坐标转换函数。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; '>使用时必须在正逆解建立的情况下。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>使用时必须</span><span lang=EN-US>base</span><span style='font-family:宋体;'>正确的轴号。逆解时，</span><span lang=EN-US>base</span><span style='font-family:宋体;'>虚拟轴；正解时，</span><span lang=EN-US>base</span><span style='font-family:宋体;'>关节轴。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>按照正确的顺序填入相应个数的数据。填入的个数与数据，与</span><span lang=EN-US>?*frame</span><span style='font-family:宋体;'>一致。</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>FRAME_TRANS2(tablein</span><span style='font-family:宋体; '>，</span><span lang=EN-US>tableout, dir)</span></p>
+<p class=MsoNormal style='margin-left:10.5pt; text-indent:10.5pt;'><span lang=EN-US>tablein</span><span style='font-family:宋体;'>：</span><span lang=EN-US>table</span><span style='font-family:宋体;'>数组中的索引号，从这个索引开始连续存储数据，正解时输入关节坐标，逆解时输入虚拟轴坐标列表，最后附加姿态</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableout</span><span style='font-family:宋体; '>：</span><span lang=EN-US>table</span><span style='font-family:宋体;'>这个索引开始存储数据，正解时输出虚拟坐标，最后附加姿态，逆解时输出关节坐标列表</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>dir</span><span style='font-family:宋体; '>：模式选择</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=706 style='width:302.65pt;margin-left:18.65pt;border-collapse:collapse; border:none; '> <tr> <td width=84 valign=top style='width:35.9pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>模式</span></p>
+</td>  <td width=87 valign=top style='width:37.25pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>类型</span></p>
+</td>  <td width=536 valign=top style='width:229.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>描述</span></p>
+</td>  </tr> <tr> <td width=84 valign=top style='width:35.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>0</span></p>
+</td>  <td width=87 valign=top style='width:37.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>逆解</span></p>
+</td>  <td width=536 valign=top style='width:229.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>虚拟轴到关节轴，无姿态，自动使</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>当前的姿态</span></p>
+</td>  </tr> <tr> <td width=84 valign=top style='width:35.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>1</span></p>
+</td>  <td width=87 valign=top style='width:37.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>正解</span></p>
+</td>  <td width=536 valign=top style='width:229.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>关节轴到虚拟轴，无姿态输出</span></p>
+</td>  </tr> <tr> <td width=84 valign=top style='width:35.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>2</span></p>
+</td>  <td width=87 valign=top style='width:37.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>逆解</span></p>
+</td>  <td width=536 valign=top style='width:229.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>输入虚拟轴坐标，最后加上姿态</span></p>
+</td>  </tr> <tr> <td width=84 valign=top style='width:35.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>3</span></p>
+</td>  <td width=87 valign=top style='width:37.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>正解</span></p>
+</td>  <td width=536 valign=top style='width:229.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>输出虚拟轴坐标，输出最后一个位置填姿态</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:40.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:40.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:40.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>以</span><span lang=EN-US>scara</span><span style='font-family:宋体;'>结构为例，第一关节轴</span><span lang=EN-US>L1=10</span><span style='font-family:宋体;'>，第二关节轴</span><span lang=EN-US>L2=10</span><span style='font-family:宋体;'>。</span><span lang=EN-US>table(100)</span><span style='font-family:宋体;'>作为输入坐标的存放位置，</span><span lang=EN-US>table(200)</span><span style='font-family:宋体;'>作为输出坐标的存放位置。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>建立连接后，关节轴原点坐标（</span><span lang=EN-US>0,0</span><span style='font-family:宋体;'>），此时虚拟轴坐标为（</span><span lang=EN-US>20,0</span><span style='font-family:宋体;'>），如下图。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=723 height=271 src="doc.files/image288.png" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>虚拟轴坐标</span><span lang=EN-US> (10,10) </span><span style='font-family:宋体;'>时，有两种姿态</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>关节轴</span><span lang=EN-US> (0,90) </span><span style='font-family:宋体;'>和关节轴</span><span lang=EN-US> (90,-90)</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=789 height=319 src="doc.files/image290.png" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>坐标转换表</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=894 style='width:383.15pt;border-collapse:collapse;border:none; '> <tr> <td width=77 style='width:32.9pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>状态</span></p>
+</td>  <td width=117 style='width:50.1pt;border:solid windowtext 1.0pt;border-left: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>BASE</span><span style='font-family:宋体;'>轴</span></p>
+</td>  <td width=206 style='width:88.1pt;border:solid windowtext 1.0pt;border-left: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>输入</span><span lang=EN-US>X</span><span style='font-family:宋体;'>、</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>、姿态</span></p>
+</td>  <td width=281 style='width:120.3pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>使用指令模式</span></p>
+</td>  <td width=214 style='width:91.75pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>输出关节坐标</span></p>
+</td>  </tr> <tr> <td width=77 rowspan=3 style='width:32.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>逆解</span></p>
+</td>  <td width=117 rowspan=3 style='width:50.1pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>虚拟轴</span></p>
+</td>  <td width=206 style='width:88.1pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(100,20,0,0)</span></p>
+</td>  <td width=281 rowspan=2 style='width:120.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>frame_trans2(100,200,0)</span></p>
+</td>  <td width=214 style='width:91.75pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(200,0,0)</span></p>
+</td>  </tr> <tr>  <td width=206 style='width:88.1pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(100,</span></p>
+<p class=MsoNormal><span lang=EN-US>0,10,1)</span></p>
+</td>  <td width=214 style='width:91.75pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(200,0,90)</span></p>
+</td>  </tr> <tr style='height:16.6pt'>  <td width=206 style='width:88.1pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:16.6pt'>
+<p class=MsoNormal><span lang=EN-US>table(100,10,10,1)</span></p>
+</td>  <td width=281 style='width:120.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:16.6pt'>
+<p class=MsoNormal><span lang=EN-US>frame_trans2(1</span></p>
+<p class=MsoNormal><span lang=EN-US>0,200,2)</span></p>
+</td>  <td width=214 style='width:91.75pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:16.6pt'>
+<p class=MsoNormal><span lang=EN-US>tabl</span></p>
+<p class=MsoNormal><span lang=EN-US>(200,90,-90)</span></p>
+</td>  </tr> <tr> <td width=77 style='width:32.9pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>状态</span></p>
+</td>  <td width=117 style='width:50.1pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>BASE</span><span style='font-family:宋体;'>轴</span></p>
+</td>  <td width=206 style='width:88.1pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>输入关节坐标</span></p>
+</td>  <td width=281 style='width:120.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>使用指令模式</span></p>
+</td>  <td width=214 style='width:91.75pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>输出</span><span lang=EN-US>X</span><span style='font-family:宋体;'>、</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>、姿态</span></p>
+</td>  </tr> <tr> <td width=77 rowspan=4 style='width:32.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>正解</span></p>
+</td>  <td width=117 rowspan=4 style='width:50.1pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>关节轴</span></p>
+</td>  <td width=206 style='width:88.1pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(100,0,0)</span></p>
+</td>  <td width=281 rowspan=3 style='width:120.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>frame_trans2(100,200,1)</span></p>
+</td>  <td width=214 style='width:91.75pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(200,20,0,0)</span></p>
+</td>  </tr> <tr>  <td width=206 style='width:88.1pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(100,0,90)</span></p>
+</td>  <td width=214 style='width:91.75pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(200,10,10,0)</span></p>
+</td>  </tr> <tr>  <td width=206 style='width:88.1pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(100,90,-9</span></p>
+<p class=MsoNormal><span lang=EN-US>)</span></p>
+</td>  <td width=214 style='width:91.75pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(2</span></p>
+<p class=MsoNormal><span lang=EN-US>0,10,10,0)</span></p>
+</td>  </tr> <tr>  <td width=206 style='width:88.1pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table(100,90,-90)</span></p>
+</td>  <td width=281 style='width:120.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>frame_trans2(100,200,3)</span></p>
+</td>  <td width=214 style='width:91.75pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>table</span></p>
+<p class=MsoNormal><span lang=EN-US>200,10,10,1)</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal align=left style='text-align:left'></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="83.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="81.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

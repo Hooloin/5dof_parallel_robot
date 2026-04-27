@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>HMI_MSGOUT – 输出消息</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="725.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="723.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3 style='margin-bottom:4.65pt;line-height:172%'><a name="_Toc214981879"></a><a name="_HMI_MSGOUT_–_输出消息"></a><span lang=EN-US>HMI_MSGOUT – </span><span style='font-family:宋体;'>输出消息</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>类型</span></b></p>
+</td>  <td width="84%" valign=top style='width:84.14%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US>HMI</span><span style='font-family:宋体;'>指令</span></p>
+</td>  </tr> <tr> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>描述</span></b></p>
+</td>  <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>输出打印消息到消息框元件。</span></p>
+</td>  </tr> <tr> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>语法</span></b></p>
+</td>  <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US>HMI_MsgOut(strtype, strmsg, winid, controlid [, ifInfo])</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span lang=EN-US>strtype</span><span style='font-family:宋体;'>：输出类型</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;TRACE&quot;</span><span style='font-family:宋体;'>：跟踪输出</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;WARN&quot;</span><span style='font-family:宋体;'>：警告输出</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;ERROR&quot;</span><span style='font-family:宋体;'>：错误输出</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;PRINT&quot;</span><span style='font-family:宋体;'>：打印输出</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;CLEAR&quot;</span><span style='font-family:宋体;'>：清空输出</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span lang=EN-US>strmsg</span><span style='font-family:宋体;'>：输出消息（字符串）</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span lang=EN-US>winid</span><span style='font-family:宋体;'>：</span><span lang=EN-US>HMI</span><span style='font-family:宋体;'>文件里面窗口编号</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span lang=EN-US>controlid</span><span style='font-family:宋体;'>：元件编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>ifInfo</span><span style='font-family:宋体;'>：是否自动输出文件行信息，缺省</span><span lang=EN-US>0</span><span style='font-family:宋体;'>（不输出）</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>注：该指令输出的消息会自动换行。</span></p>
+</td>  </tr> <tr> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>适用控制器</span></b></p>
+</td>  <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>支持</span><span lang=EN-US>ZHMI</span></p>
+</td>  </tr> <tr> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>例子</span></b></p>
+</td>  <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>消息框元件</span><span lang=EN-US>ID=3</span><span style='font-family:宋体;'>，所在窗口</span><span lang=EN-US>10</span></p>
+<p class=MsoNormal><span lang=EN-US>HMI_MsgOut(“WARN”, “this is a warning.”, 10, 3)</span></p>
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:0cm; '><span lang=EN-US style='font-family:Wingdings; '>&eth;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=EN-US>warn: this is a warning.</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>HMI_MsgOut(“ERROR”, “this is a error.” , 10, 3, 1)</span></p>
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:0cm; '><span lang=EN-US style='font-family:Wingdings; '>&eth;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=EN-US>error of file:xx line:xx task:xx: this is a error.</span></p>
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:0cm; '><span lang=EN-US style='font-family:Wingdings; '>&eth;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=EN-US>error of online command: this is a error.</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>HMI_MsgOut(“PRINT”, “this is a print.” , 10, 3)</span></p>
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:0cm; '><span lang=EN-US style='font-family:Wingdings; '>&eth;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=EN-US>this is a print.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="725.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="723.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

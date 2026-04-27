@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>HMI_SHOWWINDOW -- 显示指定窗口</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="689.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="687.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>HMI_SHOWWINDOW -- </span><span style='font-family: 宋体;'>显示指定窗口</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>类型</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>窗口操作指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>描述</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>显示指定窗口。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>软键盘窗口要在编辑窗口的相关函数里面调用，否则无法确定是哪个</span> <span style='font-family:宋体; '>窗口的元件要编辑。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>不确定时默认选择最顶层窗口。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>语法</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal align=left style='margin-bottom:4.65pt;text-align:left'><span lang=EN-US>HMI_SHOWWINDOW(winid, [showmode],[modifycontrol],</span> <span lang=EN-US style='font-size:10.0pt; '>[ifclosewithfather], [fatherwindow])</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>winid</span><span style='font-family:宋体;'>：窗口号</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>showmode</span><span style='font-family:宋体;'>：显示方式</span><span lang=EN-US style='font-size:10.0pt;color:red; '>&nbsp; </span></p>
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;text-indent:21.0pt'><span lang=EN-US>ZPLC_WIN_TYPE_AUTO = 0</span><span style='font-family:宋体; '>，</span><span lang=EN-US>Hmi</span><span style='font-family:宋体;'>文件里面指定的窗口模式</span></p>
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;text-indent:21.0pt'><span lang=EN-US>ZPLC_WIN_TYPE_TOP = 1</span></p>
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;text-indent:21.0pt'><span lang=EN-US>ZPLC_WIN_TYPE_BOTTOM = 2</span></p>
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left'><span lang=EN-US>ZPLC_WIN_TYPE_BASE = 4</span><span style='font-family:宋体;'>，基本窗口</span> <span style='font-family:宋体;'>只能有一个的，一旦切换所有的子窗口都关闭</span><span lang=EN-US>.</span></p>
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;text-indent:21.0pt'><span lang=EN-US>ZPLC_WIN_TYPE_KEYBOARD = 5</span><span style='font-family:宋体; '>，软键盘必然弹出窗口</span></p>
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;text-indent:21.0pt'><span lang=EN-US>ZPLC_WIN_TYPE_POP = 6</span><span style='font-family:宋体; '>，弹出窗口</span></p>
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;text-indent:21.0pt'><span lang=EN-US>ZPLC_WIN_TYPE_MENU = 7</span><span style='font-family:宋体; '>，菜单窗口，自动关闭</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>Modifycontrol</span><span style='font-family:宋体;'>：</span><span lang=EN-US>ZPLY_WIN_TYPE_KEBOARD</span><span style='font-family:宋体; '>弹出软键盘窗口类型时，对应要编辑的本窗口元件</span><span lang=EN-US>ID</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>ifclosewithfather</span><span style='font-family:宋体;'>：是否随父窗口一起关闭，缺省</span><span lang=EN-US>1=true</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>fatherwindow</span><span style='font-family:宋体;'>：指定父窗口，缺省当前窗口</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体; color:red'>注意：</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US style='color:red'>1.Modifycontrol</span><span style='font-family: 宋体; color:red'>参数不可缺省，且元件</span><span lang=EN-US style='color:red'>ID</span><span style='font-family:宋体;color:red'>必须是支持软键盘输入的元件。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US style='color:red'>2.</span><span style='font-family:宋体;color:red'>软键盘默认垄断，无法通过元件关闭，但可使用指令操作关闭，同时随所在窗口的关闭而关闭。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US style='color:red'>3.</span><span style='font-family:宋体;color:red'>从哪个窗口打开另一个窗口，即为父子窗口关系。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>适用控制器</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>支持</span><span lang=EN-US>RTHmi</span></p>
+</td> </tr> <tr style='height:43.95pt'> <td width="15%" valign=top style='width:15.88%;border-top:none;border-left: solid black 1.0pt;border-bottom:none;border-right:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:43.95pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>例子</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border:none;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt; height:43.95pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例一：在窗口</span><span lang=EN-US>10</span><span style='font-family:宋体; '>设置按键弹出</span><span lang=EN-US>13</span><span style='font-family:宋体;'>窗口，窗口</span><span lang=EN-US>10</span><span style='font-family:宋体;'>即为窗口</span><span lang=EN-US>13</span><span style='font-family:宋体;'>的父窗口。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>HMI_SHOWWINDOW(12,6)&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>‘弹出窗口</span><span lang=EN-US>12</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>HMI_SHOWWINDOW(13,6,0,1)&nbsp;&nbsp; '</span><span style='font-family: 宋体;'>弹出窗口</span><span lang=EN-US>13</span><span style='font-family:宋体; '>并随父窗口关闭</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>HMI_SHOWWINDOW(13,6,0,1,11)&nbsp; '</span><span style='font-family:宋体; '>弹出窗口</span><span lang=EN-US>13</span><span style='font-family:宋体; '>并指定随父窗口</span><span lang=EN-US>11</span><span style='font-family:宋体;'>关闭</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例二</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>HMI_SHOWWINDOW(8,5,1)&nbsp;&nbsp; </span><span style='font-family:宋体; '>’弹出软键盘窗口</span><span lang=EN-US>8</span><span style='font-family:宋体;'>，关联当前窗口</span><span lang=EN-US>1</span><span style='font-family:宋体;'>号元件</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>相关指令</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_HMI_CLOSEWINDOW">HMI_CLOSEWINDOW</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><b><span lang=EN-US style='font-family:等线; '>&nbsp;</span></b></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="689.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="687.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

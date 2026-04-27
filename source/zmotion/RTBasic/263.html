@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>TURN_POSMAKE -- 旋转坐标计算</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="264.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="262.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_TURN_POSMAKE_--_旋转中点计算"></a><a name="_Toc134698044"></a><a name="_Toc12654"></a><a name="_Toc29849"></a><a name="_Toc246"></a><a name="_Toc15878"></a><a name="_TURN_POSMAKE_--_旋转中点计算_1"></a><span lang=EN-US>TURN_POSMAKE -- </span><span style='font-family:宋体;'>旋转坐标计算</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>数学函数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>旋转功能的计算函数，计算旋转台上点</span></b><b><span lang=EN-US style='color:black;'>(X,Y)</span></b><b><span style='font-family:宋体;color:black;'>旋转</span></b><b><span lang=EN-US style='color:black;'>R</span></b><b><span style='font-family:宋体;color:black;'>度后点的绝对坐标，旋转的正向与</span></b><b><span lang=EN-US style='color:black;'>XY</span></b><b><span style='font-family:宋体;color:black;'>的正向要一致（右手法则）。</span></b></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a name="OLE_LINK137"><span lang=EN-US>TURN_POSMAKE</span></a><span lang=EN-US style='color:black;'>(</span><span lang=EN-US>tablenum, posx, posy, disR, tableout<span style='color:black'>)</span></span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tablenum</span><span style='font-family:宋体;color:black;'>：旋转功能参数存储</span><span lang=EN-US style='color:black;'>table</span><span style='font-family:宋体;color:black;'>编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>posx</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US style='color:black;'>X</span><span style='font-family: 宋体; color:black;'>方向的坐标</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>posy</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US style='color:black;'>Y</span><span style='font-family: 宋体; color:black;'>方向的坐标</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>disR</span><span style='font-family:宋体;color:black;'>：旋转轴的相对偏移</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableout</span><span style='font-family:宋体;color:black;'>：存储计算后的坐标</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="29.html#_MCIRC_TURNABS_--_旋转台插补-绝对_1">MCIRC_TURNABS</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="264.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="262.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

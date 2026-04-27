@@ -1,0 +1,175 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CAM -- 凸轮表运动</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="64.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="62.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_CAM_--_凸轮表运动"></a><a name="_Toc134697857"></a><a name="_Toc20809"></a><a name="_Toc27478"></a><a name="_Toc18589"></a><a name="_Toc13808"></a><a name="_CAM_--_凸轮表运动_1"></a><span lang=EN-US>CAM</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>凸轮表运动</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><a name="_CAMBOX"></a><a name="_Toc349071403"><b><span style='font-family:宋体;color:black;'>类型</span></b></a></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>同步运动指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='tab-stops:center 207.65pt;layout-grid-mode:char; '><b><span lang=EN-US style='color:black; '>CAM</span></b><b><span style='font-family: 宋体; color:black;'>指令根据存储在</span></b><b><span lang=EN-US style='color:black;'>TABLE</span></b><b><span style='font-family:宋体;color:black;'>中的数据来决定轴的运动，这些</span></b><b><span lang=EN-US style='color:black;'>Table</span></b><b><span style='font-family:宋体;color:black;'>数据值对应运动轨迹的位置，是相对于运动起始点的绝对位置。</span></b></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;layout-grid-mode:char; '><b><span lang=EN-US style='color:black; '>&nbsp;</span></b></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:black;'>注：两个或多个</span><span lang=EN-US style='color:black;'>CAM</span><span style='font-family:宋体;color:black;'>指令可以同时使用同一段</span><span lang=EN-US style='color:black;'>TABLE</span><span style='font-family:宋体;color:black;'>数据区进行操作。</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:red;'>运动的总时间由设置速度和第四个参数决定，运动的实际速度根据</span><span lang=EN-US style='color:red;'>TABLE</span><span style='font-family:宋体;color:red;'>轨迹与时间自动匹配。</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:red;'>TBALE</span><span style='font-family:宋体;color:red;'>数据需要手动设置，第一个数据为引导点，建议设为</span><span lang=EN-US style='color:red;'>0</span><span style='font-family:宋体;color:red;'>。</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:red;'>TABLE</span><span style='font-family:宋体;color:red;'>数据</span><span lang=EN-US style='color:red;'>*table multiplier</span><span style='font-family:宋体;color:red;'>这个比例</span><span lang=EN-US style='color:red;'>=</span><span style='font-family:宋体;color:red;'>发出的脉冲数。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal align=left style='text-align:left;'><span style='font-family:宋体; color:red;'>请确保指令传递的距离参数</span><span lang=EN-US style='color:red;'>*units</span><span style='font-family:宋体;color:red;'>是整数个脉冲，否则出现浮点数会导致运动有细微误差。</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(start point, end point, table multiplier, distance)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>start point</span><span style='font-family:宋体;color:black; '>：起始点</span><span lang=EN-US style='color:black;'>TABLE</span><span style='font-family:宋体;color:black;'>编号，存储第一个点的位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>end point</span><span style='font-family:宋体;color:black; '>：结束点</span><span lang=EN-US style='color:black;'>TABLE</span><span style='font-family:宋体;color:black;'>编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>table multiplier</span><span style='font-family:宋体;color:black; '>：位置乘以这个比例，</span><span style='font-family: 宋体; '>一般设为脉冲当量值</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>distance</span><span style='font-family:宋体;color:black; '>：参考运动的距离</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;color:black;'>总时间</span><span lang=EN-US style='color:black;'>=distance/</span><span style='font-family:宋体;color:black;'>轴</span><span lang=EN-US style='color:black;'>speed</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:black;'>例一：</span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT&nbsp; IDLE(0)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>UNITS=100</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>ACCEL=1000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>DECEL=1000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SPEED=100</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>TABLE(10,0,80,75,40,50,20,50,0)&nbsp;&nbsp; 'table</span><span style='font-family:宋体;color:black;'>从</span><span lang=EN-US style='color:black;'>10</span><span style='font-family:宋体;color:black;'>开始存数据</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体;color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;layout-grid-mode:char; '><b><span lang=EN-US style='color:black; '>CAM</span></b><span lang=EN-US style='color:black;'>(10,17,100,500)&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>运动轨迹为</span><span lang=EN-US style='color:black;'>table10</span><span style='font-family:宋体;color:black;'>到</span><span lang=EN-US style='color:black;'>17</span><span style='font-family:宋体;color:black;'>，运动总时间为</span><span lang=EN-US style='color:black;'>500/100=5s</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:black;'>轨迹与速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US><img border=0 width=763 height=410 src="doc.files/image211.jpg" ></span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:black;'>例二：</span><span lang=EN-US style='color:black;'>CAM</span><span style='font-family:宋体;color:black;'>在高速高精度运动上的应用</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>DIM &nbsp;num_p,scale,m,t&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>变量定义</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>num_p=100</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>scale=500</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>FOR p=0 TO num_p</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp; TABLE(p,((-SIN(PI*2*p/num_p)/(PI*2))+p/num_p)*scale)&nbsp; 'table</span><span style='font-family:宋体;color:black;'>存储凸轮表运动参数</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>NEXT</span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT&nbsp; IDLE(0)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>BASE(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>选择轴</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>DEFPOS(0)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SERVO=ON</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>UNITS=500</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SPEED=1000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>ACCEL=1000000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>DECEL=1000000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>m=10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>代表距离的倍数</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>t=0.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>运行时间</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SPEED=1000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,100,m,SPEED*t)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>WAIT IDLE</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>m=10</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>t=0.3</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SPEED=1000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,100,-m,SPEED*t)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>WAIT IDLE</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>m=10</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>t=0.2 </span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SPEED=500</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,100,m,SPEED*t)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>WAIT IDLE</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>m=10</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>t=0.2</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SPEED=500</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,100,-m,SPEED*t)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>WAIT IDLE</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>m=20</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>t=0.3 </span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SPEED=1000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,100,m,SPEED*t)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>WAIT IDLE</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>m=20 </span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>t=0.5</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SPEED=500</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,100,-m,SPEED*t)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>WAIT IDLE</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>插补轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>20</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'><img border=0 width=758 height=471 src="doc.files/image213.png" ></span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:black;'>例三：连续凸轮</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>WAIT&nbsp; IDLE(0)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>UNITS=100</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>ACCEL=1000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>DECEL=1000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SPEED=100</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>DIM rad,x,deg </span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>FOR deg= 0 TO 360 STEP 1&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>构造</span><span lang=EN-US style='color:black;'>0-360</span><span style='font-family:宋体;color:black;'>度的凸轮数据</span> </p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>rad = deg * 2 * PI / 360 </span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>x = deg * 2 + 10000 * ( 1 - COS (rad)) </span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>TABLE (deg ,x)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>print deg,x</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>NEXT deg </span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>自动触发示波器</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,360,100,100)&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>运动轨迹为</span><span lang=EN-US style='color:black;'>table 0</span><span style='font-family:宋体;color:black;'>到</span><span lang=EN-US style='color:black;'>360</span><span style='font-family:宋体;color:black;'>，运动总时间为</span><span lang=EN-US style='color:black;'>100/100=1s</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,360,100,200)&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>运动轨迹为</span><span lang=EN-US style='color:black;'>table 0</span><span style='font-family:宋体;color:black;'>到</span><span lang=EN-US style='color:black;'>360</span><span style='font-family:宋体;color:black;'>，运动总时间为</span><span lang=EN-US style='color:black;'>200/100=2s</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,360,100,300)&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>运动轨迹为</span><span lang=EN-US style='color:black;'>table 0</span><span style='font-family:宋体;color:black;'>到</span><span lang=EN-US style='color:black;'>360</span><span style='font-family:宋体;color:black;'>，运动总时间为</span><span lang=EN-US style='color:black;'>300/100=3s</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>WAIT UNTIL REMAIN_BUFFER(1) &gt; 0&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>等待缓冲空间空了再存运动指令</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,360,100,100)&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>运动轨迹为</span><span lang=EN-US style='color:black;'>table 0</span><span style='font-family:宋体;color:black;'>到</span><span lang=EN-US style='color:black;'>360</span><span style='font-family:宋体;color:black;'>，运动距离为</span><span lang=EN-US style='color:black;'>100*table</span><span style='font-family:宋体;color:black;'>数据</span><span lang=EN-US style='color:black;'>/units(0)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>CAM(0,360,200,100)&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>运动轨迹为</span><span lang=EN-US style='color:black;'>table 0</span><span style='font-family:宋体;color:black;'>到</span><span lang=EN-US style='color:black;'>360</span><span style='font-family:宋体;color:black;'>，运动总时间</span><span lang=EN-US style='color:black;'>200*table</span><span style='font-family:宋体;color:black;'>数据</span><span lang=EN-US style='color:black;'>/units(0)</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>20000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>60000</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US><img border=0 width=819 height=847 src="doc.files/image215.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="64.html#_CAMBOX_--_跟随凸轮表运动_1"><span lang=EN-US>CAMBOX</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="64.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="62.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

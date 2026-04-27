@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVER2_ZSMOFFSET -- 机械手连续插补平滑的偏移时间</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="100.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="98.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc198286253"><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_ZSMOFFSET -- </span></a><span style='font-family:宋体; '>机械手连续插补平滑的偏移时间</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="14%" valign=top style='width:14.92%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>类型</span></b></p>
+</td>  <td width="85%" valign=top style='width:85.06%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>机械手平滑过渡相关指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="14%" valign=top style='width:14.92%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>描述</span></b></p>
+</td>  <td width="85%" valign=top style='width:85.06%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>连续插补平滑的时间偏移指令。作用是为了提高运动指令之间过渡的合成速度，如下所示，以提高节拍效率。原理是当上一段运动指令开始减速时，下一段运动指令开始加速，设置的插补偏移时间越大，减速则越少或不减速。</span></p>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='font-size:12.0pt; font-family:"Calibri","sans-serif"; '><img border=0 width=533 height=297 src="doc.files/image302.png" ></span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="14%" valign=top style='width:14.92%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>语法</span></b></p>
+</td>  <td width="85%" valign=top style='width:85.06%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_ZSMOFFSET(value)</span></b></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>value</span><span style=' font-family:宋体; '>：连续运动过渡的平滑时间偏移值；单位：</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>ms</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>1</span><span style=' font-family:宋体; color:black;'>）设置为</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>-1</span><span style=' font-family:宋体; color:black;'>，表示内部计算出最优值</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '><br> 2</span><span style=' font-family:宋体; color:black;'>）设置单位：</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>ms</span><span style=' font-family:宋体; color:black;'>，取值范围：</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>0~1000ms<br> </span><span style=' font-family:宋体; color:black;'>比如：</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>MOVER2_ZSMOFFSET(60)&nbsp; '</span><span style=' font-family:宋体; color:black;'>设置平滑偏移时间</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>60ms<br> 3</span><span style=' font-family:宋体; color:black;'>）设置为</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>0</span><span style=' font-family:宋体; color:black;'>，表示不进行时间偏移，但原有设置的</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>ZSMOOTH</span><span style=' font-family:宋体; color:black;'>值依然生效</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="14%" valign=top style='width:14.92%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>适用控制器</span></b></p>
+</td>  <td width="85%" valign=top style='width:85.06%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>4</span><span style='font-family:宋体; color:black;'>系列</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>20170511</span><span style='font-family:宋体; color:black;'>以上固件支持</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="14%" valign=top style='width:14.92%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>例程</span></b></p>
+</td>  <td width="85%" valign=top style='width:85.06%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>BASE(6,7,8,9)&nbsp; '</span><span style='font-family:宋体; '>选择虚拟轴号</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>CONNREFRAME(1,0,0,1,2,3)&nbsp; '</span><span style='font-family:宋体; '>启动正解连接；</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>SCARA</span><span style='font-family:宋体; '>机械手</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>WAIT LOADED&nbsp; '</span><span style='font-family:宋体; '>等待运动加载，此时会自动调整虚拟轴的位置。</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>?&quot;</span><span style='font-family:宋体; '>正解模式</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>base(6,7,8,9)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>zsmooth = 100&nbsp; ‘</span><span style='font-family:宋体; '>设置平滑过渡程度值</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>100</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_PABS(-1,2201.2,&nbsp;&nbsp;&nbsp; 4.1,0,17.5)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>mover2_zsmoffset(-1)&nbsp; ‘</span><span style='font-family:宋体; '>内部通过计算最优值来进行平滑时间偏移；表示上一条</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_PABS</span><span style='font-family:宋体; '>与下一条</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_PABS</span><span style='font-family:宋体; '>进行插补时间偏移。</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_PABS(-1,1137.2,941,200,68.9)</span></p>
+<p class=MsoNormal align=left style='text-align:left;'><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>mover2_zsmoffset(0)&nbsp; ‘</span><span style='font-family:宋体; '>表示上一条</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_PABS</span><span style='font-family:宋体; '>与下一条</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_LABS</span><span style='font-family:宋体; '>不进行插补时间偏移。</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_LABS(-1,71.9,1876.3,-323.9,120.4)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>wait idle(0)</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp;</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="14%" valign=top style='width:14.92%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>相关指令</span></b></p>
+</td>  <td width="85%" valign=top style='width:85.06%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp;</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="100.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="98.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

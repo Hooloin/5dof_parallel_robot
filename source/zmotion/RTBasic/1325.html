@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZG_SYSVAR -- 系统变量</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1326.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1324.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;margin-left: 0cm'><a name="_Toc85612099"></a><a name="_ZG_SYSVAR_--_系统变量_1"></a><span lang=EN-US>ZG_SYSVAR -- </span><span style='font-family:宋体;'>系统变量</span></h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;background:#BDD6EE; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>类型</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>参量配置</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>描述</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>通过地址（编号）去访问系统变量，查看</span><span lang=EN-US><a title="Not Found Page:#_系统变量"><span lang=EN-US style='font-family:宋体; '><span lang=EN-US>系统变量表</span></span></a></span><span style='font-family:宋体; '>。</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>每个系统变量有相应的读写权限，访问时请注意是否有权限。</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>语法</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>ZG_SYSVAR(addr, setval [, channel])</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addr</span><span style='font-family:宋体;'>：地址编号，注意操作无写权限的系统变量会报错</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; setval</span><span style='font-family:宋体;'>：设置值</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:21.0pt;'><span lang=EN-US>channel</span><span style='font-family:宋体;'>：通道号，缺省为任务目标通道，</span><span lang=EN-US>ZG_CHANNEL</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>var = ZG_SYSVAR(addr [, channel])</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:21.0pt;'><span lang=EN-US>addr</span><span style='font-family:宋体; '>：地址编号</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:21.0pt;'><span lang=EN-US>channel</span><span style='font-family:宋体;'>：通道号，缺省为任务目标通道，</span><span lang=EN-US>ZG_CHANNEL</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>返回变量值</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>适用控制器</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>例子</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1326.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1324.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

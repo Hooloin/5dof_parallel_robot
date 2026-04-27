@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZG_MPOSN -- 连续采多个点</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1311.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1309.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;margin-left: 0cm'><a name="_Toc85612084"></a><a name="_Toc80713317"><span lang=EN-US>ZG_MPOSN -- </span></a><span style='font-family:宋体;'>连续采多个点</span></h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;background:#BDD6EE; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>类型</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>辅助功能</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>描述</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>通过该指令获取当前运动轨迹点坐标（程序坐标），以及运动类型，方便</span><span lang=EN-US>zdevelop</span><span style='font-family:宋体;'>区分不同运动绘制不同颜色的轨迹线条。</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>语法</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>ZG_ MPOSN(axisnum, </span><span lang=FR style='color:black;'>dtfirst, space, points, mindis</span><span lang=EN-US>[, channel]) </span><span style='font-family:宋体;'>：采多个点</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; axisnum</span><span style='font-family:宋体;'>：轴数，</span><span lang=EN-US>3</span><span style='font-family:宋体;'>轴</span><span lang=EN-US>+</span><span style='font-family: 宋体;'>，</span><span lang=EN-US>space</span><span style='font-family:宋体;'>不能小于</span><span lang=EN-US>axisnum+1</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dtfirst</span><span style='font-family:宋体;'>：存储的</span><span lang=EN-US>table</span><span style='font-family:宋体;'>地址，第一个为采点结果，第二个为点的类型，</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>后面为点的各轴坐标，总长</span><span lang=EN-US>axisnum+1</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>采点结果，（类型</span><span lang=EN-US>+</span><span style='font-family:宋体;'>各轴坐标），（类型</span><span lang=EN-US>+</span><span style='font-family:宋体;'>各轴坐标）</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>采点结果：</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>未完成，</span><span lang=EN-US>1-</span><span style='font-family:宋体;'>采点完成</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>采点类型：</span> <span lang=EN-US>-</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; space</span><span style='font-family:宋体;'>：两个点之间的索引间隔</span><span lang=EN-US>(</span><span style='font-family:宋体;'>就是一个点存储占用的空间</span><span lang=EN-US>)</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style='color:black;'>points</span><span style='font-family:宋体;color:black;'>：总点个数</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style='color:black;'>mindis</span><span style='font-family:宋体;color:black;'>：两个点之间的最小采点间隔，</span><span lang=FR style='color:black;'>ms</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp; channel</span><span style='font-family:宋体;'>：通道，缺省为当前通道</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>适用控制器</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>例子</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>’</span><span style='font-family: 宋体;'>每隔</span><span lang=EN-US>50ms</span><span style='font-family:宋体; '>采一点，采</span><span lang=EN-US>10</span><span style='font-family:宋体;'>个点，</span><span lang=EN-US>table(1000)</span><span style='font-family:宋体;'>为采点结果，</span><span lang=EN-US> 1001~ 1004</span><span style='font-family:宋体;'>（类型</span><span lang=EN-US>+XYZ</span><span style='font-family:宋体;'>坐标）为点</span><span lang=EN-US>1</span><span style='font-family:宋体;'>，</span><span lang=EN-US>1005~1008</span><span style='font-family:宋体;'>为点</span><span lang=EN-US>2</span><span style='font-family: 宋体;'>，以此类推</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>ZG_ MPOSN(3, 1000, 4, 10, 50)</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1311.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1309.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

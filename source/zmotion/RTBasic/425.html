@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>PORT_TARGET -- IP和端口号配置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="426.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="424.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_PORT_TARGET_--_IP和端口号配置"></a><a name="_Toc134698216"></a><a name="_Toc28439"></a><a name="_Toc13478"><span lang=EN-US>PORT_TARGET</span></a> <span lang=EN-US>-- IP</span><span style='font-family:宋体;'>和端口号配置</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>字符串指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black;'>配置通讯对方的</span></b><b><span lang=EN-US style='color:black;'>IP</span></b><b><span style='font-family:宋体;color:black;'>地址和端口号。</span></b></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>4</span><span style='font-family: 宋体; color:black;'>系列控制器</span><span lang=EN-US style='color:black;'>20170628</span><span style='font-family:宋体;color:black;'>以上固件版本，</span><span lang=EN-US style='color:black;'>XPLC</span><span style='font-family:宋体;color:black;'>系列控制器</span><span lang=EN-US style='color:black;'>20170702</span><span style='font-family:宋体;color:black;'>以上固件版本支持。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; '>命令语法：</span></p>
+<p class=MsoNormal><span lang=EN-US>PORT_TARGET(port)=&quot;<span style='color:black'>ipaddress</span>:portnum&quot;</span><span style='font-family:宋体;'>或</span><span lang=EN-US>PORT_TARGET(port)=&quot;<span style='color:black'>ipaddress</span>&quot;</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>port</span><span style='font-family:宋体; color:black;'>：通道号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>ipaddress</span><span style='font-family:宋体; color:black;'>：对方</span><span lang=FR style='color:black;'>IP</span><span style='font-family:宋体;color:black;'>地址</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>portnum</span><span style='font-family:宋体; color:black; '>：端口号</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>返回语法：</span><span lang=EN-US>VAR=PORT_TARGET(port) <span style='color:black'>&nbsp;</span></span><span style='font-family: 宋体; color:black;'>返回</span><span lang=EN-US style='color: black;'>IP</span><span style='font-family:宋体;color:black; '>地址字符串。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>PORT_TARGET=&quot;192.168.0.12:502&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US>PORT_TARGET(port)=&quot;192.168.0.12&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>?PORT_TARGET(port)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DIM&nbsp; IPSTRING(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>IPSTRING = PORT_TARGET(port)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>?IPSTRING</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=left style='text-align:left;tab-stops:55.15pt; '><span lang=EN-US><a href="421.html#_OPEN__#">OPEN#</a><a title="Not Found Page:#_CANIO_ADDRESS -- CAN通讯设置"><span lang=EN-US style='font-family:宋体; color:black;text-decoration:none;text-underline:none'><span lang=EN-US>，</span></span>CANIO_ADDRESS</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="426.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="424.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

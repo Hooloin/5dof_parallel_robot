@@ -1,0 +1,214 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ContSort -- 原列表排序</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1147.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1145.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc18627"><span lang=EN-US>ZV_ContSort -- </span></a><span style='font-family:宋体;'>原列表排序</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>特征</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>对轮廓序列按照特征</span><span lang=EN-US>feature</span><span style='font-family:宋体; '>进行排序</span></p>
+</td>  </tr> <tr style='height:417.7pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:417.7pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:417.7pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ContSort(list,feature,isInc)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>list</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，待排序的轮廓列表，列表类型，专用列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>feature</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>排序的特征类型，如下表所示</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>isInc</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>指定是否升序，为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>则降序排列，否则升序</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>轮廓特征如下：</span></p>
+<div align=center>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="98%" style='width:98.64%;border-collapse:collapse;border:none;'> <tr style='height:9.05pt'> <td width="7%" style='width:7.06%;border:solid windowtext 1.0pt;padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width="20%" style='width:20.0%;border:solid windowtext 1.0pt; border-left:none;padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>面积</span></p>
+</td>  <td width="6%" style='width:6.36%;border:solid windowtext 1.0pt;border-left: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width="19%" style='width:19.3%;border:solid windowtext 1.0pt; border-left:none;padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>重心</span><span lang=EN-US>X</span></p>
+</td>  <td width="6%" style='width:6.36%;border:solid windowtext 1.0pt;border-left: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width="16%" style='width:16.9%;border:solid windowtext 1.0pt; border-left:none;padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>重心</span><span lang=EN-US>Y</span></p>
+</td>  <td width="7%" style='width:7.06%;border:solid windowtext 1.0pt;border-left: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>3</span></p>
+</td>  <td width="16%" style='width:16.96%;border:solid windowtext 1.0pt; border-left:none;padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>角度</span></p>
+</td>  </tr> <tr style='height:9.05pt'> <td width="7%" style='width:7.06%;border:solid windowtext 1.0pt;border-top: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>4</span></p>
+</td>  <td width="20%" style='width:20.0%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>周长</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>5</span></p>
+</td>  <td width="19%" style='width:19.3%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>圆度</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>6</span></p>
+</td>  <td width="16%" style='width:16.9%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>紧致度</span></p>
+</td>  <td width="7%" style='width:7.06%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>7</span></p>
+</td>  <td width="16%" style='width:16.96%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>矩形度</span></p>
+</td>  </tr> <tr style='height:9.05pt'> <td width="7%" style='width:7.06%;border:solid windowtext 1.0pt;border-top: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>8</span></p>
+</td>  <td width="20%" style='width:20.0%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>凸度</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>9</span></p>
+</td>  <td width="19%" style='width:19.3%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>--</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>10</span></p>
+</td>  <td width="16%" style='width:16.9%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>等效椭圆主轴长度</span></p>
+</td>  <td width="7%" style='width:7.06%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>11</span></p>
+</td>  <td width="16%" style='width:16.96%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>等效椭圆次轴长度</span></p>
+</td>  </tr> <tr style='height:9.05pt'> <td width="7%" style='width:7.06%;border:solid windowtext 1.0pt;border-top: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>12</span></p>
+</td>  <td width="20%" style='width:20.0%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>等效椭圆主轴角度</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>13</span></p>
+</td>  <td width="19%" style='width:19.3%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>等效椭圆次轴</span><span lang=EN-US>/</span><span style='font-family:宋体; '>主轴</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>14</span></p>
+</td>  <td width="16%" style='width:16.9%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>外接矩形</span><span lang=EN-US>x</span></p>
+</td>  <td width="7%" style='width:7.06%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>15</span></p>
+</td>  <td width="16%" style='width:16.96%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>外接矩形</span><span lang=EN-US>y</span></p>
+</td>  </tr> <tr style='height:9.05pt'> <td width="7%" style='width:7.06%;border:solid windowtext 1.0pt;border-top: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>16</span></p>
+</td>  <td width="20%" style='width:20.0%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>外接矩形宽度</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>17</span></p>
+</td>  <td width="19%" style='width:19.3%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>外接矩形高度</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>18</span></p>
+</td>  <td width="16%" style='width:16.9%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>外接矩形</span><span lang=EN-US>x+w</span></p>
+</td>  <td width="7%" style='width:7.06%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>19</span></p>
+</td>  <td width="16%" style='width:16.96%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>外接矩形</span><span lang=EN-US>y+h</span></p>
+</td>  </tr> <tr style='height:9.05pt'> <td width="7%" style='width:7.06%;border:solid windowtext 1.0pt;border-top: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>20</span></p>
+</td>  <td width="20%" style='width:20.0%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>外接矩形</span><span lang=EN-US>h/w</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>21</span></p>
+</td>  <td width="19%" style='width:19.3%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>最小矩形中心</span><span lang=EN-US>X</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>22</span></p>
+</td>  <td width="16%" style='width:16.9%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>最小矩形中心</span><span lang=EN-US>Y</span></p>
+</td>  <td width="7%" style='width:7.06%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>23</span></p>
+</td>  <td width="16%" style='width:16.96%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>最小矩形宽度</span></p>
+</td>  </tr> <tr style='height:9.05pt'> <td width="7%" style='width:7.06%;border:solid windowtext 1.0pt;border-top: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>24</span></p>
+</td>  <td width="20%" style='width:20.0%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>最小矩形高度</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>25</span></p>
+</td>  <td width="19%" style='width:19.3%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>最小矩形角度</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>26</span></p>
+</td>  <td width="16%" style='width:16.9%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>最小矩形</span><span lang=EN-US>h/w</span></p>
+</td>  <td width="7%" style='width:7.06%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>27</span></p>
+</td>  <td width="16%" style='width:16.96%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>--</span></p>
+</td>  </tr> <tr style='height:9.05pt'> <td width="7%" style='width:7.06%;border:solid windowtext 1.0pt;border-top: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>28</span></p>
+</td>  <td width="20%" style='width:20.0%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>--</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>29</span></p>
+</td>  <td width="19%" style='width:19.3%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>--</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>30</span></p>
+</td>  <td width="16%" style='width:16.9%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>凸性</span></p>
+</td>  <td width="7%" style='width:7.06%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>31</span></p>
+</td>  <td width="16%" style='width:16.96%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>凸包面积</span></p>
+</td>  </tr> <tr style='height:9.05pt'> <td width="7%" style='width:7.06%;border:solid windowtext 1.0pt;border-top: none; padding:1.4pt 5.4pt 1.4pt 5.4pt;height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>32</span></p>
+</td>  <td width="20%" style='width:20.0%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>带符号面积</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+</td>  <td width="19%" style='width:19.3%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+</td>  <td width="6%" style='width:6.36%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+</td>  <td width="16%" style='width:16.9%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+</td>  <td width="7%" style='width:7.06%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+</td>  <td width="16%" style='width:16.96%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:1.4pt 5.4pt 1.4pt 5.4pt; height:9.05pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+</td>  </tr> </table>
+</div>
+
+<p class=MsoNormal></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,img_bw,cont_list</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;count1.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpThresh(img,img_bw,200,255) '</span><span style='font-family:宋体;'>图像二值化</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGen(img_bw,cont_list,1,0) '</span><span style='font-family:宋体;'>查找轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContSort(cont_list,0,0) '</span><span style='font-family:宋体;'>对轮廓以面积特征进行降序排序</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1147.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1145.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

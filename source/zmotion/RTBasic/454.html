@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MODBUSM_BITGET -- 读对端线圈</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="455.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="453.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698247"></a><a name="_Toc18602"></a><a name="_Toc8536"></a><a name="_Toc4400"></a><a name="_Toc9770"><span lang=FR>MODBUSM_BITGET</span><span lang=EN-US> -- </span></a><span style='font-family:宋体;'>读对端线圈</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>通讯指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>把对端</span></b><b><span lang=FR style='color:black; '>MODBUS</span></b><b><span style='font-family:宋体; '>位</span></b><b><span style='font-family:宋体; color:black;'>寄存器复制到本地。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>对应标准协议功能码</span></b><b><span lang=EN-US style='color:black;'> 01</span></b><b><span style='font-family: 宋体; color:black;'>，读线圈。</span></b></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=FR>MODBUSM_BITGET</span><span lang=FR style='color:black; '> (startreg, num, local_reg)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:21.0pt 42.0pt 63.0pt 84.0pt 105.0pt 126.0pt 147.0pt 168.0pt 189.0pt 220.1pt; '><span lang=FR style=' color:black;'>startreg</span><span style='font-family:宋体; color:black; '>：对端的寄存器起始编号，从</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体; color:black; '>开始</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>num</span><span style='font-family:宋体; color:black;'>：寄存器个数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:29.8pt;'><span lang=FR style='color:black;'>local_reg</span><span style='font-family:宋体; color:black; '>：本地系统</span><span lang=FR style='color:black;'>MODBUS</span><span style='font-family:宋体; color:black; '>寄存器起始编号</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-126.0pt; tab-stops:55.15pt;'><span lang=FR>MODBUSM_BITGET (0,10,0)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>把通讯对端的位寄存器</span><span lang=FR>0-9</span><span style='font-family:宋体;'>复制到本地位寄存器</span><span lang=FR>0-9</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="413.html#_ADDRESS_--_控制器站号_1">ADDRESS</a></span><span style='font-family:宋体; color:black; '>，</span><span lang=EN-US><a href="435.html#_PROTOCOL"><span lang=FR>PROTOCOL</span></a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="431.html#_PORT_--_通道编号">PORT</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="410.html#_SETCOM_--_串口配置_1"><span lang=FR>SETCOM</span></a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="455.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="453.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

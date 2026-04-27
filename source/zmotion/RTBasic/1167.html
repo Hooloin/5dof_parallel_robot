@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_CalNPoints -- N点标定</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1168.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1166.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc6725"></a><a name="_ZV_CalNPoints_--_N点标定"></a><span lang=EN-US>ZV_CalNPoints -- N</span><span style='font-family: 宋体;'>点标定</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>标定</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>标定出像素坐标和世界坐标的一种转换关系，描述了两坐标系的平移、旋转、错切、缩放、透视等关系</span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_CalNPoints(ppts,wpts,param,width,height[,freedom=1])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>ppt</span></b><b><span lang=EN-US>s</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输入参数，像素坐标，矩阵类型，</span><span lang=EN-US>n</span><span style='font-family:宋体; '>行</span><span lang=EN-US>2</span><span style='font-family:宋体; '>列，</span><span lang=EN-US>freedom</span><span style='font-family:宋体; '>为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时</span><span lang=EN-US>n&gt;=2</span><span style='font-family:宋体; '>；</span><span lang=EN-US>freedom</span><span style='font-family:宋体; '>为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>时</span><span lang=EN-US>n&gt;=3</span><span style='font-family:宋体; '>；</span><span lang=EN-US>freedom</span><span style='font-family:宋体; '>为</span><span lang=EN-US>2</span><span style='font-family:宋体; '>时</span><span lang=EN-US>n&gt;=4</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>wpts</span></b><b><span style=' font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style=' font-family:宋体;'>类型，输入参数，世界坐标，矩阵类型，</span><span lang=EN-US>n</span><span style=' font-family:宋体;'>行</span><span lang=EN-US>2</span><span style=' font-family:宋体;'>列，同上</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>param</span></b><b><span style=' font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style=' font-family:宋体;'>类型，输出参数，生成的标定参数，</span><span lang=EN-US>freedom</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>时描述两坐标的相似关系；</span><span lang=EN-US>freedom</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>时描述两坐标的仿射关系；</span><span lang=EN-US>freedom</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>2</span><span style=' font-family:宋体;'>时描述两坐标的透视关系</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>width</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入参数，标定板图像宽或应用图像的宽</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>height</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入参数，标定板图像高或应用图像的高</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>freedom</span></b><b><span style=' font-family:宋体;'>：</span></b><span style=' font-family:宋体;'>自由度，</span><span lang=EN-US>0 - </span><span style=' font-family:宋体;'>相似变换（平移、旋转、缩放），</span><span lang=EN-US>1 - </span><span style=' font-family:宋体;'>仿射变换（平移、旋转、错切、缩放），</span><span lang=EN-US>2 - </span><span style=' font-family:宋体;'>射影变换（平移、旋转、错切、缩放、透视）</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,pts,img_pts,world_pts</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;tool3.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_CalGetScaPoints(img,pts,128,0,500,5000) '</span><span style='font-family:宋体;'>提取标定板圆心坐标</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_CalGetPointsMap(pts,img_pts,world_pts,10) '</span><span style='font-family:宋体;'>从点集</span><span lang=EN-US>pts</span><span style='font-family:宋体;'>中计算对应点的像素坐标和世界坐标</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>标定</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT param</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgInfo(img,0) '</span><span style='font-family:宋体;'>获取图像信息</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_CalNPoints(img_pts,world_pts,param,TABLE(0),TABLE(1),1) 'N</span><span style='font-family:宋体;'>点标定</span><span lang=EN-US>,</span><span style='font-family:宋体;'>参数存入</span><span lang=EN-US>param</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>保存标定参数到文件</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ObjWrite(param,&quot;Calib.zvb&quot;) </span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1168.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1166.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

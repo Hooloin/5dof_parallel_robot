@@ -1,0 +1,112 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVE_PVTABS -- 单位时间距离-绝对（带速度规划）</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="41.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="39.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697835"><span lang=EN-US>MOVE_PVTABS -- </span></a><span style='font-family:宋体;'>单位时间距离</span><span lang=EN-US>-</span><span style='font-family:宋体;'>绝对（带速度规划）</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="99%" style='border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.72%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.28%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>特殊运动指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.72%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>在一段时间内驱动电机运动设置的距离，带速度规划，可以指定结束速度，小段内速度会自动根据前面的速度与结束速度来自动规划</span></b><b><span lang=EN-US style='color:black;'>, </span></b><b><span style='font-family:宋体;color:black;'>尽可能连续。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>一般是</span><span lang=EN-US style='color:black;'>PC</span><span style='font-family:宋体;color:black;'>每个周期计算好对应的坐标，然后传给控制器。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>支持使用</span><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体;color:black;'>指定轴。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>运动时的速度</span><span lang=EN-US style='color:black;'>=(DIS/TICKS)*1000 units/s</span><span style='font-family:宋体;color:black;'>。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>不要在极短时间运动大距离，脉冲频率会过高，电机堵转，可以分解成小段，重复发送。</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.72%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>MOVE_PVTABS (ticks, dis1, sp1,dis2, sp2 …)</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; '><span lang=EN-US>ticks </span><span style='font-family:宋体;'>：时间的伺服周期数。</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; '><span lang=EN-US>dis1</span><span style='font-family:宋体;'>：第一个轴运动的绝对位置</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; '><span lang=EN-US>sp1</span><span style='font-family:宋体;'>：第一个轴运动后的结束速度</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; '><span lang=EN-US>dis2</span><span style='font-family:宋体;'>：第二个轴的运动绝对位置</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; '><span lang=EN-US>sp2</span><span style='font-family:宋体;'>：第二个轴运动后的结束速度</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; '><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>SERVO_PERIOD</span><span style='font-family:宋体;'>为</span><span lang=EN-US>1000us</span><span style='font-family:宋体;'>的控制器</span><span lang=EN-US>1 TICKS</span><span style='font-family:宋体;'>为</span><span lang=EN-US>1ms(</span><span style='font-family:宋体;'>不同</span><span lang=EN-US>SERVO_PERIOD</span><span style='font-family:宋体;'>的</span><span lang=EN-US>TICKS</span><span style='font-family:宋体;'>时间不一样</span><span lang=EN-US>)</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.72%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.72%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例一</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS = 13107.2</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS = 0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=10</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MAX_SPEED=8000000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DIM timeadd</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DIM val1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DIM SPEEDval</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>timeadd=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS =100*COS(2*PI*timeadd*0.2)+166</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DELAY(1000)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WHILE TRUE</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>周期</span><span lang=EN-US style='color:black;'>=2</span><span style='font-family:宋体;color:black;'>π</span><span lang=EN-US style='color:black;'>/|</span><span style='font-family:宋体;color:black;'>ω</span><span lang=EN-US style='color:black;'>|</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'x=A*COS</span><span style='font-family:宋体;color:black; '>（ω</span><span lang=EN-US style='color:black; '>x+</span><span style='font-family:宋体;color:black; '>ψ）</span><span lang=EN-US style='color:black; '>+C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>求导得斜率，即速度：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'v=-A*</span><span style='font-family:宋体;color:black; '>ω</span><span lang=EN-US style='color:black; '>*SIN</span><span style='font-family: 宋体; color:black;'>（ω</span><span lang=EN-US style='color:black;'>x+</span><span style='font-family:宋体;color:black;'>ψ）</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; val1=100*COS(2*PI*timeadd*0.2)+166</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SPEEDval=-100*2*PI*0.2*SIN(2*PI*timeadd*0.2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;val1=&quot;val1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;SPEEDval=&quot;SPEEDval</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOVE_PVTABS(10,val1,SPEEDval)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'MOVE_PTABS(10,val1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; timeadd=timeadd+0.01</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if timeadd&gt;(2*PI/ABS(2*PI*0.2)) THEN</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EXIT WHILE</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WEND</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>MSPEED(0)</span><span style='font-family:宋体;'>无偏移，垂直刻度</span><span lang=EN-US>100</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(0)</span><span style='font-family:宋体;'>偏移</span><span lang=EN-US>-50</span><span style='font-family:宋体;'>，垂直刻度</span><span lang=EN-US>100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=836 height=584 src="doc.files/image151.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.72%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="38.html#_MOVE_PTABS"><span lang=EN-US>MOVE_PTABS</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="41.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="39.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

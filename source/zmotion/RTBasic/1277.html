@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_SHAPECREATERE -- 用区域创建模板</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1278.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1276.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_ZV_SHAPECREATERE_--_用区域创建模板"></a><a name="_ZV_SHAPECREATERE_--_创建"></a><a name="_Toc631"></a><a name="_ZV_SHAPECREATERE_--_用区域创建模板_1"></a><span lang=EN-US>ZV_SHAPECREATERE -- </span><span style='font-family:宋体;'>用区域创建模板</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>形状模板匹配</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>使用模板图像</span><span lang=EN-US>img</span><span style='font-family:宋体; '>和指定模板图像的有效区域</span><span lang=EN-US>re</span><span style='font-family:宋体; '>创建形状匹配模板，主要针对于模板图像中噪点多时，通过</span><span lang=EN-US>re</span><span style='font-family:宋体; '>区域的方式指定模板图像中某些部分有效来创建模板，而不是使用整个模板图像来创建。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>通过区域</span><span lang=EN-US>re</span><span style='font-family:宋体; '>来指定模板图像中的有效区域来创建模板，可以通过对</span><span lang=EN-US>re</span><span style='font-family:宋体; '>区域进行一些集合运算或形态学运算来达到去除模板图像中噪声较多的那部分，从而得到鲁棒性更强的模板特征。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>创建的模板基准位置为模板图像尺寸一半的整数部分，即整数除法（</span><span lang=EN-US>ImageWidth/2,ImageHeight/2</span><span style='font-family:宋体; '>）</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_SHAPECREATERE(img,re,model,angleStart,angleEnd,scaleMin,scaleMax,thresh[,levelNum=0,ptReduce=0,angleStep=0,scaleStep=0,minContLen])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，制作模板的图像，输入参数，</span><span lang=EN-US>8U</span><span style='font-family:宋体; '>单通道</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>re</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，指定模板图像的有效区域，在模板图像中</span><span lang=EN-US> re </span><span style='font-family:宋体; '>对应的部分将用来创建模板。</span><span lang=EN-US>re</span><span style='font-family:宋体; '>是基于行程编码的区域，其集合运算较为方便地去除无效部分保留有效部分来创建模板，通常对于噪点较多或轮廓特征不明显的模板图像，通过处理</span><span lang=EN-US>re</span><span style='font-family:宋体; '>来去除模板图像中弱特征保留强特征创建模板是很方便的</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>model</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，制作的模板，输出参数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>angleStart</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>角度匹配的起始值，由图像坐标系确定，范围</span><span lang=EN-US>[-360,360)</span><span style=' font-family:宋体;'>，若超出范围会自动归一化到此范围</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>angleEnd</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>角度匹配的终止值，范围</span><span lang=EN-US>[-360,360)</span><span style=' font-family:宋体;'>，</span><span lang=EN-US>angleEnd</span><span style=' font-family:宋体;'>要大于等于</span><span lang=EN-US>angleStart</span><span style=' font-family:宋体;'>，否则报错，并且差值要小于等于</span><span lang=EN-US>360</span><span style=' font-family:宋体;'>，超出将裁剪</span><span lang=EN-US>angleEnd</span><span style=' font-family:宋体;'>的值。创建模板后，位于起始和终止角度范围内的目标均可被匹配</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>scaleMin</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>匹配缩放最小比例，范围</span><span lang=EN-US>[0.5, 2.0]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>scaleMax</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>匹配缩放最大比例，范围</span><span lang=EN-US>[0.5, 2.0]</span><span style=' font-family:宋体;'>，大于等于</span><span lang=EN-US>scale_min</span><span style=' font-family:宋体;'>，创建模板后，位于最小和最大缩放范围内的目标均可被匹配</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>thresh</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>提取边缘轮廓的对比度阈值，范围</span><span lang=EN-US>[0,255]</span><span style=' font-family:宋体;'>，为</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>时内部会选取一个合适的阈值，对比度越大提取的边缘轮廓强度就越强，此参数可控制提取强边缘或弱边缘，阈值越小提取的弱边缘就越多，同时可能会带来一些噪声</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>levelNum</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>金字塔层数，范围</span><span lang=EN-US>[0,</span><span style=' font-family:宋体;'>无穷），层数越小匹配越耗时，为</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>或层数过大时会自动选取合适层数，建议为</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>ptReduce</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>优化减少模板点数量，如果设置在查找模板时贪婪度需设置低一些，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>不减少，</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>轻微减少，</span><span lang=EN-US>2-</span><span style='font-family:宋体; '>减少适中，</span><span lang=EN-US>3-</span><span style='font-family:宋体; '>大量减少</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>angleStep</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>角度步长，范围</span><span lang=EN-US>[0,12]</span><span style=' font-family:宋体;'>，步长越小精度越好但匹配越耗时，步长越大精度越差但匹配越不耗时，步长设的太小不合理或者为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时内部会自动选择一个合适的步长，建议为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>。注意：由于角度需要过</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，因此使用指令</span><span lang=EN-US>ZV_SHAPEPARAM</span><span style='font-family:宋体; '>获取的角度步长与</span><span lang=EN-US>angleStep</span><span style='font-family:宋体; '>会有些差别，同理角度也是一样</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>scaleStep</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>缩放步长，</span><span lang=EN-US>[0,scaleMax - scaleMin]</span><span style=' font-family:宋体;'>，步长越小精度越好但匹配越耗时，步长越大精度越差但匹配越不耗时，步长设的太小不合理或者为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时内部会自动选择一个合适的步长，建议为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>。注意：由于缩放需要过</span><span lang=EN-US>1</span><span style='font-family:宋体; '>，因此使用指令</span><span lang=EN-US>ZV_SHAPEDEFPARAM</span><span style='font-family:宋体; '>获取的缩放步长与</span><span lang=EN-US>scaleStep</span><span style='font-family:宋体; '>会有些差别</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minContLen</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>最小轮廓长度，小于此长度的轮廓将不会被提取，此参数可控制删除一些短小轮廓</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>注意：</span></p>
+<p class=MsoListParagraph style='margin-left:0cm;text-indent:0cm;line-height:130%;layout-grid-mode:char; word-break:break-all'><span lang=EN-US style='line-height:130%;color:red'>1.</span><span style='line-height:130%;font-family:宋体;'>创建模板时通常<b><span style='color:red'>选取轮廓分明且具有唯一特性的目标作为模板</span></b>，特征最好不要具有对称性。</span></p>
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:0cm; '><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoListParagraph style='margin-left:0cm;text-indent:0cm;line-height:130%;layout-grid-mode:char; word-break:break-all'><span lang=EN-US style='line-height:130%;color:red'>2.</span><b><span style='line-height:130%;font-family:宋体;color:red'>模板特征数据量大小通常与模板大小和模板参数有关</span></b><span style=' line-height:130%;font-family:宋体; '>，其数据量与模板大小、模板轮廓的复杂度、旋转角度范围、缩放范围成正比。模板越大使用的角度步长越小，在同等角度范围下特征数据量就越大，因此匹配时就越耗时。</span></p>
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:0cm; '><span lang=EN-US style='color:red'>&nbsp;</span></p>
+<p class=MsoListParagraph style='margin-left:0cm;text-indent:0cm;line-height:130%;layout-grid-mode:char; word-break:break-all'><span lang=EN-US style='line-height:130%;color:red'>3.</span><b><span style='line-height:130%;font-family:宋体;color:red'>创建模板和匹配具有超时机制</span></b><span style=' line-height:130%;font-family:宋体; '>，默认的均是</span><span lang=EN-US style='line-height:130%'>5000ms</span><span style='line-height:130%;font-family:宋体;'>，当创建模板超时可以通过适当地调整模板参数减小模板特征数据量（如缩放范围调小点或使用轮廓点精简参数</span><span lang=EN-US style='line-height:130%'>ptReduce</span><span style='line-height:130%; font-family:宋体;'>，此参数默认值为</span><span lang=EN-US style='line-height:130%'>0</span><span style=' line-height:130%;font-family:宋体; '>即不精简轮廓点，精简的过于严重可能会影响匹配精度），或者是通过手动设置超时时间，如</span><span lang=EN-US style='line-height:130%'>ZV_SysSetDbl(&quot;ShapeCreateTimeout&quot;,5000)</span><span style=' line-height:130%;font-family:宋体; '>，</span><span lang=EN-US style='line-height:130%'>ZV_SysSetDbl(&quot;ShapeFindTimeout&quot;,5000)</span><span style=' line-height:130%;font-family:宋体; '>。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red'>&nbsp;</span></p>
+<p class=MsoListParagraph style='margin-left:0cm;text-indent:0cm;line-height:130%;layout-grid-mode:char; word-break:break-all'><span lang=EN-US style='line-height:130%;color:red'>4.</span><b><span style='line-height:130%;font-family:宋体;color:red'>创建模板也具有内存保护机制</span></b><span style=' line-height:130%;font-family:宋体; '>，当使用过大的模板图像创建具有缩放的模板时，占用的内存达到保护临界值时，此时报内存错误导致模板创建失败可以通过调整模板参数减少数据量，如使用</span><span lang=EN-US style='line-height:130%'>ptReduce</span><span style='line-height:130%; font-family:宋体;'>参数精简一些点，或阈值</span><span lang=EN-US style='line-height:130%'>thresh</span><span style=' line-height:130%;font-family:宋体; '>设大点只提取更为明显的轮廓特征</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1278.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1276.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

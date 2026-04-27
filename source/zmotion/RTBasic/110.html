@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DMDEL -- 数组链表删除</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="111.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="109.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_DMDEL_--_数组链表删除"></a><a name="_Toc134697898"></a><a name="_Toc14379"></a><a name="_Toc21516"></a><a name="_Toc32434"></a><a name="_Toc24231"></a><a name="_DMDEL_--_数组链表删除_1"></a><span lang=EN-US>DMDEL</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>数组链表删除</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>语法指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>数组的链表操作；删除数组元素，删除后当前元素后面的所有元素向前移动。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>谨慎对超长数组进行操作，特别是数组</span><span lang=EN-US style='color:red;'>TABLE</span><span style='font-family:宋体;color:red;'>。</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>语法</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US style='color:black;'>DMDEL&nbsp; arrayname(pos, size)</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>语法</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US style='color:black;'>DMDEL&nbsp; aarrayname(pos) [,size]</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black; '>arrayname</span><span style='font-family:宋体;color:black;'>：数组</span><span style='font-family:宋体; color:black;'>名称</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black; '>pos</span><span style='font-family:宋体;color:black;'>：数组索引</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black; '>size</span><span style='font-family:宋体;color:black;'>：要修改的个数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>通用</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DIM aa(6)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>定义数组</span><span lang=EN-US style='color:black;'>aa</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>FOR i=0 TO 4&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>赋值</span><span lang=EN-US style='color:black;'>0,1,2,3,4</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp; aa(i)=i</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>NEXT</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>?*aa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>打印数组所有元素</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>DMDEL&nbsp; </span></b><span lang=EN-US style='color:black;'>aa(0)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>删除数组</span><span lang=EN-US style='color:black;'>a</span><span style='font-family:宋体;color:black;'>的第</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>个元素</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>?*aa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>打印删除后的数组所有元素</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="108.html#_DMINS_--_数组链表插入_1"><span lang=FR>DMINS</span></a><span style='font-family:宋体;color:black;'>，</span><a href="111.html#_DMCPY"><span lang=EN-US>DMCPY</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="111.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="109.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ERROR_SET -- 报错输出</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="484.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="482.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_ERROR_SET_--_报错输出"></a><a name="_Toc134698282"></a><a name="_Toc26079"></a><a name="_Toc13655"></a><a name="_Toc13242"></a><a name="_ERROR_SET_--_报错输出_1"></a><span lang=FR>ERROR</span><span lang=EN-US>_SET -- </span><span style='font-family:宋体;'>报错输出</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; '>系统指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>当</span></b><b><span lang=EN-US>BASIC</span></b><b><span style='font-family: 宋体; '>程序运行出错的时候，输出口自动打开，并且把错误信息写到对应的</span></b><b><span lang=EN-US>MODBUS</span></b><b><span style='font-family:宋体;'>寄存器，输出口状态还原时</span></b><b><span lang=EN-US>BASIC</span></b><b><span style='font-family:宋体;'>程序会自动重新运行。</span></b></p>
+<p class=MsoNormal><b><span lang=EN-US>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>寄存器长度至少</span><span lang=EN-US>32</span><span style='font-family:宋体; '>个字节。</span> </p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ERROR_SET(</span><span style='font-family:宋体; '>输出口</span><span lang=EN-US>,modbus</span><span style='font-family:宋体; '>寄存器地址</span><span lang=EN-US>[,errsubname])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>errsubname</span><span style='font-family:宋体;'>：设置一个</span><span lang=EN-US>SUB</span><span style='font-family:宋体; '>过程进行临时处理，语法错误停止时此函数自动被调用，此过程不要使用</span><span lang=EN-US>WAIT</span><span style='font-family: 宋体; '>等可能阻塞的指令，而且必须很精简。此过程里面再出现语法错误不会再被处理。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span lang=EN-US>ERROR_SET</span></b><span lang=EN-US>(1,200,error_deal)</span></p>
+<p class=MsoNormal><span lang=EN-US>MOV(30)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>拼写错误，此时运行错误，输出口</span><span lang=EN-US>1</span><span style='font-family: 宋体; '>打开，并在寄存器记录错误信息</span></p>
+<p class=MsoNormal style='text-indent:84.0pt; '><span lang=EN-US>'Modbus_string(200,32) =&quot;sample_move.bas,6,e2043&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US>END</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>SUB error_deal()&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>报错时调用函数</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>进入错误处理</span><span lang=EN-US>sub&quot;&nbsp;&nbsp; '</span><span style='font-family: 宋体; '>打印信息</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>以下编写需要的功能程序</span></p>
+<p class=MsoNormal><span lang=EN-US>END SUB</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>可以在线命令栏输入</span><span lang=EN-US>?MODBUS_STRING(200,32)</span><span style='font-family:宋体;'>查看错误信息：</span></p>
+<p class=MsoNormal><span lang=EN-US>MODBUS_STRING(200,32) =&quot;sample_move.bas,6,e2043&quot;</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>sample_move.bas</span><span style='font-family:宋体;'>：表示文件名</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>6</span><span style='font-family:宋体;'>：表示当前出现错误的行号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>e2043</span><span style='font-family:宋体;'>：表示错误码</span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="484.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="482.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

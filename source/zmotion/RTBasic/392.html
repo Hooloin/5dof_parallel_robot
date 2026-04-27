@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>SCAN_EVENT -- 检测变化</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="393.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="391.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_SCAN_EVENT"></a><a name="_Toc134698181"></a><a name="_Toc18113"></a><a name="_Toc23835"></a><a name="_Toc21999"></a><a name="_Toc2191"><span lang=EN-US>SCAN_EVENT -- </span></a><span style='font-family:宋体;'>检测变化</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>输入输出函数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>检测表达式的内容变化。</span></b></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OFF- ON</span><span style='font-family:宋体;color:black;'>返回</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>ON-OFF</span><span style='font-family: 宋体; color:black;'>返回</span><span lang=EN-US style='color: black;'>-1</span><span style='font-family:宋体;color:black; '>，不变返回</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black; '>。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>不要在循环内或者多任务调用同一个</span><span lang=EN-US style='color:black;'>SUB</span><span style='font-family: 宋体; color:black;'>内的</span><span lang=EN-US style='color: black;'>SCAN_EVENT</span><span style='font-family:宋体; color:black;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>150810</span><span style='font-family: 宋体; color:black;'>之后固件版本支持，之前版本用</span><span lang=EN-US style='color:black;'>IN_EVENT</span><span style='font-family:宋体;color:black;'>和</span><span lang=EN-US style='color:black;'>IN_SCAN</span><span style='font-family:宋体;color:black;'>。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ret = </span><span lang=EN-US>SCAN_EVENT<span style='color:black'> (expression)</span></span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>expression</span><span style='font-family:宋体; color:black;'>：任意有效的表达式，结果会转成</span><span lang=EN-US style='color:black;'>BOOL</span><span style='font-family:宋体;color:black;'>类型</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a name="OLE_LINK121"><span style='font-family:宋体;color:black;'>例一</span></a> <span style='font-family:宋体;color:black;'>输入信号扫描</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WHILE 1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF&nbsp; SCAN_EVENT(IN(0)) &gt; 0 THEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'IN0</span><span style='font-family:宋体;color:black;'>上升沿触发</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINT &quot;IN0 ON&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ELSEIF&nbsp; SCAN_EVENT(IN(0))&lt;0 THEN&nbsp;&nbsp;&nbsp;&nbsp; 'IN0</span><span style='font-family:宋体;color:black; '>下降沿触发</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINT &quot;IN0 OFF&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WEND</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm; '><span lang=EN-US style='color:black;'>例二 </span><span style='font-family: 宋体; color:black;'>寄存器、变量扫描</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WHILE 1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF&nbsp; SCAN_EVENT(TABLE(0)) &gt; 0 THEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'TABLE0</span><span style='font-family:宋体;color:black; '>上升沿触发</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINT &quot;TABLE0 ON&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ELSEIF&nbsp; SCAN_EVENT(TABLE(0))&lt;0 THEN&nbsp;&nbsp; 'TABLE0</span><span style='font-family:宋体;color:black; '>下降沿触发</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINT &quot;TABLE0 OFF&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WEND</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>在线命令操作</span><span lang=EN-US style='color:black; '>table(0)</span><span style='font-family:宋体;color:black;'>，打印相关结果</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="390.html#_IN_SCAN">IN_SCAN</a></span><span style='font-family:宋体; color:black;'>，</span><span lang=EN-US><a href="391.html#_IN_EVENT">IN_EVENT</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="393.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="391.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

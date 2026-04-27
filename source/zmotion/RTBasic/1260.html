@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_DraMapVectorField -- 绘制映射图向量场</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1261.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1259.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc10775"><span lang=EN-US>ZV_DraMapVectorField -- </span></a><span style='font-family: 宋体;'>绘制映射图向量场</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>绘图</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>绘制</span><span lang=EN-US>Map</span><span style='font-family:宋体;color:black'>图的向量场，向量场是从<span lang=EN-US>(</span></span><span lang=EN-US>map1(x,y),map2(x,y)</span><span lang=EN-US style='font-family:宋体;color:black'>)</span><span style='font-family:宋体; color:black'>到<span lang=EN-US>(</span></span><span lang=EN-US>x,y</span><span lang=EN-US style='font-family:宋体;color:black'>)</span><span style='font-family:宋体; color:black'>的线条，指示</span><span lang=EN-US>Map</span><span style=' font-family:宋体;color:black'>图的映射关系</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_DraMapVectorField(img,map1,map2,color,dist)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，绘制的目标图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>map1</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，</span><span lang=EN-US>x</span><span style='font-family:宋体;'>坐标的</span><span lang=EN-US>map</span><span style='font-family:宋体;'>图</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>map2</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，</span><span lang=EN-US>y</span><span style='font-family:宋体;'>坐标的</span><span lang=EN-US>map</span><span style='font-family:宋体;'>图</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>color</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>绘制的颜色</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dist</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>绘制的参考点的距离，像素单位，一般取</span><span lang=EN-US>8-32</span><span style='font-family:宋体;'>，向量场绘制的是线条，距离小可能导致大量线条相互覆盖粘连无法区分，间隔一定距离，绘制效果更好</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a title="Not Found Page:#_ZV_ImpConvertMapType -- 映射图格式变换"><span lang=EN-US style='color:#9999CC'>ZV_ImpConvertMapType</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='font-size:9.5pt;font-family:新宋体;color:black'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1261.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1259.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

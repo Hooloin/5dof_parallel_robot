@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>HW_TIMER -- 硬件定时</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="405.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="403.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_HW_TIMER_--_硬件定时"></a><a name="_Toc134698192"></a><a name="_Toc14666"></a><a name="_Toc17397"></a><a name="_Toc2491"></a><a name="_Toc18496"></a><a name="_HW_TIMER_--_硬件定时_1"></a><span lang=FR>HW_TIMER</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>硬件定时</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>特殊命令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>硬件定时器，用于硬件比较输出后一段时间后还原电平</span></b><b><span style='font-family:宋体;'>。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>建议不超过</span><span lang=EN-US style='color:red;'>100ms</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>注意事项：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>HW</span><span style='font-family:宋体; color:red;'>非独立的控制器只有一个</span><span lang=EN-US style='color:red;'>HW_TIMER</span><span style='font-family:宋体; color:red;'>，每次调用会强制停止之前的调用。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>HW</span><span style='font-family:宋体; color:red;'>独立的控制器，每路</span><span lang=EN-US style='color:red;'>HWOP</span><span style='font-family:宋体; color:red;'>有一个</span><span lang=EN-US style='color:red;'>HW_TIMER</span><span style='font-family:宋体; color:red;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>ZMC420SCAN</span><span style='font-family:宋体; color:red;'>每个输出口的</span><span lang=FR style='color:red; '>HW_TIMER</span><span style=' font-family:宋体;color:red;'>功能</span><span style='font-family:宋体; color:red;'>独立。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>HW_TIMER</span><span style='font-family:宋体; color:red;'>不使用时需要使用模式</span><span lang=EN-US style='color:red;'>0</span><span style='font-family:宋体; color:red;'>停止，否则将持续开启，可能影响后续的比较输出。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red'>先用模式</span><span lang=EN-US style='color:red'>2</span><span style='font-family:宋体;color:red'>开启硬件定时器，才能使用其他的模式修改。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>振镜控制器</span><span lang=EN-US>20170709</span><span style='font-family:宋体; '>以上固件版本增加功能：</span></p>
+<p class=MsoNormal><span lang=EN-US>OP</span><span style='font-family:宋体; '>和</span><span lang=EN-US>MOVE_OP</span><span style='font-family:宋体; '>操作会关闭正在进行的</span><span lang=EN-US>HW_TIMER</span><span style='font-family:宋体; '>脉冲，这样可以使用</span><span lang=EN-US>HW_TIMER</span><span style='font-family:宋体; '>来实现类似</span><span lang=EN-US>PWM</span><span style='font-family:宋体; '>的功能，</span><span lang=EN-US>OP</span><span style='font-family:宋体; '>输出打开脉冲输出，下一个</span><span lang=EN-US>OP</span><span style='font-family:宋体; '>输出关闭脉冲输出，当使用</span><span lang=EN-US>MOVE_OP</span><span style='font-family:宋体; '>精准输出时，可以实现精准的</span><span lang=EN-US>PWM</span><span style='font-family:宋体; '>输出无限脉冲功能。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体;'>使用</span><span lang=EN-US>?*HW_TIMER</span><span style='font-family:宋体;'>可以看到还有多少脉冲剩余。</span></p>
+</td> </tr> <tr style='height:30.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+<p class=MsoNormal><span lang=EN-US>HW_TIMER(mode, cyclonetime, optime, reptimes, opstate, opnum )</span></p>
+<p class=MsoNormal><span lang=EN-US>done = HW_TIMER_DONE</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>mode</span><span style=' font-family:宋体;'>：</span><a name="_Hlk118453071"><span lang=FR>0-</span></a><span style=' font-family:宋体;'>停止硬件定时器，</span><span lang=FR>1-</span><span style=' font-family:宋体;'>动态修改参数（不修改启动设置），</span><span lang=FR>2-</span><span style=' font-family:宋体;'>启动（启动后不可重复开启），</span><span lang=FR>3--</span><span style=' font-family:宋体;'>停止硬件定时器（类似</span><span lang=FR>0</span><span style=' font-family:宋体;'>，针对振镜控制器），当前脉冲完成后不再输出，但后面的</span><span lang=FR>OP</span><span style=' font-family:宋体;'>仍会继续触发脉冲</span> </p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>cyclonetime</span><span style='font-family:宋体;'>：</span><span style='font-family:宋体;'>周期时间</span><span style='font-family: 宋体; '>，</span><span lang=FR>us</span><span style='font-family:宋体;'>单位</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>optime</span><span style='font-family:宋体;'>：</span><span style='font-family:宋体; '>有效时间</span><span style='font-family:宋体; '>，</span><span lang=FR>us</span><span style=' font-family:宋体;'>单位</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>reptimes</span><span style='font-family:宋体;'>：</span><span style='font-family:宋体;'>重复次数</span><span style='font-family: 宋体; '>，</span><span style='font-family: 宋体; '>启动模式</span><span style='font-family:宋体;'>，</span><span lang=FR>reptimes =0</span><span style='font-family:宋体; '>时</span><span style='font-family:宋体;'>，</span><span style='font-family:宋体;'>软关闭</span><span lang=FR>HW_TIMER</span><span style='font-family:宋体; '>，</span><span style='font-family:宋体; '>原来的脉冲没有完成的</span><span style='font-family:宋体;'>，</span><span style='font-family:宋体;'>会继续输出完成</span><span style='font-family: 宋体; '>；</span><span lang=FR>-1</span><span style='font-family:宋体;'>时无限输出</span><span style='font-family: 宋体; '>，</span><span style='font-family: 宋体; '>除非主动关闭</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>opstate</span><span style='font-family:宋体; '>：</span><span style=' font-family:宋体;'>输出缺省状态，输出口变为非此状态后开始计时（输出口初始状态</span><span lang=FR>OFF</span><span style='font-family:宋体; '>。一般此参数设为</span><span lang=FR>OFF</span><span style='font-family:宋体; '>，将输出口变为</span><span lang=FR>ON</span><span style=' font-family:宋体;'>状态后开始计时）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>opnum</span><span style='font-family:宋体; '>：输出口编号，必须能硬件比较输出的口</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=859 height=481 src="doc.files/image457.png" alt="说明: 图表, 瀑布图&#10;&#10;描述已自动生成" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>振镜控制器</span><span lang=EN-US>20170710</span><span style='font-family:宋体;'>以上版本增加</span><span lang=EN-US>mode 3</span><span style='font-family:宋体;'>，类似</span><span lang=EN-US>0</span><span style='font-family: 宋体;'>，当前脉冲完成后不再输出，但后面的</span><span lang=EN-US>OP</span><span style='font-family:宋体; '>仍会继续触发脉冲。而模式</span><span lang=EN-US>0</span><span style='font-family:宋体;'>停止之后无法</span><span lang=EN-US>OP</span><span style='font-family:宋体;'>继续触发，必须重新启动。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>振镜控制器</span><span lang=EN-US>20170710</span><span style='font-family:宋体;'>以上版本增加</span><span lang=EN-US>mode 1</span><span style='font-family:宋体;'>，</span><span lang=EN-US>1</span><span style='font-family: 宋体;'>支持再次发送之后动态修改定时的参数，模式</span><span lang=EN-US>1</span><span style='font-family:宋体; '>不可用于开启硬件定时器，在模式</span><span lang=EN-US>2</span><span style='font-family:宋体; '>没有比较完之前执行模式</span><span lang=EN-US>1</span><span style='font-family:宋体;'>才会生效；模式</span><span lang=EN-US>2</span><span style='font-family:宋体;'>不可重复开启。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><a name="_Hlk118453853"><span lang=EN-US>ZMC420SCAN 221017</span></a><span style='font-family:宋体;'>增加</span><span lang=EN-US>mode4</span><span style='font-family:宋体;'>，脉冲</span><span lang=EN-US>duty</span><span style='font-family:宋体;'>变化功能，配合模式</span><span lang=EN-US>1/2</span><span style='font-family:宋体;'>使用。</span></p>
+<p class=MsoNormal><span lang=EN-US>HW_TIMER(mode4, [trigremaintime, ][changetimes,] [changeonetick], reserve, opnum)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>trigremaintime</span><span style='font-family:宋体;'>：剩余多少个脉冲数时开始调整脉冲的宽度，注意第一个脉冲不变化，</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>表示不使用</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>changetimes</span><span style='font-family:宋体;'>：变化脉冲个数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>changeonetick</span><span style='font-family:宋体;'>：每个脉冲的宽度变化，</span><span lang=EN-US>us</span><span style='font-family:宋体;'>单位，可以为负数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>reserve</span><span style='font-family:宋体;'>：预留，设为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>即可</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>opnum</span><span style='font-family:宋体;'>：输出口编号，必须能硬件比较输出的口</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>应用此模式脉冲宽度要合理设置，脉冲宽度累加后超出周期时，后续无法正常输出，模式</span><span lang=EN-US>4</span><span style='font-family:宋体;'>不使用时将第</span><span lang=EN-US>2-4</span><span style='font-family:宋体;'>的参数设为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>，否则下次仍然生效。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>3</span><span style='font-family:宋体;color:black;'>系列部分、</span><span lang=FR style='color:black; '>4</span><span style='font-family:宋体;color:black; '>系列及以上产品，</span><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体;color:black;'>系列</span><span style='font-family:宋体;color:black; '>固件</span><span lang=EN-US style='color:black; '>20170704</span><span style='font-family:宋体;color:black;'>及以上</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><a name="_Hlk118454030"><b><span style='font-family:宋体;color:black; '>例子</span></b></a></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style=' font-family:宋体;color:black;'>以下例程测试环境：</span><span style=' color:black;'>ZMC420</span><span lang=EN-US>SCAN</span><span style='font-family:宋体;'>，</span><span style='font-family:宋体; color:black; '>固件：</span><span lang=EN-US>221017</span><span style=' font-family:宋体;color:black; '>（</span><span style='font-family:宋体; color:black; '>仿真器无法运行此指令</span><span style='font-family:宋体; color:black;'>）。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>为了直观显示波形，周期设置的较大。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例一：模式</span><span lang=EN-US>2</span><span style='font-family:宋体;'>，周期输出脉冲</span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT IDLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE=1&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US>SPEED=100</span></p>
+<p class=MsoNormal><span lang=EN-US>ACCEL=500</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US>HW_TIMER(0, 1000000, 500000, 2, OFF, 0)&nbsp; '</span><span style='font-family:宋体;'>模式</span><span lang=EN-US>0</span><span style='font-family:宋体;'>停止硬件定时器</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US>OP(0, OFF)</span></p>
+<p class=MsoNormal><span lang=EN-US>HW_TIMER(2, 1000000, 500000, 2, OFF, 0)&nbsp; '</span><span style='font-family:宋体;'>输出口</span><span lang=EN-US>0</span><span style='font-family:宋体;'>变为</span><span lang=EN-US>on</span><span style='font-family:宋体;'>后，硬件定时器触发开始计时，</span><span lang=EN-US>500ms </span><span style='font-family:宋体;'>后切换为</span><span lang=EN-US>off</span></p>
+<p class=MsoNormal><span lang=EN-US>OP(0, ON)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>运行效果：以</span><span lang=EN-US>1000ms</span><span style='font-family:宋体;'>为周期，输出两个周期，每个周期前</span><span lang=EN-US>500ms</span><span style='font-family:宋体;'>开启，后半个周期关闭。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=835 height=347 src="doc.files/image459.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例二：模式</span><span lang=EN-US>1</span><span style='font-family:宋体;'>，周期输出脉冲；模式</span><span lang=EN-US>2</span><span style='font-family:宋体;'>开启之后，再使用模式</span><span lang=EN-US>1</span><span style='font-family:宋体;'>动态修改</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US>SPEED=100</span></p>
+<p class=MsoNormal><span lang=EN-US>ACCEL=500</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US>OP(0, OFF)</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US>HW_TIMER(2,1000000,600000,10,OFF,0)&nbsp; '</span><span style='font-family:宋体; '>输出口</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>变为</span><span lang=EN-US>on</span><span style='font-family:宋体; '>后，硬件定时器触发开始计时，</span><span lang=EN-US>600ms </span><span style='font-family:宋体; '>后切换为</span><span lang=EN-US>off</span></p>
+<p class=MsoNormal><span lang=EN-US>OP(0, ON)</span></p>
+<p class=MsoNormal><span lang=EN-US>DELAY(2500) &nbsp;&nbsp;&nbsp;'2.5s</span><span style=' font-family:宋体;'>之后模式</span><span lang=EN-US>1</span><span style='font-family:宋体; '>生效，修改定时时间，时间不能太大，模式</span><span lang=EN-US>2</span><span style='font-family:宋体; '>若比较完成，模式</span><span lang=EN-US>1</span><span style='font-family:宋体; '>将无法生效。</span> </p>
+<p class=MsoNormal><span lang=EN-US>HW_TIMER(1, 1000000, 200000, 5, OFF, 0)&nbsp; '</span><span style=' font-family:宋体;'>动态修改</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>模式</span><span lang=EN-US>1</span><span style='font-family:宋体; '>可修改上一条的定时时间（上一条可以是模式</span><span lang=EN-US>1</span><span style='font-family:宋体; '>或模式</span><span lang=EN-US>2</span><span style='font-family:宋体; '>），此例若改成模式</span><span lang=EN-US>2</span><span style='font-family:宋体; '>，再次扫描到模式</span><span lang=EN-US>2</span><span style='font-family:宋体; '>时</span><span lang=EN-US>OP</span><span style='font-family:宋体; '>不动作。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=854 height=481 src="doc.files/image461.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>例二</span> <span style='font-family:宋体; '>模式</span><span lang=EN-US>3</span><span style='font-family:宋体; '>，停止输出，之后仍能</span><span lang=EN-US>OP</span><span style='font-family:宋体; '>触发</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US>SPEED=100</span></p>
+<p class=MsoNormal><span lang=EN-US>ACCEL=500</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US>OP(0, OFF)</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US>HW_TIMER(2,1000000,400000,10,OFF,0)&nbsp; '</span><span style='font-family:宋体; '>输出口</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>变为</span><span lang=EN-US>on</span><span style='font-family:宋体; '>后，硬件定时器触发开始计时，</span><span lang=EN-US>400ms </span><span style='font-family:宋体; '>后切换为</span><span lang=EN-US>off</span></p>
+<p class=MsoNormal><span lang=EN-US>OP(0, ON)</span></p>
+<p class=MsoNormal><span lang=EN-US>DELAY(3000)&nbsp; &nbsp;&nbsp;'</span><span style=' font-family:宋体;'>延时</span><span lang=EN-US>3s</span><span style='font-family:宋体; '>后关闭输出</span></p>
+<p class=MsoNormal><span lang=EN-US>HW_TIMER(3, 1000000, 400000, 10, OFF, 0)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>OP</span><span style=' font-family:宋体;'>打开，模式</span><span lang=EN-US>2</span><span style='font-family:宋体; '>正常输出脉冲，</span><span lang=EN-US>3s</span><span style='font-family:宋体; '>后模式</span><span lang=EN-US>3</span><span style='font-family:宋体; '>生效，停止输出，再次开启</span><span lang=EN-US>OP</span><span style='font-family:宋体; '>触发</span><span lang=EN-US>HW</span><span style='font-family:宋体; '>，仍能继续输出</span><span lang=EN-US>10</span><span style='font-family:宋体; '>次。（箭头处为</span><span lang=EN-US>OP</span><span style='font-family:宋体; '>再次触发时刻）</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>此次若使用模式</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，停止后再次开启</span><span lang=EN-US>OP</span><span style='font-family:宋体; '>无法触发</span><span lang=EN-US>HW</span><span style='font-family:宋体; '>，需重新扫描</span><span lang=EN-US>HW</span><span style='font-family:宋体; '>命令。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=854 height=476 src="doc.files/image463.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>例三</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US>SPEED=100</span></p>
+<p class=MsoNormal><span lang=EN-US>ACCEL=500</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US>OP(0, OFF)</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US>HW_TIMER(2,2000000,200000,10,OFF,0)&nbsp; '</span><span style='font-family:宋体; '>输出口</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>变为</span><span lang=EN-US>on</span><span style='font-family:宋体; '>后，硬件定时器触发开始计时，</span><span lang=EN-US>2s</span><span style='font-family:宋体; '>周期，打开</span><span lang=EN-US>200ms </span><span style='font-family:宋体; '>后切换为</span><span lang=EN-US>off</span></p>
+<p class=MsoNormal><span lang=EN-US>OP(0, ON)</span></p>
+<p class=MsoNormal><span lang=EN-US>HW_TIMER(4,6,3,300000,OFF,0)&nbsp; '</span><span style='font-family:宋体; '>模式</span><span lang=EN-US>4</span><span style=' font-family:宋体;'>用于控制部分脉冲的宽度。</span></p>
+<p class=MsoNormal><span lang=EN-US>'HW_TIMER(4,0,0,0,OFF,0) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style=' font-family:宋体;'>比较完成，关闭模式</span><span lang=EN-US>4</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>如下图：模式</span><span lang=EN-US>2</span><span style='font-family:宋体; '>的作用下产生了</span><span lang=EN-US>10</span><span style='font-family:宋体; '>个脉冲，模式</span><span lang=EN-US>4</span><span style='font-family:宋体; '>控制倒数第六个脉冲之后开始生效（因为第一个不变化，故倒数第</span><span lang=EN-US>6</span><span style='font-family:宋体; '>个无变化，从倒数第</span><span lang=EN-US>5</span><span style='font-family:宋体; '>个开始生效），连续控制</span><span lang=EN-US>3</span><span style='font-family:宋体; '>个脉冲宽度，每个脉冲依次累加</span><span lang=EN-US>300ms</span><span style='font-family:宋体; '>后再固定宽度输出。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=854 height=202 src="doc.files/image465.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="404.html#_HW_TIMER_--_硬件定时_1">HW_PSWITCH2</a></span> </p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="405.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="403.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

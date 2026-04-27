@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_McCreateQuickShape -- 创建快速模板</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1068.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1066.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc30426"><span lang=EN-US>ZV_McCreateQuickShape -- </span></a><span style='font-family: 宋体;'>创建快速模板</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>快速匹配</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>创建用于快速匹配的形状模板，对比标准形状模板，内部进行了一些简化和限制，以限制使用场景的方式实现提高算法易用性及匹配速度</span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_McCreateQuickShape(img,re,model[,thresh=0,featFine=0,minContLen=0])</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体;color:black'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，创建模板的图像，</span><span lang=EN-US>8U</span><span style='font-family:宋体;'>单通道</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>re</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，指定模板图像的有效区域，在模板图像中</span><span lang=EN-US>re</span><span style='font-family:宋体;'>对应的部分将用来创建模板。保留逗号不填或填入未使用过的变量则默认整个模板图为有效区域</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>model</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，创建的模板，输出参数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>thresh</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>提取模板边缘轮廓的对比度阈值，范围</span><span lang=EN-US>[0,255]</span><span style='font-family:宋体;'>，为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>时内部会选取一个合适的阈值，对比度越大提取的边缘轮廓强度就越强，提取到的边缘轮廓也越少</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>featFine</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>特征尺度，范围</span><span lang=EN-US>[0,3]</span><span style='font-family:宋体;'>，特征的粗糙程度，越大速度越快</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minContLen</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>最小轮廓长度，大于等于</span><span lang=EN-US>0</span><span style='font-family:宋体;'>，小于此长度的轮廓将不会被提取，为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>时内部自动计算合适的轮廓，此参数可控制删除一些短小轮廓</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1068.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1066.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

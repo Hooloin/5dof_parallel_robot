@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ReSortPos -- 区域位置排序</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="975.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="973.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc19296"><span lang=EN-US>ZV_ReSortPos -- </span></a><span style='font-family:宋体;'>区域位置排序</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>排序</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>将区域列表中的区域按照位置关系进行排序</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ReSortPos(list,sorted,sortMode,isInc,isCol)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>list</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，区域列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>sorted</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，排序后的区域列表，注意专用列表排序后输出为普通列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>sortMode</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>区域的位置模式，不同模式下区域的位置描述有所不同，从而影响排序结果，取值如下</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='margin-left:23.0pt;border-collapse:collapse;border:none;'> <tr> <td width=123 valign=top style='width:52.6pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>sortMode</span></p>
+</td>  <td width=396 valign=top style='width:169.6pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>说明</span></p>
+</td>  </tr> <tr> <td width=123 valign=top style='width:52.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>0</span></p>
+</td>  <td width=396 valign=top style='width:169.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>区域第一个行程的起始点坐标</span></p>
+</td>  </tr> <tr> <td width=123 valign=top style='width:52.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>1</span></p>
+</td>  <td width=396 valign=top style='width:169.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>区域最后一个行程的结束点坐标</span></p>
+</td>  </tr> <tr> <td width=123 valign=top style='width:52.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>2</span></p>
+</td>  <td width=396 valign=top style='width:169.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>区域外接矩的左上角坐标</span></p>
+</td>  </tr> <tr> <td width=123 valign=top style='width:52.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>3</span></p>
+</td>  <td width=396 valign=top style='width:169.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>区域外接矩的右上角坐标</span></p>
+</td>  </tr> <tr> <td width=123 valign=top style='width:52.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>4</span></p>
+</td>  <td width=396 valign=top style='width:169.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>区域外接矩的左下角坐标</span></p>
+</td>  </tr> <tr> <td width=123 valign=top style='width:52.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>5</span></p>
+</td>  <td width=396 valign=top style='width:169.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>区域外接矩的右下角坐标</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='margin-top:7.8pt; text-indent:21.1pt;'><b><span lang=EN-US>isInc</span></b><b><span style=' font-family:宋体;'>：</span></b><span style='font-family:宋体; '>是否递增排序，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>递减，</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>递增</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>isCol</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>是否列排序，</span><span lang=EN-US>0-</span><span style=' font-family:宋体;'>先行后列，</span><span lang=EN-US>1-</span><span style=' font-family:宋体;'>先列后行</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,re,re_connent_list,selected,re_sorted</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;sort_region.png&quot;,0) '</span><span style='font-family:宋体; '>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReThresh(img,,re,0,120) '</span><span style=' font-family:宋体;'>区域二值化</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReConnect(re,re_connent_list) '</span><span style=' font-family:宋体;'>计算区域的连通区域</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReSelect(re_connent_list,selected,0,50,1000,0) ‘</span><span style='font-family:宋体; '>区域面积过滤</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReSortPos(selected,sorted,2,1,0) ‘</span><span style=' font-family:宋体;'>对区域列表按照模式</span><span lang=EN-US>2</span><span style=' font-family:宋体;'>，先行后列升序排序</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="975.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="973.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,300 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FILE -- U盘文件操作</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="524.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="522.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>FILE -- U</span><span style='font-family:宋体;'>盘文件操作</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.14%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.84%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>文件指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.14%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.84%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>加载、搜索控制器或</span></b><b><span lang=EN-US style='color:black;'>U</span></b><b><span style='font-family:宋体;color:black;'>盘文件。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>根据对应字符串选择功能。</span></p>
+<p class=MsoNormal><span lang=EN-US>U</span><span style='font-family:宋体;'>盘读取文件系统支持</span><span lang=EN-US>fat32</span><span style='font-family:宋体;'>和</span><span lang=EN-US>fat16</span><span style='font-family:宋体;'>，不支持</span><span lang=EN-US>ntfs</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US>4</span><span style='font-family:宋体;'>系列以下建议使用</span><span lang=EN-US>USB2.0</span><span style='font-family:宋体;'>的</span><span lang=EN-US>U</span><span style='font-family: 宋体;'>盘，</span><span lang=EN-US>4</span><span style='font-family:宋体; '>系列或以上支持</span><span lang=EN-US>USB3.0</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VPLC5</span><span style='font-family: 宋体; color:black;'>系列是</span><span lang=EN-US style='color:black;'>Linux</span><span style='font-family: 宋体; color:black;'>系统，读取文件名</span><span lang=EN-US>filename</span><span style='font-family:宋体; color:black;'>是区分大小写的，名称必须都大写。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.14%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.84%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>value = FILE&nbsp; &quot;function&quot; ,</span><span style='font-family:宋体;'>…</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=899 style='width:385.4pt;border-collapse:collapse;border:none; '> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;LOAD_ZAR&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;LOAD_ZAR&quot;,&quot;filename&quot;</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>加载</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘里面的</span><span lang=EN-US>ZAR</span><span style='font-family:宋体; '>升级文件。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>filename</span><span style='font-family:宋体;'>：程序文件名</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>升级失败返回</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，同时会</span><span lang=EN-US>WARN</span><span style='font-family:宋体; '>输出失败原因。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>升级成功后会自动启动</span><span lang=EN-US>ZAR</span><span style='font-family:宋体; '>文件，因此返回值</span><span lang=EN-US>TRUE</span><span style='font-family:宋体; '>没有意义。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US><img border=0 width=43 height=38 src="doc.files/image566.png" ></span><span style='font-family:宋体;'>升级后原来的调试状态的断点会被清除掉。</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;LOAD_TCF&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;LOAD_TCF&quot;,&quot;filename&quot;,tableindex,maxsize</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>专有文件</span><span lang=EN-US>TCF</span><span style='font-family:宋体; '>文件读取。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>filename</span><span style='font-family:宋体;'>：文件名</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>tableindex</span><span style='font-family:宋体;'>：存储起始</span><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>maxsize</span><span style='font-family:宋体;'>：</span><span style='font-family: 宋体; '>存储</span><span lang=FR>TABLE</span><span style='font-family:宋体;'>总索引个数</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=480 style='width:205.85pt;margin-left:8.4pt;border-collapse:collapse; border:none; '> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE0</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>标志位</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE1</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>总点数</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE2</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>胶头编号</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE100</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>点类型</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>第一个点</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE101</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>X</span><span style='font-family: 宋体; '>坐标</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE102</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>Y</span><span style='font-family: 宋体; '>坐标</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE103</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>Z</span><span style='font-family: 宋体; '>坐标</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE104</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>预留</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE105</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>点类型</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>第二个点</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE106</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>X</span><span style='font-family: 宋体; '>坐标</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE107</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>Y</span><span style='font-family: 宋体; '>坐标</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE108</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>Z</span><span style='font-family: 宋体; '>坐标</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr> <td width=169 valign=top style='width:72.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE109</span></p>
+</td> <td width=161 valign=top style='width:69.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>预留</span></p>
+</td> <td width=151 valign=top style='width:64.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;LOAD_BYTE&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE&quot;LOAD_BYTE&quot;,&quot;filename&quot;,tableindex,maxsize, offset</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>字节方式加载文件。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>filename</span><span style='font-family:宋体;'>：文件名，读取</span><span lang=EN-US>csv</span><span style='font-family:宋体; '>文件时，数据需要放到第一列</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>tableindex</span><span style='font-family:宋体;'>：存储起始</span><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>maxsize</span><span style='font-family:宋体;'>：存储</span><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>总索引个数</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>offset</span><span style='font-family:宋体;'>：文件开始读取的字节偏移</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=483 style='width:207.05pt;margin-left:7.2pt;border-collapse:collapse; border:none; '> <tr> <td width=172 valign=top style='width:73.55pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE0</span></p>
+</td> <td width=312 valign=top style='width:133.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>总字节数</span></p>
+</td> </tr> <tr> <td width=172 valign=top style='width:73.55pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE1</span></p>
+</td> <td width=312 valign=top style='width:133.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>读取到的第一个字节</span></p>
+</td> </tr> <tr> <td width=172 valign=top style='width:73.55pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLE2</span></p>
+</td> <td width=312 valign=top style='width:133.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>第二个字节</span></p>
+</td> </tr> <tr> <td width=172 valign=top style='width:73.55pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>TABLEn</span></p>
+</td> <td width=312 valign=top style='width:133.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>第</span><span lang=EN-US>n</span><span style='font-family:宋体; '>个字节</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;FIND_FIRST&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;FIND_FIRST&quot;, type, modbus</span><span lang=EN-US> [,dir]</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>搜索</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘文件。</span><span style='font-family:宋体;'>增加可选参数，</span><span lang=EN-US>dir</span><span style='font-family:宋体;'>，字符串参数。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>type</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>文件</span><span lang=EN-US>/2-</span><span style='font-family: 宋体; '>文件夹</span><span lang=EN-US>/ &quot;.extend&quot; </span><span style='font-family:宋体;'>文件后缀名</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>modbus</span><span style='font-family:宋体;'>：</span><span lang=EN-US>modbus_string(modbus)</span><span style='font-family:宋体;'>存储查找的结果</span><span lang=EN-US>,</span><span style='font-family:宋体; '>优先推荐</span><span lang=EN-US>modbus</span><span style='font-family:宋体; '>，</span><span lang=EN-US>vr</span><span style='font-family: 宋体; '>也可以用</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>dir</span><span style='font-family:宋体;'>：指定搜索路径，字符串表达式格式，不指定缺省搜索</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘根目录。</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;FIND_NEXT&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;FIND_NEXT&quot;, modbus</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>搜索下一个</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘文件。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>modbus</span><span style='font-family:宋体;'>：</span><span lang=EN-US>modbus_string(modbus)</span><span style='font-family:宋体;'>存储查找的结果</span><span lang=EN-US>,</span><span style='font-family:宋体; '>优先推荐</span><span lang=EN-US>modbus</span><span style='font-family:宋体; '>，</span><span lang=EN-US>vr</span><span style='font-family: 宋体; '>也可以用</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;FLASH_FIRST&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;FLASH_FIRST&quot;, type, modbus</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>搜索</span><span lang=EN-US>FLASH</span><span style='font-family:宋体; '>文件，只支持</span><span lang=EN-US>BIN</span><span style='font-family:宋体; '>和</span><span lang=EN-US>Z3P</span><span style='font-family: 宋体; '>文件。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>type</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>文件</span><span lang=EN-US>/2-</span><span style='font-family: 宋体; '>文件夹</span><span lang=EN-US>/ &quot;.extend&quot; </span><span style='font-family:宋体;'>文件后缀名</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>modbus</span><span style='font-family:宋体;'>：</span><span lang=EN-US>modbus_string(modbus)</span><span style='font-family:宋体;'>存储查找的结果</span><span lang=EN-US>,</span><span style='font-family:宋体; '>优先推荐</span><span lang=EN-US>modbus</span><span style='font-family:宋体; '>，</span><span lang=EN-US>vr</span><span style='font-family: 宋体; '>也可以用</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;FLASH_NEXT&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;FLASH_NEXT&quot;, modbus</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>搜索下一个</span><span lang=EN-US>FLASH</span><span style='font-family:宋体; '>文件。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>modbus</span><span style='font-family:宋体;'>：</span><span lang=EN-US>modbus_string(modbus)</span><span style='font-family:宋体;'>存储查找的结果</span><span lang=EN-US>,</span><span style='font-family:宋体; '>优先推荐</span><span lang=EN-US>modbus</span><span style='font-family:宋体; '>，</span><span lang=EN-US>vr</span><span style='font-family: 宋体; '>也可以用</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;FLASH_DEL&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;FLASH_DEL&quot;,&quot;fileorddir&quot;</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>删除指定文件。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>file</span><span style='font-family: 宋体; '>：文件名全称，带扩展名。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>支持文件夹的删除，可以带盘符</span><span lang=EN-US>A</span><span style='font-family: 宋体; '>、</span><span lang=EN-US>C</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>C</span><span style='font-family: 宋体; '>盘，表示</span><span lang=EN-US>FLASH</span><span style='font-family:宋体; '>目录，</span><span style='font-family:宋体;'>不带盘符缺省认为是</span><span lang=EN-US>FLASH</span><span style='font-family:宋体;'>目录</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>A</span><span style='font-family: 宋体; '>盘，表示</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;DELETE&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE&nbsp; &quot;DELETE&quot;,&quot;filename&quot;</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>删除</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘指定文件。</span><span lang=EN-US>4</span><span style='font-family:宋体; '>系以下控制器只支持</span><span lang=EN-US>Z3P</span><span style='font-family: 宋体; '>和</span><span lang=EN-US>BIN</span><span style='font-family:宋体; '>类型文件，固件版本</span><span lang=EN-US>20240719</span><span style='font-family:宋体;'>以后，</span><span lang=EN-US>4</span><span style='font-family:宋体; '>系以下</span><span lang=EN-US>NAND flash</span><span style='font-family:宋体;'>类型的控制器增加</span><span lang=EN-US>CSV</span><span style='font-family:宋体;'>类型</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>filename</span><span style='font-family:宋体;'>：文件名全称，带扩展名。</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;COPY_FROM&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;COPY_FROM&quot;, &quot;FLASH</span><span style='font-family:宋体; '>文件名</span><span lang=EN-US>&quot;[, &quot;U</span><span style='font-family:宋体;'>盘文件名</span><span lang=EN-US>&quot;]</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FLASH</span><span style='font-family: 宋体; '>文件拷贝到</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘</span><span lang=EN-US>, </span><span style='font-family: 宋体; '>只支持</span><span lang=EN-US>BIN</span><span style='font-family:宋体; '>和</span><span lang=EN-US>Z3P</span><span style='font-family: 宋体; '>文件。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FLASH</span><span style='font-family: 宋体; '>文件名规则：</span><span lang=EN-US>SD</span><span style='font-family:宋体; '>块号</span><span lang=EN-US>.BIN</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>如</span><span lang=EN-US> SD0.BIN&nbsp; </span><span style='font-family:宋体; '>表示</span><span lang=EN-US>FLASH</span><span style='font-family: 宋体; '>块号</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>&nbsp;&nbsp; SD1.BIN&nbsp; </span><span style='font-family: 宋体; '>表示</span><span lang=EN-US>FLASH</span><span style='font-family:宋体; '>块号</span><span lang=EN-US>1</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;COPY_TO&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;COPY_TO&quot;, &quot;U</span><span style='font-family:宋体;'>盘文件名</span><span lang=EN-US>&quot;[, &quot;FLASH</span><span style='font-family:宋体;'>文件名</span><span lang=EN-US>&quot;]</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>U</span><span style='font-family: 宋体; '>盘文件拷贝到</span><span lang=EN-US>FLASH, </span><span style='font-family:宋体; '>只支持</span><span lang=EN-US>BIN</span><span style='font-family: 宋体; '>和</span><span lang=EN-US>Z3P</span><span style='font-family:宋体; '>文件。</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;FLASH_COPY&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;FLASH_COPY&quot; &quot;src&quot;,&quot;des&quot;</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>支持文件夹的拷贝</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>可以带盘符</span><span lang=EN-US>A</span><span style='font-family:宋体; '>、</span><span lang=EN-US>C</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>C</span><span style='font-family: 宋体; '>盘，表示</span><span lang=EN-US>FLASH</span><span style='font-family:宋体; '>目录</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>A</span><span style='font-family: 宋体; '>盘，表示</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;MAKE_DIR&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;MAKE_DIR&quot; &quot;</span><span style='font-family:宋体;'>路径</span><span lang=EN-US>&quot;</span></p>
+</td> </tr> <tr> <td width=217 style='width:93.0pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:5.25pt; margin-bottom:0cm;margin-left:5.25pt;margin-bottom:.0001pt;text-align:center;'><span lang=EN-US>&quot;PATHD&quot;</span></p>
+</td> <td width=682 valign=top style='width:292.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.55pt 0cm 2.55pt'>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>FILE &quot;PATHD&quot; &quot;dir&quot;</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=EN-US>5</span><span style='font-family: 宋体; '>系</span><span lang=EN-US>, 7</span><span style='font-family:宋体; '>系</span><span lang=EN-US>, 230909</span><span style='font-family:宋体;'>增加</span><span lang=EN-US>; </span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>增加</span><span lang=EN-US>D</span><span style='font-family:宋体; '>盘符</span><span lang=EN-US>, </span><span style='font-family:宋体; '>可以手动调整映射路径</span><span lang=EN-US>; </span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span style='font-family:宋体;'>从而支持特殊路径的操作</span><span lang=EN-US>.</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>function</span><span style='font-family:宋体;color:black;'>：功能选择</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.14%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.84%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用，使用</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘功能时要求控制器带</span><span lang=EN-US>U</span><span style='font-family:宋体; '>盘接口</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.14%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.84%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black; '>例一</span><span lang=EN-US style='color:black;'>&nbsp; </span><span style='font-family:宋体;color:black;'>下载</span><span lang=EN-US style='color:black;'>zar</span><span style='font-family:宋体;color:black;'>升级程序</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>DIM&nbsp; result&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>定义变量</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>IF U_STATE=TRUE THEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'U</span><span style='font-family:宋体; color:black;'>盘插入判断</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US style='color:black; '>&nbsp; &nbsp;&nbsp;result = </span><b><span lang=EN-US style='color:black;'>FILE</span></b><span lang=EN-US style='color:black;'> &quot;find_first&quot;,&quot;.zar&quot;,10&nbsp; '</span><span style='font-family:宋体;color:black;'>扫描第一个</span><span lang=EN-US style='color:black;'>zar</span><span style='font-family:宋体;color:black;'>格式文件，文件名保存到</span><span lang=EN-US style='color:black;'>VR</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp; &nbsp;&nbsp;IF result=TRUE THEN&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体; color:black; '>扫描成功判断</span></p>
+<p class=MsoNormal style='text-indent:42.15pt; tab-stops:55.15pt;layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>FILE</span></b><span lang=EN-US style='color:black;'>&quot;load_zar&quot;,VRSTRING(10,20)&nbsp; '</span><span style='font-family:宋体;color:black;'>下载</span><span lang=EN-US style='color:black;'>VR</span><span style=' font-family:宋体;color:black;'>保存的文件名对应的</span><span lang=EN-US style='color:black;'>zar</span><span style='font-family:宋体;color:black;'>文件</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp; &nbsp;&nbsp;ENDIF</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>ENDIF</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black; '>例二</span><span lang=EN-US style='color:black;'>&nbsp; </span><span style='font-family:宋体;color:black;'>查找</span><span lang=EN-US style='color:black;'>zar</span><span style='font-family:宋体;color:black;'>升级程序</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><b><span lang=EN-US style='color:black;'>FILE</span></b><span lang=EN-US style='color:black;'> &quot;find_next&quot;,10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>查找下一个</span><span lang=EN-US style='color:black;'>zar</span><span style='font-family:宋体;color:black;'>文件存储结果到</span><span lang=EN-US style='color:black;'>vrstring(10)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black; '>例三</span><span lang=EN-US style='color:black;'>&nbsp; FLASH</span><span style='font-family:宋体;color:black;'>与</span><span lang=EN-US style='color:black;'>U</span><span style=' font-family:宋体;color:black;'>盘数据互相拷贝</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>DIM&nbsp; a,aa(8)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>a=10</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>FOR&nbsp; i=0 TO 7</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>aa(i)=i</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>NEXT </span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>WHILE 1</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>IF&nbsp; SCAN_EVENT(IN(0))&gt; 0 THEN</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>FLASH_WRITE 1,a aa </span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span lang=EN-US style='color:black;'>FILE</span></b><span lang=EN-US style='color:black;'>&quot;copy_from&quot;,&quot;sd1.bin&quot;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>将</span><span lang=EN-US style='color:black;'>flash</span><span style='font-family:宋体;color:black;'>块</span><span lang=EN-US style='color:black;'>1</span><span style=' font-family:宋体;color:black;'>的数据复制到</span><span lang=EN-US style='color:black;'>U</span><span style=' font-family:宋体;color:black;'>盘的</span><span lang=EN-US style='color:black;'>sd1</span><span style='font-family:宋体;color:black;'>文件</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINT &quot;flash</span><span style='font-family:宋体; color:black;'>块的数据复制到</span><span lang=EN-US style='color:black;'>U</span><span style=' font-family:宋体;color:black;'>盘</span><span lang=EN-US style='color:black;'>&quot;</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>ELSEIF&nbsp; SCAN_EVENT(IN(1))&gt; 0 THEN</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span lang=EN-US style='color:black;'>FILE</span></b><span lang=EN-US style='color:black;'>&quot;copy_to&quot;,&quot;sd1.bin&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  '</span><span style='font-family:宋体;color:black; '>读取</span><span lang=EN-US style='color:black;'>sd1</span><span style='font-family:宋体; color:black;'>的数据写入</span><span lang=EN-US style='color:black;'>flash</span><span style='font-family:宋体;color:black;'>块</span><span lang=EN-US style='color:black;'>1</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINT &quot;U</span><span style='font-family:宋体; color:black;'>盘数据写入</span><span lang=EN-US style='color:black;'>flash&quot;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FLASH_READ 1,a,aa</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRINT *aa</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>ENDIF</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>WEND</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black; '>例四</span><span lang=EN-US style='color:black;'>&nbsp; </span><span style='font-family:宋体;color:black;'>读取</span><span lang=EN-US style='color:black;'>/</span><span style=' font-family:宋体;color:black;'>删除</span><span lang=EN-US style='color:black;'>U</span><span style=' font-family:宋体;color:black;'>盘文件</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><b><span lang=EN-US style='color:black;'>FILE&nbsp; </span></b><span lang=EN-US style='color:black;'>&quot;LOAD_BYTE&quot;,&quot;00.txt&quot;,200,10,0&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>读取</span><span lang=EN-US style='color:black;'>U</span><span style=' font-family:宋体;color:black;'>盘中</span><span lang=EN-US style='color:black;'>00.txt</span><span style='font-family:宋体;color:black;'>文本文件的数据保存到</span><span lang=EN-US style='color:black;'>table(200)</span><span style='font-family:宋体;color:black;'>开始的</span><span lang=EN-US style='color:black;'>10</span><span style=' font-family:宋体;color:black;'>个地址中，偏移量为</span><span lang=EN-US style='color:black;'>0</span><span style=' font-family:宋体;color:black;'>，从第一个字符开始读取</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><b><span lang=EN-US style='color:black;'>FILE</span></b><span lang=EN-US style='color:black;'>&nbsp; &quot;DELETE&quot; , &quot;sd0.bin&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>删除</span><span lang=EN-US style='color:black;'>U</span><span style='font-family:宋体; color:black; '>盘上名称为</span><span lang=EN-US style='color:black;'>sd0.bin</span><span style='font-family:宋体; color:black; '>的文件</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>00.txt</span><span style='font-family:宋体;color:black;'>文件内容：</span><span lang=EN-US style='color:black;'>ZMOTION</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black; '>读取结果：第一个位置存储字符个数，后面的为依次存储字符数据。</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US><img border=0 width=361 height=462 src="doc.files/image568.jpg" ></span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black; '>例五</span><span style=' color:black;'> &nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>FILE &quot;FIND_FIRST&quot;, 1, 0, “C:\DIR1” &nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;color:black;'>搜索</span><span lang=EN-US style='color:black;'>U</span><span style=' font-family:宋体;color:black;'>盘的</span><span lang=EN-US style='color:black;'>DIR1</span><span style='font-family:宋体;color:black;'>目录</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="524.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="522.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

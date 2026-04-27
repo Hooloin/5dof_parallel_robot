@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DRIVE_STATUS -- 驱动器状态</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="601.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="599.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_DRIVE_STATUS"></a><a name="_Toc134698415"></a><a name="_Toc7000"></a><a name="_Toc29730"></a><a name="_Toc24779"></a><a name="_Toc19625"><span lang=EN-US>DRIVE_STATUS -- </span></a><span style='font-family:宋体;'>驱动器状态</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>轴状态</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>驱动器的当前状态，按位判断状态。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>必须设置正确的</span><span lang=EN-US style='color:red;'>ATYPE</span><span style='font-family:宋体;color:red;'>（</span><span lang=EN-US style='color:red;'>EtherCAT</span><span style='font-family:宋体;color:red;'>总线设置为</span><span lang=EN-US style='color:red;'>65/66/67</span><span style='font-family:宋体;color:red;'>，</span><span lang=EN-US style='color:red;'>RTEX</span><span style='font-family:宋体;color:red;'>总线设置为</span><span lang=EN-US style='color:red;'>50/51/52</span><span style='font-family:宋体;color:red;'>）以后才能读取。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>对于</span><span lang=EN-US>EtherCAT</span><span style='font-family:宋体;'>驱动器，对应数据字典</span><span lang=EN-US>6041</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>根据此</span><span lang=EN-US>bit</span><span style='font-family:宋体;'>可以确认</span><span lang=EN-US>PDS</span><span style='font-family:宋体;'>的状态，以下表示状态和对应的</span><span lang=EN-US>bit</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=870 height=523 src="doc.files/image586.jpg" ></span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>其他位意义请查看对应驱动器手册说明。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>对于</span><span lang=EN-US>Rtex</span><span style='font-family:宋体;'>驱动器</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Rtex</span><span style='font-family:宋体;'>驱动器的状态字位意义如下图，详细含义请查看松下</span><span lang=EN-US>Rtex</span><span style='font-family:宋体;'>手册第</span><span lang=EN-US>4-2-3</span><span style='font-family:宋体;'>章节。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=872 height=228 src="doc.files/image588.png" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>只读：</span><span lang=EN-US style='color:black;'>toq =</span><span lang=EN-US> DRIVE_STATUS (axis)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>axis</span><span style='font-family:宋体;'>：轴号</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>带</span><span lang=EN-US>EtherCAT</span><span style='font-family:宋体; '>接口或</span><span lang=EN-US>RTEX</span><span style='font-family:宋体; '>接口</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>SLOT_SCAN(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>IF NODE_COUNT(0)&gt;0 THEN</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>&nbsp;ATYPE(0)=65&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>总线位置控制</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>? <b>DRIVE_STATUS </b>(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>打印轴</span><span lang=EN-US>0</span><span style='font-family:宋体;'>设备的状态</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ENDIF</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="270.html#_ATYPE"><span lang=EN-US>ATYPE</span></a><span style='font-family:宋体;'>，</span><a href="588.html#_NODE_PROFILE_--_PDO预设置_1"><span lang=EN-US>DRIVE_PROFILE</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="601.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="599.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

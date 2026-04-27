@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CRC16 -- CRC检验计算</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="261.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="259.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_TURN_POSMAKE"></a><a name="_Toc134698041"></a><a name="_Toc19097"></a><a name="_Toc25002"></a><a name="_Toc24547"></a><a name="_Toc18133"><span lang=EN-US>CRC16 -- CRC</span></a><span style='font-family:宋体;'>检验计算</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>数学函数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>CRC16</span></b><b><span lang=EN-US> <span style='color:black'>CCITT</span></span></b><b><span style='font-family:宋体;color:black; '>计算。</span></b></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CRC16(arrayname, index, size[, initial] [, poly])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>arrayname</span><span style='font-family:宋体;color:black; '>：数据存储所在的数组，一个字节占一个位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>index</span><span style='font-family:宋体;color:black; '>：数据存储所在的数组起始索引</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>size</span><span style='font-family:宋体;color:black; '>：计算字节数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>initial</span><span style='font-family:宋体;color:black; '>：</span><span lang=EN-US style='color:black;'>CRC</span><span style='font-family:宋体;color:black; '>计算初始值，缺省</span><span lang=EN-US style='color:black;'>$FFFF</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>poly</span><span style='font-family:宋体;color:black; '>：多项式，暂时只支持</span><span lang=EN-US style='color:black;'>modbus</span><span style='font-family:宋体;color:black; '>的</span><span lang=EN-US style='color:black;'>$A001</span><span style='font-family:宋体;color:black; '>和</span><span lang=EN-US style='color:black;'>CCITT</span><span style='font-family:宋体;color:black; '>的</span><span lang=EN-US style='color:black;'>$1021</span><span style='font-family:宋体;color:black; '>，缺省</span><span lang=EN-US style='color:black;'>$A001</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(0, $FE, $48 , $06 , $00 , $6D , $00 , $00 , $00)&nbsp; &nbsp;'8</span><span style='font-family:宋体; color:black;'>个数据存储在</span><span lang=EN-US style='color:black; '>TABLE</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black; '>CRCVALUE = <b>CRC16</b>(TABLE, 0, 8)&nbsp; '</span><span style='font-family:宋体; color:black;'>计算</span><span lang=EN-US style='color:black; '>CRC</span><span style='font-family:宋体;color:black;'>，结果</span><span lang=EN-US style='color:black; '>$1A0D</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(8)= CRCVALUE\256&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>计算的</span><span lang=EN-US style='color:black;'>CRC</span><span style='font-family:宋体;color:black; '>加在数据的后面，大端模式</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(9)= CRCVALUE AND $FF</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="261.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="259.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

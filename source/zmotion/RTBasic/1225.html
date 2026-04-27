@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_TkAffinePoints -- 仿射变换</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1226.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1224.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc21642"><span lang=EN-US>ZV_TkAffinePoints -- </span></a><span style='font-family: 宋体;'>仿射变换</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>变换</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>对</span><span lang=EN-US>num</span><span style='font-family:宋体; '>个点执行仿射变换。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>仿射变换的变换范围较广，它包含了刚性变换、相似变换，因此刚性变换矩阵、相似变换矩阵、仿射变换矩阵都可以此指令对坐标点进行变换。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>此指令的变换矩阵为</span><span lang=EN-US>2</span><span style='font-family:宋体; '>行</span><span lang=EN-US>3</span><span style='font-family:宋体; '>列是由于</span><span lang=EN-US>3</span><span style='font-family:宋体; '>行</span><span lang=EN-US>3</span><span style='font-family:宋体; '>列的齐次变换矩阵的最后一行是固定的数据</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，</span><span lang=EN-US>1</span><span style='font-family:宋体; '>，二维坐标</span><span lang=EN-US>(x,y)</span><span style='font-family:宋体; '>转换成齐次坐标</span><span lang=EN-US>(x,y,1)</span><span style='font-family:宋体; '>只需在第三维上加</span><span lang=EN-US>1</span><span style='font-family:宋体; '>，因此对二维坐标点进行变换的公式如下：</span></p>
+<p class=MsoNormal align=center style='text-align:center;tab-stops:center 6.0cm'><span lang=EN-US style='color:black;'><img border=0 width=460 height=261 src="doc.files/image1219.png" alt="说明: 仿射变换" ></span></p>
+<p class=MsoNormal align=left style='text-align:left;tab-stops:center 6.0cm'><span style=' font-family:宋体;color:black'>变换矩阵的线性变换部分</span><span lang=EN-US style='color:black'>a1,a2,a3,a4</span><span style='font-family:宋体; color:black'>负责对坐标点</span><span lang=EN-US style='color:black'>(x,y)</span><span style='font-family:宋体; color:black'>进行线性变换如旋转、缩放、斜切等，坐标平移量</span><span lang=EN-US style='color:black'>tx,ty</span><span style='font-family:宋体; color:black'>负责对坐标点</span><span lang=EN-US style='color:black'>(x,y)</span><span style='font-family:宋体; color:black'>进行平移。</span></p>
+<p class=MsoNormal align=left style='text-align:left;tab-stops:center 6.0cm'><span style=' font-family:宋体;color:black'>变换方程如下：</span></p>
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;tab-stops:center 6.0cm'><span lang=EN-US style='color:black;position:relative; top:15.0pt;'><img border=0 width=252 height=84 src="doc.files/image1221.png" ></span></p>
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;tab-stops:center 6.0cm'><span lang=EN-US style='color:black'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_AffineTrans</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_TkAffinePoints(mat,num,tabIdSrc,tabIdDst)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mat</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，变换矩阵</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>num</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>坐标点数量</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabIdSrc</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，待变换的坐标点，从</span><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引处开始</span><span lang=EN-US>x</span><span style='font-family:宋体; '>、</span><span lang=EN-US>y</span><span style='font-family:宋体; '>依次存放</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabIdDst</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输出参数，</span><span lang=EN-US>TABLE</span><span style=' font-family:宋体;'>索引，变换后的坐标点，依次存放</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>y</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mat</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,1,0.2,0,0,1,0) '</span><span style='font-family:宋体;'>将数据写入</span><span lang=EN-US>TABLE</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGenData(mat,2,3,0) '</span><span style='font-family:宋体;'>生成变换矩阵</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(10,0,0,2,2,5,5)&nbsp;&nbsp;&nbsp; 'TABLE</span><span style='font-family:宋体;'>写入三个点的坐标</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_TkAffinePoints(mat,3,10,100) '</span><span style='font-family:宋体;'>对输入坐标点进行仿射变换</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>变换后的点坐标</span><span lang=EN-US>:&quot;,TABLE(100),TABLE(101),TABLE(102),TABLE(103),TABLE(104),TABLE(105)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1226.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1224.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

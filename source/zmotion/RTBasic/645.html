@@ -1,0 +1,196 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DRAWDTLIST -- 绘制图形</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="646.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="644.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc147915736"></a><a name=DRAWDTLIST></a><span lang=EN-US>DRAWDTLIST -- </span><span style='font-family:宋体;'>绘制图形</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.58%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>类型</span></b></p>
+</td> <td width="84%" valign=top style='width:84.42%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>显示指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.58%;border-top:none;border-left: solid black 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>描述</span></b></p>
+</td> <td width="84%" valign=top style='width:84.42%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>绘图指令，用于加快</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>数据的绘制。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>此指令只能在自定义元件的绘图函数内使用，请查看</span><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_自定义元件调用函数_1"><span lang=EN-US style='font-family:宋体; '><span lang=EN-US>自定义元件调用函数</span></span></a></span><span style='font-family:宋体;'>参考例程。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.58%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>语法</span></b></p>
+</td> <td width="84%" valign=top style='width:84.42%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWDTLIST (dtstart, imax, ispace, fxstart, fystart, fxlevel, fylevel, imode , [drawtype], [TYPE1</span><span style='font-family:宋体;'>，</span><span lang=EN-US>TYPE2,&nbsp; TYPE3, TYPE4])</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>dtstart</span><span style='font-family:宋体;'>：</span><span lang=EN-US>table</span><span style='font-family:宋体;'>起始位置，指向第一行的行类型</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span style='font-family:宋体;'>行类型：由用户自行定义，即可设置</span><span lang=EN-US>0</span><span style='font-family:宋体;'>为点或直线，</span><span lang=EN-US>1</span><span style='font-family:宋体;'>也可为点或直线。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>imax</span><span style='font-family:宋体; '>：行数（设置的</span><span lang=EN-US>table</span><span style='font-family:宋体;'>的组数）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span style='font-family:宋体;color:red'>行数不一定和设置的</span><span lang=EN-US style='color:red'>table</span><span style='font-family:宋体;color:red'>组数相等，可根据实际情况填写。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>ispace</span><span style='font-family:宋体;'>：行间隔（即每个</span><span lang=EN-US>table</span><span style='font-family:宋体;'>起始位置之差，若</span><span lang=EN-US>imode</span><span style='font-family:宋体;'>参数为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>时，则<span style='color:red'>行间隔一般不能</span></span><span lang=EN-US style='color:red'>&lt;2</span><span style='font-family:宋体; color:red'>；若</span><span lang=EN-US style='color:red'>imode</span><span style='font-family:宋体;color:red'>偏移了</span><span lang=EN-US style='color:red'>N</span><span style='font-family:宋体;color:red'>个数据，则最小行间隔需相应增加</span><span lang=EN-US style='color:red'>N</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>fxstart</span><span style='font-family:宋体;'>：左上角</span><span lang=EN-US>X</span><span style='font-family:宋体; '>坐标的偏移量，相对于</span><span lang=EN-US>tbale</span><span style='font-family:宋体;'>中设置的</span><span lang=EN-US>X</span><span style='font-family:宋体;'>坐标进行偏移（</span><span lang=EN-US>&gt;0</span><span style='font-family:宋体;'>—向左偏移，</span><span lang=EN-US>&lt;0</span><span style='font-family:宋体;'>—向右偏移，</span><span lang=EN-US>=0</span><span style='font-family:宋体;'>不偏移）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>fystart</span><span style='font-family:宋体;'>：左上角</span><span lang=EN-US>Y</span><span style='font-family:宋体; '>坐标的偏移量，相对于</span><span lang=EN-US>tbale</span><span style='font-family:宋体;'>中设置的</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>坐标进行偏移（</span><span lang=EN-US>&gt;0</span><span style='font-family:宋体;'>—向上偏移，</span><span lang=EN-US>&lt;0</span><span style='font-family:宋体;'>—向下偏移，</span><span lang=EN-US>=0</span><span style='font-family:宋体;'>不偏移）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>fxlevel </span><span style='font-family:宋体;'>：</span><span lang=EN-US>table</span><span style='font-family:宋体;'>中</span><span lang=EN-US>X</span><span style='font-family:宋体; '>坐标的数值比例</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>fylevel</span><span style='font-family:宋体;'>：</span><span lang=EN-US>table</span><span style='font-family:宋体;'>中</span><span lang=EN-US>Y</span><span style='font-family:宋体; '>坐标的数值比例</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>imode</span><span style='font-family:宋体;'>：存储格式</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=729 style='width:312.25pt;margin-left:23.25pt;border-collapse:collapse; border:none; '> <tr> <td width=113 valign=top style='width:48.6pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>值</span></p>
+</td> <td width=615 valign=top style='width:263.65pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>描述</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>10</span></p>
+</td> <td width=615 valign=top style='width:263.65pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>DSB</span><span style='font-family:宋体;'>读取存储的格式，此时</span><span lang=EN-US>X</span><span style='font-family:宋体; '>的位置与行类型偏移</span><span lang=EN-US>3</span><span style='font-family:宋体;'>个数据</span></p>
+</td> </tr> <tr style='height:24.15pt'> <td width=113 valign=top style='width:48.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:24.15pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>1-9</span></p>
+</td> <td width=615 valign=top style='width:263.65pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:24.15pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>此时代表</span><span lang=EN-US>X</span><span style='font-family:宋体;'>在</span><span lang=EN-US>table</span><span style='font-family:宋体;'>中的位置与行类型偏移了</span><span lang=EN-US>N</span><span style='font-family:宋体;'>个数据，</span><span lang=EN-US>XY</span><span style='font-family:宋体;'>的数据紧挨着</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>其它值</span></p>
+</td> <td width=615 valign=top style='width:263.65pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>无效</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>drawtype</span><span style='font-family:宋体;'>：显示方式</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=729 style='width:312.25pt;margin-left:23.25pt;border-collapse:collapse; border:none; '> <tr> <td width=294 colspan=2 valign=top style='width:125.85pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>值</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>描述</span></p>
+</td> </tr> <tr> <td width=294 colspan=2 valign=top style='width:125.85pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>0</span><span style='font-family:宋体; '>（缺省）</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>直接绘制一个点</span></p>
+</td> </tr> <tr> <td width=142 rowspan=13 valign=top style='width:61.05pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>N*256+</span><span style='font-family:宋体;'>子显示模式</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>N=</span><span style='font-family:宋体;'>半径或线宽</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>（</span><span lang=EN-US>N</span><span style='font-family: 宋体;'>的限制范围：</span><span style='font-size:9.0pt;font-family:宋体; '>）</span></p>
+</td> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 1</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>单点实心圆弧</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 2</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>单点空心圆弧</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 3</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>单点实心正方形</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 4</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>单点虚正方形</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 5</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>单点十字架</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 6</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>单点叉</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 9</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>单点显示，和上一点之间画一个虚线，</span><span lang=EN-US>N</span><span style='font-family:宋体;'>只能为</span><span lang=EN-US>1</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 10</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>前后两点之间画直线，必须都是同一种类型</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 11</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>设置圆弧起始点、中间点和结束点，自动计算圆弧并显示</span><span lang=EN-US>(</span><span style='font-family:宋体;color:red'>该方式下不能通过</span><span lang=EN-US style='color:red'>N</span><span style='font-family:宋体;color:red'>调节半径大小</span><span lang=EN-US>)</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 12</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>设置圆弧结束点、中间点和起始点，自动计算圆弧并显示</span><span lang=EN-US>(</span><span style='font-family:宋体;color:red'>该方式下不能通过</span><span lang=EN-US style='color:red'>N</span><span style='font-family:宋体;color:red'>调节半径大小</span><span lang=EN-US>)</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 13</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>整圆，和前面</span><span lang=EN-US>2</span><span style='font-family:宋体;'>个点计算圆并显示</span><span lang=EN-US>(</span><span style='font-family:宋体;color:red'>该方式下不能通过</span><span lang=EN-US style='color:red'>N</span><span style='font-family:宋体;color:red'>调节半径大小</span><span lang=EN-US>)</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 19</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>依次为孤立点，直线终点，圆弧结束点，</span> <span style='font-family:宋体; '>整圆终点，示教例程快速显示</span></p>
+</td> </tr> <tr> <td width=151 valign=top style='width:64.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>N*256+ 90</span></p>
+</td> <td width=435 valign=top style='width:186.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>预留数控准系统，标准定义好的类型</span><span lang=EN-US>G00 G01 G02 G03</span><span style='font-family:宋体;'>等，行类型根据数控准系统设计来</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt; text-indent:21.0pt;'><span lang=EN-US>TYPE1~TYPE4</span><span style='font-family:宋体;'>：需要绘制的行类型，一次最多可填</span><span lang=EN-US>4</span><span style='font-family:宋体;'>种行类型做同样的绘制</span><span lang=EN-US>(</span><span style='font-family:宋体;'>即该参数在一条</span><span lang=EN-US>DRAWDTLIST</span><span style='font-family:宋体;'>指令最多填</span><span lang=EN-US>4</span><span style='font-family:宋体;'>个行类型</span><span lang=EN-US>)</span><span style='font-family:宋体;'>，<span style='color:red'>必须和</span></span><span lang=EN-US style='color:red'>table</span><span style='font-family:宋体; color:red'>中设置的行类型对应才能绘制图形</span><span style='font-family:宋体;'>。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.58%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>适用控制器</span></b></p>
+</td> <td width="84%" valign=top style='width:84.42%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>支持</span><span lang=EN-US>RTHmi</span><span style='font-family:宋体;'>（建议用最新固件）</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.58%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>例子</span></b></p>
+</td> <td width="84%" valign=top style='width:84.42%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>行类型数据存储在</span><span lang=EN-US>table</span><span style='font-family:宋体;'>中第一个位置，在该例子中，</span><span lang=EN-US>1</span><span style='font-family:宋体; '>表示单点，</span><span lang=EN-US>2</span><span style='font-family:宋体;'>表示直线，</span><span lang=EN-US>X</span><span style='font-family:宋体;'>坐标存储在第二个位置，</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>数据存储在第三个位置，</span><span lang=EN-US>XY</span><span style='font-family:宋体;'>坐标不填默认为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>，此处的</span><span lang=EN-US>XY</span><span style='font-family:宋体;'>坐标是相对于自定义元件而定，自定义元件坐标以左上角为原点</span><span lang=EN-US>(0,0)</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US><img border=0 width=706 height=416 src="doc.files/image623.jpg" ></span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>imode(1-9)</span><span style='font-family:宋体;'>存储格式参数的使用方法：</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US><img border=0 width=764 height=342 src="doc.files/image625.jpg" ></span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例一：绘制一个点</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(0, 1, 100,100)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWDTLIST (0, 1, 10, 0, 0, 1, 1, 1, 0, 1)&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>绘制点（点的位置在矩形框中，图中矩形并非指令绘制，仅作提示）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US><img border=0 width=372 height=370 src="doc.files/image627.jpg" ></span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例二：绘制一段直线</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(10,2,100,200)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(20,2 ,200,200)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWDTLIST(10,2,10,0,0,1,1,1,256+10,2)&nbsp; </span><span style='font-family:宋体; '>‘绘制直线（实线）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US><img border=0 width=353 height=351 src="doc.files/image629.jpg" ></span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例三：</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(0,2,100,100)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(10,2,100,200)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(20,2,200,200)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(30,2,200,100)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWDTLIST(0,4,10,0,0,1,1,1,16*256+4,2)&nbsp; </span><span style='font-family:宋体; '>‘绘制空心矩形</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWDTLIST(0,4,10,40,0,1,1,1,16*256+3,2)&nbsp; </span><span style='font-family:宋体; '>‘绘制实心矩形</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US><img border=0 width=393 height=385 src="doc.files/image631.png" ></span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例四：</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(0,1,100,100)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(3,1,100,150)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(6,1,200,150)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(9,1,200,100)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(12,1,100,200)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(15,1,200,200)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWDTLIST(0,6,3,0,0,1.5,1,1,10*256+6,1)&nbsp;&nbsp; </span><span style='font-family: 宋体;'>‘绘制</span><span lang=EN-US>6</span><span style='font-family:宋体; '>个叉（</span><span lang=EN-US>X</span><span style='font-family:宋体;'>坐标扩大</span><span lang=EN-US>1.5</span><span style='font-family:宋体;'>倍）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWDTLIST(9,3,3,80,0,1,1.5,1,10*256+5,1)&nbsp;&nbsp; '</span><span style='font-family: 宋体;'>绘制</span><span lang=EN-US>3</span><span style='font-family:宋体; '>个十字架（</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>坐标扩大</span><span lang=EN-US>1.5</span><span style='font-family:宋体;'>倍，并且</span><span lang=EN-US>X</span><span style='font-family:宋体;'>坐标往左偏移</span><span lang=EN-US>80</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US><img border=0 width=385 height=388 src="doc.files/image633.png" ></span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例五：</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(0,1,100,100)&nbsp; </span><span style='font-family:宋体; '>‘圆弧的起点</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(10,1,200,150)&nbsp; </span><span style='font-family:宋体; '>‘圆弧的中间点</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(20,1,100,150)&nbsp; </span><span style='font-family:宋体; '>‘圆弧的结束点</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWDTLIST(0,3,10,0,0,1,1,1,10*256+11,1)&nbsp; </span><span style='font-family:宋体; '>‘绘制圆弧（三点画弧的方式）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US><img border=0 width=352 height=355 src="doc.files/image635.png" ></span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例六：画圆弧</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(0,1,200,200)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(10,1,150,150)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>TABLE(20,1,100,200)</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWDTLIST(0,4,10,0,0,1,1,1,16*256+12,1)&nbsp; </span><span style='font-family:宋体; '>‘画半圆弧</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US><img border=0 width=372 height=374 src="doc.files/image637.png" ></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.58%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>相关指令</span></b></p>
+</td> <td width="84%" valign=top style='width:84.42%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_DRAWLINE_--_绘制线段"><span style='color:purple'>DRAWLINE</span></a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US style='font-family:等线; '>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="646.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="644.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

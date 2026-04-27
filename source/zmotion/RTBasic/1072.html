@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_McSetModelClutter -- 设置模板杂波区域及相应参数</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1073.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1071.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_ZV_McSetModelClutter_--_设置模板杂波区域及相应参数"></a><a name="_Toc4663"><span lang=EN-US>ZV_McSetModelClutter -- </span></a><span style='font-family:宋体;'>设置模板杂波区域及相应参数</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>匹配</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>设置杂波区域和参数，区域和模板是绑定的，参数设置后杂波功能将自动开启。杂波功能开启后可以检测杂波区域内的边缘梯度，统计梯度幅值超过杂波阈值的部分并量化为分数，杂波区域内边缘梯度越丰富，分数越高。杂波功能计算所有预选目标对应的杂波分数，剔除分数超过设定值的目标，功能可用于匹配模型附近特定位置缺少结构的目标。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>注意，杂波分数通常受到光照变化的影响很大</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>ZV_McSetModelClutter(model,cluRe,cluScore,cluMode,cluBorderType,param1,param2)</span></p>
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US style='font-family: 宋体;color:black'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>model</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，形状模板或快速模板</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cluRe</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，杂波检测区域，注意应避免过于靠近模板轮廓，区域坐标基于模板图像左上角，即模板图像上生成的区域可以直接使用，坐标后续的适配内部处理</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cluScore</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>最大杂波分数，范围</span><span lang=EN-US>[0,100], </span><span style='font-family:宋体;'>匹配目标杂波区域中含有杂波的最大分数，即杂波分数大于此分数的目标将会被剔除</span></p>
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.1pt; '><b><span lang=EN-US>cluMode</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>杂波模式，计算杂波的方式，</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>杂波区域内灰度值满足条件的被纳入杂波分数统计，</span><span lang=EN-US>1-</span><span style='font-family:宋体;'>杂波区域内边缘对比度满足条件的被纳入杂波分数统计</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cluBorderType</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>杂波区域边界类型，范围</span><span lang=EN-US>[0,1]</span><span style='font-family:宋体;'>，计算边界外杂波分数的方式。</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>边界区域当做平均方式处理，即杂波区域如果一部分超出了匹配区域，超出的那部分也被分数进行平均填充，如果杂波区域完全超出匹配区域，那么杂波分数被设置为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>；</span><span lang=EN-US>1-</span><span style='font-family:宋体;'>边界区域当做空区域方式处理，即杂波区域如果一部分超出了匹配区域，超出的那部分被当做空区域、无效区域，如果杂波区域完全超出匹配区域，那么杂波分数被设置为</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>param1</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>参数值根据</span><span lang=EN-US>cluMode</span><span style='font-family:宋体;'>不同而含义不同，</span><span lang=EN-US>cluMode</span><span style='font-family:宋体;'>为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>时，</span><span lang=EN-US>param1</span><span style='font-family:宋体;'>作为图像二值分割的低阈值，范围</span><span lang=EN-US>[0,255]</span><span style='font-family:宋体;'>；</span><span lang=EN-US>cluMode</span><span style='font-family:宋体;'>为</span><span lang=EN-US>1</span><span style='font-family:宋体;'>时，</span><span lang=EN-US>param1</span><span style='font-family:宋体;'>作为边缘对比度阈值，杂波区域中边缘轮廓对比度大于此阈值的边缘将被纳入杂波分数的统计，范围</span><span lang=EN-US>[0,255]</span><span style='font-family:宋体;'>，为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>时，使用创建模板的对比度</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>param2</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>参数值根据</span><span lang=EN-US>cluMode</span><span style='font-family:宋体;'>不同而含义不同，</span><span lang=EN-US>cluMode</span><span style='font-family:宋体;'>为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>时，</span><span lang=EN-US>param2</span><span style='font-family:宋体;'>作为图像二值分割的高阈值，取值大于等于</span><span lang=EN-US>param1, </span><span style='font-family:宋体;'>范围</span><span lang=EN-US>[0,255]</span><span style='font-family:宋体;'>；</span><span lang=EN-US>cluMode</span><span style='font-family:宋体;'>为</span><span lang=EN-US>1</span><span style='font-family:宋体;'>时，</span><span lang=EN-US>param2</span><span style='font-family:宋体;'>无效</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>&nbsp;</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体;color:black'>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><a title="Not Found Page:#_ZV_McGetModelClutter -- 获取模板杂波区域及相应参数"><span lang=EN-US style='color:#9999CC'>ZV_McGetModelClutter</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1073.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1071.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

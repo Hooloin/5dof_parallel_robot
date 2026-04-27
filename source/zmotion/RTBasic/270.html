@@ -1,0 +1,272 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ATYPE -- 轴类型</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="271.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="269.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc16191"></a><a name="_ATYPE"></a><a name="_ATYPE_--_轴类型"></a><a name="_Toc134698054"></a><a name="_Toc17859"></a><a name="_Toc16407"></a><a name="_Toc15653"></a><a name="_Toc24613"><span lang=EN-US>ATYPE -- </span></a><span style='font-family:宋体;'>轴类型</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>轴功能类型设置，只能设置为轴具备的特性</span></b><span style='font-family:宋体;color:black;'>（轴特性可查询硬件手册或使用</span><span lang=EN-US style='color:black;'>RTSys</span><span style='font-family:宋体;color:black;'>软件连接上控制器以后查看控制器状态）。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>最好是在程序初始化的时候就设置好</span><span lang=EN-US style='color:black;'>ATYPE</span><span style='font-family:宋体;color:black;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>ZCAN</span><span style='font-family:宋体;color:black;'>扩展轴要先设置</span><span lang=EN-US>AXIS_ADDRESS</span><span style='font-family:宋体;'>，并在设置后延迟</span><span lang=EN-US>2</span><span style='font-family:宋体;'>个</span><span lang=EN-US>tick</span><span style='font-family:宋体;'>再调用运动指令，<span style='color:red'>受总线带宽限制，</span></span><span lang=EN-US style='color:red;'>ZCAN</span><span style='font-family:宋体;color:red;'>扩展轴不要设置超过</span><span lang=EN-US style='color:red;'>2</span><span style='font-family:宋体;color:red;'>个。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>对部分产品型号带有独立的编码器，可以使用相应虚拟轴来做编码器轴使用，例如</span><span lang=EN-US style='color:black;'>ZMC206</span><span style='font-family:宋体;color:black;'>的电机轴为</span><span lang=EN-US style='color:black;'>0-5</span><span style='font-family:宋体;color:black;'>轴，编码器可以通过轴</span><span lang=EN-US style='color:black;'>6-11</span><span style='font-family:宋体;color:black;'>来控制，详细可通过</span><span lang=EN-US style='color:black;'>RTSys</span><span style='font-family:宋体;color:black;'>软件连接上控制器以后查看控制器状态。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>可读：</span><span lang=EN-US style='color:black;'>VAR1 = </span><span lang=EN-US>ATYPE&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>或</span><span lang=EN-US> VR1=ATYPE(</span><span style='font-family:宋体;'>轴号</span><span lang=EN-US>)</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>可写：</span><span lang=EN-US>ATYPE<span style='color:black'>= expression&nbsp; </span></span><span style='font-family:宋体;color:black;'>或</span> <span lang=EN-US>ATYPE(</span><span style='font-family:宋体;'>轴号</span><span lang=EN-US>)<span style='color:black'>= expression </span></span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=894 style='width:383.15pt;border-collapse:collapse;border:none; '> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black;'>ATYPE</span><span style='font-family:宋体;color:black;'>类型</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span style='font-family:宋体;color:black;'>描述</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black;'>0</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>虚拟轴</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black;'>1</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>脉冲方向方式的步进或伺服</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black;'>2</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>模拟信号控制方式的伺服</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>3</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>正交编码器</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>4</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>脉冲方向输出</span><span lang=EN-US>+</span><span style='font-family:宋体;'>正交编码器输入</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>5</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>脉冲方向输出</span><span lang=EN-US>+</span><span style='font-family:宋体;'>脉冲方向编码器输入</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>6</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>脉冲方向方式的编码器</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>7</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>脉冲方向方式步进或伺服</span><span lang=EN-US style='color:black;'>+EZ</span><span style='font-family:宋体;color:black;'>信号输入</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>8</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ZCAN</span><span style='font-family:宋体;color:black;'>扩展脉冲方向方式步进或伺服</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>9</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ZCAN</span><span style='font-family:宋体;color:black;'>扩展正交编码器</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>10</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ZCAN</span><span style='font-family:宋体;color:black;'>扩展脉冲方向方式的编码器</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>20</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>振镜类型，带振镜状态反馈</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>振镜连接不上</span><span lang=FR>AXISSTATUS</span><span style='font-family:宋体;'>的</span><span lang=FR>bit2</span><span style='font-family:宋体;'>会置位，</span><span lang=FR>ENCODER</span><span style='font-family:宋体;'>返回原始的发送位置，脉冲单位</span></p>
+<p class=MsoNormal><span lang=FR>ZMC408SCAN</span><span style='font-family:宋体;'>支持</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>21</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>振镜轴类型，需要控制器支持</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>缺省系统周期</span><span lang=EN-US style='color:black;'>250us</span><span style='font-family:宋体;color:black;'>，振镜刷新周期</span><span lang=EN-US style='color:black;'>50us</span><span style='font-family:宋体;color:black;'>，与固件有关</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>可以使用普通轴的所有运动控制指令，支持振镜轴与其它轴类型混合插补</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>22</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>振镜</span><span style='font-family:宋体;'>轴</span><span style='font-family:宋体;'>类型，带振镜位置反馈</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>振镜连接不上</span><span lang=FR>AXISSTATUS</span><span style='font-family:宋体;'>的</span><span lang=FR>bit2</span><span style='font-family:宋体;'>会置位，振镜报警</span><span lang=FR>AXISSTATUS</span><span style='font-family:宋体;'>的</span><span lang=FR>bit3</span><span style='font-family:宋体;'>会置位</span></p>
+<p class=MsoNormal><span lang=FR>MPOS</span><span style='font-family:宋体;'>返回反馈位置，做了反矫正处理，</span><span lang=FR>ENCODER</span><span style='font-family:宋体;'>返回原始的反馈位置脉冲单位</span></p>
+<p class=MsoNormal><span lang=FR>ZMC408SCAN</span><span style='font-family:宋体;'>支持</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>24</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>远程编码器轴类型</span></p>
+<p class=MsoNormal><span lang=EN-US>ZHD500X</span><span style='font-family:宋体;'>上手轮使用，部分控制器支持</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>25</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>定义一个编码器轴</span><span lang=EN-US>, </span><span style='font-family:宋体;'>坐标位置从</span><span lang=EN-US>MODBUS </span><span style='font-family:宋体;'>或</span><span lang=EN-US> NODE_PDOBUFF </span><span style='font-family:宋体;'>读取</span></p>
+<p class=MsoNormal><span lang=EN-US>Version_build 230810 </span><span style='font-family:宋体;'>后版本支持</span></p>
+<p class=MsoNormal><b><span lang=EN-US>BASE(axisnum)</span></b></p>
+<p class=MsoNormal><b><span lang=EN-US>AXIS_ADDRESS = (slot &lt;&lt;16) + nodenum</span></b></p>
+<p class=MsoNormal><b><span lang=EN-US>ENCODER_ID=(index&lt;&lt;16)+(subindex&lt;&lt;8)+ bites</span></b></p>
+<p class=MsoNormal><b><span lang=EN-US>ATYPE=25</span></b></p>
+<p class=MsoNormal style='text-indent:21.1pt; '><b><span lang=EN-US>Slot:</span></b></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>-1</span><span style='font-family:宋体;'>：从</span><span lang=EN-US>MODBUS_LONG(nodenum) </span><span style='font-family:宋体;'>里面取编码器位置</span></p>
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;'><span lang=EN-US>0-</span><span lang=EN-US>n</span><span style='font-family:宋体;'>：从</span><span lang=EN-US>NODE_PDOBUFF(slot, nodenum, index, subindex ,type)</span><span style='font-family:宋体;'>取编码器位置</span></p>
+<p class=MsoNormal style='text-indent:21.1pt; '><b><span lang=EN-US>bites</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>数据类型的位数，比如数据</span><span lang=EN-US>32</span><span style='font-family:宋体;'>位，则写</span><span lang=EN-US>32</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ENCODER_ID</span><span style='font-family:宋体;'>：存储数据字典的编号</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>26</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>自定义编码器</span><span lang=EN-US>: </span><span style='font-family:宋体;'>使用</span><span lang=EN-US>C</span><span style='font-family:宋体;'>语言来更新编码器的位置</span><span lang=EN-US>. </span><span style='font-family:宋体;'>支持闭环</span></p>
+<p class=MsoNormal><span lang=EN-US>version_build 240702</span><span style='font-family:宋体;'>增加</span><span lang=EN-US>.</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>48</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>SSI</span><span style='font-family:宋体;'>绝对式编码器</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>49</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>BISS</span><span style='font-family:宋体;'>绝对式编码器</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>50</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>RTEX</span><span style='font-family:宋体;color:black;'>周期位置模式，需</span><span lang=EN-US style='color:black;'>Rtex</span><span style='font-family:宋体;color:black;'>控制器</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>51</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>RTEX</span><span style='font-family:宋体;color:black;'>周期速度模式，需</span><span lang=EN-US style='color:black;'>Rtex</span><span style='font-family:宋体;color:black;'>控制器</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>52</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>RTEX</span><span style='font-family:宋体;color:black;'>周期力矩模式，需</span><span lang=EN-US style='color:black;'>Rtex</span><span style='font-family:宋体;color:black;'>控制器</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>请先关闭驱动器</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>自由度控制模式，并设置设置速度限制</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>65</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>EtherCAT</span><span style='font-family:宋体;color:black;'>周期位置模式，需支持</span><span lang=EN-US style='color:black;'>EtherCAT</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>66</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>EtherCAT</span><span style='font-family:宋体;color:black;'>周期速度模式，需支持</span><span lang=EN-US style='color:black;'>EtherCAT</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>Profile</span><span style='font-family:宋体;color:black;'>要设置为</span><span lang=EN-US style='color:black;'>20</span><span style='font-family:宋体;color:black;'>或以上</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>67</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>EtherCAT</span><span style='font-family:宋体;color:black;'>周期力矩模式，需支持</span><span lang=EN-US style='color:black;'>EtherCAT</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>PROFILE</span><span style='font-family:宋体;color:black;'>要设置为</span><span lang=EN-US style='color:black;'>30</span><span style='font-family:宋体;color:black;'>或以上</span></p>
+</td>  </tr> <tr> <td width=162 valign=top style='width:69.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>70</span></p>
+</td>  <td width=732 valign=top style='width:313.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>EtherCAT</span><span style='font-family:宋体;color:black;'>自定义操作，只读取编码器，需支持</span><span lang=EN-US style='color:black;'>EtherCAT</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:65.6pt;'><span style='font-family:宋体;'>电机模式</span><span lang=EN-US>INVERT_STEP</span><span style='font-family:宋体;'>指令设置，默认脉冲方向</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>例一</span> <span style='font-family:宋体;color:black;'>脉冲类型</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>BASE(0,1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ATYPE </span></b><span lang=EN-US style='color:black;'>= 1,1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black;'>0,1</span><span style='font-family:宋体;color:black;'>设为脉冲控制类型</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>UNITS=100,100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>脉冲当量设为</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>SPEED=100,100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>速度</span><span lang=EN-US style='color:black;'>100 units/s</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>ACCEL=1000 ,1000&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>加速度</span><span lang=EN-US style='color:black;'>1000 units/s/s</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>减速度</span><span lang=EN-US style='color:black;'>1000 units/s/s</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>MOVE(100,100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>直线插补</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>例二</span><span lang=EN-US style='color:black;'> EtherCAT</span><span style='font-family:宋体;color:black;'>总线控制</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SLOT_SCAN(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>总线扫描</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>AXIS_ADDRESS(0)=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>第一个驱动器映射到轴</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ATYPE(0)=65</span></b><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>轴类型</span><span lang=EN-US style='color:black;'>65</span><span style='font-family:宋体; color:black; '>，位置控制</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SLOT_START(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>开启总线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>AXIS_ENABLE=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>单轴使能</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WDOG=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>所有轴使能</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>脉冲当量设为</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>速度</span><span lang=EN-US style='color:black;'>100 units/s</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>加速度</span><span lang=EN-US style='color:black;'>1000 units/s/s</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>减速度</span><span lang=EN-US style='color:black;'>1000 units/s/s</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(5000)&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm; '><span lang=EN-US style='color:black; '>例三 </span><span lang=EN-US style=' color:black;'>Rtex</span><span style='font-family:宋体; color:black; '>力矩模式</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SLOT_SCAN(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>总线扫描</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>AXIS_ADDRESS(0)=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>第一个驱动器映射到轴</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ATYPE(0)=52</span></b><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>轴类型</span><span lang=EN-US style='color:black;'>52</span><span style='font-family:宋体; color:black; '>，</span><span lang=EN-US style='color:black;'>Rtex</span><span style='font-family:宋体; color:black; '>力矩控制</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DRIVE_WRITE(6*256+47,0)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>关闭</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体; color:black; '>自由度控制</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DRIVE_WRITE(3*256+17,0)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>选择参数</span><span lang=EN-US style='color:black;'>3.21</span><span style='font-family:宋体; color:black; '>作为速度限制</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DRIVE_WRITE(3*256+21,2000)&nbsp; '</span><span style='font-family:宋体; color:black; '>最大速度限制为</span><span lang=EN-US style='color:black;'>2000r/min</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SLOT_START(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>开启总线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>AXIS_ENABLE=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>单轴使能</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WDOG=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体; color:black; '>所有轴使能</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DAC=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>此时</span><span lang=EN-US style='color:black;'>DAC</span><span style='font-family:宋体; color:black; '>发送值控制，具体查看</span><span lang=EN-US style='color:black;'>DAC</span><span style='font-family:宋体; color:black; '>指令</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>例四</span> <span style=' font-family:宋体;color:black;'>振镜轴</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(4,5)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNTIS=1,1</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ATYPE=21,21</span></b><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>设置为振镜轴</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体; color:black; '>例五</span> <span style=' font-family:宋体;color:black;'>远程编码器轴</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>BASE(axisnum)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>AXIS_ADDRESS = lcd</span><span style='font-family:宋体; color:black; '>编号</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>ATYPE=24</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体; color:black; '>例六：</span><span style='font-family:宋体;'>定义一个编码器轴</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>AXIS_ADDRESS = (0&lt;&lt;16) + 0</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>ENCODER_ID= $60640020</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>ATYPE=25</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体; color:black; '>例七：自定义编码器</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体; color:black; '>增加的</span><span lang=EN-US style='color:black;'>C</span><span style='font-family:宋体; color:black; '>函数接口</span><span lang=EN-US style='color:black;'>: </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>// </span><span style='font-family:宋体; color:black; '>读取</span><span lang=EN-US style='color:black;'>DAC_OUT, </span><span style='font-family:宋体; color:black; '>实际的轴</span><span lang=EN-US style='color:black;'>DAC</span><span style='font-family:宋体; color:black; '>输出值</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>double motionrt_getaxisdacout(uint32 iaxis);</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>// </span><span style='font-family:宋体; color:black; '>虚拟自定义编码器更新</span><span lang=EN-US style='color:black;'>encoder</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>uint32 motionrt_updatecoder(uint32 iaxis, int32 icoder);</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>// </span><span style='font-family:宋体; color:black; '>虚拟自定义编码器更新</span><span lang=EN-US style='color:black;'>encoderdot, float -1 </span><span style='font-family:宋体; color:black; '>到</span><span lang=EN-US style='color:black;'> 1 </span><span style='font-family:宋体; color:black; '>之间</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>// </span><span style='font-family:宋体; color:black; '>一般不用调用</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>uint32 motionrt_updatecoderdot(uint32 iaxis, float fdot);</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>ENCODER_SERVO= 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘</span><span style='font-family:宋体; color:black; '>配置闭环</span><span lang=EN-US style='color:black;'>,</span><span style='font-family:宋体; color:black; '>不使用</span><span lang=EN-US style='color:black;'>AOUT</span><span style='font-family:宋体; color:black; '>输出</span><span lang=EN-US style='color:black;'>,motionrt_getaxisdacout</span><span style='font-family:宋体; color:black; '>读取输出</span><span lang=EN-US style='color:black;'>.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>ATYPE=26</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>‘</span><span style='font-family:宋体; color:black; '>闭环处理参见</span><span lang=EN-US style='color:black;'>:&lt;&lt;C</span><span style='font-family:宋体; color:black; '>语言支持</span><span lang=EN-US style='color:black;'>&gt;&gt; </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>datum(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>FE_LIMIT = 10000</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>FE_RANGE =10000</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>axis_enable=1</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>servo=1</span></p>
+
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="271.html#_AXIS_ADDRESS_--_轴地址设置_1"><span lang=EN-US>AXIS_ADDRESS</span></a><span style='font-family:宋体;'>，</span><a href="366.html#_INVERT_STEP"><span lang=EN-US>INVERT_STEP</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="271.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="269.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

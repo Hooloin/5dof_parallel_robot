@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ContSegment -- 轮廓分割</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1158.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1156.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc21711"><span lang=EN-US>ZV_ContSegment -- </span></a><span style='font-family:宋体;'>轮廓分割</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>轮廓</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>将连续的一条曲线轮廓分割成一段段的直线、圆弧等小的基元。</span></p>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>基元：</span></b><span style='font-family:宋体; color:black'>一小段的轮廓段在给定的精度下能用如直线来拟合叫做直线基元，同理圆弧基元、椭圆弧基元也是如此，基元也是一段轮廓，如线段基元的分割属性为线段型。轮廓分割会产生一系列的基元，这些基元存储在列表中输出。</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>轮廓分割指令通常可结合高斯平滑指令</span><span lang=EN-US>ZV_ContGauss</span><span style='font-family:宋体; '>一起使用，高斯平滑可以将跳动较大的轮廓点进行一定程度的平滑，从而将轮廓分割地更为平滑</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ContSegment(cont,list,type,eps1,eps2)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:31.5pt;text-indent:-31.5pt;'><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cont</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输入，仅支持非多边形属性的轮廓；或是当分割类型</span><span lang=EN-US>type</span><span style='font-family:宋体; '>为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时属性为多边形的轮廓</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>list</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，列表类型，输出，分割的基元存储在列表中</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>type</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>分割类型，分割成轮廓基元的类型，</span><span lang=EN-US>0</span><span style='font-family:宋体; '>、</span><span lang=EN-US>1</span><span style='font-family:宋体; '>类型用的较多</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='margin-left:20.75pt;border-collapse:collapse;border:none;'> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=264 valign=top style='width:113.25pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>直线段</span></p>
+</td>  </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width=264 valign=top style='width:113.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>直线或圆弧段</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>eps1</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>多边形近似的精度，即将曲线轮廓分割成小线段的精度，精度值越小对于后续的轮廓基元如圆弧分割则越精确，常用值</span><span lang=EN-US>1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>1.5</span><span style='font-family:宋体; '>、</span><span lang=EN-US>2</span><span style='font-family:宋体; '>，建议值</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>eps2</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>多边形轮廓融合成基元的精度，如某段轮廓拟合成圆弧的精度，即此轮廓拟合成圆弧的精度小于等于</span><span lang=EN-US>eps2</span><span style='font-family:宋体; '>则此段轮廓用圆弧基元表示，常用值</span><span lang=EN-US>1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>1.5</span><span style='font-family:宋体; '>、</span><span lang=EN-US>2</span><span style='font-family:宋体; '>，</span><span lang=EN-US>eps2</span><span style='font-family:宋体; '>要大于等于</span><span lang=EN-US>eps1</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=733 height=239 src="doc.files/image1175.jpg" alt="说明: 14" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,img_bw,cont_list</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;count1.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpThresh(img,img_bw,200,255) '</span><span style='font-family:宋体;'>图像二值化</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGen(img_bw,cont_list,1,0) '</span><span style='font-family:宋体;'>查找轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>将每个轮廓分割为直线和圆弧基元，并绘制结果</span></p>
+<p class=MsoNormal><span lang=EN-US>LOCAL cont_size,i</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT dst,cont,cont_list_seg</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgCopy(img,dst) '</span><span style='font-family:宋体;'>复制图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgSetConst(dst,0) '</span><span style='font-family:宋体;'>常数填充图像</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>cont_size= ZV_ObjCount(cont_list) '</span><span style='font-family:宋体;'>获取轮廓个数</span></p>
+<p class=MsoNormal><span lang=EN-US>FOR i = 0 TO cont_size-1</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ZV_ObjSelect(cont_list,cont,i) '</span><span style='font-family:宋体;'>获取某个轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ZV_ContSegment(cont,cont_list_seg,1,1,1) '</span><span style='font-family:宋体;'>将轮廓分割成直线和圆弧基元</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ZV_DraContour(dst,cont_list_seg,255) '</span><span style='font-family:宋体;'>绘制轮廓</span><span lang=EN-US>(</span><span style='font-family:宋体;'>这里绘制的是轮廓列表</span><span lang=EN-US>)</span></p>
+<p class=MsoNormal><span lang=EN-US>NEXT</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1158.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1156.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

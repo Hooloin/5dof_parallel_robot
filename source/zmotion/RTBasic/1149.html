@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ContSelect -- 特征筛选</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1150.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1148.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc30257"></a><a name="_ZV_ContSelect_--_特征筛选"></a><span lang=EN-US>ZV_ContSelect -- </span><span style='font-family:宋体;'>特征筛选</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>特征</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>选择轮廓列表中指定特征满足要求的轮廓，输出选择的轮廓列表，输出列表为普通列表</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ContSelect(list,selected,feature,min,max,isInvert)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>list</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，轮廓列表，支持专用列表和普通列表，专用列表筛选输出的也是普通列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>selected</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输出参数，筛选的轮廓列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>feature</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>轮廓特征类型，参考</span><a href="1133.html#_排序"><span style='font-family:宋体; color:windowtext;text-decoration: none;text-underline:none'>排序</span></a><span style='font-family:宋体; '>，可取值</span><span lang=EN-US>-1</span><span style='font-family:宋体; '>，则按照顺序取序号在范围内的轮廓</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>min</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>特征值的下限</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>max</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>特征值的上限</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>isInvert</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>是否反向选择，为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>则保留不在范围内的轮廓，默认值为</span><span lang=EN-US>0</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=771 height=162 src="doc.files/image1170.jpg" alt="说明: 20" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,img_bw,cont_list,cont_select</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;count1.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpThresh(img,img_bw,200,255) '</span><span style='font-family:宋体;'>图像二值化</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGen(img_bw,cont_list,1,0) '</span><span style='font-family:宋体;'>查找轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContSelect(cont_list,cont_select,0,500,300000,0) '</span><span style='font-family:宋体;'>轮廓列表面积筛选</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>绘制结果</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgCopy(img,dst) '</span><span style='font-family:宋体;'>复制图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgSetConst(dst,0) '</span><span style='font-family:宋体;'>常数填充图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DraContList(dst,cont_select,255,0) '</span><span style='font-family:宋体;'>绘制轮廓</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="1148.html#_ZV_ContSorted_--_排序生成新列表"><span lang=EN-US style='font-family:宋体'>ZV_ContSorted</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1150.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1148.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

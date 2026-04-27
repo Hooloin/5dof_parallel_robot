@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVE_TABLE -- 缓冲Table</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="48.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="46.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697840"></a><a name="_Toc28734"></a><a name="_Toc15345"></a><a name="_Toc5102"></a><a name="_Toc12263"><span lang=EN-US>MOVE_TABLE -- </span></a><span style='font-family:宋体;'>缓冲</span><span lang=EN-US>Table</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>特殊运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>BASE</span></b><b><span style='font-family:宋体;color:black;'>轴运动缓冲加入一个</span></b><b><span lang=EN-US style='color:black;'>TABLE</span></b><b><span style='font-family:宋体;color:black;'>。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>这个指令</span><span lang=EN-US style='color:black;'>LOAD</span><span style='font-family: 宋体; color:black;'>执行时不做任何运动，只修改</span><span lang=EN-US style='color:black;'>TABLE</span><span style='font-family: 宋体; color:black;'>。此指令的</span><span lang=EN-US style='color:black;'>MTYPE</span><span style='font-family: 宋体; color:black;'>与</span><span lang=EN-US style='color:black; '>MOVE_OP</span><span style='font-family:宋体;color:black; '>一致。</span></p>
+<p class=MsoNormal><span lang=EN-US>4</span><span style='font-family:宋体;'>系列以上控制器，</span><span lang=EN-US>version_build: 20241029</span><span style='font-family:宋体;'>以后固件用</span><span lang=EN-US style='color:black; '>MOVE_TABLE</span><span style='font-family:宋体; '>不影响平滑。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_TABLE(tablenum, value)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>tablenum</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US style='color:black;'>table</span><span style='font-family:宋体; color:black;'>编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>value</span><span style='font-family: 宋体; color:black;'>：要修改的值</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal style='tab-stops:208.05pt;'><span lang=EN-US style='color:black;'>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(0)=0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>先令</span><span lang=EN-US style='color:black;'>TABLE(0)=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>?TABLE(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>打印确认</span><span lang=EN-US style='color:black;'>TABLE(0)</span><span style='font-family:宋体;color:black;'>的值</span></p>
+<p class=MsoNormal style='text-indent:126.0pt; '><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体; color:black;'>打印结果，</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family: 宋体; color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(500)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVE_TABLE</span></b><span lang=EN-US style='color:black;'>(0, 60)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>等待运动完成后，</span><span lang=EN-US style='color:black;'>TABLE(0)</span><span style='font-family:宋体;color:black;'>赋值</span><span lang=EN-US style='color:black;'>60</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(500)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>?TABLE(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>打印修改后</span><span lang=EN-US style='color:black;'>TABLE(0)</span><span style='font-family:宋体;color:black;'>的值，打印结果，</span><span lang=EN-US style='color:black;'>60</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>轨迹曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=786 height=382 src="doc.files/image181.jpg" ></span></p>
+</td> </tr> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US><a href="513.html#_TABLE_--_系统缺省数组_1">TABLE</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="48.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="46.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

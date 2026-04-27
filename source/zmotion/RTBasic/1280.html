@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_SHAPEFINDS -- 多模板匹配</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1281.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1279.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc6946"><span lang=EN-US>ZV_SHAPEFINDS -- </span></a><span style='font-family:宋体;'>多模板匹配</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.82%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.18%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>形状模板匹配</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.82%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>使用多个形状模板，在图像</span><span lang=EN-US>img</span><span style='font-family:宋体; '>上进行匹配查找。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.82%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_SHAPEFINDS(modelList,param,img,matchs[,numMatchs=0,minDis=0]) </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>modelList</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，形状模板列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>param</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，匹配参数，矩阵类型，</span><span lang=EN-US>1</span><span style='font-family:宋体; '>行或者是</span><span lang=EN-US>n</span><span style='font-family:宋体; '>行；为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>行时则所有模板共用该行的匹配参数，为</span><span lang=EN-US>n</span><span style='font-family:宋体; '>行时矩阵的行数必须要等于模板列表的长度，表示每行对应一个模板的匹配参数，每行的数据依次为</span><span lang=EN-US>minScore</span><span style='font-family:宋体; '>、</span><span lang=EN-US>nums</span><span style='font-family:宋体; '>、</span><span lang=EN-US>minDist</span><span style='font-family:宋体; '>、</span><span lang=EN-US>minThresh</span><span style='font-family:宋体; '>、</span><span lang=EN-US>accuracy</span><span style='font-family:宋体; '>、</span><span lang=EN-US>speed</span><span style='font-family:宋体; '>、</span><span lang=EN-US>polor</span><span style='font-family:宋体; '>，参数含义参考单模板匹配参数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，待匹配的搜索图像</span><span lang=EN-US>,8U</span><span style='font-family:宋体; '>单通道</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>matchs</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，匹配结果，矩阵类型，输出参数，</span><span lang=EN-US>n</span><span style='font-family:宋体; '>行</span><span lang=EN-US>6</span><span style='font-family:宋体; '>列矩阵</span><span lang=EN-US>,</span><span style='font-family:宋体; '>每行一个匹配结果，每行的数据依次为</span><span lang=EN-US>score</span><span style='font-family:宋体; '>、</span><span lang=EN-US>x</span><span style='font-family:宋体; '>、</span><span lang=EN-US>y</span><span style='font-family:宋体; '>、</span><span lang=EN-US>angle</span><span style='font-family:宋体; '>、</span><span lang=EN-US>scale</span><span style='font-family:宋体; '>、</span><span lang=EN-US>modelId</span><span style='font-family:宋体; '>，其中</span><span lang=EN-US>modelId</span><span style='font-family:宋体; '>表示的是模板列表中对应</span><span lang=EN-US>id</span><span style='font-family:宋体; '>的模板匹配到的结果</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>numMatchs</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>总的最大匹配数量，范围</span><span lang=EN-US>[0,</span><span style=' font-family:宋体;'>无穷</span><span lang=EN-US>)</span><span style=' font-family:宋体;'>，当</span><span lang=EN-US>numMatchs</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>时使用</span><span lang=EN-US>param</span><span style=' font-family:宋体;'>中的参数，以模板</span><span lang=EN-US>id</span><span style=' font-family:宋体;'>升序（若</span><span lang=EN-US>id</span><span style=' font-family:宋体;'>相同则分数降序）输出目标，当</span><span lang=EN-US>numMatchs</span><span style=' font-family:宋体;'>大于零时以分数降序输出目标，</span><span lang=EN-US>numMatchs</span><span style=' font-family:宋体;'>与真实目标大小关系参考单模板匹配</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minDist</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>匹配最小距离，表示两目标之间允许存在的最小距离。当</span><span lang=EN-US>minDist</span><span style='font-family:宋体; '>小于或等于</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时使用</span><span lang=EN-US>param</span><span style='font-family:宋体; '>中的参数，针对模板对应的目标，含义参考单模板匹配，当</span><span lang=EN-US>minDist</span><span style='font-family:宋体; '>大于零时，针对所有匹配目标</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.82%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1281.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1279.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ClrGen -- 生成模型</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1111.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1109.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc3800"></a><a name="_Toc5133"><span lang=EN-US>ZV_ClrGen -- </span></a><span style='font-family:宋体;'>生成模型</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>分割</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>通过阈值范围生成颜色模型，支持</span><span lang=EN-US>RGB</span><span style='font-family:宋体; '>和</span><span lang=EN-US>HSV</span><span style='font-family:宋体; '>颜色空间</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='color:black'>&nbsp; </span><span lang=EN-US><img border=0 width=293 height=253 src="doc.files/image1132.png" ></span><span lang=EN-US style='color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US><img border=0 width=346 height=253 src="doc.files/image1134.png" ></span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='color:black'>RGB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HSV</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='color:black;background:yellow; '>&nbsp;</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span style=' position:absolute;z-index:251659264;left:0px;margin-left:611px;margin-top: 1012px;width:206px;height:67px'><img width=206 height=67 src="doc.files/image1135.png" alt="圆角矩形: H通道色相环" ></span><span lang=EN-US><img border=0 width=291 height=278 src="doc.files/image1137.png" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_ClrGenModel</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ClrGen(mod,name,colorType,low1,high1,low2,high2,low3,high3)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mod</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输出，生成的颜色模型</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>name</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>模型名称，字符串，不能为空即</span><span lang=EN-US>&quot;&quot;,</span><span style='font-family:宋体; '>也不能为</span><span lang=EN-US>&quot;?&quot;</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>colorType</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>颜色色系，</span><span lang=EN-US>0-RGB</span><span style='font-family:宋体; '>色系空间，</span><span lang=EN-US>1-HSV</span><span style='font-family:宋体; '>色系空间</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>low1</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>低阈值，</span><span lang=EN-US>RGB</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>R</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,255]</span><span style='font-family:宋体; '>，</span><span lang=EN-US>HSV</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>H</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,180]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>high1</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>高阈值，</span><span lang=EN-US>RGB</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>R</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,255]</span><span style='font-family:宋体; '>，</span><span lang=EN-US>HSV</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>H</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,180]</span><span style='font-family:宋体; '>，</span><span lang=EN-US>H</span><span style='font-family:宋体; '>通道是</span><span lang=EN-US>360</span><span style='font-family:宋体; '>°的色相环，参数表示为</span><span lang=EN-US>0-180</span><span style='font-family:宋体; '>，因参数表示的特殊性，</span><span lang=EN-US>high1</span><span style='font-family:宋体; '>可以小于</span><span lang=EN-US>low1</span><span style='font-family:宋体; '>，表示</span><span lang=EN-US>180</span><span style='font-family:宋体; '>附近跨区间，即</span><span lang=EN-US>[low1,high1+180]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>low2</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>低阈值，</span><span lang=EN-US>RGB</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>G</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,255]</span><span style='font-family:宋体; '>，</span><span lang=EN-US>HSV</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>S</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,255]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>high2</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>高阈值，</span><span lang=EN-US>RGB</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>G</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,255]</span><span style='font-family:宋体; '>，</span><span lang=EN-US>HSV</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>S</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,255]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>low3</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>低阈值，</span><span lang=EN-US>RGB</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>B</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,255]</span><span style='font-family:宋体; '>，</span><span lang=EN-US>HSV</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>V</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,255]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>high3</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>高阈值，</span><span lang=EN-US>RGB</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>B</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,255]</span><span style='font-family:宋体; '>，</span><span lang=EN-US>HSV</span><span style='font-family:宋体; '>空间：</span><span lang=EN-US>V</span><span style='font-family:宋体; '>通道，范围</span><span lang=EN-US>[0,255]</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT clr_model</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ClrGen(clr_model,&quot;red&quot;,0,230,255,0,20,0,20) '</span><span style='font-family:宋体;'>在</span><span lang=EN-US>RGB</span><span style='font-family:宋体;'>颜色空间生成红色的颜色模型</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1111.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1109.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

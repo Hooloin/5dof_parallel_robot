@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CAN -- CAN通讯</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="416.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="414.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_CANIO_ADDRESS"></a><a name="_Toc21032"></a><a name="_CAN"></a><a name="_Toc134698205"></a><a name="_Toc18991"></a><a name="_Toc10881"></a><a name="_Toc8111"></a><a name="_Toc10674"><span lang=EN-US>CAN -- </span></a><span lang=FR>CAN</span><span style='font-family:宋体;'>通讯</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>系统指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>直接通过</span></b><b><span lang=EN-US style='color:black;'>CAN</span></b><b><span style='font-family:宋体;color:black;'>总线收发数据。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>可以实现多个控制器通过</span><span lang=EN-US style='color:black;'>CAN</span><span style='font-family:宋体;color:black;'>来通讯，但是同一个</span><span lang=EN-US style='color:black;'>CAN</span><span style='font-family:宋体;color:black;'>网络上只能有一个主端</span><span lang=EN-US style='color:black;'>(</span><span lang=EN-US>CANIO_ADDRESS=32<span style='color:black'>)</span></span><span style='font-family: 宋体; color:black;'>。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>较新的固件版本才支持这个功能，如不支持请联系厂家。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>接线如下图所示：</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=454 height=265 src="doc.files/image520.png" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CANL - CANL</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CANH - CANH</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CANL</span><span style='font-family:宋体;color:black;'>和</span><span lang=EN-US style='color:black;'>CANH</span><span style='font-family:宋体;color:black;'>的首尾两端分别连接</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>个</span><span lang=EN-US style='color:black;'>120</span><span style='font-family:宋体;color:black;'>欧电阻用于阻抗匹配。控制器主端</span><span lang=EN-US style='color:black;'>CANL</span><span style='font-family:宋体;color:black;'>和</span><span lang=EN-US style='color:black;'>CANH</span><span style='font-family:宋体;color:black;'>接口并联</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>个</span><span lang=EN-US style='color:black;'>120</span><span style='font-family:宋体;color:black;'>欧电阻；连接带拨码开关的扩展模块时，将拨码第八位拨为</span><span lang=EN-US style='color:black;'>ON</span><span style='font-family:宋体;color:black;'>即表示接入</span><span lang=EN-US style='color:black;'>120</span><span style='font-family:宋体;color:black;'>欧电阻，无需额外接电阻。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CAN(channel, function, tablenum)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black; '>channel</span><span style='font-family: 宋体; color:black;'>：</span><span lang=FR style='color:black;'>CAN</span><span style='font-family:宋体;color:black;'>通道，</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>表示第一个通道，</span><span lang=FR style='color:black;'>-1</span><span style='font-family:宋体;color:black;'>表示缺省通道</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black; '>function</span><span style='font-family: 宋体; color:black;'>：功能号</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=733 style='width:314.1pt;margin-left:19.4pt;border-collapse:collapse;border: none;'> <tr style='height:17.0pt'> <td width=221 valign=top style='width:94.5pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>值</span></p>
+</td>  <td width=512 valign=top style='width:219.6pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>描述</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width=221 valign=top style='width:94.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>6</span></p>
+</td>  <td width=512 valign=top style='width:219.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>接收</span><span style='font-family:宋体;color:black;'>，没有数据时，</span><span lang=EN-US style='color:black;'>identifier&lt;0</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width=221 valign=top style='width:94.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>7</span></p>
+</td>  <td width=512 valign=top style='width:219.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>发送</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width=221 valign=top style='width:94.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>16</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>需要升级固件</span></p>
+</td>  <td width=512 valign=top style='width:219.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>带扩展支持接收，没有数据时，</span><span lang=EN-US style='color:black;'>identifier&lt;0</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width=221 valign=top style='width:94.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>17</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>需要升级固件</span></p>
+</td>  <td width=512 valign=top style='width:219.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>发送扩展数据，普通数据使用</span><span lang=EN-US style='color:black;'>7</span><span style='font-family:宋体;color:black;'>发送</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>tablenum</span><span style='font-family:宋体;color:black;'>：</span><span style='font-family:宋体;color:black;'>数据存储的</span><span lang=FR style='color:black;'>TABLE</span><span style='font-family:宋体;color:black;'>位置</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>6</span><span style='font-family:宋体;color:black;'>、</span><span lang=FR style='color:black;'>7</span><span style='font-family:宋体;color:black;'>模式时依次存储</span><span style='font-family:宋体;color:black;'>：</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>identifier</span><span style='font-family:宋体;color:black;'>：</span><span lang=FR style='color:black;'>Can</span><span style='font-family:宋体;color:black;'>通讯对象</span><span lang=FR style='color:black;'>(Cob-Id)</span><span style='font-family:宋体;color:black;'>，</span><span lang=FR style='color:black;'>11</span><span style='font-family:宋体;color:black;'>位</span><span style='font-family:宋体;color:black;'>，</span><span style='font-family:宋体;color:black;'>前</span><span lang=FR style='color:black;'>4</span><span style='font-family:宋体;color:black;'>位是功能码</span><span style='font-family:宋体;color:black;'>，</span><span style='font-family:宋体;color:black;'>后</span><span lang=FR style='color:black;'>7</span><span style='font-family:宋体;color:black;'>位是节点</span><span lang=FR style='color:black;'>ID</span><span style='font-family:宋体;color:black;'>，</span><span lang=FR style='color:black;'>ZCAN</span><span style='font-family:宋体;color:black;'>使用的高位数据预留</span><span style='font-family:宋体;color:black;'>，</span><span style='font-family:宋体;color:black;'>建议</span><span lang=FR style='color:black;'>0-511</span><span style='font-family:宋体;color:black;'>。</span><span style='font-family:宋体;color:black;'>接收时如果小于</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>则表明没有收到数据。</span><span lang=EN-US style='color:black;'>bit11</span><span style='font-family:宋体;color:black;'>表示是否远程帧。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>bytes</span><span style='font-family:宋体;color:black;'>：</span><span style='font-family:宋体;color:black;'>数据区域字节数</span><span style='font-family:宋体;color:black;'>，</span><span style='font-family:宋体;color:black;'>最多为</span><span lang=FR style='color:black;'>8</span><span style='font-family:宋体;color:black;'>。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black; '>data</span><span style='font-family: 宋体; color:black;'>：数据区域，字节（</span><span lang=EN-US style='color:black;'>0-FF</span><span style='font-family:宋体;color:black;'>）。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>16</span><span style='font-family:宋体;color:black;'>、</span><span lang=EN-US style='color:black;'>17</span><span style='font-family:宋体;color:black;'>模式时依次存储</span><span style='font-family:宋体;color:black;'>：</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>identifier</span><span style='font-family:宋体;color:black;'>：</span><span lang=FR style='color:black;'>Can</span><span style='font-family:宋体;color:black;'>通讯对象</span><span lang=EN-US style='color:black;'>(</span><span lang=FR style='color:black;'>Cob</span><span lang=EN-US style='color:black;'>-</span><span lang=FR style='color:black;'>Id</span><span lang=EN-US style='color:black;'>)</span><span style='font-family:宋体;color:black;'>，</span><span lang=FR style='color:black;'>11</span><span style='font-family:宋体;color:black;'>位</span><span style='font-family:宋体;color:black;'>，</span><span style='font-family:宋体;color:black;'>前</span><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体;color:black;'>位是功能码，后</span><span lang=EN-US style='color:black;'>7</span><span style='font-family:宋体;color:black;'>位是节点</span><span lang=EN-US style='color:black;'>ID</span><span style='font-family:宋体;color:black;'>，</span><span lang=FR style='color:black;'>ZCAN</span><span style='font-family:宋体;color:black;'>使用的高位数据预留</span><span style='font-family:宋体;color:black;'>，</span><span style='font-family:宋体;color:black;'>建议</span><span lang=FR style='color:black;'>0-511</span><span style='font-family:宋体;color:black;'>。</span><span style='font-family:宋体;color:black;'>接收时如果小于</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>则表明没有收到数据。</span><span lang=EN-US style='color:black;'>bit11</span><span style='font-family:宋体;color:black;'>表示是否远程帧。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>identifier extend</span><span style='font-family:宋体;color:black;'>：扩展</span><span lang=FR style='color:black;'>id</span><span style='font-family:宋体;color:black;'>，</span><span style='font-family:宋体;color:black;'>增加高</span><span lang=FR style='color:black;'>11</span><span style='font-family:宋体;color:black;'>位</span><span style='font-family:宋体;color:black;'>与</span><span style='font-family:宋体;color:black;'>低</span><span lang=FR style='color:black;'>18</span><span style='font-family:宋体;color:black;'>位</span><span style='font-family:宋体;color:black;'>，</span><span style='font-family:宋体;color:black;'>共同组成</span><span lang=FR style='color:black;'>CAN</span><span style='font-family:宋体;color:black;'>的</span><span lang=FR style='color:black;'>29</span><span style='font-family:宋体;color:black;'>位</span><span lang=FR style='color:black;'>ID</span><span style='font-family:宋体;color:black;'>，</span><span style='font-family:宋体;color:black;'>不存在填</span><span lang=FR style='color:black;'>-1</span><span style='font-family:宋体;color:black;'>。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>bytes</span><span style='font-family:宋体;color:black;'>：</span><span style='font-family:宋体;color:black;'>数据区域字节数</span><span style='font-family:宋体;color:black;'>，</span><span style='font-family:宋体;color:black;'>最多为</span><span lang=FR style='color:black;'>8</span><span style='font-family:宋体;color:black;'>。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black; '>data</span><span style='font-family: 宋体; color:black;'>：数据区域，字节（</span><span lang=EN-US style='color:black;'>0-FF</span><span style='font-family:宋体;color:black;'>）。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>29</span><span style='font-family:宋体;'>位扩展帧</span><span lang=EN-US>ID</span><span style='font-family:宋体;'>从右最后一位开始拆分为低</span><span lang=EN-US>18</span><span style='font-family:宋体;'>位和高</span><span lang=EN-US>11</span><span style='font-family:宋体;'>位，高位不足</span><span lang=EN-US>11</span><span style='font-family:宋体;'>位自动补</span><span lang=EN-US>0</span><span style='font-family:宋体;'>，例子如下：</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=922 height=194 src="doc.files/image522.jpg" ></span></p>
+<p class=MsoNormal><span style='font-family: 宋体;'>扩展帧</span><span lang=EN-US>ID</span><span style='font-family:宋体;'>值：</span><span lang=EN-US>1753001</span></p>
+<p class=MsoNormal><span style='font-family: 宋体;'>对应二进制为：</span><span lang=EN-US>1 0111 0101 0011 0000 0000 0001</span></p>
+<p class=MsoNormal><span style='font-family: 宋体;'>对应</span><span lang=EN-US>29</span><span style='font-family:宋体;'>位二进制：</span><span lang=EN-US>0 0001 0111 0101 0011 0000 0000 0001</span></p>
+<p class=MsoNormal><span style='font-family: 宋体;'>高</span><span lang=EN-US>11</span><span style='font-family:宋体;'>位为：</span><span lang=EN-US>0 0001 0111 01</span><span style='font-family:宋体;'>，对应</span><span lang=EN-US>10</span><span style='font-family:宋体;'>进制为</span><span lang=EN-US>93</span></p>
+<p class=MsoNormal><span style='font-family: 宋体;'>低</span><span lang=EN-US>18</span><span style='font-family:宋体;'>位为：</span><span lang=EN-US>01 0011 0000 0000 0001</span><span style='font-family: 宋体;'>，对应</span><span lang=EN-US>10</span><span style='font-family:宋体;'>进制为</span><span lang=EN-US>77825</span></p>
+<p class=MsoNormal><span style='font-family: 宋体;'>所以使用</span><span lang=EN-US>CAN17</span><span style='font-family:宋体;'>模式时，</span><span lang=EN-US>identifier=93</span><span style='font-family:宋体;'>，</span><span lang=EN-US>Identifier extend=77825</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例一</span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family: 宋体; color:black;'>发送端：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(0,1,8,1,2,3,4,5,6,7,8) '</span><span style='font-family:宋体;color:black;'>发送</span><span lang=EN-US style='color:black;'>cobid=1</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>8</span><span style='font-family:宋体;color:black;'>个字节，依次为</span><span lang=EN-US style='color:black;'>1-8</span></p>
+<p class=MsoNormal><b><span lang=EN-US>CAN</span></b><span lang=EN-US>(0,7,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>发送</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family: 宋体; '>接收端：</span></p>
+<p class=MsoNormal><span lang=EN-US>CANIO_ADDRESS=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>设置为非主控，此参数设置一次即可</span></p>
+<p class=MsoNormal><b><span lang=EN-US>CAN</span></b><span lang=EN-US>(0,6,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>接收</span></p>
+<p class=MsoNormal><span lang=EN-US>?TABLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例二</span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family: 宋体; color:black;'>发送端</span></p>
+<p class=MsoNormal style='margin-left:168.0pt;text-indent:-168.0pt; '><span lang=EN-US style='color:black;'>TABLE(0,1,10,8,1,2,3,4,5,6,7,8)&nbsp; '</span><span style='font-family:宋体;color:black;'>发送</span><span lang=EN-US style='color:black;'>cobid=1</span><span style='font-family:宋体;color:black;'>，扩展</span><span lang=EN-US style='color:black;'>id10</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>8</span><span style='font-family:宋体;color:black;'>个字节，依次</span><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>为</span><span lang=EN-US style='color:black;'>1-8</span></p>
+<p class=MsoNormal><b><span lang=EN-US>CAN</span></b><span lang=EN-US>(0,17,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>发送</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family: 宋体; '>接收端：</span></p>
+<p class=MsoNormal><span lang=EN-US>CANIO_ADDRESS=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>设置为非主控，此参数设置一次即可</span></p>
+<p class=MsoNormal><b><span lang=EN-US>CAN</span></b><span lang=EN-US>(0,16,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>接收</span></p>
+<p class=MsoNormal><span lang=EN-US>?TABLE(0) </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例三</span><span lang=EN-US style='color:black;'> CAN17</span><span style='font-family:宋体; color:black; '>模式防阻塞，独立任务启动</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>当未连接通讯设备是</span><span lang=EN-US style='color:black;'>CAN17</span><span style='font-family:宋体; color:black; '>会自动跳过，不会发生阻塞等待</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CANIO_ADDRESS = 32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>主端</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>GLOBAL FLAG_SEND_NUM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>发送次数</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>FLAG_SEND_NUM = 1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WHILE 1 </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?FLAG_SEND_NUM</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF FLAG_SEND_NUM &gt; 0 THEN</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TABLE(0,32,8,8,1,2,3,4,5,6,7,8)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STOPTASK 2</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RUNTASK 2,CAN_SEND</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WA 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>稍微增加延时，确保后续发送进行时不会打断前面的发送</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENDIF </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF FLAG_SEND_NUM &lt;= 0&nbsp; THEN</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体; color:black; '>发送完毕</span><span lang=EN-US style='color:black;'>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EXIT WHILE</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WEND</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>GLOBAL SUB CAN_SEND()</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FLAG_SEND_NUM = FLAG_SEND_NUM - 1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CAN(0,17,0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体; color:black; '>发送成功</span><span lang=EN-US style='color:black;'>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>END SUB</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="416.html#_CANIO_ADDRESS_--_CAN通讯设置_1"><span lang=EN-US>CANIO_ADDRESS</span></a><span style='font-family:宋体;'>，</span><a href="418.html#_CANIO_STATUS"><span lang=EN-US>CANIO_STATUS</span></a><span style='font-family:宋体;'>，</span><a href="417.html#_CANIO_ENABLE"><span lang=EN-US>CANIO_ENABLE</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="416.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="414.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

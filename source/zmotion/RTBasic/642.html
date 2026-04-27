@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DRAWLIBPIC -- 插入图片库图片</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="643.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="641.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc147915733"></a><a name="_DRAWLIBPIC"></a><a name="_DRAWLIBPIC_--_插入图片库图片"></a><span lang=EN-US>DRAWLIBPIC -- </span><span style='font-family:宋体;'>插入图片库图片</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>类型</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>显示指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>描述</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>绘制图片，图片文件要加入图片库，注意图片比较占空间，不需要的图片不要加入。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>此指令只能在自定义元件的绘图函数内使用，请查看</span><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_自定义元件调用函数_1"><span lang=EN-US style='font-family:宋体; '><span lang=EN-US>自定义元件调用函数</span></span></a></span><span style='font-family:宋体;'>参考例程。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>语法</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWLIBPIC (piclibnamePath, state, x1,y1[,x2,y2]) </span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>piclibnamePath</span><span style='font-family:宋体;'>：要加载的图片库路径</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>1</span><span style='font-family:宋体; '>、系统图片库下：</span><span lang=EN-US>System\</span><span style='font-family:宋体;'>二级目录名称</span><span lang=EN-US>\</span><span style='font-family:宋体;'>加载图片的名称</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>2</span><span style='font-family:宋体; '>、用户图片库：</span><span lang=EN-US>User\</span><span style='font-family:宋体;'>二级目录名称</span><span lang=EN-US>\</span><span style='font-family:宋体;'>图片库名称</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>state</span><span style='font-family:宋体;'>：图片的状态编号</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>x1,y1</span><span style='font-family:宋体;'>：显示区域左上角的坐标位置</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt; text-indent:21.0pt;'><span lang=EN-US>x2,y2</span><span style='font-family:宋体;'>：显示区域右下角的坐标位置</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>适用控制器</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>支持</span><span lang=EN-US>RTHmi</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>例子</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US>DRAWLIBPIC (&quot;User\default\LOGO&quot;,0,100,100,300,300)&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>‘在</span><span lang=EN-US>(100,100)</span><span style='font-family:宋体;'>到</span><span lang=EN-US>(300,300)</span><span style='font-family:宋体;'>区域显示图片库中名称为</span><span lang=EN-US>LOGO</span><span style='font-family:宋体;'>的</span><span lang=EN-US>0</span><span style='font-family: 宋体;'>状态</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>相关指令</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_DRAWPIC_--_插入图片文件">DRAWPIC</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US style='font-family:等线; '>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="643.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="641.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

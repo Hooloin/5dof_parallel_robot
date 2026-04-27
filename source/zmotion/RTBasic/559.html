@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ONPOWEROFF -- 掉电中断SUB</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="560.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="558.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_ONPOWEROFF_--_掉电中断SUB"></a><a name="_ONPOWEROFF"></a><a name="_Toc134698368"></a><a name="_Toc23511"></a><a name="_Toc15988"></a><a name="_Toc15488"></a><a name="_Toc9628"></a><a name="_Toc350958592"></a><a name="_ONPOWEROFF_--_掉电中断SUB_1"></a><span lang=EN-US>ONPOWEROFF</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>掉电中断</span><span lang=EN-US>SUB</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>中断</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>掉电中断程序入口，必须是全局的</span></b><b><span lang=EN-US style='color:black;'>SUB</span></b><b><span style='font-family:宋体;color:black;'>过程。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>控制器只有</span><span lang=EN-US style='color:red;'>1</span><span style='font-family:宋体; color:red;'>个掉电中断。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>掉电中断执行的时间特别有限，只能写少数几条语句，不能写</span><span lang=EN-US style='color:red;'>FLASH</span><span style='font-family:宋体;color:red;'>。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>GLOBAL&nbsp; </span><span lang=EN-US>ONPOWEROFF()</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>…</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>END SUB</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>INT_ENABLE = 1</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>dpos(0)=vr(0) '</span><span style='font-family:宋体;'>上电读取保存的数值，恢复坐标</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>dpos(1)=vr(1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>dpos(2)=vr(2)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>END</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>GLOBAL SUB <b>ONPOWEROFF</b> ()</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vr(0) = dpos(0)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>保存坐标</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vr(1) = dpos(1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vr(2) = dpos(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>END SUB</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="558.html#_INT_ENABLE_--_中断总开关_1">INT_ENABLE</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="560.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="558.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

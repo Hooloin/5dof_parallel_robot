@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVEOP_ADIST -- 提前关胶</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="372.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="370.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>MOVEOP_ADIST -- </span><span style='font-family:宋体;'>提前关胶</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>MOVE_OP</span></b><b><span style='font-family:宋体;color:black; '>提前一定距离输出设置</span></b><b><span lang=EN-US style='color:black; '>, </span></b><b><span style='font-family:宋体;color:black; '>缺省</span></b><b><span lang=EN-US style='color:black; '>0</span></b><b><span style='font-family:宋体;color:black; '>不生效，设置正数会比缺省输出位置提前指定矢量距离，设置负数则延后指定矢量距离。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>MOVEOP_ADIST</span></b><b><span style='font-family:宋体;color:black; '>指令不需要打开精准输出就能生效。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;color:black; '>只能对</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体;color:black; '>单个</span><span lang=EN-US style='color:black;'>OP</span><span style='font-family:宋体;color:black; '>操作有效，对每个轴来说，操作的动作是顺序的，第一个改变位置的</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体;color:black; '>操作没有完成，后面的不会操作</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MOVEOP_ADIST</span><span style='font-family:宋体;color:black; '>带入缓冲后会自动清零，避免影响其它</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体;color:black; '>。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;color:black; '>对支持</span><span lang=EN-US style='color:black;'>HW</span><span style='font-family:宋体;color:black; '>功能的控制器，可以由</span><span lang=EN-US style='color:black;'>AXIS_ZSET</span><span style='font-family:宋体;color:black; '>来启动</span><span lang=EN-US style='color:black;'>HW</span><span style='font-family:宋体;color:black; '>精准输出，同</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体;color:black; '>精准，此指令只支持</span><span lang=EN-US style='color:black;'>MOVE</span><span style='font-family:宋体;color:black; '>插补类与</span><span lang=EN-US style='color:black;'>MOVESCAN</span><span style='font-family:宋体;color:black; '>运动，凸轮、</span><span lang=EN-US style='color:black;'>MOVE_PT</span><span style='font-family:宋体;color:black; '>等不支持，支持</span><span lang=EN-US style='color:black;'>MOVE</span><span style='font-family:宋体;color:black; '>指令跨小线段提前输出。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVEOP_ADIST=distance</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>distance</span><span style='font-family:宋体;color:black; '>：提前</span><span lang=EN-US style='color:black;'>/</span><span style='font-family:宋体;color:black; '>延后关胶距离</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>4</span><span style=' font-family:宋体;color:black;'>系列控制器，</span><span lang=EN-US style='color:black;'>fast</span><span style=' font-family:宋体;color:black;'>固件</span><span lang=EN-US style='color:black;'>190201</span><span style=' font-family:宋体;color:black;'>以后固件支持</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>ATYPE=1</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>UNITS=100</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MPOS=0</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>SPEED=100</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>ACCEL=1000</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>DECEL=1000</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MERGE=1</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>SRAMP=100</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MOVEOP_ADIST = -10&nbsp; &nbsp;'</span><span style=' font-family:宋体;color:black;'>延后</span><span lang=EN-US style='color:black;'>10</span><span style=' font-family:宋体;color:black;'>个单位距离开胶</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MOVE_OP(0,1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MOVE(5)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MOVE(50) &nbsp;&nbsp;&nbsp;&nbsp;'</span><span style=' font-family:宋体;color:black;'>实际的开胶</span><span lang=EN-US style='color:black;'>,</span><span style=' font-family:宋体;color:black;'>关胶在这个运动</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MOVE(5)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MOVEOP_ADIST = 10&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>提前</span><span lang=EN-US style='color:black;'>10</span><span style=' font-family:宋体;color:black;'>个单位距离关胶</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MOVE_OP(0,0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>运动曲线</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family:宋体;color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>50</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>OP(0)</span><span style='font-family:宋体;color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>5</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US><img border=0 width=833 height=417 src="doc.files/image429.jpg" alt="说明: 图表&#10;&#10;低可信度描述已自动生成" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="45.html#_MOVE_OP_--_缓冲输出_1"><span lang=EN-US style='color:#9999CC;'>MOVE_OP</span></a><span style=' font-family:宋体;color:black;'>，</span><a href="370.html#_MOVEOP_DELAY_--_缓冲输出延时_1"><span lang=EN-US>MOVEOP_DELAY</span></a><span style=' font-family:宋体;color:black;'>，</span><a href="368.html#_AXIS_ZSET_--_精准op设置_1"><span lang=EN-US>AXIS_ZSET</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="372.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="370.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

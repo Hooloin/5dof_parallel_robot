@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_CalGetPointsMapBase -- 使用指定基准计算映射点对</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1167.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1165.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc24731"><span lang=EN-US>ZV_CalGetPointsMapBase -- </span></a><span style='font-family: 宋体;'>使用指定基准计算映射点对</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='line-height:150%'><b><span style='line-height:150%;font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='line-height:150%'><span style='line-height:150%;font-family:宋体;color:black'>标定</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='line-height:150%'><b><span style='line-height:150%;font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>功能与</span><span lang=EN-US style='font-family:宋体'>ZV_CalGetPointsMap</span><span style='font-family:宋体'>指令类似，<b>区别在于：</b><span lang=EN-US><br> ZV_CalGetPointsMap</span>指令使用的世界坐标系在实心圆特征点的左上角处或左下角处；<span lang=EN-US>ZV_CalGetPointsMapBase</span>指令使用的坐标系是指令输入的坐标系。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_CalGetPtsMapBase</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='line-height:150%'><b><span style='line-height:150%;font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_CalGetPointsMapBase(pptsIn,baseIn,ppts,wpts,dis)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>pptsIn</span></b><b><span style='font-family:宋体'>：</span></b><span lang=EN-US style='font-family:宋体'>ZVOBJECT</span><span style='font-family:宋体'>类型，输入的像素坐标，矩阵类型<span lang=EN-US>N</span>行<span lang=EN-US>2</span>列</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>baseIn</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输入基准坐标系，单通道</span><span lang=EN-US>3x2</span><span style='font-family:宋体; '>矩阵，分别为原点，</span><span lang=EN-US>x</span><span style='font-family:宋体; '>轴点，</span><span lang=EN-US>y</span><span style='font-family:宋体; '>轴点，均大于</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>ppts</span></b><b><span style='font-family:宋体'>：</span></b><span lang=EN-US style='font-family:宋体'>ZVOBJECT</span><span style='font-family:宋体'>类型，输出参数，排好序的像素坐标，矩阵类型<span lang=EN-US>N</span>行<span lang=EN-US>2</span>列</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>wpts</span></b><b><span style='font-family:宋体'>：</span></b><span lang=EN-US style='font-family:宋体'>ZVOBJECT</span><span style='font-family:宋体'>类型，输出参数，排好序的世界坐标，矩阵类型<span lang=EN-US>N</span>行<span lang=EN-US>2</span>列</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>dis</span></b><b><span style='font-family:宋体'>：</span></b><span style='font-family:宋体'>水平或垂直两相邻点的实际距离，<span lang=EN-US>dis</span>为一个数值，单位可以是<span lang=EN-US>(</span>毫米<span lang=EN-US>mm)</span>，<span lang=EN-US>(</span>厘米<span lang=EN-US>cm)</span>，<span lang=EN-US>(</span>分米<span lang=EN-US>dm)</span>，<span lang=EN-US>(</span>米<span lang=EN-US>m)</span>，大于<span lang=EN-US>0</span></span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style='font-family:宋体'>输出点的排序方式如下图所示：</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=501 height=407 src="doc.files/image1185.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='line-height:150%'><b><span style='line-height:150%;font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='line-height:150%'><span style='line-height:150%;font-family:宋体'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='line-height:150%'><b><span style='line-height:150%;font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZVOBJECT img,pts,base_in,base_out</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_ImgRead(img,&quot;tool3.jpg&quot;,0) '</span><span style='font-family:宋体'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_CalGetScaPoints(img,pts,128,0,500,5000) '</span><span style='font-family:宋体'>提取标定板圆心坐标</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>TABLE(0,361,362,482,362,361,482) '</span><span style='font-family:宋体'>写入输入坐标系数据</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_MatGenData(base_in,3,2,0) '</span><span style='font-family:宋体'>生成输入坐标系矩阵</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_CalGetBase(pts,base_in,base_out) '</span><span style='font-family:宋体'>获取基准坐标系</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZVOBJECT img_pts,world_pts</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_CalGetPointsMapBase(pts,base_out,img_pts,world_pts,10) '</span><span style='font-family:宋体'>从点集<span lang=EN-US>pts</span>中计算对应点的像素坐标和世界坐标</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_MatGetRow(img_pts,0,2,0) '</span><span style='font-family:宋体'>获取第一个点像素坐标</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_MatGetRow(world_pts,0,2,10) '</span><span style='font-family:宋体'>获取第一个点世界坐标</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>?&quot;</span><span style='font-family:宋体'>第一个点像素坐标<span lang=EN-US>:&quot;,TABLE(0),TABLE(1)</span></span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>?&quot;</span><span style='font-family:宋体'>第一个点世界坐标<span lang=EN-US>:&quot;,TABLE(10),TABLE(11)</span></span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1167.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1165.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>LCD_WDOGTIME -- 显示器掉线处理时间</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="621.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="619.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc147915720"><span lang=EN-US>LCD_WDOGTIME -- </span></a><span style='font-family:宋体;'>显示器掉线处理时间</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" style='width:82.38%;border:solid windowtext 1.0pt;border-left: none; padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>系统屏参数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>该指令建立在控制器与示教盒通讯成功的基础上，在控制器端操作。</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>设置屏掉线处理时间，</span><span lang=EN-US>ms</span><span style='font-family:宋体'>单位。</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>当屏操作这个时间没有通讯时，急停开关</span><span lang=EN-US>(</span><span style='font-family:宋体'>物理按键编号</span><span lang=EN-US>=5)</span><span style='font-family:宋体'>自动按下，等于</span><span lang=EN-US>0</span><span style='font-family:宋体'>时，此功能不启用。</span></p>
+<p class=MsoNormal><span lang=EN-US>5</span><span style='font-family:宋体'>系列</span><span lang=EN-US>20180404</span><span style='font-family:宋体'>以上固件版本支持，</span><span lang=EN-US>4</span><span style='font-family:宋体'>系列标准固件</span><span lang=EN-US>20170721</span><span style='font-family:宋体'>以上版本支持</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>LCD_WDOGTIME(lcdnum)=time</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>lcdnum</span><span style='font-family:宋体;'>：</span><span style='font-family:宋体'>控制器的</span><span lang=EN-US>LCD</span><span style='font-family:宋体'>（</span><span lang=EN-US>HMI</span><span style='font-family:宋体'>）编号，缺省</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>time</span><span style='font-family:宋体; '>：</span><span style='font-family: 宋体'>时间，</span><span lang=EN-US>ms</span><span style='font-family:宋体'>单位</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>RTHmi</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>LCD_WDOGTIME(0)=100</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><b><span lang=EN-US style='font-family:等线; '>&nbsp;</span></b></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="621.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="619.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

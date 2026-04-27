@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>SCOPE -- 数据采样</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="518.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="516.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698318"></a><a name="_Toc25997"></a><a name="_Toc29150"></a><a name="_Toc32101"></a><a name="_Toc13325"></a><a name="_SCOPE_--_数据采样"></a><span lang=FR>SCOPE </span><span lang=EN-US>-- </span><span style='font-family:宋体;'>数据采样</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><a name="_SCOPE_POS"><b><span style='font-family:宋体; color:black;'>类型</span></b></a></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>系统指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:center 207.65pt;layout-grid-mode:char; '><b><span style='font-family:宋体;color:black;'>数据采样，保存到</span></b><b><span lang=EN-US style='color:black; '>TABLE</span></b><b><span style='font-family:宋体;color:black;'>，最多同时采样</span></b><b><span lang=EN-US style='color:black; '>8</span></b><b><span style='font-family:宋体;color:black;'>类数据。</span></b></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:red;'>使用</span><span lang=EN-US style='color:red;'>TRIGGER</span><span style='font-family:宋体;color:red; '>开始自动采样，采样时间</span><span lang=EN-US style='color:red;'>=</span><span style='font-family:宋体;color:red; '>采样周期</span><span lang=EN-US style='color:red;'>*</span><span style='font-family:宋体;color:red; '>采样个数。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SCOPE(enable[, period]) </span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>SCOPE(enable, period, table_start, table_stop, p0 [,p1 [,p2 [,p3 [,p4 [,p5 [,p6 [,p7]]]]]]]) </span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:center 207.65pt;'><span lang=EN-US style='color:black; '>enable</span><span style='font-family:宋体; color:black;'>：使能与否</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:center 207.65pt;'><span lang=EN-US style='color:black; '>period</span><span style='font-family:宋体; color:black;'>：系统周期数，一般为</span><span lang=EN-US style='color:black;'>1ms</span><span style=' font-family:宋体;color:black;'>，可用</span><span lang=EN-US style='color:black;'>SERVO_PERIOD</span><span style=' font-family:宋体;color:black;'>查看</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:center 207.65pt;'><span lang=EN-US style='color:black; '>table_start</span><span style='font-family:宋体;color:black; '>：采样数据存储在</span><span lang=EN-US style='color:black;'>TABLE</span><span style='font-family:宋体; color:black;'>的起始位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:center 207.65pt;'><span lang=EN-US style='color:black; '>table_stop</span><span style='font-family:宋体; color:black;'>：</span><span lang=EN-US style='color:black;'>TABLE</span><span style=' font-family:宋体;color:black;'>结束位置，减去起始位置为采样个数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:center 207.65pt;'><span lang=EN-US style='color:black; '>p0~p7</span><span style='font-family:宋体; color:black;'>：采样数据类型，等分存储在</span><span lang=EN-US style='color:black;'>TABLE</span><span style=' font-family:宋体;color:black;'>范围</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>BASE(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ATYPE=1</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>UNITS=100</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>DPOS=0</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>SPEED=100</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ACCEL=1000</span></p>
+<p class=MsoNormal style='margin-left:42.15pt;text-indent:-42.15pt; layout-grid-mode:char;'><b><span lang=EN-US>SCOPE</span></b><span lang=EN-US>(ON,10,0,1000,DPOS(0),MSPEED(0)) &nbsp;&nbsp;'</span><span style='font-family:宋体;'>每隔</span><span lang=EN-US>10ms</span><span style='font-family:宋体; '>抓取</span><span lang=EN-US>dpos</span><span style='font-family:宋体;'>和</span><span lang=EN-US>mspeed</span><span style='font-family:宋体;'>存储在</span><span lang=EN-US>'TABLE 0~999</span><span style='font-family:宋体;'>，</span><span lang=EN-US>0~499</span><span style='font-family:宋体;'>存</span><span lang=EN-US>dpos</span><span style='font-family:宋体;'>，</span><span lang=EN-US>500~999</span><span style='font-family:宋体;'>存</span><span lang=EN-US>mspeed</span><span style='font-family:宋体;'>共采样</span><span lang=EN-US>1000/2*10=5s</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>开始抓取</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE(10000)</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><a href="516.html#_TRIGGER_--_触发示波器"><span lang=EN-US>TRIGGER</span></a><span style=' font-family:宋体;color:black;'>，</span><a href="518.html#_SCOPE_POS_--_采样点数"><span lang=EN-US>SCOPE_POS</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="518.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="516.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

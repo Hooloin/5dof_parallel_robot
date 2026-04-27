@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_TkFitSimilarity -- 估计相似矩阵</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1223.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1221.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc25078"><span lang=EN-US>ZV_TkFitSimilarity -- </span></a><span style='font-family: 宋体;'>估计相似矩阵</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>变换</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>根据多点（至少</span><span lang=EN-US>2</span><span style='font-family:宋体; '>对）使用</span><span lang=EN-US>RANSAC</span><span style='font-family:宋体; '>（随机采样一致性）算法估计相似变换矩阵。</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体; '>相似变换：</span></b><span style=' font-family:宋体;'>是对图形进行变换的一种变换类型，能对图形进行旋转、缩放、平移等变换，变换前后长度比、夹角保持不变，其与相似三角形类似，同理也可对空间二维坐标进行变换。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>根据前后点对估计相似变换矩阵意味着前后点对可能并不是完全绝对的一一对应，可能会存在一定的偏差，偏差大于</span><span lang=EN-US>thresh</span><span style='font-family:宋体; '>的点视为离群点，小于等于</span><span lang=EN-US>thresh</span><span style='font-family:宋体; '>的点视为内联点，在估计过程中会剔除离群点而最终使用剩余的内联点来估计矩阵，估计出的矩阵会使得变换前后的点误差最小。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_EstSimilarity</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>ZV_TkFitSimilarity(from,to,mat,thresh,confidence,tabId)</span></p>
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>from</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，变换前的点，矩阵表示</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>to</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，变换后的点，矩阵表示</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mat</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，矩阵类型，估计的变换矩阵，</span><span lang=EN-US>2</span><span style='font-family:宋体; '>行</span><span lang=EN-US>3</span><span style='font-family:宋体; '>列</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>thresh</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>点的投影误差阈值，误差小于等于</span><span lang=EN-US>thresh</span><span style=' font-family:宋体;'>的点视为内内联点，建议值</span><span lang=EN-US>3</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>confidence</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>置信度，范围</span><span lang=EN-US>0-100</span><span style=' font-family:宋体;'>之间，用于矩阵的估计，通常在</span><span lang=EN-US>95</span><span style=' font-family:宋体;'>和</span><span lang=EN-US>99</span><span style=' font-family:宋体;'>之间就足够了，建议</span><span lang=EN-US>99</span><span style=' font-family:宋体;'>，太接近</span><span lang=EN-US>100</span><span style=' font-family:宋体;'>会降低估计速度，低于</span><span lang=EN-US>80-90</span><span style=' font-family:宋体;'>可能会导致估计不准确</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabId</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，输出参数，对应输入参数</span><span lang=EN-US>from</span><span style='font-family:宋体; '>或</span><span lang=EN-US>to</span><span style='font-family:宋体; '>点集在迭代后点的选中状态，即内联点的选中状态为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>，离群点的选中状态为</span><span lang=EN-US>0</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mat_src,mat_dst,mat_affine</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,0,0,2,2,5,5) '</span><span style='font-family:宋体;'>变换前的点坐标</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGenData(mat_src,3,2,0) '</span><span style='font-family:宋体;'>变换前的点矩阵</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(10,1,0,7,10,5,3) '</span><span style='font-family:宋体;'>变换后的点坐标</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGenData(mat_dst,3,2,10) '</span><span style='font-family:宋体;'>变换后的点矩阵</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_TkFitSimilarity(mat_src,mat_dst,mat_affine,3,99,0) '</span><span style='font-family:宋体;'>估计相似变换矩阵</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1223.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1221.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

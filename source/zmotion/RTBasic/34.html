@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MPULSCAN -- 振镜运动2</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="35.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="33.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697828"><span lang=EN-US>MPULSCAN -- </span></a><span style='font-family:宋体;'>振镜运动</span><span lang=EN-US>2</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>运动指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;'>不带加减速的运动指令，单位为脉冲个数。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>使用</span><span lang=EN-US>FORCE_SPEED</span><span style='font-family:宋体;'>与矢量距离直接计算出运行时间，使用</span><span lang=EN-US>FORCE_SPEED</span><span style='font-family:宋体;'>与矢量距离直接计算出运行时间，例如振镜矢量距离</span><span lang=EN-US>1</span><span style='font-family:宋体;'>，</span><span lang=EN-US>FORCE_SPEED=10000</span><span style='font-family:宋体;'>，运动时间为</span><span lang=EN-US>1/10000</span><span style='font-family:宋体;'>，单位</span><span lang=EN-US>s</span><span style='font-family:宋体;'>，即</span><span lang=EN-US>100us</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>支持</span><span lang=EN-US>MPULSCANABS</span><span style='font-family:宋体;'>绝对运动。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>可以与</span><span lang=EN-US>MOVE_WAIT</span><span style='font-family:宋体;'>、</span><span lang=EN-US>MOVE_OP</span><span style='font-family:宋体;'>一起实现</span><span lang=EN-US>us</span><span style='font-family:宋体;'>级别的时间控制。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>非振镜轴类型也可以使用，但要自己分段控制速度来做加减速。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>这个指令没有拐角减速，必须增加</span><span lang=EN-US>MOVE_DELAY </span><span style='font-family:宋体;'>来实现延时减速。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>20220225</span><span style='font-family:宋体;'>以上固件支持。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;layout-grid-mode:char;'><span lang=EN-US style='color:black;'>MPULSCAN vectpul, pul1[,pul 2] [,pul 3]…</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; layout-grid-mode:char;'><span lang=EN-US>vectpul</span><span style='font-family:宋体;'>：矢量脉冲长度，外面计算出来，减少控制器执行时间</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; layout-grid-mode:char;'><span lang=EN-US>pul1,2,3</span><span style='font-family:宋体;'>：各轴的脉冲距离或长度，直接使脉冲单位，不再进行</span><span lang=EN-US>UNITS</span><span style='font-family:宋体;'>转换</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>振镜控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(4,5)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=21,21</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>FORCE_SPEED=1000,1000&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>振镜运动速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>AXIS_ZSET=2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>开启精准输出</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(0,1) </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MPULSCANABS 50,30,40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>振镜运动，矢量长度</span><span lang=EN-US style='color:black;'>50</span><span style='font-family:宋体;color:black;'>个脉冲，轴</span><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体;color:black;'>运动</span><span lang=EN-US style='color:black;'>30</span><span style='font-family:宋体;color:black;'>，周五运动</span><span lang=EN-US style='color:black;'>40</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_DELAY(0.2)&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;'</span><span style='font-family:宋体; color:black; '>延时</span><span lang=EN-US style='color:black;'>200us</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(0,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>输出</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>振镜轴运动轨迹如下</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(4)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>20</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(5)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>20</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=866 height=569 src="doc.files/image132.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="33.html#_MOVESCAN_--_振镜运动"><span lang=EN-US>MOVESCAN</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="35.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="33.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

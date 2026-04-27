@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVE_ HWTIMER -- 缓冲硬件定时</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="59.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="57.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697851"><span lang=EN-US>MOVE_ HWTIMER -- </span></a><span style='font-family:宋体;'>缓冲硬件定时</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>特殊运动指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>把</span></b><b><span lang=EN-US>HW_TIMER</span></b><b><span style='font-family:宋体;'>指令写入运动缓冲，在运动缓冲中执行硬件定时。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数同</span><span lang=EN-US>HW_TIMER</span><span style='font-family:宋体;'>，支持动态修改</span><span lang=EN-US>HW_TIMER</span><span style='font-family:宋体; '>的参数，必须支持</span><span lang=EN-US>HW</span><span style='font-family:宋体; '>功能的控制器。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>触发</span><span lang=EN-US>HW_TIMER</span><span style='font-family:宋体;'>必须使用</span><span lang=EN-US>MOVE_OP</span><span style='font-family:宋体; '>指令，</span><span lang=EN-US>OP</span><span style='font-family:宋体; '>无法触发。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>不使用</span><span lang=EN-US>HW_TIMER</span><span style='font-family:宋体;'>时，调用模式</span><span lang=EN-US>0</span><span style='font-family:宋体;'>关闭，否则会对后续输出有影响。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>MOVE_ HWTIMER (mode, [...])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>mode</span><span style='font-family:宋体;'>：模式</span><span lang=EN-US>0/1/2/3/4</span><span style='font-family:宋体;'>，不同需要填写的参数也有所差异，参见</span><span lang=EN-US>HW_TIMER</span><span style='font-family:宋体; '>语法说明与例程。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span><span lang=EN-US style='color:black; '>(</span><span style='font-family:宋体;'>支持</span><span lang=EN-US>HW/HW2</span><span style='font-family:宋体;'>功能的控制器</span><span lang=EN-US style='color:black;'>)</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span lang=EN-US>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US>SPEED=100</span></p>
+<p class=MsoNormal><span lang=EN-US>ACCEL=500</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE_OP(0, OFF)</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE_HWTIMER(2,1000000,200000,5,OFF,0)&nbsp; '</span><span style='font-family:宋体; '>输出口</span><span lang=EN-US>0</span><span style='font-family:宋体; '>变为</span><span lang=EN-US>on</span><span style='font-family: 宋体; '>后，硬件定时器触发开始计时，</span><span lang=EN-US>500ms </span><span style='font-family:宋体; '>后切换为</span><span lang=EN-US>off</span><span style='font-family: 宋体; '>，周期</span><span lang=EN-US>5</span><span style='font-family:宋体; '>次</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE_OP(0, ON)</span></p>
+<p class=MsoNormal><span lang=EN-US>END</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=854 height=425 src="doc.files/image199.jpg" ></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="404.html#_HW_TIMER_--_硬件定时_1">HW_TIMER</a></span><span style='font-family:宋体; '>，</span><span lang=EN-US><a href="406.html#_HW_PSWITCH2_--_总线硬件位置比较输出_1">HW_PSWITCH2</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="59.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="57.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

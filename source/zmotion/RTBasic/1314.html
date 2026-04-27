@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZG_VIEWSIMU -- 显示仿真视图</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1315.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1313.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;margin-left: 0cm'><a name="_Toc85612088"></a><a name="_Toc80713321"></a><a name="_ZG_VIEWSIMU_--_显示仿真视图"></a><span lang=EN-US>ZG_VIEWSIMU -- </span><span style='font-family:宋体;'>显示仿真视图</span></h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;background:#BDD6EE; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>类型</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>仿真指令</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>描述</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>刷新显示仿真视图</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;color:red'>只能在自定义控件的绘图函数中使用</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>语法</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>ZG_VIEWSIMU ([plane[, offset1, offset2[, zoom[,rotX,rotY,rotZ]]]])&nbsp; </span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; plane</span><span style='font-family:宋体;'>：显示平面，缺省</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; offset1</span><span style='font-family:宋体;'>，</span><span lang=EN-US>offset2</span><span style='font-family:宋体;'>：视图平面偏移（像素），缺省</span><span lang=EN-US>(0,0)</span><span style='font-family:宋体;'>，居中</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>表示坐标系原点在视图中心</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; zoom</span><span style='font-family:宋体;'>：缩放比例，缺省为</span><span lang=EN-US>1.0</span><span style='font-family:宋体;'>，不缩放</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rotX</span><span style='font-family:宋体;'>：视图绕</span><span lang=EN-US>X</span><span style='font-family:宋体;'>轴旋转角度，</span><span lang=EN-US>0~360</span><span style='font-family:宋体;'>，负数表示以</span><span lang=EN-US>X</span><span style='font-family:宋体;'>对称做镜像</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rotY</span><span style='font-family:宋体;'>：视图绕</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>轴旋转角度，</span><span lang=EN-US>0~360</span><span style='font-family:宋体;'>，负数表示以</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>对称做镜像</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rotZ</span><span style='font-family:宋体;'>：视图绕</span><span lang=EN-US>Z</span><span style='font-family:宋体;'>轴旋转角度，</span><span lang=EN-US>0~360</span><span style='font-family:宋体;'>，负数表示以</span><span lang=EN-US>Z</span><span style='font-family:宋体;'>对称做镜像</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm;text-indent:20.25pt'><span lang=EN-US style='color:red'>rotX</span><span style='font-family:宋体;color:red'>，</span><span lang=EN-US style='color:red'>rotY</span><span style='font-family:宋体; color:red'>，</span><span lang=EN-US style='color:red'>rotZ</span><span style='font-family:宋体;color:red'>旋转为顺时针旋转，大于</span><span lang=EN-US style='color:red'>360</span><span style='font-family:宋体;color:red'>会自动取余，注意</span><span lang=EN-US style='color:red'>0</span><span style='font-family:宋体;color:red'>无正负，可用</span><span lang=EN-US style='color:red'>-360</span><span style='font-family:宋体; color:red'>来表示</span><span lang=EN-US style='color:red'>0</span><span style='font-family:宋体;color:red'>度旋转且镜像</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm;text-indent:20.25pt'><span lang=EN-US>&nbsp;</span></p>
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 style='margin-left:22.8pt;border-collapse:collapse;border:none;'> <tr> <td width=149 valign=top style='width:63.75pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span lang=EN-US>plane</span></p>
+</td> <td width=347 valign=top style='width:148.85pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>参数说明</span></p>
+</td> </tr> <tr> <td width=149 style='width:63.75pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span lang=EN-US>0</span></p>
+</td> <td width=347 valign=top style='width:148.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>显示</span><span lang=EN-US>XY</span><span style='font-family:宋体; '>平面</span></p>
+</td> </tr> <tr> <td width=149 style='width:63.75pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span lang=EN-US>1</span></p>
+</td> <td width=347 valign=top style='width:148.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>显示</span><span lang=EN-US>YZ</span><span style='font-family:宋体; '>平面</span></p>
+</td> </tr> <tr> <td width=149 style='width:63.75pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span lang=EN-US>2</span></p>
+</td> <td width=347 valign=top style='width:148.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>显示</span><span lang=EN-US>ZX</span><span style='font-family:宋体; '>平面</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>适用控制器</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>例子</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1315.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1313.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

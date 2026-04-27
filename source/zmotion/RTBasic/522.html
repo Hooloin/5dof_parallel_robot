@@ -1,0 +1,192 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>VRSTRING -- 掉电保存字符串</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="523.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="521.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698324"><span lang=FR>VRSTRING </span><span lang=EN-US>-- </span></a><span style='font-family:宋体;'>掉电保存字符串</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>字符串函数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>用</span></b><b><span lang=EN-US style='color:black;'>VR</span></b><b><span style='font-family:宋体;color:black;'>来存储字符串。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>保存</span><span lang=EN-US style='color:red; '>ASCII</span><span style='font-family:宋体;color:red; '>码，与</span><span lang=EN-US style='color:red;'>VR</span><span style='font-family:宋体; color:red;'>和</span><span lang=EN-US style='color:red;'>VR_INT</span><span style='font-family:宋体;color:red;'>共用一个空间，一个字符占用一个</span><span lang=EN-US style='color:red;'>VR</span><span style='font-family:宋体;color:red;'>。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>VRSTRING (index[, chares])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>index</span><span style='font-family:宋体;color:black;'>：起始的</span><span lang=EN-US style='color:black;'>VR</span><span style='font-family:宋体;color:black;'>编号，编号从</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>开始</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US>chares</span><span style='font-family: 宋体; color:black;'>：读取的字符总数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>在线命令输入</span></p>
+<p class=MsoNormal style='tab-stops:123.6pt;'><span lang=EN-US>&gt;&gt; <b>VRSTRING</b> (0, 8) = &quot;abc&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>保存字符串</span></p>
+<p class=MsoNormal style='tab-stops:123.6pt;'><span lang=EN-US style='color:black;'>&gt;&gt;PRINT&nbsp; </span><b><span lang=EN-US>VRSTRING</span></b><span lang=EN-US> (0, 8)</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>输出：</span><span lang=EN-US style='color:black;'>abc</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="520.html#_VR_--_掉电保存_1">VR</a></span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US><a href="520.html#_VR_INT"><span style='color:#9999CC;'>VR_INT</span></a></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体;'>控制卡指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体;'>读取控制卡信息</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>var = CARD_INFO (cardnum, sel)</span></p>
+<p class=MsoNormal><span lang=EN-US>cardnum</span><span style='font-family:宋体;'>：子卡号，</span><span lang=EN-US>0-N-1&nbsp; </span><span style='font-family:宋体; '>（</span><span lang=EN-US>N</span><span style='font-family:宋体; '>：控制卡数量。无子卡时，</span><span lang=EN-US>N</span><span style='font-family:宋体;'>为</span><span lang=EN-US>-1</span><span style='font-family: 宋体;'>）</span></p>
+<p class=MsoNormal><span lang=EN-US>sel</span><span style='font-family:宋体;'>：信息编号</span></p>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=860 style='width:13.0cm;margin-left:22.8pt;border-collapse:collapse;'> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span style=' font-family:宋体;'>值</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span style=' font-family:宋体;'>描述</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>0</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>返回子卡的总数，</span><span style='font-family:宋体;'>此时</span><span lang=EN-US>cardnum</span><span style='font-family:宋体; '>填</span><span lang=EN-US>0</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>1</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=DA>DEVICE</span><span style=' font-family:宋体;'>，设备编号，</span><span lang=EN-US>hardid.</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>2</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=DA>VERSION</span><span style=' font-family:宋体;'>，版本</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>3</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>子卡拨码，</span><span lang=DA>PCI</span><span style='font-family:宋体; '>才有</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>4</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>预留</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>5</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>子卡唯一编号，最后一个</span><span lang=DA>PCI</span><span style='font-family:宋体; '>子卡的唯一编号作为</span><span lang=DA>RT</span><span style='font-family:宋体;'>的唯一编号</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>6</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>预留特</span></p>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>编号</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char;'><span lang=DA>7</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>预留</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>8</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=DA>IO</span><span style=' font-family:宋体;'>偏移，</span><span lang=DA>8</span><span style='font-family:宋体; '>对齐，上电缺省会自动排列</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>9</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=DA>AIO</span><span style=' font-family:宋体;'>偏移</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>10</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=DA>IN</span><span style=' font-family:宋体;'>个数</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>11</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=DA>OP</span><span style=' font-family:宋体;'>个数</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>12</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=DA>AIN</span><span style=' font-family:宋体;'>个</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>13</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=DA>AOUT</span><span style=' font-family:宋体;'>个数</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=EN-US>14</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>预留</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>15</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=EN-US>HW</span><span style='font-family:宋体; '>的</span><span lang=EN-US>OP</span><span style=' font-family:宋体;'>个数</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>16</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>脉冲轴个数</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>17</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>编码器轴个数</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>18</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=DA>Ecat</span><span style=' font-family:宋体;'>总线个数</span><span lang=DA> 0/1</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>19</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=EN-US>scan</span><span style='font-family:宋体; '>个数</span><span lang=EN-US> 0/1</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>20</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=EN-US>3D</span><span style='font-family:宋体; '>振镜个数</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>21</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>掉电支持，</span><span lang=EN-US>VR</span><span style=' font-family:宋体;'>个数，</span><span lang=EN-US>XPCI</span><span style='font-family:宋体; '>一般不带</span><span lang=EN-US>VR</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>22</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=EN-US>VR</span><span style='font-family:宋体; '>的</span><span lang=EN-US>offset</span><span style='font-family:宋体;'>，自动编号</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>23</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span lang=EN-US>PWM</span><span style='font-family:宋体; '>个数</span></p>
+</td> </tr> <tr style='height:17.15pt'> <td width=108 nowrap style='width:46.4pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal align=center style='text-align:center;layout-grid-mode:char'><span lang=DA>24</span></p>
+</td> <td width=752 nowrap style='width:322.15pt;padding:0cm 5.4pt 0cm 5.4pt; height:17.15pt'>
+<p class=MsoNormal style='layout-grid-mode: char'><span style='font-family:宋体;'>子卡上的</span><span lang=EN-US>PWM</span><span style=' font-family:宋体;'>起始编号</span></p>
+</td> </tr> </table>
+<p class=MsoNormal></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>GLOBAL&nbsp; value</span></p>
+<p class=MsoNormal><span lang=EN-US>value=CARD_INFO( 0 - -1 - 1 , 1 )&nbsp; </span><span style='font-family:宋体;'>读取控制卡设备编号</span></p>
+<p class=MsoNormal><span lang=EN-US>?value</span></p>
+<p class=MsoNormal><span lang=EN-US>end</span></p>
+</td> </tr> </table>
+<p class=MsoNormal><a name="_Toc134698331"></a><a name="_Toc9657"></a><a name="_Toc20032"></a><a name="_Toc20133"></a><a name="_Toc17753"></a><a name="_VRSTRING_--_掉电保存字符串_1"></a><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="523.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="521.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

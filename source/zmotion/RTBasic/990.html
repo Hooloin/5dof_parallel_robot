@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ImpPolarInv -- 极坐标逆变换</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="991.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="989.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_ZV_ImpPolarInv_--_极坐标逆变换"></a><a name="_Toc8713"><span lang=EN-US>ZV_ImpPolarInv -- </span></a><span style='font-family:宋体;'>极坐标逆变换</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>几何变换</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>图像极坐标逆变换，转回极坐标系</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpPolarInv(src</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>,</span><span lang=EN-US>dst,</span><span lang=EN-US style='font-family:"Calibri","sans-serif";'>cx,cy,rStart,rEnd,aStart,aEnd,width,height</span><span lang=EN-US>[,interp=1,border=&quot;0&quot;])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>src</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>ZVOBJECT</span><span style='font-family:宋体;'>类型，</span><span style='font-family:宋体;'>原图像，</span><span style=' font-family:宋体;'>单通道或三通道</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dst</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，变换后的图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cx</span></b><b><span style='font-family:宋体;'>：</span></b><span style=' font-family:宋体;color:black'>扇环</span><span style='font-family:宋体;'>中心的</span><span lang=EN-US>x</span><span style='font-family:宋体;'>坐标，范围</span><span lang=EN-US>[-65532, 65532]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cy</span></b><b><span style='font-family:宋体;'>：</span></b><span style=' font-family:宋体;color:black'>扇环</span><span style='font-family:宋体;'>中心的</span><span lang=EN-US>y</span><span style='font-family:宋体;'>坐标，范围</span><span lang=EN-US>[-65532, 65532]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>rStart</span></b><b><span style='font-family:宋体;'>：</span></b><span style=' font-family:宋体;color:black'>扇环</span><span style='font-family:宋体;'>起始半径，范围</span><span lang=EN-US>[0, 32766]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>rEnd</span></b><b><span style='font-family:宋体;'>：</span></b><span style=' font-family:宋体;color:black'>扇环</span><span style='font-family:宋体;'>终止半径，范围</span><span lang=EN-US>[0, 32766]</span><span style='font-family:宋体;'>，</span><span lang=EN-US>rEnd</span><span style='font-family:宋体;'>不等于</span><span lang=EN-US>rStart</span><span style='font-family:宋体;'>，高度方向对应从</span><span lang=EN-US>rStart</span><span style='font-family:宋体;'>到</span><span lang=EN-US>rEnd</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>aStart</span></b><b><span style='font-family:宋体;'>：</span></b><span style=' font-family:宋体;color:black'>扇环</span><span style='font-family:宋体;'>的起始角度，范围</span><span lang=EN-US>[-180, 180]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>aEnd</span></b><b><span style='font-family:宋体;'>：</span></b><span style=' font-family:宋体;color:black'>扇环</span><span style='font-family:宋体;'>的结束角度，范围</span><span lang=EN-US>[-540, 540]</span><span style='font-family:宋体;'>，圆弧方向由起始角度决定，当结束角度大于起始角度时，为顺时针，反之为逆时针。</span><span lang=EN-US>aEnd</span><span style='font-family:宋体;'>可超过</span><span lang=EN-US>-180/180</span><span style='font-family:宋体;'>，以正常描述走向</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>width</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>变换后的图像宽度，范围</span><span lang=EN-US>[0, 32766]</span><span style='font-family:宋体;'>，超出图像尺寸的部分将被舍弃，为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>则取宽度为</span><span lang=EN-US>cx+</span><span style='font-family:宋体;'>外环半径，浮点数向上取整</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>height</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>变换后的图像高度，范围</span><span lang=EN-US>[0, 32766]</span><span style='font-family:宋体;'>，超出图像尺寸的</span><span style='font-family:宋体;'>部分</span><span style='font-family:宋体;'>将被舍弃</span><span style='font-family:宋体;'>，为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>则取高度为</span><span lang=EN-US>cy+</span><span style='font-family:宋体;'>外环半径，浮点数向上取整</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><b><span lang=EN-US>interp</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>插值算法，默认双线性插值，参考</span><a title="Not Found Page:#_ZV_ImpRotate -- 旋转"><span style=' font-family:宋体;color:#9999CC'>旋转</span></a></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>border</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>字符串类型，边界处理方式，默认值</span><span lang=EN-US>&quot;0&quot;</span><span style=' font-family:宋体;'>，超出图像部分补</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>填充，参考</span><a title="Not Found Page:#_ZV_ImpAffine -- 图像仿射变换"><span style=' font-family:宋体;color:#9999CC'>仿射变换</span></a></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,transImg</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_READIMAGE(img,&quot;zv_cont_polar.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpPolarInv(img,transImg,428.28,416.45,331.74,356.74,-180,-540,0,0)</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>相关指令</span></b></p>
+</td>  <td width="82%" style='width:82.64%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a title="Not Found Page:#_ZV_ImpPolar -- 极坐标变换"><span lang=EN-US style='color:#9999CC'>ZV_ImpPolar</span></a><span style=' font-family:宋体;'>、</span><a title="Not Found Page:#_ZV_ImpAffine -- 图像仿射变换"><span lang=EN-US style='color:#9999CC'>ZV_ImpAffine</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="991.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="989.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

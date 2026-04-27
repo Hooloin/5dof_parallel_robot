@@ -1,0 +1,105 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>PSWITCH -- 软件位置比较输出</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="403.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="401.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_PSWITCH"></a><a name="_Toc134698190"></a><a name="_Toc30429"></a><a name="_Toc15475"></a><a name="_Toc11233"></a><a name="_Toc28381"></a><a name="_Toc349071502"></a><a name="_PSWITCH_--_软件位置比较输出"></a><span lang=EN-US>PSWITCH</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>软件位置比较输出</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>输入输出指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>根据位置比较来操作输出口。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>如果多个</span><span lang=EN-US style='color: red;'>PSWITCH</span><span style='font-family:宋体; color:red;'>操作同一个输出口，需要编号顺序排在一起。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>使用脉冲型电机时只有</span><span lang=EN-US style='color:red;'>ATYPE</span><span style='font-family: 宋体; color:red;'>为</span><span lang=EN-US style='color:red; '>4</span><span style='font-family:宋体;color:red; '>时才是比较反馈位置</span><span lang=EN-US style='color:red; '>(MPOS)</span><span style='font-family:宋体;color:red; '>，默认出厂的</span><span lang=EN-US style='color:red; '>ATYPE</span><span style='font-family:宋体;color:red; '>为</span><span lang=EN-US style='color:red;'>1</span><span style='font-family:宋体; color:red;'>或</span><span lang=EN-US style='color:red;'>7</span><span style='font-family:宋体;color:red;'>比较的是命令位置</span><span lang=EN-US style='color:red;'>(DPOS)</span><span style='font-family:宋体;color:red;'>。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>PSWITCH(num,enable,[,axis,op num,op state,set pos,reset pos])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>num</span><span style='font-family:宋体; color:black;'>：比较器的编号，</span><span lang=EN-US style='color:black;'>ZMC1xx</span><span style='font-family:宋体;color:black;'>系列有</span><span lang=EN-US style='color:black;'>16</span><span style='font-family:宋体;color:black;'>个比较器，编号：</span><span lang=EN-US style='color:black;'>0-15</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>enable</span><span style='font-family:宋体; color:black;'>：操作比较器的使能</span><span lang=EN-US style='color:black;'> - ON </span><span style='font-family:宋体;color:black;'>启动</span><span lang=EN-US style='color:black;'> / OFF </span><span style='font-family:宋体;color:black;'>取消</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>axis</span><span style='font-family:宋体; color:black;'>：指定要获取位置的轴号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>op num</span><span style='font-family:宋体; color:black;'>：操作的</span><span lang=EN-US style='color:black;'>IO</span><span style='font-family:宋体;color:black;'>编号</span> </p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>op state</span><span style='font-family:宋体; color:black;'>：输出的状态，</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>表示在下面位置范围内输出为</span><span lang=EN-US style='color:black;'>ON</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>0</span><span style='font-family: 宋体; color:black;'>表示在下面位置范围内输出为</span><span lang=EN-US style='color:black;'>OFF </span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>set pos</span><span style='font-family:宋体; color:black;'>：设定产生输出的起始位置，采用</span><span lang=EN-US style='color:black;'>units</span><span style='font-family:宋体;color:black;'>单位</span> </p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>reset pos</span><span style='font-family:宋体; color:black;'>：设定输出复位的位置，采用</span><span lang=EN-US style='color:black;'>units</span><span style='font-family:宋体;color:black;'>单位</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>不同型号控制器支持的比较器个数不同，使用</span><span lang=EN-US style='color:black;'>?*max</span><span style='font-family:宋体;color:black;'>指令打印查看</span><span lang=EN-US style='color:black;'>max_pswitch</span><span style='font-family:宋体;color:black;'>参数确认个数。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DELAY(1000)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ERRSWITCH = 3&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>选择轴号</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1&nbsp;&nbsp;&nbsp; &nbsp;'</span><span style='font-family:宋体; color:black;'>脉冲方式步进或伺服</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS = 0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS = 1,1&nbsp; &nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;color:black;'>脉冲当量</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED = 10000,10000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=SPEED(0)*10,SPEED(1)*10</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=SPEED(0)*10,SPEED(1)*10</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REP_OPTION=1,1&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>设置坐标循环范围为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>到</span><span lang=EN-US style='color:black;'>+ REP_DIST</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REP_DIST=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(10000,8000)</span></p>
+<p class=MsoNormal><b><span lang=EN-US style='color:black;'>PSWITCH</span></b><span lang=EN-US style='color:black;'>(0,ON,0,0,ON,500,520)</span></p>
+<p class=MsoNormal><b><span lang=EN-US style='color:black;'>PSWITCH</span></b><span lang=EN-US style='color:black;'>(1,ON,1,1,ON,300,400)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>10000</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>OP(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1</span><span style=' font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>2000</span><span style='font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-2000</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>MSPEED (0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>10000</span><span style='font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-10000</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>OP(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>5</span><span style=' font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-1</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=854 height=635 src="doc.files/image443.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>以上例程，仅修改如下指令，得出波形如下图。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REP_OPTION=0,0&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>设置坐标循环范围为</span><span lang=EN-US style='color:black;'>- REP_DIST</span><span style='font-family:宋体;color:black;'>到</span><span lang=EN-US style='color:black;'>+ REP_DIST</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>10000</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>OP(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1</span><span style=' font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>2000</span><span style='font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-2000</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>MSPEED (0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>10000</span><span style='font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-10000</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>OP(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>5</span><span style=' font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>-1</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=872 height=718 src="doc.files/image445.jpg" ></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US><a href="403.html#_HW_PSWITCH">HW_PSWITCH</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="403.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="401.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>PUTCHAR# -- 输出字符</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="425.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="423.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_PUTCHAR__#"></a><a name="_Toc134698215"></a><a name="_Toc3660"></a><a name="_Toc12231"></a><a name="_Toc32618"></a><a name="_Toc8243"></a><a name="_PUTCHAR__#_1"></a><span lang=FR>PUTCHAR#</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>输出字符</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>系统指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>从</span></b><b><span lang=FR style='color:black;'>RAW</span></b><b><span style='font-family:宋体;color:black;'>方式通讯或自定义网口通讯的通道口输出字符</span></b><b><span style='font-family:宋体;color:black;'>，</span></b><b><span style='font-family:宋体;color:black;'>数组可以代表多个字符。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;color:black;'>每次调用都是一个</span><span lang=EN-US style='color:black;'>UDP</span><span style='font-family:宋体;color:black;'>包发送。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span lang=EN-US>PUTCHAR#</span><span style='font-family:宋体; '>发送数据为二进制数值，多个数据逗号隔开，不能直接发送字符串，如下所示：</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=649 height=160 src="doc.files/image538.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=649 height=161 src="doc.files/image540.jpg" ></span><span lang=EN-US>&nbsp;<img border=0 width=860 height=139 src="doc.files/image542.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>PUTCHAR#</span><span style='font-family:宋体; '>发送数组为二进制数值，遇</span><span lang=EN-US>0</span><span style='font-family:宋体; '>输出为</span><span lang=EN-US>0</span><span style='font-family: 宋体; '>，会将整个数组完全发送，所以要确保数组数据正确，如下所示：</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=667 height=163 src="doc.files/image544.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=667 height=163 src="doc.files/image546.jpg" ></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>PUTCHAR#PORT, </span><span style='font-family:宋体;color:black;'>字符</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>port</span><span style='font-family:宋体; color:black;'>：通道号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>PUTCHAR#PORT, ARRAY(INDEX, NUMES)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>port</span><span style='font-family:宋体; color:black;'>：通道号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>index</span><span style='font-family:宋体; color:black;'>：开始输出的位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>numes</span><span style='font-family:宋体; color:black;'>：输出的字节个数</span><span lang=EN-US style='color:black;'>, </span><span style='font-family:宋体;color:black;'>二进制方式</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>DIM VAR1, ARRAY1(10)</span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>定义数组</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>VAR1 = $FE</span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>数组</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>赋值</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>ARRAY1 = &quot;ABCDEFGHIJ&quot;</span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>数组</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>赋值</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>SETCOM(38400,8,1,0,0,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>开启</span><span lang=FR style='color:black;'>RAW</span><span style='font-family:宋体;color:black;'>方式</span></p>
+<p class=MsoNormal style='tab-stops:357.85pt;layout-grid-mode:char; '><b><span lang=FR style='color:black;'>PUTCHAR#</span></b><span lang=FR style='color:black; '>0, VAR1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="OLE_LINK9">'</a></span><span style='font-family:宋体;color:black;'>从通道</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>输出</span><span style='font-family:宋体;color:black;'>数组</span><span lang=FR style='color:black;'>1</span><span style='font-family:宋体;color:black;'>数据</span></p>
+<p class=MsoNormal style='tab-stops:357.85pt;layout-grid-mode:char; '><b><span lang=FR style='color:black;'>PUTCHAR#</span></b><span lang=FR style='color:black; '>0, ARRAY1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>从通道</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>输出数组</span><span lang=FR style='color:black;'>2</span><span style='font-family:宋体;color:black;'>数据</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="431.html#_PORT_--_通道编号">PORT</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="410.html#_SETCOM_--_串口配置_1"><span lang=FR>SETCOM</span></a></span><span style='font-family: 宋体; '>，</span><span lang=EN-US><a title="Not Found Page:#_GET#_--_读取字符">GET#</a></span><span class=MsoHyperlink><span style='font-family:宋体; '>，</span></span><span lang=EN-US><a title="Not Found Page:#_PRINT#_--_输出字符串"><span lang=FR>PRINT#</span></a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="425.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="423.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

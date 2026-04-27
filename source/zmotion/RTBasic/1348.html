@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CAD_MACHTYPE -- 机器类型</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1349.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1347.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc169704943"></a><a name="_Toc129157814"><span lang=EN-US>CAD_MACHTYPE -- </span></a><span style='font-family:宋体;'>机器类型</span></h3>
+
+<p class=MsoNormal style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt; margin-left:0cm;text-indent:20.0pt;'><span style='font-size:10.0pt;font-family:宋体;'>针对不同的非标设备时，</span><span lang=EN-US style='font-size:10.0pt;'>CAD</span><span style='font-size:10.0pt; font-family:宋体; '>只需要根据用户其特殊结构需求，底层增加一个机器类型即可。支持之后，无需用户其他繁琐的配置，使用该指令设置一下对应机器类型即可，在导出生成代码时会自动根据机械类型生成相匹配的加工代码，用户导出即可加工。</span></p>
+<table class=basic border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>CAD</span><span style='font-family:宋体; '>指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-family:宋体;'>设置机器类型，</span><span lang=EN-US>CAD</span><span style='font-family:宋体; '>会根据机器类型智能地输出相对应的加工代码。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>CAD_</span><span lang=EN-US>MACHTYPE</span><span lang=EN-US> (type [, strAxises [,axis1[,axis2[,..]]]])</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US>type</span><span style=' font-family:宋体;'>：机器类型</span></p>
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none;'> <tr> <td width="15%" valign=top style='width:15.0%;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>0</span></p>
+</td> <td width="85%" valign=top style='width:85.0%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>通用三轴机床（</span><span lang=EN-US>XYZ</span><span style='font-family:宋体;'>），默认</span></p>
+</td> </tr> <tr> <td width="15%" valign=top style='width:15.0%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>1</span></p>
+</td> <td width="85%" valign=top style='width:85.0%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>特殊三轴钻孔机床（</span><span lang=EN-US>XYZ</span><span style='font-family:宋体;'>），自动过滤曲线，只导出钻孔相关代码。</span></p>
+</td> </tr> <tr> <td width="15%" valign=top style='width:15.0%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>11</span></p>
+</td> <td width="85%" valign=top style='width:85.0%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>通用二轴机床（</span><span lang=EN-US>XY</span><span style=' font-family:宋体;'>）</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span style='font-family: 宋体; color:red;'>需要增加其他机器类型可联系我们技术研发。</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US>strAxises</span><span style=' font-family:宋体;'>：重新指定导出轴名称，<span style='color:red'>导出</span></span><span lang=EN-US style='color:red;'>G</span><span style='font-family:宋体; color:red;'>代码时有效</span><span style='font-family:宋体; '>，可缺省。</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span style='font-family: 宋体; '>如指定四轴机床类型时，指定</span><span lang=EN-US>strAxises = ”XYZC”</span><span style='font-family:宋体;'>表示使用直线轴使用</span><span lang=EN-US>XYZ</span><span style='font-family:宋体; '>，旋转轴使用</span><span lang=EN-US>C</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span style='font-family: 宋体; '>建议使用</span><span lang=EN-US>XYZABCUVW</span><span style='font-family:宋体;'>这九个轴名称，目前支持</span><span lang=EN-US>A~Z</span><span style='font-family:宋体; '>字母</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US>Axis1~N</span><span style=' font-family:宋体;'>：重新指定</span><span lang=EN-US>basic</span><span style='font-family:宋体; '>轴号，<span style='color:red'>导出</span></span><span lang=EN-US style='color:red;'>basic</span><span style='font-family:宋体;color:red;'>时有效</span><span style='font-family:宋体; '>，缺省为</span><span lang=EN-US>0,1,2,…</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-family:宋体;'>支持</span><span lang=EN-US>ZHMI</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>’</span><span style='font-family:宋体; '>设置为通用三轴类型，并制定坐标轴名称为</span><span lang=EN-US>XYZ</span><span style='font-family:宋体; '>，绑定轴号</span><span lang=EN-US>0,1,2</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>CAD_</span><span lang=EN-US>MACHTYPE(0, “XYZ”, 0, 1, 2)</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt; margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1349.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1347.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

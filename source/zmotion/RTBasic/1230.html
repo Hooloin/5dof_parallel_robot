@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_TkCorrectSector -- 扇形补正</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1231.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1229.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc17012"><span lang=EN-US>ZV_TkCorrectSector -- </span></a><span style='font-family: 宋体;'>扇形补正</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.36%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.64%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>变换</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>对输入扇形</span><span lang=EN-US>ROI</span><span style='font-family:宋体; '>进行补正，通常扇形作为</span><span lang=EN-US>ROI</span><span style='font-family:宋体; '>参数结合定位偏移补正矩阵对</span><span lang=EN-US>ROI</span><span style='font-family:宋体; '>进行补正</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=664 height=195 src="doc.files/image1233.jpg" alt="说明: 30" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_SectCorrect</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_TkCorrectSector(mat,cx,cy,r1,r2,stAngle,extAngle,tabId)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mat</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，补正的变换矩阵</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cx</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入扇形中心</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cy</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入扇形中心</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>r1</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入扇形内圆半径，大于</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>r2</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入扇形外圆半径，大于</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>且</span><span lang=EN-US>r2 &gt; r1</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>stAngle</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入扇形起始角度，单位度数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>extAngle</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入扇形角度范围，单位度数，大于</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabId</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，输出参数，补正后的扇形</span><span lang=EN-US>,</span><span style='font-family:宋体; '>依次为</span><span lang=EN-US>cx,cy,r1,r2,stAngle,extAngle</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=677 height=223 src="doc.files/image1235.jpg" alt="说明: 22" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,mat,re</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;tool8.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgSetConst(img,0)'</span><span style='font-family:宋体;'>常数填充图像</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0, 1, 0.5, -50, 0.5, 1, -50) '</span><span style='font-family:宋体;'>数据写入</span><span lang=EN-US>TABLE</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGenData(mat,2,3,0) '</span><span style='font-family:宋体;'>构建变换矩阵</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_TkCorrectSector(mat,200,220,50,80,0,120,10) '</span><span style='font-family:宋体;'>使用变换矩阵对扇形进行补正</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReGenSector(re,TABLE(10),TABLE(11),TABLE(12),TABLE(13),TABLE(14),TABLE(15))'</span><span style='font-family:宋体;'>生成扇形区域</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DraRegion(img,re,0,255) '</span><span style='font-family:宋体;'>绘制扇形区域</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1231.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1229.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

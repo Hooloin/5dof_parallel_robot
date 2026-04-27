@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CAM_Get -- 获取图像</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="832.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="830.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>CAM_Get -- </span><span style='font-family:宋体;'>获取图像</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>图像采集相关</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>读取相机指定缓存的图像。</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>触发模式：软触发模式（<span lang=EN-US>0</span>）、外触发模式（<span lang=EN-US>1~N</span>）。</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体'>使用<span lang=EN-US>CAM_Get</span>指令获取图像之前要先调用开始采集指令<span lang=EN-US>CAM_Start</span>。</span></b><span style='font-family:宋体'>由于触发模式为多线程处理，为避免图像错乱，触发的图像只能读取一次，读取后缓存图像将被清理；如果缓存图像没有被读取则下一次触发采集的图像将覆盖旧的图像，但应注意在采集未完成之前使用<span lang=EN-US>CAM_Get</span>仍可能读取到旧图像，即触发后读取的为上一次采集的图像，每次触发后的图像都进行读取可以避免此问题</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体'>为避免使用到上一次的图像或减少错误检查处理，采集前建议图像清空或置零<span lang=EN-US>ZV_ObjClear(img)</span>或<span lang=EN-US>ZV_ImgSetConst(img,0)</span></span></b></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>CAM_Get(img</span><span style='font-family:宋体'>，<span lang=EN-US>bufId,timeout=-1)</span></span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>img</span></b><b><span style='font-family:宋体'>：</span></b><span lang=EN-US style='font-family:宋体'>ZVOBJECT</span><span style='font-family:宋体'>类型，获取的图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>bufId</span></b><b><span style='font-family:宋体'>：</span></b><span style='font-family:宋体'>指定的缓存<span lang=EN-US>id</span>，序号为<span lang=EN-US>0</span>开始</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>timeout</span></b><b><span style='font-family:宋体'>：</span></b><span style='font-family:宋体'>超时时间，大于等于<span lang=EN-US>0</span>，默认值<span lang=EN-US>-1</span>使用系统超时参数</span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>例一</span> <span style='font-family:宋体;'>软触发方式获取单张图像</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZVOBJECT img</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>CAM_Scan(&quot;mvision&quot;) '</span><span style='font-family:宋体;'>扫描相机</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>CAM_Count(0) '</span><span style='font-family:宋体;'>获取扫描到的相机个数</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>IF(TABLE(0)&gt;0)THEN</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Sel(0)</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_SetMode(0) '</span><span style='font-family:宋体;'>设置触发模式为软触发模式</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Start(1) '</span><span style='font-family:宋体;'>开启相机的采集，指定缓存数量</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Trigger() '</span><span style='font-family:宋体;'>使用软触发命令触发相机拍照，每触发一次拍照一次</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Get(img,0) '</span><span style='font-family:宋体;'>获取相机缓存中指定</span><span lang=EN-US>id</span><span style='font-family:宋体;'>序号为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的图像存放到</span><span lang=EN-US>img</span><span style='font-family:宋体;'>图像中</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Stop() '</span><span style='font-family:宋体;'>停止相机采集</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ELSE</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>未找到相机</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例二</span> <span style='font-family:宋体;'>软触发方式实现连续采集图像</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZVOBJECT img</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>LOCAL l_time</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>CAM_Scan(&quot;mvision&quot;) '</span><span style='font-family:宋体;'>扫描相机</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>CAM_Count(0) '</span><span style='font-family:宋体;'>获取扫描到的相机个数</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>IF(TABLE(0)&gt;0)THEN</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Sel(0)</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_SetMode(0) '</span><span style='font-family:宋体;'>设置触发模式为软触发模式</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; l_time = TICKS</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; WHILE(TiCKS-l_time&gt;5000) '</span><span style='font-family:宋体; '>连续采集</span><span lang=EN-US>5s</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CAM_Trigger()&nbsp; '</span><span style='font-family:宋体;'>使用软触发命令触发相机拍照，每触发一次拍照一次</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CAM_Get(img,0) '</span><span style='font-family:宋体;'>获取相机缓存中指定</span><span lang=EN-US>id</span><span style='font-family:宋体;'>序号为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的图像存放到</span><span lang=EN-US>img</span><span style='font-family:宋体;'>图像中</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; WEND</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Stop() '</span><span style='font-family:宋体;'>停止相机采集</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ELSE</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>未找到相机</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例三</span> <span style='font-family:宋体;'>外触发模式单张采集（</span><span lang=EN-US>move_op</span><span style='font-family:宋体;'>模式）</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZVOBJECT&nbsp; img</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>CAM_Scan(&quot;mvision&quot;) '</span><span style='font-family:宋体;'>扫描相机</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>CAM_Count(0) '</span><span style='font-family:宋体;'>获取扫描到的相机个数</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>IF(TABLE(0)&gt;0)THEN</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Sel(0)</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_SetMode(1) '</span><span style='font-family:宋体;'>设置触发模式为外触发模式</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Start(1) '</span><span style='font-family:宋体;'>开启相机的采集，指定缓存数量</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; AXIS_ZSET(0)=2 '</span><span style='font-family:宋体;'>设置精准输出功能</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; Base(0) '</span><span style='font-family:宋体;'>选择轴</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; MOVEABS(100) '</span><span style='font-family:宋体;'>移动到机械坐标</span><span lang=EN-US>100</span><span style='font-family:宋体;'>的位置</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; MOVE_OP(0,ON)&nbsp; </span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; MOVE_OP(0,OFF) '</span><span style='font-family:宋体;'>下降沿触发拍照，操作输出口</span><span lang=EN-US>,</span><span style='font-family:宋体;'>触发拍照</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; MOVEABS(200) '</span><span style='font-family:宋体;'>移动到机械坐标</span><span lang=EN-US>200</span><span style='font-family:宋体;'>的位置</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Get(img,0) '</span><span style='font-family:宋体;'>获取相机缓存中指定</span><span lang=EN-US>id</span><span style='font-family:宋体;'>序号为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的图像存放到</span><span lang=EN-US>img</span><span style='font-family:宋体;'>图像中</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Stop() '</span><span style='font-family:宋体;'>停止相机采集</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ELSE</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>未找到相机</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例四</span> <span style='font-family:宋体;'>外触发模式单张采集（</span><span lang=EN-US>hw</span><span style='font-family:宋体;'>模式）</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZVOBJECT img</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>CAM_Scan(&quot;mvision&quot;) '</span><span style='font-family:宋体;'>扫描相机</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>CAM_Count(0) '</span><span style='font-family:宋体;'>获取扫描到的相机个数</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>IF(TABLE(0)&gt;0)THEN</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Sel(0)</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_SetMode(1) '</span><span style='font-family:宋体;'>设置触发模式为外触发模式</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Start(1) '</span><span style='font-family:宋体;'>开启相机的采集，指定缓存数量</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; AXIS_ZSET(0)=2 '</span><span style='font-family:宋体;'>设置精准输出功能</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; Table(0,99,100,101) '</span><span style='font-family:宋体;'>触发</span><span lang=EN-US>op</span><span style='font-family:宋体;'>口翻转的机械坐标位置（</span><span lang=EN-US>99,100,101</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; HW_PSWITCH2(2) '</span><span style='font-family:宋体;'>清除比较点</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; Hw_pswitch2(1,0,0,0,3,1) '</span><span style='font-family:宋体;'>设置操作输出口</span><span lang=EN-US>0</span><span style='font-family:宋体;'>翻转位置（</span><span lang=EN-US>99-0,100-1,101-0</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; Base(0) '</span><span style='font-family:宋体;'>选择轴</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; MOVEABS(200) '</span><span style='font-family:宋体;'>轴</span><span lang=EN-US>0</span><span style='font-family:宋体;'>移动到机械坐标</span><span lang=EN-US>200</span><span style='font-family:宋体;'>的位置</span><span lang=EN-US>,</span><span style='font-family:宋体;'>当相机设置为下降沿触发拍照，将在</span><span lang=EN-US>100-101</span><span style='font-family:宋体;'>的坐标触发拍照，图像自动保存到缓存</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的通道</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Get(img,0) '</span><span style='font-family:宋体;'>获取相机缓存中指定</span><span lang=EN-US>id</span><span style='font-family:宋体;'>序号为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的图像存放到</span><span lang=EN-US>img</span><span style='font-family:宋体;'>图像中</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; CAM_Stop() '</span><span style='font-family:宋体;'>停止相机采集</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ELSE</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>未找到相机</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ENDIF</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><a name="_CAM_SETROI_--_设置相机ROI参数"></a><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="832.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="830.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

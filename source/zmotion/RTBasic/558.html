@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>INT_ENABLE -- 中断总开关</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="559.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="557.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_INT_ENABLE_--_中断总开关"></a><a name="_INT_ENABLE"></a><a name="_Toc134698367"></a><a name="_Toc32580"></a><a name="_Toc12505"></a><a name="_Toc524"></a><a name="_Toc24432"></a><a name="_Toc350958591"></a><a name="_INT_ENABLE_--_中断总开关_1"></a><span lang=EN-US>INT_ENABLE</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>中断总开关</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>系统参数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>中断总开关。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>为了避免程序没有初始化好进入中断，中断开关缺省是关闭的。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体;'>控制器内部只有一个任务在处理所有的中断信号响应，有一个固定的中断任务号，如果中断处理函数过多，并且中断处理函数的代码太长，会造成所有的中断响应变慢，甚至是中断堵塞，影响其他中断执行。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体;'>解决办法：</span></p>
+<p class=MsoNormal><span lang=EN-US>(1)</span><span style='font-family:宋体;'>尽量减少中断的数量，很多应用都可以用循环扫描来处理。</span></p>
+<p class=MsoNormal><span lang=EN-US>(2)</span><span style='font-family:宋体;'>如果有一个中断处理函数特别长的话，就调用一个单独的任务来处理中断中的复杂任务，这样就不会堵塞其他的中断响应。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>INT_ENABLE = switch</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=303 style='width:129.85pt;margin-left:24.2pt;border-collapse:collapse; border:none; '> <tr> <td width=138 valign=top style='width:59.35pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>值</span></p>
+</td> <td width=165 valign=top style='width:70.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>描述</span></p>
+</td> </tr> <tr> <td width=138 valign=top style='width:59.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black; '>0</span><span style='font-family:宋体;color:black;'>（缺省）</span></p>
+</td> <td width=165 valign=top style='width:70.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>关闭</span></p>
+</td> </tr> <tr> <td width=138 valign=top style='width:59.35pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black; '>1</span></p>
+</td> <td width=165 valign=top style='width:70.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>打开</span></p>
+</td> </tr> </table>
+<p class=MsoNormal></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><b><span style='font-family:宋体;'>错误示范，中断堵塞</span></b></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span style='font-family:宋体; '>如下图，定时器中断</span><span lang=EN-US>0</span><span style='font-family: 宋体; '>开启，</span><span lang=EN-US>IN(0)</span><span style='font-family:宋体; '>为</span><span lang=EN-US>0</span><span style='font-family: 宋体; '>，导致中断函数堵塞在第</span><span lang=EN-US>9</span><span style='font-family:宋体; '>行，由程序无打印结果可得此时定时器中断</span><span lang=EN-US>1</span><span style='font-family: 宋体; '>无法运行。</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US><img border=0 width=761 height=315 src="doc.files/image570.jpg" ></span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><b><span style='font-family:宋体;'>正确示范</span></b></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span style='font-family:宋体; '>若中断需要处理大量代码，在中断内创建一个任务来处理，如下图任务</span><span lang=EN-US>3</span><span style='font-family: 宋体; '>，执行下面程序，打印出“第二个中断”，定时器中断</span><span lang=EN-US>0</span><span style='font-family:宋体;'>堵塞，定时器中断</span><span lang=EN-US>1</span><span style='font-family:宋体;'>的运行不受影响。</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US><img border=0 width=756 height=450 src="doc.files/image572.jpg" ></span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span style='font-family:宋体; '>对应代码如下：</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>INT_ENABLE=1&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;'>开启中断</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>TIMER_START(0,1000)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>定时器</span><span lang=EN-US>0</span><span style='font-family:宋体;'>开启，</span><span lang=EN-US>1000ms</span><span style='font-family:宋体;'>后执行一次</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>TIMER_START(1,1100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>定时器</span><span lang=EN-US>1</span><span style='font-family:宋体;'>开启，</span><span lang=EN-US>1100ms</span><span style='font-family:宋体;'>后执行一次</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>END</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>GLOBAL SUB ONTIMER0()&nbsp; '</span><span style='font-family:宋体;'>中断处理函数</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>'</span><span style='font-family:宋体;'>创建一个新任务来处理自己的复杂任务，就不会堵塞其他中断的响应速度</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>RUNTASK&nbsp; 3, MyIntHandler()&nbsp; </span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>END SUB</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>GLOBAL SUB MyIntHandler()</span></p>
+<p class=MsoNormal style='tab-stops:24.0pt;layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DELAY 1000&nbsp; '</span><span style='font-family:宋体; '>假设大量的堵塞性代码</span></p>
+<p class=MsoNormal style='tab-stops:24.0pt;layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT UNTIL IN(0) &lt;&gt; 0</span></p>
+<p class=MsoNormal style='tab-stops:24.0pt;layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>第一个中断</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>END SUB</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>GLOBAL SUB ONTIMER1()&nbsp; '</span><span style='font-family:宋体;'>中断处理函数</span></p>
+<p class=MsoNormal style='tab-stops:24.0pt;layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>第二个中断</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US>END SUB</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="559.html#_ONPOWEROFF">ONPOWEROFF</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="562.html#_ONTIMERn_--_定时器中断SUB_1">ONTIMERn</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="559.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="557.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

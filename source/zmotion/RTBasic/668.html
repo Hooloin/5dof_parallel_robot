@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DrawEx_QRCode -- 画二维码</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="669.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="667.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc218413360"><span lang=EN-US>DrawEx_QRCode -- </span></a><span style='font-family:宋体;'>画二维码</span></h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr> <td width="16%" valign=top style='width:16.06%;border:solid windowtext 1.0pt; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="83%" valign=top style='width:83.94%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>绘图指令</span></p>
+</td> </tr> <tr> <td width="16%" valign=top style='width:16.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="83%" valign=top style='width:83.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>在指定区域画一个二维码</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>此指令只能在自定义元件的绘图函数内使用。</span></p>
+</td> </tr> <tr> <td width="16%" valign=top style='width:16.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="83%" valign=top style='width:83.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>DrawEx_QRCode (x, y, w, h, strCode, adjust)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>x, y</span><span style='font-family:宋体;'>：显示区域左上角的坐标位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>w, h</span><span style='font-family:宋体;'>：显示区域宽高</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>strCode</span><span style='font-family:宋体;'>：生成显示二维码的字符串</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>adjust</span><span style='font-family:宋体;'>：校准标准</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US>=0</span><span style='font-family:宋体; '>，</span><span lang=EN-US>L(7%)</span><span style='font-family:宋体;'>：</span><span lang=EN-US>7%</span><span style='font-family: 宋体;'>的字码可被修正</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US>=1</span><span style='font-family:宋体; '>，</span><span lang=EN-US>M(15%)</span><span style='font-family:宋体;'>：</span><span lang=EN-US>15%</span><span style='font-family: 宋体;'>的字码可被修正</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US>=2</span><span style='font-family:宋体; '>，</span><span lang=EN-US>Q(25%)</span><span style='font-family:宋体;'>：</span><span lang=EN-US>25%</span><span style='font-family: 宋体;'>的字码可被修正</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US>=3</span><span style='font-family:宋体; '>，</span><span lang=EN-US>H(30%)</span><span style='font-family:宋体;'>：</span><span lang=EN-US>30%</span><span style='font-family: 宋体;'>的字码可被修正</span></p>
+</td> </tr> <tr> <td width="16%" valign=top style='width:16.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="83%" valign=top style='width:83.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>RTHMI</span></p>
+</td> </tr> <tr> <td width="16%" valign=top style='width:16.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="83%" valign=top style='width:83.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>SET_COLOR(RGB(0,0,0))</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体; '>绘制二维码</span></p>
+<p class=MsoNormal><span lang=EN-US>DrawEx_QRCode(10, 10, 100, 100, &quot;123456</span><span style='font-family:宋体;'>正运动</span><span lang=EN-US>&quot;, 3)</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=259 height=261 src="doc.files/image682.jpg" alt="说明: QR 代码&#10;&#10;AI 生成的内容可能不正确。" ></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="669.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="667.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

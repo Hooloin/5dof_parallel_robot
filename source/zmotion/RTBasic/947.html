@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ReMorph -- 区域形态学</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="948.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="946.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc27483"><span lang=EN-US>ZV_ReMorph -- </span></a><span style='font-family:宋体;'>区域形态学</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>特征</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>使用<b>任意结构元</b>对区域或区域列表进行形态学处理，结构元使用区域表示，可由生成区域的算子产生，如</span><span lang=EN-US>ZV_ReGenRect</span><span style='font-family:宋体; '>、</span><span lang=EN-US>ZV_ReGenRect2</span><span style='font-family:宋体; '>、</span><span lang=EN-US>ZV_ReGenCircle</span><span style='font-family:宋体; '>等，<span style='color:black'>耗时与结构元尺寸成正比、也与迭代次数成正比</span></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ReMorph(re,st,reMorph,op,iter)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>re</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，区域或区域列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>st</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，结构元区域</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>reMorph</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输出参数，形态学运算的区域或区域列表，类型与</span><span lang=EN-US>re</span><span style='font-family:宋体; '>相同</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>op</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>形态学处理类型</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='margin-left:20.75pt;border-collapse:collapse;border:none;'> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>0</span></p>
+</td>  <td width=661 valign=top style='width:283.45pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>腐蚀，对区域进行收缩</span></p>
+</td>  </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>1</span></p>
+</td>  <td width=661 valign=top style='width:283.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>膨胀，对区域进行扩大</span></p>
+</td>  </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>2</span></p>
+</td>  <td width=661 valign=top style='width:283.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>开运算，去除比结构元小的孤立区域、或者比结构元小的连接线</span></p>
+</td>  </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>3</span></p>
+</td>  <td width=661 valign=top style='width:283.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>闭运算，连接比结构元小的缝隙、间隙等、或者比结构元小的孔洞</span></p>
+</td>  </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>4</span></p>
+</td>  <td width=661 valign=top style='width:283.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>形态学梯度，梯度描述的是区域的突变部分，白到黑或是黑到白的交界处即是突变部分，即形态学梯度计算的是区域的边界</span></p>
+</td>  </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>5</span></p>
+</td>  <td width=661 valign=top style='width:283.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>顶帽，分割出比结构元小的孤立区域、或者比结构元小的连接线</span></p>
+</td>  </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>6</span></p>
+</td>  <td width=661 valign=top style='width:283.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>底帽，分割出比结构元小的缝隙、间隙等、或者比结构元小的孔洞</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='margin-top:7.8pt; text-indent:21.1pt;'><b><span lang=EN-US>iter</span></b><b><span style=' font-family:宋体;'>：</span></b><span style='font-family:宋体; '>迭代次数，范围</span><span lang=EN-US>[1,20]</span><span style='font-family:宋体; '>，常用值</span><span lang=EN-US>1</span><span style='font-family:宋体; '>，表示使用结构元</span><span lang=EN-US>st</span><span style='font-family:宋体; '>对区域不断地进行形态学处理，耗时与次数成正比</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,mask,re</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;region4.png&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgInfo(img,0) '</span><span style='font-family:宋体;'>获取图像基本信息</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReGenFullImage(img,mask) '</span><span style='font-family:宋体;'>生成全图区域掩膜</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReThresh(img,mask,re,0,120) '</span><span style='font-family:宋体;'>区域二值化</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT re_rect,re_morph,dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReGenRect(re_rect,0,0,3,3) '</span><span style='font-family:宋体;'>使用区域生成算子生成矩形结构元</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReMorph(re,re_rect,re_morph,0,1) &nbsp;'</span><span style='font-family:宋体;'>区域形态学处理（腐蚀）</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgGenReBin(re_morph,dst,TABLE(0),TABLE (1)) '</span><span style='font-family:宋体;'>区域转二值图</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="948.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="946.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

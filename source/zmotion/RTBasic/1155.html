@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ContClip -- 轮廓裁剪</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1156.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1154.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>ZV_ContClip -- </span><span style='font-family:宋体;'>轮廓裁剪</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.38%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.62%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>变换</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.38%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.62%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>使用矩形范围对轮廓进行裁剪，仅保留轮廓在矩形区域内的部分。</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>因为矩形区域可能会截断轮廓，因此裁剪得到的为轮廓列表，裁减区域的左上角和右下角坐标都包含在裁减区域内</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.38%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.62%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ContClip(cont,list,x1,y1,x2,y2,cutMethod)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cont</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，轮廓</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>list</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，处理后得到的轮廓列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>x1</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>矩形区域左上角顶点的</span><span lang=EN-US>x</span><span style='font-family:宋体; '>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>y1</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>矩形区域左上角顶点的</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>x2</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>矩形区域右下角顶点的</span><span lang=EN-US>x</span><span style='font-family:宋体; '>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>y2</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>矩形区域右下角顶点的</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cutMethod</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>裁剪模式，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>不在区域边缘做截断，只根据轮廓点在区域内进行裁剪，</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>在区域边缘做截断，会将区域与轮廓的交点也列入输出轮廓中</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.38%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.62%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.38%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.62%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='margin-top:7.8pt;margin-right:0cm; margin-bottom:7.8pt;margin-left:0cm;text-align:center'><span lang=EN-US><img border=0 width=664 height=284 src="doc.files/image1174.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mat,cont,dst</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,100,50,130,130,160,60,240,150,160,170,130,150,80,110,110,210)‘ </span><span style=' font-family:宋体;'>构建点集矩阵并生成轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGenData(mat,8,2,0)</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGenPoints(matrix,cont,0)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>‘ </span><span style=' font-family:宋体;'>制作画板，用于绘制轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0) = 0</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgGenConst(dst,300,300,1,0,0)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>‘ </span><span style=' font-family:宋体;'>进行轮廓裁剪，裁剪模式为边缘处做截断</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContClip(cont,list,100,100,200,200,1)</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DraContList(dst,list,255) '</span><span style='font-family:宋体; '>绘制轮廓列表</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1156.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1154.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

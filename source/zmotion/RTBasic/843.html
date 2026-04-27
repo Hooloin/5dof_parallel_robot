@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_LATCHTRANS -- 锁存图像变换</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="844.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="842.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc32529"><span lang=EN-US>ZV_LATCHTRANS -- </span></a><span style='font-family:宋体;'>锁存图像变换</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>锁存处理</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>对当前显示图像进行比例缩放和</span><span lang=EN-US>x</span><span style='font-family:宋体; '>，</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标的平移。</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体; '>流程：</span></b><span style=' font-family:宋体;'>在当前图像基础上缩放</span><span lang=EN-US>sclaeFactor</span><span style=' font-family:宋体;'>，缩放时屏幕中心点对应的图像坐标位置不变，在缩放后的图像上再平移</span><span lang=EN-US>tx</span><span style='font-family:宋体; '>和</span><span lang=EN-US>ty</span><span style='font-family:宋体; '>像素，平移时最多能将图像边界平移到视野中心，如向右下平移时最多能将图像左上角点平移到视野中心。锁存变换需要正确设置锁存大小（控件尺寸），变换后图像与窗体大小一致，像素一一对应</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>注意：因显示方式限制，显示指令不能频繁连续调用，否则可能导致后一条指令丢失，即指令触发保护机制而不更新显示直接返回</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>显示指令包括</span><span lang=EN-US style='color:red'>ZV_LATCH</span><span style='font-family:宋体; color:red'>、</span><span lang=EN-US style='color:red'>ZV_LATCHTRANS</span><span style='font-family:宋体; color:red'>、</span><span lang=EN-US style='color:red'>ZV_LATCHCLEAR</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_LATCHTRANS(latchId,sclaeFactor,tx,ty)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>latchId</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>锁存通道号</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>sclaeFactor</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>前基础上的缩放比例，比例可以为</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>则按窗体尺寸缩放显示</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tx</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>基础上的</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>方向平移像素数，大于</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>正方向移动，尺寸计数基于缩放后图像（与控件坐标系一一对应）</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>ty</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>基础上的</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>方向平移像素数，大于</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>正方向移动，尺寸计数基于缩放后图像（与控件坐标系一一对应）</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:131.5pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:131.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:131.5pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>例如：</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=354 height=226 src="doc.files/image773.jpg" ><img border=0 width=354 height=225 src="doc.files/image775.jpg" ></span></p>
+<p class=MsoNormal style='text-indent:94.5pt;'><span style=' font-family:宋体;'>原图像</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体; '>变换后</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>（缩小</span><span lang=EN-US>0.8</span><span style=' font-family:宋体;'>倍，向</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>方向平移</span><span lang=EN-US>10</span><span style=' font-family:宋体;'>像素，向</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>方向平移</span><span lang=EN-US>10</span><span style=' font-family:宋体;'>像素）</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZVOBJECT img</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZV_LATCHSETSIZE(0,553,155)&nbsp;&nbsp; '</span><span style='font-family:宋体;'>显示区域的大小</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZV_ImgRead(img,&quot;logo.png&quot;,0)&nbsp; '</span><span style='font-family:宋体; '>以原图像格式读取图像</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZV_LATCH(img,0)</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>'</span><span style='font-family:宋体;'>按钮动作</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZV_LATCHTRANS(0,0.8,10,10)&nbsp;&nbsp; '</span><span style='font-family:宋体;'>在显示图像基础上以图像中心缩小</span><span lang=EN-US>0.8</span><span style='font-family:宋体;'>倍，在</span><span lang=EN-US>x</span><span style='font-family:宋体;'>、</span><span lang=EN-US>y</span><span style='font-family:宋体;'>轴正方向（右下）再平移相当于控件</span><span lang=EN-US>10</span><span style='font-family:宋体;'>像素的距离</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="844.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="842.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

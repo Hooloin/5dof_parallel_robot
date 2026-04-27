@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>draw3D_CameraLookAt -- 初始化相机基坐标位置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1373.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1371.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>draw3D_CameraLookAt -- </span><span style='font-family: 宋体;'>初始化相机基坐标位置</span></h3>
+
+<div align=center>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=a9><span style='font-family:宋体; '>类型</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=a9><span lang=EN-US>Hmi</span></p>
+</td> </tr> <tr style='height:20.75pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:20.75pt'>
+<p class=a9><span style='font-family:宋体; '>描述</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:20.75pt'>
+<p class=a9><span style='font-family:宋体; '>初始化相机在空间基坐标下的位置</span></p>
+</td> </tr> <tr style='height:35.7pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:35.7pt'>
+<p class=a9><span style='font-family:宋体; '>语法</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:35.7pt'>
+<p class=MsoNormal><span lang=EN-US>draw3D_CameraLookAt(cameranum,eyex,eyey,eyez,centerx,centery,centerz,upx,upy,upz)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cameranum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体; '>相机号</span><span lang=EN-US> 0 - 9</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eyex,eyey,eyez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>相机在空间坐标系的位置</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; centerx,centery,centerz&nbsp; </span><span style='font-family:宋体;'>相机镜头对准的物体在空间坐标的位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>&nbsp; upx,upy,upz :</span><span style='font-family:宋体;'>相机向上的方向在空间坐标中的方向</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>注：</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>创建固体的长度要参考相机到对准的物体空间距离。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>窗口就如同空间中的一个相机，相机也有自己的坐标系，相机的坐标系非常容易得到，</span><span lang=EN-US>z</span><span style='font-family:宋体; '>轴正方向就是人正向看窗口的方向，始终垂直于窗口，</span><span lang=EN-US>y</span><span style='font-family:宋体; '>轴方向就是平行窗口（屏幕）的宽度，</span><span lang=EN-US>x</span><span style='font-family:宋体; '>轴方向就是平行窗口（屏幕）的高度。相机可以在也是空间中移动，旋转。</span></p>
+</td> </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.62%;border-top:none;border-left: solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=a9><span style='font-family:宋体; '>适用控制器</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:none;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=a9><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=a9><span style='font-family:宋体; '>例子</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> </table>
+</div>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1373.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1371.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

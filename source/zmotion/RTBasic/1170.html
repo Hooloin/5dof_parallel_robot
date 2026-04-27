@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_CalCameraPose -- 多姿态标定</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1171.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1169.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc18412"><span lang=EN-US>ZV_CalCameraPose -- </span></a><span style='font-family: 宋体;'>多姿态标定</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>标定</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>多姿态相机标定，相机模型使用的是针孔相机模型</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>使用多个不同姿态平面下提取的像素坐标和世界坐标进行标定。使用不同平面的标定板提取出的像素特征点与世界点来进行标定，会提高相机内参和畸变系数的标定精度，位姿<span lang=EN-US>id</span>号指明相机外参与哪个世界平面相关联。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>标定完后要保证镜头、焦距不变，若发生了变化则需要重新标定</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>通常一个姿态下拍取几张图像，然后提取对应的特征点</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_CalCameraPose(ppts,wpts,param,width,height,poseId[,distortType=2,focus=0,dx=0,dy=0])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>ppts</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输入参数，像素坐标，矩阵列表，每个矩阵为你</span><span lang=EN-US>nx2</span><span style='font-family:宋体; '>，列上依次为</span><span lang=EN-US>x</span><span style='font-family:宋体; '>、</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标，</span><span lang=EN-US>n&gt;=9</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>wpts</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输入参数，世界坐标，矩阵列表，每个矩阵为你</span><span lang=EN-US>nx2</span><span style='font-family:宋体; '>，列上依次为</span><span lang=EN-US>x</span><span style='font-family:宋体; '>、</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标，</span><span lang=EN-US>n&gt;=9</span><span style='font-family:宋体; '>，列表的大小与</span><span lang=EN-US>ppts</span><span style='font-family:宋体; '>相同</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>param</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输出参数，生成的标定参数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>width</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入参数，标定板图像宽</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>height</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入参数，标定板图像高</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>poseId</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>位姿</span><span lang=EN-US>id</span><span style=' font-family:宋体;'>号，指定列表中对应</span><span lang=EN-US>id</span><span style=' font-family:宋体;'>号的</span><span lang=EN-US>imgPts</span><span style=' font-family:宋体;'>和</span><span lang=EN-US>objPts</span><span style=' font-family:宋体;'>数据所在的平面作为世界参考面</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>distortType</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>相机畸变类型，</span><span lang=EN-US>0--</span><span style=' font-family:宋体;'>无畸变，</span><span lang=EN-US>1--</span><span style=' font-family:宋体;'>使用</span><span lang=EN-US>k1</span><span style=' font-family:宋体;'>，</span><span lang=EN-US>2--</span><span style=' font-family:宋体;'>使用</span><span lang=EN-US>k1</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>k2</span><span style=' font-family:宋体;'>，</span><span lang=EN-US>3--</span><span style=' font-family:宋体;'>使用</span><span lang=EN-US>k1</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>k2</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>k3</span><span style=' font-family:宋体;'>，</span><span lang=EN-US>4--</span><span style=' font-family:宋体;'>使用</span><span lang=EN-US>k1</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>k2</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>k3</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>p1</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>p2</span><span style=' font-family:宋体;'>；其中</span><span lang=EN-US>k</span><span style=' font-family:宋体;'>为径向畸变系数，</span><span lang=EN-US>p</span><span style=' font-family:宋体;'>为切向畸变系数，根据图像实际畸变程度选择畸变类型，通常畸变越大使用的畸变系数越多</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>focus</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>相机焦距，单位</span><span lang=EN-US>mm</span><span style=' font-family:宋体;'>，注：</span><span lang=EN-US>focus</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>dx</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>dy</span><span style=' font-family:宋体;'>咨询相机供应商，若其中一个参数为</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>，则使用默认值</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dx</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>像素水平方向尺寸，即相机芯片传感器上单位像素的水平距离，单位</span><span lang=EN-US>mm</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dy</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>像素垂直方向尺寸，即相机芯片传感器上单位像素的垂直距离，单位</span><span lang=EN-US>mm</span><span style='font-family:宋体; '>，通常</span><span lang=EN-US>dy=dx</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1171.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1169.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

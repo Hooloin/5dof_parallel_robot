@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FILE_ZREADLINE -- 文件行读取</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="554.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="552.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698360"></a><a name="_FILE__ZREADLINE_–"></a><span lang=FR>FILE_ZREADLINE</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>文件行读取</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>存储指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family: 宋体; '>从文件句柄</span></b><b><span lang=EN-US>handle</span></b><b><span style='font-family:宋体;'>指示的文件中读取一行到</span></b><b><span lang=EN-US>table</span></b><b><span style='font-family:宋体;'>的</span></b><b><span lang=EN-US>tableindex</span></b><b><span style='font-family:宋体;'>位置，最多读取</span></b><b><span lang=EN-US>maxchars</span></b><b><span style='font-family:宋体;'>个字符。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; '>超出部分将不会读出，文件的读取位置将保持在第一个未读字符处。读取从文件当前的读取位置开始，读取结果不包含结尾的换行符，但文件读取位置将跳过换行符，函数返回读取的字符数量。读取的数量有最大限制，超出则按照最大限制读取。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>命令语法：</span><span lang=FR style='color:black;'>FILE_ZREAD</span> <span lang=FR style='color:black;'>LINE (handle, tableindex, maxchars)</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>函数语法：</span><span lang=FR style='color:black;'>num = FILE_ZREAD</span> <span lang=FR style='color: black;'>LINE (handle, tableindex, maxchars)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>handle</span><span style='font-family:宋体;color:black;'>：函数</span><span lang=FR style='color:black;'>FILE_ZOPEN</span><span style='font-family:宋体;color:black;'>返回的文件句柄</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>tableindex</span><span style='font-family:宋体;color:black;'>：</span><span lang=FR style='color:black;'>table</span><span style='font-family:宋体;color:black;'>的索引，读取的字符存放到</span><span lang=FR style='color:black;'>tableindex</span><span style='font-family:宋体;color:black;'>开始的</span><span lang=FR style='color:black;'>table</span><span style='font-family:宋体;color:black;'>中，</span><span lang=FR style='color:black;'>table</span><span style='font-family:宋体;color:black;'>每个位置存放一个字符</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>maxchars</span><span style='font-family:宋体;color:black;'>：</span><span lang=FR style='color:black;'>table</span><span style='font-family:宋体;color:black;'>最大能够存放的字符数量，如果读取行的字符数量超出</span><span lang=FR style='color:black;'>maxchars</span><span style='font-family:宋体;color:black;'>，多余的部分将不会读出，文件的读取位置将保持在第一个未读字符处</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>4</span><span style='font-family:宋体; '>系列产品</span><span lang=EN-US>20170601</span><span style='font-family:宋体; '>以上版本支持</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>DIM&nbsp; handle, num</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>handle = FILE_ZOPEN(&quot;test.txt&quot;, &quot;r&quot;)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>FILE_ZSEEKLINE(handle, 0, 2) &nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>最后一行行首</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>num = FILE_ZREADLINE(handle, 0, 1000) &nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;color:black;'>读完后定位到行尾，行号不变</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>num = FILE_ZREADLINE(handle, 0, 1000)&nbsp;&nbsp; &nbsp;'</span><span style='font-family:宋体;color:black;'>已到行尾，返回</span><span lang=FR style='color:black;'>0</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>?num, table(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '0 0</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>?FILE_ZTELLLINE(handle)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>以上读取行号不变</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>FILE_ZSEEKLINE(handle, -1, 2) &nbsp;&nbsp;'</span><span style='font-family:宋体;color:black;'>倒数第二行行首</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>num = FILE_ZREADLINE(handle, 0, 1000)&nbsp; &nbsp;'</span><span style='font-family:宋体;color:black;'>读取倒数第二行，定位到倒数第一行行首</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>FILE_ZSEEKLINE(handle, -1, 1)&nbsp;&nbsp; &nbsp;'</span><span style='font-family:宋体;color:black;'>上一行行首，此处为倒数第二行行首</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>FILE_ZSEEKLINE(handle, 17, 0) &nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;color:black;'>定位到行号</span><span lang=FR style='color:black;'>17</span><span style='font-family:宋体;color:black;'>（</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>开始），即第</span><span lang=FR style='color:black;'>18</span><span style='font-family:宋体;color:black;'>行行首</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>FILE_ZSEEKLINE(handle, 0, 1) &nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;color:black;'>移动到本行行首</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>num = FILE_ZREADLINE(handle, 0, 1000)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=FR style='color:black;'>FILE_ZCLOSE(handle)</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="555.html#_FILE_ZSEEKLINE_–_文件行定位"><span lang=FR>FILE_ZSEEKLINE</span></a><span style='font-family:宋体;'>，</span><a href="557.html#_FILE_ZTELLLINE_–_文件行号"><span lang=FR>FILE_ZTELLLINE</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="554.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="552.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

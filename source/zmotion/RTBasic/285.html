@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>VP_MODE -- 加加速曲线</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="286.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="284.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698070"><span lang=EN-US>VP_MODE -- </span></a><span style='font-family:宋体;'>加加速曲线</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a name="_Hlk107567810"><b><span style='font-family:宋体; color:black;'>加减速曲线类型选择。</span></b></a></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0 - </span><span style='font-family:宋体;color:black;'>缺省值，使用</span><span lang=EN-US style='color:black;'>sramp</span><span style='font-family:宋体;color:black;'>来设置</span><span lang=EN-US style='color:black;'>S</span><span style='font-family:宋体;color:black;'>曲线；</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>4 - </span><span style='font-family:宋体;color:black;'>起步时最大加速度</span><span lang=EN-US style='color:black;'>, </span><span style='font-family:宋体;color:black;'>达到最高速时加速度渐变为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>；</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>6 - </span><span style='font-family:宋体;color:black;'>新增类型</span><span lang=EN-US style='color:black;'>SS</span><span style='font-family:宋体;color:black;'>曲线，加加速度连续的曲线类型，</span><span lang=EN-US style='color:black;'>SS</span><span style='font-family:宋体;color:black;'>模式比</span><span lang=EN-US style='color:black;'>T</span><span style='font-family:宋体;color:black;'>形减速会增加</span><span lang=EN-US style='color:black;'>87%</span><span style='font-family:宋体;color:black;'>的减速时间。此模式加速时使用</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>模式，减速时才生效，方便连续小线段插补；</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>7 - </span><span style='font-family:宋体;color:black;'>新增类型</span><span lang=EN-US style='color:black;'>SS</span><span style='font-family:宋体;color:black;'>曲线，加加速度连续的曲线类型。动态修改轴参数或连续插补可能导致加加速度无法连续，此时会切换到</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>模式，因此建议</span><span lang=EN-US style='color:black;'>SRAMP</span><span style='font-family:宋体;color:black;'>也设置合适值。</span></p>
+<p class=MsoNormal><span lang=EN-US>VP_MODE</span><span style='font-family:宋体;color:black;'>与</span><span lang=EN-US style='color:black;'>SRAMP</span><span style='font-family:宋体;color:black;'>都能平滑速度参数，区别参见下图：</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=784 height=303 src="doc.files/image350.png" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VAR1 = VP_MODE</span><span style='font-family:宋体;color:black;'>或</span><span lang=EN-US style='color:black; '> VP_MODE(axis)=mode</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; '><span lang=EN-US style='color:black;'>mode</span><span style='font-family:宋体;color:black; '>：模式选择</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>例一</span> <span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black; '>6</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>选择轴</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black; '>1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SRAMP=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VP_MODE=6,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>轴</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black; '>6</span><span style='font-family:宋体;color:black;'>，轴</span><span lang=EN-US style='color:black; '>1</span><span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black; '>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(25)&nbsp; AXIS(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(25)&nbsp; AXIS(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span style=' font-family:宋体;color:black;'>速度曲线：模式</span><span lang=EN-US style='color:black;'>6</span><span style=' font-family:宋体;color:black;'>对加速度阶段不做处理，只针对减速度阶段。</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black; '>MSPEED(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black; '>50</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black; '>MSPEED(1)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black; '>50</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=873 height=537 src="doc.files/image352.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>例二</span> <span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black; '>7</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VP_MODE=7,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>轴</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black; '>7</span><span style='font-family:宋体;color:black;'>，轴</span><span lang=EN-US style='color:black; '>1</span><span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black; '>0</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span style=' font-family:宋体;color:black;'>其他条件按例一，速度曲线如下，模式</span><span lang=EN-US style='color:black;'>7</span><span style=' font-family:宋体;color:black;'>对加减速度阶段均做了处理。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=866 height=516 src="doc.files/image354.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>例三</span> <span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black; '>4</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VP_MODE=4,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>轴</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black; '>4</span><span style='font-family:宋体;color:black;'>，轴</span><span lang=EN-US style='color:black; '>1</span><span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black; '>0</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span style=' font-family:宋体;color:black;'>其他条件按例一，速度曲线如下，</span><span style='font-family:宋体;color:black; '>起步时最大加速度</span><span lang=EN-US style='color:black;'>, </span><span style='font-family:宋体;color:black; '>达到最高速时加速度渐变为</span><span lang=EN-US style='color:black;'>0</span><span style=' font-family:宋体;color:black;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=866 height=516 src="doc.files/image356.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="282.html#_MSPEED"><span lang=EN-US style='color:#9999CC;'>MSPEED</span></a><span style='font-family:宋体;'>，</span><a href="273.html#_SPEED_--_运动速度_1"><span lang=EN-US>SPEED</span></a> <span style=' font-family:宋体;color:black;'>，</span><a href="284.html#_SRAMP_--_加减速曲线"><span lang=EN-US>SRAMP</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="286.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="284.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

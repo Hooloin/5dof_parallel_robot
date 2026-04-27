@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FILE_ZOPEN -- 打开文件</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="549.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="547.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698355"></a><a name="_FILE_ZOPEN_–_打开文件"></a><span lang=FR>FILE_ZOPEN</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>打开文件</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>存储指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family: 宋体; '>根据</span></b><b><span lang=EN-US>mode</span></b><b><span style='font-family:宋体;'>参数指定的模式，打开一个文件，返回文件句柄。</span></b></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>函数语法：</span><span lang=FR style='color:black;'>handle = FILE_ZOPEN (path, mode)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>path</span><span style='font-family:宋体;color:black;'>：文件路径，字符串，</span><span lang=FR style='color:black;'>flash</span><span style='font-family:宋体;color:black;'>盘符定义为</span><span lang=FR style='color:black;'>c</span><span style='font-family:宋体;color:black;'>，</span><span lang=FR style='color:black;'>U</span><span style='font-family:宋体;color:black;'>盘盘符定义为</span><span lang=FR style='color:black;'>a</span><span style='font-family:宋体;color:black;'>，如</span><span lang=FR style='color:black;'>c:\filename.txt</span><span style='font-family:宋体;color:black;'>表示</span><span lang=FR style='color:black;'>flash</span><span style='font-family:宋体;color:black;'>中的</span><span lang=FR style='color:black;'>filename.txt</span><span style='font-family:宋体;color:black;'>文件。缺省为</span><span lang=FR style='color:black;'>flash</span><span style='font-family:宋体;color:black;'>中的文件。</span></p>
+<p class=MsoNormal style='margin-top:0cm;margin-right:5.25pt;margin-bottom: 0cm;margin-left:5.25pt;margin-bottom:.0001pt; '><span lang=FR style='color:black;'>5</span><span style='font-family:宋体;color:black;'>系列和</span><span lang=FR style='color:black;'>7</span><span style='font-family:宋体;color:black;'>系列用户想自定义盘符可以通过“</span><span lang=EN-US>FILE &quot;PATHD&quot; &quot;dir&quot;</span><span style='font-family:宋体;color:black;'>”指令来映射</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>mode</span><span style='font-family:宋体;color:black;'>：打开模式，字符串“</span><span lang=FR style='color:black;'>w</span><span style='font-family:宋体;color:black;'>”表示以写的方式打开（以全部删除再写的方式），“</span><span lang=FR style='color:black;'>r</span><span style='font-family:宋体;color:black;'>”表示以读的方式打开，“</span><span lang=FR style='color:black;'>rw</span><span style='font-family:宋体;color:black;'>”表示可读可写。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>注意：“</span><span lang=FR style='color:black;'>w</span><span style='font-family:宋体;color:black;'>”</span><span style='font-family:宋体;'>模式会删掉文件原来写入的数据。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>4</span><span style='font-family:宋体; '>系列产品</span><span lang=EN-US>20170601</span><span style='font-family:宋体; '>以上版本支持</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black;'>例一</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>FILE &quot;copy_to&quot;,&quot;test.z3p&quot;,&quot;test1.z3p&quot;</span><span lang=EN-US>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;'U</span><span style='font-family:宋体;'>盘文件拷贝到</span><span lang=EN-US>FLASH</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>f1 = FILE_ZOPEN(&quot;c:\test1.z3p&quot;,&quot;r&quot;)</span><span lang=EN-US>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;'>打开</span><span lang=EN-US>FLASH</span><span style='font-family:宋体;'>中的</span><span lang=EN-US style='color:black;'>test1.z3p</span><span style='font-family:宋体;'>文件</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>IF f1 &gt;= 0 THEN </span></p>
+<p class=MsoNormal style='tab-stops:13.5pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体; color:black;'>以只读方式打开</span><span lang=EN-US style='color:black;'>FLASH</span><span style=' font-family:宋体;color:black;'>存在文件</span><span lang=EN-US style='color:black;'>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ELSE </span></p>
+<p class=MsoNormal style='tab-stops:13.5pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;error </span><span style=' font-family:宋体;color:black;'>打开失败</span><span lang=EN-US style='color:black;'>&quot;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>END IF</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>FILE_ZCLOSE(f1)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black;'>例二</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>f1 = FILE_ZOPEN(&quot;c:\test.z3p&quot;,&quot;rw&quot;)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>num = <b>FILE_ZWRITES</b>(f1,&quot;0123456789&quot;)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>FILE_ZSEEK(f1,0,0)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>FILE_ZREAD(f1,30,10)</span></p>
+<p class=MsoNormal style='tab-stops:45.0pt;'><span lang=EN-US style='color:black;'>IF num = 10 AND TABLE(31) = 49 AND TABLE(39) = 57 THEN </span></p>
+<p class=MsoNormal style='tab-stops:24.0pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体; color:black;'>指令读写</span><span lang=EN-US style='color:black;'>FLASH</span><span style=' font-family:宋体;color:black;'>文件成功</span><span lang=EN-US style='color:black;'>&quot;</span></p>
+<p class=MsoNormal style='tab-stops:13.5pt;'><span lang=EN-US style='color:black;'>ELSE</span></p>
+<p class=MsoNormal style='tab-stops:24.0pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;error </span><span style=' font-family:宋体;color:black;'>指令读写</span><span lang=EN-US style='color:black;'>FLASH</span><span style=' font-family:宋体;color:black;'>文件失败</span><span lang=EN-US style='color:black;'>&quot;</span></p>
+<p class=MsoNormal style='tab-stops:34.5pt;'><span lang=EN-US style='color:black;'>END IF</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>FILE_ZCLOSE(f1)</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="549.html#_FILE_ZCLOSE_–_关闭文件"><span lang=EN-US>FILE_ZCLOSE</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=FR>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="549.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="547.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

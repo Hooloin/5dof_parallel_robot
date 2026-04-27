@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_BESTTEMPL -- 灰度模板匹配</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1275.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1273.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc21683"><span lang=EN-US>ZV_BESTTEMPL -- </span></a><span style='font-family:宋体;'>灰度模板匹配</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>灰度匹配</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>获取最佳匹配位置，支持亚像素精度</span></p>
+</td>  </tr> <tr style='height:219.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:219.25pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:219.25pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_BESTTEMPL(img,modImg,minScore,tabId[,isSubpix=0,polar=0])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，待匹配图像，图片为单通道图片</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>modImg</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，模板图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minScore</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>最低匹配分值</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabId</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，匹配结果，输出参数，依次为</span><span lang=EN-US>score</span><span style='font-family:宋体; '>、</span><span lang=EN-US>x</span><span style='font-family:宋体; '>、</span><span lang=EN-US>y</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>isSubpix</span></b><span style='font-family:宋体; '>：是否子像素精度插值，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>否，</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>是</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>polar</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>匹配极性模式</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=844 style='width:361.5pt;margin-left:21.25pt;border-collapse:collapse; border:none; '> <tr> <td width="9%" style='width:9.8%;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>polar</span></p>
+</td>  <td width="23%" style='width:23.52%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>极性</span></p>
+</td>  <td width="66%" style='width:66.66%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>解释</span></p>
+</td>  </tr> <tr> <td width="9%" style='width:9.8%;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width="23%" style='width:23.52%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>匹配正负极性</span></p>
+</td>  <td width="66%" style='width:66.66%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>模板和目标的亮暗变换刚好相同的情况</span></p>
+</td>  </tr> <tr style='height:13.75pt'> <td width="9%" style='width:9.8%;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt;height:13.75pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width="23%" style='width:23.52%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.75pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>匹配任意极性</span></p>
+</td>  <td width="66%" style='width:66.66%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.75pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>模板和目标的亮暗变换相同或者相反的的情况</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=547 height=269 src="doc.files/image1240.jpg" alt="说明: 18" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT model_img,match_img</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(model_img,&quot;model4.jpg&quot;,0) '</span><span style='font-family:宋体;'>模版图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(match_img,&quot;match_img3.bmp&quot;,0) '</span><span style='font-family:宋体;'>匹配图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_BESTTEMPL(match_img,model_img,60,0,0,0) '</span><span style='font-family:宋体;'>灰度匹配，结果存于起始索引为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>开始的</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>中</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>匹配结果：</span><span lang=EN-US>&quot;,TABLE(0),TABLE(1),TABLE(2)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1275.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1273.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

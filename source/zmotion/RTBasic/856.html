@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_HmiAdjArc -- 圆环ROI调整</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="857.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="855.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc26653"><span lang=EN-US>ZV_HmiAdjArc -- </span></a><span style='font-family:宋体;'>圆环</span><span lang=EN-US>ROI</span><span style='font-family:宋体;'>调整</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>HMI</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>用于</span><span lang=EN-US>HMI</span><span style='font-family:宋体;'>控件交互调整圆环</span><span lang=EN-US>roi</span><span style='font-family:宋体;'>，应用于</span><span lang=EN-US>HMI</span><span style='font-family:宋体;'>自定义控件的刷新函数内，实现通过鼠标实时调整圆环</span><span lang=EN-US>roi</span><span style='font-family:宋体;'>的位置和大小。</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体;'>使用方法：</span></b><span style='font-family:宋体; '>鼠标按下时，根据鼠标位置所处在</span><span lang=EN-US>roi</span><span style='font-family:宋体; '>区域的不同，调整的功能也不同，该区域为对应的具有调整功能的击中区域</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>圆环包含</span><span lang=EN-US>5</span><span style='font-family:宋体;'>个击中区域（编号</span><span lang=EN-US>0-4</span><span style='font-family:宋体;'>，分别对应中心、内圆、外圆、起始边、终止边），中心击中区域用于调整位置、内圆击中区域用于调整内圆大小，外圆击中区域用于调整外圆大小，起始边击中区域用于调整圆环起始角度，终止边击中区域用于调整圆环终止角度</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>注：圆环起始角度基于图像坐标系，顺时针为正，单位度数</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>圆环击中区域编号示意图如下：</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=291 height=291 src="doc.files/image791.png" alt="说明: sector" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>hittype=ZV_HmiAdjArc(mousex,mousey,tabId,hitType,maxHitDist=0)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mousex</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>HMI</span><span style='font-family:宋体; '>控件的鼠标</span><span lang=EN-US>x</span><span style='font-family:宋体; '>坐标值</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mousey</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>HMI</span><span style='font-family:宋体; '>控件的鼠标</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标值</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabId</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>保存圆环</span><span lang=EN-US>roi</span><span style=' font-family:宋体;'>参数的</span><span lang=EN-US>TABLE</span><span style=' font-family:宋体;'>索引，依次为</span><span lang=EN-US>cx</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>cy</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>radius</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>annR</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>angleStart</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>angleExtent</span><span style=' font-family:宋体;'>、即圆环的中心坐标</span><span lang=EN-US>cx</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>cy</span><span style=' font-family:宋体;'>、圆环中心半径、圆环半宽、起始角度、角度范围，调整后的值将直接替换调整前的值</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>hitType</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;color:black;background:white'>指定击中区域编号，表示指令要调整的圆环对应部分</span><span style=' font-family:宋体;background:white'>，</span><span style='font-family:宋体; background:white'>为<span lang=EN-US>-1</span>时表示无效编号，则指令内部自行判断击中情况；为有效编号时则调整矩形对应的部分。通常情况按下鼠标左键时传入<span lang=EN-US>-1</span>，指令内部判断击中位置并返回，如果返回值为<span lang=EN-US>-1</span>则无调整动作，返回值为有效区域编号则后续鼠标移动过程以该返回值为新的传入参数继续调用本指令以实现连续调整</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>maxHitDist</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>选中“击中区域”的最大距离，小于此距离才选中，为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时不受距离限制</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='font-family:宋体;color:black;background:white'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>返回值：</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US style='font-family:宋体;color:red'>hittype</span><span style='font-family:宋体; color:red'>：传入有效击中编号时，返回该编号；传入无效击中编号时指令根据鼠标点击位置计算击中区域编号并返回，无击中区域返回<span lang=EN-US>-1</span>。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>hittype = </span><span lang=EN-US>ZV_HmiAdjArc</span><span lang=EN-US>(mousex,mousey,tabId,-1) '</span><span style='font-family:宋体; '>获取鼠标点击位置对应的击中区域编号</span></p>
+<p class=MsoNormal><span lang=EN-US>hittype = </span><span lang=EN-US>ZV_HmiAdjArc</span><span lang=EN-US>(mousex,mousey,tabId,hittype) '</span><span style='font-family:宋体; '>指定击中区域编号，调整对应的圆环部分</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="857.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="855.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_SHAPEFINDST -- 匹配并输出轮廓状态</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1280.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1278.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc1440"><span lang=EN-US>ZV_SHAPEFINDST -- </span></a><span style='font-family:宋体;'>匹配并输出轮廓状态</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.88%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.12%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>形状模板匹配</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.88%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.12%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>使用单形状模板，在图像</span><span lang=EN-US>img</span><span style='font-family:宋体; '>上进行匹配查找，并输出模板轮廓点的匹配状态</span></p>
+</td>  </tr> <tr style='height:219.25pt'> <td width="17%" valign=top style='width:17.88%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:219.25pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.12%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:219.25pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_SHAPEFINDST(model,img,matchs,stats,minScore[,nums=0,minDist=0,minThresh=-1,accuracy=3,speed=9,polar=0]) </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>model</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，形状模板</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，待匹配的搜索图像</span><span lang=EN-US>,</span><span style='font-family:宋体; '>不能和模板图片</span><span lang=EN-US>1:1</span><span style='font-family:宋体; '>等比大小</span><span lang=EN-US>,8U</span><span style='font-family:宋体; '>单通道</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>matchs</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，匹配结果，矩阵类型，</span><span lang=EN-US>n</span><span style='font-family:宋体; '>行</span><span lang=EN-US>5</span><span style='font-family:宋体; '>列，每行一个匹配目标，列依次为匹配分数</span><span lang=EN-US>score</span><span style='font-family:宋体; '>、</span><span lang=EN-US>x</span><span style='font-family:宋体; '>坐标、</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标、旋转角度</span><span lang=EN-US>angle</span><span style='font-family:宋体; '>、缩放比例</span><span lang=EN-US>scale</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>stats</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，模板轮廓点每个点的匹配状态，</span><span lang=EN-US>m x n</span><span style='font-family:宋体; '>图像类型，每行一个模板轮廓，行上依次存储每个轮廓点的匹配状态</span> <span style=' font-family:宋体;'>，即对于某个轮廓点来说，匹配分数大于等于设置分数时为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>（匹配成功），小于匹配分数时为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>（匹配失败，为空时则不输出轮廓点匹配状态，不为空时则输出轮廓点匹配状态，此输出参数结合绘制模板指令</span><span lang=EN-US>ZV_DRASHAPEMATCH</span><span style='font-family:宋体; '>可将匹配成功点和失败点绘制不同的颜色</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minScore</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>最小匹配分值，</span><span lang=EN-US>(0,100]</span><span style=' font-family:宋体;'>，分值越高匹配的目标越准确，越低容易将非目标当成目标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>nums</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>最大匹配数量，</span><span lang=EN-US>[0, </span><span style=' font-family:宋体;'>无穷</span><span lang=EN-US>)</span><span style=' font-family:宋体;'>，当</span><span lang=EN-US>num</span><span style=' font-family:宋体;'>大于真实目标时，以目标分数从高到低输出所有目标；当</span><span lang=EN-US>num</span><span style='font-family:宋体; '>小于真实目标时，以目标分数从高到低输出</span><span lang=EN-US>num</span><span style='font-family:宋体; '>个目标；当</span><span lang=EN-US>num</span><span style='font-family:宋体; '>为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时，以目标分数从高到低输出所有目标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minDist</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>最小距离，为</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>时自动选择距离，表示匹配结果允许的相隔距离，当匹配结果距离小于最小距离时将只保留最好的结果，主要用于去除重叠的目标对象，匹配不重叠的目标时建议值使用</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，当搜索图中只有一个目标时也可将最小距离设置大一些，会加快匹配速度但不明显</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minThresh</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>目标轮廓的最低边缘阈值，</span><span lang=EN-US>minThresh</span><span style=' font-family:宋体;'>小于零时将使用创建模板时的阈值</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>accuracy</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>匹配精度，</span><span lang=EN-US>0-</span><span style=' font-family:宋体;'>像素精度，</span><span lang=EN-US>1-</span><span style=' font-family:宋体;'>插值精度，</span><span lang=EN-US>2-</span><span style=' font-family:宋体;'>最小二乘拟合精度，</span><span lang=EN-US>3-</span><span style=' font-family:宋体;'>多次迭代的最小二乘拟合精度</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>speed</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>匹配速度</span><span lang=EN-US>0-10</span><span style=' font-family:宋体;'>，越大速度越快，但可能丢失目标，大于</span><span lang=EN-US>10</span><span style=' font-family:宋体;'>时取</span><span lang=EN-US>10</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>polar</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>匹配极性</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=728 style='width:311.8pt;margin-left:20.75pt;border-collapse:collapse; border:none; '> <tr style='height:13.6pt'> <td width=99 style='width:42.5pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>polar</span></p>
+</td>  <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;border-left: none; padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>极性</span></p>
+</td>  <td width=496 style='width:212.6pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>解释</span></p>
+</td>  </tr> <tr style='height:13.6pt'> <td width=99 style='width:42.5pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>正极性</span></p>
+</td>  <td width=496 style='width:212.6pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>匹配目标所有轮廓点的明暗变化与模板所有轮廓点的明暗变化一致</span></p>
+</td>  </tr> <tr style='height:13.6pt'> <td width=99 style='width:42.5pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>正负极性</span></p>
+</td>  <td width=496 style='width:212.6pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>即正极性和负极性均可，匹配目标所有轮廓点的明暗变化与模板所有轮廓点的明暗变化一致或者相反</span></p>
+</td>  </tr> <tr style='height:13.6pt'> <td width=99 style='width:42.5pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>任意极性</span></p>
+</td>  <td width=496 style='width:212.6pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>匹配目标部分轮廓点的明暗变化与部分模板轮廓点的明暗变化一致或者相反</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.88%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.12%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1280.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1278.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

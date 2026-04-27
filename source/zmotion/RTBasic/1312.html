@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZG_READLINE -- 读取加工行代码</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1313.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1311.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;margin-left: 0cm'><a name="_Toc85612086"><span lang=EN-US>ZG_READLINE -- </span></a><span style='font-family:宋体;'>读取加工行代码</span></h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;background:#BDD6EE; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>类型</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>辅助功能</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>描述</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>读取指定行内容（行号），返回行字符串</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;color:red'>运行文件时也可使用该指令，可以追踪到运行的子程序代码</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>语法</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>string = ZG_READLINE (linenum)</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm;text-indent:20.25pt'><span lang=EN-US>linenum</span><span style='font-family:宋体;'>：行号，</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>为当前运行行</span><span lang=EN-US>/</span><span style='font-family:宋体;'>编辑行</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm;text-indent:20.25pt'><span lang=EN-US>string</span><span style='font-family:宋体;'>：返回字符串</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm;text-indent:20.25pt'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>ZG_READLINE (linenum, tabfirst)</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm;text-indent:20.25pt'><span lang=EN-US>linenum</span><span style='font-family:宋体;'>：行号</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm;text-indent:20.25pt'><span lang=EN-US>tabfirst</span><span style='font-family:宋体;'>：存储行字符串的起始</span><span lang=EN-US>table</span><span style='font-family:宋体;'>位置</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>适用控制器</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>例子</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>dim string(256)</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>string = ZG_READLINE (1)</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>trace string&nbsp;&nbsp;&nbsp; ’</span><span style='font-family:宋体;'>打印第</span><span lang=EN-US>1</span><span style='font-family: 宋体;'>行代码</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>ZG_READLINE (1, 1000)</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>trace tablestring(1000, 128)&nbsp;&nbsp;&nbsp; ’</span><span style='font-family:宋体;'>打印第</span><span lang=EN-US>1</span><span style='font-family: 宋体;'>行代码，最长</span><span lang=EN-US>128</span><span style='font-family:宋体; '>个字符</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1313.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1311.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

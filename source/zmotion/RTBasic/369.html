@@ -1,0 +1,111 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>AXIS_MODE -- connect运动保持</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="370.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="368.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698157"></a><a name="_Toc24241"></a><a name="_Toc347"><span lang=EN-US>AXIS_MODE -- connect</span></a><span style='font-family:宋体;'>运动保持</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>设置</span><span lang=EN-US>BIT1=1</span></b><b><span style='font-family:宋体;'>，防止限位和软限位导致</span><span lang=EN-US>CONNECT</span></b><b><span style='font-family:宋体;'>运动退出。</span></b></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>BIT1=0</span><span style='font-family:宋体;'>，当从轴碰到限位时，主从轴的</span><span lang=EN-US>CONNECT</span><span style='font-family:宋体;'>连接关系断开，消除限位报警后，此时操作主轴，从轴不再跟随；</span></p>
+<p class=MsoNormal><span lang=EN-US>BIT1=1</span><span style='font-family:宋体;'>，碰到限位后仍然保持连接关系，消除报警后，从轴仍然保持关联。</span></p>
+<p class=MsoNormal><span lang=EN-US>BIT5 =0</span><span style='font-family:宋体;'>，缺省设置，主轴带编码器时优先跟踪</span><span lang=EN-US>MPOS</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US>BIT5=1</span><span style='font-family:宋体;'>，设置在齿轮或凸轮运动的主轴上，强制指定跟踪主轴的</span><span lang=EN-US>DPOS</span><span style='font-family:宋体;'>，</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>涉及的指令：</span><span lang=EN-US>CAMBOX</span><span style='font-family:宋体;'>、</span><span lang=EN-US>CONNECT</span><span style='font-family:宋体;'>、</span><span lang=EN-US>MOVELINK</span><span style='font-family:宋体;'>、</span><span lang=EN-US>MOVESLINK</span><span style='font-family:宋体;'>、</span><span lang=EN-US>MOVESYNC</span><span style='font-family:宋体;'>、</span><span lang=EN-US>HW_PSWITCH2</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US>BIT8=0(</span><span style='font-family:宋体;'>缺省</span><span lang=EN-US>)</span><span style='font-family:宋体;'>，</span><span lang=EN-US>=1</span><span style='font-family:宋体;'>时，</span><span lang=EN-US>CLUTCH_RATE=0</span><span style='font-family:宋体;'>时的跟踪方式响应更快，当速度超过目标速度，加速度超过目标加速度</span><span lang=EN-US>2</span><span style='font-family:宋体;'>倍时，跟踪滞后很小。</span><span lang=EN-US style='color:red'>4</span><span style='font-family:宋体;color:red'>系列以上，</span><span lang=EN-US style='color:red'>version_build:240226</span><span style='font-family:宋体;color:red'>增加</span><span lang=EN-US style='color:red'>.</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>注意：硬限位在运动过程中触发且限位方向与运动方向一致会导致同步断开</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red'>固件版本</span><span lang=EN-US style='color:red'>20170616</span><span style='font-family:宋体;color:red'>及以上支持此功能。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>VAR1 = </span><span lang=EN-US>AXIS_MODE</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US>AXIS_MODE<span style='color:black'> = expression</span></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例程</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>例一：不设置</span><span lang=EN-US style='color:black; '>AXIS_MODE</span><span style='font-family:宋体; color:black; '>参数</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>AXIS_MODE=0,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>设置参数</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>FS_LIMIT=1000,500</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体; color:black; '>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CONNECT(1,0)&nbsp; AXIS(1)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>轴</span><span lang=EN-US style='color:black; '>1</span><span style='font-family:宋体; color:black; '>连接到轴</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体; color:black; '>，比例为</span><span lang=EN-US style='color:black; '>1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(1000)&nbsp; AXIS(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(-1000)&nbsp; AXIS(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>运动轨迹如下：</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt; font-family:宋体;'><img border=0 width=771 height=366 src="doc.files/image425.png" alt="说明: IMG_256" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>轴</span><span lang=EN-US>1</span><span style='font-family:宋体;'>碰到限位后停止，和轴</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的</span><span lang=EN-US>connect</span><span style='font-family:宋体;'>连接断开，后续轴</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的运动与轴</span><span lang=EN-US>1</span><span style='font-family:宋体;'>无关。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>例二：设置</span><span lang=EN-US style='color:black; '>AXIS_MODE</span><span style='font-family:宋体; color:black; '>参数</span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT IDLE</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0,1)</span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE=1,1</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US>SPEED=100,100&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>ACCEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US>DECEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US>AXIS_MODE=0,2</span></p>
+<p class=MsoNormal><span lang=EN-US>FS_LIMIT=1000,500</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US>CONNECT(1,0) AXIS(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>轴</span><span lang=EN-US>1</span><span style='font-family:宋体;'>连接到轴</span><span lang=EN-US>0</span><span style='font-family:宋体;'>，比例为</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE(1000) AXIS(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE(-1000) AXIS(0)</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>运动轨迹如下：</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span><span style='font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt; font-family:宋体;'><img border=0 width=761 height=431 src="doc.files/image427.png" alt="说明: IMG_256" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>轴</span><span lang=EN-US>1</span><span style='font-family:宋体;'>碰到限位后停止，但和轴</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的</span><span lang=EN-US>connect</span><span style='font-family:宋体;'>并未断开，运动到限位位置内，跟随轴</span><span lang=EN-US>0</span><span style='font-family:宋体;'>运动。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="61.html#_CONNECT_--_同步运动_1"><span lang=EN-US>CONNECT</span></a><span style='font-family:宋体; color:black;'>，</span><a title="Not Found Page:#_FS_LIMIT -- 正向软限位设置"><span lang=EN-US style='color:black;'>FS_LIMIT</span></a><span style='font-family:宋体; color:black;'>，</span><a title="Not Found Page:#_RS_LIMIT -- 负向软限位设置"><span lang=EN-US style='color:black;'>RS_LIMIT</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="370.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="368.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

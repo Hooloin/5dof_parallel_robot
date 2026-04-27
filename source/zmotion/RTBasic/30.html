@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVESMOOTH -- 倒圆角</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="31.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="29.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697825"></a><a name="_Toc5032"></a><a name="_Toc25830"></a><a name="_Toc14125"></a><a name="_Toc7102"><span lang=EN-US>MOVESMOOTH -- </span></a><span style='font-family:宋体;'>倒圆角</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:black;'>多轴运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='tab-stops:center 207.65pt;layout-grid-mode:char; '><b><span style='font-family:宋体;color:black; '>空间直线倒圆运动。</span></b></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;layout-grid-mode:char; '><b><span lang=EN-US style='color:black; '>&nbsp;</span></b></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:black;'>根据下一个直线运动的绝对坐标在拐角自动插入圆弧，加入圆弧后会使得运动的终点与直线的终点不一致，拐角过大时不会插入圆弧，当距离不够时会自动减小半径。</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:black;'>自定义速度的连续插补运动可以使用</span><span lang=EN-US style='color:black;'>SP</span><span style='font-family:宋体;color:black;'>后缀的指令，见</span><span lang=EN-US style='color:black;'>*SP</span><span style='font-family:宋体;color:black;'>描述。</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:red;'>此指令为早期开发指令，有轴数限制，建议使用</span><span lang=EN-US style='color:red;'>CORNER_MODE </span><span style='font-family:宋体;color:red;'>指令，功能更多。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>MOVESMOOTH (end1, end2, end3, next1, next2, next3, radius)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>end1</span><span style='font-family:宋体; color:black;'>：第</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>个轴运动绝对坐标</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>end2</span><span style='font-family:宋体; color:black;'>：第</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>个轴运动绝对坐标</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>end3</span><span style='font-family:宋体; color:black;'>：第</span><span lang=EN-US style='color:black;'>3</span><span style='font-family:宋体;color:black;'>个轴运动绝对坐标</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>next1</span><span style='font-family:宋体; color:black;'>：第</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>个轴下一个直线运动绝对坐标</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>next2</span><span style='font-family:宋体; color:black;'>：第</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>个轴下一个直线运动绝对坐标</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>next3</span><span style='font-family:宋体; color:black;'>：第</span><span lang=EN-US style='color:black;'>3</span><span style='font-family:宋体;color:black;'>个轴下一个直线运动绝对坐标</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>radius</span><span style='font-family:宋体; color:black;'>：插入圆弧的半径，当过大的时候自动缩小</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1,2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1,1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体; color:black;'>设为脉冲轴类型</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100,100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>主轴速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000 ,1000,1000 &nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;color:black;'>主轴加速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000 ,1000,1000&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>主轴减速度</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family: 宋体; color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal style='margin-left:189.75pt;text-indent:-189.75pt; layout-grid-mode:char;'><a name="OLE_LINK80"><b><span lang=EN-US style='color:black;'>MOVESMOOTH </span></b></a><span lang=EN-US style='color:black;'>(0,100,0,100,100,0,50)&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>加入圆弧后，实际运动到了</span><span lang=EN-US style='color:black;'>'(50,100,0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVEABS(100,100,0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>插补轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=786 height=411 src="doc.files/image123.jpg" ></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="31.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="29.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

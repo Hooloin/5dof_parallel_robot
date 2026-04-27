@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_McFindShapeRe -- 匹配支持区域</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1060.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1058.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc24199"><span lang=EN-US>ZV_McFindShapeRe -- </span></a><span style='font-family:宋体;'>匹配支持区域</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>形状模板匹配</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>使用单形状模板，在图像</span><span lang=EN-US>img</span><span style='font-family:宋体; '>上进行匹配查找</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>根据模板类型及扩展算法参数</span><span style='font-family:宋体; '>，可以支持扩展算法</span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_McFindShapeRe(model,img,re,matchs,minScore[,nums=0,maxOverlap=0.5,minThresh=-1,accuracy=1,speed=9,polar=0,deform=0,boundary=4])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>model</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，形状模板</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，待匹配的搜索图像，</span><span lang=EN-US>8U</span><span style='font-family:宋体; '>单通道，尺寸必须大于模板图片</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>re</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，指定的匹配图像的有效区域，保留逗号不填或填入未使用过的变量则默认整个图像有效</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>matchs</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输出参数，匹配结果，矩阵，</span><span lang=EN-US>n</span><span style='font-family:宋体; '>行</span><span lang=EN-US>5</span><span style='font-family:宋体; '>列或</span><span lang=EN-US>7</span><span style='font-family:宋体; '>列（杂波功能开启），每行一个匹配目标，列依次为匹配分数</span><span lang=EN-US>score</span><span style='font-family:宋体; '>、</span><span lang=EN-US>x</span><span style='font-family:宋体; '>坐标、</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标、旋转角度</span><span lang=EN-US>angle</span><span style='font-family:宋体; '>、缩放比例</span><span lang=EN-US>scale</span><span style='font-family:宋体; '>（、模板序号</span><span lang=EN-US>0</span><span style='font-family:宋体; '>、杂波分数）</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minScore</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>最小匹配分值，</span><span lang=EN-US>(0,100]</span><span style='font-family:宋体; '>，分值越高匹配的目标越准确，越低容易将非目标当成目标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>nums</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>最大匹配数量，</span><span lang=EN-US>[0, </span><span style='font-family:宋体; '>无穷</span><span lang=EN-US>)</span><span style='font-family:宋体; '>，当</span><span lang=EN-US>num</span><span style='font-family:宋体; '>大于真实目标时，以目标分数从高到低输出所有目标；当</span><span lang=EN-US>num</span><span style='font-family:宋体; '>小于真实目标时，以目标分数从高到低输出</span><span lang=EN-US>num</span><span style='font-family:宋体; '>个目标；当</span><span lang=EN-US>num</span><span style='font-family:宋体; '>为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时，以目标分数从高到低输出所有目标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>maxOverlap</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>目标重叠率，正常范围</span><span lang=EN-US>[0,1]</span><span style='font-family:宋体; '>，</span><span lang=EN-US>0--</span><span style='font-family:宋体; '>不重叠，表示只找不重叠的目标，</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>重叠，表示相隔很近的目标都能找到。重叠率表示目标允许的重叠比例。重叠率是目标轮廓特征的最小外接矩重叠面积除以最小外接矩的面积计算得来。当匹配结果重叠比例超出设置值时将只保留最好的结果，主要用于去除重叠的目标对象，当搜索图中只有一个目标时也可将参数设置小一些，会加快匹配速度但不明显</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minThresh</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>目标轮廓的最低边缘阈值，</span><span lang=EN-US>minThresh</span><span style='font-family:宋体; '>取</span><span lang=EN-US>-1</span><span style='font-family:宋体; '>时将使用模板图像估算出的最小阈值。如果模板图像和匹配图像差异大可能导致匹配失败，这时应该自己设置阈值，比如设置成</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>accuracy</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>匹配精度，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>像素精度，</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>插值精度，</span><span lang=EN-US>2-</span><span style='font-family:宋体; '>最小二乘拟合精度，</span><span lang=EN-US>3-</span><span style='font-family:宋体; '>多次迭代的最小二乘拟合精度。精度</span><span lang=EN-US>1</span><span style='font-family:宋体; '>能满足大部分应用，在精度要求较高的场合使用</span><span lang=EN-US>2</span><span style='font-family:宋体; '>或</span><span lang=EN-US>3</span><span style='font-family:宋体; '>，但也会更耗时</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>speed</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>匹配速度</span><span lang=EN-US>0-10</span><span style='font-family:宋体; '>，越大速度越快，但可能丢失目标，大于</span><span lang=EN-US>10</span><span style='font-family:宋体; '>时取</span><span lang=EN-US>10</span><span style='font-family:宋体; '>，如果有丢失目标则建议设置小些</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>polar</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>匹配极性</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=728 style='width:311.8pt;margin-left:20.75pt;border-collapse:collapse; border:none; '> <tr style='height:13.6pt'> <td width=81 valign=top style='width:34.85pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>polar</span></p>
+</td>  <td width=150 valign=top style='width:64.35pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>极性</span></p>
+</td>  <td width=496 valign=top style='width:212.6pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>解释</span></p>
+</td>  </tr> <tr style='height:13.6pt'> <td width=81 valign=top style='width:34.85pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=150 valign=top style='width:64.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>正极性</span></p>
+</td>  <td width=496 valign=top style='width:212.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>匹配目标所有轮廓点的明暗变化与模板所有轮廓点的明暗变化一致</span></p>
+</td>  </tr> <tr style='height:13.6pt'> <td width=81 valign=top style='width:34.85pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width=150 valign=top style='width:64.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>正负极性</span></p>
+</td>  <td width=496 valign=top style='width:212.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>即正极性和负极性均可，匹配目标所有轮廓点的明暗变化与模板所有轮廓点的明暗变化一致或者相反</span></p>
+</td>  </tr> <tr style='height:13.6pt'> <td width=81 valign=top style='width:34.85pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width=150 valign=top style='width:64.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>任意极性</span></p>
+</td>  <td width=496 valign=top style='width:212.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:13.6pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>匹配目标部分轮廓点的明暗变化与部分模板轮廓点的明暗变化一致或者相反</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal align=left style='margin-top:7.8pt;text-align:left;text-indent:21.1pt;text-autospace:none'><b><span lang=EN-US>deform</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>变形尺寸，相对于模板，允许目标轮廓有少许变形，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>不支持变形；</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>支持略微变形，但更耗时</span><span lang=EN-US>,</span><span style='font-family:宋体; '>可结合匹配阈值去掉一些噪声干扰提高速度</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>boundary</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>边界模式，目标轮廓超出图像边界的程度，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>不超出，</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>少量超出，</span><span lang=EN-US>2-</span><span style='font-family:宋体; '>超出适中，</span><span lang=EN-US>3-</span><span style='font-family:宋体; '>大量超出，</span><span lang=EN-US>4-</span><span style='font-family:宋体; '>完全超出，匹配耗时依次增大。使用边界时需要结合系统参数</span><span lang=EN-US style='font-family:宋体'>&quot;ShapeOnBorder&quot;</span><span style='font-family:宋体'>使用，只有这个参数设置为<span lang=EN-US>1</span>时，边界模式才会起作用，建议根据实际情况设置该值</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=618 height=305 src="doc.files/image1114.jpg" alt="说明: 4" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT model_img,re,model</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(model_img,&quot;model1.jpg&quot;,0) ' </span><span style='font-family:宋体; '>读取模版图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_McCreateShape(model_img,re,model,-180,360,0,0,0,0) '</span><span style='font-family:宋体; '>创建模板</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT match_img,match_re,result_mat</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(match_img,&quot;match_img1.png&quot;,0) '</span><span style='font-family:宋体; '>匹配图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReGenRect(match_re,200,0,400,400) ' </span><span style='font-family:宋体; '>匹配区域</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_McFindShapeRe(model,match_img,match_re,result_mat,90,1,0.6,-1,3,9,0) '</span><span style='font-family:宋体; '>区域模板匹配</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>匹配到的目标个数为：</span><span lang=EN-US>&quot;,ZV_MatRows(result_mat)</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><a href="1055.html#_ZV_McCreateShape_--_创建模板"><span lang=EN-US>ZV_McCreateShape</span></a><span style='font-family:宋体; '>、</span><a href="1056.html#_ZV_McCreateShapeScale_--_创建可缩放模板"><span lang=EN-US>ZV_McCreateShapeScale</span></a> </p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1060.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1058.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

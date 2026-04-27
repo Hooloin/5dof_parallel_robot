@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ContGenSubPix -- 亚像素轮廓</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1124.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1122.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc8953"><span lang=EN-US>ZV_ContGenSubPix -- </span></a><span style='font-family:宋体;'>亚像素轮廓</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>轮廓</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>亚像素边缘轮廓提取，使用滞后阈值的</span><span lang=EN-US>canny</span><span style='font-family:宋体; '>边缘检测算法提取图像中指定的</span><span lang=EN-US>region</span><span style='font-family:宋体; '>区域部分的亚像素边缘轮廓。</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>边缘轮廓点的梯度大于</span><span lang=EN-US>high</span><span style='font-family:宋体; '>阈值的一定是轮廓，小于</span><span lang=EN-US>low</span><span style='font-family:宋体; '>的一定不是轮廓，介于</span><span lang=EN-US>low</span><span style='font-family:宋体; '>和</span><span lang=EN-US>high</span><span style='font-family:宋体; '>之间的且与轮廓边缘点相连接的边缘点也视为轮廓点，提取的轮廓不一定保证是顺时针方向</span><span lang=EN-US>(</span><span style='font-family:宋体; '>图像坐标系下</span><span lang=EN-US>)</span><span style='font-family:宋体; '>。</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>如需<span style='color:black'>查看轮廓方向请使用</span></span><span lang=EN-US>ZV_ContDirection</span><span style='font-family:宋体;'>指令</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:red'>注意：若图像轮廓边缘处噪点或毛边较多可结合图像形态学处理算子如开运算或闭运算将噪点或毛边去除后再提取轮廓</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGenSubPix(img,region,contlist,low,high,minLen)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:31.5pt;text-indent:-31.5pt;'><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，源灰度图像，单通道</span><span lang=EN-US>8U</span><span style='font-family:宋体; '>类型</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>region</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，表示提取轮廓的有效区域，即</span><span lang=EN-US>region</span><span style='font-family:宋体; '>指定的图像部分才提取轮廓，保留逗号不填或填入未使用过的变量则全图提取</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>contlist</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，列表类型，输出，列表中存储多个轮廓，轮廓属性为曲线型和非多边形型</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>low</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>滞后阈值的低阈值，范围</span><span lang=EN-US>(0,255]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>high</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>滞后阈值的高阈值，范围</span><span lang=EN-US>(0,255]</span><span style='font-family:宋体; '>，大于</span><span lang=EN-US>low</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minLen</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>最小轮廓长度，表示提取的轮廓其长度大于等于</span><span lang=EN-US>minContLen</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=783 height=259 src="doc.files/image1155.jpg" alt="说明: 6" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,re,cont_list</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;count2.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReGenRect(re,263,336,114,109) '</span><span style='font-family:宋体;'>生成矩形区域</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGenSubPix(img,re,cont_list,10,50,30) '</span><span style='font-family:宋体;'>从区域中提取亚像素轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>绘制</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgCopy(img,dst)</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgSetConst(dst,0) '</span><span style='font-family:宋体;'>同尺寸黑色背景图</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DraContList(dst,cont_list,255,0) '</span><span style='font-family:宋体;'>绘制轮廓</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1124.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1122.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>STOP_ANGLE -- 拐角减速结束</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="299.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="297.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_STOP_ANGLE_--_拐角减速结束"></a><a name="_STOP_ANGLE"></a><a name="_Toc134698084"></a><a name="_Toc5274"></a><a name="_Toc31608"></a><a name="_Toc19662"></a><a name="_Toc10737"></a><a name="_STOP_ANGLE_--_拐角减速结束_1"></a><span lang=EN-US>STOP_ANGLE -- </span><span style='font-family:宋体;'>拐角减速结束</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>轴参数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>停止减速到的角度，单位是弧度。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;color:red;'>减速拐角参考速度以</span><span lang=EN-US style='color:red;'>FORCE_SPEED</span><span style='font-family:宋体;color:red;'>速度为参考，一定要设置合理的</span><span lang=EN-US style='color:red;'>FORCE_SPEED</span><span style='font-family:宋体;color:red;'>。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>角度转换弧度公式：角度值</span><span lang=EN-US style='color:black;'>*(PI/180)</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>减速角度是指电机的参考角度相对上一条运动的变化值。</span><span style='font-family:宋体;color:black;'>如下图。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>此角度值不是实际轨迹的角度，是换算到电机变换的角度，此角度值仅为参考。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=793 height=477 src="doc.files/image384.jpg" ></span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>下一插补运动轨迹处于下方时取绝对值。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>直线与圆弧相连时按照圆弧的切线方向计算角度。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>与</span><span lang=EN-US style='color:black;'>DECEL_ANGLE</span><span style='font-family:宋体;color:black;'>一起使用，当实际运动的角度处于</span><span lang=EN-US style='color:black;'>DECEL_ANGLE</span><span style='font-family:宋体;color:black;'>（上限）与</span><span lang=EN-US style='color:black;'>STOP_ANGLE</span><span style='font-family:宋体;color:black;'>（下限）时才会减速。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VAR1 = </span><span lang=EN-US>STOP_ANGLE</span><span style='font-family:宋体; color:black;'>，</span><span lang=EN-US>STOP_ANGLE<span style='color:black'>= expression</span></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>参考</span><span lang=EN-US style='color:black;'> CORNER_MODE </span><span style='font-family:宋体;color:black;'>例程一</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CORNER_MODE=2</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL_ANGLE = 25 * (PI/180)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>STOP_ANGLE</span></b><span lang=EN-US style='color:black;'> = 90 * (PI/180)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>FORCE_SPEED=SPEED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>一定要设置</span><span lang=EN-US style='color:black;'>FORCE_SPEED </span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="297.html#_DECEL_ANGLE">DECEL_ANGLE</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="296.html#_CORNER_MODE_--_拐角设置_1">CORNER_MODE</a></span> </p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="299.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="297.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

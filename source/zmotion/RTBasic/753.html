@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVECIRCDTSP/MOVECIRCDTABSSP -- DT圆弧运动</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="754.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="752.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc187157574"></a><a name="_Toc186126952"></a><a name="MOVECIRCDTSP__MOVECIRCDTABSSP"></a><span lang=EN-US>MOVECIRCDTSP/MOVECIRCDTABSSP -- DT</span><span style='font-family:宋体;'>圆弧运动</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.46%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.54%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>DT</span><span style='font-family:宋体; '>运动函数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.46%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.54%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>将轴号和运动距离分别存放到</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>TABLE</span><span style='font-family:宋体; '>表，通过</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>TABLE</span><span style='font-family:宋体; '>列表进行圆弧运动。使用位存在选择</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>TABLE</span><span style='font-family:宋体; '>表里的轴号。</span></p>
+<p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; '>根据当前点</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>(</span><span style='font-family:宋体; '>起始点</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>)</span><span style='font-family:宋体; '>和中点的位置，以及半径画圆，圆心自动计算。当终点与起始点的直线距离大于半径时，以这两点画半圆，半径为连线距离一半，圆心为连线中点。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.46%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.54%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVECIRCDTSP</span><span style='font-family:宋体; '>（最大轴数，位存在，轴</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>dt</span><span style='font-family:宋体; '>列表，终点</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>dt</span><span style='font-family:宋体; '>列表，半径，顺时针</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>0/</span><span style='font-family:宋体; '>逆时针</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>1</span><span style='font-family:宋体; '>）</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.46%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.54%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>4</span><span style='font-family:宋体; '>系以上支持</span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.46%;border-top:none;border-left: solid black 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:4.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:4.5pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>BASE(0,1,2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>ATYPE=1,1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>DPOS=0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>TABLE(10,0,1)&nbsp;&nbsp; 'TABLE(10)</span><span style='font-family:宋体; '>存放轴</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>01</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>TABLE(20,0,50)&nbsp;&nbsp; '</span><span style='font-family:宋体; '>只需要放一个终点坐标（</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>X</span><span style='font-family:宋体; '>，</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>Y</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>WHILE 1</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>IF SCAN_EVENT(IN(0))&gt;0 THEN </span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>'MOVECIRCDTABSSP(6,3,10,20,50,1)</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVECIRCDTSP(6,3,10,20,50,1)</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>'</span><span style='font-family:宋体; '>从起始点经过（</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>0,50</span><span style='font-family:宋体; '>），半径为</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>50</span><span style='font-family:宋体; '>，逆时针画圆弧</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>WEND</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '><img border=0 width=754 height=327 src="doc.files/image763.jpg" ></span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp;</span></b></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="754.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="752.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

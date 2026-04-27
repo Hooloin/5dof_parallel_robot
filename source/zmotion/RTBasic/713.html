@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>HMI_FILESEL -- 获取当前选中文件/文件夹名称</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="714.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="712.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3 style='margin-bottom:3.6pt'><a name="_Toc186126946"><span lang=EN-US>HMI_FILESEL -- </span></a><span style='font-family:宋体;'>获取当前选中文件</span><span lang=EN-US>/</span><span style='font-family:宋体;'>文件夹名称</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.46%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.54%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>文件浏览器元件操作指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.46%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.54%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>获取文件浏览器元件当前选中文件</span><span lang=EN-US>/</span><span style='font-family:宋体;'>文件夹名称（不带路径）</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.46%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.54%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>filename = HMI_FILESEL(winid, controlid [,tabid])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>winid</span><span style='font-family:宋体;'>：</span><span lang=EN-US>HMI</span><span style='font-family:宋体;'>文件里面窗口编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>controlid</span><span style='font-family:宋体;'>：元件编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>tabid</span><span style='font-family:宋体;'>：</span><span lang=EN-US>table</span><span style='font-family:宋体;'>编号，可选，输出是否选中文件夹</span></p>
+<p class=MsoNormal style='text-indent:52.5pt;'><span lang=EN-US>table(tabid)=0</span><span style='font-family:宋体;'>为文件，</span><span lang=EN-US>=1</span><span style='font-family:宋体;'>为文件夹，</span><span lang=EN-US>=-1</span><span style='font-family:宋体;'>为未选中</span></p>
+<p class=MsoNormal style='text-indent:20.45pt;'><span lang=EN-US>filename</span><span style='font-family:宋体;'>：返回当前选中的文件</span><span lang=EN-US>/</span><span style='font-family:宋体;'>文件夹名称，未选中状态返回空</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.46%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.54%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>支持</span><span lang=EN-US>RTHmi</span></p>
+</td>  </tr> <tr style='height:16.45pt'> <td width="17%" valign=top style='width:17.46%;border-top:none;border-left: solid black 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:16.45pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal><span lang=EN-US>?HMI_FILESEL(10,1,0)&nbsp; ’</span><span style='font-family:宋体; '>获取并打印</span><span lang=EN-US>10</span><span style='font-family:宋体;'>号窗口第</span><span lang=EN-US>1</span><span style='font-family:宋体;'>个元件当前选中文件的名称</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>运行效果如下：</span></p>
+<p class=MsoListParagraph style='margin-left:0cm;text-indent:0cm;'><span lang=EN-US style='font-family:Wingdings; '>&Oslash;<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span style='font-family:宋体;'>选中文件后，在“在线命令”中输入该指令，“命令与输出栏”打印选中文件的名称</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=726 height=305 src="doc.files/image741.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=728 height=180 src="doc.files/image743.jpg" ></span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="714.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="712.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

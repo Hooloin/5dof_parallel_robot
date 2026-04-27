@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>SLOT_SLAVE -- ETHERCAT冗余配置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="625.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="623.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_SLOT_SLAVE_--_ETHERCAT冗余配置"></a><span lang=EN-US>SLOT_SLAVE -- ETHERCAT</span><span style='font-family:宋体;'>冗余配置</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" style='width:82.38%;border:solid windowtext 1.0pt;border-left: none; padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体;'>特殊参数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=left style='text-align:left;'><span style='font-family:宋体; '>配置两个</span><span lang=EN-US>ECAT</span><span style='font-family:宋体;'>通道为一个通道</span><span lang=EN-US>,</span><span style='font-family:宋体;'>以支持热冗余备份</span></p>
+<p class=MsoNormal align=left style='text-align:left;'><span style='font-family:宋体; '>注意</span><span lang=EN-US>1</span><span style='font-family:宋体;'>：必须总线停止的时候设置；</span></p>
+<p class=MsoNormal align=left style='text-align:left;'><span style='font-family:宋体; '>注意</span><span lang=EN-US>2</span><span style='font-family:宋体;'>：设置后只能对</span><span lang=EN-US>islot1</span><span style='font-family:宋体;'>操作，不能对</span><span lang=EN-US>islot2</span><span style='font-family:宋体;'>操作；</span></p>
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family: 宋体;'>注意</span><span lang=EN-US style='font-family:"Calibri","sans-serif";'>3</span><span style='font-family:宋体'>：总线初始化时必须接线正常，否则会初始化失败，或扫描设备个数错误，</span><span style='font-family:宋体; '>查看是否配置正确可以用</span><span lang=EN-US style='font-family:"Calibri","sans-serif";'>?SLOT_SLAVE(islot1)</span><span style='font-family:宋体; '>。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>SLOT_SLAVE(islot1) = islot2</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; islot1</span><span style='font-family:宋体;'>：主总线，必须接第一个设备的</span><span lang=EN-US>IN</span><span style='font-family: 宋体; '>口</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; islot2</span><span style='font-family:宋体;'>：从总线，必须接最后一个设备的</span><span lang=EN-US>OUT</span><span style='font-family: 宋体; '>口</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>7</span><span style='font-family:宋体;'>系</span><span lang=EN-US>240520</span><span style='font-family:宋体;'>版本以上，多卡支持</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='line-height:120%;layout-grid-mode:char'><span lang=EN-US>SLOT_SLAVE(0) = 1</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" style='width:82.38%;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='line-height:120%;layout-grid-mode:char'><span lang=EN-US><a title="Not Found Page:#_SLOT_INFO_--_总线信息读取">SLOT_INFO</a></span><span style='font-family:宋体;'>、</span><span lang=EN-US><a href="592.html#_NODE_REGREAD_--_ESC寄存器读取">NODE_REGREAD</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><b><span lang=EN-US style='font-family:等线; '>&nbsp;</span></b></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="625.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="623.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

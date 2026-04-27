@@ -1,0 +1,422 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DRIVE_WRITE -- 参数写入</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="610.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="608.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_DRIVE_WRITE"></a><a name="_Toc134698422"></a><a name="_Toc24918"></a><a name="_Toc3177"></a><a name="_Toc2448"></a><a name="_Toc30999"><span lang=EN-US>DRIVE_WRITE -- </span></a><span style='font-family:宋体;'>参数写入</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>总线指令，仅</span><span lang=EN-US style='color:black;'>Rtex</span><span style='font-family:宋体; color:black;'>控制器可用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>操作当前</span></b><b><span lang=EN-US>BASE</span></b><b><span style='font-family:宋体; '>轴，驱动器参数修改。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>通过</span><span lang=EN-US>RETURN</span><span style='font-family:宋体; '>返回成功与否。</span></p>
+</td> </tr> <tr style='height:22.45pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:22.45pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:22.45pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>DRIVE_WRITE(para,value)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>para</span><span style='font-family:宋体;'>：</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=834 style='width:357.4pt;margin-left:18.65pt;border-collapse:collapse; border:none; '> <tr> <td width=85 valign=top style='width:36.4pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='tab-stops:54.15pt;layout-grid-mode:char; '><span style='font-family:宋体;'>值</span></p>
+</td> <td width=749 valign=top style='width:321.0pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='tab-stops:54.15pt;layout-grid-mode:char; '><span style='font-family:宋体;'>描述</span></p>
+</td> </tr> <tr> <td width=85 valign=top style='width:36.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='tab-stops:54.15pt;layout-grid-mode:char; '><span lang=EN-US>1</span></p>
+</td> <td width=749 valign=top style='width:321.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='tab-stops:54.15pt;layout-grid-mode:char; '><span style='font-family:宋体;'>参数分类</span><span lang=EN-US>*256 + </span><span style='font-family:宋体;'>参数编号（</span><span lang=EN-US>Pr7.20=7*256+20</span><span style='font-family: 宋体; '>）</span></p>
+</td> </tr> <tr> <td width=85 valign=top style='width:36.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>2</span></p>
+</td> <td width=749 valign=top style='width:321.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>特殊参数</span><span lang=EN-US>=128</span><span style='font-family:宋体; '>，当前参数写入</span><span lang=EN-US>EEPROM</span><span style='font-family:宋体; '>（此时</span><span lang=EN-US>value=1</span><span style='font-family:宋体;'>）</span></p>
+</td> </tr> <tr> <td width=85 valign=top style='width:36.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>3</span></p>
+</td> <td width=749 valign=top style='width:321.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>特殊参数</span><span lang=EN-US>=$40000 + typecode + (</span><span style='font-family:宋体;'>设置值</span><span lang=EN-US>*256)</span><span style='font-family:宋体; '>，使用驱动器的回零箝位功能</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>value</span><span style='font-family:宋体;'>：参数值</span></p>
+<p class=MsoNormal style='text-indent:31.5pt; '><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>1.</span></b><b><span style='font-family:宋体; color:black;'>伺服参数</span></b></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=877 style='width:376.05pt;border-collapse:collapse;border:none; '> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>伺服参数</span></b></p>
+</td> <td width=313 valign=top style='width:134.25pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>功能</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>值</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.00</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>设置电机转向</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>CW&nbsp;&nbsp; 1</span><span style='font-family:宋体;'>：</span><span lang=EN-US>CCW</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.01</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>控制模式设置</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>一般设置为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>：半闭环控制</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.08</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>电机一圈脉冲数</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0-8388608</span><span style='font-family:宋体;'>（根据实际电机）</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.09</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>齿轮比分子设定</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0-1073741824</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.10</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>齿轮比分母设定</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>1-1073741824</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr4.01</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>正限位信号设置</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常闭：</span><span lang=EN-US>00818181h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>8487297</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常开：</span><span lang=EN-US>00010101h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>65793</span><span style='font-family:宋体; '>）</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr4.02</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>负限位信号设置</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常闭：</span><span lang=EN-US>00828282h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>8553090</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常开：</span><span lang=EN-US>00020202h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>131586</span><span style='font-family:宋体; '>）</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr4.03</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Home</span><span style='font-family: 宋体; '>信号设置</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常闭：</span><span lang=EN-US>00A2A2A2h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>10658466</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常开：</span><span lang=EN-US>00222222h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>2236962</span><span style='font-family:宋体; '>）</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>转矩相关</span></b></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.13</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>第一转矩限制</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0~500%</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 rowspan=2 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr5.21</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>转矩限制选择</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>转矩控制时，固定为</span><span lang=EN-US>Pr0.13</span><span style='font-family:宋体; '>（第</span><span lang=EN-US>1</span><span style='font-family:宋体; '>转矩限制）。</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>如下图所示</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=743 colspan=2 valign=top style='width:318.55pt;border-top:none; border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<div align=center>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=616 style='width:264.05pt;border-collapse:collapse;border:none; '> <tr> <td width=100 rowspan=2 style='width:42.9pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span style='font-family:宋体;'>设定值</span></p>
+</td> <td width=258 colspan=2 style='width:110.55pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>TL_SW=0</span></p>
+</td> <td width=258 colspan=2 style='width:110.6pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>TL_SW=1</span></p>
+</td> </tr> <tr> <td width=129 style='width:55.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span style='font-family:宋体;'>负方向</span></p>
+</td> <td width=129 style='width:55.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span style='font-family:宋体;'>正方向</span></p>
+</td> <td width=129 style='width:55.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span style='font-family:宋体;'>负方向</span></p>
+</td> <td width=129 style='width:55.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span style='font-family:宋体;'>正方向</span></p>
+</td> </tr> <tr> <td width=100 style='width:42.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>0</span><span style='font-family:宋体; '>，</span><span lang=EN-US>[1]</span></p>
+</td> <td width=516 colspan=4 style='width:221.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr0.13</span></p>
+</td> </tr> <tr> <td width=100 style='width:42.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>2</span></p>
+</td> <td width=129 style='width:55.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr5.22</span></p>
+</td> <td width=129 style='width:55.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr0.13</span></p>
+</td> <td width=129 style='width:55.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr5.22</span></p>
+</td> <td width=129 style='width:55.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr0.13</span></p>
+</td> </tr> <tr> <td width=100 style='width:42.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>3</span></p>
+</td> <td width=258 colspan=2 style='width:110.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr0.13</span></p>
+</td> <td width=258 colspan=2 style='width:110.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr5.22</span></p>
+</td> </tr> <tr> <td width=100 style='width:42.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>4</span></p>
+</td> <td width=129 style='width:55.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr5.22</span></p>
+</td> <td width=129 style='width:55.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr0.13</span></p>
+</td> <td width=129 style='width:55.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr5.22</span></p>
+</td> <td width=129 style='width:55.3pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>Pr5.25</span></p>
+</td> </tr> </table>
+</div>
+<p class=MsoNormal></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr5.22</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>第二转矩限制</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0~500%</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr5.25</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>正方向转矩限制</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0~500%</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr5.26</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>负方向转矩限制</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0~500%</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>速度相关</span></b></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr3.12</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>加速时间设置</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0~10000ms </span><span style='font-family:宋体;'>（达到</span><span lang=EN-US>1000.r/min</span><span style='font-family: 宋体; '>）</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr3.13</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>减速时间设置</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0~10000ms </span><span style='font-family:宋体;'>（达到</span><span lang=EN-US>1000.r/min</span><span style='font-family: 宋体; '>）</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr3.14</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>S</span><span style='font-family: 宋体; '>加减速设置</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0~1000ms</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr3.17 </span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>速度限制选择</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>转矩控制时的速度限制值的方式选择</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=334 style='width:143.35pt;border-collapse:collapse;border:none; '> <tr> <td width=102 rowspan=2 valign=top style='width:43.5pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span style='font-family:宋体;color:black; '>设定值</span></p>
+</td> <td width=233 colspan=2 valign=top style='width:99.85pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>SL_SW</span></p>
+</td> </tr> <tr> <td width=116 valign=top style='width:49.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>0</span></p>
+</td> <td width=117 valign=top style='width:49.95pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>1</span></p>
+</td> </tr> <tr> <td width=102 valign=top style='width:43.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>[0]</span></p>
+</td> <td width=233 colspan=2 valign=top style='width:99.85pt;border-top:none; border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>Pr3.21</span></p>
+</td> </tr> <tr> <td width=102 valign=top style='width:43.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>1</span></p>
+</td> <td width=116 valign=top style='width:49.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>Pr3.21</span></p>
+</td> <td width=117 valign=top style='width:49.95pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>Pr3.22</span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span style='font-family:宋体;'>设置为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>时，根据</span><span lang=EN-US>RTEX</span><span style='font-family:宋体; '>通信指令</span><span lang=EN-US>SL_SW</span><span style='font-family: 宋体; '>的数值进行选择</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr3.21</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>速度限制值</span><span lang=EN-US>1</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0~20000r/min</span></p>
+</td> </tr> <tr style='height:1.15pt'> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr3.22</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>速度限制值</span><span lang=EN-US>2</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.15pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0~20000r/min</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><b><span lang=EN-US>2.Rtex</span></b><b><span style='font-family: 宋体; '>通讯参数</span></b></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=877 style='width:376.05pt;border-collapse:collapse;border:none; '> <tr> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr7.20</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Rtex</span><span style='font-family: 宋体; '>通讯周期</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>-1</span><span style='font-family: 宋体; '>：将</span><span lang=EN-US>Pr7.91</span><span style='font-family:宋体; '>的设定生效</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>3</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>0.5ms</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>6</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>1.0ms</span></p>
+</td> </tr> <tr> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr7.21</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Rtex</span><span style='font-family: 宋体; '>指令更新周期比</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>1</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>1</span><span style='font-family:宋体; '>倍</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>2</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>2</span><span style='font-family:宋体; '>倍</span></p>
+</td> </tr> <tr> <td width=134 valign=top style='width:57.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr7.91</span></p>
+</td> <td width=313 valign=top style='width:134.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Rtex</span><span style='font-family: 宋体; '>通讯周期扩展</span></p>
+</td> <td width=430 valign=top style='width:184.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>62500 ns</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>125000 ns</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>250000 ns</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>500000 ns</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>1000000 ns</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>2000000 ns</span></p>
+</td> </tr> </table>
+<p class=MsoNormal><b><span lang=EN-US>&nbsp;</span></b></p>
+<p class=MsoNormal><b><span lang=EN-US>3.</span></b><b><span style='font-family:宋体; '>回零箝位模式</span></b></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=877 style='width:376.05pt;border-collapse:collapse;border:none; '> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>typecode</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>描述</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$50</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>位置箝位状态监视器</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$51</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>位置箝位</span><span lang=EN-US> 1</span><span style='font-family:宋体; '>启动</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$52</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>位置箝位</span><span lang=EN-US> 2</span><span style='font-family:宋体; '>启动</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$53</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>位置箝位</span><span lang=EN-US> 1,2</span><span style='font-family:宋体; '>启动</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$54</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>位置箝位</span><span lang=EN-US> 1</span><span style='font-family:宋体; '>解除</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$58</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>位置箝位</span><span lang=EN-US> 2</span><span style='font-family:宋体; '>解除</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$5c</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>位置箝位</span><span lang=EN-US> 1,2</span><span style='font-family:宋体; '>解除</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><b><span lang=EN-US>4.</span></b><b><span style='font-family:宋体; '>设置值</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>设置值</span><span lang=EN-US>=</span><span style='font-family:宋体;'>钳位</span><span lang=EN-US>1</span><span style='font-family:宋体;'>设置</span><span lang=EN-US> + ($10* </span><span style='font-family:宋体; '>钳位</span><span lang=EN-US>2</span><span style='font-family:宋体;'>设置</span><span lang=EN-US>)</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=877 style='width:376.05pt;border-collapse:collapse;border:none; '> <tr> <td width=110 valign=top style='width:47.0pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>bit7</span></p>
+</td> <td width=110 valign=top style='width:47.0pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>bit6</span></p>
+</td> <td width=110 valign=top style='width:47.0pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>bit5</span></p>
+</td> <td width=110 valign=top style='width:47.0pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>bit4</span></p>
+</td> <td width=110 valign=top style='width:47.0pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>bit3</span></p>
+</td> <td width=110 valign=top style='width:47.0pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>bit2</span></p>
+</td> <td width=110 valign=top style='width:47.0pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>bit1</span></p>
+</td> <td width=110 valign=top style='width:47.05pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>bit0</span></p>
+</td> </tr> <tr> <td width=439 colspan=4 valign=top style='width:188.0pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>LATCH_SEL2</span></p>
+</td> <td width=439 colspan=4 valign=top style='width:188.05pt;border-top:none; border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US>LATCH_SEL1</span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=877 style='width:376.05pt;border-collapse:collapse;border:none; '> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>箝位</span><span lang=EN-US>1/2</span><span style='font-family:宋体; '>设置</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>描述</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$0</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Z </span><span style='font-family: 宋体; '>相信号触发</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$1</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>EXT1 </span><span style='font-family: 宋体; '>的逻辑上升沿</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$2</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>EXT2 </span><span style='font-family: 宋体; '>的逻辑上升沿</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$3</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>EXT3 </span><span style='font-family: 宋体; '>的逻辑上升沿</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$9</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>EXT1 </span><span style='font-family: 宋体; '>的逻辑下降沿</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$10</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>EXT2 </span><span style='font-family: 宋体; '>的逻辑下降沿</span></p>
+</td> </tr> <tr> <td width=263 valign=top style='width:112.5pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$11</span></p>
+</td> <td width=615 valign=top style='width:263.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>EXT3 </span><span style='font-family: 宋体; '>的逻辑下降沿</span></p>
+</td> </tr> </table>
+<p class=MsoNormal></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>支持</span><span lang=EN-US>RTEX</span><span style='font-family:宋体; '>的控制器</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>总线开启后才能使用</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例一</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>IF NODE_COUNT(0)&gt;0 THEN</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>BASE(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; '>选择轴</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:10.55pt; '><b><span lang=EN-US>DRIVE_WRITE</span></b><span lang=EN-US>(7*256+11,6)&nbsp;&nbsp; '</span><span style='font-family: 宋体; '>写</span><span lang=EN-US>Pr7.11</span><span style='font-family:宋体;'>参数为</span><span lang=EN-US>6</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp; DRIVE_READ(7*256+11,0)&nbsp;&nbsp; '</span><span style='font-family:宋体; '>读取</span><span lang=EN-US>Pr7.11</span><span style='font-family: 宋体; '>参数数值，保存到</span><span lang=EN-US>vr(0)</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>?vr(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="OLE_LINK112">'</a></span><span style='font-family:宋体; '>打印，打印值</span><span lang=EN-US>6</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例二</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>IF NODE_COUNT(0)&gt;0 THEN</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>BASE(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; '>选择轴</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:10.55pt; '><b><span lang=EN-US>DRIVE_WRITE</span></b><span lang=EN-US>(128,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>将修改的参数写入</span><span lang=EN-US>EEPROM</span></p>
+<p class=MsoNormal><span lang=EN-US>ENDIF</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="608.html#_DRIVE_READ">DRIVE_READ</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="607.html#_DRIVE_CLEAR">DRIVE_CLEAR</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><a name="_Toc10082"></a><a name="_Toc15415"></a><a name="_Toc16199"></a><a name="_Toc6599"></a><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="610.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="608.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

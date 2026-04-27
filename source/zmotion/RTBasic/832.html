@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CAM_Trigger -- 相机软触发</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="833.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="831.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc4250"><span lang=EN-US>CAM_Trigger -- </span></a><span style='font-family:宋体;'>相机软触发</span></h3>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-right:none;background: #8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; background:white;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>图像采集相关</span></b></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:white;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>发送软触发信号，用于相机软触发模式下触发采集，功能类似于</span><span lang=EN-US style='color:black'>CAM_SetParam(&quot;TriggerSoftware&quot;,0)</span><span style=' font-family:宋体;color:black'>，但指令内部有额外处理以增强保护，同时执行用时也会稍长</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>注意：建议使用</span><span lang=EN-US style='color:red'>CAM_Trigger()</span><span style='font-family:宋体; color:red'>，可以提供更好的保护</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:white;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>CAM_Trigger()</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>参数：无</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border-top:none;border-left: solid white 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:white;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:none;border-right:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:white;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img</span></p>
+<p class=MsoNormal><span lang=EN-US>CAM_Scan(&quot;mvision&quot;) '</span><span style='font-family:宋体;'>扫描相机</span></p>
+<p class=MsoNormal><span lang=EN-US>CAM_Count(0) '</span><span style='font-family:宋体;'>获取扫描到的相机个数</span></p>
+<p class=MsoNormal><span lang=EN-US>IF(TABLE(0)=0)THEN</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>未找到相机</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US>CAM_Sel(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>CAM_SetMode(0) '</span><span style='font-family:宋体;'>设置触发模式为软触发模式</span></p>
+<p class=MsoNormal><span lang=EN-US>CAM_Start(1) '</span><span style='font-family:宋体;'>开启相机的采集，指定缓存数量</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal><span lang=EN-US>CAM_Trigger() '</span><span style='font-family:宋体;'>使用软触发命令触发相机拍照，每触发一次拍照一次</span></p>
+<p class=MsoNormal><span lang=EN-US>CAM_Get(img,0) '</span><span style='font-family:宋体;'>获取相机缓存中指定</span><span lang=EN-US>id</span><span style='font-family:宋体;'>序号为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的图像存放到</span><span lang=EN-US>img</span><span style='font-family:宋体;'>图像中</span></p>
+<p class=MsoNormal><span lang=EN-US>CAM_Stop() '</span><span style='font-family:宋体;'>停止相机采集</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="833.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="831.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

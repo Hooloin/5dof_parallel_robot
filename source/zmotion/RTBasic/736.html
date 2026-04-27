@@ -1,0 +1,105 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>Hmi_RecipeGInfo – 获取配方组配方信息</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="737.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="735.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3 style='margin-bottom:4.65pt;line-height:172%'><a name="_Toc218413434"><span lang=EN-US>Hmi_RecipeGInfo – </span></a><span style='font-family:宋体;'>获取配方组配方信息</span></h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr> <td width="18%" valign=top style='width:18.64%;border:solid windowtext 1.0pt; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>类型</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.36%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>配方库指令</span></p>
+</td>  </tr> <tr> <td width="18%" valign=top style='width:18.64%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>描述</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>获取配方组配方信息</span></p>
+</td>  </tr> <tr> <td width="18%" valign=top style='width:18.64%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>语法</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>value = Hmi_RecipeGInfo (gname, strsel [, para])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>gname: </span><span style='font-family:宋体;'>配方组名称</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>strsel: </span><span style='font-family:宋体;'>信息选择</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US>&quot;LINES&quot;: </span><span style='font-family:宋体;'>配方行数</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US>&quot;ITEMS&quot;: </span><span style='font-family:宋体;'>配方项数</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US>&quot;DTYPE&quot;: </span><span style='font-family:宋体;'>指定配方项数据类型</span></p>
+<p class=MsoNormal style='text-indent:63.0pt;'><span lang=EN-US>para</span><span style='font-family:宋体;'>有效，表示第几个配方项</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US>&quot;DLEN&quot;: </span><span style='font-family:宋体;'>指定配方项数据长度</span></p>
+<p class=MsoNormal style='text-indent:63.0pt;'><span lang=EN-US>para</span><span style='font-family:宋体;'>有效，表示第几个配方项</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US>&quot;DDOT&quot;: </span><span style='font-family:宋体;'>指定配方项小数点位数</span></p>
+<p class=MsoNormal style='text-indent:63.0pt;'><span lang=EN-US>para</span><span style='font-family:宋体;'>有效，表示第几个配方项</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span lang=EN-US>&quot;EDIT&quot;: </span><span style='font-family:宋体;'>指定配方项是否可编辑</span></p>
+<p class=MsoNormal style='text-indent:63.0pt;'><span lang=EN-US>para</span><span style='font-family:宋体;'>有效，表示第几个配方项</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>value: </span><span style='font-family:宋体;'>返回信息</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>数据类型：</span></p>
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 style='margin-left:24.0pt;border-collapse:collapse;border:none;'> <tr> <td width=185 valign=top style='width:79.25pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>1</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>bit</span></p>
+</td>  </tr> <tr> <td width=185 valign=top style='width:79.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>-8/8</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>int8/uint8</span></p>
+</td>  </tr> <tr> <td width=185 valign=top style='width:79.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>-16/16</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>int16/uint16</span></p>
+</td>  </tr> <tr> <td width=185 valign=top style='width:79.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>-32/32</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>int32/uint32</span></p>
+</td>  </tr> <tr> <td width=185 valign=top style='width:79.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>-64/64</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>int64/uint64</span></p>
+</td>  </tr> <tr> <td width=185 valign=top style='width:79.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>2</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>字符串</span></p>
+</td>  </tr> <tr> <td width=185 valign=top style='width:79.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>33</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>float</span></p>
+</td>  </tr> <tr> <td width=185 valign=top style='width:79.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>65</span></p>
+</td>  <td width=231 valign=top style='width:99.2pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>double</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal></p>
+</td>  </tr> <tr> <td width="18%" valign=top style='width:18.64%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>适用控制器</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>支持</span><span lang=EN-US>RTHMI</span></p>
+</td>  </tr> <tr> <td width="18%" valign=top style='width:18.64%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>例子</span></b></p>
+</td>  <td width="81%" valign=top style='width:81.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>打印指定配方组的配方行数</span></p>
+<p class=MsoNormal><span lang=EN-US>?Hmi_RecipeGInfo(&quot;RecipeGroup0&quot;, &quot;LINES&quot;)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='margin-bottom:3.6pt'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="737.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="735.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

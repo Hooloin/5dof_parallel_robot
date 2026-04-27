@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DrawEx_TabVect -- 从table中绘图（批量绘图）</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="671.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="669.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc218413362"><span lang=EN-US>DrawEx_TabVect -- </span></a><span style='font-family:宋体;'>从</span><span lang=EN-US>table</span><span style='font-family:宋体;'>中绘图（批量绘图）</span></h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr> <td width="16%" valign=top style='width:16.06%;border:solid windowtext 1.0pt; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="83%" valign=top style='width:83.94%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>绘图指令</span></p>
+</td> </tr> <tr> <td width="16%" valign=top style='width:16.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="83%" valign=top style='width:83.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>在指定区域绘</span><span lang=EN-US>table</span><span style='font-family:宋体;'>图形，图形数据按一定格式存储在指定</span><span lang=EN-US>table</span><span style='font-family:宋体;'>位置中</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>此指令只能在自定义元件的绘图函数内使用。</span></p>
+</td> </tr> <tr> <td width="16%" valign=top style='width:16.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="83%" valign=top style='width:83.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>DrawEx_TabVect(tablein, offx, offy, scalex, scaley)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>tablein</span><span style='font-family:宋体;'>：输入</span><span lang=EN-US>table</span><span style='font-family:宋体;'>地址</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>offx, offy</span><span style='font-family:宋体;'>：显示图形偏移</span></p>
+<p class=MsoNormal style='text-indent:42.0pt;'><span style='font-family:宋体;'>（</span><span lang=EN-US>&gt;0</span><span style='font-family:宋体;'>向左</span><span lang=EN-US>/</span><span style='font-family: 宋体;'>上偏移，</span><span lang=EN-US>&lt;0</span><span style='font-family:宋体;'>向右</span><span lang=EN-US>/</span><span style='font-family:宋体; '>下偏移，</span><span lang=EN-US>=0</span><span style='font-family:宋体;'>不偏移）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>scalex</span><span style='font-family:宋体;'>：</span><span lang=EN-US>x</span><span style='font-family: 宋体;'>方向显示缩放比例，</span><span lang=EN-US>1.0</span><span style='font-family:宋体; '>不缩放</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>scaley</span><span style='font-family:宋体;'>：</span><span lang=EN-US>y</span><span style='font-family: 宋体;'>方向显示缩放比例，</span><span lang=EN-US>1.0</span><span style='font-family:宋体; '>不缩放</span></p>
+</td> </tr> <tr> <td width="16%" valign=top style='width:16.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="83%" valign=top style='width:83.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>RTHMI</span></p>
+</td> </tr> <tr> <td width="16%" valign=top style='width:16.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="83%" valign=top style='width:83.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体; '>封装</span><span lang=EN-US>table</span><span style='font-family:宋体;'>图形数据，将需要画的图形按指定格式填入</span><span lang=EN-US>table</span><span style='font-family:宋体;'>中</span></p>
+<p class=MsoNormal><span lang=EN-US>local iTableStart, iTableCur</span></p>
+<p class=MsoNormal><span lang=EN-US>iTableStart = 20000&nbsp; '</span><span style='font-family:宋体; '>起始</span><span lang=EN-US>table</span><span style='font-family:宋体;'>下标</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体; '>第</span><span lang=EN-US>1</span><span style='font-family:宋体; '>项是总大小，最后再填入</span></p>
+<p class=MsoNormal><span lang=EN-US>iTableCur = iTableStart + 1</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体; '>第一项，画个填充矩形</span><span lang=EN-US>rect=(20,20,200,200), R=10</span><span style='font-family:宋体; '>，</span><span lang=EN-US>5</span><span style='font-family:宋体; '>个参数，占用</span><span lang=EN-US>2+5</span><span style='font-family:宋体;'>长度</span></p>
+<p class=MsoNormal><span lang=EN-US>table(iTableCur, 354, 5, 20, 20, 200, 200, 10)</span></p>
+<p class=MsoNormal><span lang=EN-US>iTableCur = iTableCur + 7</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体; '>第二项，画个矩形</span><span lang=EN-US>rect=(20,20,200,200), R=10</span><span style='font-family:宋体; '>，</span><span lang=EN-US>5</span><span style='font-family:宋体; '>个参数，占用</span><span lang=EN-US>2+5</span><span style='font-family:宋体;'>长度</span></p>
+<p class=MsoNormal><span lang=EN-US>table(iTableCur, 304,5, 20, 20, 200, 200, 10)</span></p>
+<p class=MsoNormal><span lang=EN-US>iTableCur = iTableCur + 7</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体; '>第三项，画个旋转矩形</span><span lang=EN-US>rect=(220,220,200,200), </span><span style='font-family:宋体; '>旋转弧度</span><span lang=EN-US>=45*PI/180</span><span style='font-family:宋体;'>，</span><span lang=EN-US>5</span><span style='font-family:宋体; '>个参数，占用</span><span lang=EN-US>2+5</span><span style='font-family:宋体;'>长度</span></p>
+<p class=MsoNormal><span lang=EN-US>table(iTableCur, 305,5, 220, 220, 200, 200, 45*PI/180)</span></p>
+<p class=MsoNormal><span lang=EN-US>iTableCur = iTableCur + 7</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体; '>最后补充总大小</span></p>
+<p class=MsoNormal><span lang=EN-US>table(iTableStart) = iTableCur-iTableStart</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体; '>画图，将</span><span lang=EN-US>table</span><span style='font-family:宋体;'>中存储的图形显示出来</span></p>
+<p class=MsoNormal><span lang=EN-US>DrawEx_TabVect(iTableStart , 0, 0, 1.0, 1.0)</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US style='font-family:等线; '>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="671.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="669.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

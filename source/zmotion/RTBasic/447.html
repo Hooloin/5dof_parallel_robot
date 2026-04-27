@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MODBUSM_DES -- modbus通讯连接</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="448.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="446.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_MODBUSM_DES"></a><a name="_Toc134698240"></a><a name="_Toc14149"></a><a name="_Toc20438"></a><a name="_Toc28951"></a><a name="_Toc22140"><span lang=FR>MODBUSM_DES</span><span lang=EN-US> -- modbus</span></a><span style='font-family:宋体;'>通讯连接</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>通讯指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>设置或读取</span></b><b><span lang=FR style='color:black;'>MODBUS</span></b><b><span style='font-family:宋体;color:black;'>主端的对方。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>通讯等待时只会阻塞当前这个任务，不影响其他任务。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>使用</span><span lang=EN-US style='color: black;'>485</span><span style='font-family:宋体;color:black; '>串口与多个设备通讯时，建立通讯连接可加入等待或延时，等上一个设备连接成功再连接下一个设备，防止出现通讯失败的情况。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>注意：主站不要在同一时刻读写多个</span><span lang=EN-US style='color:black;'>MODBUS</span><span style='font-family: 宋体; color:black;'>从站，特别是多任务的情况下，注意错开操作。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:21.0pt 42.0pt 63.0pt 84.0pt 105.0pt 126.0pt 147.0pt 168.0pt 189.0pt 220.1pt; '><span lang=FR style=' color:black;'>MODBUSM_DES (address[,port],[timer],[resendset])</span></p>
+<p class=MsoNormal style='tab-stops:21.0pt 42.0pt 63.0pt 84.0pt 105.0pt 126.0pt 147.0pt 168.0pt 189.0pt 220.1pt; '><span lang=FR style=' color:black;'>ADDRESS1 = MODBUSM_DES([port])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:21.0pt 42.0pt 63.0pt 84.0pt 105.0pt 126.0pt 147.0pt 168.0pt 189.0pt 220.1pt; '><span lang=FR style=' color:black;'>address</span><span style='font-family:宋体; color:black; '>：对端的</span><span lang=FR style='color:black;'>modbus</span><span style='font-family:宋体; color:black; '>协议站号</span><span lang=FR style='color:black;'>&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:21.0pt 42.0pt 63.0pt 84.0pt 105.0pt 126.0pt 147.0pt 168.0pt 189.0pt 220.1pt; '><span lang=FR style=' color:black;'>port</span><span style='font-family:宋体; color:black; '>：当前</span><span lang=FR style=' color:black;'>modbus</span><span style='font-family:宋体; color:black; '>主通讯的</span><span lang=FR style='color:black;'>port</span><span style='font-family:宋体; color:black; '>号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:21.0pt 42.0pt 63.0pt 84.0pt 105.0pt 126.0pt 147.0pt 168.0pt 189.0pt 220.1pt; '><span lang=FR style=' color:black;'>timer</span><span style='font-family:宋体; color:black; '>：消息超时时间设置，缺省</span><span lang=FR style='color:black;'>1000ms</span><span style='font-family:宋体; color:black; '>。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:21.0pt 42.0pt 63.0pt 84.0pt 105.0pt 126.0pt 147.0pt 168.0pt 189.0pt 220.1pt; '><span lang=FR style=' color:black;'>resendset</span><span style='font-family:宋体; color:black; '>：超时消息重发设置，</span><span lang=FR style='color:black;'>0-</span><span style='font-family:宋体; color:black; '>不重发，</span><span lang=FR style='color:black;'>1-SEND</span><span style='font-family:宋体; color:black; '>指令重发，</span><span lang=FR style='color:black;'>2-SEND</span><span style='font-family:宋体; color:black; '>与</span><span lang=FR style=' color:black;'>MODBUSM</span><span style='font-family:宋体; color:black; '>指令都重发。</span></p>
+<p class=MsoNormal style='tab-stops:21.0pt 42.0pt 63.0pt 84.0pt 105.0pt 126.0pt 147.0pt 168.0pt 189.0pt 220.1pt; '><span lang=FR style=' color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>MODBUSM</span><span style='font-family: 宋体'>指令超时重发要注意，从控制器可能收到</span><span lang=EN-US>2</span><span style='font-family: 宋体'>次消息，对寄存器的扫描也可能出现</span><span lang=EN-US>2</span><span style='font-family: 宋体'>次。</span></p>
+<p class=MsoNormal><span lang=EN-US>SEND</span><span style='font-family:宋体'>指令超时重发对从控制器没有影响</span><span lang=EN-US>, </span><span style='font-family:宋体'>重要标志性变量可以通过</span><span lang=EN-US>SEND</span><span style='font-family:宋体'>指令来修改。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm; tab-stops:55.15pt;'><span lang=EN-US>例一 </span><span style='font-family: 宋体; '>多主端</span><span lang=EN-US>-</span><span style='font-family:宋体; '>多从端通讯</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>SETCOM(38400,8,1,0,0,14,2,1000)&nbsp;&nbsp; '</span><span style='font-family: 宋体; '>设置串口</span><span lang=EN-US>0</span><span style='font-family:宋体; '>为</span><span lang=EN-US>modbus</span><span style='font-family: 宋体; '>主端<a name="OLE_LINK147">，通讯等待</a></span><span lang=EN-US>1s</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>SETCOM(38400,8,1,0,1,14,2,1000)&nbsp;&nbsp; '</span><span style='font-family: 宋体; '>设置串口</span><span lang=EN-US>1</span><span style='font-family:宋体; '>为</span><span lang=EN-US>modbus</span><span style='font-family: 宋体; '>主端，通讯等待</span><span lang=EN-US>1s</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>WHILE 1</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>&nbsp; IF IN(0)=1 THEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'IN0</span><span style='font-family:宋体; '>高电平时使用串口</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>IF IN(1)=1 THEN</span></p>
+<p class=MsoNormal style='text-indent:31.6pt; tab-stops:55.15pt;'><b><span lang=EN-US>MODBUSM_DES</span></b><span lang=EN-US>(1,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'IN1</span><span style='font-family:宋体;'>高电平时与从端站号</span><span lang=EN-US>1</span><span style='font-family:宋体;'>通讯</span></p>
+<p class=MsoNormal style='text-indent:31.5pt; tab-stops:55.15pt;'><span lang=EN-US>MODBUSM_REGSET(0,10,0)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>本地寄存器复制到对端</span></p>
+<p class=MsoNormal style='text-indent:31.5pt; tab-stops:55.15pt;'><span lang=EN-US>MODBUSM_REGGET(20,10,20)&nbsp; '</span><span style='font-family:宋体; '>对端寄存器复制到本地</span></p>
+<p class=MsoNormal style='text-indent:31.5pt; tab-stops:55.15pt;'><span lang=EN-US>WAIT UNTIL MODBUSM_STATE &lt;&gt; 1&nbsp; '</span><span style='font-family:宋体; '>等待消息结束</span></p>
+<p class=MsoNormal style='text-indent:31.5pt; '><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ELSE</span></p>
+<p class=MsoNormal style='text-indent:31.6pt; tab-stops:55.15pt;'><b><span lang=EN-US>MODBUSM_DES</span></b><span lang=EN-US>(2,0)&nbsp;&nbsp;&nbsp; 'IN1</span><span style='font-family:宋体;'>低电平时与从端站号</span><span lang=EN-US>2</span><span style='font-family:宋体;'>通讯</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='text-indent:31.5pt; tab-stops:55.15pt;'><span lang=EN-US>MODBUSM_REGSET(30,10,30)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>本地寄存器复制到对端</span></p>
+<p class=MsoNormal style='text-indent:31.5pt; tab-stops:55.15pt;'><span lang=EN-US>MODBUSM_REGGET(40,10,40)&nbsp; '</span><span style='font-family:宋体; '>对端寄存器复制到本地</span></p>
+<p class=MsoNormal style='text-indent:31.5pt; tab-stops:55.15pt;'><span lang=EN-US>WAIT UNTIL MODBUSM_STATE &lt;&gt; 1&nbsp; '</span><span style='font-family:宋体; '>等待消息结束</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>?&quot;</span><span style='font-family:宋体; '>通道</span><span lang=EN-US>0</span><span style='font-family:宋体;'>状态</span><span lang=EN-US>=&quot;, MODBUSM_STATE&nbsp;&nbsp; '</span><span style='font-family: 宋体; '>打印通讯状态</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>&nbsp; ELSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'IN0</span><span style='font-family:宋体;'>低电平时使用串口</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>IF IN(1)=1 THEN</span></p>
+<p class=MsoNormal style='text-indent:31.6pt; tab-stops:55.15pt;'><b><span lang=EN-US>MODBUSM_DES</span></b><span lang=EN-US>(1,1)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'IN1</span><span style='font-family:宋体;'>高电平时与从端站号</span><span lang=EN-US>1</span><span style='font-family:宋体;'>通讯</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>&nbsp; MODBUSM_REGSET(50,10,50)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>本地寄存器复制到对端</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>&nbsp; MODBUSM_REGGET(60,10,60)&nbsp; '</span><span style='font-family:宋体;'>对端寄存器复制到本地</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>&nbsp; WAIT UNTIL MODBUSM_STATE &lt;&gt; 1&nbsp; '</span><span style='font-family:宋体; '>等待消息结束</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ELSE</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>&nbsp; <b>MODBUSM_DES</b>(2,1) 'IN1</span><span style='font-family:宋体; '>低电平时与从端站号</span><span lang=EN-US>2</span><span style='font-family: 宋体; '>通讯</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>&nbsp; MODBUSM_REGSET(70,10,70)&nbsp;&nbsp; <a name="OLE_LINK186">&nbsp;'</a></span><span style='font-family:宋体;'>本</span><span style='font-family:宋体; '>地寄存器复制到对端</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>&nbsp; MODBUSM_REGGET(80,10,80)&nbsp; '</span><span style='font-family:宋体;'>对端寄存器复制到本地</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>&nbsp; WAIT UNTIL MODBUSM_STATE &lt;&gt; 1&nbsp; '</span><span style='font-family:宋体; '>等待消息结束</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:55.15pt;'><span lang=EN-US>?&quot;</span><span style='font-family:宋体; '>通道</span><span lang=EN-US>1</span><span style='font-family:宋体;'>状态</span><span lang=EN-US>=&quot;, MODBUSM_STATE&nbsp;&nbsp; '</span><span style='font-family: 宋体; '>打印通讯状态</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>&nbsp; ENDIF</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>WEND</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="410.html#_SETCOM">SETCOM</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="435.html#_PROTOCOL"><span lang=FR>PROTOCOL</span></a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="431.html#_PORT_--_通道编号">PORT</a></span><span style='font-family: 宋体; '>，</span><span lang=EN-US><a href="448.html#_MODBUSM_DES2">MODBUSM_DES2</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="448.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="446.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

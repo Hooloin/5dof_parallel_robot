@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>SET_BIT -- 按位设置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="238.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="236.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc266516853"></a><a name="_Toc349071477"></a><a name="_Toc253408825"></a><a name="_SET_BIT_--_按位设置"></a><a name="_Toc134698015"></a><a name="_Toc25326"></a><a name="_Toc2993"></a><a name="_Toc27699"></a><a name="_Toc26685"></a><a name="_Toc349071479"></a><a name="_Toc266516855"></a><a name="_Toc253408827"></a><a name="_SET_BIT_--_按位设置_1"></a><span lang=EN-US>SET_BIT</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>按位设置</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>数学指令或函数</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>位操作，只对整数，修改对应位为</span></b><b><span lang=EN-US style='color:black; '>1</span></b><b><span style='font-family:宋体;color:black; '>。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>分为命令语法和函数语法。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>对</span><span lang=EN-US style='color:black; '>VR</span><span style='font-family:宋体;color:black; '>寄存器可设置的位范围是</span><span lang=EN-US style='color:black; '>0-24</span><span style='font-family:宋体;color:black; '>。</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>命令语法：</span><span lang=EN-US style='color:black; '>SET_BIT(bit#, vr#)</span><span style='font-family:宋体;color:red; '>直接操作</span><span lang=EN-US style='color:red; '>VR</span><span style='font-family:宋体;color:red; '>寄存器</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>bit#</span><span style='font-family:宋体;color:black; '>：位编号：</span><span lang=EN-US style='color:black; '>0-24</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>vr#</span><span style='font-family:宋体;color:black; '>：要操作的</span><span lang=EN-US style='color:black; '>VR</span><span style='font-family:宋体;color:black; '>变量编号，整数部分</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>命令语法使用时没有返回值，直接操作，修改操作对象的值。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>函数语法：</span><span lang=EN-US style='color:black; '>ret = SET_BIT(bit#,int)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>ret</span><span style='font-family:宋体;color:black; '>：操作结果</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>bit#</span><span style='font-family:宋体;color:black; '>：位编号：</span><span lang=EN-US style='color:black; '>0-24</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>int</span><span style='font-family:宋体;color:black; '>：要操作的表达式，取整数部分</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>函数语法使用时返回操作后的结果，操作对象的值不变。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>例一</span> <span style='font-family:宋体;color:black;'>命令语法</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>VR(23)=0.333</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>SET_BIT</span></b><span lang=EN-US style='color:black; '>(0,23)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="OLE_LINK144">'V</a>R(23)</span><span style='font-family:宋体;color:black; '>的第</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black; '>位将置为</span><span lang=EN-US style='color:black; '>1</span><span style='font-family:宋体;color:black; '>，并清除小数部分</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>?VR(23)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>结果为</span><span lang=EN-US style='color:black; '> 1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>例二</span><span lang=EN-US style='color:black; '>&nbsp; </span><span style='font-family:宋体;color:black; '>函数语法</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>DIM a,b</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>a=0.333</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>b=0</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black; '>b=<b>SET_BIT</b> (0,a)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>设置</span><span lang=EN-US style='color:black; '>a</span><span style='font-family:宋体;color:black; '>的第</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black; '>位的，结果赋值到</span><span lang=EN-US style='color:black; '>b</span><span style='font-family:宋体;color:black; '>，并清除小数</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>PRINT a,b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>打印结果</span><span lang=EN-US style='color:black; '> 0.333,1</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black; '>a</span><span style='font-family:宋体;color:black; '>没有改变，</span><span lang=EN-US style='color:black; '>b</span><span style='font-family:宋体;color:black; '>为</span><span lang=EN-US style='color:black; '>1</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><a href="238.html#_CLEAR_BIT_--_按位置0_1"><span lang=EN-US>CLEAR_BIT</span></a><span style='font-family:宋体;'>，</span><a href="239.html#_READ_BIT_--_按位读取_1"><span lang=EN-US>READ_BIT</span></a><span style='font-family:宋体;'>，</span><a href="240.html#_READ_BIT2_--_按位读取2_1"><span lang=EN-US>READ_BIT2</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="238.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="236.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

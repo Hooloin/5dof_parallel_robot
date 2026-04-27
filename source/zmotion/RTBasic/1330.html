@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CAD_LOADBIN -- 从BIN文件中载入图形</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1331.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1329.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc169704923"></a><a name="_Toc129157794"><span lang=EN-US>CAD_LOADBIN -- </span></a><span style='font-family:宋体;'>从</span><span lang=EN-US>BIN</span><span style='font-family:宋体;'>文件中载入图形</span></h3>
+
+<table class=basic border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>CAD</span><span style='font-family:宋体; '>指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-family:宋体;'>从</span><span lang=EN-US>BIN</span><span style='font-family:宋体; '>文件中加载图形数据，数据格式可参考</span><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>数据格式。</span> </p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>CAD_LOADBIN(filename, type)</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>filename = CAD_LOADBIN ()</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US>filename</span><span style=' font-family:宋体;'>：</span><span lang=EN-US>bin</span><span style='font-family:宋体; '>文件名，带路径</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US>type</span><span style=' font-family:宋体;'>：</span><span lang=EN-US>BIN</span><span style='font-family:宋体; '>文件数据格式</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;vertical-align:middle'><span lang=EN-US>0 - float</span><span style='font-family:宋体; '>类型，每一项</span><span lang=EN-US>4</span><span style='font-family:宋体; '>字节</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;vertical-align:middle'><span lang=EN-US>1 – double</span><span style='font-family:宋体; '>类型，每一项</span><span lang=EN-US>8</span><span style='font-family:宋体; '>字节</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-family:宋体;'>支持</span><span lang=EN-US>ZHMI</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>CAD_LOADBIN(“ZHENG.BIN”, 0)&nbsp; ’</span><span style='font-family:宋体; '>载入</span><span lang=EN-US>BIN</span><span style='font-family:宋体; '>文件，</span><span lang=EN-US>float</span><span style='font-family:宋体; '>类型。</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt; margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1331.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1329.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

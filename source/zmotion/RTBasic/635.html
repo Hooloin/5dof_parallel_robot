@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DRAWLIBTEXT2 -- 显示文本库字符串</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="636.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="634.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc147915726"></a><a name="_DRAWLIBTEXT2"></a><span lang=EN-US>DRAWLIBTEXT2 -- </span><span style='font-family:宋体;'>显示文本库字符串</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>显示指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>格式显示文本库的字符串内容。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>此指令只能在自定义元件的绘图函数内使用，请查看</span><span lang=EN-US><a title="Not Found Page:#_自定义元件调用函数_1"><span lang=EN-US style='font-family:宋体; '><span lang=EN-US>自定义元件调用函数</span></span></a></span><span style='font-family:宋体; '>参考例程。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border-top:none;border-left: solid black 1.0pt;border-bottom:none;border-right:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border:none;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>DRAWLIBTEXT2(x1,y1, x2,y2, align, state, “textname”[,drawrect])</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span lang=EN-US>x1, y1</span><span style='font-family:宋体;'>：显示区域左上角的坐标位置</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span lang=EN-US>x2, y2</span><span style='font-family:宋体;'>：显示区域右下角的坐标位置</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span lang=EN-US>align</span><span style='font-family:宋体;'>：对齐选项</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; text-indent:15.75pt;'><span lang=EN-US>0-</span><span style='font-family:宋体;'>居中</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; text-indent:15.75pt;'><span lang=EN-US>&gt;0</span><span style='font-family:宋体;'>，左边对齐，值表示距离左边的距离</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; text-indent:15.75pt;'><span lang=EN-US>&lt;0</span><span style='font-family:宋体;'>，右边对齐，绝对值表示距离右边的距离</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span lang=EN-US>state</span><span style='font-family:宋体;'>：文本库的状态</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span lang=EN-US>textname</span><span style='font-family:宋体;'>：文本库的名称</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span lang=EN-US>drawrect</span><span style='font-family:宋体;'>：</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>画边框，</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>不画边框</span><span lang=EN-US>.</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>RTHmi</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>DRAWLIBTEXT2(10,10,100,50,0,0,”label”)</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>相关指令</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="634.html#_DRAWLIBTEXT_--_显示文本库字符串">DRAWLIBTEXT</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="632.html#_DRAWTEXT_--_绘制显示字符串">DRAWTEXT</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="633.html#_DRAWTEXT2_--_绘制显示字符串">DRAWTEXT2</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US style='font-family:等线; '>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="636.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="634.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

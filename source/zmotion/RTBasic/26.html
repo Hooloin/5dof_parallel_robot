@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVESPIRAL -- 渐开线圆弧</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="27.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="25.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697821"></a><a name="_Toc16378"></a><a name="_Toc25715"></a><a name="_Toc30305"></a><a name="_Toc4176"><span lang=EN-US>MOVESPIRAL -- </span></a><span style='font-family:宋体;'>渐开线圆弧</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.4%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="83%" valign=top style='width:83.6%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>多轴运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="16%" valign=top style='width:16.4%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="83%" valign=top style='width:83.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>渐开线圆弧插补运动，相对移动方式，可选螺旋。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>当前点和圆心距离确定起始半径，当起始半径</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>时角度无法确定，直接从</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>角度开始。见例一。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>自定义速度的连续插补运动可以使用</span><span lang=EN-US style='color:black;'>SP</span><span style='font-family: 宋体; color:black;'>后缀的指令，见</span><span lang=EN-US style='color:black;'>*SP</span><span style='font-family: 宋体; color:black;'>描述。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="16%" valign=top style='width:16.4%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="83%" valign=top style='width:83.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span lang=EN-US style='color:black;'>MOVESPIRAL(centre1,centre2,</span><span lang=EN-US>circles,pitch[,distan<span style='color:black'>ce3][,distance4])</span></span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>centre1</span><span style='font-family:宋体; color:black;'>：</span><span style='font-family:宋体;'>圆心的第</span><span lang=EN-US>1</span><span style='font-family:宋体;'>轴相对距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>centre2</span><span style='font-family:宋体; color:black;'>：</span><span style='font-family:宋体;'>圆心的第</span><span lang=EN-US>2</span><span style='font-family:宋体;'>轴相对距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>circles</span><span style='font-family:宋体;'>：要旋转的圈数，可以为小数圈，<span style='color:black'>负数表示顺时针，每圈终点位置为起点和圆心连线上的一点，见例二</span></span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>pitch</span><span style='font-family:宋体;'>：每圈的扩散距离，可以为负</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>distance3</span><span style='font-family:宋体; color:black;'>：第</span><span lang=EN-US style='color:black;'>3</span><span style='font-family:宋体;color:black;'>轴螺旋的功能，指定第</span><span lang=EN-US style='color:black;'>3</span><span style='font-family:宋体;color:black;'>轴的相对距离，此轴不参与速度计算</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>distance4</span><span style='font-family:宋体; color:black;'>：第</span><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体;color:black;'>轴螺旋的功能，指定第</span><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体;color:black;'>轴的相对距离，此轴不参与速度计算</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.4%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="83%" valign=top style='width:83.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="16%" valign=top style='width:16.4%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="83%" valign=top style='width:83.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1,2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1,1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体; color:black;'>设为脉冲轴类型</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100,100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>主轴速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000 ,1000,1000&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>主轴加速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000 ,1000,1000 </span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family: 宋体; color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例一</span> <span style='font-family:宋体;color:black; '>从起点扩散</span></p>
+<p class=MsoNormal style='margin-left:126.5pt;text-indent:-126.5pt; layout-grid-mode:char;'><a name="OLE_LINK78"><b><span lang=EN-US style='color:black;'>MOVESPIRAL</span></b></a><span lang=EN-US style='color:black;'>(0,0,2.5,30)</span><span lang=EN-US style='color:black;'>&nbsp; '</span><span style='font-family:宋体; color:black;'>此时以起始位置为中心，逆时针旋转</span><span lang=EN-US style='color:black;'>2.5</span><span style='font-family: 宋体; color:black;'>圈，每圈扩散</span><span lang=EN-US style='color:black;'>30</span></p>
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-126.0pt; '><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>插补轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=775 height=436 src="doc.files/image107.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例二</span> <span style='font-family:宋体;color:black; '>不螺旋</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><a name="OLE_LINK79"><b><span lang=EN-US style='color:black;'>MOVESPIRAL</span></b></a><span lang=EN-US style='color:black;'> (100,100,2.5,30)</span><span lang=EN-US style='color:black;'>&nbsp; '</span><span style='font-family:宋体; color:black;'>起始半径</span><span lang=EN-US style='color:black;'>100</span><span style='font-family: 宋体; color:black;'>，以</span><span lang=EN-US style='color: black;'>(100,100)</span><span style='font-family:宋体; color:black;'>为圆心，逆时针旋转</span><span lang=EN-US style='color:black;'>2.5</span><span style='font-family: 宋体; color:black;'>圈，每圈向外扩散</span><span lang=EN-US style='color:black;'>30</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>插补轨迹（若轨迹圈数显示不全，将采样间隔适当调大）</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>300</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>300</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=777 height=417 src="doc.files/image109.jpg" ></span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESPIRAL</span></b><span lang=EN-US style='color:black;'> (100,100,-2.5,30)&nbsp;&nbsp; '</span><span style='font-family: 宋体; '>旋转圈数为负数时</span><span lang=EN-US>(-2.5)</span><span style='font-family:宋体; '>，顺时针旋转</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=775 height=422 src="doc.files/image111.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>例三</span> <span style='font-family:宋体;'>螺旋</span></p>
+<p class=MsoNormal style='margin-left:42.15pt;text-indent:-42.15pt; layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVESPIRAL</span></b><span lang=EN-US style='color:black;'>(100,100,2.5,30,100)&nbsp; '</span><span style='font-family:宋体; color:black;'>起始半径</span><span lang=EN-US style='color:black;'>100</span><span style='font-family: 宋体; color:black;'>，从原点开始以</span><span lang=EN-US style='color:black;'>(100,100)</span><span style='font-family:宋体;color:black;'>为圆心，逆时针旋转</span><span lang=EN-US style='color:black;'>2.5</span><span style='font-family:宋体;color:black;'>圈，每圈向外扩散</span><span lang=EN-US style='color:black;'>30</span><span style='font-family:宋体;color:black;'>，同时</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black;'>轴向上运动到</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>XYZ</span><span style='font-family: 宋体; color:black;'>模式下轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family: 宋体; color:black;'>轴</span><span lang=EN-US style='color:black; '>1</span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体; color:black;'>插补轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=800 height=536 src="doc.files/image113.jpg" ></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="27.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="25.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

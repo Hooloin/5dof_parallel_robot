@@ -1,0 +1,111 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVEMODIFY -- 修改运动位置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="10.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="8.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_MOVEMODIFY_--_修改运动位置"></a><a name="_Toc134697804"></a><a name="_Toc20750"></a><a name="_Toc1481"></a><a name="_Toc20359"></a><a name="_MOVEMODIFY_--_修改运动位置_1"></a><span lang=EN-US>MOVEMODIFY -- </span><span style='font-family:宋体;'>修改运动位置</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>单轴运动指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>修改上一个运动的目标位置。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>前面没有运动时与</span><span lang=EN-US style='color:black;'>MOVEABS</span><span style='font-family:宋体;color:black;'>效果一样，但</span><span style='font-family:宋体;'>不会进入运动缓冲<span style='color:black'>。见例一</span></span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>需要</span><span lang=EN-US style='color:black;'>WAIT </span><span style='font-family:宋体;color:black;'>指令才能正确使用。见例二</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red;'>连续插补时使用</span><span lang=EN-US style='color:red;'>MOVEMODIFY</span><span style='font-family:宋体;color:red;'>会破坏速度连续性。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>MOVEMODIFY</span><span style='font-family:宋体;color:red; '>同时对多轴运动时不一定为直线插补。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>MOVEMODIFY</span><span style='font-family:宋体;color:red; '>和</span><span lang=EN-US style='color:red;'>MOVEMODIFY2</span><span style='font-family:宋体;color:red; '>指令在</span><span lang=EN-US style='color:red;'>32</span><span style='font-family:宋体;color:red; '>位控制器上使用时不建议设置很大的运动参数，否则可能会导致速度突变的情况；如需设置较大的运动参数，可以设置齿轮比把运动参数降低，或者更换</span><span lang=EN-US style='color:red;'>64</span><span style='font-family:宋体;color:red;'>位控制器使用。</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVEMODIFY (distance )</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>distance</span><span style='font-family:宋体;color:black; '>：单个轴的运动距离</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red;'>目前只支持单轴修改。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>通用</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>例一</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>脉冲轴类型</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>脉冲当量设置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>速度设置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>加速度设置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体;color:black; '>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVEABS(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVEABS(10)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>此时轴会先运动到</span><span lang=EN-US style='color:black;'>100</span><span style='font-family:宋体;color:black;'>，在往回运动到</span><span lang=EN-US style='color:black;'>10</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>运动轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=779 height=375 src="doc.files/image034.jpg" ></span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>将</span><span lang=EN-US style='color:black;'>MOVEABS</span><span style='font-family:宋体;color:black;'>指令变为如下指令：</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVEMODIFY</span></b><span lang=EN-US style='color:black;'>(100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='margin-left:115.95pt;text-indent:-115.95pt; layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVEMODIFY</span></b><span lang=EN-US style='color:black;'>(10) '</span><span style='font-family:宋体;color:black; '>此时轴会直接运动到</span><span lang=EN-US style='color:black;'>10</span><span style='font-family:宋体;color:black;'>位置，</span><span lang=EN-US style='color:black;'>MOVEMODIFY</span><span style='font-family:宋体;color:black;'>不进入运动缓冲</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>运动轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=773 height=298 src="doc.files/image036.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>例二</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE (0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>脉冲轴类型</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>脉冲当量设置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DEFPOS(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>速度设置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>加速度设置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SRAMP=100</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体;color:black; '>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVEABS(500)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT UNTIL DPOS &gt;=300&nbsp; '</span><span style='font-family:宋体;color:black; '>等待运动到</span><span lang=EN-US style='color:black;'>300</span><span style='font-family:宋体;color:black;'>时，才修改终点位置</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVEMODIFY </span></b><span lang=EN-US style='color:black;'>(100)&nbsp; '</span><span style='font-family:宋体;color:black; '>修改目标位置为</span><span lang=EN-US style='color:black;'>100</span><span style='font-family:宋体;color:black;'>，此时减速停止后再反向运动</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>使用</span><span lang=EN-US style='color:black;'>WAIT</span><span style='font-family:宋体;color:black;'>，运动轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family:宋体;color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=875 height=418 src="doc.files/image038.jpg" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>不使用</span><span lang=EN-US style='color:black;'>WAIT</span><span style='font-family:宋体;color:black;'>，直接运动到</span><span lang=EN-US style='color:black;'>100</span><span style='font-family:宋体;color:black;'>，运动轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>300</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=835 height=420 src="doc.files/image040.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="32.html#_MOVEMODIFY2_--_修改多轴运动位置"><span lang=EN-US style=' color:#9999CC;'>MOVEMODIFY2</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="10.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="8.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

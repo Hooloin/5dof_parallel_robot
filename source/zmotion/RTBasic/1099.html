@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_MrShapeParam -- 获取测量器形状参数</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1100.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1098.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc9827"><span lang=EN-US>ZV_MrShapeParam -- </span></a><span style='font-family:宋体;'>获取测量器形状参数</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>形状</span><span style='font-family:宋体; color:black'>测量</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:宋体; color:black'>获取测量器补正后的测量形状参数，包括形状类型和对应参数，类型根据形状参数进行了重新分类与测量器类型不同</span></p>
+</td>  </tr> <tr style='height:115.25pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:115.25pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:115.25pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_MrShapeParam(mr,tabId)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mr</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，测量器</span></p>
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.1pt; '><b><span lang=EN-US>tabId</span></b><b><span style=' font-family:宋体;'>：</span></b><span lang=EN-US>TABLE</span><span style=' font-family:宋体;'>索引，输出参数，获取的形状类型和形状参数，形状类型包括</span><span lang=EN-US>2-</span><span style='font-family:宋体; '>直线，</span><span lang=EN-US>5-</span><span style='font-family:宋体; '>旋转矩形，</span><span lang=EN-US>7-</span><span style='font-family:宋体; '>圆弧，</span><span lang=EN-US>8-</span><span style='font-family:宋体; '>扇环，</span><span lang=EN-US>9-</span><span style='font-family:宋体; '>椭圆弧。其中直线为起止点，旋转矩形为中心坐标、尺寸、角度，圆弧为中心坐标、半径、起止角度，扇环为中心坐标、中心圆半径、环半径、起止角度，椭圆弧为中心坐标、长轴、短轴、旋转角度、起止角度</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mr</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MrCreateRect2(mr,120,100,80,60,90,40,5,25) '</span><span style='font-family:宋体;'>生成旋转矩形测量器</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MrShapeParam(mr,0) '</span><span style='font-family:宋体;'>获取形状参数到起始索引为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>中</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>测量器形状参数</span><span lang=EN-US>:&quot;,TABLE(0),TABLE(1),TABLE(2),TABLE(3),TABLE(4),TABLE(5)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US style='font-size:9.0pt; font-family:"微软雅黑","sans-serif";color:black;background:white;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1100.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1098.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

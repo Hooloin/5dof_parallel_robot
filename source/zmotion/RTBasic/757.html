@@ -1,0 +1,167 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_SysLastErr -- 最后一次错误码</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="758.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="756.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc2468"><span lang=EN-US>ZV_SysLastErr -- </span></a><span style='font-family:宋体;'>最后一次错误码</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>错误处理</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>获取或修改最后出现的错误码，未发生错误的情况下错误码为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>。<span style='color:red'>参数指定要获取错误信息的任务号</span>，可以不带参数则为当前任务。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>注意：</span><span lang=EN-US style='color:red'>RTSys</span><span style='font-family:宋体; color:red'>命令行和</span><span lang=EN-US style='color:red'>HMI</span><span style='font-family:宋体; color:red'>界面都有独立的任务号</span></p>
+<p class=MsoNormal style='margin-top:7.8pt;margin-right:0cm;margin-bottom: 7.8pt;margin-left:0cm; '><b><span style='font-family:宋体; color:black'>常见的错误码错误原因说明：</span></b></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=794 style='width:340.15pt;border-collapse:collapse;border:none;'> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;color:black'>错误码</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;color:black'>描述</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;color:black'>解释</span></p>
+</td>  </tr> <tr> <td width=118 style='width:50.6pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8003</span></p>
+</td>  <td width=240 style='width:102.8pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:11.0pt; font-family:宋体;color:black'>系统功能运行错误</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>执行系统命名出错或系统调用出错</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8005</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='font-size:11.0pt;color:black'>C++</span><span style='font-size:11.0pt; font-family:宋体;color:black'>库异常</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>可能是内存分配失败、索引越界</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8010</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>超时</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>功能运行时间已达到或超过设定值退出运行，设定值由指令参数传入或系统参数设置</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8014</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>缓冲区长度不足</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>索引越界，可能是传入的索引太大或数量为</span><span lang=EN-US style='color:black'>0</span></p>
+</td>  </tr> <tr> <td width=118 style='width:50.6pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8061</span></p>
+</td>  <td width=240 style='width:102.8pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:11.0pt; font-family:宋体;color:black'>数值超出支持范围</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>比如图像或区域坐标超出允许范围</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8100</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>内存分配失败</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>内存使用过多，请求的大尺寸内存分配失败</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8396</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>不支持的功能</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>部分功能对特定类型不支持或版本原因功能被关闭</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8504</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>版本无法兼容</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>通常是旧版本固件不支持读取新版本</span><span lang=EN-US style='color:black'>zvb</span><span style='font-family:宋体; color:black'>文件</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8510</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>路径格式不匹配</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>可能是目录分隔符多平台混用</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8621-</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8639</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>参数类型错误</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>从第一个参数开始，说明对应位置的</span><span lang=EN-US style='color:black'>zvobject</span><span style='font-family:宋体; color:black'>参数类型与要求不符</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8641-</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8659</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>参数超出范围</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>从第一个参数开始，说明对应位置的数值参数超出范围、枚举类型不支持或字符串参数不在指定范围。部分参数的范围可能受其它参数影响，动态变化，需要注意</span></p>
+</td>  </tr> <tr> <td width=118 style='width:50.6pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8702</span></p>
+</td>  <td width=240 style='width:102.8pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:11.0pt; font-family:宋体;color:black'>数据长度超出范围</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>图像或矩阵的总数据空间超出允许值</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>8741</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>不支持或未定义的图像数据类型</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>参考</span><a title="Not Found Page:#_图像数据类型"><span style='font-family:宋体; color:black'>图像数据类型</span></a><span style='font-family:宋体; color:black'>，图像参数的数据类型与指令的要求不符</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:11.0pt; color:black'>9051</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>匹配模板样本点数量不足</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:宋体; color:black'>模板无法提取到足够的特征点，可能是对比度阈值太高或最小轮廓长度太大</span></p>
+</td>  </tr> <tr> <td width=118 valign=top style='width:50.6pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体;'>9052</span></p>
+</td>  <td width=240 valign=top style='width:102.8pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>模板数据异常</span></p>
+</td>  <td width=436 valign=top style='width:186.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通常是模板无效，特征数据为空</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_LASTERR</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>获取任务最后错误码：</span><span lang=EN-US>error = ZV_SysLastErr(taskid)</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>修改任务最后错误码：</span><span lang=EN-US>ZV_SysLastErr(taskid) = 0 </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>taskid</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>任务号，可以不带参数则为当前任务</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>举例</span><span lang=EN-US>1</span><span style='font-family:宋体; '>：</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>IF(0 &lt;&gt; ZV_SysLastErr)THEN </span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>最后一次错误码为：</span><span lang=EN-US>&quot;,ZV_SysLastErr</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>举例</span><span lang=EN-US>2</span><span style='font-family:宋体;'>：</span></p>
+<p class=MsoNormal style='margin-left:10.5pt;'><span lang=EN-US>ZV_SysLastErr(taskid)=0&nbsp; '</span><span style='font-family:宋体; '>清空任务</span><span lang=EN-US>taskid</span><span style='font-family:宋体;'>最后出现的错误</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="758.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="756.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

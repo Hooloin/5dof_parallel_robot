@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>SCROLLBAR_POS -- 获取/设置滚动值</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="666.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="664.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>SCROLLBAR_POS -- </span><span style='font-family:宋体;'>获取</span><span lang=EN-US>/</span><span style='font-family:宋体;'>设置滚动值</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>刷新指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>设置</span><span lang=EN-US>/</span><span style=' font-family:宋体;'>获取指定滚动条的当前滚动位置。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>处理滚动条刷新事件，控制滚动条上下拖动、滚动</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>此指令只能在自定义元件的刷新函数内使用。具体使用可参见</span><span lang=EN-US><a title="Not Found Page:#_滚动条使用"><span lang=EN-US style='font-family:宋体; '><span lang=EN-US>滚动条使用</span></span></a></span><span style='font-family:宋体; color:black;'>例程。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>自动刷新滚动条事件</span></p>
+<p class=MsoNormal><span lang=EN-US>value = SCROLLBAR_POS(id [,winid,controlid])</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US>id</span><span style='font-family:宋体; '>：滚动条唯一编号</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US>value</span><span style='font-family:宋体;'>：返回当前滚动值，返回</span><span lang=EN-US>-1</span><span style='font-family:宋体; '>表示无刷新</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US style='color:black;'>winid</span><span style='font-family:宋体;color:black;'>：窗口</span><span lang=EN-US style='color:black;'>ID</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US style='color:black;'>controlid</span><span style='font-family:宋体;color:black;'>：控件</span><span lang=EN-US style='color:black;'>ID</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>’</span><span style='font-family:宋体; '>设置滚动值</span></p>
+<p class=MsoNormal><span lang=EN-US>SCROLLBAR_POS (id, value [, winid, controlid])</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US>id</span><span style='font-family:宋体; '>：滚动条唯一编号</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US>value</span><span style='font-family:宋体;'>：强制设定当前滚动值</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US style='color:black;'>winid</span><span style='font-family:宋体;color:black;'>：窗口</span><span lang=EN-US style='color:black;'>ID</span></p>
+<p class=MsoNormal style='text-indent:31.5pt;'><span lang=EN-US style='color:black;'>controlid</span><span style='font-family:宋体;color:black;'>：控件</span><span lang=EN-US style='color:black;'>ID</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>注：非自定义控件上使用时，</span><span lang=EN-US style='color:red'>id=0</span><span style='font-family:宋体; color:red'>表示操作垂直滚动条，</span><span lang=EN-US style='color:red'>id=1</span><span style='font-family:宋体;color:red'>表示水平滚动条。若控件只有一个滚动条，则</span><span lang=EN-US style='color:red'>id</span><span style='font-family:宋体;color:red'>参数无效。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>RTHmi</span><span style='font-family:宋体;'>（仅支持</span><span lang=EN-US>4</span><span style='font-family:宋体;'>系列及以上控制器）</span></p>
+</td> </tr> <tr style='height:16.45pt'> <td width="15%" valign=top style='width:15.86%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>刷新函数</span></p>
+<p class=MsoNormal><span lang=EN-US>value = SCROLLBAR_POS(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;</span><span style='font-family: 宋体;'>当前滚动值：</span><span lang=EN-US>&quot;value</span></p>
+</td> </tr> <tr style='height:16.45pt'> <td width="15%" valign=top style='width:15.86%;border-top:none;border-left: solid black 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:16.45pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>相关指令</span></b></p>
+</td> <td width="84%" valign=top style='width:84.14%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal><span lang=EN-US><a href="664.html#_SCROLLBAR_INIT">SCROLLBAR_INIT</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="666.html#_SCROLLBAR_REFLASH">SCROLLBAR_REFLASH</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="667.html#_SCROLLBAR_DRAW">SCROLLBAR_DRAW</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US style='font-family:等线; '>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="666.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="664.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

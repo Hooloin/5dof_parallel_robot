@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FRAME_ROTATE2 -- 坐标系变换计算</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="85.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="83.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_FRAME_ROTATE2--坐标系变换计算"></a><a name="_Toc134697879"></a><a name="_Toc19482"></a><a name="_Toc12850"></a><a name="_Toc21529"></a><a name="_Toc27002"><span lang=EN-US>FRAME_ROTATE2 -- </span></a><span style='font-family:宋体;'>坐标系变换计算</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family: 宋体; '>机械手计算指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>手动计算坐标系旋转后的坐标值。</span></b></p>
+<p class=MsoNormal><b><span lang=EN-US>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>使用时需控制器当前存在机械链接。</span></p>
+<p class=MsoNormal><span lang=EN-US>base</span><span style='font-family:宋体; '>轴，可以是虚拟轴与关节轴中的任意一个；</span><span lang=EN-US>base</span><span style='font-family:宋体; '>轴无机械手链接，会报</span><span lang=EN-US>1025</span><span style='font-family:宋体; '>的错误。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>多种机械手叠加的情况，根据</span><span lang=EN-US>base</span><span style='font-family:宋体; '>轴来识别是哪个机械手模式。如果</span><span lang=EN-US>base</span><span style='font-family: 宋体; '>（</span><span lang=EN-US>axis_1,axis_2</span><span style='font-family:宋体;'>）中的</span><span lang=EN-US>axis_1</span><span style='font-family:宋体; '>是模式</span><span lang=EN-US>1</span><span style='font-family:宋体; '>的机械手轴，</span><span lang=EN-US>axis_2</span><span style='font-family: 宋体; '>是模式</span><span lang=EN-US>2</span><span style='font-family:宋体; '>的机械手轴，那么结果是模式</span><span lang=EN-US>1</span><span style='font-family: 宋体; '>的机械手进行坐标计算，即以</span><span lang=EN-US>base</span><span style='font-family:宋体; '>轴的顺序来计算。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>FRAME_ROTATE2(tablein, tableout, dir[, x,y,z[, rx,ry,rz]])</span></p>
+<p class=MsoNormal><span lang=EN-US>ret = FRAME_ROTATE2(tablein, tableout, dir[, x,y,z[, rx,ry,rz]])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tablein</span><span style='font-family:宋体;'>：转换前，填写的坐标存储</span><span lang=EN-US>table</span><span style='font-family:宋体; '>位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableout</span><span style='font-family:宋体;'>：转换后，输出的坐标存储</span><span lang=EN-US>table</span><span style='font-family:宋体; '>位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>dir</span><span style='font-family:宋体;'>：方向选择</span> </p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=434 style='width:185.85pt;margin-left:20.75pt;border-collapse:collapse; border:none; '> <tr> <td width=93 valign=top style='width:39.95pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>值</span></p>
+</td> <td width=340 valign=top style='width:145.9pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>描述</span></p>
+</td> </tr> <tr> <td width=93 valign=top style='width:39.95pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>0</span></p>
+</td> <td width=340 valign=top style='width:145.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>DPOS </span><span style='font-family:宋体; '>到</span><span lang=EN-US>WORLD_DPOS</span></p>
+</td> </tr> <tr> <td width=93 valign=top style='width:39.95pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>1</span></p>
+</td> <td width=340 valign=top style='width:145.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>WORLD_DPOS&nbsp; </span><span style='font-family: 宋体; '>到</span><span lang=EN-US> DPOS</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>X</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>X^</span><span style='font-family:宋体;'>的平移距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>Y</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>Y^</span><span style='font-family:宋体;'>的平移距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>Z</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>Z^</span><span style='font-family:宋体;'>的平移距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>RX</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>X^</span><span style='font-family:宋体;'>的旋转的弧度</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>RY</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>Y^</span><span style='font-family:宋体;'>的旋转的弧度</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>RZ</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>Z^</span><span style='font-family:宋体;'>的旋转的弧度</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>[, x,y,z[, rx,ry,rz]]</span><span style='font-family:宋体;'>：不填时使用当前的缺省</span><span lang=EN-US>rotate</span><span style='font-family:宋体;'>参数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>Ret</span><span style='font-family:宋体;'>：返回成功与否；</span><span lang=EN-US>-1-</span><span style='font-family:宋体; '>成功，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>未成功</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'><img border=0 width=609 height=388 src="doc.files/image294.png" ></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例程</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; '>例一</span> <span style='font-family:宋体;'>以</span><span lang=EN-US>FRAME=2</span><span style='font-family:宋体; '>，</span><span lang=EN-US>DETLA</span><span style='font-family:宋体;'>为例；对其绕</span><span lang=EN-US>X</span><span style='font-family:宋体;'>轴旋转</span><span lang=EN-US>90</span><span style='font-family:宋体;'>度。</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0,1,2) </span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP </span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE = 1,1,1</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=3600/360,3600/360,3600/360 </span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(6,7,8)</span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE = 0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,40,10,32,85,3600,3600,3600, 0, 0, 0 )</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS = 100,100,100</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0,1,2) </span></p>
+<p class=MsoNormal><span lang=EN-US>CONNFRAME(2,0,6,7,8) </span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT LOADED</span></p>
+<p class=MsoNormal><span lang=EN-US>FOR i=0&nbsp; TO 2 </span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(100+i)=DPOS(i+6)</span></p>
+<p class=MsoNormal><span lang=EN-US>NEXT </span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(6,7,8)</span></p>
+<p class=MsoNormal><span lang=EN-US>FRAME_ROTATE(0,0,0,PI/2,0,0)</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(6,7,8)</span></p>
+<p class=MsoNormal><span lang=EN-US>FRAME_ROTATE(0,0,0,PI/2,0,0)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT LOADED </span></p>
+<p class=MsoNormal><span lang=EN-US>ret=<b>FRAME_ROTATE2</b>(100,200,1,0,0,0,PI/2,0,0)&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>IF ret=-1 THEN</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>计算值</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(6)=&quot;,TABLE(200)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(7)=&quot;,TABLE(201)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(8)=&quot;,TABLE(202)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>比较值</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(6)</span><span style='font-family:宋体;'>比较</span><span lang=EN-US>&quot;,TABLE(200)-DPOS(6)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(7)</span><span style='font-family:宋体;'>比较</span><span lang=EN-US>&quot;,TABLE(201)-DPOS(7)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(8)</span><span style='font-family:宋体;'>比较</span><span lang=EN-US>&quot;,TABLE(202)-DPOS(8)</span></p>
+<p class=MsoNormal><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>输出行输出结果：</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>计算值</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(6)=0</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(7)=-58.1400</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(8)=0.0000</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>比较值</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(6)</span><span style='font-family:宋体; '>比较</span><span lang=EN-US> 0</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(7)</span><span style='font-family:宋体; '>比较</span><span lang=EN-US> 0</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(8)</span><span style='font-family:宋体; '>比较</span><span lang=EN-US> 0.0000</span></p>
+<p class=MsoNormal><b><span lang=EN-US>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>例二</span> <span style='font-family:宋体;'>以</span><span lang=EN-US>FRAME=1</span><span style='font-family:宋体; '>，</span><span lang=EN-US>SCARA</span><span style='font-family:宋体;'>为例，对其相对于</span><span lang=EN-US>Z</span><span style='font-family:宋体;'>轴旋转</span><span lang=EN-US>90</span><span style='font-family:宋体;'>度。</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0,1,2,3)</span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP</span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE = 1,1,1,1</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=3600/360,3600/360,3600/360,1000</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0,0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(6,7,8,9)</span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE = 0,0,0,0&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,100,100,3600,3600,3600)</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS = 100,100,3600/360,1000</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0,1,2,3) </span></p>
+<p class=MsoNormal><span lang=EN-US>CONNFRAME(1,0,6,7,8,9) </span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT LOADED&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>FOR i=0 TO 3 </span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(100+i)=DPOS(i+6)</span></p>
+<p class=MsoNormal><span lang=EN-US>NEXT </span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(6,7,8,9)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>FRAME_ROTATE(0,0,0,0,0,PI/2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT LOADED </span></p>
+<p class=MsoNormal><span lang=EN-US>RET=<b>FRAME_ROTATE2</b>(100,200,1,0,0,0,0,0,PI/2)&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>IF RET=-1 THEN</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>计算值</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(6)=&quot;,TABLE(200)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(7)=&quot;,TABLE(201)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(8)=&quot;,TABLE(202)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(9)=&quot;,TABLE(203)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>比较值</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(6)</span><span style='font-family:宋体;'>比较</span><span lang=EN-US>&quot;,TABLE(200)-DPOS(6)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(7)</span><span style='font-family:宋体;'>比较</span><span lang=EN-US>&quot;,TABLE(201)-DPOS(7)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(8)</span><span style='font-family:宋体;'>比较</span><span lang=EN-US>&quot;,TABLE(202)-DPOS(8)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;DPOS(9)</span><span style='font-family:宋体;'>比较</span><span lang=EN-US>&quot;,TABLE(203)-DPOS(9)</span></p>
+<p class=MsoNormal><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>输出行输出结果：</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>计算值</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(6)=-0.0000</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(7)=-200</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(8)=0</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(9)=0</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>比较值</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(6)</span><span style='font-family:宋体; '>比较</span><span lang=EN-US> -0.0000</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(7)</span><span style='font-family:宋体; '>比较</span><span lang=EN-US> 0</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(8)</span><span style='font-family:宋体; '>比较</span><span lang=EN-US> 0</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="82.html#_FRAME_ROTATE--坐标系变换"><span style='color:#9999CC;'>FRAME_ROTATE</span></a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="85.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="83.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

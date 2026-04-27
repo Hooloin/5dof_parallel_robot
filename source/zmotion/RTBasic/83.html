@@ -1,0 +1,117 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FRAME_ROTATE -- 工件坐标系变换</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="84.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="82.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697878"></a><a name="_Toc11675"></a><a name="_Toc5968"></a><a name="_Toc10608"><span lang=EN-US>FRAME_ROTATE -- </span></a><span style='font-family:宋体;'>工件坐标系变换</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family: 宋体; '>机械手计算指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>用于对工件坐标系进行平移和旋转。</span></b></p>
+<p class=MsoNormal><b><span lang=EN-US>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>目前只对</span><span lang=EN-US>FRAME6</span><span style='font-family:宋体; '>同时旋转姿态，其他具有</span><span lang=EN-US>XYZ</span><span style='font-family: 宋体; '>虚拟轴的可以支持</span><span lang=EN-US>XYZ</span><span style='font-family:宋体; '>三个轴旋转，姿态轴不能旋转。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>旋转后，虚拟轴</span><span lang=EN-US>WORLD_DPOS</span><span style='font-family:宋体; '>表示世界坐标不会改变，虚拟轴</span><span lang=EN-US>DPOS</span><span style='font-family: 宋体; '>表示工件坐标会改变。</span><span lang=EN-US>&nbsp; </span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>使用时需控制器当前存在机械链接。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE</span><span style='font-family:宋体; '>轴可以是虚拟轴与关节轴任意一个；</span><span lang=EN-US>BASE</span><span style='font-family:宋体; '>轴无机械手链接时会报</span><span lang=EN-US>1025</span><span style='font-family:宋体; '>的错误。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>多种机械手叠加的情况，根据</span><span lang=EN-US>BASE</span><span style='font-family:宋体; '>轴来识别是哪个机械手模式；如果</span><span lang=EN-US>BASE</span><span style='font-family: 宋体; '>（</span><span lang=EN-US>axis_1,axis_2</span><span style='font-family:宋体;'>）中的</span><span lang=EN-US>axis_1</span><span style='font-family:宋体; '>是模式</span><span lang=EN-US>1</span><span style='font-family:宋体; '>的机械手轴，</span><span lang=EN-US>axis_2</span><span style='font-family: 宋体; '>是模式</span><span lang=EN-US>2</span><span style='font-family:宋体; '>的机械手轴，那么结果是模式</span><span lang=EN-US>1</span><span style='font-family: 宋体; '>的机械手进行坐标计算，即以</span><span lang=EN-US>BASE</span><span style='font-family:宋体; '>轴的顺序来计算。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>FRAME_ROTATE(X,Y,Z,RX,RY,RZ)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>X</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>X^</span><span style='font-family:宋体;'>的平移距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>Y</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>Y^</span><span style='font-family:宋体;'>的平移距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>Z</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>Z^</span><span style='font-family:宋体;'>的平移距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>RX</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>X^</span><span style='font-family:宋体;'>的旋转的弧度</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>RY</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>Y^</span><span style='font-family:宋体;'>的旋转的弧度</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>RZ</span><span style='font-family:宋体;'>：坐标系</span><span lang=EN-US>B</span><span style='font-family:宋体;'>沿</span><span lang=EN-US>Z^</span><span style='font-family:宋体;'>的旋转的弧度</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=641 height=399 src="doc.files/image292.png" ></span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>坐标系旋转：</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>旋转的方法是：</span><span lang=EN-US>x_y_z</span><span style='font-family:宋体; '>固定角坐标系。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>首先将做坐标系</span><span lang=EN-US>{B}</span><span style='font-family:宋体; '>和一个已知参考坐标系</span><span lang=EN-US>{A}</span><span style='font-family: 宋体; '>重合。先将</span><span lang=EN-US>{A}</span><span style='font-family:宋体; '>绕</span><span lang=EN-US>Xa</span><span style='font-family: 宋体; '>旋转</span><span lang=EN-US>RX</span><span style='font-family:宋体;'>角，在绕</span><span lang=EN-US>Ya</span><span style='font-family:宋体;'>旋转</span><span lang=EN-US>RY</span><span style='font-family:宋体;'>角，最后绕</span><span lang=EN-US>Za</span><span style='font-family:宋体;'>旋转</span><span lang=EN-US>RZ</span><span style='font-family:宋体;'>角。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例程</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; '>例一</span> <span style='font-family:宋体;'>以</span><span lang=EN-US>FRAME=2</span><span style='font-family:宋体; '>，</span><span lang=EN-US>DETLA</span><span style='font-family:宋体;'>为例，对其绕</span><span lang=EN-US>X</span><span style='font-family:宋体;'>轴旋转</span><span lang=EN-US>90</span><span style='font-family:宋体;'>度。</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0,1,2) </span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP </span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE = 1,1,1</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=3600/360,3600/360,3600/360&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0,0,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(6,7,8) </span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE = 0,0,0&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,40,10,32,85,3600,3600,3600, 0, 0, 0 ) </span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS = 100,100,100 </span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0,1,2) </span></p>
+<p class=MsoNormal><span lang=EN-US>CONNFRAME(2,0,6,7,8) </span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT LOADED&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(6,7,8)&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><b><span lang=EN-US>FRAME_ROTATE</span></b><span lang=EN-US>(0,0,0,PI/2,0,0)</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;DPOS(7)-WORLD_DPOS(7)=&quot;,DPOS(7)-WORLD_DPOS(7)</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;DPOS(8)-WORLD_DPOS(8)=&quot;,DPOS(8)-WORLD_DPOS(8)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>输出行输出结果：</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(7)-WORLD_DPOS(7)=-58.1400</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(8)-WORLD_DPOS(8)=58.1400</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>例二</span> <span style='font-family:宋体;'>以</span><span lang=EN-US>FRAME=1</span><span style='font-family:宋体; '>，</span><span lang=EN-US>SCARA</span><span style='font-family:宋体;'>为例；对其相对于</span><span lang=EN-US>Z</span><span style='font-family:宋体;'>轴旋转</span><span lang=EN-US>90</span><span style='font-family:宋体;'>度。</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0,1,2,3) </span></p>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP </span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE = 1,1,1,1</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=3600/360,3600/360,3600/360,1000 </span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0,0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(6,7,8,9) </span></p>
+<p class=MsoNormal><span lang=EN-US>ATYPE = 0,0,0,0 </span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,100,100,3600,3600,3600) </span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS = 100,100,3600/360,1000 </span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0,1,2,3) </span></p>
+<p class=MsoNormal><span lang=EN-US>CONNFRAME(1,0,6,7,8,9) </span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT LOADED</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(6,7,8,9)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><b><span lang=EN-US>FRAME_ROTATE</span></b><span lang=EN-US>(0,0,0,0,0,PI/2)</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;DPOS(7)-WORLD_DPOS(7)=&quot;,DPOS(7)-WORLD_DPOS(7)</span></p>
+<p class=MsoNormal><span lang=EN-US>?&quot;DPOS(8)-WORLD_DPOS(8)=&quot;,DPOS(8)-WORLD_DPOS(8)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>输出行输出结果：</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(7)-WORLD_DPOS(7)=-200</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(8)-WORLD_DPOS(8)=0</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="84.html#_FRAME_ROTATE2--坐标系变换计算"><span style='color:#9999CC;'>FRAME_ROTATE2</span></a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="84.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="82.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

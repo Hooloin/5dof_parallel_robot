@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVER2_LIMIT -- 选择关节轴速度和加速度约束类型</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="98.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="96.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc198286251"></a><a name="_Toc152313732"><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_LIMIT -- </span></a><span style='font-family:宋体; '>选择</span><span style='font-family:宋体; '>关节轴速度和加速度约束类型</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>机械手关节轴约束相关的指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>机械手走直线或圆弧轨迹运行时，受各关节轴最大速度和加速度约束的程度。设置新的</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>mode</span><span style=' font-family:宋体; color:black;'>值后，后面执行的</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>basic</span><span style=' font-family:宋体; color:black;'>指令会一直生效。默认值为</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>0</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_LIMIT(mainAxis)=</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>mode</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>mainAxis</span><span style='font-family:宋体; '>：每个机械手自身的关节主轴号；不能输入机械手其它轴号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>mode</span><span style=' font-family:宋体; color:black; '>：</span><span style=' font-family:宋体; color:black;'>模式</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=721 style='width:308.95pt;margin-left:21.5pt;border-collapse:collapse; '> <tr> <td width=83 valign=top style='width:35.45pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>值</span></p>
+</td>  <td width=638 valign=top style='width:273.5pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>描述</span></p>
+</td>  </tr> <tr> <td width=83 valign=top style='width:35.45pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family: "Calibri","sans-serif";color:black;'>0</span></p>
+</td>  <td width=638 valign=top style='width:273.5pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>默认值。低速下走轨迹不受关节轴约束，见如下备注</span></p>
+</td>  </tr> <tr> <td width=83 valign=top style='width:35.45pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family: "Calibri","sans-serif";color:black;'>1</span></p>
+</td>  <td width=638 valign=top style='width:273.5pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>轨迹运行高速低速下整个都受各关节轴的最大速度和最大加速度约束</span></p>
+</td>  </tr> <tr> <td width=83 valign=top style='width:35.45pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family: "Calibri","sans-serif";color:black;'>&nbsp;</span></p>
+</td>  <td width=638 valign=top style='width:273.5pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family: "Calibri","sans-serif";color:black;'>&nbsp;</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>备注：</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>mode</span><span style='font-family:宋体; color:black;'>默认值为</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>0</span><span style='font-family:宋体; color:black;'>，表示机械手走轨迹线速度</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>FORCE_SPEED</span><span style='font-family:宋体; color:black;'>不超过</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>1000mm/s</span><span style='font-family:宋体; color:black;'>，或者速度比例</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>SPEED_RATIO</span><span style='font-family:宋体; color:black;'>不超过</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>50%</span><span style='font-family:宋体; color:black;'>，则不受关节轴的最大速度和加速度约束。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>例程</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>BASE(6,7,8,9) '</span><span style='font-family:宋体; '>选择虚拟轴号</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>CONNREFRAME(1,10001,0,1,2,3) '</span><span style='font-family:宋体; '>启动正解连接。关节主轴号为</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>WAIT LOADED '</span><span style='font-family:宋体; '>等待运动加载，此时会自动调整虚拟轴的位置。</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>?&quot;</span><span style='font-family:宋体; '>正解模式</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp;</span></p>
+<p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_LIMIT(0)=1</span></b><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp; ‘</span><span style='font-family:宋体; '>机械手走轨迹整个速度都受关节轴约束</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>BASE(6,7,8,9)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>FORCE_SPEED(6)=500&nbsp; ‘</span><span style='font-family:宋体; '>机械手走直线的线速度为</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>500mm/s </span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_LABS(-1,400,300,-100,0)&nbsp; ‘</span><span style='font-family:宋体; '>走直线路径运行到目标点</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>(400,300,-100,0)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="98.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="96.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

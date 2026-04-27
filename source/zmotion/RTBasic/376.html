@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>D_GAIN -- 微分增益</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="377.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="375.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_D_GAIN_--_微分增益"></a><a name="_Toc134698164"></a><a name="_Toc12241"></a><a name="_Toc24154"></a><a name="_Toc29459"></a><a name="_D_GAIN_--_微分增益_1"></a><span lang=EN-US>D_GAIN -- </span><span style='font-family:宋体;'>微分增益</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>微分增益，非模拟量伺服不支持。</span></b></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>D_GAIN</span><span style='font-family:宋体;color:black;'>包括轴的微分增益。微分输出与跟随误差的变化量成正比，缺省：</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>。</span> </p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>给系统叠加微分增益会产生平滑响应，允许更大的比例增益，太高会产生震动。</span> </p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>注意：为了避免不稳定，伺服增益应该在</span><span lang=EN-US style='color:black;'>SERVO=OFF</span><span style='font-family:宋体;color:black;'>时改变。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>VAR1 = D_GAIN</span><span style='font-family:宋体;'>，</span><span lang=EN-US style='color:black;'>VAR1 = D_GAIN</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>适用：</span><span lang=EN-US style='color:black;'>D_GAIN AXIS(axis)</span><span style='font-family:宋体; color:black;'>方式设置指定的轴</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>参见</span><a href="382.html#_SERVO_--_闭环开关_1"><span lang=EN-US>SERVO</span></a></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="382.html#_SERVO_--_闭环开关_1"><span lang=EN-US>SERVO</span></a><span style='font-family:宋体;'>，</span><a href="379.html#_P_GAIN_--_比例增益_1"><span lang=EN-US style='color:#9999CC; '>P_GAIN</span></a><span style='font-family:宋体;color:black;'>，</span><a href="377.html#_I_GAIN_--_积分增益_1"><span lang=EN-US>I_GAIN</span></a><span style='font-family:宋体;color:black;'>，</span><a href="378.html#_OV_GAIN_--_速度增益_1"><span lang=EN-US style='color:#9999CC; '>OV_GAIN</span></a><span style='font-family:宋体;color:black;'>，</span><a href="380.html#_VFF_GAIN_--_前馈增益_1"><span lang=EN-US style='color:#9999CC; '>VFF_GAIN</span></a><span style='font-family:宋体;color:black;'>，</span><a href="364.html#_FE_LIMIT"><span lang=EN-US>FE_LIMIT</span></a><span style='font-family:宋体;color:black;'>，</span><a href="365.html#_FE_RANGE"><span lang=EN-US>FE_RANGE</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="377.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="375.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

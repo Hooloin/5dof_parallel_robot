@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_TkTranslatePose2d -- 位姿补正</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1228.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1226.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc10907"></a><a name="_ZV_TkTranslatePose2d_--_位姿补正"></a><span lang=EN-US>ZV_TkTranslatePose2d -- </span><span style='font-family: 宋体;'>位姿补正</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>变换</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>对输入向量进行补正</span><span lang=EN-US>,</span><span style='font-family:宋体; '>可对向量中的点位置添加平移量从而实现自定义位置，通常用于自定义定位输出点。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>比如定位输出的</span><span lang=EN-US>mark</span><span style='font-family:宋体; '>点坐标为</span><span lang=EN-US>x1,y1,angle1,</span><span style='font-family:宋体; '>那么想将定位坐标指定为</span><span lang=EN-US>mark</span><span style='font-family:宋体; '>点旁边的某个位置</span><span lang=EN-US>x2,y2</span><span style='font-family:宋体; '>的话，因此可对定位点进行矫正，即</span><span lang=EN-US>transx = x2-x1,transy = y2-y1</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_TkTranslatePose2d(vecx,vecy,veca,transx,transy,tabId)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>vecx</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入向量的起始</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>vecy</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入向量的起始</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>veca</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入向量的角度，顺时针为正</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>transx</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>对向量坐标的平移量</span><span lang=EN-US>x</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>transy</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>对向量坐标的平移量</span><span lang=EN-US>y</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabId</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>索引，输出参数，补正后的向量参数</span><span lang=EN-US>,</span><span style='font-family:宋体; '>依次为</span><span lang=EN-US>x</span><span style='font-family:宋体; '>、</span><span lang=EN-US>y</span><span style='font-family:宋体; '>、</span><span lang=EN-US>angle</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=693 height=260 src="doc.files/image1223.jpg" alt="说明: 16" ></span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>创建模板</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT model_img,model,re</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(model_img,&quot;tool6.jpg&quot;, 0) '</span><span style='font-family:宋体;'>读取模版</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_McCreateShape(model_img,re,model,-180,360,0,0,0,0) '</span><span style='font-family:宋体;'>创建模板</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>形状匹配</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,result</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;tool5.png&quot;, 0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_McFindShape(model,img,result,90,1,0.6,-1,3,9,0) '</span><span style='font-family:宋体;'>模板匹配</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGetRow(result,0,5,0) '</span><span style='font-family:宋体;'>获取第一个匹配结果</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>平移基准</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_TkTranslatePose2d(TABLE(1),TABLE(2),TABLE(3),-105,35,20) 'x</span><span style='font-family:宋体;'>、</span><span lang=EN-US>y</span><span style='font-family:宋体;'>方向分别平移</span><span lang=EN-US>-105</span><span style='font-family:宋体;'>和</span><span lang=EN-US>35</span><span style='font-family:宋体;'>个像素</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>绘制结果</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img_dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpGrayToRgb(img,img_dst) '</span><span style='font-family:宋体;'>灰度图转化为</span><span lang=EN-US>RGB</span><span style='font-family:宋体;'>图像</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DraMarker(img_dst,TABLE(1),TABLE(2),0,30,ZV_DraColor(255,0,0)) '</span><span style='font-family:宋体;'>绘制补正前标记</span><span lang=EN-US>(</span><span style='font-family:宋体;'>红</span><span lang=EN-US>)</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DraMarker(img_dst,TABLE(20),TABLE(21),0,30,ZV_DraColor(0,255,0)) '</span><span style='font-family:宋体;'>绘制补正后标记</span><span lang=EN-US>(</span><span style='font-family:宋体;'>绿</span><span lang=EN-US>)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1228.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1226.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

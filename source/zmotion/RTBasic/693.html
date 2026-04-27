@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>HMI_DEFAULTATTR -- 设置/获取HMI内置默认属性</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="694.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="692.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc147915784"><span lang=EN-US>HMI_DEFAULTATTR -- </span></a><span style='font-family:宋体;'>设置</span><span lang=EN-US>/</span><span style='font-family:宋体;'>获取</span><span lang=EN-US>HMI</span><span style='font-family:宋体;'>内置默认属性</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="84%" style='width:84.12%;border:solid black 1.0pt;border-left: none; padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>HMI</span><span style=' font-family:宋体;'>指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="84%" style='width:84.12%;border-top:none;border-left:none; border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>设置</span><span lang=EN-US>/</span><span style=' font-family:宋体;'>获取</span><span lang=EN-US>HMI</span><span style='font-family:宋体; '>内置的默认属性，对整个</span><span lang=EN-US>HMI</span><span style='font-family:宋体; '>生效。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red;'>注：需要在</span><span lang=EN-US style='color:red;'>HMI</span><span style='font-family:宋体; color:red;'>初始化前进行设置才会生效。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="84%" style='width:84.12%;border-top:none;border-left:none; border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>value = HMI_DEFAULTATTR(strAttr)</span></p>
+<p class=MsoNormal><span lang=EN-US>HMI_DEFAULTATTR(strAttr, value)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>strAttr</span><span style='font-family:宋体;'>：指定操作的元件属性</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;SBR_W&quot;</span><span style='font-family:宋体; '>：滚动条宽度</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;SBR_F&quot;</span><span style='font-family:宋体; '>：滚动条前景颜色</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;SBR_B&quot;</span><span style='font-family:宋体; '>：滚动条背景颜色</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;SBR_P&quot;</span><span style='font-family:宋体; '>：滚动条按压颜色</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;BTN_RLM&quot;</span><span style='font-family:宋体; '>：按钮松开模式</span></p>
+<p class=MsoNormal style='margin-left:84.0pt; text-indent:21.0pt'><span lang=EN-US>0-</span><span style='font-family:宋体; '>默认</span></p>
+<p class=MsoNormal style='margin-left:84.0pt; text-indent:21.0pt'><span lang=EN-US>1-</span><span style='font-family:宋体; '>鼠标移出元件取消触发</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>“DRAW_M”</span><span style='font-family:宋体; '>：绘图模式</span></p>
+<p class=MsoNormal style='margin-left:105.0pt;'><span lang=EN-US>0-</span><span style='font-family:宋体;'>默认点阵绘图</span></p>
+<p class=MsoNormal style='margin-left:105.0pt;'><span lang=EN-US>1-</span><span style='font-family:宋体;'>抗锯齿绘图</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;MONO_M&quot;</span><span style='font-family:宋体; '>：元件垄断模式（有弹窗的元件，如下拉列表、菜单栏等）</span></p>
+<p class=MsoNormal style='margin-left:105.0pt;'><span lang=EN-US>0-</span><span style='font-family:宋体;'>不垄断</span></p>
+<p class=MsoNormal style='margin-left:105.0pt;'><span lang=EN-US>1-</span><span style='font-family:宋体;'>垄断按键</span></p>
+<p class=MsoNormal style='margin-left:105.0pt;'><span lang=EN-US>2-</span><span style='font-family:宋体;'>垄断鼠标</span></p>
+<p class=MsoNormal style='margin-left:105.0pt;'><span lang=EN-US>3-</span><span style='font-family:宋体;'>同时垄断按键鼠标（默认）</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;RGB_GRAY&quot;</span><span style='font-family:宋体; '>：灰阶颜色</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;MINADAPT&quot;</span><span style='font-family:宋体; '>：文本自适应最小字体比例</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&quot;DMEMSIZE&quot;</span><span style='font-family:宋体; '>：动态内存大小（字节），默认</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span style='font-family:宋体; '>设置之后，元件的背景图片可指定从</span><span lang=EN-US>flash</span><span style='font-family:宋体; '>目录加载，但需确保可用的动态内存充足。</span></p>
+<p class=MsoNormal style='margin-left:42.0pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>注：在</span><span lang=EN-US style=' color:red'>HMI</span><span style='font-family:宋体; color:red'>程序启动之前，必须预先配置好</span><span lang=EN-US style='color:red'>SBR_W</span><span style=' font-family:宋体;color:red'>、</span><span lang=EN-US style='color:red'>SBR_F</span><span style=' font-family:宋体;color:red'>、</span><span lang=EN-US style='color:red'>SBR_B</span><span style=' font-family:宋体;color:red'>、</span><span lang=EN-US style='color:red'>SBR_P</span><span style=' font-family:宋体;color:red'>以及</span><span lang=EN-US style='color:red'>RGB_GRAY</span><span style=' font-family:宋体;color:red'>等参数。为此，可以在</span><span lang=EN-US style='color:red'>Basic</span><span style='font-family:宋体; color:red'>程序的末尾</span><span lang=EN-US style='color:red'>&nbsp;&nbsp; </span><span style='font-family:宋体;color:red'>添加一个专门用于启动</span><span lang=EN-US style='color:red'>HMI</span><span style='font-family:宋体;color:red'>的函数。这样做可以可以使必要参数都已正确设置后再启动</span><span lang=EN-US style='color:red'>HMI</span><span style='font-family:宋体; color:red'>，以确保其按照预期正常工作。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>value</span><span style='font-family:宋体;'>：属性值</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="84%" style='width:84.12%;border-top:none;border-left:none; border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>RTHmi</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="84%" style='width:84.12%;border-top:none;border-left:none; border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>HMI_DEFAULTATTR(&quot;SBR_W&quot;, 25)&nbsp; '</span><span style='font-family:宋体;'>修改滚动条默认宽度为</span><span lang=EN-US>25</span></p>
+<p class=MsoNormal><span lang=EN-US>HMI_DEFAULTATTR(&quot;SBR_P&quot;, RGB(255,0,0)) '</span><span style='font-family:宋体; '>修改滚动条默认按压颜色</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><b><span lang=EN-US style='font-family:等线; '>&nbsp;</span></b></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="694.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="692.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

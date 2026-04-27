@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>PWM_DUTY -- PWM占空比</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="411.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="409.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_PWM_DUTY"></a><a name="_PWM_DUTY_--_pwm占空比"></a><a name="_Toc134698198"></a><a name="_Toc28516"></a><a name="_Toc29425"></a><a name="_Toc21463"></a><a name="_Toc12570"></a><a name="_PWM_DUTY_--_pwm占空比_1"></a><span lang=EN-US>PWM_DUTY -- PWM</span><span style='font-family:宋体;'>占空比</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>PWM</span><span style='font-family:宋体;color:black; '>控制函数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>PWM</span></b><b><span style='font-family:宋体;color:black;'>占空比设置或读取。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>PWM</span><span style='font-family:宋体;color:black;'>只能通过设置占空比为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>来关闭，不能通过设置</span><span lang=EN-US style='color:black;'>PWM</span><span style='font-family:宋体;color:black;'>频率为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>实现，</span><span lang=EN-US style='color:black;'>PWM</span><span style='font-family:宋体;color:black;'>频率一定要在</span><span lang=EN-US style='color:black;'>PWM</span><span style='font-family:宋体;color:black;'>开关之前调整。</span></p>
+<p class=MsoNormal><a name="OLE_LINK224"><span style='font-family:宋体;color:black; '>占空比指有效电平占整个周期的比例。</span></a></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>一个周期中先输出有效电平，再输出无效电平。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=435 height=191 src="doc.files/image512.png" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>PWM</span><span style='font-family:宋体;'>的实际输出受输出口的控制，必须输出口打开，</span><span lang=EN-US>PWM</span><span style='font-family:宋体;'>才能输出，否则输出被屏蔽掉。可以先开</span><span lang=EN-US>PWM</span><span style='font-family:宋体;'>功能，然后再开输出口，这样实现激光电源的首脉冲抑制功能。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>PWM_DUTY</span><span lang=EN-US style='color:black;'>(index, duty)&nbsp;&nbsp; </span><span lang=EN-US>PWM_DUTY</span><span lang=EN-US style='color:black;'>(index)=duty</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>index</span><span style=' font-family:宋体;color:black;'>：编号，从</span><span lang=EN-US style='color:black;'>0</span><span style=' font-family:宋体;color:black;'>开始</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>duty</span><span style=' font-family:宋体;color:black;'>：占空比，</span><span lang=EN-US style='color:black;'>0-1</span><span style=' font-family:宋体;color:black;'>，当设置</span><span lang=EN-US style='color:black;'>0</span><span style=' font-family:宋体;color:black;'>的时候，</span><span lang=EN-US style='color:black;'>PWM</span><span style=' font-family:宋体;color:black;'>关闭</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:red;'>支持</span><span lang=EN-US style='color:red;'>PWM</span><span style='font-family:宋体;color:red;'>功能的控制器才支持此函数</span><span style=' font-family:宋体;color:red;'>。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span lang=EN-US>PWM_DUTY</span></b><span lang=EN-US style='color:black;'>(0)=0.5</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>?</span><b><span lang=EN-US>PWM_DUTY</span></b><span lang=EN-US style='color:black;'>(0)</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>打印结果</span><span lang=EN-US style='color:black;'>0.5</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><a name="OLE_LINK227"></a><a href="409.html#_PWM_FREQ_--_PWM频率_1"><span lang=EN-US>PWM_FREQ</span></a><a name="OLE_LINK225"></a><span style=' font-family:宋体;color:black;'>，</span><a href="49.html#_MOVE_PWM_--_缓冲PWM_1"><span lang=EN-US>MOVE_PWM</span></a></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal><a name="_ADDRESS"></a><a name="_Toc19464"></a><a name="_SETCOM_--_串口配置"></a><a name="_SETCOM"></a><a name="_Toc134698201"></a><a name="_Toc26158"></a><a name="_Toc10005"></a><a name="_Toc8251"></a><a name="_Toc7549"></a><a name="_SETCOM_--_串口配置_1"></a><span lang=FR>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="411.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="409.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

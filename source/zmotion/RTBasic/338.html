@@ -1,0 +1,335 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>REGIST -- 锁存</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="339.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="337.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_OPEN_WIN"></a><a name="_MARK"></a><a name="_REG_INPUTS"></a><a name="_REGIST_--_锁存"></a><a name="_REGIST"></a><a name="_Toc134698123"></a><a name="_Toc4885"></a><a name="_Toc8805"></a><a name="_Toc554"></a><a name="_Toc26367"></a><a name="_Toc349071406"></a><a name="_REGIST_--_锁存_1"></a><span lang=EN-US>REGIST</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>锁存</span> </h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>位置锁存指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>REGIST</span></b><b><span style='font-family:宋体;color:black; '>指令用来锁存轴的测量反馈位置。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>支持编码器轴、总线轴锁存，不同型号的控制器支持锁存的轴类型不同，</span><span lang=EN-US style='color:red; '>4</span><span style='font-family:宋体;color:red;'>系列及以上控制器最新固件支持虚拟轴、脉冲轴锁存。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>EtherCAT</span><span style='font-family:宋体;color:black; '>支持驱动器锁存，此时使用驱动器</span><span lang=EN-US style='color:black; '>IO</span><span style='font-family:宋体;color:black;'>点实现锁存，需要配置</span><span lang=EN-US style='color:black; '>DRIVE_PROFILE</span><span style='font-family:宋体;color:black; '>指令，具体模式查看指令语法。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>Rtex</span><span style='font-family:宋体;color:black; '>只支持控制器锁存。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体;color:black; '>系列及以上控制器支持</span><span lang=EN-US style='color:black; '>4</span><span style='font-family:宋体;color:black;'>锁存通道。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体;color:black; '>个通道指</span><span lang=EN-US style='color:black; '>MARK</span><span style='font-family:宋体;color:black; '>、</span><span lang=EN-US style='color:black; '>MARKB</span><span style='font-family:宋体;color:black; '>、</span><span lang=EN-US style='color:black; '>MARKC</span><span style='font-family:宋体;color:black; '>、</span><span lang=EN-US style='color:black; '>MARKD</span><span style='font-family:宋体;color:black; '>，通过</span><span lang=EN-US style='color:black; '>REG_INPUTS</span><span style='font-family:宋体;color:black; '>指定锁存通道对应的高速输入口，默认对应输入口</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black; '>、</span><span lang=EN-US style='color:black; '>1</span><span style='font-family:宋体;color:black; '>、</span><span lang=EN-US style='color:black; '>2</span><span style='font-family:宋体;color:black; '>、</span><span lang=EN-US style='color:black; '>3</span><span style='font-family:宋体;color:black; '>，详细请查看控制器的用户手册中数字量输入章节。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>支持</span><span lang=EN-US style='color:black; '>EtherCAT</span><span style='font-family:宋体;color:black; '>驱动器锁存与控制器锁存同时使用，需要有</span><span lang=EN-US style='color:black; '>4</span><span style='font-family:宋体;color:black; '>锁存通道功能。总线驱动器探针锁存使用</span><span lang=EN-US style='color:black; '>MARK</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black; '>MARKB</span><span style='font-family:宋体;color:black; '>通道，控制器本地</span><span lang=EN-US style='color:black; '>IN</span><span style='font-family:宋体;color:black; '>锁存使用</span><span lang=EN-US style='color:black; '>MARKC</span><span style='font-family:宋体;color:black; '>、</span><span lang=EN-US style='color:black; '>MARKD</span><span style='font-family:宋体;color:black; '>通道。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>&nbsp;</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;color:red; '>锁存模式对应的上升沿和下降沿根据</span><span lang=EN-US style='color:red; '>NPN</span><span style='font-family:宋体;color:red;'>还是</span><span lang=EN-US style='color:red; '>PNP</span><span style='font-family:宋体;color:red;'>决定</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>当锁存产生时，轴状态</span><span lang=EN-US style='color:black; '>MARK</span><span style='font-family:宋体;color:black;'>会被设置为</span><span lang=EN-US style='color:black; '>ON</span><span style='font-family:宋体;color:black;'>，同时锁存到的位置会被存储在参数</span><span lang=EN-US style='color:black; '>REG_POS</span><span style='font-family:宋体;color:black; '>内。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>每个轴的锁存通道相互独立</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法一</span></b></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REGIST(mode)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>mode</span><span style='font-family:宋体;color:black; '>：锁存方式</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span style='font-family:宋体;color:black;'>上升下降沿是基于控制器为高电平有效时对应的上升下降沿。如果设置成上升沿触发，则锁存会在外部输入口由导通状态进入截止状态的一瞬间触发；如果设置成下降沿触发，则锁存会在外部输入口由截止状态进入导通状态的一瞬间触发；具体要设置成上升沿还是下降沿触发，要根据外部输入口信号跳变的实际需求。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;color:black; '>脉冲轴类型一般采用</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black; '>R1</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black; '>Z</span><span style='font-family:宋体;color:black; '>脉冲这三种锁存；总线轴本地</span><span lang=EN-US style='color:black; '>IN</span><span style='font-family:宋体;color:black; '>锁存使用</span><span lang=EN-US style='color:black; '>R2</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black; '>R3</span><span style='font-family:宋体;color:black; '>。</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=894 style='width:383.15pt;border-collapse:collapse;border:none; '> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>值</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>描述</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>1</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>当</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black; '>脉冲上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>2</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>当</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black; '>脉冲下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>3</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>当输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>上升沿的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>4</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>当输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>下降沿的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>6</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black; '>信号上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>7</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black; '>信号下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>8</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black; '>信号上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>9</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black; '>信号下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>10</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span><span style='font-family:宋体;color:black; '>，输入信号</span><span lang=EN-US style='color:black; '>R1</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>11</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span><span style='font-family:宋体;color:black; '>，输入信号</span><span lang=EN-US style='color:black; '>R1</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>12</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span><span style='font-family:宋体;color:black; '>，输入信号</span><span lang=EN-US style='color:black; '>R1</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>13</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POS</span><span style='font-family:宋体;color:black; '>，输入信号</span><span lang=EN-US style='color:black; '>R1</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>14</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R1</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB(14</span><span style='font-family:宋体;color:black; '>以后</span><span lang=EN-US style='color:black;'>150804</span><span style='font-family:宋体;color:black; '>以后版本支持，每个锁存通道独立，支持</span><span lang=EN-US style='color:black; '>4</span><span style='font-family:宋体;color:black;'>通道锁存</span><span lang=EN-US style='color:black; '>)</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>15</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R1</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>16</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>Z</span><span style='font-family:宋体;color:black;'>信号上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>17</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>Z</span><span style='font-family:宋体;color:black;'>信号下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>18</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R2</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSC</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>19</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R2</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSC</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>20</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R3</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSD</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>21</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R3</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSD</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法二</span></b></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REGIST(100+mode, tableindex, numes)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>mode</span><span style='font-family:宋体;color:black; '>：锁存方式</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>tableindex</span><span style='font-family:宋体;color:black; '>：连续锁存的内容存储的</span><span lang=EN-US style='color:black; '>table</span><span style='font-family:宋体;color:black; '>位置，第一个</span><span lang=EN-US style='color:black; '>table</span><span style='font-family:宋体;color:black; '>元素存储锁存的个数，后面存储锁存的坐标，最多保存个数</span><span lang=EN-US style='color:black; '>= numes-1</span><span style='font-family:宋体;color:black; '>，溢出时循环写入</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>numes</span><span style='font-family:宋体;color:black; '>：占用的</span><span lang=EN-US style='color:black;'>table</span><span style='font-family:宋体;color:black; '>个数</span></p>
+<p class=MsoNormal style='text-indent:42.0pt; '><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>通过把模式加</span><span lang=EN-US>100</span><span style='font-family:宋体;'>来支持连续锁存，锁存结果存储到</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>里面。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>分别对两个通道进行连续锁存，可以实现上下边沿的连续锁存。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>ECI</span><span style='font-family:宋体;color:red; '>：</span><span lang=EN-US style='color:red;'>20150829</span><span style='font-family:宋体;color:red; '>以上固件支持。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>4</span><span style='font-family:宋体;color:red; '>系列控制器：</span><span lang=EN-US style='color:red; '>20170523</span><span style='font-family:宋体;color:red; '>以上固件支持。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>100+mode</span><span style='font-family:宋体;'>：只能使用单一通道的</span><span lang=EN-US>mode</span><span style='font-family:宋体;'>，加</span><span lang=EN-US>100</span><span style='font-family:宋体;'>表示使用连续锁存</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=894 style='width:383.15pt;border-collapse:collapse;border:none; '> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>值</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>描述</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>1</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>当</span><span lang=EN-US>Z</span><span style='font-family:宋体;'>脉冲上升沿时的绝对位置送到</span><span lang=EN-US>REG_POS</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>2</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>当</span><span lang=EN-US>Z</span><span style='font-family:宋体;'>脉冲下降沿时的绝对位置送到</span><span lang=EN-US>REG_POS</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>3</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>当输入信号</span><span lang=EN-US>R0</span><span style='font-family:宋体;'>上升沿的绝对位置送到</span><span lang=EN-US>REG_POS</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>4</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>当输入信号</span><span lang=EN-US>R0</span><span style='font-family:宋体;'>下降沿的绝对位置送到</span><span lang=EN-US>REG_POS</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>14</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>输入信号</span><span lang=EN-US>R1</span><span style='font-family:宋体;'>上升沿时的绝对位置送到</span><span lang=EN-US>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>15</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>输入信号</span><span lang=EN-US>R1</span><span style='font-family:宋体;'>下降沿时的绝对位置送到</span><span lang=EN-US>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>16</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>Z</span><span style='font-family:宋体;'>信号上升沿时的绝对位置送到</span><span lang=EN-US>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>17</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>Z</span><span style='font-family:宋体;'>信号下降沿时的绝对位置送到</span><span lang=EN-US>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>18</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R2</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSC</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>19</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R2</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSC</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>20</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R3</span><span style='font-family:宋体;color:black;'>上升沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSD</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>21</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>输入信号</span><span lang=EN-US style='color:black; '>R3</span><span style='font-family:宋体;color:black;'>下降沿时的绝对位置送到</span><span lang=EN-US style='color:black; '>REG_POSD</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>23</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>当输入信号</span><span lang=EN-US>R0</span><span style='font-family:宋体;'>上升沿的绝对位置送到</span><span lang=EN-US>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>24</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>当输入信号</span><span lang=EN-US>R0</span><span style='font-family:宋体;'>下降沿的绝对位置送到</span><span lang=EN-US>REG_POSB</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>33</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>当输入信号</span><span lang=EN-US>R0</span><span style='font-family:宋体;'>上升沿的绝对位置送到</span><span lang=EN-US>REG_POS,</span><span style='font-family:宋体;'>下一次切换下降沿，轮流切换。</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>34</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>当输入信号</span><span lang=EN-US>R0</span><span style='font-family:宋体;'>下降沿的绝对位置送到</span><span lang=EN-US>REG_POS</span><span style='font-family:宋体;'>，下一次切换上升沿，轮流切换。</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>35</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>当输入信号</span><span lang=EN-US>R1</span><span style='font-family:宋体;'>上升沿的绝对位置送到</span><span lang=EN-US>REG_POSB,</span><span style='font-family:宋体;'>下一次切换下降沿，轮流切换。下一次切换下降沿，轮流切换。</span></p>
+</td>  </tr> <tr> <td width=77 valign=top style='width:32.8pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>36</span></p>
+</td>  <td width=817 valign=top style='width:350.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>当输入信号</span><span lang=EN-US>R1</span><span style='font-family:宋体;'>下降沿的绝对位置送到</span><span lang=EN-US>REG_POSB</span><span style='font-family:宋体;'>，下一次切换上升沿，轮流切换。</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal style='margin-left:42.0pt; text-indent:-21.0pt;'></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>有锁存</span><span lang=EN-US style='color:black; '>IN</span><span style='font-family:宋体; color:black; '>口。</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>以下例程基于</span><span lang=EN-US style='color:black; '>ZMC432</span><span style='font-family:宋体;color:black; '>控制器测试。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例一</span><span lang=EN-US style='color:black; '>&nbsp; </span><span style='font-family:宋体;color:black; '>锁存脉冲轴</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black;'>的输入信号</span><span lang=EN-US style='color:black; '>R0</span><span style='font-family:宋体;color:black;'>上跳沿时的位置，并打印。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REG_INPUTS=0&nbsp; '</span><span style='font-family:宋体;color:black; '>将</span><span lang=EN-US style='color:black;'>R0-R3</span><span style='font-family:宋体;color:black; '>都对应输入口</span><span lang=EN-US style='color:black; '>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>脉冲轴</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REGIST(3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>选择</span><span lang=EN-US style='color:black;'>R0</span><span style='font-family:宋体;color:black; '>锁存模式</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT UNTIL MARK&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>等待锁存触发</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>PRINT REG_POS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>打印锁存位置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例二</span><span lang=EN-US style='color:black; '>&nbsp; </span><span style='font-family:宋体;color:black; '>锁存编码器轴</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black;'>的输入信号</span><span lang=EN-US style='color:black; '>R1</span><span style='font-family:宋体;color:black;'>上跳沿时的位置，并打印。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REG_INPUTS=0&nbsp; '</span><span style='font-family:宋体;color:black; '>将</span><span lang=EN-US style='color:black;'>R0-R3</span><span style='font-family:宋体;color:black; '>都对应输入口</span><span lang=EN-US style='color:black; '>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>编码器轴</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REGIST(14)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>选择</span><span lang=EN-US style='color:black;'>R1</span><span style='font-family:宋体;color:black; '>锁存模式</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT UNTIL MARKB&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>等待锁存触发</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>PRINT REG_POSB&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>打印锁存位置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例三</span><span style='color:black;'> &nbsp;</span><span style='font-family:宋体;color:black; '>锁存总线轴</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black;'>的输入信号</span><span lang=EN-US style='color:black; '>R2/R3</span><span style='font-family:宋体;color:black; '>边沿时的位置，并打印。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REG_INPUTS = $1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>映射锁存通道</span><span lang=EN-US style='color:black; '>R3-R0 </span><span style='font-family:宋体;color:black; '>对应到输入口</span><span lang=EN-US style='color:black; '>1,0,0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REGIST(imode)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>IF imode = 18 OR imode = 19 THEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>通道</span><span lang=EN-US style='color:black;'>R2</span><span style='font-family:宋体;color:black; '>锁存</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT UNTIL MARKC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>探针</span><span lang=EN-US style='color:black;'>1 </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;color:black; '>模式</span><span lang=EN-US style='color:black;'>&quot;,Imode ,&quot;</span><span style='font-family:宋体;color:black; '>锁存位置</span><span lang=EN-US style='color:black;'> REG_POSC&quot;,REG_POSC</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ELSEIF imode = 20 OR imode = 21 THEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>通道</span><span lang=EN-US style='color:black;'>R3</span><span style='font-family:宋体;color:black; '>锁存</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT UNTIL MARKD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>等待锁存触发</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;color:black; '>模式</span><span lang=EN-US style='color:black;'>&quot;,Imode ,&quot;</span><span style='font-family:宋体;color:black; '>锁存位置</span><span lang=EN-US style='color:black;'> REG_POSD&quot;,REG_POSD</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例四</span><span lang=EN-US style='color:black; '>&nbsp; PC</span><span style='font-family:宋体;color:black; '>交互位置锁存，一般用于运动抓拍，通过锁存的位置得知抓拍时的实际位置。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>GLOBAL g_start</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>GLOBAL g_posx, g_posy</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WHILE 1</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>WAIT UNTIL g_start=1&nbsp; '</span><span style='font-family:宋体;color:black; '>等待</span><span lang=EN-US style='color:black;'>PC</span><span style='font-family:宋体;color:black; '>发出启动</span></p>
+<p class=MsoNormal style='text-indent:21.1pt; layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>REGIST</span></b><span lang=EN-US style='color:black; '>(4) AXIS(0)&nbsp; '</span><span style='font-family:宋体;color:black;'>输入</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black;'>锁存，</span><span lang=EN-US style='color:black; '>24V</span><span style='font-family:宋体;color:black;'>变</span><span lang=EN-US style='color:black; '>0V</span><span style='font-family:宋体;color:black;'>的时刻</span></p>
+<p class=MsoNormal style='text-indent:21.1pt; layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>REGIST</span></b><span lang=EN-US style='color:black; '>(4) AXIS(1)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>WAIT UNTIL MARK(0) AND MARK(1)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>g_start=0</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>g_posx=REG_POS(0)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>g_posy=REG_POS(1)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>PRINT g_posx, g_posy</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WEND</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; '><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例五</span><span lang=EN-US style='color:black; '>&nbsp; 100+mode</span><span style='font-family:宋体;color:black; '>连续锁存</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DIM num</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>num=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(6)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=6</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>REGIST</span></b><span lang=EN-US style='color:black; '>(100+4,5,100) &nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;color:black; '>自动循环，不需要再写入到</span><span lang=EN-US style='color:black; '>while</span><span style='font-family:宋体;color:black; '>循环中，</span><span lang=EN-US style='color:black;'>table(5)</span><span style='font-family:宋体;color:black; '>保存锁存次数，</span><span lang=EN-US style='color:black; '>table(6)-table(105)</span><span style='font-family:宋体;color:black; '>存储每次锁存的数据超过</span><span lang=EN-US style='color:black; '>99</span><span style='font-family:宋体;color:black;'>次后，</span><span lang=EN-US style='color:black; '>table(5)</span><span style='font-family:宋体;color:black; '>清</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black; '>，重新从</span><span lang=EN-US style='color:black;'>table(6)</span><span style='font-family:宋体;color:black; '>记录数据</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WHILE 1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; local test</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test=table(5)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT UNTIL table(5)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?reg_pos,TABLE(num),TABLE() '</span><span style='font-family:宋体;color:black; '>打印</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp; IF num=100 THEN</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; num=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp; ELSE</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; num=num+1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp; ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WA 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>延时</span><span lang=EN-US style='color:black;'>1ms</span><span style='font-family:宋体;color:black; '>，防抖</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WEND</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例六</span> <span style='font-family:宋体;color:black; '>总线驱动器锁存，需要配置</span><span lang=EN-US style='color:black; '>DRIVE_PROFILE</span><span style='font-family:宋体;color:black; '>支持带探针的模式</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(iaxis)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>选择需要锁存位置的轴号</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REGIST(imode)&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>锁存模式</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>IF imode = 3 OR imode = 4 THEN</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT UNTIL MARK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>探针</span><span lang=EN-US style='color:black;'>1 </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style=' font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black;'>&quot;,imode ,&quot;</span><span style='font-family:宋体; color:black; '>锁存位置</span><span lang=EN-US style='color:black;'> REG_POS&quot;,REG_POS</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DELAY(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ELSEIF imode = 14 OR imode = 15 THEN</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT UNTIL MARKB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>等待锁存触发</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style=' font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black;'>&quot;,imode ,&quot;</span><span style='font-family:宋体; color:black; '>锁存位置</span><span lang=EN-US style='color:black;'> REG_POSB&quot;,REG_POSB</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DELAY(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ELSEIF imode = 11&nbsp; THEN</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT UNTIL MARK OR MARKB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>等待锁存触发</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF MARK THEN</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style=' font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black;'>&quot;,Imode ,&quot;</span><span style='font-family:宋体; color:black; '>锁存位置</span><span lang=EN-US style='color:black;'> REG_POS&quot;,REG_POS&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT UNTIL MARKB</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style=' font-family:宋体;color:black;'>锁存位置</span><span lang=EN-US style='color:black;'> REG_POSB&quot;,REG_POSB</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ELSEIF MARKB THEN</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style=' font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black;'>&quot;,Imode ,&quot;</span><span style='font-family:宋体; color:black; '>锁存位置</span><span lang=EN-US style='color:black;'> REG_POSB&quot;,REG_POSB</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT UNTIL MARK</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&quot;</span><span style=' font-family:宋体;color:black;'>锁存位置</span><span lang=EN-US style='color:black;'> REG_POSB&quot;,REG_POS</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DELAY(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ENDIF</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="341.html#_MARK_--_锁存触发_1"><span lang=EN-US>MARK</span></a><span style='font-family:宋体;color:black; '>，</span><a href="342.html#_MARKB"><span lang=EN-US>MARKB</span></a><span style='font-family:宋体;color:black;'>，</span><a href="347.html#_REG_POS_--_锁存位置_1"><span lang=EN-US>REG_POS</span></a><span style='font-family:宋体;color:black; '>，</span><a href="348.html#_REG_POSB"><span lang=EN-US>REG_POSB</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="339.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="337.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

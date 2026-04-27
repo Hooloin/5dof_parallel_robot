@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVER_C/MOVER_CABS -- 关节轴平面圆弧</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="88.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="86.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_MOVER_C_/_MOVER_CABS"></a><a name="_MOVER_C_/_MOVER_CABS--关节轴平面圆弧"></a><a name="_Toc134697882"></a><a name="_Toc24522"></a><a name="_Toc29113"></a><a name="_Toc11249"></a><a name="_Toc29350"></a><a name="_MOVER_C/MOVER_CABS_--_关节轴平面圆弧"></a><span lang=FR>MOVER_C/MOVER_CABS</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>关节轴平面圆弧</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family: 宋体; '>运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>关节轴直接走圆弧插补运动。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red;'>此指令正解模式下使用。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>BASE</span><span style='font-family: 宋体; color:red;'>虚拟的</span><span lang=EN-US style='color:red; '>XYZ</span><span style='font-family:宋体;color:red; '>轴</span><span lang=EN-US style='color:red;'>, </span><span style='font-family:宋体; color:red;'>否则无法确定</span><span lang=EN-US style='color:red;'>XYZ</span><span style='font-family:宋体;color:red;'>，此时的参数也是虚拟轴的距离。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>MOVER </span><span style='font-family:宋体; color:red;'>相对指令也要</span><span lang=EN-US style='color:red;'>WAIT IDLE</span><span style='font-family:宋体;color:red;'>等待停止完成。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='tab-stops:273.25pt;'><span lang=EN-US style='color:black;'>MOVER_C/MOVER_CABS</span><span style=' font-family:宋体;color:black;'>（</span><span lang=EN-US style='color:black;'>end1,end2,centre1,centre2,mode,[dis1,</span><span style='font-family:宋体; color:black;'>…</span><span lang=EN-US style='color:black;'>,disn]</span><span style='font-family:宋体; color:black;'>）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='color:black;'>end1</span><span style='font-family:宋体; color:black;'>：第</span><span lang=FR style='color:black; '>1</span><span style=' font-family:宋体;color:black;'>个轴运动距离参数</span><span lang=FR style='color:black; '>1</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='color:black;'>end2</span><span style='font-family:宋体; color:black;'>：第</span><span lang=FR style='color:black; '>2</span><span style=' font-family:宋体;color:black;'>个轴运动距离参数</span><span lang=FR style='color:black; '>1</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='color:black;'>centre1</span><span style='font-family:宋体; color:black;'>：第</span><span lang=FR style='color:black; '>1</span><span style=' font-family:宋体;color:black;'>个轴运动距离参数</span><span lang=FR style='color:black; '>2</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='color:black;'>centre2</span><span style='font-family:宋体; color:black;'>：第</span><span lang=FR style='color:black; '>2</span><span style=' font-family:宋体;color:black;'>个轴运动距离参数</span><span lang=FR style='color:black; '>2</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='color:black;'>mode</span><span style='font-family:宋体; color:black;'>：</span><span style='font-family:宋体; color:black;'>模式</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=711 style='width:304.8pt;margin-left:21.5pt;border-collapse:collapse;'> <tr> <td width=66 valign=top style='width:1.0cm;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>值</span></p>
+</td> <td width=645 valign=top style='width:276.45pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>描述</span></p>
+</td> </tr> <tr> <td width=66 valign=top style='width:1.0cm;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=645 valign=top style='width:276.45pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>当前点，中间点，终点三点定圆弧。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>距离参数</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>为终点距离，距离参数</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>为中间点距离。</span></p>
+</td> </tr> <tr> <td width=66 valign=top style='width:1.0cm;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>1</span></p>
+</td> <td width=645 valign=top style='width:276.45pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>当前点，圆心，终点定圆弧。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>走最短的圆弧。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>距离参数</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>为终点距离，距离参数</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>为圆心的距离。</span></p>
+</td> </tr> <tr> <td width=66 valign=top style='width:1.0cm;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>2</span></p>
+</td> <td width=645 valign=top style='width:276.45pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>当前点，中间点，终点三点定圆。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>距离参数</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>为终点距离，距离参数</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>为中间点距离。</span></p>
+</td> </tr> <tr> <td width=66 valign=top style='width:1.0cm;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>3</span></p>
+</td> <td width=645 valign=top style='width:276.45pt;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>当前点，圆心，终点定圆。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>先走最短的圆弧，再继续走完整圆。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>距离参数</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>为终点距离，距离参数</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>为圆心的距离。</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR>dis1- disn</span><span style='font-family:宋体;'>：螺旋轴的距离</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体;color:black;'>系列</span><span lang=EN-US style='color:black;'> 20170511</span><span style='font-family:宋体; color:black; '>以上固件支持</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例程</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>L1 = 500</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>L2 = 500</span></p>
+<p class=MsoNormal style='margin-left:189.0pt;text-indent:-189.0pt; '><span lang=FR style='color:black;'>TABLE(0,L1,L2, 100*360, 100*360, 360 ) '</span><span style='font-family:宋体;color:black;'>参数存储在</span><span lang=FR style='color:black; '>TABLE0</span><span style=' font-family:宋体;color:black;'>开始的位置，电机一圈</span><span lang=FR style='color:black; '>360</span><span style=' font-family:宋体;color:black;'>个脉冲</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>BASE(6,7)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>CONNREFRAME(1,0,0,1)&nbsp; '</span><span style='font-family:宋体; color:black; '>第</span><span lang=FR style=' color:black;'>6/7</span><span style='font-family:宋体; color:black; '>轴作为虚拟的</span><span lang=FR style='color:black;'>XY</span><span style='font-family:宋体; color:black; '>轴，启动连接</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>WAIT LOADED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>等待运动加载</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>BASE(6,7)&nbsp; '</span><span lang=FR>REFRAME</span><span style='font-family:宋体;'>直接</span><span lang=FR>MOVER</span><span style='font-family:宋体;'>运动虚拟轴</span><span style='font-family: 宋体; '>，</span><span style='font-family: 宋体; '>会自动转换到关节轴上</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVER_LABS(500)&nbsp; </span></p>
+<p class=MsoNormal><b><span lang=EN-US>MOVER_C</span></b><span lang=EN-US>(500,0, 250,250, 0)</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="86.html#_MOVER_L/MOVER_LABS--关节轴直线插补">MOVER_L</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="88.html#_MOVER_C3/MOVER_C3ABS_--_关节轴空间圆弧"><span style='color:#9999CC; '>MOVER_C3</span></a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="88.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="86.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

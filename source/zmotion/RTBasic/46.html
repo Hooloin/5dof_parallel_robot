@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVE_OP2 -- 缓冲输出2</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="47.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="45.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_MOVE_OP2"></a><a name="_Toc134697839"></a><a name="_Toc29335"></a><a name="_Toc24022"></a><a name="_Toc28701"></a><a name="_Toc31182"></a><a name="_Toc349071399"><span lang=EN-US>MOVE_OP2</span></a><span lang=EN-US> -- </span><span style='font-family:宋体;'>缓冲输出</span><span lang=EN-US>2</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>特殊运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>BASE</span></b><b><span style='font-family:宋体;color:black;'>轴运动缓冲加入一个输出口操作，指定时间后输出状态翻转。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>这个指令</span><span lang=EN-US style='color:black;'>LOAD</span><span style='font-family: 宋体; color:black;'>执行时不做任何运动，只操作输出口。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>单个轴同一时间只支持一个脉冲输出，第二个</span><span lang=EN-US style='color:red;'>MOVE_OP2</span><span style='font-family:宋体; color:red;'>指令会自动关闭前面指令的脉冲。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP2(ionum,state,offtimems)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>ionum</span><span style='font-family:宋体;color:black;'>：输出编号，从</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体; color:black;'>开始</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>state</span><span style='font-family: 宋体; color:black;'>：</span><span style='font-family:宋体;color:black;'>输出状态</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>offtimems</span><span style='font-family:宋体; color:black;'>：多少</span><span lang=EN-US style='color:black;'>ms</span><span style='font-family:宋体; color:black;'>时间后翻转，以产生脉冲输出的效果</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><a name="OLE_LINK131"><span lang=EN-US style='color:black;'>BASE(0)</span></a></p>
+<p class=MsoNormal style='tab-stops:208.05pt;'><span lang=EN-US style='color:black; '>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OP(0,OFF)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>关闭</span><span lang=EN-US style='color:black; '>OUT0</span><span style='font-family:宋体;color:black;'>口</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体;color:black; '>自动触发示波器</span></p>
+<p class=MsoNormal><a name="OLE_LINK84"><span lang=EN-US style='color:black; '>MOVE(500)</span></a></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVE_OP2</span></b> <span lang=EN-US style='color:black; '>(0,ON,1000)&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>等待上条运动完成，输出口</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>输出一个</span><span lang=EN-US style='color:black;'>1s</span><span style='font-family:宋体;color:black;'>的脉冲，脉冲时间不会阻碍下一条运动执行</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(-500)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>轨迹曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OP(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=786 height=385 src="doc.files/image179.jpg" ></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="45.html#_MOVE_OP_--_缓冲输出_1"><span style='color:#9999CC;'>MOVE_OP</span></a></span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US><a href="397.html#_OP">OP</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="47.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="45.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

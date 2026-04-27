@@ -1,0 +1,185 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZCUSTOM -- 运动参数计算</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="265.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="263.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698045"></a><a name="_Toc13967"></a><a name="_Toc32485"></a><a name="_Toc31371"></a><a name="_Toc6364"><span lang=EN-US>ZCUSTOM -- </span></a><span style='font-family:宋体;'>运动参数计算</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><a name="_Toc210"></a><a name="_Toc29106"><b><span style='font-family:宋体;color:black;'>类型</span></b></a></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>数学函数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>计算各种运动指令中的参数，详细功能请看下方语法功能描述。</span></b></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>功能</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>：</span><span style='font-family:宋体;'>计算空间圆弧或空间直线上一定距离后的点的位置。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>Table</span><span style='font-family:宋体;color:red;'>表参数按三点画圆模式填写其他两个点参数。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red;'>填写相对坐标，返回也是相对的位置。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>语法：</span><span lang=EN-US>ZCUSTOM(2,tableend,tablemid,tableout,mode,vectdis)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableend</span><span style='font-family:宋体;'>：存储圆弧终点的</span><span lang=EN-US>table</span><span style='font-family:宋体;'>索引（</span><span lang=EN-US>3</span><span style='font-family:宋体;'>维坐标）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tablemid</span><span style='font-family:宋体;'>：存储圆弧中间点的</span><span lang=EN-US>table</span><span style='font-family:宋体;'>索引</span><span lang=EN-US>, </span><span style='font-family:宋体;'>与当前点一起构成圆弧的</span><span lang=EN-US>3</span><span style='font-family:宋体;'>个点（</span><span lang=EN-US>3</span><span style='font-family:宋体;'>维坐标）</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableout</span><span style='font-family:宋体;'>；输出计算数据的</span><span lang=EN-US>table</span><span style='font-family:宋体;'>索引</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:87.55pt;'><span lang=EN-US>mode</span><span style='font-family:宋体;'>：模式</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=849 style='width:363.75pt;margin-left:19.4pt;border-collapse:collapse; border:none; '> <tr> <td width=88 valign=top style='width:37.9pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>值</span></p>
+</td>  <td width=760 valign=top style='width:325.85pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>描述</span></p>
+</td>  </tr> <tr> <td width=88 valign=top style='width:37.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>1</span></p>
+</td>  <td width=760 valign=top style='width:325.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>相对起点的空间圆弧弧长</span></p>
+</td>  </tr> <tr> <td width=88 valign=top style='width:37.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>2</span></p>
+</td>  <td width=760 valign=top style='width:325.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>相对终点的空间圆弧弧长</span></p>
+</td>  </tr> <tr> <td width=88 valign=top style='width:37.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>3</span></p>
+</td>  <td width=760 valign=top style='width:325.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>相对起点的空间直线距离，此时</span><span lang=EN-US>tablemid</span><span style='font-family:宋体;'>不起作用</span></p>
+</td>  </tr> <tr> <td width=88 valign=top style='width:37.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>4</span></p>
+</td>  <td width=760 valign=top style='width:325.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>相对终点的空间直线距离，此时</span><span lang=EN-US>tablemid</span><span style='font-family:宋体;'>不起作用</span></p>
+</td>  </tr> <tr> <td width=88 valign=top style='width:37.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>5</span></p>
+</td>  <td width=760 valign=top style='width:325.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>相对计算空间圆弧的圆心，此时</span><span lang=EN-US>vectdis</span><span style='font-family:宋体;'>无效。此时</span><span lang=EN-US>tableout</span><span style='font-family:宋体;'>依次输出</span><span lang=EN-US>xyz</span><span style='font-family:宋体;'>圆心，弧度范围，弧长</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>vectdis</span><span style='font-family:宋体;'>：要计算的点相对</span><span lang=EN-US>mode</span><span style='font-family:宋体;'>的距离</span><span lang=EN-US>, </span><span style='font-family:宋体;'>负数表示往前。圆弧模式时，正数表示顺时针，负数表示逆时针</span></p>
+<p class=MsoNormal><b><span lang=EN-US>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>功能</span><span lang=EN-US style='color:black;'>6</span><span style='font-family:宋体;color:black;'>：计算空间圆弧的起点和终点的切线角度方向，弧度单位</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red;'>填写相对坐标，返回也是相对的位置。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>语法：</span><span lang=EN-US>ZCUSTOM(6,tableend,tablemid,tableout)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableend</span><span style='font-family:宋体;'>：存储圆弧终点的</span><span lang=EN-US>table</span><span style='font-family:宋体;'>索引</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tablemid</span><span style='font-family:宋体;'>：存储圆弧中间点的</span><span lang=EN-US>table</span><span style='font-family:宋体;'>索引</span><span lang=EN-US>, </span><span style='font-family:宋体;'>与当前点一起构成圆弧的</span><span lang=EN-US>3</span><span style='font-family:宋体;'>个点</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableout</span><span style='font-family:宋体;'>：输出计算数据的</span><span lang=EN-US>table</span><span style='font-family:宋体;'>索引，依次输出</span><span lang=EN-US>:</span><span style='font-family:宋体;'>起点</span><span lang=EN-US>xy</span><span style='font-family:宋体;'>方向，起点</span><span lang=EN-US>Z</span><span style='font-family:宋体;'>方向，终点</span><span lang=EN-US>xy</span><span style='font-family:宋体;'>方向，终点</span><span lang=EN-US>Z</span><span style='font-family:宋体;'>方向，角度弧度单位</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>功能</span><span lang=EN-US style='color:black;'>7</span><span style='font-family:宋体;color:black;'>：输入速度比例，计算</span><span lang=EN-US style='color:black;'>MOVESLINK</span><span style='font-family:宋体;color:black;'>的从轴位置，主轴位置。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>语法：</span><span lang=EN-US style='color:black;'>ZCUSTOM(7, distance, link dist, start sp, end sp, </span><span style='font-family:宋体;color:black; '>速度比例</span><span lang=EN-US style='color:black;'>, tableout)</span> </p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>distance</span><span style='font-family:宋体;color:black; '>：从连接开始到结束，跟随轴移动的距离，采用</span><span lang=EN-US style='color:black;'>units</span><span style='font-family:宋体;color:black;'>单位</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>link dist</span><span style='font-family:宋体;color:black; '>：参考轴在连接的整个过程中移动的绝对距离，采用</span><span lang=EN-US style='color:black;'>units</span><span style='font-family:宋体;color:black;'>单位</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>star sp</span><span style='font-family:宋体;color:black; '>：启动时跟随轴和参考轴的速度比例，</span><span lang=EN-US style='color:black;'>units/units</span><span style='font-family:宋体;color:black;'>单位，负数表示跟随轴负向运动</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>end sp</span><span style='font-family:宋体;color:black; '>：结束时跟随轴和参考轴的速度比例，</span><span lang=EN-US style='color:black;'>units/units</span><span style='font-family:宋体;color:black;'>单位，负数表示跟随轴负向运动</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span style='font-family:宋体;color:black; '>速度比例：需要计算的点的速度比例，与参数里面的起始结束点比例意义相同</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableout</span><span style='font-family:宋体;'>：正向找的从轴距离，正向找的主轴距离，从反向找的从轴距离，反向找主轴距离，占用</span><span lang=EN-US>4</span><span style='font-family:宋体;'>个</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>（一段曲线，速度比例可能会有多个解）</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>功能</span><span lang=EN-US style='color:black;'>8</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US style='color:black;'>MOVESLINK</span><span style='font-family:宋体;color:black;'>输入从轴位置，反算主轴的位置</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>语法：</span><span lang=EN-US>ZCUSTOM(8,distance,link dist,start sp,end sp,distancemoved, tableout)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>distance</span><span style='font-family:宋体;'>：从连接开始到结束，跟随轴移动的距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>link dist</span><span style='font-family:宋体;'>：从连接开始到结束，主轴移动的绝对距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>start sp</span><span style='font-family:宋体;'>：起始脉冲速度比例</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>end sp</span><span style='font-family:宋体;'>：结束脉冲速度比例</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>distancemoved</span><span style='font-family:宋体;'>：从轴已经运动距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableout</span><span style='font-family:宋体;'>：输出</span><span lang=EN-US>table</span><span style='font-family:宋体;'>索引，输出对应主轴的位置，如多个解返回第一个</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>功能</span><span lang=EN-US style='color:black;'>9</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US>FLEXLINK</span><span style='font-family:宋体;color:black;'>输入从轴位置，反算主轴的位置</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>语法：</span><span lang=EN-US>ZCUSTOM (9, base_dist, excite_dist, link_dist, base_in, base_out, excite_acc, excite_dec, distancemoved, tableout)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>base_dist</span><span style='font-family:宋体;'>：跟随轴匀速运动距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>excite_dist</span><span style='font-family:宋体;'>：跟随轴激励运动距离，这个与</span><span lang=EN-US>base_dist </span><span style='font-family:宋体;'>相反的时候无法反算</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>link_dist</span><span style='font-family:宋体;'>：整个指令过程，跟随轴运动完成，主轴移动的距离</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>base_in</span><span style='font-family:宋体;'>：激励开始前，跟随轴运动距离占</span><span lang=EN-US>base_dist</span><span style='font-family:宋体;'>的百分比</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>base_out</span><span style='font-family:宋体;'>：激励完成后，跟随轴剩余运动距离占</span><span lang=EN-US>base_dist</span><span style='font-family:宋体;'>的百分比，两者相加不要超过</span><span lang=EN-US>100%</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>excite_acc</span><span style='font-family:宋体;'>：激励过程中，跟随轴加速阶段运动距离占</span><span lang=EN-US>excite_dist</span><span style='font-family:宋体;'>的百分比，</span><span lang=EN-US>excite_dist</span><span style='font-family:宋体;'>为负值时，为减速阶段</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>excite_dec</span><span style='font-family:宋体;'>：激励过程中，跟随轴减速阶段运动距离占</span><span lang=EN-US>excite_dist</span><span style='font-family:宋体;'>的百分比，</span><span lang=EN-US>excite_dist</span><span style='font-family:宋体;'>为负值时，为加速阶段</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>distancemoved</span><span style='font-family:宋体;'>：从轴已经运动脉冲数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableout</span><span style='font-family:宋体;'>：输出</span><span lang=EN-US>Table</span><span style='font-family:宋体;'>索引，输出对应主轴的位置，如多个解返回第一个</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>功能</span><span lang=EN-US>10</span><span style='font-family:宋体;'>：从工件坐标上的三点在原来坐标系上的坐标来计算</span><span lang=EN-US>FRAME_ROTATE</span><span style='font-family:宋体;'>旋转转换的参数，每个点要存储</span><span lang=EN-US>xyz</span><span style='font-family:宋体;'>的三个方向的坐标。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>语法：</span><span lang=EN-US>ZCUSTOM (10, dtzero, dtx, dty, dtout)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>dtzero</span><span style='font-family:宋体;'>：工件零点在原来坐标系上的位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>dtx</span><span style='font-family:宋体;'>：工件坐标系</span><span lang=EN-US>X</span><span style='font-family:宋体;'>轴上的点在原来坐标系上的位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>dty</span><span style='font-family:宋体;'>：工件坐标系</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>轴上的点在原来坐标系上的位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>dtout</span><span style='font-family:宋体;'>：输出</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>索引，分别存储：</span><span lang=EN-US>X</span><span style='font-family:宋体;'>，</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>，</span><span lang=EN-US>Z</span><span style='font-family:宋体;'>，</span><span lang=EN-US>RX</span><span style='font-family:宋体;'>，</span><span lang=EN-US>RY</span><span style='font-family:宋体;'>，</span><span lang=EN-US>RZ</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>功能</span><span lang=EN-US>12</span><span style='font-family:宋体;'>：根据圆弧的终点和半径来计算圆心。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>语法：</span><span lang=EN-US>ZCUSTOM (12, xpos, ypos, radius, anticlock, dtout)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>xpos</span><span style='font-family:宋体;'>：</span><span lang=EN-US>X</span><span style='font-family:宋体;'>方向的相对坐标</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ypos</span><span style='font-family:宋体;'>：</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>方向的相对坐标</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>radius</span><span style='font-family:宋体;'>：半径，负数表示圆弧扇形角度大于</span><span lang=EN-US>180</span><span style='font-family:宋体;'>度，正数表示小于</span><span lang=EN-US>180</span><span style='font-family:宋体;'>度</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>anticlock</span><span style='font-family:宋体;'>：</span><span lang=EN-US>0</span><span style='font-family:宋体;'>—顺时针，</span><span lang=EN-US>1</span><span style='font-family:宋体;'>—逆时针</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>dtout</span><span style='font-family:宋体;'>：输出</span><span lang=EN-US>xy</span><span style='font-family:宋体;'>圆心相对距离，占用两个位置</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>注意：</span><span lang=EN-US>dtzero,&nbsp;dtx,&nbsp;dty,&nbsp;dtout</span><span style='font-family:宋体;'>是</span><span lang=EN-US>table</span><span style='font-family:宋体;'>索引，只用写索引不需要</span><span lang=EN-US>table</span><span style='font-family:宋体;'>也写入，</span><span lang=EN-US>table</span><span style='font-family:宋体;'>存的是三个方向的的</span><span lang=EN-US>x.y,z</span><span style='font-family:宋体;'>，用于机械手算法时，要填入的是虚拟轴的坐标</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black; '>例一</span> <span style='font-family:宋体; color:black; '>功能</span><span lang=EN-US style='color:black;'>2</span><span style=' font-family:宋体;color:black;'>使用</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>&nbsp; <img border=0 width=723 height=624 src="doc.files/image312.png" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>TABLE(0,50,-50,0)&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体; color:black;'>设置终点坐标，相对位置</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>TABLE(3,50,50,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体; color:black;'>设置中间点坐标，相对位置</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>，相对起点</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ZCUSTOM(2,0,3,10,1,78.54)&nbsp; </span></b><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>相对起点位置顺时针弧长为</span><span lang=EN-US style='color:black;'>78.54</span><span style='font-family:宋体;color:black;'>的圆上点</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>?TABLE(10),TABLE(11),TABLE(12)&nbsp; '</span><span style='font-family:宋体;color:black;'>输出相对坐标为</span><span lang=EN-US style='color:black;'> 0,0,0</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ZCUSTOM(2,0,3,10,1,-78.54)&nbsp; </span></b><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>相对起点位置逆时针弧长为</span><span lang=EN-US style='color:black;'>78.54</span><span style='font-family:宋体;color:black;'>的圆上点</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>?TABLE(10),TABLE(11),TABLE(12)&nbsp; '</span><span style='font-family:宋体;color:black;'>输出相对坐标为</span><span lang=EN-US style='color:black;'> 50,-50,0</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>，相对终点</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ZCUSTOM(2,0,3,10,2,78.54)&nbsp; </span></b><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>相对终点位置顺时针弧长为</span><span lang=EN-US style='color:black;'>78.54</span><span style='font-family:宋体;color:black;'>的圆上点</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>?TABLE(10),TABLE(11),TABLE(12)&nbsp; '</span><span style='font-family:宋体;color:black;'>输出坐标为</span><span lang=EN-US style='color:black;'> 50,-50,0</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ZCUSTOM(2,0,3,10,2,-78.54)&nbsp; </span></b><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>相对终点位置逆时针弧长为</span><span lang=EN-US style='color:black;'>78.54</span><span style='font-family:宋体;color:black;'>的圆上点</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>?TABLE(10),TABLE(11),TABLE(12)&nbsp; '</span><span style='font-family:宋体;color:black;'>输出坐标为</span><span lang=EN-US style='color:black;'> 100,0,0</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>模式</span><span lang=EN-US style='color:black;'>5</span><span style='font-family:宋体;color:black;'>，计算此时三点画圆的圆心、弧度、弧长</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ZCUSTOM(2,0,3,10,5,0)&nbsp; </span></b><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>此时距离参数不起作用</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>?TABLE(10),TABLE(11),TABLE(12)&nbsp; '</span><span style='font-family:宋体;color:black;'>输出坐标为</span><span lang=EN-US style='color:black;'> 50,0,0</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>?TABLE(13),TABLE(14)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>输出弧度</span><span lang=EN-US style='color:black;'>4.712</span><span style='font-family:宋体;color:black;'>，弧长</span><span lang=EN-US style='color:black;'>235.62</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体;'>例二</span> <span style='font-family:宋体; '>功能</span><span lang=EN-US>6</span><span style='font-family:宋体;'>，计算圆弧起点和终点的切线弧度</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US><img border=0 width=723 height=624 src="doc.files/image314.png" ></span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>TABLE(0,50,-50,0)&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体; color:black;'>设置终点坐标，相对位置</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>TABLE(3,50,50,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体; color:black;'>设置中间点坐标，相对位置</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ZCUSTOM(6,0,3,10)&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>计算当前点和终点切线的弧度</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>?TABLE(10),TABLE(11)&nbsp; '</span><span style='font-family:宋体;color:black;'>输出当前点</span><span lang=EN-US style='color:black;'>1.571,0&nbsp; (1.571=90*PI/180)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>?<span style='color:black'>TABLE(12),TABLE(13)&nbsp; '</span></span><span style='font-family:宋体;color:black;'>输出终点</span><span lang=EN-US style='color:black;'>-3.142,0&nbsp; (-3.142=-180*PI/180)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black; '>例三</span> <span style='font-family:宋体; color:black; '>功能</span><span lang=EN-US style='color:black;'>8</span><span style=' font-family:宋体;color:black;'>，反算</span><span lang=EN-US style='color:black;'>MOVESLINK</span><span style='font-family:宋体; color:black; '>主轴位置</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>BASE(0,1)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>DPOS=0,0</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>UNITS=100,100</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>SPEED=100,100</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>ACCEL=1000,1000</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>TRIGGER</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>MOVESLINK(50,100,0,1,1)&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体;color:black;'>建立</span><span lang=EN-US style='color:black;'>MOVESLINK</span><span style='font-family:宋体;color:black;'>连接</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>MOVEABS(100)&nbsp; AXIS(1)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><b><span lang=EN-US>ZCUSTOM(8,50,100,0,1,25,10) </span></b><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>根据建立连接的参数，计算从轴运动</span><span lang=EN-US style='color:black;'>25</span><span style='font-family:宋体;color:black;'>时主轴的位置</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>?TABLE(10)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>输出主轴位置</span><span lang=EN-US style='color:black;'> 73.801</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体;color:black;'>运动轨迹</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US><img border=0 width=775 height=411 src="doc.files/image316.jpg" ></span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="265.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="263.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

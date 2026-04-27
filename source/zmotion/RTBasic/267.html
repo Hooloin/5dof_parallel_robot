@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>BASE -- 轴选择/轴组选择</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="268.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="266.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_ACCEL"></a><a name="_SPEED"></a><a name="_Toc266516923"></a><a name="_UNITS"></a><a name="_BASE_--_轴选择/轴组选择"></a><a name="_Toc134698050"></a><a name="_Toc5127"></a><a name="_Toc10988"></a><a name="_Toc9209"></a><a name="_Toc20802"></a><a name="_BASE_--_轴选择/轴组选择_1"></a><span lang=EN-US>BASE -- </span><span style='font-family:宋体;'>轴选择</span><span lang=EN-US>/</span><span style='font-family:宋体;'>轴组选择</span></h3> 
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>选择要设置参数、参与运动的轴。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>缺省值依次为：</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>…</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>程序中在下一条</span><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体;color:black;'>指令被执行前，都以上一条</span><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体;color:black;'>指令选择轴。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>每个任务拥有各自独立的轴列表，会记住任务中</span><span lang=EN-US style='color:red;'>BASE</span><span style='font-family:宋体;color:red;'>选择的轴或者轴组，用于不同机台的控制。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>当插补运动的时候，第一个轴的运动参数作为插补参数。</span><span style='font-family:宋体;color:black;'>见例一。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>如果在</span><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体;color:black;'>指令中没有列出所有的轴，</span><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体;color:black;'>指令自动将剩余轴顺序排列在后面。见例二。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(axis&lt;,second axis&gt;&lt;,third axis&gt;...)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>axis</span><span style='font-family:宋体;color:black; '>：第一个轴</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>second axis</span><span style='font-family:宋体;color:black; '>：下一个轴</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span style='font-family:宋体;color:black; '>…</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>参数最多为控制器支持的轴数，参照对应控制器硬件手册。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>例一</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><a name="OLE_LINK52"><b><span lang=EN-US style='color:black;'>BASE</span></b></a><span lang=EN-US style='color:black;'>(0,1,2,3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>轴列表选择为：</span><span lang=EN-US style='color:black; '>0,1,2,3</span></p>
+<p class=MsoNormal style='margin-left:147.0pt;text-indent:-147.0pt; '><span lang=EN-US style='color:black; '>SPEED=100,10,20,30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>此时轴</span><span lang=EN-US style='color:black; '>0,1,2,3</span><span style='font-family:宋体;color:black; '>设置了对应速度，但是插补运动时，只主轴轴</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black; '>的速度</span><span lang=EN-US style='color:black; '>100</span><span style='font-family:宋体;color:black; '>起作用</span></p>
+<p class=MsoNormal style='margin-left:147.0pt;text-indent:-147.0pt; '><span lang=EN-US style='color:black; '>MOVE(100,100,100,100)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black; '>0,1,2,3</span><span style='font-family:宋体;color:black; '>联合插补运动，合成运动的速度为</span><span lang=EN-US style='color:black; '>100</span><span style='font-family:宋体;color:black; '>，各轴速度为分速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>例二</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>BASE</span></b><span lang=EN-US style='color:black;'>(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>轴列表选择为：</span><span lang=EN-US style='color:black;'>1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100,100,100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black;'>1,2,3</span><span style='font-family:宋体;color:black;'>做插补运动</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>例三</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>BASE</span></b><span lang=EN-US style='color:black;'>(0,2,5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>轴列表选择为：</span><span lang=EN-US style='color:black;'>0,2,5</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100,100,100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black;'>0,2,5</span><span style='font-family:宋体;color:black;'>做插补运动</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="268.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="266.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

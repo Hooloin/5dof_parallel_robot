@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZG_AXIS -- 获取/设置轴号</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1327.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1325.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;margin-left: 0cm'><a name="_Toc85612100"></a><a name="_Toc80713330"></a><a name="_ZG_AXIS_--_获取/设置轴号"></a><span lang=EN-US>ZG_AXIS -- </span><span style='font-family:宋体;'>获取</span><span lang=EN-US>/</span><span style='font-family:宋体;'>设置轴号</span></h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;background:#BDD6EE; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>类型</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>参数配置</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>描述</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>获取指定通道的</span><span lang=EN-US>XYZ…</span><span style='font-family:宋体; '>轴对应的控制器轴号</span><span lang=EN-US>/</span><span style='font-family:宋体;'>轴向</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>语法</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>var = ZG_AXIS (axisName[,ifAixsDir])&nbsp; </span><span style='font-family:宋体; '>’获取单个轴号</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; axisName</span><span style='font-family:宋体;'>：轴名称，字符串，如</span><span lang=EN-US>”X”,”Y”,”Z”, </span><span style='font-family:宋体;'>其中</span><span lang=EN-US>“S”</span><span style='font-family:宋体;'>为主轴</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:10.5pt;margin-bottom: 4.65pt;margin-left:21.0pt;'><span lang=EN-US>ifAixsDir</span><span style='font-family:宋体;'>：</span><span lang=EN-US>0~1</span><span style='font-family:宋体; '>，是否为轴向，缺省</span><span lang=EN-US>0</span><span style='font-family:宋体;'>，</span><span lang=EN-US>S</span><span style='font-family: 宋体;'>轴不起作用</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:10.5pt;margin-bottom: 4.65pt;margin-left:31.5pt;'><span style='font-family:宋体;color:red'>当</span><span lang=EN-US style='color:red'>=1</span><span style='font-family:宋体;color:red'>时，返回参数配置坐标轴对应的轴向，而非实际控制器轴号</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>返回轴号</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>ZG_AXIS( axis1[,axis2, axis3…] )&nbsp; </span><span style='font-family: 宋体;'>’设置轴号参数</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; axis</span><span style='font-family:宋体;'>：轴号，按</span><span lang=EN-US>XYZABC</span><span style='font-family:宋体;'>的顺序编排</span> </p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:10.5pt;margin-bottom: 4.65pt;margin-left:31.5pt;'><span style='font-family:宋体;color:red'>设置时，将强制控制器轴号</span><span lang=EN-US style='color:red'>=</span><span style='font-family:宋体;color:red'>轴向，因此当设置轴号≥支持轴向数量时，设置失败，如控制器支持</span><span lang=EN-US style='color:red'>32</span><span style='font-family:宋体;color:red'>个轴，</span><span lang=EN-US style='color:red'>ZNC</span><span style='font-family:宋体; color:red'>平台仅支持</span><span lang=EN-US style='color:red'>16</span><span style='font-family:宋体;color:red'>个轴向，当</span><span lang=EN-US style='color:red'>ZG_AXIS(16,17,18)</span><span style='font-family:宋体;color:red'>时，设置失败，这种情况请参考参数表使用</span><span lang=EN-US style='color:red'>ZG_PARA</span><span style='font-family:宋体;color:red'>指令进行设置</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;color:red'>设置轴号时，请注意不要与其他通道的轴号有冲突，发生冲突不会警告，而是将其他通道轴号的轴名称覆盖</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>适用控制器</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr> <td width="18%" style='width:18.74%;border:solid windowtext 1.0pt;border-top: none; background:#BDD6EE;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='margin-top:4.65pt;margin-right:0cm; margin-bottom:4.65pt;margin-left:0cm;text-align:center'><span style='font-family:宋体;'>例子</span></p>
+</td> <td width="81%" valign=top style='width:81.26%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>ZG_CHANNEL = 1&nbsp;&nbsp; ’</span><span style='font-family: 宋体;'>切换通道</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>?ZG_AXIS(“X”)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ’</span><span style='font-family:宋体;'>通道</span><span lang=EN-US>1</span><span style='font-family: 宋体;'>，</span><span lang=EN-US>X</span><span style='font-family:宋体; '>轴的轴号</span></p>
+<p class=MsoNormal style='margin-top:4.65pt;margin-right:0cm;margin-bottom: 4.65pt;margin-left:0cm'><span lang=EN-US>?ZG_AXIS(“X”, 1)&nbsp;&nbsp;&nbsp; ’</span><span style='font-family:宋体;'>通道</span><span lang=EN-US>1</span><span style='font-family: 宋体;'>，</span><span lang=EN-US>X</span><span style='font-family:宋体; '>轴的轴向</span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1327.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1325.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

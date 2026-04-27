@@ -1,0 +1,105 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_DefDetectSurface -- 光面缺陷检测</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1234.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1232.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc28255"></a><a name="_Toc144721351"></a><span lang=EN-US>ZV_DefDetectSurface -- </span><span style='font-family:宋体;'>光面缺陷检测</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.14%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.86%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>表面缺陷</span></p>
+</td>  </tr> <tr style='height:16.5pt'> <td width="17%" valign=top style='width:17.14%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:16.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.86%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:16.5pt'>
+<p class=MsoNormal><span style='font-family:宋体; background: white'>表面外观缺陷检测，主要检测瑕疵、斑点、划痕、污渍</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.14%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.86%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_DefDetectSurface(src,re,rst,type,axis,size,thresh,minArea,maxArea)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>src</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入图像，单通道图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>re</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输入区域，</span><span lang=EN-US>re</span><span style=' font-family:宋体;'>对应的区域为进行缺陷检测的有效区域</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>rst</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>输出参数，缺陷结果，一种存储结果的对象，缺陷以区域的形式存储在结果对象中，每个缺陷以一个区域表示，若要查看缺陷个数或区域的效果，可结合</span><span lang=EN-US>ZV_DefGetValue</span><span style='font-family:宋体; '>和</span><span lang=EN-US>ZV_DefGetObject</span><span style='font-family:宋体; '>指令获取结果如缺陷数量、缺陷区域列表等。区域列表可结合区域指令进一步处理如绘制或计算区域的</span><span lang=EN-US>blob</span><span style='font-family:宋体; '>特征（面积、重心）等</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>type</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>检测类型</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='margin-left:41.9pt;border-collapse:collapse;border:none;'> <tr> <td width=218 valign=top style='width:93.55pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=327 valign=top style='width:140.3pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>暗的瑕疵</span></p>
+</td>  </tr> <tr> <td width=218 valign=top style='width:93.55pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width=327 valign=top style='width:140.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>亮的瑕疵</span></p>
+</td>  </tr> <tr> <td width=218 valign=top style='width:93.55pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width=327 valign=top style='width:140.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>亮和暗都检测</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>axis</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>检测轴</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='margin-left:40.55pt;border-collapse:collapse;border:none;'> <tr> <td width=221 valign=top style='width:94.9pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=326 valign=top style='width:139.6pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>检测</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>轴</span></p>
+</td>  </tr> <tr> <td width=221 valign=top style='width:94.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width=326 valign=top style='width:139.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>检测</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>轴</span></p>
+</td>  </tr> <tr> <td width=221 valign=top style='width:94.9pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width=326 valign=top style='width:139.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>xy</span><span style='font-family:宋体; '>两个轴都要检测</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>size</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>检测尺寸上限，尺寸要大于</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>thresh</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>瑕疵级别的阈值，范围</span><span lang=EN-US>0-255</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minArea</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>缺陷最小面积</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>maxArea</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>缺陷最大面积</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.14%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.86%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.14%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.86%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,re,defect_dst,defect_list</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;defect1.jpg&quot;,1) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ReGenFullImage(img,re) '</span><span style='font-family:宋体;'>生成全图区域</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DefDetectSurface(img,re,defect_dst,1,2,60,15,40,3600) '</span><span style='font-family:宋体;'>表面外观缺陷检测</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DefGetObject(defect_dst,defect_list,1) '</span><span style='font-family:宋体;'>获取缺陷对象到列表</span><span lang=EN-US>(</span><span style='font-family:宋体;'>区域</span><span lang=EN-US>)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>绘制结果</span><span lang=EN-US>(</span><span style='font-family:宋体;'>本质是绘制区域</span><span lang=EN-US>)</span></p>
+<p class=MsoNormal><span lang=EN-US>LOCAL i,defect_size</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT dst,defect </span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpGrayToRgb(img,dst) '</span><span style='font-family:宋体;'>转为彩色图像</span></p>
+<p class=MsoNormal><span lang=EN-US>defect_size = ZV_ObjCount(defect_list) '</span><span style='font-family:宋体;'>获取缺陷区域数量</span></p>
+<p class=MsoNormal><span lang=EN-US>FOR i = 0 TO defect_size - 1</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ZV_ObjSelect(defect_list,defect,i)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ZV_DraRegion(dst,defect,0,ZV_DraColor(0,255,0)) '</span><span style='font-family:宋体;'>绘制区域</span></p>
+<p class=MsoNormal><span lang=EN-US>NEXT</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1234.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1232.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

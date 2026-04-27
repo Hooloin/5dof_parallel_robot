@@ -1,0 +1,198 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>INVERT_STEP -- 脉冲模式设置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="367.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="365.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_INVERT_STEP"></a><a name="_INVERT_STEP_--_脉冲模式设置"></a><a name="_Toc134698154"></a><a name="_Toc9433"></a><a name="_Toc18086"></a><a name="_Toc26220"></a><a name="_Toc23874"></a><a name="_INVERT_STEP_1"></a><span lang=EN-US>INVERT_STEP -- </span><span style='font-family:宋体;'>脉冲模式设置</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>伺服</span></b><b><span lang=EN-US style='color:black;'>/</span></b><b><span style='font-family:宋体;color:black;'>步进脉冲输出模式设置。</span></b></p>
+<p class=MsoCommentText><span style='font-family:宋体;color:black; '>有脉冲方向、双脉冲、正交脉冲三种模式，控制器默认为脉冲方向控制（模式</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>）。</span><span style='font-family:宋体;'>正交脉冲目前只有部分控制器支持。</span></p>
+<p class=MsoCommentText><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoCommentText><span style='font-family:宋体;'>反馈位置（</span><span lang=EN-US>MPOS</span><span style='font-family:宋体;'>）信息牵涉到很多复杂功能，例如</span><span lang=EN-US>MOVE_OP</span><span style='font-family:宋体;'>精准模式，所以控制器暂不支持修改反馈位置的方向，需要修改时可以修改驱动相关参数，例如三菱为</span><span lang=EN-US>PA14</span><span style='font-family:宋体;'>。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a name="_Hlk120023659"><span lang=EN-US>INVERT_STEP = mode</span></a></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>mode</span><span style='font-family:宋体;color:black; '>：模式选择，缺省</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black; '>，低</span><span lang=EN-US style='color:black; '>8</span><span style='font-family:宋体;color:black; '>位（位</span><span lang=EN-US style='color:black; '>0-</span><span style='font-family:宋体;color:black; '>位</span><span lang=EN-US style='color:black; '>7</span><span style='font-family:宋体;color:black; '>）表示的模式值如下：</span></p>
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none; '> <tr> <td width=109 valign=top style='width:46.7pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>模式值</span></p>
+</td>  <td width=198 valign=top style='width:3.0cm;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>说明</span></p>
+</td>  <td width=622 valign=top style='width:266.75pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>参考示意图（正逻辑模式）</span></p>
+</td>  </tr> <tr> <td width=109 valign=top style='width:46.7pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>0-3</span></p>
+</td>  <td width=198 valign=top style='width:3.0cm;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>脉冲方向模式</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>脉冲线</span><span lang=EN-US style='color:black; '>+</span><span style='font-family:宋体;color:black; '>方向线</span></p>
+</td>  <td width=622 valign=top style='width:266.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=605 height=183 src="doc.files/image418.jpg" ></span></p>
+</td>  </tr> <tr> <td width=109 valign=top style='width:46.7pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>4-7</span></p>
+</td>  <td width=198 valign=top style='width:3.0cm;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>双脉冲方式（或称</span><span lang=EN-US style='color:black; '>CW/CCW</span><span style='font-family:宋体;color:black; '>）</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>正向脉冲线</span><span lang=EN-US style='color:black; '>+</span><span style='font-family:宋体;color:black; '>负向脉冲线</span></p>
+</td>  <td width=622 valign=top style='width:266.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='page-break-after:avoid;'><span lang=EN-US><img border=0 width=607 height=178 src="doc.files/image420.jpg" alt="说明: 瀑布图&#10;&#10;中度可信度描述已自动生成" ></span></p>
+</td>  </tr> <tr> <td width=109 valign=top style='width:46.7pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>8-9</span></p>
+</td>  <td width=198 valign=top style='width:3.0cm;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>AB</span><span style='font-family:宋体;color:black; '>输出，正交脉冲</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>(</span><span style='font-family:宋体;color:black; '>部分控制器定制</span><span lang=EN-US style='color:black; '>)</span></p>
+</td>  <td width=622 valign=top style='width:266.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='page-break-after:avoid;'><span lang=EN-US><img border=0 width=599 height=170 src="doc.files/image422.jpg" alt="说明: 形状&#10;&#10;中度可信度描述已自动生成" ></span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span style='font-family:宋体;color:black;'>各个模式对应的电平如下：若极性对调，参考运动方向与原来相反。</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none; '> <tr> <td width=115 rowspan=2 style='width:49.25pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span style='font-family:宋体;color:black; '>模式值</span></p>
+</td>  <td width=391 rowspan=2 style='width:167.55pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span style='font-family:宋体;color:black; '>描述</span></p>
+</td>  <td width=231 colspan=2 valign=top style='width:99.2pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>松下设置参考</span></p>
+</td>  <td width=178 valign=top style='width:76.3pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>三菱设置参考</span></p>
+</td>  </tr> <tr>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>Pr0.06</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>Pr0.0</span></p>
+</td>  <td width=178 valign=top style='width:76.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>PA13</span></p>
+</td>  </tr> <tr> <td width=115 style='width:49.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:red; '>0</span></p>
+</td>  <td width=391 valign=top style='width:167.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>脉冲</span><span lang=EN-US style='color:red; '>/</span><span style='font-family:宋体;color:red; '>方向（脉冲正逻辑）（正向）</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>0</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>3</span></p>
+</td>  <td width=178 valign=top style='width:76.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>××</span><span lang=EN-US style='color:red; '>01h</span></p>
+</td>  </tr> <tr> <td width=115 style='width:49.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>1</span></p>
+</td>  <td width=391 valign=top style='width:167.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>脉冲</span><span lang=EN-US style='color:black; '>/</span><span style='font-family:宋体;color:black; '>方向（脉冲负逻辑）（正向）</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>/</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>/</span></p>
+</td>  <td width=178 valign=top style='width:76.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>××</span><span lang=EN-US style='color:red; '>11h</span></p>
+</td>  </tr> <tr> <td width=115 style='width:49.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:red; '>2</span></p>
+</td>  <td width=391 valign=top style='width:167.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>脉冲</span><span lang=EN-US style='color:red; '>/</span><span style='font-family:宋体;color:red; '>方向（脉冲正逻辑）（负向）</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>1</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>3</span></p>
+</td>  <td width=178 valign=top style='width:76.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>××</span><span lang=EN-US style='color:red; '>01h</span></p>
+</td>  </tr> <tr> <td width=115 style='width:49.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>3</span></p>
+</td>  <td width=391 valign=top style='width:167.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>脉冲</span><span lang=EN-US style='color:black; '>/</span><span style='font-family:宋体;color:black; '>方向（脉冲负逻辑）（负向）</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>/</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>/</span></p>
+</td>  <td width=178 valign=top style='width:76.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>××</span><span lang=EN-US style='color:red; '>11h</span></p>
+</td>  </tr> <tr> <td width=115 style='width:49.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>4</span></p>
+</td>  <td width=391 valign=top style='width:167.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>双脉冲（方向负逻辑）（正向）</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>/</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>/</span></p>
+</td>  <td width=178 valign=top style='width:76.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>××</span><span lang=EN-US style='color:red; '>10h</span></p>
+</td>  </tr> <tr> <td width=115 style='width:49.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:black; '>5</span></p>
+</td>  <td width=391 valign=top style='width:167.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>双脉冲（方向负逻辑）（负向）</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>/</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>/</span></p>
+</td>  <td width=178 valign=top style='width:76.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>××</span><span lang=EN-US style='color:red; '>10h</span></p>
+</td>  </tr> <tr> <td width=115 style='width:49.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:red; '>6</span></p>
+</td>  <td width=391 valign=top style='width:167.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>双脉冲（方向正逻辑）（正向）</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>1</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>1</span></p>
+</td>  <td width=178 valign=top style='width:76.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>××</span><span lang=EN-US style='color:red; '>00h(</span><span style='font-family:宋体;color:red; '>默认</span><span lang=EN-US style='color:red; '>)</span></p>
+</td>  </tr> <tr> <td width=115 style='width:49.25pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span lang=EN-US style='color:red; '>7</span></p>
+</td>  <td width=391 valign=top style='width:167.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>双脉冲（方向正逻辑）（负向）</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>0(</span><span style='font-family:宋体;color:red; '>默认</span><span lang=EN-US style='color:red; '>)</span></p>
+</td>  <td width=116 valign=top style='width:49.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red; '>1(</span><span style='font-family:宋体;color:red; '>默认</span><span lang=EN-US style='color:red; '>)</span></p>
+</td>  <td width=178 valign=top style='width:76.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>××</span><span lang=EN-US style='color:red; '>00h(</span><span style='font-family:宋体;color:red; '>默认</span><span lang=EN-US style='color:red; '>)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span style='font-family:宋体;color:black;'>高</span><span lang=EN-US style='color:black; '>8</span><span style='font-family:宋体;color:black; '>位（位</span><span lang=EN-US style='color:black; '>8-</span><span style='font-family:宋体;color:black; '>位</span><span lang=EN-US style='color:black; '>15</span><span style='font-family:宋体;color:black; '>）表示方向变化保护时间，单位微秒：</span><span lang=EN-US style='color:black; '>0-255</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>常用模式为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>、</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>、</span><span lang=EN-US style='color:black;'>6</span><span style='font-family:宋体;color:black;'>、</span><span lang=EN-US style='color:black;'>7</span><span style='font-family:宋体;color:black;'>。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>如果模式设定不正确，步进马达可能会在换向时丢失一步的位置，当不确定步进马达的设置时，可以设置</span><span lang=EN-US style='color:red;'>100</span><span style='font-family:宋体;color:red;'>微秒左右的保护时间。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>设置为脉冲方向模式：</span></p>
+<p class=MsoNormal><b><span lang=EN-US>INVERT_STEP</span></b><span lang=EN-US> = 256*100+0<a name="OLE_LINK60">&nbsp;&nbsp; '</a></span><span style='font-family:宋体;'>设置</span><span lang=EN-US>100</span><span style='font-family:宋体;'>微秒的保护时间，模式为</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>设置为双脉冲模式：</span></p>
+<p class=MsoNormal><b><span lang=EN-US>INVERT_STEP</span></b><span lang=EN-US> = 256*100+6&nbsp;&nbsp; '</span><span style='font-family:宋体;'>设置</span><span lang=EN-US>100</span><span style='font-family:宋体;'>微秒的保护时间，模式为</span><span lang=EN-US>6</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>查询脉冲模式设置：</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>在线命令栏输入如下指令查询。</span></p>
+<p class=MsoNormal><span lang=EN-US>?INVERT_STEP(0)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>打印轴</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的脉冲模式设置值</span></p>
+<p class=MsoNormal><span lang=EN-US>?*INVERT_STEP&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>打印全部轴的脉冲模式设置值</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.68%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.32%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="72.html#_STEP_RATIO"><span lang=EN-US>STEP_RATIO</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="367.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="365.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

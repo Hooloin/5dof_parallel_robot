@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZSCAN_CORRECT -- 振镜矫正</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="376.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="374.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698162"></a><a name="_Toc4782"></a><a name="_Toc5377"></a><a name="_Toc10670"><span lang=EN-US>ZSCAN_CORRECT -- </span></a><span style='font-family:宋体;'>振镜矫正</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>矫正振镜轴参数。</span></b></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZSCAN_CORRECT(ixy,imode,imaxline,imaxrow,x1,y1,x2,y2,tableindex)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ixy</span><span style='font-family:宋体;'>：值为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>或</span><span lang=EN-US>1</span><span style='font-family:宋体;'>，两个振镜选择；</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>第一个振镜，</span><span lang=EN-US>1-</span><span style='font-family:宋体;'>第二个振镜</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>imode</span><span style='font-family:宋体;'>：</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>关闭矫正功能；</span><span lang=EN-US>1-</span><span style='font-family:宋体;'>使用分区矫正，</span><span lang=EN-US>table</span><span style='font-family:宋体;'>输入测量得到的实际位置</span><span style='font-family:宋体;'>；</span><span lang=EN-US>2-</span><span style='font-family:宋体;'>使用分区矫正，</span><span lang=EN-US>table</span><span style='font-family:宋体;'>输入需要运行到的脉冲位置，</span><span lang=EN-US>210701</span><span style='font-family:宋体;'>增加此功能</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>imaxline</span><span style='font-family:宋体;'>：行数，</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>方向的点数为行数，</span><span style='font-family:宋体;'>数据越多精度越高</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>imaxrow</span><span style='font-family:宋体;'>：列数，</span><span lang=EN-US>X</span><span style='font-family:宋体;'>方向的点数为列数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>x1,y1</span><span style='font-family:宋体;'>：理论的左下角的位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>x2,y2</span><span style='font-family:宋体;'>：理论的右上角的位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tableindex</span><span style='font-family:宋体;'>：测量的实际坐标开始存储的</span><span lang=EN-US>table</span><span style='font-family:宋体;'>索引，先</span><span lang=EN-US>X</span><span style='font-family:宋体;'>再</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>，先第一行（按列数存储），再下一行，注意此</span><span lang=EN-US>XY</span><span style='font-family:宋体;'>是实际的物理轴，第一个物理轴为</span><span lang=EN-US>X</span><span style='font-family:宋体;'>，第二个为</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>，与轴号映射的虚拟轴轴号无关，填入坐标为振镜实际的脉冲位置</span><span lang=EN-US>(</span><span style='font-family:宋体;'>支持小数</span><span lang=EN-US>)(XY2</span><span style='font-family:宋体;'>协议坐标范围是是</span><span lang=EN-US>-32768-32767)</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>带振镜轴控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>TABLE(0,-40.6,-41.2)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>TABLE(2, 0,-41)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>TABLE(4, 41,-42)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>TABLE(6, -41,0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>TABLE(8, 0,0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>TABLE(10, 41.2,0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>TABLE(12, -40.4,41.2)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>TABLE(14, 0,41.2)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>TABLE(16, 41,42.4)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>FOR i=0 TO 17</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TABLE(i) = TABLE(i)*500&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>输入的都是脉冲坐标</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>NEXT</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>ZSCAN_CORRECT</span></b><span lang=EN-US style='color:black;'>(0,1,3,3,-20000,-20000,20000,20000,0)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="376.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="374.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

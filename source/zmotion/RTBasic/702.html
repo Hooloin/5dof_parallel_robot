@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>HMI_CONTROLATTRS --获取/设置元件字符串属性值</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="703.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="701.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3 style='margin-bottom:3.6pt'><a name="_Toc214981857"><span lang=EN-US>HMI_CONTROLATTRS --</span></a><span style='font-family: 宋体;'>获取</span><span lang=EN-US>/</span><span style='font-family:宋体;'>设置元件字符串属性值</span></h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr> <td width="14%" valign=top style='width:14.26%;border:solid windowtext 1.0pt; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="85%" valign=top style='width:85.74%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>元件操作指令</span></p>
+</td> </tr> <tr> <td width="14%" valign=top style='width:14.26%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="85%" valign=top style='width:85.74%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>获取</span><span lang=EN-US>/</span><span style='font-family:宋体;'>设置元件的指定字符串属性值</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>注：操作前需确保操作的元件具有该属性。</span></p>
+</td> </tr> <tr> <td width="14%" valign=top style='width:14.26%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="85%" valign=top style='width:85.74%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>string = HMI_CONTROLATTRS (strProperty [,winid, controlid])</span></p>
+<p class=MsoNormal><span lang=EN-US>HMI_CONTROLATTRS(strProperty, string [,winid, controlid])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>strProperty</span><span style='font-family:宋体;'>：指定操作的元件属性</span></p>
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none;'> <tr> <td width="19%" valign=top style='width:19.44%;border:solid windowtext 1.0pt; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>属性命令</span></p>
+</td> <td width="69%" valign=top style='width:69.28%;border:solid windowtext 1.0pt; border-left:none;background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>属性描述</span></p>
+</td> <td width="11%" valign=top style='width:11.28%;border:solid windowtext 1.0pt; border-left:none;background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>权限</span></p>
+</td> </tr> <tr> <td width="19%" valign=top style='width:19.44%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>&quot;TEXT&quot;</span></p>
+</td> <td width="69%" valign=top style='width:69.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>元件状态文本</span></p>
+</td> <td width="11%" valign=top style='width:11.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>RW</span></p>
+</td> </tr> <tr> <td width="19%" valign=top style='width:19.44%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>&quot;BACKPIC&quot;</span></p>
+</td> <td width="69%" valign=top style='width:69.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>背景图片名称</span></p>
+</td> <td width="11%" valign=top style='width:11.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>RO</span></p>
+</td> </tr> <tr> <td width="19%" valign=top style='width:19.44%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>&quot;PICLIB&quot;</span></p>
+</td> <td width="69%" valign=top style='width:69.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>图片库名称</span></p>
+</td> <td width="11%" valign=top style='width:11.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>RO</span></p>
+</td> </tr> <tr> <td width="19%" valign=top style='width:19.44%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>&quot;STRLIB&quot;</span></p>
+</td> <td width="69%" valign=top style='width:69.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>文本库名称</span></p>
+</td> <td width="11%" valign=top style='width:11.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>RO</span></p>
+</td> </tr> <tr> <td width="19%" style='width:19.44%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>&quot;EXTSTR&quot;</span></p>
+</td> <td width="69%" valign=top style='width:69.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>自定义字符串个数<span style='color:#EE0000'>（注：使用指令写入该属性时，写入内容要小于等于原本内容的字符数）</span></span></p>
+</td> <td width="11%" valign=top style='width:11.28%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>RW</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:3.6pt;text-indent:21.0pt'><span style='font-family:宋体;color:#EE0000'>注：多状态属性，可在元件属性后面追加</span><span lang=EN-US style='color:#EE0000'>%n</span><span style='font-family:宋体;color:#EE0000'>访问不同属性，例如</span><span lang=EN-US style='color:#EE0000'>&quot;TEXT%2&quot;</span><span style='font-family:宋体;color:#EE0000'>表示状态</span><span lang=EN-US style='color:#EE0000'>2</span><span style='font-family:宋体;color:#EE0000'>的元件文本。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>winid</span><span style='font-family:宋体;'>：</span><span lang=EN-US>HMI</span><span style='font-family: 宋体;'>文件里面窗口编号，缺省为当前窗口</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>controlid</span><span style='font-family:宋体;'>：元件编号，缺省为当前元件</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>string</span><span style='font-family:宋体;'>：属性字符串</span></p>
+</td> </tr> <tr> <td width="14%" valign=top style='width:14.26%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="85%" valign=top style='width:85.74%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZHMI</span></p>
+</td> </tr> <tr> <td width="14%" valign=top style='width:14.26%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="85%" valign=top style='width:85.74%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>例一：</span></p>
+<p class=MsoNormal><span lang=EN-US>?HMI_CONTROLATTRS(&quot;TEXT&quot;,10,25)&nbsp; ’</span><span style='font-family:宋体; '>打印窗口</span><span lang=EN-US>10</span><span style='font-family:宋体; '>元件</span><span lang=EN-US>25</span><span style='font-family:宋体;'>的元件状态显示文本</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=690 height=186 src="doc.files/image706.jpg" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>例二：</span></p>
+<p class=MsoNormal><span lang=EN-US>HMI_CONTROLATTRS(&quot;TEXT&quot;,&quot;OPEN&quot;,10,25) ’</span><span style='font-family:宋体; '>设置窗口</span><span lang=EN-US>10</span><span style='font-family:宋体;'>元件</span><span lang=EN-US>25</span><span style='font-family: 宋体;'>的元件状态文本为</span><span lang=EN-US>OPEN</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=802 height=182 src="doc.files/image708.jpg" ></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><b><span lang=EN-US style='font-family:等线; '>&nbsp;</span></b></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="703.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="701.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

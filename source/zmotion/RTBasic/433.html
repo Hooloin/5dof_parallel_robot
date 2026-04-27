@@ -1,0 +1,84 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>PORT_MODE -- 通道模式</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="434.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="432.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698226"><span lang=EN-US>PORT_</span></a><span lang=FR>MODE </span><span lang=EN-US>-- </span><span style='font-family:宋体;'>通道模式</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>通道参数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>PORT</span></b><b><span style='font-family:宋体;color:black;'>模式设置，可以动态添加</span></b><b><span lang=EN-US style='color:black;'>PORT</span></b><b><span style='font-family:宋体;color:black;'>类型。</span></b></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;'><span style='font-family:宋体;'>命令语法：</span><span lang=EN-US>PORT_MODE(portnum, mode [,&quot;comname&quot;])</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;'><span lang=EN-US>portnum</span><span style='font-family:宋体; '>：</span><span lang=EN-US>PORT</span><span style='font-family: 宋体; '>编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>mode</span><span style='font-family:宋体;'>：需要设置的模式，必须是空余的</span><span lang=EN-US>PORT(ZPORT_MODE_NOTUSED)</span><span style='font-family:宋体;'>，建议程序最前面设置，支持设置的类型：</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_COMUSB = 2,&nbsp; // USB </span><span style='font-family:宋体;'>扩展的串口</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_ETH = 10, // </span><span style='font-family:宋体; '>标准网络连接</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_ETHCUSTOM = 11, // </span><span style='font-family:宋体; '>网络自定义通讯</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span style='font-family:宋体;'>可以通过</span><span lang=EN-US>?*PORT</span><span style='font-family:宋体;'>或</span><span lang=EN-US>PORT_MODE</span><span style='font-family:宋体; '>函数语法来查看当前的</span><span lang=EN-US>mode</span><span style='font-family:宋体; '>设置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>comname</span><span style='font-family:宋体;'>：串口时，指明串口名称，</span><span lang=EN-US>Linux</span><span style='font-family:宋体; '>下一般为</span><span lang=EN-US>&quot;/dev/ttySn&quot;</span><span style='font-family:宋体;'>或</span><span lang=EN-US>&quot;/dev/ttyUSBn&quot;</span><span style='font-family:宋体;'>，通过</span><span lang=EN-US>linux</span><span style='font-family:宋体; '>命令</span><span lang=EN-US>ls /dev</span><span style='font-family:宋体; '>可以查看串口列表，</span><span lang=EN-US>windows</span><span style='font-family: 宋体; '>下名称为</span><span lang=EN-US>&quot;COMn&quot;</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span style='font-family:宋体;'>函数语法：</span><span lang=EN-US>mode= PORT_MODE(portnum)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>portnum</span><span style='font-family:宋体;'>：</span><span lang=EN-US>PORT</span><span style='font-family:宋体; '>编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span style='font-family:宋体;'>返回值：</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_NOTEXIST = -1,&nbsp; // </span><span style='font-family:宋体;'>超过最大</span><span lang=EN-US>PORT</span><span style='font-family:宋体; '>号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_NOTUSED = 0,&nbsp; // </span><span style='font-family:宋体;'>没有使用，可以用来设置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_COM = 1, // </span><span style='font-family:宋体; '>硬件固定的串口</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_COMUSB = 2,&nbsp; // USB </span><span style='font-family:宋体;'>扩展的串口</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_LOCAL = 9, // LOCAL</span><span style='font-family:宋体; '>直接通道</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_ETH = 10, // </span><span style='font-family:宋体; '>标准网络连接</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_ETHCUSTOM = 11, // </span><span style='font-family:宋体; '>网络自定义通讯</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>ZPORT_MODE_ETHICONNET = 12, // </span><span style='font-family:宋体; '>互联通道</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>5</span><span style='font-family:宋体;'>系列控制器，</span><span lang=EN-US>20200302</span><span style='font-family:宋体;'>以后的版本支持</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span style='font-family:宋体;color:black; '>设置自定义网口：</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US style='color:black; '>PORT_mode(22,11)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span style='font-family:宋体;color:black; '>设置标准网口</span><span lang=EN-US style='color:black;'>PORT</span><span style='font-family:宋体;color:black;'>：</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US style='color:black; '>PORT_mode(22,10)</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span style='font-family:宋体;color:black; '>设置</span><span lang=EN-US style='color:black;'>USB</span><span style='font-family:宋体; color:black;'>串口：</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;layout-grid-mode:char;'><span lang=EN-US style='color:black; '>PORT_mode(22,2,&quot;/dev/ttyUSB0&quot;)</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="431.html#_PORT_--_通道编号">PORT</a></span> </p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="434.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="432.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

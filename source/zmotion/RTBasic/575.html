@@ -1,0 +1,188 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZTEST -- EtherCAT总线信息查询</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="576.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="574.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698390"></a><a name="_Toc16333"><span lang=EN-US>ZTEST -- EtherCAT</span></a><span style='font-family:宋体;'>总线信息查询</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>EtherCAT</span><span style='font-family:宋体;color:black;'>辅助指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family: 宋体; color:black;'>调试时使用，可以查看多种信息。</span></b></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ztest(30,10,nodeid)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; layout-grid-mode:char;'><span lang=EN-US>nodeid = </span><span style='font-family:宋体;'>设备编号，</span><span lang=EN-US>0--(n-1)</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>带</span><span lang=EN-US>EtherCAT</span><span style='font-family:宋体; '>接口</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例一</span> <span style='font-family: 宋体; '>查询当前</span><span lang=EN-US>PDO</span><span style='font-family: 宋体; '>与关键数据字典</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ztest(30,10,nodeid)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; layout-grid-mode:char;'><span lang=EN-US>nodeid = </span><span style='font-family:宋体;'>设备编号，</span><span lang=EN-US>0--(n-1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(30,10,0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>TestDriver_ecat para1:10,para2:0!</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1c12:0 value:0x1 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1c12:1 value:0x1600 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1600:0 value:0x3 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1600:1 value:0x60400010 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1600:2 value:0x607a0020 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1600:3 value:0x60600008 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1c13:0 value:0x1 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1c13:1 value:0x1a00 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1a00:0 value:0x2 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1a00:1 value:0x60410010 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:1a00:2 value:0x60640020 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:6040:0 value:0xf </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:6041:0 value:0x1237 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:6060:0 value:0x8 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:6061:0 value:0x8 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:6064:0 value:0x10ac4 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:607a:0 value:0x10ac4 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>reg:603f:0 value:0x0 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例二</span> <span style='font-family: 宋体; '>设备</span><span lang=EN-US>AL</span><span style='font-family:宋体;'>状态查询，</span><span lang=EN-US>1-init</span><span style='font-family:宋体;'>，</span><span lang=EN-US>2-preop</span><span style='font-family:宋体;'>，</span><span lang=EN-US>4-safeop</span><span style='font-family:宋体;'>，</span><span lang=EN-US>8-op</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>查询所有</span><span lang=EN-US>ECAT</span><span style='font-family:宋体;'>合并的</span><span lang=EN-US>AL</span><span style='font-family:宋体;'>状态。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(30,1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>TestDriver_ecat para1:1,para2:0!</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>al:0x8&nbsp; code:0x0.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>alctrl:0x8</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ztest(30,2,nodeid)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; layout-grid-mode:char;'><span lang=EN-US>nodeid = </span><span style='font-family:宋体;'>设备编号，</span><span lang=EN-US>0---(n-1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>单个的</span><span lang=EN-US>AL</span><span style='font-family:宋体;'>状态查询。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(30,2,0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>TestDriver_ecat para1:2,para2:0!</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>al:0x8&nbsp; code:0x0.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>alctrl:0x8</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例三</span> <span style='font-family: 宋体; '>丢包查询</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(30,12)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>TestDriver_ecat para1:12,para2:0!</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Slot:0 contain 1 nodes.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Lostcount:0-0.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>第一个数据：没有应答次数</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>第二个数据：时钟冲突次数</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例四</span> <span style='font-family: 宋体; '>查询是否支持指定设备：</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ztest (30,20,</span><span style='font-family:宋体;'>厂商</span><span lang=EN-US>ID, </span><span style='font-family:宋体;'>产品</span><span lang=EN-US>ID, </span><span style='font-family:宋体;'>版本号</span><span lang=EN-US>)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(30,20,$41b,0,11)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Id:0x41b ProductCode:0x0 version:0xb support.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(30,20,$41b,145,11)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Id:0x41b ProductCode:0x91 version:0xb not support.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例五：</span><span lang=EN-US>PDO</span><span style='font-family:宋体;'>长度查询</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(30,13)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>打印所有设备的</span><span lang=EN-US>pdo</span><span style='font-family:宋体;'>字节数</span><span lang=EN-US>; </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>方式</span><span lang=EN-US>2: 2310</span><span style='font-family:宋体;'>以后版本支持</span><span lang=EN-US>.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>NODE_INFO(islot, inode, 15) </span><span style='font-family:宋体;'>查询发送</span><span lang=EN-US>PDO</span><span style='font-family:宋体;'>字节数</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>NODE_INFO(islot, inode, 16) </span><span style='font-family:宋体;'>查询接收</span><span lang=EN-US>PDO</span><span style='font-family:宋体;'>字节数</span><span lang=EN-US>.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>version_build:231124 </span><span style='font-family:宋体;'>以后支持</span><span lang=EN-US>:</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(30,17)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>打印发送</span><span lang=EN-US>PDO</span><span style='font-family:宋体;'>的所有内容</span><span lang=EN-US>.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(30,18)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>打印接收</span><span lang=EN-US>PDO</span><span style='font-family:宋体;'>的所有内容</span><span lang=EN-US>.</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例六：多</span><span lang=EN-US>slot</span><span style='font-family:宋体;'>查询</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(32,13)&nbsp; ‘</span><span style='font-family:宋体;'>第</span><span lang=EN-US>2</span><span style='font-family:宋体;'>个</span><span lang=EN-US>ECAT</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(33,13)&nbsp; ‘</span><span style='font-family:宋体;'>第</span><span lang=EN-US>3</span><span style='font-family:宋体;'>个</span><span lang=EN-US>ECAT</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ztest(34,13)&nbsp; ‘</span><span style='font-family:宋体;'>第</span><span lang=EN-US>4</span><span style='font-family:宋体;'>个</span><span lang=EN-US>ECAT</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例七：连续丢包认为掉线次数</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ztest(30,80, 0, times) </span><span style='font-family:宋体;'>设置连续丢包个数</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>可以同时查看当前的设置。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>20170612.</span><span style='font-family:宋体;'>以上固件支持；</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例八：驱动器从端丢包个数查看</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>旧版本可以通过这个指令查看：</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ztest(30,0, nodeid, $300)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>nodeid&nbsp; 0- </span><span style='font-family:宋体;'>最大个数</span><span lang=EN-US>-1</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例九：从端寄存器查看</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ztest (30, 0, nodeid, regnum)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>nodeid&nbsp; 0- </span><span style='font-family:宋体;'>最大个数</span><span lang=EN-US>-1</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>打印</span><span lang=EN-US> regnum </span><span style='font-family:宋体;'>开始的连续</span><span lang=EN-US>8</span><span style='font-family:宋体;'>个</span><span lang=EN-US>reg</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例十：收发包测试</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>扫描设备</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的时候使用判断链路是否正常</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ZTEST(60,7,0,1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ZTEST(60,8,0,1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>以上两个都可以，每发一次网口数据灯闪烁一次</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例十一：实时性检查</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ZTEST(61,0)</span><span style='font-family:宋体;'>，监控前复位</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ZTEST(61,1)</span><span style='font-family:宋体;'>，运行一段时间后打印</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>TestDriver_int para1:1,para2:0!</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>inttest_fastenterticks:9307</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>inttest_slowestticks:34321&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>小于扫描周期</span><span lang=EN-US>1/2</span><span style='font-family:宋体;'>判断实时性较好</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>inttest_maxprocessticks:143584&nbsp;&nbsp; </span><span style='font-family:宋体;'>小于扫描周期</span><span lang=EN-US>1/2</span><span style='font-family:宋体;'>判断实时性较好</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>inttest_curprocessticks:111792</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例十二：中断检查（</span><span lang=EN-US>7</span><span style='font-family:宋体;'>系可用）</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>m_pciisrtimes</span><span style='font-family:宋体;'>、</span><span lang=EN-US>m_isrtimes </span><span style='font-family:宋体;'>值需要一致</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&gt;&gt;ZTEST(60,97)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_pciisrtimes 0x:3956106&nbsp; </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_isrtimes 0x:3956106</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_isrfirstclkmin -4987</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_isrfirstclkmax 4930</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_isrfirstclkminisr 72</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_isrfirstclkmaxisr 3125</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_isrfirstclkCur 186</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_isrLostIsres 0</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_isrLostIsres2 6413553</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_isrOverIsres 0</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; closeisrns 0</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_iTimerPeriod 10000</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_iCpuTimerPeriod 10000</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_iTimerPeriodns 1000000</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_iTimerPeriodAdjustMax 10000</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_iTimerPeriodAdjustMin 10000</span></p>
+
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="426.html#_PRINT_--_打印信息"><span lang=EN-US>PRINT</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="576.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="574.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

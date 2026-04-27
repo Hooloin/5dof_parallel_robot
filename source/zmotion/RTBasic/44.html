@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVE_PTPABS -- 点到点运动-绝对</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="45.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="43.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc148345288"></a><a name="_MOVE_PTPABS"></a><span lang=EN-US style='color:black;'>MOVE_PTPABS -- </span><span style='font-family:宋体;color:black;'>点到点运动</span><span lang=EN-US style='color:black; '>-</span><span style='font-family:宋体; color:black;'>绝对</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>特殊运动指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal><b><span style='font-family: 宋体; color:black;'>直线插补运动指令，用于点位运动。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>不支持连续运动中速度前瞻，运动指令使用的各个轴的</span><span lang=EN-US style='color:black;'>SPEED</span><span style='font-family:宋体;color:black;'>，速度参数会自动带入运动缓冲。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>该指令不支持在线命令动态修改，但是可以使用</span><span lang=EN-US style='color:black;'>SPEED_RATIO</span><span style='font-family:宋体;color:black;'>指令来调整速度；支持</span><span lang=EN-US style='color:black;'>VP_MODE</span><span style='font-family:宋体;color:black;'>设置。</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_PTP(mode,dis1,dis2……)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='color:black;'>mode</span><span style=' font-family:宋体;color:black;'>：模式</span><span lang=EN-US style='color:black;'>:</span></p>
+<p class=MsoNormal style='text-indent:47.25pt;'><span lang=EN-US style='color:black;'>BIT0: 1-</span><span style=' font-family:宋体;color:black;'>根据每个轴的速度加速度限制来计算和速度与和加速度。</span></p>
+<p class=MsoNormal style='text-indent:47.25pt;'><span lang=EN-US style='color:black;'>BIT2: 1-</span><span style=' font-family:宋体;color:black;'>预留。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='color:black;'>dis1</span><span style=' font-family:宋体;color:black;'>：第一个轴运动的绝对位置，单位</span><span lang=EN-US style='color:black;'>uints</span><span style=' font-family:宋体;color:black;'>，支持小数。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='color:black;'>dis2</span><span style=' font-family:宋体;color:black;'>：第二个轴运动的绝对位置，单位</span><span lang=EN-US style='color:black;'>uints</span><span style=' font-family:宋体;color:black;'>，支持小数。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>4</span><span style='font-family:宋体; '>系列控制器，</span><span lang=EN-US>version_build 230510 </span><span style=' font-family:宋体;'>以上版本。</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例一：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>'1</span><span style=' font-family:宋体;color:black;'>模式单轴与</span><span lang=EN-US style='color:black;'>vp_mode</span><span style='font-family:宋体; color:black; '>指令用例</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>rapidstop(2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>trigger</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>speed_ratio = 1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>base(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>mpos = 0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>dpos = 0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>atype = 1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>speed = 100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>units = 100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>accel = 1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>decel = 1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>vp_mode = 0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>move_ptpabs(1,200)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>wait idle</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>vp_mode = 6</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>move_ptpabs(1,300)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MPOS(0)</span><span style=' font-family:宋体;color:black;'>、</span><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family:宋体; color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=910 height=626 src="doc.files/image167.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例二：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>'1</span><span style='font-family:宋体;color:black;'>模式多轴与</span><span lang=EN-US style='color:black;'>speed_ratio</span><span style='font-family:宋体;color:black;'>指令用例</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>rapidstop(2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>trigger</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>speed_ratio = 1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>vp_mode = 0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>base(0,1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>mpos = 0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>dpos = 0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>atype = 1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>speed = 100,200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>units = 500,500</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>accel = 500,500</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>decel = 500,500</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>move_ptpabs(1,150,200)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>wait idle</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>speed_ratio = 0.5</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>move_ptpabs(1,100,100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MPOS(0)</span><span style=' font-family:宋体;color:black;'>、</span><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family:宋体; color:black; '>、</span><span lang=EN-US style='color:black;'>MPOS(1)</span><span style=' font-family:宋体;color:black;'>、</span><span lang=EN-US style='color:black;'>MSPEED(1)</span><span style='font-family:宋体; color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=903 height=621 src="doc.files/image169.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例三：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>'0</span><span style=' font-family:宋体;color:black;'>模式多轴与</span><span lang=EN-US style='color:black;'>speed_ratio</span><span style='font-family:宋体; color:black; '>指令用例</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>rapidstop(2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>trigger</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>speed_ratio = 1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>vp_mode = 0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>base(0,1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>mpos = 0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>dpos = 0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>atype = 1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>speed = 100,200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>units = 500,500</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>accel = 500,500</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>decel = 500,500</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>move_ptpabs(0,150,200)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '0</span><span style=' font-family:宋体;color:black;'>模式下与</span><span lang=EN-US style='color:black;'>moveabs</span><span style='font-family:宋体; color:black; '>指令效果一致</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>wait idle</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>speed_ratio = 0.5</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>move_ptpabs(1,100,100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MPOS(0)</span><span style=' font-family:宋体;color:black;'>、</span><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family:宋体; color:black; '>、</span><span lang=EN-US style='color:black;'>MPOS(1)</span><span style=' font-family:宋体;color:black;'>、</span><span lang=EN-US style='color:black;'>MSPEED(1)</span><span style='font-family:宋体; color:black; '>垂直刻度</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=905 height=623 src="doc.files/image171.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a title="Not Found Page:#_MOVE_PTP_--_点到点运动"><span lang=EN-US>MOVE_PTP</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="45.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="43.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

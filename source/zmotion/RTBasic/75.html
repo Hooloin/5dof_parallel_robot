@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>PITCH2SET -- 二维螺距补偿</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="76.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="74.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc187156909"><span lang=EN-US>PITCH2SET -- </span></a><span style='font-family:宋体;'>二维螺距补偿</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>运动设置指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>设置轴的螺距补偿，扩展轴无效。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>每点的补偿脉冲个数存储在</span><span lang=EN-US style='color:black;'>TABLE</span><span style='font-family: 宋体; color:black;'>表里面。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>PITCH2SET(enable,startposx,startposy,disonex,disoney,maxpointx,maxpointy,tableindex)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>enable</span><span style='font-family:宋体;'>：</span><span lang=EN-US style='color:black;'>0- </span><span style='font-family: 宋体; color:black;'>关闭补偿，</span><span lang=EN-US style='color:black;'>1- XY</span><span style='font-family: 宋体; color:black;'>补偿，</span><span lang=EN-US style='color:black;'>2- XYX</span><span style='font-family: 宋体; color:black;'>补偿，</span><span lang=EN-US style='color:black;'>3- XYY</span><span style='font-family: 宋体; color:black;'>补偿</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:red;'>!</span><span style='font-family:宋体; color:red;'>注意</span><span lang=EN-US style='color:red;'>: 2</span><span style='font-family:宋体;color:red;'>模式的</span><span lang=EN-US style='color:red;'>BASE</span><span style='font-family: 宋体; color:red;'>轴顺序必须</span><span lang=EN-US style='color:red;'> X1, Y, X2; </span><span style='font-family:宋体;color:red;'>此时</span><span lang=EN-US style='color:red;'>X2</span><span style='font-family: 宋体; color:red;'>的补偿值使用</span><span lang=EN-US style='color:red;'>X1</span><span style='font-family: 宋体; color:red;'>的补偿</span><span lang=EN-US style='color:red; '>.</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:red;'>!</span><span style='font-family:宋体; color:red;'>注意</span><span lang=EN-US style='color:red;'>: 3</span><span style='font-family:宋体;color:red;'>模式的</span><span lang=EN-US style='color:red;'>BASE</span><span style='font-family: 宋体; color:red;'>轴顺序必须</span><span lang=EN-US style='color:red;'> X, Y1, Y2; </span><span style='font-family:宋体;color:red;'>此时</span><span lang=EN-US style='color:red;'>Y2</span><span style='font-family: 宋体; color:red;'>的补偿值使用</span><span lang=EN-US style='color:red;'>Y1</span><span style='font-family: 宋体; color:red;'>的补偿</span><span lang=EN-US style='color:red; '>.</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>startpos</span><span style='font-family:宋体;color:black;'>：开始补偿的</span><span lang=EN-US style='color:black;'>mpos</span><span style='font-family:宋体;color:black;'>位置，</span><span lang=EN-US style='color:black;'>units</span><span style='font-family:宋体;color:black;'>单位，</span><span lang=EN-US>startpos</span><span style='font-family:宋体;'>对应的点不存储</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>disone</span><span style='font-family:宋体;'>：每个点之间的距离，</span><span lang=EN-US>units</span><span style='font-family:宋体; '>单位</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>maxpoint</span><span style='font-family:宋体;'>：补偿的总点数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tablenum</span><span style='font-family:宋体;'>：螺距补偿表存储的</span><span lang=EN-US>table</span><span style='font-family:宋体; '>位置，从</span><span lang=EN-US>startpos</span><span style='font-family:宋体; '>下一个点开始存储，脉冲数单位，每个点存储两个数据，表示</span><span lang=EN-US>X</span><span style='font-family: 宋体; '>方向偏差值与</span><span lang=EN-US>Y</span><span style='font-family:宋体; '>方向偏差值。先存储第一行</span><span lang=EN-US>(X</span><span style='font-family: 宋体; '>方向</span><span lang=EN-US>)</span><span style='font-family:宋体;'>，再存储第二行。总共占用</span><span lang=EN-US> maxpointx*maxpointy*2 </span><span style='font-family:宋体;'>个</span><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>位置</span></p>
+<p class=MsoNormal style='text-indent:21.1pt; '><b><span style='font-family:宋体;'>支持动态修改补偿参数；</span></b></p>
+<p class=MsoNormal style='text-indent:21.1pt; '><b><span style='font-family:宋体;'>补偿开始或关闭时，调整</span></b><b><span lang=EN-US>dpos,mpos</span></b><b><span style='font-family:宋体;'>，而不是产生运动使得</span></b><b><span lang=EN-US>dpos</span></b><b><span style='font-family:宋体;'>，</span></b><b><span lang=EN-US>mpos</span></b><b><span style='font-family:宋体; '>正确。</span></b></p>
+<p class=MsoNormal style='text-indent:21.1pt; '><b><span lang=EN-US>&nbsp;</span></b></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:red;'>!</span><span style='font-family:宋体; color:red;'>注意</span><span lang=EN-US style='color:red;'>: x</span><span style='font-family:宋体;color:red;'>轴号要小于</span><span lang=EN-US style='color:red;'>y</span><span style='font-family:宋体;color:red;'>轴号</span><span lang=EN-US style='color:red;'>, </span><span style='font-family: 宋体; color:red;'>否则可能轻微不同步</span><span lang=EN-US style='color:red;'>.</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:red;'>!</span><span style='font-family:宋体; color:red;'>必须先设置</span><span lang=EN-US style='color:red;'>ATYPE, </span><span style='font-family:宋体;color:red;'>然后设置补偿</span><span lang=EN-US style='color:red;'>; </span><span style='font-family:宋体;color:red;'>修改</span><span lang=EN-US style='color:red;'>ATYPE</span><span style='font-family: 宋体; color:red;'>时</span><span lang=EN-US style='color:red; '>, </span><span style='font-family:宋体;color:red; '>先关闭补偿</span><span lang=EN-US style='color:red; '>.</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:red;'>!</span><span style='font-family:宋体; color:red;'>设置补偿时</span><span lang=EN-US style='color:red;'>, </span><span style='font-family:宋体;color:red;'>轴要位于</span><span lang=EN-US style='color:red;'>IDLE</span><span style='font-family:宋体;color:red;'>停止状态</span><span lang=EN-US style='color:red;'>.</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:red;'>!</span><span style='font-family:宋体; color:red;'>补偿根据</span><span lang=EN-US style='color:red;'>MPOS_ORI</span><span style='font-family:宋体;color:red;'>来计算</span><span lang=EN-US style='color:red;'>,&nbsp; </span><span style='font-family:宋体; color:red;'>带反馈的轴</span><span lang=EN-US style='color:red;'>, </span><span style='font-family:宋体;color:red;'>必须先保证</span><span lang=EN-US style='color:red;'>MPOS</span><span style='font-family:宋体;color:red;'>反馈值正确</span><span lang=EN-US style='color:red;'>.</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体; color:black;'>系列</span><span lang=EN-US style='color:black; '>(VERSION_BUILD &gt; 230511)</span><span style='font-family:宋体; color:black; '>特殊固件支持，比较占</span><span lang=EN-US style='color:black;'>CPU</span><span style='font-family:宋体; color:black; '>，标准固件不支持</span></p>
+</td> </tr> <tr style='height:90.5pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:90.5pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:90.5pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=5,5</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=500,500&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=500,500</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TABLE(0,10*UNITS(0),-20*UNITS(0),-20*UNITS(0),-40*UNITS(0),0*UNITS(0),-0*UNITS(0))</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>delay(10)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>trigger </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>PITCH2SET(1,0,0,90,90,2,2,0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100,100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>delay(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>delay(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>PITCH2SET(0)&nbsp; '</span><span style='font-family:宋体; color:black;'>关闭补偿</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>delay(2000)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>PITCH2SET(1,0,0,90,90,2,2,0)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>不运动开启补偿，查看</span><span lang=EN-US style='color:black;'>DPOS</span><span style='font-family:宋体;color:black;'>值</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>delay(2000)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>PITCH2SET(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>该波形图，为了更好的显示补偿效果，把轴</span><span lang=EN-US style='color:black;'>0/1</span><span style='font-family: 宋体; color:black;'>的脉冲输出，接入到了轴</span><span lang=EN-US style='color:black;'>6/7</span><span style='font-family: 宋体; color:black;'>的编码器输入上，方便观察规划位置以及实际位置的区别，以看出补偿效果</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>偏移</span><span lang=EN-US style='color:black;'>-50</span><span style='font-family:宋体;color:black;'>，垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>MPOS(0)</span><span style='font-family:宋体;color:black;'>偏移</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>，垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体;color:black;'>偏移</span><span lang=EN-US style='color:black;'>-50</span><span style='font-family:宋体;color:black;'>，垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal style='tab-stops:102.2pt;'><span lang=EN-US style='color:black;'>MPOS(1)</span><span style='font-family:宋体;color:black;'>偏移</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>，垂直刻度</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=821 height=504 src="doc.files/image279.jpg" ></span></p>
+</td> </tr> <tr style='height:13.75pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:13.75pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.75pt'>
+<p class=MsoNormal><span lang=EN-US><a title="Not Found Page:#_PITCH2_DIST_--_二维螺距补偿距离">PITCH2_DIST</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="76.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="74.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

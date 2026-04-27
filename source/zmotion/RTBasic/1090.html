@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_MrCreateLine2 -- 线对</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1091.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1089.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc8813"></a><a name="_ZV_MrCreateLine2_--_线对"></a><span lang=EN-US>ZV_MrCreateLine2 -- </span><span style='font-family: 宋体;'>线对</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>形状</span><span style='font-family:宋体; color:black'>测量</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>生成用于直线或线对测量的旋转矩形区域形状测量器，沿</span><span lang=EN-US>width</span><span style='font-family:宋体;'>方向切分区域，子区域沿</span><span lang=EN-US>height</span><span style='font-family:宋体;'>方向选择目标点或目标点对，使用</span><span lang=EN-US>ZV_MrLine</span><span style=' font-family:宋体;'>指令测量直线，使用</span><span lang=EN-US>ZV_MrLine2</span><span style=' font-family:宋体;'>指令测量直线对。</span><span style='font-family:宋体; background: white'>默认使用绝对阈值模式</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_MrCreateLine2(mr,cx,cy,width,height,angle[,subWidth=10,thresh=20])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mr</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，生成的线对形状测量器</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cx</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>测量区域矩形的中心</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cy</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>测量区域矩形的中心</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>width</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>测量区域矩形的宽度，范围</span><span lang=EN-US>[1,32766]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>height</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>测量区域矩形的高度，范围</span><span lang=EN-US>[3,32766]</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>angle</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>测量区域矩形的旋转角度，由图像坐标系确定，单位度数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>subWidth</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>子区域宽度，</span><span lang=EN-US>width</span><span style=' font-family:宋体;'>方向的子区域尺寸，单位像素，默认</span><span lang=EN-US>10</span><span style=' font-family:宋体;'>，最小</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>thresh</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>边缘梯度阈值，默认</span><span lang=EN-US>20</span><span style=' font-family:宋体;'>，范围</span><span lang=EN-US>[1,255]</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mr</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MrCreateLine2(mr,120,100,80,60,90) '</span><span style='font-family:宋体;'>生成线对测量器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>相关指令</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="1089.html#_ZV_MrCreateLine_--_直线"><span lang=EN-US style='font-family:宋体'>ZV_MrCreateLine</span></a><span style=' font-family:宋体'>，</span><a href="1106.html#_ZV_MrLine2_--_线对"><span lang=EN-US style='font-family:宋体;color:#9999CC'>ZV_MrLine2</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1091.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1089.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

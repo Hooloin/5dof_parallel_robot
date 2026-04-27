@@ -1,0 +1,323 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DRIVE_READ -- 参数读取</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="609.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="607.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_DRIVE_READ"></a><a name="_Toc134698421"></a><a name="_Toc32384"></a><a name="_Toc17230"></a><a name="_Toc9311"></a><a name="_Toc12684"><span lang=EN-US>DRIVE_READ -- </span></a><span style='font-family:宋体;'>参数读取</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>总线指令，仅</span><span lang=EN-US style='color:black;'>Rtex</span><span style='font-family:宋体; color:black;'>控制器可用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>操作当前</span></b><b><span lang=EN-US>BASE</span></b><b><span style='font-family:宋体; '>轴，读取驱动器参数。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>通过</span><span lang=EN-US>RETURN</span><span style='font-family:宋体; '>返回成功与否。</span></p>
+</td> </tr> <tr style='height:99.9pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:99.9pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:99.9pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>DRIVE_READ(para [,vr_index])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>para</span><span style='font-family:宋体;'>：</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=875 style='width:374.9pt;margin-left:1.15pt;border-collapse:collapse;border: none;'> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>值</span></p>
+</td> <td width=809 valign=top style='width:346.55pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>描述</span></p>
+</td> </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>1</span></p>
+</td> <td width=809 valign=top style='width:346.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>参数分类</span><span lang=EN-US>*256+</span><span style='font-family:宋体; '>参数编号（</span><span lang=EN-US>Pr7.20=7*256+20</span><span style='font-family:宋体;'>）</span></p>
+</td> </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>2</span></p>
+</td> <td width=809 valign=top style='width:346.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>参数</span><span lang=EN-US>=130,</span><span style='font-family:宋体; '>读取钳位的状态</span><span lang=EN-US>,BIT0,BIT1</span><span style='font-family:宋体;'>表示两个通道的状态</span></p>
+</td> </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>3</span></p>
+</td> <td width=809 valign=top style='width:346.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>参数</span><span lang=EN-US>=$10000+(ssid)</span><span style='font-family: 宋体; '>读取</span><span lang=EN-US>RTEX</span><span style='font-family:宋体; '>驱动器系统信息，字符串存储在</span><span lang=EN-US>VRSTRING</span></p>
+</td> </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>4</span></p>
+</td> <td width=809 valign=top style='width:346.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>参数</span><span lang=EN-US>=$20000+(</span><span style='font-family:宋体; '>报警功能码</span><span lang=EN-US>)+($1000*</span><span style='font-family:宋体;'>索引</span><span lang=EN-US>)</span><span style='font-family:宋体;'>读取报警信息</span></p>
+</td> </tr> <tr> <td width=66 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>5</span></p>
+</td> <td width=809 valign=top style='width:346.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>参数</span><span lang=EN-US>=$30000+(</span><span style='font-family:宋体; '>监视功能码</span><span lang=EN-US>)+($1000*</span><span style='font-family:宋体;'>索引</span><span lang=EN-US>)</span><span style='font-family:宋体;'>读取监视器信息</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>vr_index</span><span style='font-family:宋体;'>：读取数据存储到</span><span lang=EN-US>vr</span><span style='font-family:宋体;'>里面，若没有，直接在输出栏打印出来</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>以下为常用参数</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>1.</span></b><b><span style='font-family:宋体; color:black;'>伺服参数</span></b></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=877 style='width:376.05pt;border-collapse:collapse;border:none; '> <tr style='height:4.5pt'> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:4.5pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>参数</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>功能</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>值</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.00</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>设置电机转向</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>CW&nbsp;&nbsp; 1</span><span style='font-family:宋体;'>：</span><span lang=EN-US>CCW</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.01</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>控制模式设置</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>一般设置为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>：半闭环控制</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.08</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>电机一圈脉冲数</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0-8388608</span><span style='font-family:宋体;'>（根据实际电机）</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.09</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>齿轮比分子设定</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0-1073741824</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr0.10</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>齿轮比分母设定</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>1-1073741824</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr4.01</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>正限位信号设置</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常闭：</span><span lang=EN-US>00818181h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>8487297</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常开：</span><span lang=EN-US>00010101h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>65793</span><span style='font-family:宋体; '>）</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr4.02</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>负限位信号设置</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常闭：</span><span lang=EN-US>00828282h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>8553090</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常开：</span><span lang=EN-US>00020202h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>131586</span><span style='font-family:宋体; '>）</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr4.03</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Home</span><span style='font-family: 宋体; '>信号设置</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常闭：</span><span lang=EN-US>00A2A2A2h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>10658466</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>常开：</span><span lang=EN-US>00222222h</span><span style='font-family:宋体; '>（</span><span lang=EN-US>2236962</span><span style='font-family:宋体; '>）</span></p>
+</td> </tr> </table>
+<p class=MsoNormal><b><span lang=EN-US>&nbsp;</span></b></p>
+<p class=MsoNormal><b><span lang=EN-US>2.Rtex</span></b><b><span style='font-family: 宋体; '>通讯参数</span></b></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=877 style='width:376.05pt;border-collapse:collapse;border:none; '> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr7.20</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Rtex</span><span style='font-family: 宋体; '>通讯周期</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>-1</span><span style='font-family: 宋体; '>：将</span><span lang=EN-US>Pr7.91</span><span style='font-family:宋体; '>的设定生效</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>3</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>0.5ms</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>6</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>1.0ms</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr7.21</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Rtex</span><span style='font-family: 宋体; '>指令更新周期比</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>1</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>1</span><span style='font-family:宋体; '>倍</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>2</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>2</span><span style='font-family:宋体; '>倍</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Pr7.91</span></p>
+</td> <td width=295 valign=top style='width:126.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Rtex</span><span style='font-family: 宋体; '>通讯周期扩展</span></p>
+</td> <td width=470 valign=top style='width:201.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>62500 ns</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>125000 ns</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>250000 ns</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>500000 ns</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>1000000 ns</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>2000000 ns</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><b><span lang=EN-US>3.</span></b><b><span style='font-family:宋体; '>驱动器系统信息</span></b></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=877 style='width:376.05pt;border-collapse:collapse;border:none; '> <tr> <td width=207 valign=top style='width:88.65pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span lang=EN-US>SSID</span></b></p>
+</td> <td width=671 valign=top style='width:287.4pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>含义</span></p>
+</td> </tr> <tr> <td width=207 valign=top style='width:88.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$01</span></p>
+</td> <td width=671 valign=top style='width:287.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>厂商名</span></p>
+</td> </tr> <tr> <td width=207 valign=top style='width:88.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$05</span></p>
+</td> <td width=671 valign=top style='width:287.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>设备类型</span></p>
+</td> </tr> <tr> <td width=207 valign=top style='width:88.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$12</span></p>
+</td> <td width=671 valign=top style='width:287.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>驱动器型号</span></p>
+</td> </tr> <tr> <td width=207 valign=top style='width:88.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$13</span></p>
+</td> <td width=671 valign=top style='width:287.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>驱动器序列号</span></p>
+</td> </tr> <tr> <td width=207 valign=top style='width:88.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$14</span></p>
+</td> <td width=671 valign=top style='width:287.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>驱动器软件版本</span></p>
+</td> </tr> <tr> <td width=207 valign=top style='width:88.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$15</span></p>
+</td> <td width=671 valign=top style='width:287.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>驱动器类型</span></p>
+</td> </tr> <tr> <td width=207 valign=top style='width:88.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$22</span></p>
+</td> <td width=671 valign=top style='width:287.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>电机型号</span></p>
+</td> </tr> <tr> <td width=207 valign=top style='width:88.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$23</span></p>
+</td> <td width=671 valign=top style='width:287.4pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>电机序列号</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><b><span lang=EN-US>4.</span></b><b><span style='font-family:宋体; '>报警信息</span></b></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=877 style='width:376.05pt;border-collapse:collapse;border:none; '> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>功能码</span></p>
+</td> <td width=318 valign=top style='width:136.3pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>功能</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>索引</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$000</span></p>
+</td> <td width=318 valign=top style='width:136.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>读取当前报警</span><span lang=EN-US>/</span><span style='font-family:宋体; '>报警履历</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：本次的报警码</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>1</span><span style='font-family: 宋体; '>：上次的报警码</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>2</span><span style='font-family: 宋体; '>：前两次的报警码</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>...</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>14</span><span style='font-family: 宋体; '>：前</span><span lang=EN-US>14</span><span style='font-family:宋体; '>次的报警码</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$001</span></p>
+</td> <td width=318 valign=top style='width:136.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>清除当前报警</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：清除本次的报警</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$011</span></p>
+</td> <td width=318 valign=top style='width:136.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>清除所有报警</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：清除报警履历</span></p>
+</td> </tr> <tr> <td width=113 valign=top style='width:48.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$021</span></p>
+</td> <td width=318 valign=top style='width:136.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>外部位移传感器的错误清除</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：通过串行通信类型的外部位移传感器清除箝位的错误。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>进行外部位移传感器的错误清除后，请断开控制电源后重启。</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><b><span lang=EN-US>5.</span></b><b><span style='font-family:宋体; '>监视器</span></b></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=877 style='width:376.05pt;border-collapse:collapse;border:none; '> <tr> <td width=111 valign=top style='width:47.65pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>功能码</span></p>
+</td> <td width=320 valign=top style='width:137.05pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>功能</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>索引</span></p>
+</td> </tr> <tr> <td width=111 valign=top style='width:47.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$01</span></p>
+</td> <td width=320 valign=top style='width:137.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>位置偏差，指令单位</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：滤波后的指令的偏差</span></p>
+</td> </tr> <tr> <td width=111 valign=top style='width:47.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$02</span></p>
+</td> <td width=320 valign=top style='width:137.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>编码器分辨率，脉冲</span><span lang=EN-US>/</span><span style='font-family:宋体; '>转</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：电机编码器分辨率</span></p>
+</td> </tr> <tr> <td width=111 valign=top style='width:47.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$04</span></p>
+</td> <td width=320 valign=top style='width:137.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>指令位置，指令单位</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：滤波后的内部指令位置</span></p>
+</td> </tr> <tr> <td width=111 valign=top style='width:47.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$05</span></p>
+</td> <td width=320 valign=top style='width:137.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>实际速度，</span><span lang=EN-US>Pr7.25</span><span style='font-family:宋体; '>单位</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：电机实际速度</span></p>
+</td> </tr> <tr> <td width=111 valign=top style='width:47.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$06</span></p>
+</td> <td width=320 valign=top style='width:137.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>内部指令转矩，</span><span lang=EN-US>0.1%</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：到电机的指令转矩</span></p>
+</td> </tr> <tr> <td width=111 valign=top style='width:47.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$07</span></p>
+</td> <td width=320 valign=top style='width:137.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>实际位置，指令单位</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：电机实际的位置</span></p>
+</td> </tr> <tr> <td width=111 valign=top style='width:47.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$09</span></p>
+</td> <td width=320 valign=top style='width:137.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>箝位位置</span><span lang=EN-US> 1</span><span style='font-family:宋体; '>，指令单位</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>CH1 </span><span style='font-family:宋体; '>箝位的电机的实际位置</span></p>
+</td> </tr> <tr> <td width=111 valign=top style='width:47.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>$0A</span></p>
+</td> <td width=320 valign=top style='width:137.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>箝位位置</span><span lang=EN-US> 2</span><span style='font-family:宋体; '>，指令单位</span></p>
+</td> <td width=446 valign=top style='width:191.35pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>0</span><span style='font-family: 宋体; '>：</span><span lang=EN-US>CH2 </span><span style='font-family:宋体; '>箝位的电机的实际位置</span></p>
+</td> </tr> </table>
+<p class=MsoNormal></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>带</span><span lang=EN-US>RTEX</span><span style='font-family:宋体; '>接口</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><a name="OLE_LINK126"></a><a name="OLE_LINK130"><span style='font-family:宋体;'>总线开启后才能使用</span></a></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例一</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>IF NODE_COUNT(0)&gt;0 THEN</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>BASE(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>选择轴</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:10.55pt; '><a name="OLE_LINK15"></a><a name="OLE_LINK128"><b><span lang=EN-US>DRIVE_READ</span></b></a><span lang=EN-US>(7*256+11,0)</span><span lang=EN-US>&nbsp;&nbsp; '</span><span style='font-family:宋体;'>读取</span><span lang=EN-US>Pr7.11</span><span style='font-family:宋体;'>参数数值，保存到</span><span lang=EN-US>vr(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp; ?vr(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>打印</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例二</span> </p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>IF NODE_COUNT(0)&gt;0 THEN</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>BASE(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; '>选择轴</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal style='text-indent:10.55pt; '><b><span lang=EN-US>DRIVE_READ</span></b><span lang=EN-US>($10000+$01)&nbsp;&nbsp; '</span><span style='font-family: 宋体; '>读取厂商名，直接打印出来</span> </p>
+<p class=MsoNormal><span lang=EN-US>ENDIF</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="609.html#_DRIVE_WRITE">DRIVE_WRITE</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="607.html#_DRIVE_CLEAR">DRIVE_CLEAR</a></span></p>
+</td> </tr> </table>
+<p class=MsoBodyTextIndent style='margin-left:0cm; text-indent:0cm;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="609.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="607.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

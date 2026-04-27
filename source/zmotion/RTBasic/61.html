@@ -1,0 +1,84 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CONNECT -- 同步运动</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="62.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="60.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_CONNECT_--_同步运动"></a><a name="_Toc134697855"></a><a name="_Toc1422"></a><a name="_Toc15369"></a><a name="_Toc25535"></a><a name="_Toc14002"></a><a name="_CONNECT_--_同步运动_1"></a><span lang=EN-US>CONNECT</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>同步运动</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>同步运动指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='tab-stops:center 207.65pt;layout-grid-mode:char; '><b><span style='font-family:宋体;color:black; '>将当前轴的目标位置与</span></b><b><span lang=EN-US style='color:black;'>driving_axis</span></b><b><span style='font-family:宋体;color:black;'>轴的测量位置通过电子齿轮连接。</span></b></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; color:red;'>连接的是脉冲个数，要考虑不同轴</span><span lang=EN-US style='color:red;'>UNITS</span><span style='font-family:宋体;color:red;'>的比例。取消连接时用</span><span lang=EN-US style='color:red;'>CANCEL</span><span style='font-family:宋体;color:red;'>。</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; '>假设连接轴</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的</span><span lang=EN-US>UNIST</span><span style='font-family:宋体;'>为</span><span lang=EN-US>10</span><span style='font-family:宋体;'>，被连接轴</span><span lang=EN-US>1</span><span style='font-family:宋体;'>的</span><span lang=EN-US>UNITS</span><span style='font-family:宋体;'>为</span><span lang=EN-US>100</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal style='tab-stops:center 207.65pt;'><span style='font-family:宋体; '>使用</span><span lang=EN-US>CONNECT</span><span style='font-family:宋体;'>连接，比例</span><span lang=EN-US>ratio</span><span style='font-family:宋体;'>为</span><span lang=EN-US>1</span><span style='font-family:宋体;'>，当轴</span><span lang=EN-US>0</span><span style='font-family:宋体;'>运动</span><span lang=EN-US>s1=100</span><span style='font-family:宋体;'>时，轴</span><span lang=EN-US>1</span><span style='font-family:宋体;'>运动</span><span lang=EN-US>=s1*UNITS(0)*ratio/UNITS(1)</span><span style='font-family:宋体;'>，此时运动</span><span lang=EN-US>10</span><span style='font-family:宋体;'>。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>比率可以通过重复调用指令动态变化。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>常用于手轮使用。</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='tab-stops:center 6.0cm;'><span lang=EN-US style='color:black;'>CONNECT</span><span style='font-family:宋体;color:black;'>（</span><span lang=EN-US style='color:black;'>ratio</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>driving_axis</span><span style='font-family:宋体;color:black;'>）</span><span lang=EN-US style='color:black;'>AXIS</span><span style='font-family:宋体;color:black;'>（连接轴轴号）</span></p>
+<p class=MsoNormal style='margin-left:31.5pt; text-indent:-10.5pt;'><span lang=EN-US style='color:black;'>ratio</span><span style='font-family:宋体;color:black;'>：比率，可正可负，</span><span style='font-family:宋体;'>注意是脉冲个数的比例</span></p>
+<p class=MsoNormal style='margin-left:31.5pt; text-indent:-10.5pt;'><span lang=EN-US style='color:black;'>driving_axis</span><span style='font-family:宋体;color:black;'>：被连接轴的轴号，手轮时为编码器轴</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT&nbsp; IDLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT&nbsp; IDLE(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=10,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0</span></p>
+<p class=MsoNormal style='tab-stops:106.3pt;'><span lang=EN-US style='color:black;'>SPEED=100,100</span></p>
+<p class=MsoNormal style='tab-stops:106.3pt;'><span lang=EN-US style='color:black;'>ACCEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000,1000</span></p>
+<p class=MsoNormal style='tab-stops:106.3pt;'><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体;color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100)&nbsp; AXIS(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black; '>运动</span><span lang=EN-US style='color:black;'>100</span><span style='font-family:宋体;color:black; '>，此时轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>不动</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE(1)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>CONNECT</span></b><span lang=EN-US style='color:black;'>(1,1)&nbsp; AXIS(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>连接到轴</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>，比例为</span><span lang=EN-US style='color:black;'>1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100)&nbsp; AXIS(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black; '>运动</span><span lang=EN-US style='color:black;'>100</span><span style='font-family:宋体;color:black; '>，轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black; '>运动</span><span lang=EN-US style='color:black;'>1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>运动轨迹</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>500</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=786 height=390 src="doc.files/image207.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="70.html#_CLUTCH_RATE_--_连接速度_1"><span lang=EN-US>CLUTCH_RATE</span></a><span style='font-family:宋体;color:black;'>，</span><a href="62.html#_CONNPATH"><span lang=EN-US>CONNPATH</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="62.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="60.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

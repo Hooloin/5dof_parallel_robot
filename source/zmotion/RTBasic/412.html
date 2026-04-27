@@ -1,0 +1,177 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>SETCOM -- 串口配置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="413.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="411.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=FR>SETCOM</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>串口配置</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.24%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.76%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>系统指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.24%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.76%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>串口的配置。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>控制器重新上电后，</span><span lang=EN-US style='color:red;'>SETCOM</span><span style='font-family:宋体; color:red;'>参数会还原成默认值，所以请在程序开头写</span><span lang=EN-US style='color:red;'>SETCOM</span><span style='font-family:宋体; color:red;'>设置。</span></p>
+<p class=MsoNormal><span lang=FR style='color:red;'>ZMC00x</span><span style='font-family:宋体;color:red;'>系列不支持</span><span lang=FR style='color:red;'>MODBUS</span><span style='font-family:宋体;color:red;'>主端。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red'>RS485</span><span style='font-family:宋体;color:red'>切换站号一般都是加要延时。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.24%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.76%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=FR style='color:black; '>SETCOM (baudrate,databits,stopbits,parity,port[,mode] [,variable] [,timeout])</span></p>
+<p class=MsoNormal style='margin-left:126.0pt; text-indent:-105.0pt; '><span lang=FR style=' color:black;'>baudrate</span><span style='font-family:宋体; color:black; '>：串口</span><span style=' font-family:宋体;color:black;'>波特率</span><span lang=FR style='color:black; '>9600 19200 4800 115200 38400(</span><span style='font-family:宋体; color:black;'>缺省</span><span lang=FR style='color:black; '>) 57600</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>databits</span><span style='font-family:宋体;color:black;'>：数据位数</span><span lang=FR style='color:black; '> 8</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>stopbits</span><span style='font-family:宋体;color:black;'>：停止位，只能设置</span><span lang=FR style='color:black; '>0/1/2</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>parity</span><span style='font-family:宋体;color:black;'>：是否校验：</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=483 style='width:206.9pt;margin-left:20.15pt;border-collapse:collapse; border:none; '> <tr> <td width=141 valign=top style='width:60.4pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>值</span></p>
+</td>  <td width=342 valign=top style='width:146.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>描述</span></p>
+</td>  </tr> <tr> <td width=141 valign=top style='width:60.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>（缺省）</span></p>
+</td>  <td width=342 valign=top style='width:146.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>无校验</span></p>
+</td>  </tr> <tr> <td width=141 valign=top style='width:60.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>1</span></p>
+</td>  <td width=342 valign=top style='width:146.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>奇校验</span></p>
+</td>  </tr> <tr> <td width=141 valign=top style='width:60.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>2</span></p>
+</td>  <td width=342 valign=top style='width:146.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>偶校验</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>port</span><span style='font-family:宋体;color:black;'>：串口</span><span lang=FR style='color:black; '>PORT</span><span style='font-family:宋体;color:black;'>编号</span><span lang=FR style='color:black; '>0-1</span><span style=' font-family:宋体;color:black;'>，参见</span><span lang=FR style='color:black; '>PORT</span><span style='font-family:宋体;color:black;'>描述，不同的控制器不一样</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>mode</span><span style='font-family:宋体;color:black;'>：协议</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=852 style='width:365.25pt;margin-left:19.4pt;border-collapse:collapse; border:none; '> <tr> <td width=139 valign=top style='width:59.7pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>值</span></p>
+</td>  <td width=713 valign=top style='width:305.55pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>描述</span></p>
+</td>  </tr> <tr> <td width=139 valign=top style='width:59.7pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>0</span></p>
+</td>  <td width=713 valign=top style='width:305.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>RAW</span><span style='font-family:宋体;color:black;'>数据模式，无协议，此时可以使用</span><span lang=FR style='color:black;'>GET#</span><span style='font-family:宋体;color:black;'>，</span><span lang=FR style='color:black;'>PRINT #</span></p>
+</td>  </tr> <tr> <td width=139 valign=top style='width:59.7pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>4</span><span style='font-family:宋体;color:black;'>（缺省）</span></p>
+</td>  <td width=713 valign=top style='width:305.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>MODBUS</span><span style='font-family:宋体;color:black;'>从端（</span><span lang=FR style='color:black;'>16</span><span style='font-family:宋体;color:black;'>位整数）</span></p>
+</td>  </tr> <tr> <td width=139 valign=top style='width:59.7pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>14</span></p>
+</td>  <td width=713 valign=top style='width:305.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>MODBUS</span><span style='font-family:宋体;color:black;'>主端（</span><span lang=FR style='color:black;'>16</span><span style='font-family:宋体;color:black;'>位整数</span><span lang=FR style='color:black;'>)</span></p>
+</td>  </tr> <tr> <td width=139 valign=top style='width:59.7pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>15</span></p>
+</td>  <td width=713 valign=top style='width:305.55pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>直接命令执行模式，此时可以直接从串口输入字符串命令</span><span lang=FR style='color:black;'>(</span><span style='font-family:宋体;color:black;'>换行符结束</span><span lang=FR style='color:black;'>)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>variable</span><span style='font-family:宋体;color:black;'>：寄存器选择，</span><span lang=FR style='color:black; '>0-VR</span><span style='font-family:宋体;color:black;'>，</span><span lang=FR style='color:black; '>1-TABLE</span><span style='font-family:宋体;color:black;'>，</span><span lang=FR style='color:black; '>2-</span><span style=' font-family:宋体;color:black;'>系统</span><span lang=FR style='color:black; '>MODBUS</span><span style='font-family:宋体;color:black;'>寄存器</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=851 style='width:364.5pt;margin-left:20.15pt;border-collapse:collapse; border:none; '> <tr> <td width=139 valign=top style='width:59.65pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>值</span></p>
+</td>  <td width=711 valign=top style='width:304.85pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>描述</span></p>
+</td>  </tr> <tr> <td width=139 valign=top style='width:59.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>0</span></p>
+</td>  <td width=711 valign=top style='width:304.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>VR</span><span style='font-family:宋体;color:black;'>，此时一个</span><span lang=FR style='color:black;'>VR</span><span style='font-family:宋体;color:black;'>映射到一个</span><span lang=FR style='color:black;'>MODBUS_REG</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>VR</span><span style='font-family:宋体;color:black;'>是</span><span lang=FR style='color:black;'>32</span><span style='font-family:宋体;color:black;'>位浮点型，</span><span lang=FR style='color:black;'>REG</span><span style='font-family:宋体;color:black;'>是</span><span lang=FR style='color:black;'>16</span><span style='font-family:宋体;color:black;'>位整数型，从</span><span lang=FR style='color:black;'>VR</span><span style='font-family:宋体;color:black;'>传递数据给</span><span lang=FR style='color:black;'>REG</span><span style='font-family:宋体;color:black;'>会丢失小数部分，当</span><span lang=FR style='color:black;'>VR</span><span style='font-family:宋体;color:black;'>数据超过正负</span><span lang=FR style='color:black;'>15</span><span style='font-family:宋体;color:black;'>位时，</span><span lang=FR style='color:black;'>REG</span><span style='font-family:宋体;color:black;'>数据会改变</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>REG</span><span style='font-family:宋体;color:black;'>传递数据给</span><span lang=FR style='color:black;'>VR</span><span style='font-family:宋体;color:black;'>不会有问题</span></p>
+</td>  </tr> <tr> <td width=139 valign=top style='width:59.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>1</span></p>
+</td>  <td width=711 valign=top style='width:304.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>TABLE</span><span style='font-family:宋体;color:black;'>，此时一个</span><span lang=FR style='color:black;'>TABLE</span><span style='font-family:宋体;color:black;'>数据映射到一个</span><span lang=FR style='color:black;'>MODBUS_REG</span><span style='font-family:宋体;color:black;'>（不推荐）</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>TABLE</span><span style='font-family:宋体;color:black;'>是</span><span lang=FR style='color:black;'>32</span><span style='font-family:宋体;color:black;'>位浮点型，</span><span lang=FR style='color:black;'>REG</span><span style='font-family:宋体;color:black;'>是</span><span lang=FR style='color:black;'>16</span><span style='font-family:宋体;color:black;'>位整数型，从</span><span lang=FR style='color:black;'>TABLE</span><span style='font-family:宋体;color:black;'>传递数据给</span><span lang=FR style='color:black;'>REG</span><span style='font-family:宋体;color:black;'>会丢失小数部分，当</span><span lang=FR style='color:black;'>TABLE</span><span style='font-family:宋体;color:black;'>数据超过正负</span><span lang=FR style='color:black;'>15</span><span style='font-family:宋体;color:black;'>位时，</span><span lang=FR style='color:black;'>REG</span><span style='font-family:宋体;color:black;'>数据会改变</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>REG</span><span style='font-family:宋体;color:black;'>传递数据给</span><span lang=FR style='color:black;'>TABLE</span><span style='font-family:宋体;color:black;'>不会有问题</span></p>
+</td>  </tr> <tr> <td width=139 valign=top style='width:59.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>2</span><span style='font-family:宋体;color:black;'>（缺省）</span></p>
+</td>  <td width=711 valign=top style='width:304.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>系统</span><span lang=FR style='color:black;'>MODBUS</span><span style='font-family:宋体;color:black;'>寄存器，此时</span><span lang=FR style='color:black;'>VR</span><span style='font-family:宋体;color:black;'>与</span><span lang=FR style='color:black;'>MODBUS</span><span style='font-family:宋体;color:black;'>寄存器是两片独立区间</span></p>
+</td>  </tr> <tr> <td width=139 valign=top style='width:59.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>3</span></p>
+</td>  <td width=711 valign=top style='width:304.85pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>VR_INT</span><span style='font-family:宋体;color:black;'>模式，此时一个</span><span lang=FR style='color:black;'>VR_INT</span><span style='font-family:宋体;color:black;'>映射到两个</span><span lang=FR style='color:black;'>MODBUS_REG</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>timeout</span><span style='font-family:宋体;color:black;'>：</span><span lang=FR style='color:black; '>MODBUS</span><span style='font-family:宋体;color:black;'>从端时此参数也生效，意义为帧间最长延时时间</span><span lang=FR style='color:black; '>(</span><span style=' font-family:宋体;color:black;'>毫秒</span><span lang=FR style='color:black; '>ms)</span><span style=' font-family:宋体;color:black;'>，旧固件缺省值</span><span lang=FR style='color:black; '>800ms</span><span style='font-family:宋体;color:black;'>，部分触摸屏在等待时间设置较低时，会导致故障不能恢复，开放后，针对不同的触摸屏可以设置这个值。</span><span lang=FR style='color:black; '>4</span><span style=' font-family:宋体;color:black;'>系列控制器固件版本</span><span lang=FR style='color:black; '>20190203</span><span style='font-family:宋体;color:black;'>增加，通过</span><span lang=FR style='color:black; '>?*SETCOM </span><span style='font-family:宋体;color:black;'>打印查看</span><span lang=FR style='color:black; '>, </span><span style=' font-family:宋体;color:black;'>如果有这个参数打印即为支持设置。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US><img style="vertical-align:middle;" border=0 width=37 height=32 src="doc.files/image514.jpg" ></span><span lang=FR style='color:black; '>variable</span><span style='font-family:宋体;color:black;'>参数是全局的设置，所有的端口共一个。</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US><img style="vertical-align:middle;" border=0 width=37 height=33 src="doc.files/image516.jpg" ></span><span style='font-family:宋体;'>当设置为</span><span lang=EN-US>VR</span><span style='font-family:宋体;'>或</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>时，</span><span style=' font-family:宋体;color:black;'>没有用到的输出口与输入口会连在一起。</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US><img style="vertical-align:middle;" border=0 width=37 height=33 src="doc.files/image516.jpg" ></span><span style='font-family:宋体; color:black; '>当设置为</span><span lang=FR style='color:black;'>VR</span><span style=' font-family:宋体;color:black;'>或</span><span lang=FR style='color:black; '>TABLE</span><span style='font-family:宋体;color:black;'>时，</span><span style='font-family:宋体; '>通用<span style='color:black'>输出口会映射到</span></span><span lang=FR style='color:black; '>MODBUS_BIT(0)</span><span style='font-family:宋体; color:black; '>的位置，输入口会映射到</span><span lang=FR style='color:black;'>MODBUS_BIT(1000)</span><span style=' font-family:宋体;color:black;'>的位置，因此此时不要使用</span><span lang=FR style='color:black; '>MODBUS_BIT</span><span style='font-family:宋体;color:black;'>作为触摸屏的按钮，</span><span style='font-family:宋体; color:black;'>也不要使用</span><span lang=FR style='color:black; '>PLC</span><span style=' font-family:宋体;color:black;'>中的</span><span lang=FR style='color:black; '>M</span><span style=' font-family:宋体;color:black;'>寄存器</span><span style='font-family:宋体; color:black; '>。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.24%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.76%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.24%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.76%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm;'><span lang=EN-US style=' color:black;'>例一 </span><span lang=EN-US style='color:black;'>mode0 RAW</span><span style=' font-family:宋体;color:black;'>模式</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>DIM char1&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=FR style='color:black; '>&nbsp;'</span><span style='font-family:宋体; color:black; '>定义变量</span><span lang=FR style='color:black;'>&nbsp; </span></p>
+<p class=MsoNormal style='layout-grid-mode:char; '><b><span lang=FR style='color:black;'>SETCOM</span></b><span lang=FR style='color:black; '>(38400,8,1,0,0,0)</span> <span lang=FR style='color:black; '>&nbsp;'</span><span style='font-family:宋体; color:black; '>配置串口为</span><span lang=FR style='color:black;'>RAW</span><span style=' font-family:宋体;color:black;'>模式</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>WHILE 1</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>&nbsp; </span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;</span><span lang=FR style='color:black; '>GET#0, char1</span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style=' color:black;'>'</span><span style='font-family:宋体; color:black; '>发送给通道</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体; color:black; '>的字符保存到</span><span lang=EN-US style='color:black;'>char1</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>&nbsp; </span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;</span><span lang=FR style='color:black; '>PRINT char1&nbsp; &nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=FR style='color:black; '>'</span><span style=' font-family:宋体;color:black;'>按</span><span lang=FR style='color:black; '>ASCII</span><span style='font-family:宋体;color:black;'>码打印通道</span><span lang=FR style='color:black; '>0</span><span style=' font-family:宋体;color:black;'>接受的字符</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>&nbsp;</span><span lang=EN-US style='color:black;'>&nbsp; </span><span lang=FR style='color:black; '>&nbsp;PUTCHAR#0, char1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp; </span><span lang=FR style='color:black; '>'</span><span style=' font-family:宋体;color:black;'>将接收的字符再发送回去</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>WEND</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>松下</span><span lang=EN-US>A6</span><span style='font-family:宋体;'>伺服</span><span style='font-family:宋体; '>编码器读取参照第十三章</span><a title="Not Found Page:#_编码器读取"><span style='font-family:宋体;color:#9999CC;'>简易例程</span></a></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>例二</span><span lang=FR style=' color:black;'> MODBUS</span><span style='font-family:宋体; color:black;'>通讯设置</span></p>
+<p class=MsoNormal style='layout-grid-mode:char; '><b><span lang=FR style='color:black;'>SETCOM</span></b><span lang=FR style='color:black; '>(38400,8,1,0,0,4,2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>设置串口</span><span lang=FR style='color:black;'>0</span><span style=' font-family:宋体;color:black;'>为</span><span lang=FR style='color:black; '>modbus</span><span style='font-family:宋体;color:black;'>从端，波特率</span><span lang=FR style='color:black; '>38400 </span></p>
+<p class=MsoNormal style='layout-grid-mode:char; '><b><span lang=FR style='color:black;'>SETCOM</span></b><span lang=FR style='color:black; '>(38400,8,1,0,1,14,2,1000)&nbsp;&nbsp; </span><span style='font-family:宋体; color:black; '>设置串口</span><span lang=FR style='color:black;'>1</span><span style=' font-family:宋体;color:black;'>为</span><span lang=FR style='color:black; '>modbus</span><span style='font-family:宋体;color:black;'>主端，波特</span><span style='font-family:宋体; '>率</span><span lang=FR>38400</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>具体例程参照</span><span lang=EN-US>MODBUSM_DES</span><span style='font-family:宋体; '>指令例程</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>例三</span> <span style='font-family:宋体; color:black;'>直接字符命令方式</span></p>
+<p class=MsoNormal style='layout-grid-mode:char; '><b><span lang=FR style='color:black;'>setcom</span></b><span lang=FR style='color:black; '>(38400, 8,1,0,0,15)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>设置串口</span><span lang=FR style='color:black;'>0</span><span style=' font-family:宋体;color:black;'>为直接字符串命令方式</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>此时在串口调试助手或其他设备，直接发送相关指令可直接操作控制器。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=434 height=123 src="doc.files/image518.jpg" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>发送前</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=10000</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>发送后</span></p>
+<p class=MsoNormal><span lang=EN-US>UNITS=100</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm; tab-stops:55.15pt;'><span lang=EN-US>例四 </span><span style='font-family:宋体;'>寄存器模式</span><span lang=EN-US>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VR(0)=0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style=' color:black;'>'</span><span style='font-family:宋体; color:black; '>初始化</span><span lang=EN-US style='color:black;'>VR(0)</span><span style='font-family:宋体; color:black;'>和</span><span lang=EN-US style='color:black;'>REG(0)</span><span style=' font-family:宋体;color:black;'>为</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MODBUS_REG(0)=0</span> </p>
+<p class=MsoNormal style='layout-grid-mode:char; '><b><span lang=EN-US style='color:black;'>SETCOM</span></b><span lang=FR style='color:black; '>(38400, 8,1,0,0,4,</span><span lang=EN-US style='color:black;'>0</span><span lang=FR style=' color:black;'>)</span><span lang=EN-US style='color:black;'>&nbsp;&nbsp; </span><span lang=FR style='color:black; '>'</span><span style=' font-family:宋体;color:black;'>设置</span><span lang=EN-US style='color:black;'>VR</span><span style=' font-family:宋体;color:black;'>映射到</span><span lang=EN-US style='color:black;'>MODBUS_REG</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>VR(0)=100.345&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style=' color:black;'>'</span><span style='font-family:宋体; color:black; '>设置</span><span lang=EN-US style='color:black;'>VR(0)=100.345</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>?MODBUS_REG(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style=' color:black;'>'</span><span style='font-family:宋体; color:black; '>打印结果为</span><span lang=EN-US style='color:black;'>100</span><span style='font-family:宋体; color:black;'>，</span><span lang=EN-US style='color:black;'>VR</span><span style=' font-family:宋体;color:black;'>已经映射到</span><span lang=EN-US style='color:black;'>REG</span><span style=' font-family:宋体;color:black;'>，但是</span><span lang=EN-US style='color:black;'>REG</span><span style=' font-family:宋体;color:black;'>是整型，所以小数部分丢失</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>MODBUS_REG(0)=200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style='color:black; '>'</span><span lang=EN-US style='color:black;'>REG(0)</span><span style='font-family:宋体; color:black;'>设为</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>?VR(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style=' color:black;'>'</span><span style='font-family:宋体; color:black; '>打印结果为</span><span lang=EN-US style='color:black;'> 200</span><span style='font-family:宋体; color:black;'>，</span><span lang=EN-US style='color:black;'>REG</span><span style=' font-family:宋体;color:black;'>变化也会改变</span><span lang=EN-US style='color:black;'>VR</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm; tab-stops:55.15pt;'><span lang=EN-US>例五 </span><span style='font-family:宋体;'>寄存器模式</span><span lang=EN-US>2</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VR(0)=0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style=' color:black;'>'</span><span style='font-family:宋体; color:black; '>初始化</span><span lang=EN-US style='color:black;'>VR(0)</span><span style='font-family:宋体; color:black;'>和</span><span lang=EN-US style='color:black;'>REG(0)</span><span style=' font-family:宋体;color:black;'>为</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MODBUS_REG(0)=0</span> </p>
+<p class=MsoNormal style='layout-grid-mode:char; '><b><span lang=EN-US style='color:black;'>SETCOM</span></b><span lang=FR style='color:black; '>(38400,8,1,0,0,4,</span><span lang=EN-US style='color:black;'>2</span><span lang=FR style=' color:black;'>)</span><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp; </span><span lang=FR style='color:black; '>'</span><span style=' font-family:宋体;color:black;'>设置</span><span lang=EN-US style='color:black;'>VR</span><span style=' font-family:宋体;color:black;'>与</span><span lang=EN-US style='color:black;'>MODBUS_REG</span><span style=' font-family:宋体;color:black;'>独立</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>VR(0)=100.345&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style=' font-family:宋体;color:black;'>设置</span><span lang=EN-US style='color:black;'>VR(0)=100.345</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US>?MODBUS_REG(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style=' color:black;'>'</span><span style='font-family:宋体; color:black; '>打印结果为</span><span lang=EN-US style='color:black;'> 0</span><span style='font-family:宋体; color:black;'>，</span><span lang=EN-US style='color:black;'>VR</span><span style=' font-family:宋体;color:black;'>不影响</span><span lang=EN-US style='color:black;'>REG</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>MODBUS_REG(0)=200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style='color:black; '>'</span><span lang=EN-US style='color:black;'>REG(0)</span><span style='font-family:宋体; color:black;'>设为</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>?VR(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=FR style=' color:black;'>'</span><span style='font-family:宋体; color:black; '>打印结果为</span><span lang=EN-US style='color:black;'> 100.345</span><span style='font-family:宋体; color:black;'>，</span><span lang=EN-US style='color:black;'>REG</span><span style=' font-family:宋体;color:black;'>也不影响</span><span lang=EN-US style='color:black;'>VR</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.24%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.76%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="413.html#_ADDRESS_--_控制器站号_1"><span lang=EN-US>ADDRESS</span></a><span style='font-family:宋体; color:black; '>，</span><a href="435.html#_PROTOCOL"><span lang=FR>PROTOCOL</span></a><span style='font-family:宋体;'>，</span><a href="447.html#_MODBUSM_DES"><span lang=FR>MODBUS</span><span lang=EN-US>M</span><span lang=FR>_</span><span lang=EN-US>DES</span></a><span style='font-family:宋体;'>，</span><a href="431.html#_PORT_--_通道编号"><span lang=EN-US>PORT</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="413.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="411.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

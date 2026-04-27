@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CAM_Scan -- 扫描所有相机</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="820.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="818.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc21909"></a><a name="_CAM_Scan_--_扫描所有相机"></a><span lang=EN-US>CAM_Scan -- </span><span style='font-family:宋体;'>扫描所有相机</span> </h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.64%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.36%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>图像采集相关</span></p>
+</td>  </tr> <tr style='height:84.8pt'> <td width="17%" valign=top style='width:17.64%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:84.8pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:84.8pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>扫描系统连接的相机并记录相机信息</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>注意：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red'>1. </span><span style=' font-family:宋体;color:red'>相机和控制器连接需要直连或者使用千兆</span><span lang=EN-US style='color:red'>HUB</span><span style='font-family:宋体; color:red'>，否则可能扫描失败或影响采集的稳定性（采集失败、丢帧、图像缺失等，具体现象和相机有关）</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red'>2. </span><span style=' font-family:宋体;color:red'>显示和采集都可能引起丢帧的效果，需要注意区分。显示可能导致整个图像未更新，不会导致部分缺失</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>大华相机注意事项：</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>注意：对于</span><span lang=EN-US style='color:red'>VPLC516E</span><span style='font-family:宋体; color:red'>控制器在总线轴使能后扫描大华相机会出现异常，如打印“</span><span lang=EN-US style='color:red'>recv no pdo 2</span><span style='font-family:宋体; color:red'>”。如果对象是松下或雷赛的驱动，不会影响轴的正常使用，但如果是台达的驱动会出现轴异常的现象</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.64%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>CAM_Scan(type,flag=0)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoListParagraph style='text-indent:21.1pt'><b><span lang=EN-US>type</span></b><b><span style=' font-family:宋体;'>：</span></b><span style='font-family:宋体; '>扫描类型包括</span><span lang=EN-US>&quot;zmvcbase&quot;,&quot;zmotion&quot;,&quot;mvision&quot;,&quot;basler&quot;,&quot;mindvision&quot;,&quot;huaray&quot;,&quot;dvpcamera&quot;,&quot;daheng&quot;</span><span style=' font-family:宋体;'>等多种类型，支持多种类型混用，但根据相机的不同可能影响稳定性，建议使用同类型相机，</span><span lang=EN-US>type</span><span style='font-family:宋体; '>为空时将使用默认类型进行扫描，默认类型为</span><span lang=EN-US>&quot;zmvcbases&quot;</span><span style='font-family:宋体; '>，扫描类型对应的相机如下：</span></p>
+<p class=MsoListParagraph><span lang=EN-US>&quot;zmvcbase&quot;&nbsp;&nbsp; ----USB</span><span style=' font-family:宋体;'>免驱摄像头</span></p>
+<p class=MsoListParagraph><span lang=EN-US>&quot;zmotion&quot;&nbsp;&nbsp;&nbsp;&nbsp; ----</span><span style=' font-family:宋体;'>正运动相机</span></p>
+<p class=MsoListParagraph><span lang=EN-US>&quot;mvision&quot;&nbsp;&nbsp;&nbsp;&nbsp; ----</span><span style=' font-family:宋体;'>海康威视相机</span></p>
+<p class=MsoListParagraph><span lang=EN-US>&quot;basler&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----basler</span><span style=' font-family:宋体;'>相机</span></p>
+<p class=MsoListParagraph><span lang=EN-US>&quot;mindvision&quot;&nbsp;&nbsp; ----</span><span style=' font-family:宋体;'>迈德威视相机</span></p>
+<p class=MsoListParagraph><span lang=EN-US>&quot;huaray&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----</span><span style=' font-family:宋体;'>大华相机</span></p>
+<p class=MsoListParagraph><span lang=EN-US>&quot;dvpcamera&quot;&nbsp;&nbsp;&nbsp; ----</span><span style=' font-family:宋体;'>度申相机</span></p>
+<p class=MsoListParagraph><span lang=EN-US>&quot;daheng&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----</span><span style=' font-family:宋体;'>大恒相机</span></p>
+<p class=MsoListParagraph style='text-indent:21.1pt'><b><span lang=EN-US>flag</span></b><b><span style=' font-family:宋体;'>：</span></b><span style='font-family:宋体; '>扫描方式，默认值</span><span lang=EN-US>0</span><span style='font-family:宋体; '>全部重新扫描，</span><span lang=EN-US>1</span><span style='font-family:宋体; '>只扫描新增相机</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.64%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.64%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>CAM_Scan(&quot;mvision&quot;) '</span><span style='font-family:宋体;'>扫描相机</span></p>
+<p class=MsoNormal><span lang=EN-US>CAM_Count(0) '</span><span style='font-family:宋体;'>相机数量存放在</span><span lang=EN-US>TABLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>IF(0 = TABLE(0))THEN</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; ?&quot;</span><span style='font-family:宋体;'>未找到相机</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US>ENDIF</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.64%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="825.html#_CAM_Sel_--_选择采集设备"><span lang=EN-US style='color:#9999CC'>CAM_Sel</span></a><span lang=EN-US>(</span><span style='font-family:宋体; '>选择采集设备</span><span lang=EN-US>)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="820.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="818.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

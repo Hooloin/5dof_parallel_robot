@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>HMI_CONTROLTEXT -- 修改元件文本</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="704.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="702.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc147915793"><span lang=EN-US>HMI_CONTROLTEXT -- </span></a><span style='font-family:宋体;'>修改元件文本</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-top:3.6pt'><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-top:3.6pt'><span style='font-family:宋体; '>元件操作指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-top:3.6pt'><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>获取</span><span lang=EN-US>/</span><span style='font-family:宋体;'>修改元件显示文本，支持所有带格式文本（可输入）的元件。</span></p>
+<p class=MsoNormal style='margin-top:3.6pt'><span style='font-family:宋体; color:red'>注：修改文本长度不能超过当前元件文本，否则会被截断。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-top:3.6pt'><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>strText = HMI_CONTROLTEXT (winid, controlid, state)</span></p>
+<p class=MsoNormal><span lang=EN-US>HMI_CONTROLTEXT (winid, controlid, state, strText)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>winid</span><span style='font-family:宋体;'>：</span><span lang=EN-US>HMI</span><span style='font-family: 宋体;'>文件里面窗口编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>controlid</span><span style='font-family:宋体;'>：元件编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>state</span><span style='font-family:宋体;'>：指定修改哪个状态的元件文本</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>strText</span><span style='font-family:宋体;'>：修改元件显示文本</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>RTHmi</span></p>
+</td> </tr> <tr style='height:16.45pt'> <td width="15%" valign=top style='width:15.88%;border-top:none;border-left: solid black 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:16.45pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>例一：</span></p>
+<p class=MsoNormal><span lang=EN-US>HMI_CONTROLTEXT (10, 1, 0, &quot;</span><span style='font-family:宋体;'>松开</span><span lang=EN-US>&quot;)&nbsp; '</span><span style='font-family:宋体; '>修改按钮松开状态显示文本</span></p>
+<p class=MsoNormal><span lang=EN-US>HMI_CONTROLTEXT (10, 1, 1, &quot;</span><span style='font-family:宋体;'>按下</span><span lang=EN-US>&quot;)&nbsp; '</span><span style='font-family:宋体; '>修改按钮按下状态显示文本</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=711 height=172 src="doc.files/image710.jpg" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>修改后元件文本显示情况：</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>左图：</span><span lang=EN-US>0</span><span style='font-family:宋体;'>状态时显示</span><span lang=EN-US>“</span><span style='font-family:宋体;'>松开</span><span lang=EN-US>”</span><span style='font-family: 宋体;'>文本；</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>右图：</span><span lang=EN-US>1</span><span style='font-family:宋体;'>状态时显示</span><span lang=EN-US>“</span><span style='font-family:宋体;'>按下</span><span lang=EN-US>”</span><span style='font-family: 宋体;'>文本；</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=221 height=131 src="doc.files/image712.jpg" ></span><span lang=EN-US>&nbsp;<img border=0 width=235 height=140 src="doc.files/image714.jpg" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>例二：</span></p>
+<p class=MsoNormal><span lang=EN-US>Text=HMI_CONTROLTEXT (10, 1, 0) '</span><span style='font-family:宋体;'>获取按钮松开状态显示文本</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>？</span><span lang=EN-US>Text</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=519 height=121 src="doc.files/image715.png" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>打印结果：命令与输出窗口打印按钮状态为</span><span lang=EN-US>“</span><span style='font-family:宋体; '>松开</span><span lang=EN-US>”</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><b><span lang=EN-US style='font-family:等线; '>&nbsp;</span></b></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="704.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="702.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

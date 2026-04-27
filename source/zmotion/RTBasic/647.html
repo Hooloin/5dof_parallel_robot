@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DRAWEX_ARC -- 绘制圆弧（带样式）</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="648.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="646.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc147915738"></a><a name="_DRAWEX_ARC"></a><span lang=EN-US>DRAWEX_ARC -- </span><span style='font-family:宋体;'>绘制圆弧（带样式）</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>类型</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border:solid black 1.0pt; border-left:none;padding:0cm 2.85pt 0cm 2.85pt; height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>绘图指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>描述</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>画圆弧</span><span lang=EN-US>/</span><span style='font-family:宋体; '>椭圆弧。</span><span style='font-family:宋体;'>与</span><span lang=EN-US>DRAWARC</span><span style='font-family:宋体; '>的区别在于</span><span lang=EN-US>DRAWEX_ARC</span><span style='font-family:宋体; color:red;'>可以设置线条宽度和线条类型</span><span style='font-family:宋体; '>，而</span><span lang=EN-US>DRAWARC</span><span style='font-family:宋体; '>不支持。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWEX</span><span style='font-family:宋体;'>绘图指令也将<span style='color:black;'>对绘制区域进行限制</span>，原则上是<span style='color:red'>不会允许画出自定义控件之外的</span>，</span><span lang=EN-US>DRAW</span><span style='font-family:宋体;'>相关指令则无限制。</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体; color:black;'>此指令只能在自定义元件的绘图函数内使用。</span><span style='font-family:宋体; '>请查看</span><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_自定义元件调用函数_1"><span lang=EN-US style='font-family:宋体; '><span lang=EN-US>自定义元件调用函数</span></span></a></span><span style='font-family:宋体; '>参考例程。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>语法</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWARC(centx, centy, radiusx, radiusy, startangle, endangle) </span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>centx, centy</span><span style='font-family:宋体;'>：圆心的位置</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>radiusx, radiusy</span><span style='font-family:宋体;'>：</span><span lang=EN-US>X</span><span style='font-family:宋体; '>和</span><span lang=EN-US>Y</span><span style='font-family:宋体;'>方向的半径</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>startangle</span><span style='font-family:宋体;'>：起始角度，弧度单位（公式：弧度</span><span lang=EN-US>=</span><span style='font-family:宋体; '>角度</span><span lang=EN-US>*PI/180</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>endangle</span><span style='font-family:宋体;'>：结束角度，弧度单位</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:21.0pt'><span style='font-family:宋体;'>绘制的角度说明：</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;text-indent:24.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:宋体; '><img border=0 width=303 height=298 src="doc.files/image641.png" alt="说明: IMG_256" ></span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span style='font-family:宋体;'>从起始角度向结束角度绘制圆弧：</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;'><span style='font-family:宋体;'>若起始角度</span><span lang=EN-US>&lt;</span><span style='font-family:宋体;'>结束角度：顺时针绘制圆弧</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt; text-indent:21.0pt;'><span style='font-family:宋体; '>若起始角度</span><span lang=EN-US>&gt;</span><span style='font-family:宋体; '>结束角度：逆时针绘制圆弧</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>适用控制器</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:17.0pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span style='font-family:宋体;'>支持</span><span lang=EN-US>RTHmi</span><span style='font-family:宋体;'>（仅支持</span><span lang=EN-US>4</span><span style='font-family:宋体;'>系列及以上控制器）</span></p>
+</td> </tr> <tr style='height:16.45pt'> <td width="15%" valign=top style='width:15.88%;border:solid black 1.0pt; border-top:none; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>例子</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例一：画整圆</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>SETEX_LINE(1,3)&nbsp;&nbsp; </span><span style='font-family: 宋体;'>‘设置线条样式</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWEX_ARC(200,200,50,50,0,2*PI)&nbsp;&nbsp; </span><span style='font-family: 宋体;'>‘绘制一个整圆</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US><img border=0 width=212 height=193 src="doc.files/image643.png" ></span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例二：</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>SETEX_LINE(3,0)&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>‘设置线条宽度</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWEX_ARC(200,200,50,50,0*PI/180,PI)&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>‘顺时针画半圆弧</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US><img border=0 width=291 height=182 src="doc.files/image645.png" ></span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span style='font-family: 宋体;'>例三：</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>SETEX_LINE(2,0)&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>‘设置线条宽度</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US>DRAWEX_ARC(200,200,50,50,90*PI/180,-135*PI/180)&nbsp; </span><span style='font-family:宋体; '>‘逆时针画圆弧</span></p>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US><img border=0 width=268 height=231 src="doc.files/image647.png" ></span></p>
+</td> </tr> <tr style='height:16.45pt'> <td width="15%" valign=top style='width:15.88%;border-top:none;border-left: solid black 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; background:#8DB3E1;padding:0cm 2.85pt 0cm 2.85pt; height:16.45pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><b><span style='font-family:宋体;'>相关指令</span></b></p>
+</td> <td width="84%" valign=top style='width:84.12%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt; padding:0cm 2.85pt 0cm 2.85pt;height:16.45pt'>
+<p class=MsoNormal style='margin-bottom:4.65pt;'><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#DRAWARC">DRAWARC</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_DRAWEX_LINE">DRAWEX_LINE</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_SETEX_LINE">SETEX_LINE</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="file:///D:\System\Desktop\RTHmi编程手册V1.0.0.docx#_bookmark12">SET_COLOR</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-bottom:4.65pt'><span lang=EN-US style='font-family:等线; '>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="648.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="646.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

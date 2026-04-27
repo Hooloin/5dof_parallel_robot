@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CAM_GetParam -- 获取参数</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="836.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="834.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc9552"></a><a name="_CAM_GetParam_--_获取参数"></a><span lang=EN-US>CAM_GetParam -- </span><span style='font-family:宋体;'>获取参数</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>图像采集相关</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:宋体'>使用参数名称，获取相机的参数值或扩展信息，结果为字符串。</span></p>
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:宋体'>支持扩展语法，即在名称后面加后缀如<span lang=EN-US>paramName:suffix</span>。</span></p>
+<p class=MsoNormal style='text-autospace:none'><span style='font-family:宋体'>参数名详情请参考附录<span lang=EN-US>II</span></span></p>
+</td>  </tr> <tr style='height:63.3pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
+<p class=MsoNormal><span lang=EN-US>CAM_GetParam(paramName,maxLen,tabId)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>paramName</span></b><b><span style='font-family:宋体'>：</span></b><span style='font-family:宋体'>参数名为字符串，可直接输参数名或参数名的扩展形式</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>maxLen</span></b><b><span style='font-family:宋体'>：</span></b><span lang=EN-US style='font-family:宋体'>tabId</span><span style='font-family:宋体'>可使用的最大长度</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family:宋体'>tabId</span></b><b><span style='font-family:宋体'>：</span></b><span style='font-family:宋体'>放置读取的参数值信息的<span lang=EN-US>TABLE</span>起始索引</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>paramName</span><span style='font-family:宋体'>解释如下：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>paramName </span></b><span lang=EN-US style='font-family:宋体'>-- </span><span style='font-family:宋体'>参数名普通形式，获取参数名对应的值</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>paramName:Range </span></b><span lang=EN-US style='font-family:宋体'>-- </span><span style='font-family:宋体'>参数名以<span lang=EN-US>Range</span>为后缀的扩展形式，获取参数的取值范围，<span lang=EN-US>Range</span>后缀只支持整形、浮点型、布尔型、枚举型等参数。对于整形、浮点型参数值是以<span lang=EN-US>&quot;:&quot;</span>冒号分割开的，比如参数如果有步长限制的话则输出<span lang=EN-US>&quot;minValue:maxValue:step&quot;</span>这种形式，若无步长限制则输出<span lang=EN-US>&quot;minValue:maxValue&quot;</span>这种形式；对于布尔型参数值是以<span lang=EN-US>&quot;,&quot;</span>逗号隔开的，如<span lang=EN-US>&quot;0,1&quot;</span>这种形式；对于枚举型参数值也是以<span lang=EN-US>&quot;,&quot;</span>逗号隔开的，如<span lang=EN-US>&quot;enum1, enum2, enum3,...&quot;</span>这种形式</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>paramName:Num </span></b><span lang=EN-US style='font-family:宋体'>-- </span><span style='font-family:宋体'>参数名以<span lang=EN-US>Num</span>为后缀的扩展形式，<span lang=EN-US>Num</span>后缀只支持枚举类型参数，获取枚举值的数量</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>paramName:Len </span></b><span lang=EN-US style='font-family:宋体'>-- </span><span style='font-family:宋体'>参数名以<span lang=EN-US>Len</span>为后缀的扩展形式，<span lang=EN-US>Len</span>后缀只支持字符串类型参数，获取输出字符串的长度</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>paramName:Str</span></b><span lang=EN-US style='font-family:宋体'> -- </span><span style='font-family:宋体'>参数名以<span lang=EN-US>Str</span>为后缀的扩展形式，<span lang=EN-US>Str</span>后缀只支持枚举类型参数，获取枚举符号</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family: 宋体'>paramName:Type</span></b><span lang=EN-US style='font-family:宋体'> -- </span><span style='font-family:宋体'>参数名以<span lang=EN-US>Type</span>为后缀的扩展形式，<span lang=EN-US>Type</span>后缀支持所有参数类型，获取参数的数据类型，如下表</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=349 style='width:149.6pt;margin-left:21.0pt;border-collapse:collapse;border: none; '> <tr> <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体'>Type</span><span style='font-family:宋体'>值</span></p>
+</td>  <td width=217 valign=top style='width:92.9pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体'>说明</span></p>
+</td>  </tr> <tr> <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体'>1</span></p>
+</td>  <td width=217 valign=top style='width:92.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体'>不支持或出错</span></p>
+</td>  </tr> <tr> <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体'>0</span></p>
+</td>  <td width=217 valign=top style='width:92.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体'>布尔类型</span></p>
+</td>  </tr> <tr> <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体'>1</span></p>
+</td>  <td width=217 valign=top style='width:92.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体'>整数类型</span></p>
+</td>  </tr> <tr> <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体'>2</span></p>
+</td>  <td width=217 valign=top style='width:92.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体'>浮点数类型</span></p>
+</td>  </tr> <tr> <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体'>3</span></p>
+</td>  <td width=217 valign=top style='width:92.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体'>字符串类型</span></p>
+</td>  </tr> <tr> <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体'>4</span></p>
+</td>  <td width=217 valign=top style='width:92.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体'>枚举类型</span></p>
+</td>  </tr> <tr> <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体'>5</span></p>
+</td>  <td width=217 valign=top style='width:92.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体'>命令类型</span></p>
+</td>  </tr> <tr> <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体'>6</span></p>
+</td>  <td width=217 valign=top style='width:92.9pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体'>寄存器类型</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>例一：</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>'</span><span style='font-family:宋体;'>获取整型参数</span><span lang=EN-US>&quot;Width&quot;</span><span style='font-family:宋体;'>的值，即图像的宽</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>DIM tmp(32)</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>CAM_GetParam(&quot;Width&quot;, 32, 0)&nbsp; '</span><span style='font-family:宋体;'>如值为</span><span lang=EN-US>1280</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>DMCPY tmp(0), TABLE(0), 32</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>图像宽度</span><span lang=EN-US> = &quot;tmp</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例二：</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>'</span><span style='font-family:宋体;'>获取枚举型参数</span><span lang=EN-US>&quot;TriggerMode &quot;</span><span style='font-family:宋体; '>的枚举值的数量</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>DIM tmp(32)</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>CAM_GetParam(&quot;TriggerMode:Num&quot;, 20, 0)&nbsp; '</span><span style='font-family:宋体;'>如值为</span><span lang=EN-US>2</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>DMCPY tmp(0), TABLE(0), 32</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>触发模式</span><span lang=EN-US> = &quot;tmp</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例三：</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>'</span><span style='font-family:宋体;'>获取浮点型参数</span><span lang=EN-US>&quot;ExposureTime&quot;</span><span style='font-family:宋体; '>的范围</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>DIM tmp(32)</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>CAM_GetParam(&quot;ExposureTime:Range&quot;, 32, 0)&nbsp; '</span><span style='font-family:宋体;'>如值为</span><span lang=EN-US>1:1000000</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>DMCPY tmp(0), TABLE(0), 32</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>?&quot;</span><span style='font-family:宋体;'>曝光时间</span><span lang=EN-US> = &quot;tmp</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="836.html#_CAM_SetParam_--_设置参数"><span lang=EN-US style='font-family:宋体'>CAM_SetParam</span></a><span style='font-family:宋体'>（设置参数）</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="836.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="834.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_CalGenRectifyMap -- 生成畸变矫正map图</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1178.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1176.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc985"></a><a name="_ZV_CalGenRectifyMap_--_生成畸变矫正map图"></a><span lang=EN-US>ZV_CalGenRectifyMap -- </span><span style='font-family: 宋体;'>生成畸变矫正</span><span lang=EN-US>map</span><span style='font-family:宋体;'>图</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>标定</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>生成将畸变图像矫正到无畸变图的映射</span><span lang=EN-US style='color:black'>map</span><span style='font-family:宋体; color:black'>图</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>若要对图像进行畸变矫正，通常首先使用此指令生成</span><span lang=EN-US style='color:black'>map</span><span style='font-family:宋体; color:black'>图，然后使用</span><span lang=EN-US style='color:black'>ZV_ImpMapImage</span><span style='font-family:宋体; color:black'>指令进行畸变矫正，矫正图像</span><span lang=EN-US style='color:black'>xy</span><span style=' font-family:宋体;color:black'>方向与世界坐标</span><span lang=EN-US style='color:black'>xy</span><span style=' font-family:宋体;color:black'>方向同向</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_CalGenRectifyMap(param,map1,map2[,rectifyType=0,width=0,height=0,rectCx=0,rectCy=0])</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>param</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输入参数，标定参数，仅适用透视畸变标定和针孔模型标定出的标定参数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>map1</span></b><b><span style=' font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style=' font-family:宋体;'>类型，单通道图像</span><span lang=EN-US>32F</span><span style=' font-family:宋体;'>，宽高由参数决定</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>map2</span></b><b><span style=' font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style=' font-family:宋体;'>类型，单通道图像</span><span lang=EN-US>32F</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>rectifyType</span></b><b><span style='font-family:宋体'>：</span></b><span style='font-family:宋体'>矫正类型，<span lang=EN-US>0 - </span></span><span style='font-family:宋体; '>透视畸变加径向畸变；</span><span lang=EN-US>1 - </span><span style='font-family:宋体; '>透视畸变矫正；</span><span lang=EN-US>2 - </span><span style='font-family:宋体; '>径向畸变矫正。<span style='color:red'>注意</span></span><span style='font-family:宋体;color:red'>：如果标定参数是由透视标定生成，选择<span lang=EN-US>0</span>矫正类型则只会进行透视矫正，选择<span lang=EN-US>2</span>矫正类型则会返回错误</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>width</span></b><b><span style='font-family:宋体'>：</span></b><span lang=EN-US style='font-family:宋体'>map</span><span style='font-family:宋体'>图像的宽，为<span lang=EN-US>0</span>时使用标定图像的宽</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>height</span></b><b><span style='font-family:宋体'>：</span></b><span lang=EN-US style='font-family:宋体'>map</span><span style='font-family:宋体'>图像的高，为<span lang=EN-US>0</span>时使用标定图像的高</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>rectCx</span></b><b><span style='font-family:宋体'>：</span></b><span style='font-family:宋体;'>矫正中心</span><span lang=EN-US>x</span><span style='font-family:宋体;'>，为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>时，默认使用图像中心</span><span lang=EN-US>x</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>rectCy</span></b><b><span style='font-family:宋体'>：</span></b><span style='font-family:宋体;'>矫正中心</span><span lang=EN-US>y</span><span style='font-family:宋体;'>，为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>时，默认使用图像中心</span><span lang=EN-US>y</span><span style='font-family:宋体;'>，在标定时含径向畸变，使用图像中心作为矫正中心效果最佳</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=310 height=231 src="doc.files/image1187.jpg" ></span><span lang=EN-US>&nbsp; <img border=0 width=293 height=232 src="doc.files/image1189.jpg" ></span></p>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>原图</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>透视畸变矫正</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=310 height=231 src="doc.files/image1190.jpg" ></span><span lang=EN-US>&nbsp; <img border=0 width=291 height=232 src="doc.files/image1192.jpg" ></span></p>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;'>原图</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>径向畸变矫正</span></p>
+<p class=MsoNormal style='text-indent:105.0pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=310 height=231 src="doc.files/image1193.jpg" ></span><span lang=EN-US>&nbsp; <img border=0 width=295 height=233 src="doc.files/image1195.jpg" ></span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>原图</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>透视畸变</span><span lang=EN-US> + </span><span style='font-family:宋体;'>径向畸变矫正</span></p>
+<p class=MsoNormal><span lang=EN-US>' </span><span style='font-family:宋体;'>标定或者加载已有的标定参数文件</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT param,map1,map2</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ObjRead(param,&quot;Calib.zvb&quot;)</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_CalGenRectifyMap(param,map1,map2,0,0,0) '</span><span style='font-family:宋体;'>生成畸变矫正</span><span lang=EN-US>map</span><span style='font-family:宋体;'>图</span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;tool3.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpMapImage(img,map1,map2,dst) '</span><span style='font-family:宋体;'>畸变矫正</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="1169.html#_ZV_CalCamera_--_标定"><span lang=EN-US style='color:#9999CC;'>ZV_CalCamera</span></a><span style='font-family:宋体;'>、</span><a title="Not Found Page:#_ZV_ImpMapImage -- 图像映射"><span lang=EN-US style='color:#9999CC;'>ZV_ImpMapImage</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1178.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1176.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

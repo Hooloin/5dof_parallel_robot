@@ -1,0 +1,84 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ImgRead -- 读取图像</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="861.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="859.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc12414"></a><a name="_ZV_ImgRead_--_读取图像"></a><span lang=EN-US>ZV_ImgRead -- </span><span style='font-family:宋体;'>读取图像</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><a name="_Toc24316"><b><span style='font-family:宋体; color:black'>类型</span></b></a></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>图像</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>根据</span><span lang=EN-US>type</span><span style=' font-family:宋体;'>取值读取图像</span><span style=' font-family:宋体;'>，支持多种图像文件格式，参考扩展名确定读取的文件格式</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_READIMAGE</span></p>
+</td>  </tr> <tr style='height:218.3pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:218.3pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:218.3pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,name[,type=0])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，读取的图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>name</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>待读取的图像路径，路径使用相对路径，相对路径可以在</span><a href="760.html#_默认目录"><span style=' font-family:宋体;color:windowtext;text-decoration:none;text-underline:none'>默认目录</span></a><span style='font-family:宋体; '>中设置，支持扩展名为</span><span lang=EN-US>zvb</span><span style='font-family:宋体; '>、</span><span lang=EN-US>bmp</span><span style='font-family:宋体; '>、</span><span lang=EN-US>jpg</span><span style='font-family:宋体; '>、</span><span lang=EN-US>png</span><span style='font-family:宋体; '>、</span><span lang=EN-US>tif</span><span style='font-family:宋体; '>、</span><span lang=EN-US>jpeg</span><span style='font-family:宋体; '>、</span><span lang=EN-US>tiff</span><span style='font-family:宋体; '>、</span><span lang=EN-US>jp2</span><span style='font-family:宋体; '>、</span><span lang=EN-US>webp</span><span style='font-family:宋体; '>、</span><span lang=EN-US>dib</span><span style='font-family:宋体; '>、</span><span lang=EN-US>pbm</span><span style='font-family:宋体; '>、</span><span lang=EN-US>pgm</span><span style='font-family:宋体; '>、</span><span lang=EN-US>ppm</span><span style='font-family:宋体; '>、</span><span lang=EN-US>pnm</span><span style='font-family:宋体; '>、</span><span lang=EN-US>ras</span><span style='font-family:宋体; '>，如果文件没有扩展名则添加</span><span lang=EN-US>bmp</span><span style='font-family:宋体; '>扩展名</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>type</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>控制参数，其中</span><span lang=EN-US>zvb</span><span style='font-family:宋体; '>（</span><span lang=EN-US>.zvb</span><span style='font-family:宋体; '>）格式暂不支持，将忽略该参数，以原格式读取</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='margin-left:21.0pt;border-collapse:collapse;border:none; '> <tr style='height:11.35pt'> <td width=132 valign=top style='width:2.0cm;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:11.35pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>type</span></p>
+</td>  <td width=331 valign=top style='width:5.0cm;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体; '>说明</span></p>
+</td>  </tr> <tr style='height:11.35pt'> <td width=132 valign=top style='width:2.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=331 valign=top style='width:5.0cm;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:11.35pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>读取为原格式图像</span></p>
+</td>  </tr> <tr style='height:11.35pt'> <td width=132 valign=top style='width:2.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width=331 valign=top style='width:5.0cm;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:11.35pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>读取为灰度图像</span></p>
+</td>  </tr> <tr style='height:11.35pt'> <td width=132 valign=top style='width:2.0cm;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:11.35pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width=331 valign=top style='width:5.0cm;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:11.35pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>读取为</span><span lang=EN-US>rgb</span><span style=' font-family:宋体;'>图像</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;logo.png&quot;,0)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>以原图像格式读取</span><span lang=EN-US>logo.png</span><span style='font-family:宋体;'>图片</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="841.html#_ZV_LATCHINFO_--_获取锁存信息"><span lang=EN-US style='color:#9999CC'>ZV_LATCH</span></a><span style='font-family:宋体; '>（显示图像）</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="861.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="859.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_TkMat2dAddRotate -- 变换矩阵追加旋转</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1214.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1212.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc26526"><span lang=EN-US>ZV_TkMat2dAddRotate -- </span></a><span style='font-family: 宋体;'>变换矩阵追加旋转</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>变换</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>向</span><span lang=EN-US>2D</span><span style='font-family:宋体; '>变换矩阵中追加旋转变换</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>旋转变换追加到变换矩阵</span><span lang=EN-US>mat</span><span style='font-family:宋体; '>中的方式有两种：不同的追加方式，变换性质不一样。</span></p>
+<p class=MsoListParagraph style='margin-left:0cm;text-indent:0cm;line-height:130%;layout-grid-mode:char; word-break:break-all'><span lang=EN-US style='line-height:130%;'>1. </span><span style='line-height:130%;font-family:宋体;'>一种是追加到</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>后面，相当于旋转矩阵右乘</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>，此时相对于在局部坐标系中执行旋转，旋转中心为</span><span lang=EN-US style='line-height:130%'>(0,0)</span><span style='line-height:130%;font-family:宋体;'>，局部坐标系由</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>描述，与</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>一致。</span></p>
+<p class=MsoListParagraph style='margin-left:0cm;text-indent:0cm;line-height:130%;layout-grid-mode:char; word-break:break-all'><span lang=EN-US style='line-height:130%;'>2. </span><span style='line-height:130%;font-family:宋体;'>一种是追加到</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>前面，相当于旋转矩阵左乘</span><span lang=EN-US style='line-height:130%'>mat</span><span style='line-height:130%;font-family:宋体;'>，此时相对于在全局坐标系中执行旋转，旋转中心为</span><span lang=EN-US style='line-height:130%'>(cx,cy),</span><span style='line-height:130%; font-family:宋体;'>即将旋转中心</span><span lang=EN-US style='line-height:130%'>(cx,cy)</span><span style=' line-height:130%;font-family:宋体; '>当成全局坐标系原点。变换链为先将</span><span lang=EN-US style='line-height:130%'>(cx,cy)</span><span style='line-height:130%;font-family:宋体;'>平移至全局坐标系原点，然后执行旋转，最后再平移至</span><span lang=EN-US style='line-height:130%'>(cx,cy)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>addMethod</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>0,</span><span style=' font-family:宋体;'>追加到</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>后面，即以</span><span lang=EN-US>(0,0)</span><span style=' font-family:宋体;'>为旋转中心先执行旋转变换再执行</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>变换</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:12.0pt; font-family:宋体;'><img border=0 width=431 height=185 src="doc.files/image1201.png" alt="说明: IMG_256" ></span></p>
+<p class=MsoNormal><span lang=EN-US>addMethod</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>，追加到</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>前面，即先执行</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>变换，然后将</span><span lang=EN-US>(cx,cy)</span><span style=' font-family:宋体;'>平移回全局坐标系原点执行旋转变换，最后再平移回</span><span lang=EN-US>(cx,cy)</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-size:12.0pt; font-family:宋体;'><img border=0 width=771 height=181 src="doc.files/image1203.png" alt="说明: IMG_256" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_MAT2DADDROT</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_TkMat2dAddRotate(mat,theta,cx,cy,addMethod) </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mat</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，变换矩阵</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>theta</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>旋转角度，顺时针为正</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cx</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>旋转中心</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>坐标，</span><span lang=EN-US>addMethod</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>时有效</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cy</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>旋转中心</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>坐标，</span><span lang=EN-US>addMethod</span><span style=' font-family:宋体;'>为</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>时有效</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>addMethod</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>旋转变换的追加方式，</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>为追加到变换矩阵</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>后面，</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>为追加到变换矩阵</span><span lang=EN-US>mat</span><span style=' font-family:宋体;'>前面，常用值为</span><span lang=EN-US>1</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mat</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0,1,0.2,0,0,1,0) '</span><span style='font-family:宋体;'>矩阵数据写入</span><span lang=EN-US>TABLE</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MatGenData(mat,2,3,0) '</span><span style='font-family:宋体;'>创建变换矩阵</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_TkMat2dAddRotate(mat,-20,0,0,1) '</span><span style='font-family:宋体;'>矩阵</span><span lang=EN-US>mat</span><span style='font-family:宋体;'>绕</span><span lang=EN-US>(0,0)</span><span style='font-family:宋体;'>逆时针旋转</span><span lang=EN-US>20°</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1214.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1212.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

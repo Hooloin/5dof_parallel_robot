@@ -1,0 +1,242 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_MrSetParam -- 设置形状测量参数</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1098.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1096.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc16908"></a><a name="_ZV_MrSetParam_--_设置形状测量参数"></a><span lang=EN-US>ZV_MrSetParam -- </span><span style='font-family: 宋体;'>设置形状测量参数</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>形状</span><span style='font-family:宋体; color:black'>测量</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通过类型设置测量器对应的参数，没有设置的使用默认值</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_MrSetParam(mr,type,value)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mr</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，测量器</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>type</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>待设置的参数类型，取值如下</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='margin-left:21.0pt;border-collapse:collapse;border:none;'> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>取值</span></p>
+</td>  <td width=132 style='width:2.0cm;border:solid windowtext 1.0pt;border-left: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>类型</span></p>
+</td>  <td width=99 style='width:42.5pt;border:solid windowtext 1.0pt;border-left: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>默认值</span></p>
+</td>  <td width=438 style='width:187.7pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>说明</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域高度</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>40</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域高度，单位像素，最小</span><span lang=EN-US>3</span><span style=' font-family:宋体;'>，最大</span><span lang=EN-US>32766</span><span style=' font-family:宋体;'>，因参数形式不同，仅创建测量器需要传入子区域高度的指令支持</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域宽度</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域宽度，单位像素，</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>自动计算优先取</span><span lang=EN-US>10</span><span style=' font-family:宋体;'>，最小</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>，最大</span><span lang=EN-US>2001</span><span style=' font-family:宋体;'>，所有子区域总宽度不能超过图像最大尺寸</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>3</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域数量</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域数量，默认</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>自动计算，矩形为一半数量，最小数量直线</span><span lang=EN-US>2</span><span style=' font-family:宋体;'>、圆</span><span lang=EN-US>3</span><span style=' font-family:宋体;'>、椭圆</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>、矩形</span><span lang=EN-US>4</span><span style=' font-family:宋体;'>（每边</span><span lang=EN-US>2</span><span style=' font-family:宋体;'>），最大</span><span lang=EN-US>500</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>4</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域间距</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域间距，中心点距离，</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>自动计算优先取子区域宽度，最小</span><span lang=EN-US>1</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>5</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>插值类型</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域图像插值类型：</span><span lang=EN-US>0-</span><span style=' font-family:宋体;'>最近邻、</span><span lang=EN-US>1-</span><span style=' font-family:宋体;'>双线性、</span><span lang=EN-US>2-</span><span style=' font-family:宋体;'>双三次</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>6</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>扫描方向</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域选点方向，</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>为从外向内、</span><span lang=EN-US>2</span><span style=' font-family:宋体;'>为从内向外，仅圆和椭圆测量器支持</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>7</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>滤波尺寸</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>5</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>滤波器尺寸，奇数，最小</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>，最大</span><span lang=EN-US>201</span><span style=' font-family:宋体;'>，如果为偶数则加</span><span lang=EN-US>1</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>8</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>梯度阈值</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>边缘最小梯度幅值，</span><span lang=EN-US>0</span><span style=' font-family:宋体;'>为自动设置默认值，对于绝对阈值模式为</span><span lang=EN-US>20</span><span style=' font-family:宋体;'>，相对阈值模式为</span><span lang=EN-US>120</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>9</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>极性</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>边缘极性：</span><span lang=EN-US>0-</span><span style=' font-family:宋体;'>白到黑、</span><span lang=EN-US>1-</span><span style=' font-family:宋体;'>黑到白、</span><span lang=EN-US>2-</span><span style=' font-family:宋体;'>所有</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>10</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>选择点</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>对于满足阈值和极性的点，指定选择最终点或点对的方式，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>第一点（点对）、</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>最后点（点对）、</span><span lang=EN-US>2-</span><span style='font-family:宋体; '>最强（提取幅值最大）、</span><span lang=EN-US>3-</span><span style='font-family:宋体; '>所有（保留，形状测量都不支持）、</span><span lang=EN-US style='color:#244061'>4-</span><span style='font-family:宋体; color:#244061'>最接近点对、</span><span lang=EN-US style='color:#244061'>5-</span><span style='font-family:宋体; color:#244061'>最不接近、</span><span lang=EN-US style='color:#244061'>6-</span><span style='font-family:宋体; color:#244061'>最宽、</span><span lang=EN-US style='color:#244061'>7-</span><span style='font-family:宋体; color:#244061'>最窄</span><span style=' font-family:宋体;'>，类型</span><span lang=EN-US>4</span><span style=' font-family:宋体;'>到</span><span lang=EN-US>7</span><span style=' font-family:宋体;'>只用于点对</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>11</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>拟合类型</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>4</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>拟合算法类型：</span><span lang=EN-US>0-</span><span style=' font-family:宋体;'>最小二乘、</span><span lang=EN-US>1-RANSAC</span><span style=' font-family:宋体;'>最小二乘迭代、</span><span lang=EN-US>2-</span><span style=' font-family:宋体;'>最小二乘迭代</span><span lang=EN-US>Tukey</span><span style=' font-family:宋体;'>权重、</span><span lang=EN-US>3-</span><span style=' font-family:宋体;'>最小二乘迭代</span><span lang=EN-US>Huber</span><span style=' font-family:宋体;'>权重、</span><span lang=EN-US>4-RANSAC Tukey</span><span style=' font-family:宋体;'>权重迭代、</span><span lang=EN-US>5-RANSAC Huber</span><span style=' font-family:宋体;'>权重迭代。椭圆测量器不支持此参数</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>12</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>拟合最小分数</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0.7</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>分数是参与拟合的点与子区域数量的比例，此参数设置最小分数，低于此分数则视为拟合失败，即没有测量结果。注意：分数设置过低容易测量到错误目标</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>13</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>拟合距离阈值</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>3.5</span></p>
+</td>  <td width=438 style='width:187.7pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>拟合算法</span><span lang=EN-US>1</span><span style=' font-family:宋体;'>和</span><span lang=EN-US>2</span><span style=' font-family:宋体;'>会计算拟合点到目标几何形状的距离，此参数设置距离的最大值，超出则视为离群点，离群点将被剔除并重新进行拟合迭代直至剩余点全部满足距离阈值</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>21</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域数量</span><span lang=EN-US>2</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=438 valign=top style='width:187.7pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>矩形第一边（左边或左右边对）子区域数量，默认</span><span lang=EN-US>0</span><span style='font-family:宋体; '>自动计算，最大</span><span lang=EN-US>500</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>22</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>子区域间距</span><span lang=EN-US>2</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+</td>  <td width=438 valign=top style='width:187.7pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>矩形第一边（左边或左右边对）子区域间距，默认</span><span lang=EN-US>0</span><span style='font-family:宋体; '>自动计算</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>23</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>第二极性</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>-1</span></p>
+</td>  <td width=438 valign=top style='width:187.7pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>参考极性参数，</span><span lang=EN-US>-1</span><span style=' font-family:宋体;'>表示自动，根据极性参数自动选择，点对测量相关功能和矩形测量功能支持</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>24</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>第二选点</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>-1</span></p>
+</td>  <td width=438 valign=top style='width:187.7pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>参考选择点参数，</span><span lang=EN-US>-1</span><span style=' font-family:宋体;'>表示自动，与选择点参数相同，仅矩形测量支持，边线模式用于第二边（上边），边对模式用于第二边对（上下边对）</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>25</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>第三极性</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>-1</span></p>
+</td>  <td width=438 valign=top style='width:187.7pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>参考极性参数，</span><span lang=EN-US>-1</span><span style=' font-family:宋体;'>表示自动，仅矩形测量支持，用于矩形第三边（右边）</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>26</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>第三选点</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>-1</span></p>
+</td>  <td width=438 valign=top style='width:187.7pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>参考选择点参数，</span><span lang=EN-US>-1</span><span style=' font-family:宋体;'>表示自动，仅边线模式矩形测量支持，用于矩形第三边（右边）</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>27</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>第四极性</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>-1</span></p>
+</td>  <td width=438 valign=top style='width:187.7pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>参考极性参数，</span><span lang=EN-US>-1</span><span style=' font-family:宋体;'>表示自动，仅矩形测量支持，用于矩形第四边（下边）</span></p>
+</td>  </tr> <tr> <td width=78 style='width:33.4pt;border:solid windowtext 1.0pt;border-top: none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>28</span></p>
+</td>  <td width=132 style='width:2.0cm;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>第四选点</span></p>
+</td>  <td width=99 style='width:42.5pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>-1</span></p>
+</td>  <td width=438 valign=top style='width:187.7pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>参考选择点参数，</span><span lang=EN-US>-1</span><span style=' font-family:宋体;'>表示自动，仅边线模式矩形测量支持，用于矩形第四边（下边）</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>value</span><span style='font-family:宋体; '>：设置的参数值，要在取值范围内</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT mr</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MrCreateRect2(mr,120,100,80,60,90,50,5,25) '</span><span style='font-family:宋体;'>生成旋转矩形测量器</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_MrSetParam(mr,1,40) '</span><span style='font-family:宋体;'>设置子区域高度为</span><span lang=EN-US>40</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="16%" valign=top style='width:16.46%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>相关指令</span></b></p>
+</td>  <td width="83%" valign=top style='width:83.54%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="1098.html#_ZV_MrGetParam_--_获取形状测量参数"><span lang=EN-US>ZV_MrGetParam</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1098.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1096.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

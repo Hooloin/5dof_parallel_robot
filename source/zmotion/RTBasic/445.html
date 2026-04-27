@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MODBUS_REG -- 字寄存器-16位整型</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="446.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="444.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_MODBUS_REG_--_字寄存器-16位整型"></a><a name="_MODBUS_REG"></a><a name="_Toc134698238"></a><a name="_Toc1381"></a><a name="_Toc1087"></a><a name="_Toc20320"></a><a name="_Toc1830"></a><a name="_MODBUS_REG_--_字寄存器-16位整型_1"></a><span lang=FR>MODBUS</span><span lang=EN-US>_<a name="_Toc253408898">REG</a> -- </span><span style='font-family:宋体;'>字寄存器</span><span lang=EN-US>-16</span><span style='font-family:宋体;'>位整型</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>MODBUS</span><span style='font-family:宋体; '>字寄存器</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;'>修改或者读取字寄存器，</span></b><b><span lang=EN-US>16</span></b><b><span style='font-family:宋体;'>位整型，触摸屏一般叫</span></b><b><span lang=EN-US>4x</span></b><b><span style='font-family:宋体;'>寄存器。</span></b></p>
+<p class=MsoNormal><b><span lang=EN-US>&nbsp;</span></b></p>
+<p class=MsoNormal><span lang=EN-US>ZMOTION</span><span style='font-family:宋体; '>运动控制器专门具备</span><span lang=EN-US>MODBUS</span><span style='font-family:宋体; '>字寄存器。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>不同型号控制器的字寄存器个数有区别。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>字寄存器间的关系查看“</span><span lang=EN-US><a title="Not Found Page:#_2.3.4_MODBUS_1">MODBUS<span lang=EN-US style='font-family:宋体; '><span lang=EN-US>寄存器</span></span></a></span><span style='font-family:宋体; '>”。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>控制器缺省使用系统</span><span lang=EN-US style='color:red;'>MODBUS</span><span style='font-family: 宋体; color:red;'>字寄存器，要修改时请设置</span><span lang=EN-US style='color:red;'>SETCOM</span><span style='font-family: 宋体; color:red;'>的第</span><span lang=EN-US style='color:red; '>7</span><span style='font-family:宋体;color:red; '>个参数。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>另：特殊的</span><span lang=EN-US>modbus 4x</span><span style='font-family:宋体; '>寄存器，通过这些寄存器可以直接从触摸屏读取一些状态。</span> </p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=570 style='width:244.4pt;margin-left:40.95pt;border-collapse:collapse; border:none; '> <tr> <td width=275 valign=top style='width:117.65pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>寄存器（</span><span lang=EN-US>zero based</span><span style='font-family:宋体;'>）</span></p>
+</td> <td width=123 valign=top style='width:52.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>类型</span></p>
+</td> <td width=173 valign=top style='width:74.25pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>意义</span></p>
+</td> </tr> <tr> <td width=275 valign=top style='width:117.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>13000-</span></p>
+</td> <td width=123 valign=top style='width:52.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>16</span></p>
+</td> <td width=173 valign=top style='width:74.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>DA</span><span style='font-family:宋体; '>输出</span></p>
+</td> </tr> <tr> <td width=275 valign=top style='width:117.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>14000-</span></p>
+</td> <td width=123 valign=top style='width:52.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>16</span></p>
+</td> <td width=173 valign=top style='width:74.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US>AD</span><span style='font-family:宋体; '>读取</span></p>
+</td> </tr> </table>
+<p class=MsoNormal></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>MODBUS_REG(regnum) = value</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>regnum</span><span style='font-family:宋体;'>：寄存器编号<span style='color:black'>，编号从</span></span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>开始</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>DIM VAR</span></p>
+<p class=MsoNormal><b><span lang=EN-US>MODBUS_REG</span></b><span lang=EN-US>(100) = 100&nbsp;&nbsp; 'reg100</span><span style='font-family:宋体;'>赋值</span><span lang=EN-US>100</span></p>
+<p class=MsoNormal><span lang=EN-US>VAR = <b>MODBUS_REG</b>(100)&nbsp; 'reg100</span><span style='font-family: 宋体; '>赋给变量</span><span lang=EN-US>VAR</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US><a href="443.html#_MODBUS_IEEE">MODBUS_IEEE</a></span><span style='font-family:宋体; color:black; '>，</span><span lang=EN-US><a href="444.html#_MODBUS_LONG">MODBUS_LONG</a></span><span style=' font-family:宋体;color:black;'>，</span><span lang=EN-US><a href="446.html#_MODBUS_STRING">MODBUS_STRING</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="446.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="444.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

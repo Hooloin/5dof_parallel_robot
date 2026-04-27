@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVE_PAUSE -- 运动暂停</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="36.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="34.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_MOVE_PT"></a><a name="_MOVE_PAUSE"></a><a name="_Toc134697830"></a><a name="_Toc12761"></a><a name="_Toc3612"></a><a name="_Toc5372"></a><a name="_Toc24684"><span lang=EN-US>MOVE_PAUSE -- </span></a><span style='font-family:宋体;'>运动暂停</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>特殊运动指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>BASE</span></b><b><span style='font-family:宋体;color:black; '>轴运动暂停。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>只有在单轴或多轴插补运动时有效，多轴联动时一起暂停。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>可以通过</span><span lang=EN-US style='color:black;'>AXISSTATUS</span><span style='font-family:宋体;color:black;'>来查询是否有暂停。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>当轴已经暂停或不在运动中时，调用这个指令会有警告输出，但不影响程序运行。</span><span style='font-family:宋体;'>某些运动不支持暂停，如</span><span lang=EN-US>VMOVE</span><span style='font-family:宋体;'>、同步运动指令等。</span></p>
+</td>  </tr> <tr style='height:54.6pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:54.6pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:54.6pt'>
+<p class=MsoNormal><span lang=EN-US>MOVE_PAUSE<span style='color:black'> (mode)</span></span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>mode</span><span style='font-family:宋体;color:black; '>：暂停方式</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=842 style='width:360.65pt;margin-left:22.4pt;border-collapse:collapse; border:none; '> <tr> <td width=126 valign=top style='width:54.0pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black; '>（缺省）</span></p>
+</td>  <td width=716 valign=top style='width:306.65pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black;'>暂停当前运动。</span></p>
+</td>  </tr> <tr> <td width=126 valign=top style='width:54.0pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>1</span></p>
+</td>  <td width=716 valign=top style='width:306.65pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black;'>在当前运动完成后正准备执行下一条运动指令时暂停</span></p>
+</td>  </tr> <tr> <td width=126 valign=top style='width:54.0pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>2</span></p>
+</td>  <td width=716 valign=top style='width:306.65pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black;'>在当前运动完成后正准备执行下一条运动指令时，并且两条指令的</span><span lang=EN-US style='color:black; '>MARK</span><span style='font-family:宋体;color:black; '>标识不一样时暂停</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black;'>这个模式可以用于一个动作由多个指令来实现时，可以在一整个动作完成后暂停</span></p>
+</td>  </tr> <tr> <td width=126 valign=top style='width:54.0pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>3</span></p>
+</td>  <td width=716 valign=top style='width:306.65pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black;'>强制暂停，</span><span lang=EN-US style='color:black; '>IDLE</span><span style='font-family:宋体;color:black; '>模式下也可以进入暂停状态</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:red;'>20170513</span><span style='font-family:宋体; color:red;'>固件版本增加此功能</span></p>
+</td>  </tr> <tr> <td width=126 valign=top style='width:54.0pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>4</span></p>
+</td>  <td width=716 valign=top style='width:306.65pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black;'>指定矢量位置暂停</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:red'>version_build 241025</span><span style='font-family:宋体;color:red'>以上固件增加</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE_PAUSE (mode[, markbits])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>markbits: mode=2</span><span style='font-family:宋体;color:black; '>时</span><span lang=EN-US style='color:black;'>,</span><span style='font-family:宋体;color:black; '>与</span><span lang=EN-US style='color:black;'>MARK</span><span style='font-family:宋体;color:black; '>相与来识别前后</span><span lang=EN-US style='color:black;'>MARK</span><span style='font-family:宋体;color:black;'>是否不同类型</span><span lang=EN-US style='color:black;'>, 32</span><span style='font-family:宋体;color:black;'>位整数</span><span lang=EN-US style='color:black;'>. </span><span style='font-family:宋体;color:black;'>缺省</span><span lang=EN-US style='color:black;'>:-1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_PAUSE(4, vectorpos)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>vectorpos: </span><span style='font-family:宋体;color:black; '>暂停的矢量位置</span><span lang=EN-US style='color:black;'>, </span><span style='font-family:宋体;color:black;'>不要小于当前位置</span><span lang=EN-US style='color:black;'>vector_moved,&nbsp; </span><span style='font-family:宋体;color:black; '>不要大于最大位置</span><span lang=EN-US style='color:black;'>vector_buffered. </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>! </span><span style='font-family:宋体;color:red; '>必须</span><span lang=EN-US style='color:red;'>merge=on </span><span style='font-family:宋体;color:red; '>的状态下使用</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>! </span><span style='font-family:宋体;color:red; '>分离模式和</span><span lang=EN-US style='color:red;'>MOVER, SPLINE</span><span style='font-family:宋体;color:red;'>指令下位置不准确</span><span lang=EN-US style='color:red;'>, </span><span style='font-family:宋体;color:red;'>不建议使用</span><span lang=EN-US style='color:red;'>.</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>! </span><span style='font-family:宋体;color:red; '>不能暂停后立即调用</span><span lang=EN-US style='color:red;'>MOVE_PAUSE(4 </span><span style='font-family:宋体;color:red;'>来指定下一个暂停位置</span><span lang=EN-US style='color:red;'>, </span><span style='font-family:宋体;color:red;'>因为</span><span lang=EN-US style='color:red;'>move_resume </span><span style='font-family:宋体;color:red;'>会清除暂停</span><span lang=EN-US style='color:red;'>.</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>MOVE_PAUSE<span style='color:black'> (mode)</span></span><span style='font-family:宋体;color:black; '>——</span><span style='font-family:宋体;color:black; '>通用</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE_PAUSE (mode[, markbits])</span><span style='font-family:宋体;'>——</span><span lang=EN-US>4</span><span style='font-family:宋体;'>系以上，</span><span lang=EN-US>version_build 220711</span><span style='font-family:宋体;'>以上固件增加</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_PAUSE(4, vectorpos)</span><span style='font-family:宋体;'>——</span><span lang=EN-US>4</span><span style='font-family:宋体;'>系以上</span><span lang=EN-US>, version_build 241025</span><span style='font-family:宋体;'>以上固件增加</span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span lang=EN-US>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US>SPEED=100</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例一</span><span lang=EN-US>&nbsp; mode 0</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE(1000)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;'>当前运动</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVEABS(-100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>缓冲运动</span></p>
+<p class=MsoNormal><b><span lang=EN-US>MOVE_PAUSE</span></b><span lang=EN-US>(0)&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>模式</span><span lang=EN-US>0</span><span style='font-family:宋体;'>，暂停当前运动</span><span lang=EN-US>&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>?DPOS(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>打印结果，</span><span lang=EN-US>0</span><span style='font-family:宋体;'>，此时当前运动只运行了极短时间，扫描到</span><span lang=EN-US>MOVE_PAUSE</span><span style='font-family:宋体;'>时直接暂停</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例二</span><span lang=EN-US>&nbsp; mode 1</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE(1000)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;'>当前运动</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVEABS(-100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;'</span><span style='font-family:宋体;'>缓冲运动</span></p>
+<p class=MsoNormal><b><span lang=EN-US>MOVE_PAUSE</span></b><span lang=EN-US>(1)&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;'>模式</span><span lang=EN-US>1</span><span style='font-family:宋体;'>，先完成当前运动再暂停</span> </p>
+<p class=MsoNormal><span lang=EN-US>WAIT IDLE&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>?DPOS(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>此时运行完当前运动，打印</span><span lang=EN-US>DPOS</span><span style='font-family:宋体;'>为</span><span lang=EN-US>1000</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例三</span><span lang=EN-US>&nbsp; mode 2</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE_MARK=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>标号手动设为</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE(200)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;'>当前运动</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE_MARK=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>标号设为与上一个运动一样</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVEABS(-100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>缓冲运动</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVEABS(100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>不设置运动标号，自动加一</span></p>
+<p class=MsoNormal style='margin-left:94.85pt;text-indent:-94.85pt; '><b><span lang=EN-US>MOVE_PAUSE</span></b><span lang=EN-US>(2)&nbsp; &nbsp;&nbsp;'</span><span style='font-family:宋体;'>模式</span><span lang=EN-US>2</span><span style='font-family:宋体;'>，先完成当前运动，然后直到下一条运动指令的标号与当前标号不一致时再暂停</span></p>
+<p class=MsoNormal><span lang=EN-US>DELAY(3000)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>等待暂停后</span></p>
+<p class=MsoNormal><span lang=EN-US>?DPOS(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>打印结果，</span><span lang=EN-US>-100</span><span style='font-family:宋体;'>，（速度过慢会导致打印时当前运动还在进行，导致结果大于</span><span lang=EN-US>-100</span><span style='font-family:宋体;'>）</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>此时运行完当前运动，下一条运动的标号被手动设置成相同的，继续执行，直到第</span><span lang=EN-US>3</span><span style='font-family:宋体;'>条运动标号不一致，暂停</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>例四</span><span lang=EN-US>&nbsp; mode4</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WHILE 1</span></p>
+<p class=MsoNormal><b><span lang=EN-US>MOVE_PAUSE</span></b><span lang=EN-US style='color:black; '> (4, VECTOR_MOVED +100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT UNTIL AXISSTATUS AND $800000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>? &quot;PAUSED&quot;, VECTOR_MOVED</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_RESUME</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DELAY 1 ‘ </span><span style=' font-family:宋体;color:black;'>注意</span><span lang=EN-US style='color:black;'>AXISSTATUS</span><span style=' font-family:宋体;color:black;'>要隔一个周期才更新</span><span lang=EN-US style='color:black;'>, </span><span style=' font-family:宋体;color:black;'>要延时确保不是上个周期的</span><span lang=EN-US style='color:black;'>AXISSTATUS .</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WEND</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="309.html#_MOVE_MARK"><span lang=EN-US>MOVE_MARK</span></a><span style='font-family:宋体;color:black; '>，</span><a href="36.html#_MOVE_RESUME"><span lang=EN-US>MOVE_RESUME</span></a><span style='font-family:宋体;color:black; '>，</span><a href="291.html#_AXISSTATUS"><span lang=EN-US>AXISSTATUS</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="36.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="34.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVEMODIFY2 -- 运动新位置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="14.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="12.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134697809"></a><a name="_Toc26523"><span lang=EN-US>MOVEMODIFY2 -- </span></a><span style='font-family:宋体;'>运动新位置</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>多轴运动指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>强制停止原来的运动</span></b><b><span lang=FR style='color:black; '>, </span></b><b><span style='font-family:宋体;color:black; '>接着</span></b><b><span style='font-family:宋体;color:black; '>按</span></b><b><span style='font-family:宋体;color:black;'>原来的速度</span></b><b><span style='font-family:宋体;color:black; '>与加速度</span></b><b><span style='font-family:宋体;color:black;'>定位到新目标位置</span></b><b><span style='font-family:宋体;color:black; '>。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>前面没有运动时与</span><span lang=EN-US style='color:black; '>MOVEABS</span><span style='font-family:宋体;color:black;'>效果一样，但各轴的运动是独立的，且</span><span style='font-family:宋体;'>不会进入运动缓冲<span style='color:black'>。见例一。</span></span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>需要</span><span lang=EN-US style='color:black; '>WAIT </span><span style='font-family:宋体;color:black;'>指令才能正确使用。见例二。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red;'>连续插补时使用</span><span lang=EN-US style='color:red; '>MOVEMODIFY2</span><span style='font-family:宋体; color:red;'>会破坏速度连续性。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>MOVEMODIFY2</span><span style='font-family:宋体;color:red; '>同时对多轴运动时不一定为直线插补。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>MOVEMODIFY</span><span style='font-family:宋体;color:red; '>和</span><span lang=EN-US style='color:red;'>MOVEMODIFY2</span><span style='font-family:宋体;color:red; '>指令在</span><span lang=EN-US style='color:red;'>32</span><span style='font-family:宋体;color:red; '>位控制器上使用时不建议设置很大的运动参数，否则可能会导致速度突变的情况；如需设置较大的运动参数，可以设置齿轮比把运动参数降低，或者更换</span><span lang=EN-US style='color:red; '>64</span><span style='font-family:宋体;color:red;'>位控制器使用。</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVEMODIFY2 (</span><span lang=FR style='color:black;'>abspos1, abspos2,[...]</span><span lang=EN-US style='color:black;'>)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>abspos1</span><span style='font-family:宋体;color:black; '>：</span><span lang=FR style='color:black; '>BASE</span><span style='font-family:宋体;color:black; '>第一个轴的新目标位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>abspos2</span><span style='font-family:宋体;color:black; '>：</span><span lang=FR style='color:black; '>BASE</span><span style='font-family:宋体;color:black; '>第二个轴的新目标位置</span></p>
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>3X</span><span style='font-family:宋体;color:red; '>系列</span><span lang=EN-US style='color:red;'> 20161209 </span><span style='font-family:宋体;color:red; '>以上固件支持</span><span lang=EN-US style='color:red;'>.</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>4</span><span style='font-family:宋体;color:red; '>系列</span><span lang=EN-US style='color:red;'> 20170509</span><span style='font-family:宋体;color:red; '>以上固件支持。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:red;'>特殊固件</span></p>
+</td>  </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>例一</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>BASE(0,</span><span lang=EN-US style='color:black;'>1</span><span lang=FR style='color:black; '>)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体; color:black;'>设为脉冲轴类型</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>SPEED = 100,100</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>ACCEL=1000,1000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;color:black; '>加速度设置</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>DECEL=1000,1000 </span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>TRIGGER</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>MOVE(200) AXIS(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=FR style='color:black; '>MOVEMODIFY2(50,200)</span></b><span lang=FR style='color:black; '>&nbsp; '</span><span style='font-family:宋体; color:black;'>取消</span><span lang=FR style='color:black; '>MOVE(200)</span><span style='font-family:宋体;color:black; '>，</span><span style='font-family:宋体;color:black; '>强制定位新的位置</span><span lang=FR style='color:black;'>(50,200)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>MOVE(100) AXIS(0)</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>运动轨迹</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=FR style='color:black; '>200</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>DPOS(1)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=FR style='color:black; '>200</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=779 height=395 src="doc.files/image056.png" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>例二</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>BASE(0,</span><span lang=EN-US style='color:black;'>1</span><span lang=FR style='color:black; '>)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体; color:black;'>设为脉冲轴类型</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>SPEED = 100,100</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>ACCEL=1000,1000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style='font-family:宋体;color:black; '>加速度设置</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>DECEL=1000,1000</span></p>
+<p class=MsoNormal><span lang=FR style='color:black; '>TRIGGER</span></p>
+<p class=MsoNormal><span lang=FR>MOVE(200)<span style='color:black'> AXIS(0)</span></span></p>
+<p class=MsoNormal><span lang=FR>WAIT UNTIL DPOS(0)&gt;=100&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体;color:black; '>等待轴</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black; '>运行过</span><span lang=FR style='color:black;'>100</span></p>
+<p class=MsoNormal><b><span lang=FR>MOVEMODIFY2(50,200)</span></b></p>
+<p class=MsoNormal><span lang=FR>MOVE(100)<span style='color:black'> AXIS(0)</span></span></p>
+<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>运动轨迹</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>竖直刻度同上</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=781 height=375 src="doc.files/image058.png" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="9.html#_MOVEMODIFY_--_修改运动位置_1"><span lang=EN-US>MOVEMODIFY</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="14.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="12.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

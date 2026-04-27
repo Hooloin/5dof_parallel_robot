@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CAD_OPTIMIZE -- 轨迹优化</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1350.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1348.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc169704944"></a><a name="_Toc129157815"><span lang=EN-US>CAD_OPTIMIZE -- </span></a><span style='font-family:宋体;'>轨迹优化</span></h3>
+
+<table class=basic border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>类型</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>CAD</span><span style='font-family:宋体; '>指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>描述</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-family:宋体;'>对</span><span lang=EN-US>dxf</span><span style='font-family:宋体; '>图形轨迹进行优化处理</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-family:宋体;'>当</span><span lang=EN-US>bIfUseSel</span><span style='font-family:宋体; '>缺省或</span><span lang=EN-US>=0</span><span style='font-family:宋体; '>时，该指令作用于全局，反之作用于选择</span><span lang=EN-US>[CAD]</span><span style='font-family:宋体; '>选中部分。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>语法</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>CAD_OPTIMIZE(option, optval [,bIfUseSel])</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US>option</span><span style=' font-family:宋体;'>：优化选项</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span lang=EN-US>0</span><span style=' font-family:宋体;'>：去除极小图形最大尺寸（</span><span lang=EN-US>a</span><span style='font-family:宋体; '>×</span><span lang=EN-US>a</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span lang=EN-US>1</span><span style=' font-family:宋体;'>：是否去除重复线，</span><span lang=EN-US>0</span><span style='font-family:宋体; '>或</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span lang=EN-US>2</span><span style=' font-family:宋体;'>：合并相连线，可合并最大距离</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span lang=EN-US>3</span><span style=' font-family:宋体;'>：曲线分割，输入曲线分割精度（</span><span lang=EN-US>0.01~0.5</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span lang=EN-US>4</span><span style=' font-family:宋体;'>：优化空移，输入参考精度（</span><span lang=EN-US>0.01~0.5</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span lang=EN-US>5</span><span style=' font-family:宋体;'>：路径排序</span></p>
+<p class=MsoNormal style='margin-left:63.0pt; vertical-align:middle'><span lang=EN-US>0-</span><span style=' font-family:宋体;'>不排序</span></p>
+<p class=MsoNormal style='margin-left:63.0pt; vertical-align:middle'><span lang=EN-US>1-</span><span style=' font-family:宋体;'>网格排序</span></p>
+<p class=MsoNormal style='margin-left:63.0pt; vertical-align:middle'><span lang=EN-US>2-</span><span style=' font-family:宋体;'>局部最小空移排序</span></p>
+<p class=MsoNormal style='margin-left:63.0pt; vertical-align:middle'><span lang=EN-US>3-</span><span style=' font-family:宋体;'>小图优先排序</span></p>
+<p class=MsoNormal style='margin-left:63.0pt; vertical-align:middle'><span lang=EN-US>4-</span><span style=' font-family:宋体;'>从里到外排序</span></p>
+<p class=MsoNormal style='margin-left:63.0pt; vertical-align:middle'><span lang=EN-US>5-</span><span style=' font-family:宋体;'>从左到右排序</span></p>
+<p class=MsoNormal style='margin-left:63.0pt; vertical-align:middle'><span lang=EN-US>6-</span><span style=' font-family:宋体;'>从右到左排序</span></p>
+<p class=MsoNormal style='margin-left:63.0pt; vertical-align:middle'><span lang=EN-US>7-</span><span style=' font-family:宋体;'>从上到下排序</span></p>
+<p class=MsoNormal style='margin-left:63.0pt; vertical-align:middle'><span lang=EN-US>8-</span><span style=' font-family:宋体;'>从下到上排序</span></p>
+<p class=MsoNormal style='margin-left:63.0pt; vertical-align:middle'><span lang=EN-US>9-</span><span style=' font-family:宋体;'>反向排序</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span lang=EN-US>6</span><span style=' font-family:宋体;'>：曲线平滑（<span style='color:red'>预留</span>），输入平滑精度</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span lang=EN-US>7</span><span style=' font-family:宋体;'>：路径反向，输入参数无效</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US>optval</span><span style=' font-family:宋体;'>：优化值，根据优化选项赋值</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US>bIfUseSel</span><span style=' font-family:宋体;'>：是否指定选中部分，缺省</span><span lang=EN-US>0</span><span style='font-family:宋体; '>忽略选择部分，作用于全局</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>适用控制器</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-family:宋体;'>支持</span><span lang=EN-US>ZHMI</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-family:宋体; '>例子</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US>CAD_OPTIMIZE(3, 0.05)&nbsp;&nbsp;&nbsp; ’</span><span style='font-family:宋体; '>曲线分割，参考精度为</span><span lang=EN-US>0.05</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt; margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1350.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1348.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

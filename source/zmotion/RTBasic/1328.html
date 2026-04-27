@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>CAD_LOADFILE -- 从文件中载入图片</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1329.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1327.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc129157792"></a><a name="_Toc21664"><span lang=EN-US>CAD_LOADFILE -- </span></a><span style='font-family:宋体;'>从文件中载入图片</span></h3>
+
+<table class=basic border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:none; '> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-size:10.0pt;font-family:宋体;'>类型</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>CAD</span><span style='font-size:10.0pt;font-family:宋体;'>指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-size:10.0pt;font-family:宋体;'>描述</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-size:10.0pt; font-family:宋体; '>设置</span><span lang=EN-US style='font-size:10.0pt;'>/</span><span style='font-size:10.0pt; font-family:宋体;'>获取当前加载图形文件，在</span><span lang=EN-US style='font-size:10.0pt;'>CAD</span><span style='font-size:10.0pt;font-family:宋体;'>控件内显示出来</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-size:10.0pt; font-family:宋体; '>支持格式：</span><span lang=EN-US style='font-size:10.0pt;'>dxf</span><span style='font-size:10.0pt; font-family:宋体;'>、</span><span lang=EN-US style='font-size:10.0pt;'>plt</span><span style='font-size:10.0pt;font-family:宋体;'>、</span><span lang=EN-US style='font-size:10.0pt;'>dst</span><span style='font-size:10.0pt; font-family:宋体; '>、</span><span lang=EN-US style='font-size:10.0pt;'>ai</span><span style='font-size:10.0pt; font-family:宋体;'>、</span><span lang=EN-US style='font-size:10.0pt;'>nc</span><span style='font-size:10.0pt;font-family:宋体;'>、</span><span lang=EN-US style='font-size:10.0pt;'>cnc</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-size:10.0pt; font-family:宋体; color:red;'>当前版本不支持加载大文件，限制</span><span lang=EN-US style='font-size:10.0pt;color:red; '>10M</span><span style='font-size:10.0pt;font-family:宋体;color:red;'>以内，</span><span lang=EN-US style='font-size:10.0pt;color:red;'>5M</span><span style='font-size:10.0pt; font-family:宋体;color:red;'>以上的图形文件加载时间过长可能会出现断连现象，重新连接即可。建议都使用</span><span lang=EN-US style='font-size:10.0pt;color:red; '>5M</span><span style='font-size:10.0pt;font-family:宋体;color:red;'>以下的图形文件。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-size:10.0pt;font-family:宋体;'>语法</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>CAD_LOADFILE(dxfname [, refdis[, layers]])</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>dxfname = CAD_LOADFILE ()</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>dxfname</span><span style='font-size:10.0pt; font-family:宋体; '>：</span><span lang=EN-US style='font-size:10.0pt;'>dxf</span><span style='font-size:10.0pt; font-family:宋体;'>文件名，带路径</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>refdis</span><span style='font-size:10.0pt; font-family:宋体; '>：导入复杂曲线分割精度，范围</span><span lang=EN-US style='font-size:10.0pt;'>[0.01~0.5]</span></p>
+<p class=MsoNormal style='margin-left:42.0pt; vertical-align:middle'><span style='font-size:10.0pt; font-family:宋体;color:red;'>该分割精度决定导入复杂曲线时是否自动分割为线段，</span><span lang=EN-US style='font-size:10.0pt;color:red; '>refdis</span><span style='font-size:10.0pt;font-family:宋体;color:red;'>缺省或</span><span lang=EN-US style='font-size:10.0pt;color:red;'>=0</span><span style='font-size:10.0pt; font-family:宋体;color:red;'>时，不自动分割曲线，反之则根据</span><span lang=EN-US style='font-size:10.0pt;color:red; '>refdis</span><span style='font-size:10.0pt;font-family:宋体;color:red;'>精度进行曲线分割</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>layers</span><span style='font-size:10.0pt; font-family:宋体; '>：选择加载图层，</span><span lang=EN-US style='font-size:10.0pt;'>bit0~bit31</span><span style='font-size:10.0pt; font-family:宋体;'>位有效，支持最大</span><span lang=EN-US style='font-size:10.0pt;'>32</span><span style='font-size:10.0pt;font-family:宋体;'>个图层</span></p>
+<p class=MsoNormal style='margin-left:52.5pt; vertical-align:middle'><span style='font-size:10.0pt; font-family:宋体;'>缺省加载所有图层（加载</span><span lang=EN-US style='font-size:10.0pt;'>G</span><span style='font-size:10.0pt;font-family:宋体;'>代码文件时无效）</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-size:10.0pt;font-family:宋体;'>适用控制器</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-size:10.0pt; font-family:宋体; '>支持</span><span lang=EN-US style='font-size:10.0pt;'>ZHMI</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="18%" valign=top style='width:18.6%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle;'><b><span style='font-size:10.0pt;font-family:宋体;'>例子</span></b></p>
+</td> <td width="81%" valign=top style='width:81.4%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-size:10.0pt; font-family:宋体; '>例子</span><span lang=EN-US style='font-size:10.0pt;'>1</span><span style='font-size:10.0pt; font-family:宋体;'>：</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>CAD_LOADFILE (“zheng.dxf”)&nbsp;&nbsp;&nbsp; ’</span><span style='font-size:10.0pt;font-family:宋体;'>加载“</span><span lang=EN-US style='font-size:10.0pt;'>zheng.dxf</span><span style='font-size:10.0pt; font-family:宋体; '>”文件</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>? CAD_LOADFILE ()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ’ =&gt; zheng.dxf</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>&nbsp;</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-size:10.0pt; font-family:宋体; '>例子</span><span lang=EN-US style='font-size:10.0pt;'>2</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>CAD_LOADFILE (“”)&nbsp;&nbsp;&nbsp;&nbsp; ’</span><span style='font-size:10.0pt;font-family:宋体;'>加载文件不存在，</span><span lang=EN-US style='font-size:10.0pt;'>[CAD]</span><span style='font-size:10.0pt; font-family:宋体; '>显示内容清空</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>? CAD_LOADFILE ()&nbsp;&nbsp;&nbsp;&nbsp; ’ =&gt;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>&nbsp;</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span style='font-size:10.0pt; font-family:宋体; '>例子</span><span lang=EN-US style='font-size:10.0pt;'>3</span><span style='font-size:10.0pt; font-family:宋体;'>：</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>CAD_LOADFILE (“zheng.dxf”, 0.05, 1)&nbsp;&nbsp;&nbsp; ’</span><span style='font-size:10.0pt; font-family:宋体;'>参考精度</span><span lang=EN-US style='font-size:10.0pt;'>=0.05</span><span style='font-size:10.0pt;font-family:宋体;'>，仅加载图层</span><span lang=EN-US style='font-size:10.0pt;'>1</span></p>
+<p class=MsoNormal style='vertical-align:middle'><span lang=EN-US style='font-size:10.0pt;'>? CAD_LOADFILE ()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ’ =&gt; zheng.dxf</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt; margin-left:0cm'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1329.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1327.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

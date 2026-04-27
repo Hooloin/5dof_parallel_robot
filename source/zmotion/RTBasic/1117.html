@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ContGen -- 生成轮廓</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1118.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1116.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc11475"><span lang=EN-US>ZV_ContGen -- </span></a><span style='font-family:宋体;'>生成轮廓</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black'>轮廓</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>提取二值图像前景目标的轮廓，也就是白色部分的边界。</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>二值图像的前景即是图像中白色部分，因此提取的轮廓是一个包围白色部分的闭合轮廓；如果图像边界也是前景，那么边界也会当成轮廓被提取出来</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:red'>注意：若图像轮廓边缘处噪点或毛边较多可结合图像形态学处理算子如开运算或闭运算将噪点或毛边去除后再提取轮廓</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span style=' position:absolute;z-index:251660288;left:0px;margin-left:238px;margin-top: 1165px;width:222px;height:73px'><img width=222 height=73 src="doc.files/image1139.png" ></span><span lang=EN-US><img border=0 width=247 height=124 src="doc.files/image1141.jpg" ></span><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span><span lang=EN-US><img border=0 width=157 height=122 src="doc.files/image1143.png" ></span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US><img border=0 width=157 height=122 src="doc.files/image1145.png" ></span></p>
+<p class=MsoNormal align=left style='text-align:left;text-indent:52.5pt; '><span style=' font-family:宋体;'>提取的轮廓，不裁剪</span> <span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-family:宋体; '>裁剪</span><span lang=EN-US>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style=' font-family:宋体;'>裁剪</span><span lang=EN-US>2</span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGen(img,contlist,mode,appro[,border=0])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:31.5pt;text-indent:-31.5pt;'><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，单通道</span><span lang=EN-US>8U</span><span style='font-family:宋体; '>类型，二值图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>contlist</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，列表类型，输出，列表中存储多个轮廓，轮廓属性根据参数</span><span lang=EN-US>appro</span><span style='font-family:宋体; '>不同而不同</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>mode</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>轮廓提取方式：</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>外轮廓，即外轮廓包围的内部轮廓会被过滤掉，只保留外轮廓，</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>所有轮廓</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>appro</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>轮廓表示方式：</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>点集方式即轮廓用一系列的点集表示</span><span lang=EN-US>,1-</span><span style='font-family:宋体; '>精简方式即轮廓用一系列的点集表示但水平、垂直、对角线将被精简成两个端点，建议使用</span><span lang=EN-US>0</span><span style='font-family:宋体; '>；</span><span lang=EN-US>appro</span><span style='font-family:宋体; '>为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时，</span><span lang=EN-US>contlist</span><span style='font-family:宋体; '>轮廓属性为曲线型和非多边形型；</span><span lang=EN-US>appro</span><span style='font-family:宋体; '>为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>时，</span><span lang=EN-US>contlist</span><span style='font-family:宋体; '>轮廓属性为曲线型和多边形型</span></p>
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.1pt; text-autospace:none'><b><span lang=EN-US>border</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>边界点裁剪模式：</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>不裁剪；</span><span lang=EN-US>1-</span><span style='font-family:宋体; '>裁剪；</span><span lang=EN-US>2-</span><span style='font-family:宋体; '>裁剪不与普通点临近的边界点</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=761 height=253 src="doc.files/image1146.jpg" alt="说明: 3" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT img,img_bw,cont_list</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(img,&quot;count1.jpg&quot;,0) '</span><span style='font-family:宋体;'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpThresh(img,img_bw,200,255) '</span><span style='font-family:宋体;'>图像二值化</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGen(img_bw,cont_list,1,0) '</span><span style='font-family:宋体;'>提取轮廓</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1118.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1116.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

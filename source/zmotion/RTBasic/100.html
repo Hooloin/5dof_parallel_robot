@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FORCE_SPEED -- 机械手运动的速度设置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="101.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="99.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc198286254"><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>FORCE_SPEED -- </span></a><span style='font-family:宋体; '>机械手运动的速度设置</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>轴参数</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black;'>此处只对</span></b><b><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>MOVER2</span></b><b><span style=' font-family:宋体; color:black;'>点位运动单独设置每条运动指令的速度值</span></b><span style=' font-family:宋体; color:black;'>，具体含义如下：</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black;'>对于点位运动</span></b><span style=' font-family:宋体; color:black;'>，通过</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>base</span><span style=' font-family:宋体; color:black;'>主轴号下</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>FORCE_SPEED</span><span style=' font-family:宋体; color:black;'>速度指令修改点位运动（</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>PTP</span><span style=' font-family:宋体; color:black;'>）多轴插补的运行速度。取值范围</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>0~1.0</span><span style=' font-family:宋体; color:black;'>。当取值为</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>1</span><span style=' font-family:宋体; color:black;'>时，则点位运动是</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>100%</span><span style=' font-family:宋体; color:black;'>满速运行。</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black;'>对于</span></b><b><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>MOVER2_JABS</span></b><b><span style=' font-family:宋体; color:black;'>点位运动</span></b><span style=' font-family:宋体; color:black;'>，因</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>base</span><span style=' font-family:宋体; color:black;'>关节轴，则取关节主轴号作为多轴插补运行速度；</span></p>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black;'>对于</span></b><b><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>MOVER2_PABS</span></b><b><span style=' font-family:宋体; color:black;'>点位运动</span></b><span style=' font-family:宋体; color:black;'>，因</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>base</span><span style=' font-family:宋体; color:black;'>虚拟轴，则取虚拟主轴号作为多轴插补运行速度（即虚拟轴的第</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>1</span><span style=' font-family:宋体; color:black;'>个轴号）。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>该指令用于修改</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>MOVER2_JABS</span><span style=' font-family:宋体; color:black;'>、</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>MOVER2_PABS</span><span style=' font-family:宋体; color:black;'>、</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>MOVER2_ARCHP</span><span style=' font-family:宋体; color:black;'>等点位运动（</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black; '>PTP</span><span style=' font-family:宋体; color:black;'>）运动类型的速度；当设置之后，机械手各关节轴的速度和加速度值都会柔性地变化。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>具体可见：</span><span style=' font-family:宋体; color:blue;'>该说明书“</span><a title="Not Found Page:#_MOVER2点位运动和轨迹运动的速度、加速度设置"><span style='font-family:宋体; '>点位运动和轨迹运动的速度、加速度设置</span></a><span style=' font-family:宋体; color:blue;'>”章节</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='font-size:11.0pt;font-family: "Calibri","sans-serif"; color:black;'>MOVER2_JABS</span><span style='font-size:11.0pt;font-family:宋体; color:black;'>、</span><span lang=EN-US style='font-size:11.0pt; font-family:"Calibri","sans-serif"; color:black; '>MOVER2_PABS</span><span style='font-size:11.0pt;font-family:宋体; color:black;'>等点位运动（</span><span lang=EN-US style='font-size:11.0pt; font-family:"Calibri","sans-serif"; color:black; '>PTP</span><span style='font-size:11.0pt;font-family:宋体; color:black;'>）指令的速度设置，取值范围</span><span lang=EN-US style='font-size:11.0pt; font-family:"Calibri","sans-serif"; color:black; '>0~1.0</span><span style='font-size:11.0pt;font-family:宋体; color:black;'>。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>4</span><span style='font-family:宋体; color:black;'>系列</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>20170511</span><span style='font-family:宋体; color:black;'>以上固件支持</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>例程</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>BASE(0,1,2,3,4,5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; '>选择</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>012345</span><span style='font-family:宋体; '>关节轴号</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>CONNFRAME(6,0,6,7,8,9,10,11)&nbsp; '</span><span style='font-family:宋体; '>六自由度机械手模型，第</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>6~11</span><span style='font-family:宋体; '>轴作为虚拟的</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>XYZABC</span><span style='font-family:宋体; '>轴</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>?&quot;</span><span style='font-family:宋体; '>正解模式</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&quot;</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>BASE(0,1,2,3,4,5)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>FORCE_SPEED=0.5&nbsp; ‘</span><span style='font-family:宋体; '>设置</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER_JABS</span><span style='font-family:宋体; '>点位运动的速度为</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>0.5</span><span style='font-family:宋体; '>，即将</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER_JABS</span><span style='font-family:宋体; '>速度设置为满速的</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>50%</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER_JABS(60,60,30,20,0,90)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>BASE(6,7,8,9,10,11)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>FORCE_SPEED=0.2&nbsp; ‘</span><span style='font-family:宋体; '>设置</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_PABS</span><span style='font-family:宋体; '>点位运动的速度为</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>0.2</span><span style='font-family:宋体; '>，即将该</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER_PABS</span><span style='font-family:宋体; '>速度设置为满速的</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>20%</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_PABS(-1,374,0,630,0,90,0)&nbsp; ‘MOVER_PABS</span><span style='font-family:宋体; '>将</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>20%</span><span style='font-family:宋体; '>速度运行</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>FORCE_SPEED=0.4&nbsp; ‘</span><span style='font-family:宋体; '>将</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER_PABS</span><span style='font-family:宋体; '>速度设置为满速的</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>40%</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_PABS(-1,374,0,630,0,90,0)&nbsp; ‘MOVER_PABS</span><span style='font-family:宋体; '>将</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>40%</span><span style='font-family:宋体; '>速度运行</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>SPEED_RATIO</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="101.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="99.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>GET# -- 读取字符</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="421.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="419.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_GET__#"></a><a name="_Toc134698211"></a><a name="_Toc15243"></a><a name="_Toc7346"></a><a name="_Toc2202"></a><a name="_Toc4812"></a><a name="_GET__#_1"></a><span lang=FR>GET</span><span lang=EN-US># -- </span><span style='font-family:宋体;'>读取字符</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>系统指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>从</span></b><b><span lang=EN-US style='color:black;'>RAW</span></b><b><span style='font-family:宋体;color:black;'>方式通讯或自定义网口通讯的通道里面读取一个字节，存入一个变量。</span></b></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>语法</span><span lang=EN-US style='color: black;'>1</span><span style='font-family:宋体;color:black; '>：</span><span lang=EN-US style='color:black;'>GET#PORT, VARIABLE</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>语法</span><span lang=EN-US style='color: black;'>2</span><span style='font-family:宋体;color:black; '>：</span><span lang=EN-US style='color:black;'>GET#PORT, ARRAY[(startindex)] [,maxchares]</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>语法</span><span lang=EN-US style='color: black;'>3</span><span style='font-family:宋体;color:black; '>：</span><span lang=EN-US style='color:black;'>charesget = GET#PORT, VARIABLE</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>语法</span><span lang=EN-US style='color: black;'>4</span><span style='font-family:宋体;color:black; '>：</span><span lang=EN-US style='color:black;'>charesget = GET#PORT, ARRAY[(startindex)] [,maxchares]</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>port</span><span style='font-family:宋体;color:black; '>：</span><span style='font-family:宋体;color:black; '>通道号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>variable</span><span style='font-family:宋体;color:black;'>：存放的变量名</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>startindex</span><span style='font-family:宋体;color:black;'>：存放数组的起始地址</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>maxchares</span><span style='font-family:宋体;color:black;'>：存放的最多数量</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>语法</span><span lang=FR style='color:black; '>1</span><span style='font-family: 宋体; color:black;'>、</span><span lang=FR style='color:black; '>2</span><span style='font-family: 宋体; color:black;'>没有读取到会阻塞</span><span style='font-family: 宋体; color:black;'>，</span><span style='font-family:宋体;color:black;'>这个函数一般在多任务里面进行调用。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>语法</span><span lang=EN-US style='color: black;'>3</span><span style='font-family:宋体;color:black; '>、</span><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体; color:black;'>会返回读取到的字节数。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>20150522</span><span style='font-family:宋体;color:black;'>版本以前只支持语法</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>UDP</span><span style='font-family:宋体; color:black; '>接收必须使用语法</span><span lang=EN-US style='color:black; '>4</span><span style='font-family:宋体;color:black; '>，采用数组来接收，数组长度不要比一次的</span><span lang=FR style='color:black;'>UDP</span><span style='font-family:宋体;color:black;'>包长度小。</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>UDP</span><span style='font-family:宋体; color:black; '>每次都是读取一整个包，如果数组长度不够，多余的会丢弃掉。</span></p>
+<p class=MsoNormal><span lang=FR style='color:black;'>UDP_SERVER</span><span style='font-family:宋体; color:black; '>模式时，每收到一个包，</span><span lang=FR style='color:black; '>PORT_TARGET</span><span style='font-family:宋体;color:black;'>自动变为包的发送方，因此可以同时接收多个从端的数据。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例一</span><span lang=EN-US style='color: black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DIM VAR1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SETCOM(38400,8,1,0,0,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>开启</span><span lang=EN-US style='color:black;'>RAW</span><span style='font-family:宋体;color:black;'>方式</span></p>
+<p class=MsoNormal style='tab-stops:357.85pt;layout-grid-mode:char; '><b><span lang=EN-US style='color:black; '>GET#</span></b><span lang=EN-US style='color:black; '>0, VAR1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="OLE_LINK8">'</a></span><span style='font-family:宋体;color:black;'>从通道</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black;'>读取数据</span></p>
+<p class=MsoNormal style='tab-stops:357.85pt;'><span lang=EN-US>PRINT VAR1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>&nbsp;'</span></span><span style='font-family: 宋体; color:black;'>打印读取数据</span></p>
+<p class=MsoNormal style='tab-stops:357.85pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例二</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DIM ARRAY1(101)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SETCOM(38400,8,1,0,0,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; '</span><span style='font-family: 宋体; color:black;'>开启</span><span lang=EN-US style='color: black;'>RAW</span><span style='font-family:宋体;color:black; '>方式</span></p>
+<p class=MsoNormal style='tab-stops:357.85pt;layout-grid-mode:char; '><span lang=EN-US style='color:black;'>CHARES = <b>GET#</b>0, ARRAY1, 100&nbsp; '</span><span style='font-family:宋体; color:black;'>从通道</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>最多读取</span><span lang=EN-US style='color:black;'>100</span><span style='font-family:宋体;color:black;'>个字符</span></p>
+<p class=MsoNormal style='tab-stops:357.85pt;'><span lang=EN-US style='color:black;'>If CHARES &gt; 0 THEN</span></p>
+<p class=MsoNormal style='margin-left:1.5pt;text-indent:21.0pt;tab-stops: 352.5pt;'><span lang=EN-US style='color:black; '>ARRAY1(CHARES) = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>设置结束</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal style='margin-left:1.5pt;text-indent:21.0pt;tab-stops: 352.5pt;'><span lang=EN-US style='color:black; '>PRINT ARRAY1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>字符串打印出来</span></p>
+<p class=MsoNormal style='tab-stops:352.5pt;'><span lang=EN-US style='color:black;'>ENDIF</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="431.html#_PORT_--_通道编号">PORT</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="410.html#_SETCOM">_SETCOM</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="423.html#_PRINT__#_1">PRINT#</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='tab-stops:352.5pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="421.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="419.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

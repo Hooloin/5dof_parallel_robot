@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>draw3D_Begin -- 设置点处理模式</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1383.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1381.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>draw3D_Begin -- </span><span style='font-family:宋体; '>设置点处理模式</span></h3>
+
+<div align=center>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=a9><span style='font-family:宋体; '>类型</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=a9><span lang=EN-US>Hmi</span></p>
+</td> </tr> <tr style='height:20.75pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:20.75pt'>
+<p class=a9><span style='font-family:宋体; '>描述</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:20.75pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>设置点的处理模式，进入图元（点）创建</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=a9><span style='font-family:宋体; '>语法</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US>draw3D_Begin(mode) </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>Mode: </span><span style='font-family: 宋体;'>点处理模式</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; 0: </span><span style='font-family:宋体;'>把每个顶点作为一个点进行处理，顶点</span><span lang=EN-US>n</span><span style='font-family:宋体;'>定义了点</span><span lang=EN-US>n</span><span style='font-family:宋体;'>，绘制</span><span lang=EN-US>N</span><span style='font-family: 宋体;'>个点。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; 1: </span><span style='font-family:宋体;'>把每个顶点作为一个独立的线段，顶点</span><span lang=EN-US>2n-1</span><span style='font-family:宋体;'>和</span><span lang=EN-US>2n</span><span style='font-family: 宋体;'>之间定义了</span><span lang=EN-US>n</span><span style='font-family:宋体; '>条线段，绘制</span><span lang=EN-US>N/2</span><span style='font-family:宋体;'>条线段</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; 2: </span><span style='font-family:宋体;'>绘制从第一个顶点到最后一个顶点依次相连的一组线段，第</span><span lang=EN-US>n</span><span style='font-family:宋体;'>和</span><span lang=EN-US>n+1</span><span style='font-family: 宋体;'>个顶点定义了线段</span><span lang=EN-US>n</span><span style='font-family:宋体; '>，绘制</span><span lang=EN-US>n-1</span><span style='font-family:宋体;'>条线段。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; 3: </span><span style='font-family:宋体; '>绘制从第一个顶点到最后一个顶点依次相连的一组线段，然后最后一个顶点和第一个顶点相连，第</span><span lang=EN-US>n</span><span style='font-family:宋体; '>和</span><span lang=EN-US>n+1</span><span style='font-family:宋体;'>个顶点定义了线段</span><span lang=EN-US>n</span><span style='font-family:宋体;'>，绘制</span><span lang=EN-US>n</span><span style='font-family: 宋体;'>条线段。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; 4:&nbsp; </span><span style='font-family:宋体; '>把每个顶点作为一个独立的三角形，顶点</span><span lang=EN-US>3n-2</span><span style='font-family:宋体; '>，</span><span lang=EN-US>3n-1</span><span style='font-family:宋体;'>和</span><span lang=EN-US>3n</span><span style='font-family: 宋体;'>定义了第</span><span lang=EN-US>n</span><span style='font-family:宋体; '>个三角形，绘制了</span><span lang=EN-US>N/3</span><span style='font-family:宋体;'>个三角形。</span></p>
+<p class=MsoNormal style='text-indent:10.5pt;'><span lang=EN-US>5</span><span style='font-family:宋体; '>：绘制一组相连的三角形，对于奇数</span><span lang=EN-US>n</span><span style='font-family:宋体; '>，顶点</span><span lang=EN-US>n</span><span style='font-family:宋体;'>、</span><span lang=EN-US>n+1</span><span style='font-family: 宋体;'>和</span><span lang=EN-US>n+2</span><span style='font-family:宋体; '>定义了第</span><span lang=EN-US>n</span><span style='font-family:宋体;'>个三角形；对于偶数</span><span lang=EN-US>n</span><span style='font-family:宋体;'>，顶点</span><span lang=EN-US>n+1</span><span style='font-family:宋体;'>、</span><span lang=EN-US>n</span><span style='font-family: 宋体;'>和</span><span lang=EN-US>n+2</span><span style='font-family:宋体; '>定义了第</span><span lang=EN-US>n</span><span style='font-family:宋体;'>个三角形，总共绘制</span><span lang=EN-US>N-2</span><span style='font-family:宋体;'>个三角形</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; 6</span><span style='font-family: 宋体;'>：绘制一组相连的三角形，三角形是由第一个顶点及其后给定的顶点确定，顶点</span><span lang=EN-US>1</span><span style='font-family:宋体; '>、</span><span lang=EN-US>n+1</span><span style='font-family:宋体;'>和</span><span lang=EN-US>n+2</span><span style='font-family: 宋体;'>定义了第</span><span lang=EN-US>n</span><span style='font-family:宋体; '>个三角形，总共</span><span lang=EN-US>N-2</span><span style='font-family:宋体;'>个三角形</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; 7</span><span style='font-family: 宋体;'>：绘制由四个顶点组成的一组单独的四边形。顶点</span><span lang=EN-US>4n</span><span style='font-family:宋体; '>－</span><span lang=EN-US>3</span><span style='font-family:宋体;'>、</span><span lang=EN-US>4n</span><span style='font-family: 宋体;'>－</span><span lang=EN-US>2</span><span style='font-family:宋体; '>、</span><span lang=EN-US>4n</span><span style='font-family:宋体;'>－</span><span lang=EN-US>1</span><span style='font-family: 宋体;'>和</span><span lang=EN-US>4n</span><span style='font-family:宋体; '>定义了第</span><span lang=EN-US>n</span><span style='font-family:宋体;'>个四边形。总共绘制</span><span lang=EN-US>N/4</span><span style='font-family:宋体;'>个四边形</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; 8</span><span style='font-family: 宋体;'>：绘制一组相连的四边形。每个四边形是由一对顶点及其后给定的一对顶点共同确定的。顶点</span><span lang=EN-US>2n</span><span style='font-family:宋体; '>－</span><span lang=EN-US>1</span><span style='font-family:宋体;'>、</span><span lang=EN-US>2n</span><span style='font-family: 宋体;'>、</span><span lang=EN-US>2n+2</span><span style='font-family:宋体; '>和</span><span lang=EN-US>2n+1</span><span style='font-family:宋体;'>定义了第</span><span lang=EN-US>n</span><span style='font-family:宋体;'>个四边形，总共绘制</span><span lang=EN-US>N/2-1</span><span style='font-family:宋体;'>个四边形</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; 9</span><span style='font-family: 宋体;'>：绘制一个凸多边形。顶点</span><span lang=EN-US>1</span><span style='font-family:宋体; '>到</span><span lang=EN-US>n</span><span style='font-family:宋体;'>定义了这个多边形。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参考：</span><span lang=EN-US>glbegin</span></p>
+</td> </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.62%;border-top:none;border-left: solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=a9><span style='font-family:宋体; '>适用控制器</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:none;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=a9><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none;background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=a9><span style='font-family:宋体; '>例子</span></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td> </tr> </table>
+</div>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1383.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1381.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

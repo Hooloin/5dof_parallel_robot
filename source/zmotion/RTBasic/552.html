@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FILE_ZREAD -- 文件读取字符</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="553.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="551.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698359"></a><a name="_FILE__ZREAD_–"></a><span lang=FR>FILE_ZREAD</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>文件读取字符</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>存储指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family: 宋体; '>从文件句柄</span></b><b><span lang=EN-US>handle</span></b><b><span style='font-family:宋体;'>指示的文件中读取</span></b><b><span lang=EN-US>maxchars</span></b><b><span style='font-family:宋体;'>个字符，读取字符放到</span></b><b><span lang=EN-US>table</span></b><b><span style='font-family:宋体;'>中索引</span></b><b><span lang=EN-US>tableindex</span></b><b><span style='font-family:宋体;'>开始的位置。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体; '>如果读取到文件结束符，则提前终止，函数返回读取的字符数。读取的数量有最大限制，超出则按照最大限制读取。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>命令语法：</span><span lang=FR style='color:black;'>FILE_ZREAD (handle, tableindex, maxchars)</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>函数语法：</span><span lang=FR style='color:black;'>num = FILE_ZREAD (handle, tableindex, maxchars)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>handle</span><span style='font-family:宋体;color:black;'>：函数</span><span lang=FR style='color:black;'>FILE_ZOPEN</span><span style='font-family:宋体;color:black;'>返回的文件句柄</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>tableindex</span><span style='font-family:宋体;color:black;'>：</span><span lang=FR style='color:black;'>table</span><span style='font-family:宋体;color:black;'>的索引，读取的字符存放到</span><span lang=FR style='color:black;'>tableindex</span><span style='font-family:宋体;color:black;'>开始的</span><span lang=FR style='color:black;'>table</span><span style='font-family:宋体;color:black;'>中，</span><span lang=FR style='color:black;'>table</span><span style='font-family:宋体;color:black;'>每个位置存放一个字符</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>maxchars</span><span style='font-family:宋体;color:black;'>：预定读取的最大字符数量，如果读取遇到文件结束，则数量可能不足，可通过返回值获取读取数量</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>4</span><span style='font-family:宋体; '>系列产品</span><span lang=EN-US>20170601</span><span style='font-family:宋体; '>以上版本支持</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体; color:black;'>参见</span><span lang=FR style='color:black;'>FILE_ZWRITES</span><span style='font-family:宋体;color:black;'>例程</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="548.html#_FILE_ZOPEN_–_打开文件"><span lang=FR>FILE_ZOPEN</span></a><span style='font-family:宋体;'>，</span><a href="549.html#_FILE_ZCLOSE_–_关闭文件"><span lang=EN-US>FILE_ZCLOSE</span></a><span style='font-family:宋体; color:black;'>，</span><a href="554.html#_FILE_ZSEEK_–_文件定位"><span lang=EN-US>FILE_ZSEEK</span></a><span style='font-family:宋体; color:black;'>，</span><a href="550.html#_FILE__ZWRITES_–"><span lang=FR>FILE_ZWRITES</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="553.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="551.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

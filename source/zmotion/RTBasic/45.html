@@ -1,0 +1,155 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVE_OP -- 缓冲输出</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="46.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="44.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_MOVE_OP_--_缓冲输出"></a><a name="_Toc134697838"></a><a name="_Toc28086"></a><a name="_Toc3946"></a><a name="_Toc12443"></a><a name="_Toc26028"></a><a name="_MOVE_OP_--_缓冲输出_1"></a><span lang=EN-US>MOVE_OP</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>缓冲输出</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>特殊运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>BASE</span></b><b><span style='font-family:宋体;color:black;'>轴运动缓冲加入一个输出口操作。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>这个指令</span><span lang=EN-US style='color:black;'>LOAD</span><span style='font-family: 宋体; color:black;'>执行时不做任何运动，只操作输出口。语法同</span><span lang=EN-US style='color:black;'>OP</span><span style='font-family:宋体;color:black;'>指令。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>普通模式，误差在一个扫描周期，所有控制器都可使用。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>精准位置输出模式，误差</span><span lang=EN-US style='color:red'>1</span><span style='font-family:宋体;color:red'>微秒以内，</span><span lang=EN-US style='color:red'>4</span><span style='font-family:宋体;color:red'>系列产品，</span><span lang=EN-US style='color:red'>20170421</span><span style='font-family:宋体; color:red'>以上版本支持。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>只有支持硬件比较输出的</span><span lang=EN-US style='color:red'>OP</span><span style='font-family:宋体;color:red'>口才支持精准输出功能。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>每个生效的精准输出</span><span lang=EN-US style='color:red'>MOVE_OP</span><span style='font-family:宋体; color:red'>需要间隔</span><span lang=EN-US style='color:red'>1</span><span style='font-family:宋体;color:red'>个周期时间才能继续生效，此间隔内新的</span><span lang=EN-US style='color:red'>MOVE_OP</span><span style='font-family:宋体;color:red'>自动使用普通方式，超过此间隔，新</span><span lang=EN-US style='color:red'>MOVE_OP</span><span style='font-family:宋体; color:red'>可继续生效。连续的</span><span lang=EN-US style='color:red'>MOVE_OP</span><span style='font-family:宋体;color:red'>，因为没有间隔时间，只有第一个生效。</span><span style='font-family: 宋体; color:black'>（某些控制器可以多个精准输出同时触发，具体查看控制器硬件手册说明，例如</span><span lang=EN-US style='color:black'>ZMC420SCAN</span><span style='font-family:宋体;color:black'>前</span><span lang=EN-US style='color:black'>8</span><span style='font-family:宋体; color:black'>个输出口支持精准输出，而且每个输出口可以同时使用精准输出）</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red'>MOVE_OP</span><span style='font-family:宋体;color:red'>的个数不建议超过</span><span lang=EN-US style='color:red'>10</span><span style='font-family:宋体;color:red'>个。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>同时使用多个</span><span lang=EN-US style='color:black'>OP</span><span style='font-family:宋体; color:black'>口的精准输出功能仅支持</span><span lang=EN-US style='color:black'>DPOS</span><span style='font-family:宋体;color:black'>位置的比较输出，使用单个</span><span lang=EN-US style='color:black'>OP</span><span style='font-family:宋体;color:black'>口时才支持</span><span lang=EN-US style='color:black'>MPOS</span><span style='font-family:宋体; color:black'>位置的比较输出。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>在控</span><span style='font-family:宋体;color:red'>制器支持</span><span lang=EN-US style='color:red'>OP</span><span style='font-family:宋体;color:red'>口独立的情况下，不同</span><span lang=EN-US style='color:red'>OP</span><span style='font-family:宋体;color:red'>口就算多个轴</span><span lang=EN-US style='color:red'>MOVE_OP</span><span style='font-family:宋体; color:red'>精准输出也不冲突，在</span><span lang=EN-US style='color:red'>OP</span><span style='font-family:宋体;color:red'>口精准输出功能不独立的情况，同时使用精准功能可能冲突。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red'>MOVE_OP</span><span style='font-family:宋体;color:red'>精准功能基于</span><span lang=EN-US style='color:red'>BASE</span><span style='font-family:宋体;color:red'>主轴，多个轴插补时，与</span><span lang=EN-US style='color:red'>BASE</span><span style='font-family:宋体;color:red'>主轴</span><span lang=EN-US style='color:red'>ATYPE</span><span style='font-family:宋体; color:red'>类型不一样的从轴，无法保证精准位置输出。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>增加支持不同</span><span lang=EN-US style='color:red'>MOVE_OP</span><span style='font-family:宋体; color:red'>指令可设置不同的精准参数，从而支持激光电源的</span><span lang=EN-US style='color:red'>us</span><span style='font-family:宋体;color:red'>级控制，开启精准输出或延时输出等参数指令在</span><span lang=EN-US style='color:red'>MOVE_OP</span><span style='font-family:宋体;color:red'>调用前设置即可。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red'>4</span><span style='font-family:宋体;color:red'>系列以上控制器，</span><span lang=EN-US style='color:red'>version_build: 20241029</span><span style='font-family: 宋体; color:red'>以后固件用</span><span lang=EN-US style='color:red'>MOVE_OP</span><span style='font-family:宋体;color:red'>不影响平滑。</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:red'>精准输出判断编码器是否到位，只能找尽可能的位置，哪个轴影响大就将该轴的细分设大一点。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>语法一：</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span lang=EN-US style='color:black;'> ([ionum],value)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style=' color:black;'>ionum</span><span style='font-family:宋体;color:black;'>：输出编号，从</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体; color:black;'>开始</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>value</span><span style='font-family:宋体; color:black;'>：输出状态，多个输出口操作时</span><span style='font-family:宋体; '>按位来指明多个口状态</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>语法二：</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span lang=EN-US style='color:black;'> (ionum1, ionum2,value[,mask])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>ionum1</span><span style='font-family:宋体; color:black;'>：要操作的第一个输出通道</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>ionum2</span><span style='font-family:宋体; color:black;'>：要操作的最后一个输出通道</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>value</span><span style='font-family:宋体; color:black;'>：输出状态，多个输出口操作时</span><span style='font-family:宋体; '>按位来指明多个口状态</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>mask</span><span style='font-family:宋体; color:black;'>：按位来设置值，指定哪些</span><span lang=EN-US style='color:black;'>IO</span><span style='font-family:宋体; color:black;'>需要操作，不填时从第一个通道到最后一个通道都操作</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例一：普通模式使用</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal style='tab-stops:208.05pt;'><span lang=EN-US style='color:black;'>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family: 宋体; color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(500)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVE_OP</span></b> <span lang=EN-US style='color:black;'>(0,ON)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>等待上条运动完成后，</span><span lang=EN-US style='color:black;'>OUT0</span><span style='font-family:宋体;color:black;'>口输出信号</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(500)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVE_OP</span></b> <span lang=EN-US style='color:black;'>(0,OFF)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>等待上条运动完成后，</span><span lang=EN-US style='color:black;'>OUT0</span><span style='font-family:宋体;color:black;'>口关闭信号</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVE_OP</span></b><span lang=EN-US style='color:black;'>(1,4,15)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'OUT1-4</span><span style='font-family:宋体; color:black;'>口输出信号，</span><span lang=EN-US style='color:black;'>15</span><span style='font-family:宋体;color:black;'>对应二进制</span><span lang=EN-US style='color:black;'>1111</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>轨迹曲线，为方便查看，进行了竖直偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1000</span><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OP(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1,</span><span style='font-family: 宋体; color:black;'>偏移</span><span lang=EN-US style='color: black;'>-0.1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OP(1)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1,</span><span style='font-family: 宋体; color:black;'>偏移</span><span lang=EN-US style='color: black;'>-0.2</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OP(2)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1,</span><span style='font-family: 宋体; color:black;'>偏移</span><span lang=EN-US style='color: black;'>-0.3</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OP(3)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1,</span><span style='font-family: 宋体; color:black;'>偏移</span><span lang=EN-US style='color: black;'>-0.4</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OP(4)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1,</span><span style='font-family: 宋体; color:black;'>偏移</span><span lang=EN-US style='color: black;'>-0.5</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=786 height=576 src="doc.files/image173.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例二：精准位置输出模式</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal style='tab-stops:208.05pt;'><span lang=EN-US style='color:black;'>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family: 宋体; color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MERGE=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>AXIS_ZSET(0)=2&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>开启</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体;color:black;'>的精准输出功能</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVE_OP</span></b><span lang=EN-US style='color:black;'>(0,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体; color:black; '>精准生效</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100)&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体; color:black; '>超过</span><span lang=EN-US style='color:black;'>2MS</span><span style='font-family:宋体; color:black; '>时间</span><span lang=EN-US style='color:black;'>, </span><span style='font-family:宋体; color:black; '>下个</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体; color:black; '>可继续精准生效</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>MOVE_OP</span></b><span lang=EN-US style='color:black;'>(0,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体; color:black; '>精准生效</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>轨迹曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>300</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OP(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=786 height=387 src="doc.files/image175.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例三：编码器精准位置输出模式</span></p>
+<p class=MsoNormal><span lang=EN-US>20170505</span><span style='font-family:宋体; '>以上固件版本支持</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DIM opnum</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>AXIS_ZSET = 3+16&nbsp; 'BIT4</span><span style='font-family:宋体; color:black; '>支持编码器精确位置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE= 4&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>轴使用脉冲加编码器类型，必须实际有接编码器线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED= 1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL = 1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MERGE=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>opnum = 0&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVEOP_DELAY = 2&nbsp; '</span><span style='font-family:宋体; color:black; '>实际输出时间延迟</span><span lang=EN-US style='color:black;'>2ms</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>HW_TIMER(0, 10000, 5000, 1, 0, opnum)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OP(opnum,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>初始化</span><span lang=EN-US style='color:black;'>OP</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>HW_TIMER(2, 10000, 5000, 1, 0, opnum)&nbsp; '</span><span style='font-family:宋体;color:black;'>输出变为</span><span lang=EN-US style='color:black;'>on</span><span style=' font-family:宋体;color:black;'>后</span><span lang=EN-US style='color:black;'>, 5000us </span><span style='font-family:宋体;color:black;'>后切换为</span><span lang=EN-US style='color:black;'>off</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(200)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(opnum,1)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>输出</span><span lang=EN-US style='color:black;'>on</span><span style=' font-family:宋体;color:black;'>后靠</span><span lang=EN-US style='color:black;'>HW_TIMER</span><span style='font-family:宋体;color:black;'>来延时关闭，延时</span><span lang=EN-US style='color:black;'>5ms</span><span style='font-family:宋体;color:black;'>后关闭</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_OP(opnum,1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE(50)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>轨迹曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>OP(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>2</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=858 height=411 src="doc.files/image177.jpg" ></span></p>
+</td> </tr> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US><a href="397.html#_OP">OP</a></span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US><a href="46.html#_MOVE_OP2">MOVE_OP2</a></span><span lang=EN-US style='color:black;'>&nbsp; </span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>精准位置输出模式</span><span lang=EN-US style='color:black;'>&nbsp; </span><span lang=EN-US><a href="497.html#_SYSTEM_ZSET">SYSTEM_ZSET</a></span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US><a href="368.html#_AXIS_ZSET">AXIS_ZSET</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="46.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="44.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,106 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>AXIS_ZSET -- 精准op设置</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="369.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="367.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_AXIS_ZSET_--_精准op设置"></a><a name="_AXIS_ZSET"></a><a name="_Toc134698156"></a><a name="_Toc26011"></a><a name="_Toc28158"></a><a name="_Toc3567"></a><a name="_Toc13942"></a><a name="_AXIS_ZSET_--_精准op设置_1"></a><span lang=EN-US>AXIS_ZSET -- </span><span style='font-family:宋体;'>精准</span><span lang=EN-US>op</span><span style='font-family:宋体;'>设置</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>对轴启用</span></b><b><span lang=EN-US style='color:black;'>MOVEOP</span></b><b><span style='font-family:宋体;color:black;'>精准输出功能，作用在轴组的主轴上。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>SYSTEM_ZSET</span><span style='font-family:宋体;color:black;'>修改的同时会修改当前</span><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体;color:black;'>轴的</span><span lang=EN-US style='color:black;'>AXIS_ZSET, </span><span style='font-family:宋体;color:black;'>以兼容旧的程序，一般不建议使用</span><span lang=EN-US style='color:black;'>SYSTEM_ZSET</span><span style='font-family:宋体;color:black;'>指令。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>设置参数：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>bit1</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US style='color:black;'>1-</span><span style='font-family:宋体;color:black;'>使用</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体;color:black;'>精确输出功能，</span><span lang=EN-US style='color:black;'>0- MOVE_OP</span><span style='font-family:宋体;color:black;'>原来的方式</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>bit4</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US style='color:black;'>1-</span><span style='font-family:宋体;color:black;'>对带编码器功能的轴，使用编码器位置的</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体;color:black;'>精准方式</span></p>
+<p class=MsoNormal style='text-indent:31.5pt; '><span style='font-family:宋体;color:black; '>多个编码器轴插补时，使用</span><span lang=EN-US style='color:black;'>BASE</span><span style='font-family:宋体;color:black;'>运动主轴的设置</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>bit5</span><span style='font-family:宋体;color:black;'>：</span><span lang=EN-US style='color:black;'>1-CANCEL(2)/ RAPIDSTOP(2)</span><span style='font-family:宋体;color:black;'>急停减速度为</span><span lang=EN-US style='color:black;'>DECEL</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'> 0-</span><span style='font-family:宋体;color:black;'>急停减速度为</span><span lang=EN-US style='color:black;'>FASTDEC</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>可读：</span><span lang=EN-US>VALUE=AXIS_ZSET</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>可写：</span><span lang=EN-US>AXIS_ZSET=VALUE</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>20170517</span><span style='font-family:宋体;color:red;'>以上固件版本</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例程</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>例一</span> <span style='font-family:宋体;color:black;'>开启精准输出</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>SPEED=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>ACCEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>DECEL=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>AXIS_ZSET(0)=2&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>开启</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体;color:black;'>的精准输出功能</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>MOVE(100)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>MOVE_OP(0,1)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>精准生效，选择输出通道</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>例二</span> <span style='font-family:宋体;color:black;'>开启多个编码器精准输出口</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>一般</span><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体;color:black;'>系列有</span><span lang=EN-US style='color:black;'>4</span><span style='font-family:宋体;color:black;'>个通道可以用于精准输出，部分型号有</span><span lang=EN-US style='color:black;'>8</span><span style='font-family:宋体;color:black;'>个，假设设备上有</span><span lang=EN-US style='color:black;'>3</span><span style='font-family:宋体;color:black;'>个点胶工位都要精准输出。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>BASE(0,1,2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>选择轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>为主轴</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>AXIS_ZSET(0)=19&nbsp; '</span><span style='font-family:宋体;color:black;'>开启主轴</span><span lang=EN-US style='color:black;'>MOVE_OP</span><span style='font-family:宋体;color:black;'>的编码器精准输出功能</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>……</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>BASE(3,4,5)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>AXIS_ZSET(3)=19</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>……</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>BASE(6,7,8)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>AXIS_ZSET(6)=19</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>……</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>例二</span> <span style='font-family:宋体;color:black;'>急停减速度选择</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>UNITS=100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>SPEED=1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>ACCEL=10000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>DECEL=10000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>减速度设为</span><span lang=EN-US style='color:black;'>1000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>FASTDEC=100000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>快减减速度设为</span><span lang=EN-US style='color:black;'>100000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>AXIS_ZSET=32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>减速度选择</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>MOVE(1000)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>当前运动</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>MOVE(-2000)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>缓冲运动</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>DELAY(500)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>CANCEL(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>急停</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>如下图，不设置</span><span lang=EN-US style='color:black;'>AXIS_ZSET</span><span style='font-family:宋体;color:black;'>的减速度应为</span><span lang=EN-US style='color:black;'>100000</span><span style='font-family:宋体;color:black;'>，设置后减速度为</span><span lang=EN-US style='color:black;'>10000</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=821 height=518 src="doc.files/image423.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="497.html#_SYSTEM_ZSET"><span lang=EN-US style='color:#9999CC; '>SYSTEM_ZSET</span></a><span style='font-family:宋体;color:black;'>，</span><a href="45.html#_MOVE_OP_--_缓冲输出_1"><span lang=EN-US style='color:#9999CC; '>MOVE_OP</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="369.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="367.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

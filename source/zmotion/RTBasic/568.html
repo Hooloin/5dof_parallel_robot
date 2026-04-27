@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>SLOT_SCAN -- 总线扫描</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="569.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="567.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>SLOT_SCAN -- </span><span style='font-family:宋体;'>总线扫描</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.92%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="84%" valign=top style='width:84.08%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>总线指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.92%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="84%" valign=top style='width:84.08%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>总线扫描</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>通过</span><span lang=EN-US style='color: black;'>RETURN</span><span style='font-family:宋体; color:black;'>返回成功与否，</span> <span style='font-family:宋体;color:black; '>返回</span><span lang=EN-US style='color:black; '>-1</span><span style='font-family:宋体;color:black; '>扫描成功，</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black; '>扫描失败。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>Rtex</span><span style='font-family: 宋体; color:black;'>扫描失败会直接报错</span><span lang=EN-US style='color:black;'>6209</span><span style='font-family: 宋体; color:black;'>。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>遇到不支持的设备类型，</span><span lang=EN-US style='color:red;'>RETURN</span><span style='font-family:宋体; color:red;'>会返回</span><span lang=EN-US style='color:red;'>0</span><span style='font-family:宋体; color:red;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>Rtex</span><span style='font-family:宋体; color:red;'>控制器未连接设备时会报错，</span><span lang=EN-US style='color:red;'>EtherCAT</span><span style='font-family:宋体; color:red;'>控制器不会。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>扫描后可以使用</span><span lang=EN-US style='color:black;'>NODE</span><span style='font-family: 宋体; color:black;'>指令读取相关设备信息，并使用</span><span lang=EN-US style='color:black;'>DRIVE</span><span style='font-family: 宋体; color:black;'>相关指令配置。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.92%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="84%" valign=top style='width:84.08%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>SLOT_SCAN (slot)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>slot</span><span style='font-family:宋体; '>：控制器</span><span lang=EN-US>EtherCAT</span><span style='font-family:宋体; '>槽位号或</span><span lang=EN-US>RTEX</span><span style='font-family:宋体; '>槽位号，</span><span lang=EN-US>0-</span><span style='font-family:宋体; '>缺省</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.92%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="84%" valign=top style='width:84.08%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>带</span><span lang=EN-US>EtherCAT</span><span style='font-family:宋体; '>接口或</span><span lang=EN-US>RTEX</span><span style='font-family:宋体; '>接口</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.92%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="84%" valign=top style='width:84.08%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>aa:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; '>标记</span><span lang=EN-US>aa</span></p>
+<p class=MsoNormal><b><span lang=EN-US>SLOT_SCAN</span></b><span lang=EN-US>(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>总线扫描</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>? RETURN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; '>打印返回值，</span><span lang=EN-US>-1</span><span style='font-family: 宋体; '>成功，</span><span lang=EN-US>0</span><span style='font-family:宋体; '>失败</span><span lang=EN-US>&nbsp; </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>IF RETURN THEN</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>?NODE_COUNT(0)&nbsp;&nbsp; <a name="OLE_LINK184">'</a></span><span style='font-family:宋体;'>扫描</span><span style='font-family:宋体; '>成功，返回当前连接的设备个数</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ELSE</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp; ?&quot;</span><span style='font-family:宋体; '>扫描失败</span><span lang=EN-US>&quot;</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>DELAY (1000)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>等待</span><span lang=EN-US>1s</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>GOTO aa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; '>扫描失败，跳转到</span><span lang=EN-US>aa</span><span style='font-family: 宋体; '>，重新扫描</span></p>
+<p class=MsoNormal><span lang=EN-US>ENDIF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="15%" valign=top style='width:15.92%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="84%" valign=top style='width:84.08%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="569.html#_SLOT_START">SLOT_START</a></span><span style='font-family:宋体;'>，</span><span lang=EN-US><a href="570.html#_SLOT_STOP">SLOT_STOP</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="569.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="567.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

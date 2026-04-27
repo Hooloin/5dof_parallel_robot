@@ -1,0 +1,84 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FLASH_READ2DBL -- flash读取2-double</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="545.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="543.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698350"><span lang=FR>FLASH_READ2DBL</span><span lang=EN-US> -- flash</span></a><span style='font-family:宋体;'>读取</span><span lang=EN-US>2-double</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>存储指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>从内部</span></b><b><span lang=FR> FLASH</span></b><b><span style='font-family: 宋体; '>指定位置</span></b><b><span style='font-family:宋体; '>读取数据到变量</span></b><b><span style='font-family:宋体; '>，</span></b><b><span style='font-family:宋体; '>或数组里面。</span></b></p>
+<p class=MsoNormal><b><span lang=EN-US>&nbsp;</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>使用方法同</span><span lang=FR>FLASH_READ2DBL</span><span style='font-family:宋体;'>，区别是</span><span lang=FR>FLASH_READ</span><span style='font-family:宋体; '>存储类型是</span><span lang=FR>float</span><span style='font-family:宋体; '>，</span><span lang=FR>32</span><span style='font-family:宋体; '>位，</span><span lang=FR>FLASH_READ2DBL</span><span style='font-family:宋体;'>存储的数据类型是</span><span lang=FR>double</span><span style='font-family:宋体; '>，</span><span lang=FR>64</span><span style='font-family:宋体;'>位。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>内部</span><span lang=EN-US style='color:red;'>FLASH</span><span style='font-family:宋体; color:red;'>采用顺序存储的方式，读取的顺序必须与存储时的顺序一致</span><span style='font-family:宋体;color:red;'>。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>读取未被写入过的</span><span lang=EN-US style='color:red;'>Flash</span><span style='font-family: 宋体; color:red;'>块时，会提示</span><span lang=EN-US style='color:red;'>Warn file:&quot;BASIC1.BAS&quot; line:5 task:0, File:C:\SD10.BIN open error, not load.</span><span style='font-family:宋体;color:red;'>，不影响使用。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>注意在运动中不要操作</span><span lang=EN-US style='color:red;'>FLASH</span><span style='font-family: 宋体; color:red;'>，对运动执行会有影响。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=FR>FLASH_READ2DBL<span style='color:black'> sect_num </span></span><span lang=FR>start_num</span><span lang=FR style='color:black;'> [, varname] [, arrayname] [, arrayname(a)] [, arrayname(a,length)]</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>sect_num</span><span style='font-family:宋体; '>：</span><span lang=FR>flash</span><span style=' font-family:宋体;'>块编号，不同类型不一样</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>start_num</span><span style='font-family:宋体; '>：</span><span style='font-family:宋体;'>文件内读取的起始位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>varname</span><span style='font-family:宋体; '>：变量名</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>arrayname</span><span style='font-family:宋体; '>：数组名，可以为</span><span lang=FR>TABLE</span><span style=' font-family:宋体;'>，</span><span lang=FR>VR</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>a</span><span style='font-family:宋体; '>：操作的数组索引</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>length</span><span style='font-family:宋体; '>：操作的数组元素个数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>4</span><span style='font-family:宋体; '>系列及以上控制器，</span><span lang=EN-US style='color:black;'>20190128</span><span style='font-family:宋体;color:black;'>及以上固件支持</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>FOR i=0 TO 10</span></p>
+<p class=MsoNormal style='margin-left:52.5pt; text-indent:-31.5pt; '><span lang=FR>TABLE(i)=120+i</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>NEXT</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>FLASH_WRITEDBL&nbsp; 1, TABLE(0,10) &nbsp;&nbsp; '</span><span style='font-family:宋体;'>数据写入</span><span lang=FR>flash</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>FOR i=0 TO 11</span></p>
+<p class=MsoNormal style='margin-left:52.5pt; text-indent:-31.5pt; '><span lang=FR>TABLE(i)=0</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>NEXT</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>FLASH_READ2</span> <span lang=FR>DBL&nbsp; 1,2, TABLE(4,5)</span> <span lang=FR> '</span><span style='font-family:宋体; '>从</span><span lang=FR>table(2)</span><span style='font-family:宋体;'>开始依次读出数据，读</span><span lang=FR>5</span><span style='font-family:宋体;'>个数据依次放到</span><span lang=FR>table(4)-table(8)</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>FOR i=0 TO 11</span></p>
+<p class=MsoNormal style='margin-left:52.5pt; text-indent:-31.5pt; '><span lang=FR>?&quot;TABLE&quot;,i,TABLE(i)</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>NEXT</span></p>
+<p class=MsoNormal style='margin-left:52.5pt;text-indent:-52.5pt;'><span lang=FR>END</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="542.html#_FLASH_READDBL_--_flash读取-double">F<span lang=FR>LASH_READDBL</span></a></span><span style='font-family:宋体; '>，</span><span lang=EN-US><a href="543.html#_FLASH_READ2_--_flash读取2">F<span lang=FR>LASH_READ2</span></a></span><span style='font-family:宋体; '>，</span><span lang=EN-US><a href="538.html#_FLASH_WRITE_--_flash存储"><span lang=FR>FLASH_WRITE</span></a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=FR>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="545.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="543.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

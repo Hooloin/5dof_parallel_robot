@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ReSortChar -- 区域按字符方式排序</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="976.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="974.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc6163"><span lang=EN-US>ZV_ReSortChar -- </span></a><span style='font-family:宋体;'>区域按字符方式排序</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>排序</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>将区域按照同行或列关系进行排序，排序不完全按照位置进行，允许同一行或列的区域存在适当距离的偏离，偏离以</span><span style=' font-family:宋体'>区域外接矩中心计算<span style='color:black'>，偏离过大则视为新行或列</span></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ReSortChar(list,sorted,scale,isInc,isCol)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>list</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，区域列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>sorted</span></b><b><span style='font-family:宋体;'>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体;'>类型，输出，排序后的区域列表，注意专用列表排序后输出为普通列表</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>scale</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>单行或列相对尺寸的最大偏离系数，对于行方向以最后一列字符的外接矩为基准，待定区域偏离中心小于尺寸</span><span lang=EN-US>*scale</span><span style='font-family:宋体;'>的视作同一行，</span><span lang=EN-US>1</span><span style='font-family:宋体;'>表示偏离程度等于行尺寸（即待定字符刚好位于行字符范围之外），列方向同理，范围</span><span lang=EN-US>[0,2]</span><span style='font-family:宋体;'>，一般取范围</span><span lang=EN-US>[0,1]</span><span style='font-family:宋体;'>即可</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>isInc</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>是否递增排序，</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>递减，</span><span lang=EN-US>1-</span><span style='font-family:宋体;'>递增</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>isCol</span></b><b><span style='font-family:宋体;'>：</span></b><span style='font-family:宋体;'>是否列排序，</span><span lang=EN-US>0-</span><span style='font-family:宋体;'>先行后列，</span><span lang=EN-US>1-</span><span style='font-family:宋体;'>先列后行</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.36%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.64%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZVOBJECT img,re,re_connent_list,selected,re_sorted</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_READIMAGE(img,&quot;sort_region.png&quot;,0) '</span><span style='font-family:宋体'>读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_RETHRESH(img,,re,0,120) '</span><span style=' font-family:宋体'>区域二值化</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_RECONNECT(re,re_connent_list) '</span><span style='font-family:宋体'>计算区域的连通区域</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_RESELECT(re_connent_list,selected,0,50,1000,0) ‘</span><span style='font-family:宋体'>区域面积过滤</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ZV_RESORTCHAR(selected,sorted,1.5,1,0) </span><span style='font-family:宋体'>‘对区域列表中的区域按照字符形式，先行后列升序排列</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="976.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="974.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

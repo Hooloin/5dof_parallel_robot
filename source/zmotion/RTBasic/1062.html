@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_McFindShapesState -- 多模板匹配并输出轮廓状态</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1063.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1061.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc5702"><span lang=EN-US>ZV_McFindShapesState -- </span></a><span style='font-family:宋体;'>多模板匹配并输出轮廓状态</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>形状模板匹配</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>使用形状模板列表，在图像</span><span lang=EN-US>img</span><span style='font-family:宋体; '>上进行多模板匹配，并输出模板轮廓点的匹配状态</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>根据模板类型及扩展算法参数，可以支持扩展算法，但匹配状态</span><span lang=EN-US>stat</span><span style='font-family:宋体; '>不支持，结果为空</span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_McFindShapesState(models,param,img,matchs,stat,[minScore=0,nums=0])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>models</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，形状模板列表</span></p>
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.1pt; text-autospace:none'><b><span lang=EN-US>param</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，参数矩阵，行数为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>或等于</span><span lang=EN-US>mods</span><span style='font-family:宋体; '>列表长度，列数小于等于</span><span lang=EN-US>9</span><span style='font-family:宋体; '>列，各列依次为最小分数、数量、最大重叠率、最低阈值、精度、速度、极性、变形、边界，列数不足则对应列取默认值，行数为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，则全部取默认值，行数为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>则所有模板共用参数，否则行数必须等于</span><span lang=EN-US>mods</span><span style='font-family:宋体; '>列表长度，模板使用对应行参数，保留逗号不填或填入未使用过的变量则全部使用默认参数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>img</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，待匹配的搜索图像，</span><span lang=EN-US>8U</span><span style='font-family:宋体; '>单通道，尺寸必须大于模板图片</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>matchs</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输出参数，匹配结果，矩阵，</span><span lang=EN-US>n</span><span style='font-family:宋体; '>行</span><span lang=EN-US>6</span><span style='font-family:宋体; '>列，每行一个匹配目标，列依次为匹配分数、</span><span lang=EN-US>x</span><span style='font-family:宋体; '>坐标、</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标、旋转角度、缩放比例、模板序号</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>stat</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，输出参数，匹配轮廓点每个点的匹配状态，</span><span lang=EN-US>n</span><span style='font-family:宋体; '>行</span><span lang=EN-US>m</span><span style='font-family:宋体; '>列</span><span lang=EN-US>8U</span><span style='font-family:宋体; '>图像类型，</span><span lang=EN-US>m</span><span style='font-family:宋体; '>为最长模板轮廓长度，不足的补</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，每行对应一个匹配结果，行上依次存储每个轮廓点的匹配状态，即对于某个轮廓点来说，匹配分数大于等于设置分数时为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>，小于匹配分数时为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>。匹配失败或参数为空时（保留逗号不填或填入未使用过的变量）不输出，此输出参数结合绘制模板指令</span><span lang=EN-US>ZV_DraShapeMatch</span><span style='font-family:宋体; '>可将匹配成功点和失败点绘制不同的颜色</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>minScore</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>最小匹配分值，范围</span><span lang=EN-US>[0,100]</span><span style='font-family:宋体; '>，分值越高匹配的目标越准确，越低容易将非目标当成目标，大于</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时针对所有匹配目标，等于</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时则使用</span><span lang=EN-US>param</span><span style='font-family:宋体; '>中的分值参数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>nums</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>最大匹配数量，</span><span lang=EN-US>[0, </span><span style='font-family:宋体; '>无穷</span><span lang=EN-US>)</span><span style='font-family:宋体; '>，当</span><span lang=EN-US>num</span><span style='font-family:宋体; '>大于真实目标时，以目标分数从高到低输出所有目标；当</span><span lang=EN-US>num</span><span style='font-family:宋体; '>小于真实目标时，以目标分数从高到低输出</span><span lang=EN-US>num</span><span style='font-family:宋体; '>个目标；当</span><span lang=EN-US>num</span><span style='font-family:宋体; '>为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时，则使用</span><span lang=EN-US>param</span><span style='font-family:宋体; '>中的数量参数，各模板匹配的目标根据对应的数量参数进行处理，所有保留的目标以分数降序输出</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr> <td width="17%" valign=top style='width:17.9%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.1%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><a href="1055.html#_ZV_McCreateShape_--_创建模板"><span lang=EN-US>ZV_McCreateShape</span></a><span style='font-family:宋体; '>、</span><a href="1056.html#_ZV_McCreateShapeScale_--_创建可缩放模板"><span lang=EN-US>ZV_McCreateShapeScale</span></a><span style='font-family:宋体; '>、</span><a href="1262.html#_ZV_DraShapeMatch_--_形状模板"><span lang=EN-US style='color:#9999CC'>ZV_DraShapeMatch</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1063.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1061.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

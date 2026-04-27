@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DISK_CONFIG -- 示教盒U盘功能</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="538.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="536.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc13185"><span lang=FR>DISK_CONFIG</span><span lang=EN-US> -- </span></a><span style='font-family:宋体;'>示教盒</span><span lang=EN-US>U</span><span style='font-family:宋体;'>盘功能</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>操作指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>在控制器端操作示教盒</span></b><b><span lang=EN-US style='color:black;'>U</span></b><b><span style='font-family:宋体;color:black;'>盘。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>！切换磁盘设置时，会自动关闭原来磁盘上打开的所有文件</span><span style='font-family:宋体;'>。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span lang=EN-US>DISK_CONFIG</span></b><span lang=EN-US> disknum, &quot;NONE&quot;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>关闭磁盘</span></p>
+<p class=MsoNormal><b><span lang=EN-US>DISK_CONFI</span></b><span lang=EN-US>G disknum, &quot;DEFAULT&quot;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>还原缺省配置</span></p>
+<p class=MsoNormal><b><span lang=EN-US>DISK_CONFIG</span></b><span lang=EN-US> disknum, &quot;LCD&quot;, iconnectport&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体;'>映射为当前</span><span lang=EN-US>LCD</span><span style='font-family:宋体; '>上的磁盘</span><span lang=EN-US>, </span><span style='font-family:宋体; '>必须</span><span lang=EN-US>ZHD</span><span style='font-family: 宋体; '>的固件支持。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>Disknum</span><span style='font-family:宋体;'>：本控制器磁盘编号</span><span lang=EN-US> 0-A</span><span style='font-family:宋体; '>盘，</span><span lang=EN-US>1-B</span><span style='font-family:宋体;'>盘</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>LCD</span><span style='font-family:宋体;'>：</span><span lang=EN-US>HMI</span><span style='font-family:宋体; '>编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>Iconnectport</span><span style='font-family:宋体;'>：使用互联</span><span lang=EN-US>PORT</span><span style='font-family:宋体; '>来通讯，建议</span><span lang=EN-US>21</span><span style='font-family:宋体; '>，不与传统互联通道</span><span lang=EN-US>20</span><span style='font-family: 宋体; '>冲突。</span><span lang=EN-US>?*PORT</span><span style='font-family:宋体; '>可以查看</span><span lang=EN-US>PORT</span><span style='font-family: 宋体; '>列表</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><b><span lang=EN-US>?*DISK</span></b><span style='font-family:宋体; '>可查看当前的磁盘信息</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>5</span><span style='font-family:宋体; '>系控制器，</span><span lang=EN-US>version_build 250518 </span><span style='font-family:宋体; '>以后固件，其他</span><span lang=EN-US>linux</span><span style='font-family:宋体;'>控制器陆续支持</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=FR>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="538.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="536.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ContGenEllipse -- 生成椭圆弧轮廓</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1121.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1119.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><span lang=EN-US>ZV_ContGenEllipse -- </span><span style='font-family: 宋体;'>生成椭圆弧轮廓</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.06%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:4.5pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.94%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>生成</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>生成一个椭圆或椭圆弧轮廓，注意起止角度为椭圆的离心角</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGenEllipse(cont,cx,cy,ra,rb,angle,stAngle,endAngle[,dist=1])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cont</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，生成的轮廓</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cx</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>椭圆弧中心</span><span lang=EN-US>x</span><span style='font-family:宋体; '>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>cy</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>椭圆弧中心</span><span lang=EN-US>y</span><span style='font-family:宋体; '>坐标</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>ra</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>椭圆弧半长轴</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>rb</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>椭圆弧半短轴</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>angle</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>椭圆弧旋转角度，顺时针方向，长轴与</span><span lang=EN-US>x</span><span style='font-family:宋体; '>轴夹角，单位度数</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>startAngle</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>椭圆弧起始角度，范围</span><span lang=EN-US>[-180,180)</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>endAngle</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>椭圆弧结束角度，范围</span><span lang=EN-US>[-540,540]</span><span style='font-family:宋体; '>，椭圆弧方向由起始角度和结束角度决定，当结束角度大于起始角度时，为顺时针，反之为逆时针。</span><span lang=EN-US>endAngle</span><span style='font-family:宋体; '>可超过</span><span lang=EN-US>-180/180</span><span style='font-family:宋体; '>，以正常描述椭圆弧走向。</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dist</span></b><b><span style='font-family:宋体; '>：</span></b><span style='font-family:宋体; '>椭圆弧相邻点的间距并不相等，</span><span lang=EN-US>dist</span><span style='font-family:宋体; '>为允许的相邻轮廓点的最大间距，越小则得到的轮廓点个数越多，默认为</span><span lang=EN-US>1</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;'>支持</span><span lang=EN-US>ZV</span><span style=' font-family:宋体;'>功能或者</span><span lang=EN-US>5</span><span style=' font-family:宋体;'>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.06%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='margin-top:7.8pt;margin-right:0cm; margin-bottom:7.8pt;margin-left:0cm;text-align:center'><span lang=EN-US><img border=0 width=238 height=238 src="doc.files/image1150.jpg" alt="说明: zv_cont_genellipse" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT cont,img</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ContGenEllipse</span><span lang=EN-US>(cont,150,150,100,60,0,-90,90,1) '</span><span style=' font-family:宋体;'>生成一个中心点坐标为</span><span lang=EN-US>(150,150)</span><span style='font-family:宋体; '>，长半轴为</span><span lang=EN-US>100</span><span style='font-family:宋体; '>，短半轴为</span><span lang=EN-US>60</span><span style='font-family:宋体; '>，角度为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，起始角度为</span><span lang=EN-US>-90</span><span style='font-family:宋体; '>，结束角度为</span><span lang=EN-US>90</span><span style='font-family:宋体; '>，最大间距为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>的椭圆弧轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style=' font-family:宋体;'>绘制生成的轮廓</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(0) = 0</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgGenConst(img,300,300,1,0,0)</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_DraContour</span><span lang=EN-US>(img,cont,255)</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1121.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1119.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

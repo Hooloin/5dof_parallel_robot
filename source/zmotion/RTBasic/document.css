@@ -1,0 +1,449 @@
+ <!-- 
+/* Font Definitions */
+ @font-face {font-family:Helvetica; panose-1:2 11 6 4 2 2 2 2 2 4; }
+ @font-face {font-family:Courier; panose-1:2 7 4 9 2 2 5 2 4 4; }
+ @font-face {font-family:"Tms Rmn"; panose-1:2 2 6 3 4 5 5 2 3 4; }
+ @font-face {font-family:Helv; panose-1:2 11 6 4 2 2 2 3 2 4; }
+ @font-face {font-family:"New York"; panose-1:2 4 5 3 6 5 6 2 3 4; }
+ @font-face {font-family:System; panose-1:0 0 0 0 0 0 0 0 0 0; }
+ @font-face {font-family:Wingdings; panose-1:5 0 0 0 0 0 0 0 0 0; }
+ @font-face {font-family:"MS Mincho"; panose-1:2 2 6 9 4 2 5 8 3 4; }
+ @font-face {font-family:Batang; panose-1:2 3 6 0 0 1 1 1 1 1; }
+ @font-face {font-family:宋体; panose-1:2 1 6 0 3 1 1 1 1 1; }
+ @font-face {font-family:PMingLiU; panose-1:2 1 6 1 0 1 1 1 1 1; }
+ @font-face {font-family:"MS Gothic"; panose-1:2 11 6 9 7 2 5 8 2 4; }
+ @font-face {font-family:Dotum; panose-1:2 11 6 0 0 1 1 1 1 1; }
+ @font-face {font-family:黑体; panose-1:2 1 6 9 6 1 1 1 1 1; }
+ @font-face {font-family:MingLiU; panose-1:2 1 6 9 0 1 1 1 1 1; }
+ @font-face {font-family:Mincho; panose-1:2 2 6 9 4 3 5 8 3 5; }
+ @font-face {font-family:Gulim; panose-1:2 11 6 0 0 1 1 1 1 1; }
+ @font-face {font-family:Century; panose-1:2 4 6 4 5 5 5 2 3 4; }
+ @font-face {font-family:"Angsana New"; panose-1:2 2 6 3 5 4 5 2 3 4; }
+ @font-face {font-family:"Cordia New"; panose-1:2 11 3 4 2 2 2 2 2 4; }
+ @font-face {font-family:Mangal; panose-1:0 0 4 0 0 0 0 0 0 0; }
+ @font-face {font-family:Latha; panose-1:2 0 4 0 0 0 0 0 0 0; }
+ @font-face {font-family:Sylfaen; panose-1:1 10 5 2 5 3 6 3 3 3; }
+ @font-face {font-family:Vrinda; panose-1:0 0 4 0 0 0 0 0 0 0; }
+ @font-face {font-family:Raavi; panose-1:2 0 5 0 0 0 0 0 0 0; }
+ @font-face {font-family:Shruti; panose-1:2 0 5 0 0 0 0 0 0 0; }
+ @font-face {font-family:Sendnya; panose-1:0 0 4 0 0 0 0 0 0 0; }
+ @font-face {font-family:Gautami; panose-1:2 0 5 0 0 0 0 0 0 0; }
+ @font-face {font-family:Tunga; panose-1:0 0 4 0 0 0 0 0 0 0; }
+ @font-face {font-family:"Estrangelo Edessa"; panose-1:0 0 0 0 0 0 0 0 0 0; }
+ @font-face {font-family:"Cambria Math"; panose-1:2 4 5 3 5 4 6 3 2 4; }
+ @font-face {font-family:"Arial Unicode MS"; panose-1:2 11 6 4 2 2 2 2 2 4; }
+ @font-face {font-family:Cambria; panose-1:2 4 5 3 5 4 6 3 2 4; }
+ @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 4 3 2 4; }
+ @font-face {font-family:"Calibri Light"; panose-1:2 15 3 2 2 2 4 3 2 4; }
+ @font-face {font-family:TimesNewRomanPSMT; }
+ @font-face {font-family:等线; panose-1:2 1 6 0 3 1 1 1 1 1; }
+ @font-face {font-family:CMR7; }
+ @font-face {font-family:CMSY10; }
+ @font-face {font-family:NimbusRomNo9L-Regu; }
+ @font-face {font-family:CMR10; }
+ @font-face {font-family:Tahoma; panose-1:2 11 6 4 3 5 4 4 2 4; }
+ @font-face {font-family:Verdana; panose-1:2 11 6 4 3 5 4 4 2 4; }
+ @font-face {font-family:新宋体; panose-1:2 1 6 9 3 1 1 1 1 1; }
+ @font-face {font-family:微软雅黑; panose-1:2 11 5 3 2 2 4 2 2 4; }
+ @font-face {font-family:幼圆; panose-1:2 1 5 9 6 1 1 1 1 1; }
+ @font-face {font-family:"\@宋体"; panose-1:2 1 6 0 3 1 1 1 1 1; }
+ @font-face {font-family:"\@等线"; panose-1:2 1 6 0 3 1 1 1 1 1; }
+ @font-face {font-family:"\@黑体"; panose-1:2 1 6 9 6 1 1 1 1 1; }
+ 
+/* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ h1 { margin-top:20.0pt; margin-right:0cm; margin-bottom:20.0pt; margin-left:22.4pt; text-align:justify; text-justify:inter-ideograph; text-indent:-22.4pt; line-height:200%; page-break-after:avoid; tab-stops:22.5pt; font-size:22.0pt; font-family:"Times New Roman","serif"; font-weight:bold;}
+ h2 { margin-top:13.0pt; margin-right:0cm; margin-bottom:13.0pt; margin-left:36.0pt; text-align:justify; text-justify:inter-ideograph; text-indent:-36.0pt; line-height:150%; page-break-after:avoid; tab-stops:36.0pt; layout-grid-mode:char; font-size:16.0pt; font-family:"Times New Roman","serif"; font-weight:bold;}
+ h3 { margin-top:13.0pt; margin-right:0cm; margin-bottom:13.0pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; line-height:150%; page-break-after:avoid; font-size:15.0pt; font-family:"Times New Roman","serif"; font-weight:bold; }
+ h4 { margin-top:10.0pt; margin-right:0cm; margin-bottom:10.0pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; line-height:150%; page-break-after:avoid; font-size:14.0pt; font-family:宋体; font-weight:bold; }
+ h5 { margin-top:13.0pt; margin-right:0cm; margin-bottom:13.0pt; margin-left:56.75pt; text-align:justify; text-justify:inter-ideograph; text-indent:-42.55pt; line-height:173%; page-break-after:avoid; tab-stops:56.75pt 72.0pt; font-size:16.0pt; font-family:"Times New Roman","serif"; font-weight:bold;}
+ h6 { margin-top:12.0pt; margin-right:0cm; margin-bottom:3.2pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; line-height:133%; page-break-after:avoid; font-size:12.0pt; font-family:"Arial","sans-serif"; font-weight:bold;}
+ p.MsoHeading7, li.MsoHeading7, div.MsoHeading7 { margin-top:12.0pt; margin-right:0cm; margin-bottom:3.2pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; line-height:133%; page-break-after:avoid; font-size:12.0pt; font-family:"Times New Roman","serif"; font-weight:bold;}
+ p.MsoHeading8, li.MsoHeading8, div.MsoHeading8 { margin-top:12.0pt; margin-right:0cm; margin-bottom:3.2pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; line-height:133%; page-break-after:avoid; font-size:12.0pt; font-family:"Arial","sans-serif"; }
+ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9 { margin-top:12.0pt; margin-right:0cm; margin-bottom:3.2pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; line-height:133%; page-break-after:avoid; font-size:10.5pt; font-family:"Arial","sans-serif"; }
+ p.MsoToc1, li.MsoToc1, div.MsoToc1 { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ p.MsoToc2, li.MsoToc2, div.MsoToc2 { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:21.0pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ p.MsoToc3, li.MsoToc3, div.MsoToc3 { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:42.0pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ p.MsoToc4, li.MsoToc4, div.MsoToc4 { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:63.0pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Calibri","sans-serif"; }
+ p.MsoToc5, li.MsoToc5, div.MsoToc5 { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:84.0pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Calibri","sans-serif"; }
+ p.MsoToc6, li.MsoToc6, div.MsoToc6 { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:105.0pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Calibri","sans-serif"; }
+ p.MsoToc7, li.MsoToc7, div.MsoToc7 { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:126.0pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Calibri","sans-serif"; }
+ p.MsoToc8, li.MsoToc8, div.MsoToc8 { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:147.0pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Calibri","sans-serif"; }
+ p.MsoToc9, li.MsoToc9, div.MsoToc9 { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:168.0pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Calibri","sans-serif"; }
+ p.MsoCommentText, li.MsoCommentText, div.MsoCommentText { margin:0cm; margin-bottom:.0001pt; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ p.MsoHeader, li.MsoHeader, div.MsoHeader { margin:0cm; margin-bottom:.0001pt; text-align:center; tab-stops:center 207.65pt right 415.3pt; layout-grid-mode:char; border:none; padding:0cm; font-size:9.0pt; font-family:"Times New Roman","serif"; }
+ p.MsoFooter, li.MsoFooter, div.MsoFooter { margin:0cm; margin-bottom:.0001pt; tab-stops:center 207.65pt right 415.3pt; layout-grid-mode:char; font-size:9.0pt; font-family:"Times New Roman","serif"; }
+ p.MsoCaption, li.MsoCaption, div.MsoCaption { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; layout-grid-mode:char; font-size:10.0pt; font-family:"Arial","sans-serif"; }
+ span.MsoCommentReference { }
+ span.MsoEndnoteReference { vertical-align:super;}
+ p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText { margin:0cm; margin-bottom:.0001pt; layout-grid-mode:char; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ p.MsoTitle, li.MsoTitle, div.MsoTitle { margin-top:12.0pt; margin-right:0cm; margin-bottom:3.0pt; margin-left:0cm; text-align:center; font-size:26.0pt; font-family:"Arial","sans-serif"; font-weight:bold;}
+ p.MsoBodyText, li.MsoBodyText, div.MsoBodyText { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:12.0pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:宋体; }
+ p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:17.95pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; text-indent:17.95pt; font-size:10.5pt; font-family:"Times New Roman","serif"; layout-grid-mode:line;}
+ p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle { margin-top:12.0pt; margin-right:0cm; margin-bottom:3.0pt; margin-left:0cm; text-align:center; line-height:130%; layout-grid-mode:char; font-size:16.0pt; font-family:"Calibri Light","sans-serif"; font-weight:bold;}
+ p.MsoBodyTextFirstIndent, li.MsoBodyTextFirstIndent, div.MsoBodyTextFirstIndent { margin-top:0cm; margin-right:0cm; margin-bottom:6.0pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; text-indent:21.0pt; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ p.MsoBodyTextFirstIndent2, li.MsoBodyTextFirstIndent2, div.MsoBodyTextFirstIndent2 { margin-top:0cm; margin-right:0cm; margin-bottom:6.0pt; margin-left:21.0pt; text-align:justify; text-justify:inter-ideograph; text-indent:21.0pt; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2 { margin-top:0cm; margin-right:0cm; margin-bottom:6.0pt; margin-left:21.0pt; text-align:justify; text-justify:inter-ideograph; line-height:200%; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ a:link, span.MsoHyperlink { color:#3366CC; text-decoration:underline; text-underline:single;}
+ a:visited, span.MsoHyperlinkFollowed { color:#9999CC; text-decoration:underline; text-underline:single;}
+ p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; background:navy; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ p.MsoPlainText, li.MsoPlainText, div.MsoPlainText { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:宋体; }
+ p { margin-right:0cm; margin-left:0cm; font-size:12.0pt; font-family:宋体; }
+ code { font-family:宋体; }
+ pre { margin:0cm; margin-bottom:.0001pt; tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size:12.0pt; font-family:宋体; }
+ p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject { margin:0cm; margin-bottom:.0001pt; font-size:10.5pt; font-family:"Times New Roman","serif"; font-weight:bold;}
+ p.MsoAcetate, li.MsoAcetate, div.MsoAcetate { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:9.0pt; font-family:"Times New Roman","serif"; }
+ span.MsoPlaceholderText { color:gray;}
+ p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing { margin:0cm; margin-bottom:.0001pt; layout-grid-mode:char; font-size:14.0pt; font-family:"Tahoma","sans-serif"; }
+ p.MsoRMPane, li.MsoRMPane, div.MsoRMPane { margin:0cm; margin-bottom:.0001pt; font-size:10.5pt; font-family:等线; }
+ p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; text-indent:21.0pt; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ p.MsoQuote, li.MsoQuote, div.MsoQuote { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; layout-grid-mode:char; font-size:10.5pt; font-family:"Calibri","sans-serif"; color:black; font-style:italic;}
+ p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading { margin-top:24.0pt; margin-right:0cm; margin-bottom:0cm; margin-left:0cm; margin-bottom:.0001pt; line-height:115%; page-break-after:avoid; font-size:14.0pt; font-family:"Calibri Light","sans-serif"; color:#2E74B5; font-weight:bold;}
+ span.1Char { font-weight:bold;}
+ span.2Char { font-family:黑体; font-weight:bold;}
+ span.3Char { font-weight:bold; }
+ span.4Char { font-family:宋体; font-weight:bold; }
+ span.5Char { font-weight:bold;}
+ span.6Char { font-family:"Arial","sans-serif"; font-weight:bold;}
+ span.7Char { font-weight:bold;}
+ span.8Char { font-family:"Arial","sans-serif"; }
+ span.9Char { font-family:"Arial","sans-serif"; }
+ span.Char { }
+ span.Char0 { font-family:宋体; }
+ span.Char1 { layout-grid-mode:both;}
+ span.Char2 { }
+ span.Char3 { }
+ p.TableParagraph, li.TableParagraph, div.TableParagraph { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ span.111Char { font-family:宋体; font-weight:bold;}
+ p.111, li.111, div.111 { margin-top:13.0pt; margin-right:0cm; margin-bottom:13.0pt; margin-left:36.0pt; text-align:justify; text-justify:inter-ideograph; text-indent:-36.0pt; line-height:150%; page-break-after:avoid; tab-stops:36.0pt; layout-grid-mode:char; font-size:16.0pt; font-family:宋体; font-weight:bold;}
+ p.a, li.a, div.a { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; text-indent:78.3pt; tab-stops:55.15pt 63.0pt; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ span.Char4 { }
+ span.1 { color:#605E5C; background:#E1DFDD;}
+ p.10, li.10, div.10 { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:宋体; }
+ p.TOC1, li.TOC1, div.TOC1 { margin-top:12.0pt; margin-right:0cm; margin-bottom:0cm; margin-left:0cm; margin-bottom:.0001pt; line-height:107%; page-break-after:avoid; font-size:16.0pt; font-family:"Calibri Light","sans-serif"; color:#2E74B5; }
+ span.UnresolvedMention { color:#605E5C; background:#E1DFDD;}
+ span.Char5 { }
+ span.Char10 { }
+ span.Char6 { font-family:"Arial","sans-serif"; font-weight:bold;}
+ span.trans { }
+ span.fontstyle31 { font-family:黑体; color:black; font-weight:normal; font-style:normal;}
+ span.fontstyle01 { font-family:宋体; color:black; font-weight:normal; font-style:normal;}
+ span.mocopyright { }
+ span.word { }
+ span.2Char0 { }
+ span.2Char1 { }
+ span.fontstyle11 { font-family:"TimesNewRomanPSMT","serif"; color:black; font-weight:normal; font-style:normal;}
+ span.HTMLChar { font-family:宋体; }
+ span.Char7 { background:navy; }
+ p.tablecontent, li.tablecontent, div.tablecontent { margin-right:0cm; margin-left:0cm; font-size:12.0pt; font-family:宋体; }
+ p.Default, li.Default, div.Default { margin:0cm; margin-bottom:.0001pt; text-autospace:none; font-size:12.0pt; font-family:"Times New Roman","serif"; color:black;}
+ p.4, li.4, div.4 { margin-top:13.0pt; margin-right:0cm; margin-bottom:13.0pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; line-height:173%; page-break-after:avoid; tab-stops:54.0pt 56.75pt; font-size:16.0pt; font-family:"Times New Roman","serif"; font-weight:bold;}
+ p.fixed, li.fixed, div.fixed { margin-right:0cm; margin-left:0cm; font-size:12.0pt; font-family:宋体; }
+ p.3, li.3, div.3 { margin-top:13.0pt; margin-right:0cm; margin-bottom:13.0pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; line-height:173%; page-break-after:avoid; tab-stops:42.55pt 56.75pt; font-size:16.0pt; font-family:"Times New Roman","serif"; font-weight:bold;}
+ p.30, li.30, div.30 { margin-top:13.0pt; margin-right:0cm; margin-bottom:13.0pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; line-height:172%; page-break-after:avoid; font-size:16.0pt; font-family:"Times New Roman","serif"; font-weight:bold;}
+ p.stylelist1, li.stylelist1, div.stylelist1 { margin-right:0cm; margin-left:0cm; font-size:12.0pt; font-family:宋体; }
+ p.codeexample, li.codeexample, div.codeexample { margin-right:0cm; margin-left:0cm; font-size:12.0pt; font-family:宋体; }
+ p.body, li.body, div.body { margin-right:0cm; margin-left:0cm; font-size:12.0pt; font-family:宋体; }
+ p.2, li.2, div.2 { margin-top:13.0pt; margin-right:0cm; margin-bottom:13.0pt; margin-left:0cm; text-align:justify; text-justify:inter-ideograph; line-height:173%; page-break-after:avoid; tab-stops:36.0pt; font-size:16.0pt; font-family:"Arial","sans-serif"; font-weight:bold;}
+ span.Char8 { font-weight:bold;}
+ span.Char20 { }
+ p.11, li.11, div.11 { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:11.0pt; font-family:"Times New Roman","serif"; }
+ span.12 { font-family:等线; }
+ span.Char9 { font-family:"Calibri Light","sans-serif"; font-weight:bold;}
+ span.fontstyle41 { font-family:"CMR7","serif"; color:black;}
+ span.fontstyle51 { font-family:"CMSY10","serif"; color:black; font-style:italic;}
+ span.fontstyle61 { font-family:"NimbusRomNo9L-Regu","serif"; color:black;}
+ span.fontstyle21 { font-family:"CMR10","serif"; color:black;}
+ p.a0, li.a0, div.a0 { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; layout-grid-mode:char; font-size:7.5pt; font-family:"Calibri","sans-serif"; }
+ span.Chara { font-family:"Calibri","sans-serif"; }
+ span.mi { }
+ span.mo { }
+ span.mn { }
+ span.mtext { }
+ span.msqrt { }
+ span.Charb { font-family:"Calibri","sans-serif"; color:black; font-style:italic;}
+ p.a1, li.a1, div.a1 { margin-top:0cm; margin-right:0cm; margin-bottom:0cm; margin-left:42.4pt; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; text-indent:-42.4pt; layout-grid-mode:char; font-size:10.5pt; font-family:"Calibri","sans-serif"; }
+ span.Charc { font-family:"Calibri","sans-serif"; }
+ span.Chard { font-family:"Tahoma","sans-serif"; }
+ span.20 { color:#605E5C; background:#E1DFDD;}
+ span.Chare { font-family:宋体; }
+ p.a2, li.a2, div.a2 { margin:0cm; margin-bottom:.0001pt; font-size:10.5pt; font-family:宋体; }
+ span.a3 { font-family:宋体; }
+ span.a4 { font-family:宋体; color:black;}
+ p.a5, li.a5, div.a5 { margin:0cm; margin-bottom:.0001pt; font-size:10.0pt; font-family:宋体; color:black;}
+ p.a6, li.a6, div.a6 { margin:0cm; margin-bottom:.0001pt; text-align:center; font-size:10.5pt; font-family:黑体; }
+ span.a7 { font-family:黑体; }
+ span.Charf { }
+ p.msonormal0, li.msonormal0, div.msonormal0 { margin-right:0cm; margin-left:0cm; font-size:10.5pt; font-family:宋体; }
+ p.alt, li.alt, div.alt { margin-right:0cm; margin-left:0cm; font-size:10.5pt; font-family:宋体; }
+ span.keyword { }
+ span.datatypes { }
+ span.comment { }
+ span.preprocessor { }
+ span.31 { color:#605E5C; background:#E1DFDD;}
+ p.13, li.13, div.13 { margin:0cm; margin-bottom:.0001pt; font-size:10.5pt; font-family:"Calibri","sans-serif"; }
+ span.Charf0 { font-family:宋体; }
+ span.2Char2 { layout-grid-mode:line;}
+ p.14, li.14, div.14 { margin-top:6.0pt; margin-right:0cm; margin-bottom:0cm; margin-left:45.1pt; margin-bottom:.0001pt; text-indent:-23.85pt; line-height:150%; tab-stops:45.0pt; font-size:12.0pt; font-family:"Times New Roman","serif"; }
+ p.a8, li.a8, div.a8 { margin:0cm; margin-bottom:.0001pt; font-size:12.0pt; font-family:宋体; }
+ p.a9, li.a9, div.a9 { margin:0cm; margin-bottom:.0001pt; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ p.aa, li.aa, div.aa { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; text-indent:10.0pt; line-height:120%; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ span.hljs-attr { }
+ span.hljs-string { }
+ span.40 { color:#605E5C; background:#E1DFDD;}
+ span.font11 { font-family:宋体; color:black; text-decoration:none; text-underline:none;}
+ span.font21 { font-family:"Times New Roman","serif"; color:black; text-decoration:none; text-underline:none;}
+ span.font31 { font-family:宋体; color:black; text-decoration:none; text-underline:none;}
+ span.font51 { font-family:"Times New Roman","serif"; color:windowtext; text-decoration:none; text-underline:none;}
+ span.font01 { font-family:宋体; color:windowtext; text-decoration:none; text-underline:none;}
+ p.21, li.21, div.21 { margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Times New Roman","serif"; }
+ span.41 { font-family:"Calibri","sans-serif"; font-weight:bold; }
+ span.5 { color:#605E5C; background:#E1DFDD;}
+ span.6 { color:#605E5C; background:#E1DFDD;}
+ span.7 { color:#605E5C; background:#E1DFDD;}
+ span.8 { color:#605E5C; background:#E1DFDD;}
+ span.msoIns { text-decoration:underline; text-underline:single; color:teal;}
+ span.msoDel { text-decoration:line-through; color:red;}
+ .MsoChpDefault { font-size:10.0pt; }
+ 
+/* Page Definitions */
+ @page { }
+ @page WordSection1 {size:595.3pt 841.9pt; margin:72.0pt 54.0pt 72.0pt 54.0pt; layout-grid:15.6pt;}
+ div.WordSection1 {page:WordSection1;}
+ 
+/* List Definitions */
+ @list l0 { }
+ @list l0:level1 { margin-left:22.5pt; text-indent:-22.5pt; tab-stops:22.5pt;}
+ @list l0:level2 { margin-left:36.0pt; text-indent:-36.0pt; tab-stops:36.0pt; font-variant:normal !important; text-transform:none; position:relative; top:0pt; letter-spacing:0pt; text-decoration:none; text-underline:none; text-decoration:none; text-line-through:none; vertical-align:baseline;}
+ @list l0:level3 { margin-left:42.55pt; text-indent:-42.55pt; tab-stops:42.55pt; font-variant:normal !important; text-transform:none; position:relative; top:0pt; letter-spacing:0pt; text-decoration:none; text-underline:none; text-decoration:none; text-line-through:none; vertical-align:baseline;}
+ @list l0:level4 { margin-left:54.0pt; text-indent:-54.0pt; tab-stops:54.0pt;}
+ @list l0:level5 { margin-left:72.0pt; text-indent:-72.0pt; tab-stops:72.0pt;}
+ @list l0:level6 { margin-left:90.0pt; text-indent:-90.0pt; tab-stops:90.0pt;}
+ @list l0:level7 { margin-left:90.0pt; text-indent:-90.0pt; tab-stops:90.0pt;}
+ @list l0:level8 { margin-left:108.0pt; text-indent:-108.0pt; tab-stops:108.0pt;}
+ @list l0:level9 { margin-left:126.0pt; text-indent:-126.0pt; tab-stops:126.0pt;}
+ @list l1 { }
+ @list l1:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l2 { }
+ @list l2:level1 { margin-left:18.0pt; text-indent:-18.0pt;}
+ @list l2:level2 { margin-left:42.0pt; text-indent:-21.0pt;}
+ @list l2:level3 { margin-left:63.0pt; text-indent:-21.0pt;}
+ @list l2:level4 { margin-left:84.0pt; text-indent:-21.0pt;}
+ @list l2:level5 { margin-left:105.0pt; text-indent:-21.0pt;}
+ @list l2:level6 { margin-left:126.0pt; text-indent:-21.0pt;}
+ @list l2:level7 { margin-left:147.0pt; text-indent:-21.0pt;}
+ @list l2:level8 { margin-left:168.0pt; text-indent:-21.0pt;}
+ @list l2:level9 { margin-left:189.0pt; text-indent:-21.0pt;}
+ @list l3 { }
+ @list l3:level1 { margin-left:22.0pt; text-indent:-22.0pt;}
+ @list l3:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l3:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l3:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l3:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l3:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l3:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l3:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l3:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ @list l4 { }
+ @list l4:level1 { margin-left:45.1pt; text-indent:-23.85pt; tab-stops:57.25pt;}
+ @list l5 { }
+ @list l5:level1 { margin-left:18.0pt; text-indent:-18.0pt; font-family:Wingdings; }
+ @list l5:level2 { margin-left:42.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l5:level3 { margin-left:63.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l5:level4 { margin-left:84.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l5:level5 { margin-left:105.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l5:level6 { margin-left:126.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l5:level7 { margin-left:147.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l5:level8 { margin-left:168.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l5:level9 { margin-left:189.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l6 { }
+ @list l6:level1 { margin-left:22.0pt; text-indent:-22.0pt;}
+ @list l6:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l6:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l6:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l6:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l6:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l6:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l6:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l6:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ @list l7 { }
+ @list l7:level1 { margin-left:22.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l7:level2 { margin-left:44.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l7:level3 { margin-left:66.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l7:level4 { margin-left:88.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l7:level5 { margin-left:110.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l7:level6 { margin-left:132.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l7:level7 { margin-left:154.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l7:level8 { margin-left:176.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l7:level9 { margin-left:198.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l8 { }
+ @list l8:level1 { margin-left:43.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l8:level2 { margin-left:44.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l8:level3 { margin-left:66.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l8:level4 { margin-left:88.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l8:level5 { margin-left:110.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l8:level6 { margin-left:132.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l8:level7 { margin-left:154.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l8:level8 { margin-left:176.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l8:level9 { margin-left:198.0pt; text-indent:-22.0pt; font-family:Wingdings;}
+ @list l9 { }
+ @list l9:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l9:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l9:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l9:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l9:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l9:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l9:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l9:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l9:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ @list l10 { }
+ @list l10:level1 { margin-left:0cm; text-indent:0cm; color:red; }
+ @list l10:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l10:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l10:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l10:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l10:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l10:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l10:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l10:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ @list l11 { }
+ @list l11:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l11:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l11:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l11:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l11:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l11:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l11:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l11:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l11:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ @list l12 { }
+ @list l12:level1 { margin-left:66.0pt; text-indent:-18.0pt; font-family:"Times New Roman","serif";}
+ @list l12:level2 { margin-left:90.0pt; text-indent:-21.0pt; font-family:"Times New Roman","serif";}
+ @list l12:level3 { margin-left:111.0pt; text-indent:-21.0pt; font-family:"Times New Roman","serif";}
+ @list l12:level4 { margin-left:132.0pt; text-indent:-21.0pt; font-family:"Times New Roman","serif";}
+ @list l12:level5 { margin-left:153.0pt; text-indent:-21.0pt; font-family:"Times New Roman","serif";}
+ @list l12:level6 { margin-left:174.0pt; text-indent:-21.0pt; font-family:"Times New Roman","serif";}
+ @list l12:level7 { margin-left:195.0pt; text-indent:-21.0pt; font-family:"Times New Roman","serif";}
+ @list l12:level8 { margin-left:216.0pt; text-indent:-21.0pt; font-family:"Times New Roman","serif";}
+ @list l12:level9 { margin-left:237.0pt; text-indent:-21.0pt; font-family:"Times New Roman","serif";}
+ @list l13 { }
+ @list l13:level1 { margin-left:21.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l13:level2 { margin-left:42.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l13:level3 { margin-left:63.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l13:level4 { margin-left:84.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l13:level5 { margin-left:105.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l13:level6 { margin-left:126.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l13:level7 { margin-left:147.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l13:level8 { margin-left:168.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l13:level9 { margin-left:189.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l14 { }
+ @list l14:level1 { margin-left:21.0pt; text-indent:-21.0pt;}
+ @list l14:level2 { margin-left:42.0pt; text-indent:-21.0pt;}
+ @list l14:level3 { margin-left:63.0pt; text-indent:-21.0pt;}
+ @list l14:level4 { margin-left:84.0pt; text-indent:-21.0pt;}
+ @list l14:level5 { margin-left:105.0pt; text-indent:-21.0pt;}
+ @list l14:level6 { margin-left:126.0pt; text-indent:-21.0pt;}
+ @list l14:level7 { margin-left:147.0pt; text-indent:-21.0pt;}
+ @list l14:level8 { margin-left:168.0pt; text-indent:-21.0pt;}
+ @list l14:level9 { margin-left:189.0pt; text-indent:-21.0pt;}
+ @list l15 { }
+ @list l15:level1 { margin-left:22.0pt; text-indent:-22.0pt;}
+ @list l15:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l15:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l15:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l15:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l15:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l15:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l15:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l15:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ @list l16 { }
+ @list l16:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l17 { }
+ @list l17:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l18 { }
+ @list l18:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l19 { }
+ @list l19:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l20 { }
+ @list l20:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l21 { }
+ @list l21:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l22 { }
+ @list l22:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l23 { }
+ @list l23:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l24 { }
+ @list l24:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l25 { }
+ @list l25:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l26 { }
+ @list l26:level1 { margin-left:0cm; text-indent:0cm; tab-stops:15.6pt;}
+ @list l27 { }
+ @list l27:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l28 { }
+ @list l28:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l29 { }
+ @list l29:level1 { margin-left:0cm; text-indent:0cm;}
+ @list l30 { }
+ @list l30:level1 { margin-left:43.0pt; text-indent:-22.0pt;}
+ @list l30:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l30:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l30:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l30:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l30:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l30:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l30:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l30:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ @list l31 { }
+ @list l31:level1 { margin-left:21.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l31:level2 { margin-left:42.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l31:level3 { margin-left:63.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l31:level4 { margin-left:84.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l31:level5 { margin-left:105.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l31:level6 { margin-left:126.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l31:level7 { margin-left:147.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l31:level8 { margin-left:168.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l31:level9 { margin-left:189.0pt; text-indent:-21.0pt; font-family:Wingdings;}
+ @list l32 { }
+ @list l32:level1 { margin-left:22.0pt; text-indent:-22.0pt;}
+ @list l32:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l32:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l32:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l32:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l32:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l32:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l32:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l32:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ @list l33 { }
+ @list l33:level1 { margin-left:0cm; text-indent:0cm; color:red;}
+ @list l33:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l33:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l33:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l33:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l33:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l33:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l33:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l33:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ @list l34 { }
+ @list l34:level1 { margin-left:18.0pt; text-indent:-18.0pt;}
+ @list l34:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l34:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l34:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l34:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l34:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l34:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l34:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l34:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ @list l35 { }
+ @list l35:level1 { margin-left:0cm; text-indent:0cm; color:red; }
+ @list l35:level2 { margin-left:44.0pt; text-indent:-22.0pt;}
+ @list l35:level3 { margin-left:66.0pt; text-indent:-22.0pt;}
+ @list l35:level4 { margin-left:88.0pt; text-indent:-22.0pt;}
+ @list l35:level5 { margin-left:110.0pt; text-indent:-22.0pt;}
+ @list l35:level6 { margin-left:132.0pt; text-indent:-22.0pt;}
+ @list l35:level7 { margin-left:154.0pt; text-indent:-22.0pt;}
+ @list l35:level8 { margin-left:176.0pt; text-indent:-22.0pt;}
+ @list l35:level9 { margin-left:198.0pt; text-indent:-22.0pt;}
+ ol {margin-bottom:0cm;}
+ ul {margin-bottom:0cm;}
+ --> 

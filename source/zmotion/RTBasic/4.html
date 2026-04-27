@@ -1,0 +1,319 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DATUM -- 回零</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="5.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="3.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_DATUM_--_回零"></a><a name="_DATUM"></a><a name="_Toc134697799"></a><a name="_Toc5233"></a><a name="_Toc10112"></a><a name="_Toc17750"></a><a name="_Toc16516"></a><a name="_Toc349071383"></a><a name="_DATUM_--_回零_1"></a><span lang=EN-US>DATUM</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>回零</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>单轴运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>单轴找原点运动。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>&nbsp;</span></b></p>
+<p class=MsoCommentText style='text-align:justify;text-justify:inter-ideograph'><span style='font-family:宋体;'>原点开关通过</span><span lang=EN-US>DATUM_IN</span><span style='font-family:宋体;'>设置</span><span style='font-family:宋体;color:black; '>，正负限位开关分别通过</span><span lang=EN-US>FWD_IN</span><span style='font-family:宋体; '>和</span><span lang=EN-US>REV_IN</span><span style='font-family: 宋体; '>设置。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ZMC</span><span style='font-family: 宋体; color:black;'>控制器为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family: 宋体; color:black;'>触发有效，输入为</span><span lang=EN-US style='color:black;'>OFF</span><span style='font-family: 宋体; color:black;'>状态时，表示到达原点</span><span lang=EN-US style='color:black;'>/</span><span style='font-family: 宋体; color:black;'>限位，常开类型信号需要采用</span><span lang=EN-US style='color:black;'>INVERT_IN</span><span style='font-family:宋体;color:black;'>反转电平。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ECI</span><span style='font-family: 宋体; color:black;'>控制器为</span><span lang=EN-US style='color:black;'>1</span><span style='font-family: 宋体; color:black;'>触发有效，输入为</span><span lang=EN-US style='color:black;'>ON</span><span style='font-family: 宋体; color:black;'>状态时，表示到达原点</span><span lang=EN-US style='color:black;'>/</span><span style='font-family: 宋体; color:black;'>限位，常闭类型信号需要采用</span><span lang=EN-US style='color:black;'>INVERT_IN</span><span style='font-family:宋体;color:black;'>反转电平。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>Z</span><span style='font-family: 宋体; color:black;'>信号回零必须配置为带</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family: 宋体; color:black;'>信号</span><span lang=EN-US style='color: black;'>ATYPE</span><span style='font-family:宋体; color:black;'>（</span><span lang=EN-US style='color:black; '>ATYPE=4</span><span style='font-family:宋体;color:black; '>或者</span><span lang=EN-US style='color:black; '>7</span><span style='font-family:宋体;color:black; '>）。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>若配置了</span><span lang=EN-US>LSPEED</span><span style='font-family:宋体; '>，找到原点急停，速度降为</span><span lang=EN-US>LSPEED</span><span style='font-family:宋体; '>时的位置为原点位置。</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>多轴回零时，需要每个轴都使用</span><span lang=EN-US style='color:red;'>DATUM</span><span style='font-family:宋体; color:red;'>指令。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>总线控制器使用控制器找原点模式完成后，需要手动清零</span><span lang=EN-US style='color:red;'>MPOS</span><span style='font-family:宋体; color:red;'>。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>DATUM</span><span style='font-family:宋体; color:red;'>指令后不能接绝对指令和</span><span lang=EN-US style='color:red;'>mover</span><span style='font-family:宋体; color:red;'>指令。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>驱动器回零</span><span lang=EN-US style='color:red;'>DATUM</span><span style='font-family:宋体; color:red;'>指令是监控不到的，需要使用驱动器回零里面的驱动器状态返回值</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DATUM (mode)</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>DATUM(21,mode2)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>mode</span><span style='font-family:宋体; color:black;'>：找原点模式，</span><span style='font-family:宋体;color:red;'>加</span><span lang=EN-US style='color:red;'>10</span><span style='font-family: 宋体; color:red;'>表示碰到限位后反找</span><span style='font-family: 宋体; color:black;'>，不会碰到限位停止，例如</span><span lang=EN-US style='color:black;'>13=</span><span style='font-family: 宋体; color:black;'>模式</span><span lang=EN-US style='color: black;'>3+</span><span style='font-family:宋体;color:black; '>限位反找</span><span lang=EN-US style='color:black; '>10</span><span style='font-family:宋体;color:black; '>，用于原点在正中间的情况。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:red;'>ATYPE=4</span><span style='font-family:宋体; color:red;'>，回零模式加</span><span lang=EN-US style='color:red;'>100</span><span style='font-family:宋体;color:red;'>（模式</span><span lang=EN-US style='color:red;'>100+n</span><span style='font-family: 宋体; color:red;'>和</span><span lang=EN-US style='color:red; '>110+n</span><span style='font-family:宋体;color:red; '>分别对应</span><span lang=EN-US style='color:red; '>n</span><span style='font-family:宋体;color:red; '>和</span><span lang=EN-US style='color:red;'>10+n</span><span style='font-family:宋体; color:red;'>），表示接入编码器后可以自动清零</span><span lang=EN-US style='color:red;'>MPOS(</span><span style='font-family:宋体;color:red;'>仅限</span><span lang=EN-US style='color:red;'>4</span><span style='font-family:宋体; color:red;'>系列</span><span lang=EN-US style='color:red; '>)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>DATUM</span><span style='font-family:宋体; color:black;'>（</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>）</span><span lang=EN-US style='color:black;'>AXIS</span><span style='font-family:宋体;color:black;'>（轴号）清除指定轴的错误状态。</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=693 style='width:296.9pt;margin-left:21.85pt;border-collapse:collapse; border:none; '> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>值</span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>描述</span></p>
+</td> </tr> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>0&nbsp; </span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>清除所有轴的错误状态。</span></p>
+</td> </tr> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>1</span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>轴以</span><span lang=EN-US style='color:black; '>CREEP</span><span style='font-family:宋体;color:black; '>速度正向运行直到</span><span lang=EN-US style='color:black; '>Z</span><span style='font-family:宋体;color:black; '>信号出现。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>碰到限位开关会直接停止。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>DPOS</span><span style='font-family:宋体; color:black;'>值重置为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>同时纠正</span><span lang=EN-US style='color:black;'>MPOS</span><span style='font-family:宋体;color:black;'>。</span></p>
+</td> </tr> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>2</span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>轴以</span><span lang=EN-US style='color:black; '>CREEP</span><span style='font-family:宋体;color:black; '>速度反向运行直到</span><span lang=EN-US style='color:black; '>Z</span><span style='font-family:宋体;color:black; '>信号出现。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>碰到限位开关会直接停止。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>DPOS</span><span style='font-family:宋体; color:black;'>值重置为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>同时纠正</span><span lang=EN-US style='color:black;'>MPOS</span><span style='font-family:宋体;color:black;'>。</span></p>
+</td> </tr> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>3</span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>轴以</span><span lang=EN-US style='color:black; '>SPEED</span><span style='font-family:宋体;color:black; '>速度正向运行，直到碰到原点开关。然后轴以</span><span lang=EN-US style='color:black;'>CREEP</span><span style='font-family:宋体;color:black;'>速度反向运动直到离开原点开关。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>找原点阶段碰到正限位开关会直接停止。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>爬行阶段碰到负限位开关会直接停止。</span> </p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>DPOS</span><span style='font-family:宋体; color:black;'>值重置为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>同时纠正</span><span lang=EN-US style='color:black;'>MPOS</span></p>
+</td> </tr> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>4</span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>轴以</span><span lang=EN-US style='color:black; '>SPEED</span><span style='font-family:宋体;color:black; '>速度反向运行，直到碰到原点开关。然后轴以</span><span lang=EN-US style='color:black;'>CREEP</span><span style='font-family:宋体;color:black;'>速度正向运动直到离开原点开关。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>找原点阶段碰到负限位开关会直接停止。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>爬行阶段碰到正限位开关会直接停止。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>DPOS</span><span style='font-family:宋体; color:black;'>值重置为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>同时纠正</span><span lang=EN-US style='color:black;'>MPOS</span><span style='font-family:宋体;color:black;'>。</span></p>
+</td> </tr> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>5</span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>轴以</span><span lang=EN-US style='color:black; '>SPEED</span><span style='font-family:宋体;color:black; '>速度正向运行，直到碰到原点开关。然后轴以</span><span lang=EN-US style='color:black;'>CREEP</span><span style='font-family:宋体;color:black;'>速度反向运动直到离开原点开关，然后再继续以爬行速度反转直到碰到</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black;'>信号。</span> </p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>碰到限位开关会直接停止。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>DPOS</span><span style='font-family:宋体; color:black;'>值重置为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>同时纠正</span><span lang=EN-US style='color:black;'>MPOS</span><span style='font-family:宋体;color:black;'>。</span></p>
+</td> </tr> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>6</span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>轴以</span><span lang=EN-US style='color:black; '>SPEED</span><span style='font-family:宋体;color:black; '>速度反向运行，直到碰到原点开关。然后轴以</span><span lang=EN-US style='color:black;'>CREEP</span><span style='font-family:宋体;color:black;'>速度正向运动直到离开原点开关，然后再继续以爬行速度正转直到碰到</span><span lang=EN-US style='color:black;'>Z</span><span style='font-family:宋体;color:black;'>信号。</span> </p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>碰到限位开关会直接停止。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>DPOS</span><span style='font-family:宋体; color:black;'>值重置为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>同时纠正</span><span lang=EN-US style='color:black;'>MPOS</span><span style='font-family:宋体;color:black;'>。</span></p>
+</td> </tr> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>8</span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>轴以</span><span lang=EN-US style='color:black; '>SPEED</span><span style='font-family:宋体;color:black; '>速度正向运行，直到碰到原点开关。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>碰到限位开关会直接停止。</span></p>
+</td> </tr> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>9</span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>轴以</span><span lang=EN-US style='color:black; '>SPEED</span><span style='font-family:宋体;color:black; '>速度反向运行，直到碰到原点开关。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>碰到限位开关会直接停止。</span></p>
+</td> </tr> <tr style='height:1.0pt'> <td width=64 valign=top style='width:27.3pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>21</span></p>
+</td> <td width=629 valign=top style='width:269.6pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:1.0pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>使用</span><span lang=EN-US style='color:black; '>Ethercat</span><span style='font-family:宋体; color:black;'>驱动器回零功能，此时</span><span lang=EN-US style='color:black;'>mode2</span><span style='font-family:宋体;color:black;'>有效。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>设置驱动器回零方式（</span><span lang=EN-US style='color:black; '>6098h</span><span style='font-family:宋体;color:black; '>），缺省</span><span lang=EN-US style='color:black; '>0</span><span style='font-family:宋体;color:black; '>表示使用驱动器当前的回零方式。</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>会使用轴的</span><span lang=EN-US style='color:black; '>SPEED, CREEP, ACCEL, DECEL</span><span style='font-family:宋体;color:black;'>，乘以</span><span lang=EN-US style='color:black;'>UNITS</span><span style='font-family:宋体;color:black;'>后自动设置驱动器的</span><span lang=EN-US style='color:black;'> 6099h</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>609Ah</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>动作时序：</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US>6060h PDO</span><span style='font-family:宋体; '>切换当前模式→</span><span lang=EN-US>6098h SDO</span><span style='font-family:宋体;'>回零方式→</span><span lang=EN-US>6099h SDO</span><span style='font-family:宋体; '>速度→</span><span lang=EN-US>609Ah SDO</span><span style='font-family:宋体;'>加速度→</span><span lang=EN-US> PDO</span><span style='font-family:宋体;'>切换控制字启动回零</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>mode2</span><span style='font-family:宋体; color:black;'>：</span><span lang=EN-US style='color:black;'>mode=21</span><span style='font-family:宋体;color:black;'>时有效，缺省</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>，非</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>时设置到驱动器回零方式，根据驱动器手册数据字典</span><span lang=EN-US style='color:black;'>6098h</span><span style='font-family:宋体;color:black;'>设置值。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例一</span> <span style='font-family:宋体;color:black; '>直接找原点</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED = 100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>找原点速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CREEP = 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>反向爬行速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DATUM_IN=5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>输入</span><span lang=EN-US style='color:black;'>IN5</span><span style='font-family:宋体;color:black;'>作为原点开关</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>INVERT_IN(5,ON)&nbsp; '</span><span style='font-family:宋体; color:black;'>反转</span><span lang=EN-US style='color: black;'>IN5</span><span style='font-family:宋体;color:black; '>电平信号，常开信号进行反转</span><span lang=EN-US style='color:black; '>(ZMC</span><span style='font-family:宋体;color:black; '>控制器</span><span lang=EN-US style='color:black; '>)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family:宋体;color:black; '>自动触发示波器</span></p>
+<p class=MsoNormal style='margin-left:84.35pt;text-indent:-84.35pt; layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>DATUM</span></b><span lang=EN-US style='color:black;'>(3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family: 宋体; color:black;'>先以</span><span lang=EN-US style='color: black;'>100units/s</span><span style='font-family:宋体; color:black;'>正向回零，找到原点后以</span><span lang=EN-US style='color:black;'>10units/s</span><span style='font-family:宋体;color:black;'>直到离开原点，同时</span><span lang=EN-US style='color:black;'>DPOS</span><span style='font-family:宋体;color:black;'>清</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal style='margin-left:84.0pt; '><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>运动轨迹与速度曲线</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(0)</span><span style='font-family:宋体; '>垂直刻度</span><span lang=EN-US>500</span></p>
+<p class=MsoNormal><span lang=EN-US>MSPEED(0)</span><span style='font-family:宋体; '>垂直刻度</span><span lang=EN-US>100</span></p>
+<p class=MsoNormal><span lang=EN-US>IN(5)</span><span style='font-family:宋体; '>垂直刻度</span><span lang=EN-US>10</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=775 height=469 src="doc.files/image026.jpg" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>碰到原点开关之后反向爬行直到离开原点开关，此时</span><span lang=EN-US style='color:red; '>DPOS</span><span style=' font-family:宋体;color:red;'>清</span><span lang=EN-US style='color:red; '>0</span><span style=' font-family:宋体;color:red;'>，回零运动完成。为了直观体现，所以爬行过程比较长，实际应用中，爬行过程很短。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>例二</span> <span style='font-family:宋体; color:black;'>遇到限位反找原点</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED = 100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>找原点速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CREEP = 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>反向爬行速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DATUM_IN=5&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>输入</span><span lang=EN-US style='color:black;'>IN5</span><span style='font-family:宋体;color:black;'>作为原点开关</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>FWD_IN=6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>输入</span><span lang=EN-US style='color:black;'>IN6</span><span style='font-family:宋体;color:black;'>作为正限位开关</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>INVERT_IN(5,ON)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>反转电平信号，一般常闭的信号才进行反转</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>INVERT_IN(6,ON)</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:black'>'</span></span><span style='font-family: 宋体; color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal style='margin-left:84.35pt;text-indent:-84.35pt; layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>DATUM</span></b><span lang=EN-US style='color:black;'>(13)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family: 宋体; color:black;'>先以</span><span lang=EN-US style='color: black;'>100units/s</span><span style='font-family:宋体; color:black;'>正向运动找原点，碰到正限位反向运行，仍以</span><span lang=EN-US style='color:black;'>100units/s</span><span style='font-family:宋体;color:black;'>找原点，找到原点后以</span><span lang=EN-US style='color:black;'>10units/s</span><span style='font-family:宋体;color:black;'>直到离开原点，同时</span><span lang=EN-US style='color:black;'>DPOS</span><span style='font-family:宋体;color:black;'>清</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>wait until READ_BIT2(6,AXISSTATUS(axisnum))&lt;&gt;1 OR MTYPE(axisnum) &lt;&gt; 12</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>运动轨迹与速度曲线</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(0)</span><span style='font-family:宋体; '>垂直刻度</span><span lang=EN-US>500</span></p>
+<p class=MsoNormal><span lang=EN-US>MSPEED(0)</span><span style='font-family:宋体; '>垂直刻度</span><span lang=EN-US>100</span></p>
+<p class=MsoNormal><span lang=EN-US>IN(5)</span><span style='font-family:宋体; '>垂直刻度</span><span lang=EN-US>10</span></p>
+<p class=MsoNormal><span lang=EN-US>IN(6)</span><span style='font-family:宋体; '>垂直刻度</span><span lang=EN-US>10</span><span style='font-family:宋体; '>，偏移</span><span lang=EN-US>5</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=770 height=592 src="doc.files/image028.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm; '><span lang=EN-US style='color:black;'>例三 </span><span lang=EN-US style='color:black;'>EtheCAT</span><span style='font-family:宋体;color:black;'>总线回零</span><span lang=EN-US style='color:black;'>(</span><span style='font-family:宋体;color:black;'>松下</span><span lang=EN-US style='color:black;'>A6N</span><span style='font-family:宋体;color:black;'>伺服</span><span lang=EN-US style='color:black;'>)</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>先根据</span><span lang=EN-US><a title="Not Found Page:#_EtherCAT初始化程序">EtherCAT<span lang=EN-US style='font-family:宋体; '><span lang=EN-US>初始化例程</span></span></a></span><span style='font-family:宋体; color:black;'>正常使能电机</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>找零速度</span><span lang=EN-US style='color:black;'>*UNITS</span><span style='font-family:宋体;color:black;'>后自动写入</span><span lang=EN-US style='color:black;'>6099</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>CREEP=10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black; '>爬行速度</span><span lang=EN-US style='color:black; '>*UNITS</span><span style='font-family:宋体;color:black;'>后自动写入</span><span lang=EN-US style='color:black;'>6099</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>加减速</span><span lang=EN-US style='color:black;'>*UNITS</span><span style='font-family:宋体;color:black;'>后自动写入</span><span lang=EN-US style='color:black;'>609A</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>DATUM</span></b><span lang=EN-US style='color:black;'>(21,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>按驱动器的回零模式</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>开始回零，此时按驱动器信号判断，而不是按控制器信号判断</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WHILE 1</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>TABLE(0)=DRIVE_STATUS&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>读取状态字判断回零状态</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='color:black;'>IF READ_BIT2(10,TABLE(0)) THEN&nbsp; '</span><span style='font-family:宋体; color:black; '>根据下图确定</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='color:black;'>&nbsp; &nbsp;&nbsp;IF READ_BIT2(12,TABLE(0)) THEN</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='color:black;'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;?&quot;</span><span style='font-family:宋体;color:black;'>回零完成</span><span lang=EN-US style='color:black;'>&quot;</span></p>
+<p class=MsoNormal style='text-indent:42.0pt; '><span lang=EN-US style='color:black;'>ENDIF</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US style='color:black;'>ENDIF</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WEND</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>END</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>驱动器厂家的回零过程可能不同，具体根据驱动器手册确定。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>状态字的</span><span lang=EN-US style='color:black;'>bit13</span><span style='font-family: 宋体; color:black;'>，</span><span lang=EN-US style='color:black; '>bit12</span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US style='color:black;'>bit10</span><span style='font-family:宋体; color:black;'>的值组合含义如下表：</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=721 style='width:308.95pt;margin-left:9.5pt;border-collapse:collapse;border: none;'> <tr> <td width=89 valign=top style='width:38.15pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>bit13</span></p>
+</td> <td width=88 valign=top style='width:37.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>bit12</span></p>
+</td> <td width=82 valign=top style='width:35.0pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>bit10</span></p>
+</td> <td width=463 valign=top style='width:198.3pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>描述</span></p>
+</td> </tr> <tr> <td width=89 valign=top style='width:38.15pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=88 valign=top style='width:37.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=82 valign=top style='width:35.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=463 valign=top style='width:198.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>原点回零动作中</span></p>
+</td> </tr> <tr> <td width=89 valign=top style='width:38.15pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=88 valign=top style='width:37.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=82 valign=top style='width:35.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>1</span></p>
+</td> <td width=463 valign=top style='width:198.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>原点回零动作中断或未开始</span></p>
+</td> </tr> <tr> <td width=89 valign=top style='width:38.15pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=88 valign=top style='width:37.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>1</span></p>
+</td> <td width=82 valign=top style='width:35.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=463 valign=top style='width:198.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>原点回零动作完成，但未到达目标位置</span></p>
+</td> </tr> <tr> <td width=89 valign=top style='width:38.15pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=88 valign=top style='width:37.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>1</span></p>
+</td> <td width=82 valign=top style='width:35.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>1</span></p>
+</td> <td width=463 valign=top style='width:198.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>原点回零动作正常完成</span></p>
+</td> </tr> <tr> <td width=89 valign=top style='width:38.15pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>1</span></p>
+</td> <td width=88 valign=top style='width:37.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=82 valign=top style='width:35.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=463 valign=top style='width:198.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>检出原点回零异常还在动作中</span></p>
+</td> </tr> <tr> <td width=89 valign=top style='width:38.15pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>1</span></p>
+</td> <td width=88 valign=top style='width:37.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=82 valign=top style='width:35.0pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>1</span></p>
+</td> <td width=463 valign=top style='width:198.3pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>检出原点回零异常，停止状态</span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm; '><span lang=EN-US style='color:black;'>例四 </span><span lang=EN-US style='color:black;'>Rtex</span><span style='font-family: 宋体; color:black;'>总线回零</span><span lang=EN-US style='color:black;'>(</span><span style='font-family: 宋体; color:black;'>松下</span><span lang=EN-US style='color: black;'>A6N</span><span style='font-family:宋体;color:black; '>伺服</span><span lang=EN-US style='color:black; '>)</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>先根据</span><span lang=EN-US><a title="Not Found Page:#_Rtex初始化程序">Rtex<span lang=EN-US style='font-family:宋体; '><span lang=EN-US>初始化例程</span></span></a></span><span style='font-family:宋体; color:black;'>正常使能电机</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>找零速度</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>加减速</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>DATUM</span></b><span lang=EN-US style='color:black;'>(21,$11)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>按驱动器当前回零模式开始回零，此时按按驱动器信号判断，而不是按控制器信号判断</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; '>根据驱动器手册确定回零模式</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=586 style='width:250.95pt;border-collapse:collapse;border:none; '> <tr style='height:14.15pt'> <td width=173 rowspan=13 style='width:74.3pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal align=center style='text-align:center;'><span style='font-family:宋体; '>初始化模式</span></p>
+</td> <td width=181 valign=top style='width:77.5pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>11h</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>Z</span><span style='font-family:宋体; '>相</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>12h</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>HOME</span><span style='font-family:宋体; '>↑</span><span lang=EN-US> *2</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>13h</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>HOME</span><span style='font-family:宋体; '>↓</span><span lang=EN-US> *3</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>14h</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>POT</span><span style='font-family:宋体; '>↑</span><span lang=EN-US> *2</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>15h</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>POT</span><span style='font-family:宋体; '>↓</span><span lang=EN-US> *3</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>16h</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>NOT</span><span style='font-family:宋体; '>↑</span><span lang=EN-US> *2</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>17h</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>NOT</span><span style='font-family:宋体; '>↓</span><span lang=EN-US> *3</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>18h</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>EXT1</span><span style='font-family:宋体; '>↑</span><span lang=EN-US> *2</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>19h</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>EXT1</span><span style='font-family:宋体; '>↓</span><span lang=EN-US> *3</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>1Ah</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>EXT2</span><span style='font-family:宋体; '>↑</span><span lang=EN-US> *2</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>1Bh</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>EXT2</span><span style='font-family:宋体; '>↓</span><span lang=EN-US> *3</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>1Ch</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>EXT3</span><span style='font-family:宋体; '>↑</span><span lang=EN-US> *2</span></p>
+</td> </tr> <tr style='height:14.15pt'> <td width=181 valign=top style='width:77.5pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>1Dh</span></p>
+</td> <td width=231 valign=top style='width:99.15pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt; height:14.15pt'>
+<p class=MsoNormal><span lang=EN-US>EXT3</span><span style='font-family:宋体; '>↓</span><span lang=EN-US> *3</span></p>
+</td> </tr> </table>
+<p class=MsoNormal></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="322.html#_DATUM_IN_--_映射原点输入_1"><span style='color:#9999CC;'>DATUM_IN</span></a></span><span style='font-family:宋体;color:black; '>，</span><span lang=EN-US><a href="5.html#_DATUM_OFFSET_–_原点位置偏移">DATUM_OFFSET</a></span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US><a href="389.html#_INVERT_IN">INVERT_IN</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="5.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="3.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

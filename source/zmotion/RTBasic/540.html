@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FLASH_WRITE2 -- flash存储2</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="541.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="539.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc198286763"><span lang=FR>FLASH_WRITE2</span><span lang=EN-US> -- flash</span></a><span style='font-family:宋体;'>存储</span><span lang=EN-US>2</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>存储指令</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; '>存储变量或者数组，数组的单个或部分元素到内部</span></b><b><span lang=FR> FLASH</span></b><b><span style='font-family: 宋体; '>里面，掉电保存。</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>内部</span><span lang=EN-US style='color:red;'>FLASH</span><span style='font-family:宋体; color:red;'>采用顺序存储的方式，读取的顺序必须与存储时的顺序一致</span><span style='font-family:宋体;color:red;'>。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red;'>内部</span><span lang=EN-US style='color:red;'>FLASH</span><span style='font-family:宋体; color:red;'>有存储次数限制，不要随意循环操作</span><span style='font-family:宋体;color:red;'>。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>注意在运动中不要操作</span><span lang=EN-US style='color:red;'>FLASH</span><span style='font-family: 宋体; color:red;'>，对运动执行会有影响。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>！注意</span><span lang=EN-US style='color:red; '>1</span><span style='font-family:宋体;color:red; '>：数据必须先完整写入一遍</span><span lang=EN-US style='color:red; '>.</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>！注意</span><span lang=EN-US style='color:red; '>2</span><span style='font-family:宋体;color:red; '>：起始位置可以使用</span><span lang=EN-US style='color:red; '>SIZEOFARRAY</span><span style='font-family:宋体; color:red;'>来计算</span><span lang=EN-US style='color:red; '>.</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=FR style='color:black;'>FLASH_WRITE2 </span><span lang=EN-US style='color:black;'>sect_num start_num [, varname] [, arrayname] [, arrayname(a)] [, arrayname(a,length)]</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>sect_num</span><span style='font-family:宋体; '>：</span><span lang=FR>flash</span><span style=' font-family:宋体;'>块编号，不同类型不一样</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>start_num</span><span style='font-family:宋体; '>：文件内读取的起始位置</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>varname</span><span style='font-family:宋体; '>：变量名</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>arrayname</span><span style='font-family:宋体; '>：数组名，可以为</span><span lang=FR>TABLE</span><span style=' font-family:宋体;'>，</span><span lang=FR>VR</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>a</span><span style='font-family:宋体; '>：操作的数组索引</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR>length</span><span style='font-family:宋体; '>：操作的数组元素个数</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>通用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>FLASH_WRITE2&nbsp; 1, TABLE(0,100)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>写入</span><span lang=EN-US style='color:black;'>flash</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span lang=EN-US style='color:black;'>FLASH_WRITE2&nbsp; 1, 10, TABLE(10,10) ' </span><span style='font-family: 宋体; color:black;'>中间部分数据写入</span><span lang=EN-US style='color:black;'>flash</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="545.html#_FLASHVR_--_拷贝RAM的数据_1">F<span lang=FR>LASHVR</span></a></span><span style='font-family:宋体; '>，</span><span lang=EN-US><a href="541.html#_FLASH_READ"><span lang=FR>FLASH_READ</span></a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=FR>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="541.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="539.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ImpMorph -- 自定义形态学</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1025.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1023.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc24450"><span lang=EN-US>ZV_ImpMorph -- </span></a><span style='font-family:宋体;'>自定义形态学</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.82%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.18%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black'>形态学</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.82%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>自定义形态学运算</span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_Morph</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.82%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpMorph(src,kernel,dst,op,anchorX,anchorY,iter[,border=&quot;continue&quot;])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='margin-left:31.5pt;text-indent:-31.5pt;'><span style='font-family:宋体;'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>src</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，源图像为单通道或三通道图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>kernel</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，形态学结构元素，由</span><span lang=EN-US>ZV_ImpMorphSe</span><span style=' font-family:宋体;'>指令生成</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>dst</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>ZVOBJECT</span><span style='font-family:宋体; '>类型，形态学处理后的图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>op</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>形态学操作类型：</span><span lang=EN-US>0-</span><span style=' font-family:宋体;'>腐蚀、</span><span lang=EN-US>1-</span><span style=' font-family:宋体;'>膨胀、</span><span lang=EN-US>2-</span><span style=' font-family:宋体;'>开运算、</span><span lang=EN-US>3-</span><span style=' font-family:宋体;'>闭运算、</span><span lang=EN-US>4-</span><span style=' font-family:宋体;'>形态学梯度、</span><span lang=EN-US>5-</span><span style=' font-family:宋体;'>顶帽、</span><span lang=EN-US>6-</span><span style=' font-family:宋体;'>底帽</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>anchorX</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>结构元锚点</span><span lang=EN-US>x</span><span style=' font-family:宋体;'>坐标，范围</span><span lang=EN-US>[0,</span><span style=' font-family:宋体;'>结构元宽</span><span lang=EN-US>)</span><span style=' font-family:宋体;'>，若为</span><span lang=EN-US>-1</span><span style=' font-family:宋体;'>则取中心点</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>anchorY</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>结构元锚点</span><span lang=EN-US>y</span><span style=' font-family:宋体;'>坐标，范围</span><span lang=EN-US>[0,</span><span style=' font-family:宋体;'>结构元高</span><span lang=EN-US>)</span><span style=' font-family:宋体;'>，若为</span><span lang=EN-US>-1</span><span style=' font-family:宋体;'>则取中心点</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>iter</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>执行次数，范围</span><span lang=EN-US>[1,20]</span><span style=' font-family:宋体;'>，常用值</span><span lang=EN-US>1</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>border</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>边界处理，取值如下</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="63%" style='width:63.72%;margin-left:21.0pt;border-collapse:collapse;border:none; '> <tr> <td width="28%" valign=top style='width:28.48%;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>数值</span></p>
+</td>  <td width="71%" valign=top style='width:71.52%;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;'>常量</span></p>
+</td>  </tr> <tr> <td width="28%" valign=top style='width:28.48%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&quot;mirror1&quot;</span></p>
+</td>  <td width="71%" valign=top style='width:71.52%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;color:black'>元素对称</span><span lang=EN-US style=' color:black'>`gfedcb|abcdefgh|g</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='color:black'>edcba`</span></p>
+</td>  </tr> <tr> <td width="28%" valign=top style='width:28.48%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&quot;mirror&quot;</span></p>
+</td>  <td width="71%" valign=top style='width:71.52%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;color:black'>边界对称</span><span lang=EN-US style=' color:black'>`fedcba|abcdefgh|hgfedcb`</span></p>
+</td>  </tr> <tr> <td width="28%" valign=top style='width:28.48%;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&quot;continue&quot;</span></p>
+</td>  <td width="71%" valign=top style='width:71.52%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal align=center style='text-align:center'><span style=' font-family:宋体;color:black'>重复</span><span lang=EN-US style=' color:black'>`aaaaaa|abcdefgh|hhhhhhh`</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='margin-top:7.8pt;'><span style='font-family:宋体;'>说明：右侧竖线表示图像边界，字母表示边界不同距离的像素值</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.82%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=left style='text-align:left'><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.82%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT src,dst,kernel</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(src,&quot;morph.jpg&quot;,0) '</span><span style='font-family:宋体;'>以原图像格式读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpMorphSe(kernel,0,5,5,-1,-1) '</span><span style='font-family:宋体;'>生成</span><span lang=EN-US>5x5</span><span style='font-family:宋体;'>且锚点在中心的矩形结构元素</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpMorph(src,kernel,dst,2,-1,-1,2,&quot;continue&quot;) '</span><span style='font-family:宋体;'>对</span><span lang=EN-US>src</span><span style='font-family:宋体;'>执行两次</span><span lang=EN-US>5x5</span><span style='font-family:宋体;'>大小的矩形结构的开运算</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1025.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1023.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

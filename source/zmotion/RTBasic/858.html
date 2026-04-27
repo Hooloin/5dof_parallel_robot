@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_HmiArc -- 圆环ROI转换到HMI绘图图元</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="859.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="857.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc9166"><span lang=EN-US>ZV_HmiArc -- </span></a><span style='font-family:宋体;'>圆环</span><span lang=EN-US>ROI</span><span style='font-family:宋体;'>转换到</span><span lang=EN-US>HMI</span><span style='font-family:宋体;'>绘图图元</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black'>HMI</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>将圆环</span><span lang=EN-US>roi</span><span style='font-family:宋体; '>分解为</span><span lang=EN-US>HMI</span><span style='font-family:宋体; '>支持的绘图图元并添加控制参数，便于</span><span lang=EN-US>HMI</span><span style='font-family:宋体; '>绘图显示</span></p>
+</td>  </tr> <tr style='height:4.5pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:4.5pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_HmiArc(tabIdArc,tabIdOut[,maxElems=0])</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体; '>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabIdArc</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>保存圆环参数的</span><span lang=EN-US>TABLE</span><span style=' font-family:宋体;'>索引，依次为</span><span lang=EN-US>cx</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>cy</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>radius</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>annR</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>angleStart</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>angleExtent</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>subNum</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>subWidth</span><span style=' font-family:宋体;'>，即圆环的中心坐标</span><span lang=EN-US>cx</span><span style=' font-family:宋体;'>、</span><span lang=EN-US>cy</span><span style=' font-family:宋体;'>、圆环中心半径、圆环半宽、起始角度、角度范围、子区域数量、子区域宽度。这些值均为</span><span lang=EN-US>hmi</span><span style='font-family:宋体; '>控件坐标系下的值；子区域数量可以为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>，超过</span><span lang=EN-US>80</span><span style='font-family:宋体; '>个则超出部分不再绘制。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style=' font-family:宋体;'>通常绘制一般的圆环时如</span><span lang=EN-US>Blob</span><span style=' font-family:宋体;'>分析所用的生成</span><span lang=EN-US>Region</span><span style=' font-family:宋体;'>时的</span><span lang=EN-US>roi</span><span style=' font-family:宋体;'>圆环，</span><span lang=EN-US>subNum=0</span><span style=' font-family:宋体;'>和</span><span lang=EN-US>subWidth=0</span><span style=' font-family:宋体;'>则可；而绘制测量圆的</span><span lang=EN-US>roi</span><span style=' font-family:宋体;'>圆环时，</span><span lang=EN-US>subNum</span><span style=' font-family:宋体;'>和</span><span lang=EN-US>subWidth</span><span style=' font-family:宋体;'>则分别是圆测量相对应的参数值，参数详情请参考</span><span lang=EN-US>ZV_MrGenCircle</span><span style=' font-family:宋体;'>指令</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>tabIdOut</span></b><b><span style='font-family:宋体; '>：</span></b><span style=' font-family:宋体;'>图元参数的</span><span lang=EN-US>TABLE</span><span style=' font-family:宋体;'>索引，依次为圆环中心、内外半径、起止角度、圆环边线数量、边线起止坐标、子区域分割线数量、分割线起止坐标。其中圆环边线指圆环起止角度对应的边界线，如果为整圆则为</span><span lang=EN-US>1</span><span style='font-family:宋体; '>条，非整圆为两条，不需要则为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>条，边线为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>时分割线也一定为</span><span lang=EN-US>0</span><span style='font-family:宋体; '>。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span style=' font-family:宋体;'>转换后的角度单位为弧度，内部有最大和最小输出数量限制，最大</span><span lang=EN-US>80</span><span style='font-family:宋体; '>个子区域，超出部分不输出，最小需要保证圆环和边线的参数输出，没有</span><span lang=EN-US>maxElems</span><span style='font-family:宋体; '>参数的情况下，需要保证足够的空间接收图元参数</span><span lang=EN-US>8*(subNum-1)+20</span><span style='font-family:宋体; '>（</span><span lang=EN-US>subNum</span><span style='font-family:宋体; '>大于</span><span lang=EN-US>1</span><span style='font-family:宋体; '>）</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US>maxElems</span></b><b><span style='font-family:宋体; '>：</span></b><span lang=EN-US>tabIdOut</span><span style='font-family:宋体; '>的可用大小，输出参数占用空间小于等于</span><span lang=EN-US>maxElems</span><span style='font-family:宋体; '>，且输出图元是完整的，超出部分不输出</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>tabIdOut</span><span style=' font-family:宋体;'>输出坐标示意图如下：</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img border=0 width=393 height=363 src="doc.files/image795.png" alt="说明: arc" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>支持</span><span lang=EN-US>ZV</span><span style='font-family:宋体; '>功能或者</span><span lang=EN-US>5</span><span style='font-family:宋体; '>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体; color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>构造一个中心在</span><span lang=EN-US>(100,100</span><span style='font-family:宋体;'>、半径为</span><span lang=EN-US>40</span><span style='font-family:宋体;'>、半宽为</span><span lang=EN-US>20</span><span style='font-family:宋体;'>、起始角度为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>、角度范围为</span><span lang=EN-US>270</span><span style='font-family:宋体;'>的圆环，子区域数量有</span><span lang=EN-US>8</span><span style='font-family:宋体;'>个，子区域宽度为</span><span lang=EN-US>5</span><span style='font-family:宋体;'>，并将图形数据存于起始索引为</span><span lang=EN-US>0</span><span style='font-family:宋体;'>的</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>中</span></p>
+<p class=MsoNormal><span lang=EN-US>TABLE(2000,100,100,40,20,0,270,8,5)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>设置绘制圆弧的颜色为蓝色</span></p>
+<p class=MsoNormal><span lang=EN-US>SET_COLOR(RGB(0,0,255))</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>将圆环分解成</span><span lang=EN-US>hmi</span><span style='font-family:宋体;'>支持的绘图图元，并将相应的图元坐标数据存于起始索引为</span><span lang=EN-US>300</span><span style='font-family:宋体;'>的</span><span lang=EN-US>TABLE</span><span style='font-family:宋体;'>中</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_HmiArc(2000,300)</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>绘制内圆弧</span></p>
+<p class=MsoNormal><span lang=EN-US>DRAWARC(TABLE(300),TABLE(301),TABLE(302),TABLE(304),TABLE(305))&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>绘制外圆弧</span></p>
+<p class=MsoNormal><span lang=EN-US>DRAWARC(TABLE(300),TABLE(301),TABLE(303),TABLE(304),TABLE(305))</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>在圆心处绘制十字架</span></p>
+<p class=MsoNormal><span lang=EN-US>DRAWLINE(TABLE(300),TABLE(301)-5,TABLE(300),TABLE(301)+5)</span></p>
+<p class=MsoNormal><span lang=EN-US>DRAWLINE(TABLE(300)-5,TABLE(301),TABLE(300)+5,TABLE(301))</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>'</span><span style='font-family:宋体;'>若边线数量大于</span><span lang=EN-US>0</span><span style='font-family:宋体;'>则绘制边线</span></p>
+<p class=MsoNormal><span lang=EN-US>IF(TABLE(306) &gt; 0)THEN</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; LOCAL idx</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; FOR idx = 0 to TABLE(306)-1</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DRAWLINE(TABLE(307+idx*4),TABLE(308+idx*4),TABLE(309+idx*4),TABLE(310+idx*4))</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; NEXT</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>设置绘制子区域线的颜色为绿色</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; SET_COLOR(RGB(0,255,0))</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; LOCAL startid&nbsp;&nbsp; '</span><span style='font-family:宋体;'>子区域分割线</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; startid = 307+TABLE(306)*4</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; FOR idx = 0 TO TABLE(startid)-1</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DRAWLINE(TABLE(startid+1+idx*4),TABLE(startid+2+idx*4),TABLE(startid+3+idx*4),TABLE(startid+4+idx*4))</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; NEXT</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US>ENDIF</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="859.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="857.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

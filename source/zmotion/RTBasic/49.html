@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVE_PWM -- 缓冲PWM</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="50.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="48.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_MOVE_PWM_--_缓冲PWM"></a><a name="_Toc134697842"></a><a name="_Toc27729"></a><a name="_Toc31569"></a><a name="_Toc2776"></a><a name="_Toc29086"></a><a name="_MOVE_PWM_--_缓冲PWM_1"></a><span lang=EN-US>MOVE_PWM -- </span><span style='font-family:宋体;'>缓冲</span><span lang=EN-US>PWM</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>特殊运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>BASE</span></b><b><span style='font-family:宋体;color:black;'>轴运动缓冲操作</span></b><b><span lang=EN-US style='color:black;'>PWM</span></b><b><span style='font-family:宋体;color:black;'>。</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>这个指令</span><span lang=EN-US style='color:black;'>LOAD</span><span style='font-family: 宋体; color:black;'>执行时不做任何运动，只操作</span><span lang=EN-US style='color:black;'>PWM</span><span style='font-family: 宋体; color:black;'>。此指令的</span><span lang=EN-US style='color:black;'>MTYPE</span><span style='font-family: 宋体; color:black;'>与</span><span lang=EN-US style='color:black; '>MOVE_OP</span><span style='font-family:宋体;color:black; '>一致。</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US style='color:black;'>PWM</span><span style='font-family:宋体;color:black;'>只能通过设置占空比为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>来关闭，不能通过设置</span><span lang=EN-US style='color:black;'>PWM</span><span style='font-family:宋体;color:black;'>频率为</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>实现，</span><span lang=EN-US style='color:black;'>PWM</span><span style='font-family:宋体;color:black;'>频率一定要在</span><span lang=EN-US style='color:black;'>PWM</span><span style='font-family:宋体;color:black;'>开关之前调整。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVE_PWM(pwmindex,duty[,freq])</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>pwmindex</span><span style='font-family:宋体; color:black;'>：</span><span lang=EN-US style='color:black;'>pwm</span><span style='font-family:宋体;color:black;'>编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>duty</span><span style='font-family:宋体; color:black;'>：占空比，指有效电平占整个周期的比例；范围</span><span lang=EN-US style='color:black;'>0-1</span><span style='font-family:宋体;color:black;'>，设置</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black;'>时关闭</span><span lang=EN-US style='color:black;'>pwm</span><span style='font-family:宋体;color:black;'>；一个周期中先输出有效电平，再输出无效电平</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>freq</span><span style='font-family:宋体; color:black;'>：频率，缺省为</span><span lang=EN-US style='color:black;'>1KHz</span><span style='font-family:宋体;color:black;'>，硬件最大为</span><span lang=EN-US style='color:black;'>1MHz</span><span style='font-family:宋体;color:black;'>，软件最大为</span><span lang=EN-US style='color:black;'>2KHz</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>20170503</span><span style='font-family:宋体; color:red;'>以上固件</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例程</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US>WAIT IDLE</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER</span></p>
+<p class=MsoNormal><span lang=EN-US>TICKS=0</span></p>
+<p class=MsoNormal><span lang=EN-US>BASE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US>SPEED = 1000</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE(10)</span></p>
+<p class=MsoNormal><b><span lang=EN-US>MOVE_PWM</span></b><span lang=EN-US>(0, 0.111, 2000)&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='color:black;'>'</span><span style='font-family:宋体;color:black;'>轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family: 宋体; color:black;'>运行到</span><span lang=EN-US style='color:black;'>10</span><span style='font-family: 宋体; color:black;'>时，操作</span><span lang=EN-US style='color:black;'>PWM0</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE_DELAY(111)</span></p>
+<p class=MsoNormal><b><span lang=EN-US>MOVE_PWM</span></b><span lang=EN-US>(0, 0.333)</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE_DELAY(111)</span></p>
+<p class=MsoNormal><b><span lang=EN-US>MOVE_PWM</span></b><span lang=EN-US>(0, 0.555, 3000)</span></p>
+<p class=MsoNormal><span lang=EN-US>MOVE(100)</span></p>
+<p class=MsoNormal><span lang=EN-US>WHILE NOT IDLE</span></p>
+<p class=MsoNormal style='text-indent:21.1pt; '><b><span lang=EN-US>MOVE_PWM</span></b><span lang=EN-US>(0, 0, 1000)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>&nbsp;</b></span><span lang=EN-US style='color:black;'>'</span><span style='font-family: 宋体; color:black;'>关闭</span><span lang=EN-US style='color: black;'>PWM</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>? -TICKS, PWM_FREQ(0), PWM_DUTY(0)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>WA 10</span></p>
+<p class=MsoNormal><span lang=EN-US>WEND</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="410.html#_PWM_DUTY">PWM_DUTY</a></span><span style='font-family:宋体; color:black; '>，</span><span lang=EN-US><a href="409.html#_PWM_FREQ_--_PWM频率_1">PWM_FREQ</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="50.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="48.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

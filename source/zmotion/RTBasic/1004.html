@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>ZV_ImpLaplace -- Laplacian边缘检测</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1005.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1003.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc16086"><span lang=EN-US>ZV_ImpLaplace -- Laplacian</span></a><span style='font-family: 宋体;'>边缘检测</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black'>滤波</span></p>
+</td>  </tr> <tr style='height:135.05pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:135.05pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:135.05pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体;color:#4D4D4D;background: white'>Laplacian</span><span style='font-family:宋体'>算子</span><span style='font-family:宋体;color:#4D4D4D;background: white'>对图像中的阶跃性边缘点定位正确，对噪声十分的敏感，会丢失一部分边缘的方向信息，造成一些不连续的检测边缘。<span lang=EN-US>Laplacian</span>算子是<span lang=EN-US>n</span>维欧几里德空间中的一个二阶微分算子。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:#4D4D4D;background: white'>假设图片为<span lang=EN-US><img border=0 width=13 height=29 src="doc.files/image1031.png" ></span>，<span lang=EN-US>Laplacian</span>算子的定义：</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体; color:#4D4D4D;background:white'><img border=0 width=281 height=66 src="doc.files/image1033.png" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体;color:#4D4D4D;background:white'>3*3</span><span style='font-family:宋体;color:#4D4D4D; background:white'>的<span lang=EN-US>Laplacian</span>内核为：</span></p>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体; color:#4D4D4D;background:white'><img border=0 width=108 height=78 src="doc.files/image1035.png" ></span></p>
+<p class=MsoNormal><span style='font-family:宋体;'>别名：</span><span lang=EN-US>ZV_Laplace</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpLaplace(src,dst,size)</span></p>
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>参数：</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family:宋体'>src</span></b><b><span style='font-family:宋体'>：</span></b><span lang=EN-US style='font-family:宋体'>ZVOBJECT</span><span style='font-family:宋体'>类型，源图像为单通道或三通道图像</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family:宋体'>dst</span></b><b><span style='font-family:宋体'>：</span></b><span lang=EN-US style='font-family:宋体'>ZVOBJECT</span><span style='font-family:宋体'>类型，滤波后图像，数据类型与<span lang=EN-US>src</span>相同</span></p>
+<p class=MsoNormal style='text-indent:21.1pt;'><b><span lang=EN-US style='font-family:宋体'>size</span></b><b><span style='font-family:宋体'>：</span></b><span style=' font-family:宋体'>滤波器尺寸，范围<span lang=EN-US>[1,31]</span>，奇数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体'>支持<span lang=EN-US>ZV</span>功能或者<span lang=EN-US>5</span>系列以上的控制器</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family:宋体;color:black'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US style='font-family:宋体;'><img border=0 width=640 height=194 src="doc.files/image1037.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>ZVOBJECT src,dst</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImgRead(src,&quot;edge.png&quot;,0) '</span><span style='font-family:宋体;'>以原图像格式读取图片</span></p>
+<p class=MsoNormal><span lang=EN-US>ZV_ImpLaplace(src,dst,3) '3*3 Laplace</span><span style='font-family:宋体;'>边缘检测</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><a name="_ZV_CANNY_--_CANNY边缘检测"></a><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="1005.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="1003.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

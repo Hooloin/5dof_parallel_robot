@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>FILE_ZSEEKLINE -- 文件行定位</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="556.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="554.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc134698362"></a><a name="_FILE_ZSEEKLINE_–_文件行定位"></a><span lang=FR>FILE_ZSEEKLINE</span><span lang=EN-US> -- </span><span style='font-family:宋体;'>文件行定位</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>存储指令</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><b><span style='font-family: 宋体; '>文件行定位，将文件的读写位置移动到</span></b><b><span lang=EN-US>line</span></b><b><span style='font-family:宋体;'>和</span></b><b><span lang=EN-US>mode</span></b><b><span style='font-family:宋体;'>指定的行的行首，一次定位能够处理的字符数量有限，定位的偏移量过大或长行数量较多可能导致定位未完成，可通过</span></b><b><span lang=EN-US>FILE_ZTELLLINE</span></b><b><span style='font-family:宋体;'>获取当前行位置进行判断，必要时可通过多次执行来定位。</span></b></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;'><span style='font-family:宋体;color:black;'>命令语法：</span><span lang=FR style='color:black;'>FILE_ZSEEKLINE (handle, line, mode)</span></p>
+<p class=MsoNormal style='margin-left:21.0pt; '><span lang=FR style='color:black;'>handle</span><span style='font-family:宋体;color:black;'>：函数</span><span lang=FR style='color:black;'>FILE_ZOPEN</span><span style='font-family:宋体;color:black;'>返回的文件句柄</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>line</span><span style='font-family:宋体;color:black;'>：要定位行的行号或偏移，根据</span><span lang=FR style='color:black;'>mode</span><span style='font-family:宋体;color:black;'>的不同，可以取负数</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>mode</span><span style='font-family:宋体;color:black;'>：执行定位功能时的基准位置，可取值</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>、</span><span lang=FR style='color:black;'>1</span><span style='font-family:宋体;color:black;'>、</span><span lang=FR style='color:black;'>2</span><span style='font-family:宋体;color:black;'>。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>mode</span><span style='font-family:宋体;color:black;'>详细说明：</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>：代表文件头为基准，</span><span lang=FR style='color:black;'>line</span><span style='font-family:宋体;color:black;'>指示需要定位的行号，执行后文件定位到</span><span lang=FR style='color:black;'>line</span><span style='font-family:宋体;color:black;'>指示行的行首，</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>表示定位到第一行行首；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>1</span><span style='font-family:宋体;color:black;'>：代表当前行作为基准，</span><span lang=FR style='color:black;'>line</span><span style='font-family:宋体;color:black;'>指示定位的行偏移，</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>表示定位到当前行的行首，负数表示向文件头方向进行定位；</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=FR style='color:black;'>2</span><span style='font-family:宋体;color:black;'>：代表文件结尾为基准，</span><span lang=FR style='color:black;'>line</span><span style='font-family:宋体;color:black;'>指示定位的行偏移，</span><span lang=FR style='color:black;'>0</span><span style='font-family:宋体;color:black;'>表示定位到最后一行的行首，负数则依次向文件头方向进行定位。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US>4</span><span style='font-family:宋体; '>系列产品</span><span lang=EN-US>20170601</span><span style='font-family:宋体; '>以上版本支持</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='tab-stops:55.15pt;'><span style='font-family:宋体;color:black;'>参见</span><span lang=FR style='color:black;'>FILE_ZREADLINE</span><span style='font-family:宋体;color:black;'>例程</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="553.html#_FILE__ZREADLINE_–"><span lang=FR>FILE_ZREADLINE</span></a><span style='font-family:宋体;color:black;'>，</span><a href="557.html#_FILE_ZTELLLINE_–_文件行号"><span lang=FR>FILE_ZTELLLINE</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="556.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="554.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

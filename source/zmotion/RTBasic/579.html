@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>SDO_READ -- 数据字典读取</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="580.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="578.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_SDO_READ"></a><a name="_Toc134698395"></a><a name="_Toc26439"></a><a name="_Toc27983"></a><a name="_Toc17210"></a><a name="_Toc12294"><span lang=EN-US>SDO_READ -- </span></a><span style='font-family:宋体;'>数据字典读取</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>总线指令，仅</span><span lang=EN-US style='color:black;'>EtherCAT</span><span style='font-family:宋体;color:black;'>可用</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>通过设备号和槽位号进行</span></b><b><span lang=EN-US style='color:black;'>SDO</span></b><b><span style='font-family:宋体;color:black; '>读取</span></b><span style='font-family:宋体;color:black; '>。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>通过</span><span lang=EN-US style='color: black;'>RETURN</span><span style='font-family:宋体; color:black;'>返回成功与否，</span><span lang=EN-US style='color:black;'>-1</span><span style='font-family: 宋体; color:black;'>写入成功，</span><span lang=EN-US style='color:black;'>0</span><span style='font-family: 宋体; color:black;'>写入失败</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>需连接好设备，扫描总线后才能执行。</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>只有可读的数据字典才能读取。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>SDO</span><span style='font-family: 宋体; color:red;'>不要频繁读写。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>SDO_READ (slot, node, index, subindex ,type</span><span style='font-family:宋体; '>，</span><span lang=EN-US>tablenum)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>slot</span><span style=' font-family:宋体;'>：槽位号</span><span lang=EN-US> 0-</span><span style='font-family:宋体; '>缺省</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>node</span><span style='font-family:宋体; '>：设备编号</span><span lang=EN-US> 0-</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>index</span><span style='font-family:宋体; '>：数据字典编号，前面可加</span><span lang=EN-US>&quot;$&quot;</span><span style='font-family:宋体;'>表示</span><span lang=EN-US>16</span><span style='font-family:宋体;'>进制，如</span><span lang=EN-US>$6060</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>subindex</span><span style='font-family:宋体; '>：子编号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>type</span><span style='font-family:宋体; '>：数据类型</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=335 style='width:143.65pt;margin-left:19.4pt;border-collapse:collapse; border:none; '> <tr> <td width=127 valign=top style='width:54.4pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>1</span></p>
+</td> <td width=208 valign=top style='width:89.25pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>&nbsp;boolean </span></p>
+</td> </tr> <tr> <td width=127 valign=top style='width:54.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>2</span></p>
+</td> <td width=208 valign=top style='width:89.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>&nbsp;integer 8</span></p>
+</td> </tr> <tr> <td width=127 valign=top style='width:54.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>3</span></p>
+</td> <td width=208 valign=top style='width:89.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>&nbsp;integer 16</span></p>
+</td> </tr> <tr> <td width=127 valign=top style='width:54.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>4</span></p>
+</td> <td width=208 valign=top style='width:89.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>&nbsp;integer 32</span></p>
+</td> </tr> <tr> <td width=127 valign=top style='width:54.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>5</span></p>
+</td> <td width=208 valign=top style='width:89.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>&nbsp;unsigned 8</span></p>
+</td> </tr> <tr> <td width=127 valign=top style='width:54.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>6</span></p>
+</td> <td width=208 valign=top style='width:89.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>&nbsp;unsigned 16</span></p>
+</td> </tr> <tr> <td width=127 valign=top style='width:54.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>7</span></p>
+</td> <td width=208 valign=top style='width:89.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>&nbsp;unsigned 32</span></p>
+</td> </tr> <tr> <td width=127 valign=top style='width:54.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>8</span></p>
+</td> <td width=208 valign=top style='width:89.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>&nbsp;float</span></p>
+</td> </tr> <tr> <td width=127 valign=top style='width:54.4pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode: char;'><span lang=EN-US>9</span></p>
+</td> <td width=208 valign=top style='width:89.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='text-indent:5.25pt; layout-grid-mode:char;'><span lang=EN-US>string</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>tablenum</span><span style='font-family:宋体; '>：读取的数据存储的</span><span lang=EN-US>TABLE</span><span style='font-family:宋体; '>位置</span></p>
+<p class=MsoNormal><span style='font-family:宋体; color:black;'>在线命令直接输入该指令，</span><span lang=EN-US style='color:black;'>tablenum</span><span style='font-family:宋体;color:black;'>为</span><span lang=EN-US style='color:black;'>-1</span><span style='font-family: 宋体; color:black;'>，不存储，直接打印</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>带</span><span lang=EN-US>EtherCAT</span><span style='font-family:宋体; '>接口</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>SLOT_SCAN(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>IF NODE_COUNT(0)&gt;0 THEN</span></p>
+<p class=MsoNormal style='text-indent:10.55pt; '><b><span lang=EN-US>SDO_READ</span></b><span lang=EN-US> (0,0,$6061,0,2,0)&nbsp; '</span><span style='font-family:宋体; '>读取</span><span lang=EN-US>0</span><span style='font-family:宋体;'>号设备的控制模式，数据存到</span><span lang=EN-US>table(0)</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>?table(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; '>打印出数据</span></p>
+<p class=MsoNormal><span lang=EN-US>ENDIF</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="580.html#_SDO_READ_AXIS">SDO_READ_AXIS</a></span><span style='font-family:宋体; color:black;'>，</span><span lang=EN-US><a href="577.html#_SDO_WRITE_--_数据字典写入_1">SDO_WRITE</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="580.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="578.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

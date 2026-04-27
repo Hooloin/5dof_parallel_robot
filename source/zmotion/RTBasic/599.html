@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>DRIVE_CONTROLWORD -- 驱动器控制字</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="600.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="598.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_DRIVE_CONTROLWORD_--_驱动器控制字"></a><a name="_Toc134698414"></a><a name="_Toc28729"></a><a name="_Toc8808"></a><a name="_Toc21233"></a><a name="_DRIVE_CONTROLWORD_--_驱动器控制字_1"></a><span lang=EN-US>DRIVE_CONTROLWORD -- </span><span style='font-family:宋体; '>驱动器控制字</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black; '>驱动控制字，按位操作</span></b></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:red;'>必须设置正确的</span><span lang=EN-US style='color:red;'>ATYPE</span><span style='font-family:宋体;color:red;'>（设置为</span><span lang=EN-US style='color:red;'>65/66/67</span><span style='font-family:宋体;color:red;'>）以后才能操作这个参数。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>对于</span><span lang=EN-US style='color:black;'>EtherCAT</span><span style='font-family:宋体;color:black;'>驱动器，</span> <span style='font-family: 宋体; '>对应数据字典</span><span lang=EN-US>0x6040</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>EtherCAT</span><span style='font-family:宋体;color:black;'>控制器</span><span lang=EN-US>ATYPE=65</span><span style='font-family:宋体;'>时控制字会根据</span><span lang=EN-US>WDOG/AXIS_ENABLE</span><span style='font-family:宋体;'>自动切换以使能驱动器，主要位操作如下图。具体位意义请查看对应驱动器手册。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=877 height=477 src="doc.files/image582.jpg" ></span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>对于</span><span lang=EN-US>Rtex</span><span style='font-family:宋体;'>驱动器</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>Rtex</span><span style='font-family:宋体;'>控制器控制字缺省自动设置，需要手动时先将</span><span lang=EN-US>DRIVE_CW_MODE</span><span style='font-family:宋体;'>设为</span><span lang=EN-US>1</span><span style='font-family:宋体;'>，不能随便修改，位意义如下图，详细说明请看松下</span><span lang=EN-US>Rtex</span><span style='font-family:宋体;'>手册的</span><span lang=EN-US>4-2-3</span><span style='font-family:宋体;'>章节。</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=875 height=168 src="doc.files/image584.png" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>可读：</span><span lang=EN-US style='color:black;'>var=</span><span lang=EN-US>DRIVE_CONTROLWORD(axis)</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>可写：</span><span lang=EN-US>DRIVE_CONTROLWORD(axis)=value</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>axis</span><span style='font-family:宋体;'>：轴号</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;'>带</span><span lang=EN-US>EtherCAT</span><span style='font-family:宋体; '>接口或</span><span lang=EN-US>RTEX</span><span style='font-family:宋体; '>接口</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例一</span><span lang=EN-US> EtherCAT</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>SLOT_SCAN(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>IF NODE_COUNT(0)&gt;0 THEN</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; AXIS_ADDRESS(0)=1</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>&nbsp; ATYPE(0)=65&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'EtherCAT</span><span style='font-family:宋体;'>总线位置控制</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black; '>DRIVE_PROFILE(0)=0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'PDO</span><span style='font-family:宋体;color:black; '>设为</span><span lang=EN-US style='color:black; '>0</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><b><span lang=EN-US>DRIVE_CONTROLWORD</span></b><span lang=EN-US>(0)=128&nbsp;&nbsp; '</span><span style='font-family:宋体;'>伺服错误清除</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>DELAY (100)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><b><span lang=EN-US>DRIVE_CONTROLWORD</span></b><span lang=EN-US>(0)=6&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>伺服</span><span lang=EN-US>shutdown </span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><span lang=EN-US>DELAY (100)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><b><span lang=EN-US>DRIVE_CONTROLWORD</span></b><span lang=EN-US>(0)=15&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>伺服</span><span lang=EN-US>switch on</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ENDIF</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span style='font-family:宋体;'>例二</span><span lang=EN-US> RTEX</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>SLOT_SCAN(0)</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>IF NODE_COUNT(0)&gt;0 THEN</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;&nbsp;&nbsp; AXIS_ADDRESS(0)=1</span></p>
+<p class=MsoNormal style='text-indent:10.5pt; '><span lang=EN-US>&nbsp; ATYPE(0)=50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'RTEX</span><span style='font-family:宋体;'>总线位置控制</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black; '>DRIVE_PROFILE(0)=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>伺服带</span><span lang=EN-US style='color:black; '>IO</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black; '>DRIVE_CW_MODE=1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black; '>手动设置控制字</span></p>
+<p class=MsoNormal style='text-indent:21.0pt;'><b><span lang=EN-US>DRIVE_CONTROLWORD</span></b><span lang=EN-US>(0)=128&nbsp;&nbsp; '</span><span style='font-family:宋体;'>伺服使能</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>ENDIF</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.04%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.96%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="270.html#_ATYPE"><span lang=EN-US>ATYPE</span></a><span style='font-family:宋体;'>，</span><a href="598.html#_DRIVE_CW_MODE"><span lang=EN-US>DRIVE_CW_MODE</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal style='layout-grid-mode:char;'><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="600.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="598.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

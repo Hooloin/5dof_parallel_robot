@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVER2_P/MOVER2_PABS -- 机械手点位运动</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="92.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="90.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_Toc198286245"><span lang=FR style='font-family:"Calibri","sans-serif"; '>MOVER2_P/MOVER2_PABS</span></a><span lang=EN-US style='font-family:"Calibri","sans-serif"; '> -- </span><span style='font-family:宋体; '>机械手点位运动</span></h3>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black; '>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; '>机械手运动指令</span></p>
+</td>  </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black; '>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal><b><span style=' font-family:宋体; '>机械手末端通过点到点（</span></b><b><span lang=FR style='font-family:"Calibri","sans-serif"; '>PTP</span></b><b><span style='font-family:宋体; '>）关节插补联动运行到指定的目标点位姿。</span></b><b><span style='font-family:宋体; '>该指令与</span></b><b><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_J</span></b><b><span style='font-family:宋体; '>功能一样，只是</span></b><b><span style='font-family:宋体; '>输入</span></b><b><span style='font-family:宋体; '>的</span></b><b><span style='font-family:宋体; '>是目标点位姿。</span></b></p>
+<p class=MsoNormal><span style=' font-family:宋体; '>该机械手指令对</span><span lang=FR style='font-family:"Calibri","sans-serif"; '>base</span><span style='font-family:宋体; '>设置的虚拟轴有效。</span></p>
+</td>  </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black; '>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='tab-stops:273.25pt;'><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>MOVER2_P/MOVER2_PABS(Fstatus,End_Pos1,End_Pos2,End_Pos3,End4,...)</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>Fstatus</span><span style='font-family:宋体; color:black;'>：若</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>6</span><span style='font-family:宋体; color:black;'>自由度机械手，表示确定唯一解的类型值，取值范围</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>0~7</span><span style='font-family:宋体; color:black;'>；若是</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>SCARA</span><span style='font-family:宋体; color:black;'>，则是左右手系，</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>0</span><span style='font-family:宋体; color:black;'>表示右手系，</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>1</span><span style='font-family:宋体; color:black;'>表示左手系。</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>-1</span><span style='font-family:宋体; color:black;'>表示当前的姿态。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>End_Pos1</span><span style='font-family:宋体; color:black;'>：机械手虚拟轴的第</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>1</span><span style='font-family:宋体; color:black;'>轴目标值（如</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>X</span><span style='font-family:宋体; color:black;'>轴）；单位：</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>mm</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>End_Pos2</span><span style='font-family:宋体; color:black;'>：机械手虚拟轴的第</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>2</span><span style='font-family:宋体; color:black;'>轴目标值（如</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>Y</span><span style='font-family:宋体; color:black;'>轴）；单位：</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>mm</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>End_Pos3</span><span style='font-family:宋体; color:black;'>：机械手虚拟轴的第</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>3</span><span style='font-family:宋体; color:black;'>轴目标值（如</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>Z</span><span style='font-family:宋体; color:black;'>轴）；单位：</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>mm</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>End4</span><span style='font-family:宋体; color:black;'>：若是六轴机械手，表示目标点姿态的欧拉角</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>RX</span><span style='font-family:宋体; color:black;'>角；若是</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>SCARA</span><span style='font-family:宋体; color:black;'>，表示直线目标点姿态的</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>RX</span><span style='font-family:宋体; color:black;'>轴旋转角。单位：度</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>End5</span><span style='font-family:宋体; color:black;'>：若是六自由度机械手，需填写该值，表示直线目标点姿态的欧拉角</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>RY</span><span style='font-family:宋体; color:black;'>角；而</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>SCARA</span><span style='font-family:宋体; color:black;'>不需填写。单位：度</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>End6</span><span style='font-family:宋体; color:black;'>：若是六自由度机械手，需填写该值，表示直线目标点姿态的欧拉角</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>RZ</span><span style='font-family:宋体; color:black;'>角；而</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>SCARA</span><span style='font-family:宋体; color:black;'>不需填写。单位：度</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; tab-stops:273.25pt;'><span style=' font-family:宋体; color:black; '>若后面</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>End7</span><span style='font-family:宋体; color:black;'>、</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>End8</span><span style='font-family:宋体; color:black;'>、</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>End9</span><span style='font-family:宋体; color:black;'>等继续添加的参数，则为外扩轴的目标值，量纲单位根据用户设置的情况，可设置为旋转轴（单位：度）或移动轴（单位：</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>mm</span><span style='font-family:宋体; color:black;'>）。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black; '>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>4</span><span style='font-family:宋体; color:black; '>系列</span><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'> 20170511</span><span style='font-family:宋体; color:black; '>以上固件支持</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black; '>例程</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>BASE(6,7,8,9,10,11)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>选择虚拟轴号</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class=MsoNormal><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>CONNREFRAME(6,0,0,1,2,3,4,5)&nbsp; '</span><span style='font-family:宋体; color:black;'>六自由度机械手模型，第</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>0~5</span><span style='font-family:宋体; color:black;'>轴作为关节轴号</span></p>
+<p class=MsoNormal><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>?&quot;</span><span style='font-family:宋体; color:black;'>正解模式</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>&quot;</span></p>
+<p class=MsoNormal><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>BASE(6,7,8,9,10,11)</span></p>
+<p class=MsoNormal><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>FORCE_SPEED=0.8&nbsp; ‘</span><span style='font-family:宋体; color:black;'>设置下面执行的</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>MOVER2_PABS</span><span style='font-family:宋体; color:black;'>点位运动速度为</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>0.8</span><span style='font-family:宋体; color:black;'>，</span><span style='font-family:宋体; color:black;'>即速度设置为满速的</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>80%</span></p>
+<p class=MsoNormal><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>&nbsp;</span></p>
+<p class=MsoNormal><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>MOVER2_PABS(3,374,0,630,0,90,0)&nbsp; ‘</span><span style='font-family:宋体; color:black;'>表示机械手走</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>PTP</span><span style='font-family:宋体; color:black;'>关节插补运行到目标坐标值</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>(374,0,630)</span><span style='font-family:宋体; color:black;'>，目标姿态值</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>(0,90,0)</span><span style='font-family:宋体; color:black;'>，处于</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>Fstatus=3</span><span style='font-family:宋体; color:black;'>的唯一解区域。</span></p>
+<p class=MsoNormal><span lang=FR style='font-family:"Calibri","sans-serif"; color:black; '>MOVER2_PABS(-1,189,-160,600,0,90,0);&nbsp; ‘</span><span style='font-family:宋体; color:black;'>表示机械手走直线路径运行到目标坐标值</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>(189,-160,600)</span><span style='font-family:宋体; color:black;'>，目标姿态值</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>(0,90,0)</span><span style='font-family:宋体; color:black;'>不变，依然处于</span><span lang=FR style='font-family:"Calibri","sans-serif"; color:black;'>Fstatus=3</span><span style='font-family:宋体; color:black;'>的唯一解区域。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体; color:black; '>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; '>MOVER2_J/MOVER2_JABS</span></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri","sans-serif"; color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="92.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="90.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

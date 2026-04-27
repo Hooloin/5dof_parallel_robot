@@ -1,0 +1,170 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>MOVESLINK -- 自动凸轮2</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="67.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="65.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_MOVESLINK_--_自动凸轮2"></a><a name="_MOVESLINK"></a><a name="_Toc134697860"></a><a name="_Toc18892"></a><a name="_Toc24569"></a><a name="_Toc27222"></a><a name="_Toc8256"></a><a name="_MOVESLINK_--_自动凸轮2_1"></a><span lang=EN-US>MOVESLINK -- </span><span style='font-family:宋体;'>自动凸轮</span><span lang=EN-US>2</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="103%" style='width:103.36%;border-collapse:collapse; '> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.52%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td> <td width="82%" valign=top style='width:82.48%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>同步运动指令</span></p>
+</td> </tr> <tr style='height:17.85pt'> <td width="17%" valign=top style='width:17.52%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td> <td width="82%" valign=top style='width:82.48%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.85pt'>
+<p class=MsoNormal style='tab-stops:53.15pt;layout-grid-mode:char;'><b><span style='font-family:宋体; color:black;'>此指令用于自定义的凸轮运动，该运动自动规划中间曲线，不用计算凸轮表。</span></b></p>
+<p class=MsoNormal style='tab-stops:53.15pt;layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal style='tab-stops:53.15pt;'><span style='font-family:宋体;color:black;'>被连接轴为参考轴，连接轴为跟随轴。</span></p>
+<p class=MsoNormal align=left style='text-align:left;'><span style='font-family:宋体; color:red;'>在加速和减速阶段为了与速度匹配，下一条</span><span lang=EN-US style='color:red;'>MOVESLINK</span><span style='font-family:宋体;color:red;'>的</span><span lang=EN-US style='color:red;'>start sp</span><span style='font-family: 宋体; color:red;'>必须与当前</span><span lang=EN-US style='color:red;'>MOVESLINK</span><span style='font-family:宋体;color:red;'>的</span><span lang=EN-US style='color:red;'>end sp</span><span style='font-family: 宋体; color:red;'>相同。</span></p>
+<p class=MsoNormal align=left style='text-align:left;'><span style='font-family:宋体; color:red;'>请确保指令传递的距离参数</span><span lang=EN-US style='color:red;'>*units</span><span style='font-family:宋体;color:red;'>是整数个脉冲，否则出现浮点数会导致运动有细微误差。</span></p>
+</td> </tr> <tr style='height:17.25pt'> <td width="17%" valign=top style='width:17.52%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td> <td width="82%" valign=top style='width:82.48%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.25pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MOVESLINK (distance,link dist,start sp,end sp,link axis[,link options][,link pos][, link offpos])&nbsp; </span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>[, link options] [, link pos] </span><span style='font-family:宋体;color:red;'>可选参数不填时，逗号不能省掉，控制器根据参数的位置来判断是什么参数。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>distance</span><span style='font-family:宋体; color:black;'>：从连接开始到结束，跟随轴移动的距离，此参数可正可负，为正数正方向跟随，为负数负方向跟随，采用</span><span lang=EN-US style='color:black;'>units</span><span style='font-family:宋体;color:black;'>单位</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>link dist</span><span style='font-family:宋体; color:black;'>：参考轴在连接的整个过程中移动的绝对距离，采用</span><span lang=EN-US style='color:black;'>units</span><span style='font-family:宋体;color:black;'>单位</span> </p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>start sp</span><span style='font-family:宋体; color:black;'>：启动时跟随轴和参考轴的速度比例，</span><span lang=EN-US style='color:black;'>units/units</span><span style='font-family:宋体;color:black;'>单位，负数表示跟随轴负向运动</span> </p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>end sp</span><span style='font-family:宋体; color:black;'>：结束时跟随轴和参考轴的速度比例，</span><span lang=EN-US style='color:black;'>units/units</span><span style='font-family:宋体;color:black;'>单位</span><span lang=EN-US style='color:black;'>, </span><span style='font-family:宋体;color:black;'>负数表示跟随轴负向运动</span> <span style='font-family: 宋体; color:black;'>注：当</span><span lang=EN-US style='color:black;'>start sp = end sp = distance/link dist</span><span style='font-family:宋体; color:black;'>时，匀速运动</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>link axis</span><span style='font-family:宋体; color:black;'>：参考轴的轴号</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>link options</span><span style='font-family:宋体;color:black; '>：连接模式选项，不同的二进制位代表不同的意义</span></p>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=877 style='width:375.65pt;margin-left:19.4pt;border-collapse:collapse; '> <tr> <td width=83 valign=top style='width:35.65pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>模式</span></p>
+</td> <td width=75 valign=top style='width:32.25pt;border:solid windowtext 1.0pt; border-left:none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>位</span></p>
+</td> <td width=718 valign=top style='width:307.75pt;border:solid windowtext 1.0pt; border-left:none; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>描述</span></p>
+</td> </tr> <tr> <td width=83 valign=top style='width:35.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>1</span></p>
+</td> <td width=75 valign=top style='width:32.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>位</span><span lang=EN-US style='color:black;'>0</span></p>
+</td> <td width=718 valign=top style='width:307.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>连接精确开始于参考轴上</span><span lang=EN-US style='color:black;'>MARK</span><span style='font-family:宋体; color:black; '>事件被触发的时刻</span></p>
+</td> </tr> <tr> <td width=83 valign=top style='width:35.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>2</span></p>
+</td> <td width=75 valign=top style='width:32.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>位</span><span lang=EN-US style='color:black;'>1</span></p>
+</td> <td width=718 valign=top style='width:307.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>连接开始于参考轴到达一个绝对位置时</span><span lang=EN-US style='color:black;'>(</span><span style='font-family:宋体;color:black;'>见</span><span lang=EN-US style='color:black;'>link pos</span><span style='font-family:宋体;color:black;'>参数描述</span><span lang=EN-US style='color:black;'>)</span></p>
+</td> </tr> <tr> <td width=83 valign=top style='width:35.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>4</span></p>
+</td> <td width=75 valign=top style='width:32.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>位</span><span lang=EN-US style='color:black;'>2</span></p>
+</td> <td width=718 valign=top style='width:307.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>当此位被设置时，</span><span lang=EN-US style='color:black;'>MOVELINK</span><span style='font-family:宋体; color:black; '>会自动重复执行并且可以反向</span><span lang=EN-US style='color:black; '>(</span><span style=' font-family:宋体;color:black;'>这个模式可以通过设置轴参数</span><span lang=EN-US style='color:black;'>REP_OPTION</span><span style='font-family:宋体;color:black;'>的第</span><span lang=EN-US style='color:black;'>1</span><span style=' font-family:宋体;color:black;'>位为</span><span lang=EN-US style='color:black;'>1</span><span style=' font-family:宋体;color:black;'>来清除</span><span lang=EN-US style='color:black;'>)</span></p>
+</td> </tr> <tr> <td width=83 valign=top style='width:35.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>16</span></p>
+</td> <td width=75 valign=top style='width:32.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>位</span><span lang=EN-US style='color:black;'>4</span></p>
+</td> <td width=718 valign=top style='width:307.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>使用</span><span lang=EN-US style='color:black;'>link offpos </span><span style='font-family:宋体;color:black;'>从中间来启动，配合掉电中断实现恢复</span><span style='font-family:宋体;'>，</span><span lang=EN-US style='color:red;'>20170428</span><span style='font-family:宋体;color:red;'>以上固件支持</span></p>
+</td> </tr> <tr> <td width=83 valign=top style='width:35.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>32</span></p>
+</td> <td width=75 valign=top style='width:32.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>位</span><span lang=EN-US style='color:black;'>5</span></p>
+</td> <td width=718 valign=top style='width:307.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>只有参考轴为正向运动才连接</span></p>
+</td> </tr> <tr> <td width=83 valign=top style='width:35.65pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>256</span></p>
+</td> <td width=75 valign=top style='width:32.25pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>位</span><span lang=EN-US style='color:black;'>8</span></p>
+</td> <td width=718 valign=top style='width:307.75pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal><span style='font-family:宋体; color:black; '>连接精确开始于参考轴上</span><span lang=EN-US style='color:black;'>MARKB</span><span style='font-family:宋体; color:black; '>事件被触发的时刻，需要最新固件支持</span></p>
+</td> </tr> </table>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>link pos</span><span style='font-family:宋体; color:black;'>：当</span><span lang=EN-US style='color:black;'>link options</span><span style='font-family:宋体;color:black;'>参数设置为</span><span lang=EN-US style='color:black;'>2</span><span style='font-family:宋体;color:black;'>时，该参数表示<a name="OLE_LINK29">参考</a>轴在该绝对位置值时，连接开始</span> </p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US style='color:black;'>link offpos</span><span style='font-family:宋体;color:black; '>：当</span><span lang=EN-US style='color:black; '>link_options</span><span style='font-family:宋体; color:black;'>参数</span><span lang=EN-US style='color: black;'>bit4</span><span style='font-family:宋体; color:black;'>置为</span><span lang=EN-US style='color: black;'>1</span><span style='font-family:宋体;color:black; '>时，该参数表示主轴已经运行完的相对位置。</span><span lang=EN-US style='color:black;'>20170428</span><span style='font-family:宋体;color:black;'>以上固件支持。</span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.52%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td> <td width="82%" valign=top style='width:82.48%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black;'>通用</span></p>
+</td> </tr> <tr style='height:19.2pt'> <td width="17%" valign=top style='width:17.52%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td> <td width="82%" valign=top style='width:82.48%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt'>
+<p class=MsoNormal><span style='font-family: 宋体; '>功能与</span><span lang=EN-US>MOVELINK</span><span style='font-family:宋体; '>相同，仅是参数设置区别</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例一：</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DATUM(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><a name="OLE_LINK134"><span lang=EN-US style='color:black;'>BASE(0,1)</span></a></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100,100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=2000,2000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=2000,2000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal align=left style='text-align:left;'><b><span lang=EN-US style='color:black;'>MOVESLINK</span></b><span lang=EN-US style='color:black; '>(50,100,0,1,1)&nbsp; AXIS(0)&nbsp; '</span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black; '>跟踪轴</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black; '>运动，从速度</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black; '>到速度一致</span></p>
+<p class=MsoNormal align=left style='text-align:left;'><b><span lang=EN-US style='color:black;'>MOVESLINK</span></b><span lang=EN-US style='color:black; '>(100,100,1,1,1)</span><span lang=EN-US>&nbsp; AXIS(0) &nbsp;<span style='color:black'>'</span></span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black; '>跟踪轴</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black; '>运动，匀速</span><span lang=EN-US style='color:black;'>100units</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black; '>MOVESLINK</span></b><span lang=EN-US style='color:black;'>(50,100,1,0,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US>&nbsp; AXIS(0)&nbsp; <span style='color:black'>&nbsp;'</span></span><span style='font-family:宋体;color:black; '>轴</span><span lang=EN-US style='color:black;'>0</span><span style='font-family:宋体;color:black; '>跟踪轴</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black; '>运动，减速到</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VMOVE(1)&nbsp; AXIS(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 6.0cm;'><span style='font-family:宋体;'>运动轨迹和速度曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>DPOS(0)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style=' font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>DPOS(1)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style=' font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>MSPEED(0)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style=' font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>MSPEED(1)</span><span style=' font-family:宋体;color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>200</span><span style=' font-family:宋体;color:black;'>，偏移</span><span lang=EN-US style='color:black;'>50</span> </p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=770 height=459 src="doc.files/image233.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span style='font-family: 宋体; color:black;'>例二：追剪</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>RAPIDSTOP(2)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WAIT IDLE(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DATUM(0)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>BASE(0,1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=10000,10000</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0,0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=1,1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=2,2</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=2,2</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SRAMP=200,200</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体; color:black;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VMOVE(1)&nbsp; AXIS(1)</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WHILE 1</span></p>
+<p class=MsoNormal><b><span lang=EN-US style='color:black;'>MOVESLINK</span></b><span lang=EN-US style='color:black;'>(0,1,0,0,1)&nbsp; AXIS(0)&nbsp;&nbsp; '</span><span style='font-family: 宋体; color:black;'>型材运动</span><span lang=EN-US style='color:black;'>1</span><span style='font-family: 宋体; color:black;'>单位前，工作台静止</span></p>
+<p class=MsoNormal><b><span lang=EN-US style='color:black;'>MOVESLINK</span></b><span lang=EN-US style='color:black;'>(0.4,0.8,0,1,1)&nbsp; AXIS(0)&nbsp; '</span><span style='font-family:宋体; color:black;'>工作台加速阶段</span></p>
+<p class=MsoNormal><b><span lang=EN-US style='color:black;'>MOVESLINK</span></b><span lang=EN-US style='color:black;'>(0.2,0.2,1,1,1)&nbsp; AXIS(0)&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;color:black;'>速度跟随阶段</span></p>
+<p class=MsoNormal><b><span lang=EN-US style='color:black;'>MOVESLINK</span></b><span lang=EN-US style='color:black;'>(0.4,0.8,1,0,1)&nbsp; AXIS(0)&nbsp; '</span><span style='font-family:宋体; color:black;'>工作台减速阶段</span></p>
+<p class=MsoNormal><b><span lang=EN-US style='color:black;'>MOVESLINK</span></b><span lang=EN-US style='color:black;'>(-1,1.2,0,0,1)&nbsp; AXIS(0)&nbsp; '</span><span style='font-family:宋体; color:black;'>工作台回到起始点</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>WEND</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal style='tab-stops:center 6.0cm;'><span style='font-family:宋体;'>运动轨迹和速度曲线</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(0)</span><span style='font-family:宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1</span><span style=' font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS(1)</span><span style='font-family:宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1</span><span style=' font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(0)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1</span><span style=' font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>MSPEED(1)</span><span style='font-family: 宋体; color:black;'>垂直刻度</span><span lang=EN-US style='color:black;'>1</span><span style=' font-family:宋体;color:black;'>，无偏移</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=776 height=701 src="doc.files/image235.jpg" ></span></p>
+</td> </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.52%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td> <td width="82%" valign=top style='width:82.48%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US><a href="64.html#_MOVELINK_--_自动凸轮_1">MOVELINK</a></span></p>
+</td> </tr> </table>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="67.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="65.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->

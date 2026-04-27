@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="Generator" content="Montinz Word-2-CHM 1.1.7.1 Free">
+<title>REP_OPTION -- 坐标循环模式</title>
+<link href="document.css" type="text/css" rel="stylesheet" />
+<link href="images/montinz_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jscript/montinz_jscript.js"></script>
+<script src="jscript/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+<script>
+DD_belatedPNG.fix('img,.ie6png');
+</script>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN link="#3366CC" vlink="#9999CC" style='tab-interval:21.0pt; text-justify-trim:punctuation'>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="362.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="360.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h3><a name="_REP_OPTION_--_坐标循环模式"></a><a name="_Toc134698148"></a><a name="_Toc19428"></a><a name="_Toc22512"></a><a name="_Toc24873"></a><a name="_REP_OPTION_--_坐标循环模式_1"></a><span lang=EN-US>REP_OPTION -- </span><span style='font-family:宋体;'>坐标循环模式</span></h3> 
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;'> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt; height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>类型</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border:solid windowtext 1.0pt; border-left:none;padding: 0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>轴参数</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>描述</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>坐标重复设置。</span></b></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>&nbsp;</span></b></p>
+<p class=MsoNormal><span style='font-family:宋体;color:black; '>可用于限制凸轮主轴的坐标循环范围，来实现多条凸轮曲线连续。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>使用绝对运动模式时，如果目标位置处于坐标循环范围内，可以正确运动；如果处于坐标循环范围外，运动不正确。</span></p>
+<p class=MsoNormal><span style='font-family:宋体;color:red; '>相对运动不受影响。</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:red;'>REP_DIST</span><span style='font-family:宋体;color:red;'>超过参数支持的最大数值，就会把</span><span lang=EN-US style='color:red;'>REP_OPTION</span><span style='font-family:宋体;color:red;'>的</span><span lang=EN-US style='color:red;'>bit4</span><span style='font-family:宋体;color:red;'>置</span><span lang=EN-US style='color:red;'>1</span><span style='font-family:宋体;color:red;'>。</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>语法</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span lang=EN-US style='color:black; '>VAR1 = REP_OPTION</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>REP_OPTION = opt</span></p>
+<p class=MsoNormal style='text-indent:21.0pt; '><span lang=EN-US>opt</span><span style='font-family:宋体;'>：按位来表示不同的意义</span></p>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none; '> <tr> <td width=62 valign=top style='width:26.55pt;border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;'>位</span></p>
+</td>  <td width=55 valign=top style='width:23.45pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;'>值</span></p>
+</td>  <td width=789 valign=top style='width:338.05pt;border:solid windowtext 1.0pt; border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;'>描述</span></p>
+</td>  </tr> <tr> <td width=62 valign=top style='width:26.55pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US>0</span></p>
+</td>  <td width=55 valign=top style='width:23.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US>1</span></p>
+</td>  <td width=789 valign=top style='width:338.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black; '>0-</span><span style='font-family:宋体;color:black;'>循环范围–</span><span lang=EN-US style='color:black;'> REP_DIST </span><span style='font-family:宋体;color:black;'>到</span><span lang=EN-US style='color:black;'> + REP_DIST</span></p>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black; '>1-</span><span style='font-family:宋体;color:black;'>循环范围为</span><span lang=EN-US style='color:black;'>0 </span><span style='font-family:宋体;color:black;'>到</span><span lang=EN-US style='color:black;'> + REP_DIST</span></p>
+</td>  </tr> <tr> <td width=62 valign=top style='width:26.55pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US>1</span></p>
+</td>  <td width=55 valign=top style='width:23.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US>2</span></p>
+</td>  <td width=789 valign=top style='width:338.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>写</span><span lang=EN-US style='color:black;'>1</span><span style='font-family:宋体;color:black;'>禁止</span><span lang=EN-US style='color:black;'>CAMBOX</span><span style='font-family:宋体;color:black;'>和</span><span lang=EN-US style='color:black;'>MOVELINK</span><span style='font-family:宋体;color:black;'>的重复运动，禁止生效后还原为</span><span lang=EN-US style='color:black;'>0</span></p>
+</td>  </tr> <tr> <td width=62 valign=top style='width:26.55pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US>2</span></p>
+</td>  <td width=55 valign=top style='width:23.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US>4</span></p>
+</td>  <td width=789 valign=top style='width:338.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span style='font-family:宋体;color:black; '>预留</span></p>
+</td>  </tr> <tr> <td width=62 valign=top style='width:26.55pt;border:solid windowtext 1.0pt; border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US>4</span></p>
+</td>  <td width=55 valign=top style='width:23.45pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US>16</span></p>
+</td>  <td width=789 valign=top style='width:338.05pt;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-left:5.25pt; '><span lang=EN-US style='color:black; '>1-</span><span style='font-family:宋体;color:black;'>不使用</span><span lang=EN-US style='color:black;'>REP_DIST</span><span style='font-family:宋体;color:black;'>，</span><span lang=EN-US style='color:black;'>0-</span><span style='font-family:宋体;color:black;'>使用</span><span lang=EN-US style='color:black;'>REP_DIST</span></p>
+</td>  </tr> </table>
+
+<p class=MsoNormal></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>适用控制器</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>通用</span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>例子</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a name="OLE_LINK175"><span lang=EN-US style='color:black;'>BASE(0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span></a><span style=' font-family:宋体;color:black;'>选择轴</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ATYPE=1</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>UNITS=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>脉冲当量</span><span lang=EN-US style='color:black;'>100</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DPOS=0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>坐标清</span><span lang=EN-US style='color:black;'>0</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>SPEED=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>速度</span><span lang=EN-US style='color:black;'>100units/s</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>ACCEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>加速度</span><span lang=EN-US style='color:black;'>1000units/s/s</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>DECEL=1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>加速度</span><span lang=EN-US style='color:black;'>1000units/s/s</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REP_DIST=100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>设置坐标循环范围</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span lang=EN-US style='color:black;'>REP_OPTION</span></b><span lang=EN-US style='color:black;'>=0&nbsp;&nbsp;&nbsp; '</span><span style=' font-family:宋体;color:black;'>设置循环模式</span></p>
+<p class=MsoNormal><span lang=EN-US>TRIGGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '</span><span style='font-family:宋体;'>自动触发示波器</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>VMOVE(1)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'</span><span style=' font-family:宋体;color:black;'>持续运动</span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>&nbsp;</span></p>
+<p class=MsoNormal><span style=' font-family:宋体;color:black;'>坐标曲线</span></p>
+<p class=MsoNormal><span lang=EN-US>DPOS(0)</span><span style='font-family:宋体;'>垂直刻度</span><span lang=EN-US>100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=794 height=497 src="doc.files/image414.jpg" ></span></p>
+<p class=MsoNormal><span lang=EN-US style='color:black;'>REP_OPTION=1 </span><span style=' font-family:宋体;color:black;'>时</span></p>
+<p class=MsoNormal><span lang=EN-US>MSPEED(0)</span><span style='font-family:宋体;'>垂直刻度</span><span lang=EN-US>100</span></p>
+<p class=MsoNormal><span lang=EN-US><img border=0 width=794 height=322 src="doc.files/image416.jpg" ></span></p>
+</td>  </tr> <tr style='height:17.0pt'> <td width="17%" valign=top style='width:17.62%;border:solid windowtext 1.0pt; border-top:none; background:#8DB3E2;padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal style='layout-grid-mode:char;'><b><span style='font-family:宋体;color:black;'>相关指令</span></b></p>
+</td>  <td width="82%" valign=top style='width:82.38%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+<p class=MsoNormal><a href="64.html#_CAMBOX_--_跟随凸轮表运动_1"><span lang=EN-US>CAMBOX</span></a><span style='font-family:宋体;color:black;'>，</span><a href="64.html#_MOVELINK_--_自动凸轮_1"><span lang=EN-US>MOVELINK</span></a><span style='font-family:宋体;color:black;'>，</span><a href="362.html#_REP_DIST_--_坐标循环位置_1"><span lang=EN-US>REP_DIST</span></a></p>
+</td>  </tr> </table>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+
+
+
+</div>
+<div class="sys_PrevUpNext"><div style="width:40px;float:right"><a href="362.html"><img src="images/next.gif" style="border:0px" /></a></div><div style="width:40px;float:right"><img src="images/_up.gif" /></div><div style="width:40px;float:right"><a href="360.html"><img src="images/prev.gif" style="border:0px" /></a></div><div style="clear:both; height:0px; font-size:0px"></div></div>
+</body>
+</html>
+<!--  Generator:Montinz Word-2-CHM 1.1.7.1 Free (word2chm.com)  -->
